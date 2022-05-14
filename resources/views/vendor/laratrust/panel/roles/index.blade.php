@@ -2,6 +2,7 @@
     <x-slot name="header">
         Roles
     </x-slot>
+    @include('laratrust::panel.session-message')
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <a
@@ -15,29 +16,29 @@
                 <table class="min-w-full">
                     <thead>
                     <tr>
-                        <th class="p-2 bg-slate-200">Id</th>
-                        <th class="p-2 bg-slate-200">Display Name</th>
-                        <th class="p-2 bg-slate-200">Name</th>
-                        <th class="p-2 bg-slate-200"># Permissions</th>
-                        <th class="p-2 bg-slate-200"></th>
+                        <th class="p-3 text-left text-sm bg-slate-200 text-slate-800 uppercase">Id</th>
+                        <th class="p-3 text-left text-sm bg-slate-200 text-slate-800 uppercase">Display Name</th>
+                        <th class="p-3 text-left text-sm bg-slate-200 text-slate-800 uppercase">Name</th>
+                        <th class="p-3 text-left text-sm bg-slate-200 text-slate-800 uppercase">Permissions</th>
+                        <th class="p-3 text-left text-sm bg-slate-200 text-slate-800 uppercase"></th>
                     </tr>
                     </thead>
-                    <tbody class="bg-white">
+                    <tbody class="bg-white text-sm">
                     @foreach ($roles as $role)
                         <tr>
-                            <td class="p-1">
+                            <td class="p-3 border-b border-gray-200">
                                 {{$role->getKey()}}
                             </td>
-                            <td class="p-1">
+                            <td class="p-3 border-b border-gray-200">
                                 {{$role->display_name}}
                             </td>
-                            <td class="p-1">
+                            <td class="p-3 border-b border-gray-200">
                                 {{$role->name}}
                             </td>
-                            <td class="p-1">
+                            <td class="p-3 border-b border-gray-200">
                                 {{$role->permissions_count}}
                             </td>
-                            <td class="flex justify-end px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
+                            <td class="flex justify-end p-3 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
                                 @if (\Laratrust\Helper::roleIsEditable($role))
                                     <a href="{{route('laratrust.roles.edit', $role->getKey())}}"
                                        class="text-blue-600 hover:text-blue-900">Edit</a>

@@ -2,6 +2,7 @@
     <x-slot name="header">
         {{  $model ? "Edit $type" : "New $type" }}
     </x-slot>
+    @include('laratrust::panel.session-message')
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <form
@@ -9,7 +10,7 @@
                 x-init="{!! $model ? '' : '$watch(\'displayName\', value => onChangeDisplayName(value))'!!}"
                 method="POST"
                 action="{{$model ? route("laratrust.{$type}s.update", $model->getKey()) : route("laratrust.{$type}s.store")}}"
-                class="bg-white w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200 p-8"
+                class="bg-white w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200 p-6"
             >
                 @csrf
                 @if ($model)
@@ -18,7 +19,7 @@
                 <label class="block">
                     <span class="text-gray-700">Name/Code</span>
                     <input
-                        class="form-input mt-1 block w-full bg-gray-200 text-gray-600 @error('name') border-red-500 @enderror"
+                        class="p-2 mt-1 rounded w-full bg-gray-200 text-gray-600 @error('name') border-red-500 @enderror"
                         name="name"
                         placeholder="this-will-be-the-code-name"
                         :value="name"
@@ -33,7 +34,7 @@
                 <label class="block my-4">
                     <span class="text-gray-700">Display Name</span>
                     <input
-                        class="form-input mt-1 block w-full"
+                        class="p-2 mt-1 rounded border border-slate-600 w-full"
                         name="display_name"
                         placeholder="Edit user profile"
                         x-model="displayName"
@@ -44,7 +45,7 @@
                 <label class="block my-4">
                     <span class="text-gray-700">Description</span>
                     <textarea
-                        class="form-textarea mt-1 block w-full"
+                        class="p-2 rounded mt-1 block w-full"
                         rows="3"
                         name="description"
                         placeholder="Some description for the {{$type}}"
@@ -70,11 +71,11 @@
                 <div class="flex justify-end">
                     <a
                         href="{{route("laratrust.{$type}s.index")}}"
-                        class="btn btn-red mr-4"
+                        class="p-2 px-4 bg-red-700 text-sm text-white rounded cursor-pointer mr-4"
                     >
                         Cancel
                     </a>
-                    <button class="btn btn-blue" type="submit">Save</button>
+                    <button class="p-2 px-4 bg-blue-700 text-sm text-white rounded cursor-pointer" type="submit">Save</button>
                 </div>
             </form>
         </div>

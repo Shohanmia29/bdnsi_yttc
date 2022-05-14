@@ -2,6 +2,7 @@
     <x-slot name="header">
         Role assignment
     </x-slot>
+    @include('laratrust::panel.session-message')
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div
@@ -22,33 +23,33 @@
                     <table class="min-w-full">
                         <thead>
                         <tr>
-                            <th class="bg-slate-200 p-2">Id</th>
-                            <th class="bg-slate-200 p-2">Name</th>
-                            <th class="bg-slate-200 p-2"># Roles</th>
+                            <th class="p-3 text-left text-sm bg-slate-200 text-slate-800 uppercase">Id</th>
+                            <th class="p-3 text-left text-sm bg-slate-200 text-slate-800 uppercase">Name</th>
+                            <th class="p-3 text-left text-sm bg-slate-200 text-slate-800 uppercase">Roles</th>
                             @if(config('laratrust.panel.assign_permissions_to_user'))
-                                <th class="bg-slate-200 p-2"># Permissions</th>
+                                <th class="p-3 text-left text-sm bg-slate-200 text-slate-800 uppercase">Permissions</th>
                             @endif
-                            <th class="bg-slate-200 p-2"></th>
+                            <th class="p-3 text-left text-sm bg-slate-200 text-slate-800 uppercase"></th>
                         </tr>
                         </thead>
-                        <tbody class="bg-white">
+                        <tbody class="bg-white text-sm">
                         @foreach ($users as $user)
                             <tr>
-                                <td class="p-2">
+                                <td class="p-3 border-b border-gray-200">
                                     {{$user->getKey()}}
                                 </td>
-                                <td class="p-2">
+                                <td class="p-3 border-b border-gray-200">
                                     {{$user->name ?? 'The model doesn\'t have a `name` attribute'}}
                                 </td>
-                                <td class="p-2">
+                                <td class="p-3 border-b border-gray-200">
                                     {{$user->roles_count}}
                                 </td>
                                 @if(config('laratrust.panel.assign_permissions_to_user'))
-                                    <td class="p-2">
+                                    <td class="p-3 border-b border-gray-200">
                                         {{$user->permissions_count}}
                                     </td>
                                 @endif
-                                <td class="p-2">
+                                <td class="p-3 border-b border-gray-200">
                                     <a
                                         href="{{route('laratrust.roles-assignment.edit', ['roles_assignment' => $user->getKey(), 'model' => $modelKey])}}"
                                         class="text-blue-600 hover:text-blue-900"
