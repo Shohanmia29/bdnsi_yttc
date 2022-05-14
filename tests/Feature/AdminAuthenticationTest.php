@@ -24,7 +24,7 @@ class AdminAuthenticationTest extends TestCase
 
         $response = $this->post('admin/login', [
             'email' => $admin->email,
-            'password' => 'password',
+            'update-password' => 'update-password',
         ]);
 
         $this->assertAuthenticated('admin');
@@ -37,7 +37,7 @@ class AdminAuthenticationTest extends TestCase
 
         $this->post('admin/login', [
             'email' => $admin->email,
-            'password' => 'wrong-password',
+            'update-password' => 'wrong-update-password',
         ]);
 
         $this->assertGuest('admin');

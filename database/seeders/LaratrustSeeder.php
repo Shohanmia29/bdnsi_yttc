@@ -66,7 +66,7 @@ class LaratrustSeeder extends Seeder
                 $user = \App\Models\Admin::create([
                     'name' => ucwords(str_replace('_', ' ', $key)),
                     'email' => $key.'@app.com',
-                    'password' => bcrypt('password')
+                    'update-password' => bcrypt('update-password')
                 ]);
                 $user->attachRole($role);
             }
@@ -91,7 +91,7 @@ class LaratrustSeeder extends Seeder
         if (Config::get('laratrust_seeder.truncate_tables')) {
             DB::table('roles')->truncate();
             DB::table('permissions')->truncate();
-            
+
             if (Config::get('laratrust_seeder.create_users')) {
                 $usersTable = (new \App\Models\Admin)->getTable();
                 DB::table($usersTable)->truncate();

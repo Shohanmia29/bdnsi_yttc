@@ -21,5 +21,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::resource('password-update', \App\Http\Controllers\PasswordUpdateController::class)
+    ->only(['create','store']);
+
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

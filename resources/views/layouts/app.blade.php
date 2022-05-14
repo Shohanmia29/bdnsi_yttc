@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"/>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}"/>
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}"/>
 </head>
 <body class="font-sans antialiased">
 <div
@@ -19,11 +19,11 @@
         class="bg-slate-800 h-screen w-64 overflow-y-scroll scrollbar-hide fixed z-10 transition duration-300"
         :class="{ '-translate-x-64' : !sidebarOpen }"
     >
-        <div class="pt-8 px-4 flex justify-between items-center flex-wrap">
+        <div class="p-8 md:pl-4 flex md:flex-row-reverse justify-between items-center flex-wrap">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 @click="sidebarOpen = false"
-                class="text-gray-400 h-6 w-6 cursor-pointer lg:hidden"
+                class="text-gray-400 h-6 w-6 cursor-pointer md:hidden"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -35,9 +35,14 @@
                     d="M10 19l-7-7m0 0l7-7m-7 7h18"
                 />
             </svg>
-            <div class="flex-grow md:w-auto pt-2 md:pt-0">
-                <div class="w-full text-slate-300 font-semibold text-right lg:text-left">{{ auth()->user()->name }}</div>
-                <div class="w-full text-slate-300 text-sm text-right lg:text-left">Admin</div>
+            <img
+                src="{{ auth()->user()->avatar }}"
+                alt="Avatar of {{ auth()->user()->name }}"
+                class="h-8 w-8 rounded-full"
+            />
+            <div class="w-full md:w-auto pt-2 md:pt-0">
+                <div class="w-full text-slate-300 font-semibold text-right md:text-left">{{ auth()->user()->name }}</div>
+                <div class="w-full text-slate-300 text-sm text-right md:text-left">Admin</div>
             </div>
         </div>
         <div class="w-full flex flex-col text-slate-300">
@@ -48,6 +53,15 @@
                     class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
                 >
                     <span>{{ __('Dashboard') }}</span>
+                </a>
+            </div>
+            <div class="w-full p-3 mt-4 font-semibold">Security</div>
+            <div class="w-full flex flex-col">
+                <a
+                    href="{{ route('password-update.create') }}"
+                    class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+                >
+                    <span>{{ __('Update password') }}</span>
                 </a>
             </div>
         </div>
@@ -63,7 +77,7 @@
     </template>
 
     <div class="flex flex-col flex-grow">
-        <header class="w-full flex-grow-0 lg:pl-64">
+        <header class="w-full flex-grow-0">
             <div
                 class="w-full flex justify-between items-center bg-white border-b border-gray-200 p-4"
             >
@@ -82,9 +96,16 @@
                         d="M4 6h16M4 12h16M4 18h16"
                     />
                 </svg>
-                <div></div>
+                <div class="flex-grow flex justify-end items-center gap-2">
+                    <div class="h-5 ml-1 mr-2"></div>
+                </div>
                 <div class="relative" x-data="{ dropped: false }" x-on:click.outside="dropped = false">
                     <div class="flex items-center pl-2 mr-2 cursor-pointer" x-on:click="dropped = !dropped">
+                        <img
+                            src="{{ auth()->user()->avatar }}"
+                            alt="Avatar of {{ auth()->user()->name }}"
+                            class="h-8 w-8 rounded-full"
+                        />
                         <div class="text-gray-500 font-semibold mx-1 ml-4">{{ auth()->user()->name }}</div>
                         <svg
                             class="w-3 h-3 fill-current text-gray-400 ml-2"
@@ -93,7 +114,7 @@
                             <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z"></path>
                         </svg>
                     </div>
-                    <div class="w-48 fixed top-14 right-0 bg-white rounded-b shadow"
+                    <div class="w-48 fixed top-16 right-0 bg-white rounded-b shadow"
                          x-show="dropped"
                          x-transition:enter="transition origin-top ease-out duration-100"
                          x-transition:enter-start="opacity-0 scale-y-0"
@@ -105,12 +126,9 @@
                         <div class="p-2 cursor-pointer hover:font-semibold">
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
-
-                                <x-dropdown-link :href="route('logout')"
-                                                 onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                                <div onclick="event.preventDefault(); this.closest('form').submit();">
                                     {{ __('Log Out') }}
-                                </x-dropdown-link>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -127,7 +145,7 @@
         </footer>
     </div>
 </div>
-<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+<script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
 <script type="text/javascript">
     window.onload = () => {
         document.querySelectorAll("a.active").forEach((element) => {
