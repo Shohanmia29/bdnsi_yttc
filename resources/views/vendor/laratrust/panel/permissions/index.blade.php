@@ -1,9 +1,9 @@
 <x-admin-app-layout>
     <x-slot name="header">
         <div class="w-full flex justify-between">
-            <div>
-                Permissions
-            </div>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('Permissions') }}
+            </h2>
             <div class="text-sm text-blue-600">
                 <a
                     href="{{ route('laratrust.roles-assignment.index') }}"
