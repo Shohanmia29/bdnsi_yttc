@@ -1,6 +1,30 @@
 <x-admin-app-layout>
     <x-slot name="header">
-        Permissions
+        <div class="w-full flex justify-between">
+            <div>
+                Permissions
+            </div>
+            <div class="text-sm text-blue-600">
+                <a
+                    href="{{ route('laratrust.roles-assignment.index') }}"
+                    class="ml-4 {{ request()->is('*roles-assignment*') ? 'underline' : '' }}"
+                >
+                    Roles & Permissions Assignment
+                </a>
+                <a
+                    href="{{route('laratrust.roles.index')}}"
+                    class="ml-4 {{ request()->is('*roles') ? 'underline' : '' }}"
+                >
+                    Roles
+                </a>
+                <a
+                    href="{{ route('laratrust.permissions.index') }}"
+                    class="ml-4 {{ request()->is('*permissions*') ? 'underline' : '' }}"
+                >
+                    Permissions
+                </a>
+            </div>
+        </div>
     </x-slot>
     @include('laratrust::panel.session-message')
     <div class="py-12">
