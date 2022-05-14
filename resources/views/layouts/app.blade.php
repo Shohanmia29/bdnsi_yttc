@@ -1,36 +1,145 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
-
-            <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"/>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}"/>
+</head>
+<body class="font-sans antialiased">
+<div
+    class="flex min-h-screen bg-gray-200"
+    x-data="{ sidebarOpen : window.innerWidth >= 1024, width: window.innerWidth }"
+    @resize.window="width = window.innerWidth"
+    x-init="window.addEventListener('resize', () => { sidebarOpen = window.innerWidth >= 1024 })"
+>
+    <sidebar
+        class="bg-slate-800 h-screen w-64 overflow-y-scroll scrollbar-hide fixed z-10 transition duration-300"
+        :class="{ '-translate-x-64' : !sidebarOpen }"
+    >
+        <div class="pt-8 px-4 flex justify-between items-center flex-wrap">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                @click="sidebarOpen = false"
+                class="text-gray-400 h-6 w-6 cursor-pointer lg:hidden"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                />
+            </svg>
+            <div class="flex-grow md:w-auto pt-2 md:pt-0">
+                <div class="w-full text-slate-300 font-semibold text-right lg:text-left">{{ auth()->user()->name }}</div>
+                <div class="w-full text-slate-300 text-sm text-right lg:text-left">Admin</div>
+            </div>
         </div>
-    </body>
+        <div class="w-full flex flex-col text-slate-300">
+            <div class="w-full p-3 mt-4 font-semibold">General</div>
+            <div class="w-full flex flex-col">
+                <a
+                    href="{{ route('dashboard') }}"
+                    class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+                >
+                    <span>{{ __('Dashboard') }}</span>
+                </a>
+            </div>
+        </div>
+    </sidebar>
+
+    <template x-if="sidebarOpen && width < 1024">
+        <div>
+            <div
+                @click.slef="sidebarOpen = false"
+                class="absolute z-0 top-0 bottom-0 right-0 left-0 bg-gray-500 opacity-50"
+            ></div>
+        </div>
+    </template>
+
+    <div class="flex flex-col flex-grow">
+        <header class="w-full flex-grow-0 lg:pl-64">
+            <div
+                class="w-full flex justify-between items-center bg-white border-b border-gray-200 p-4"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    @click="sidebarOpen = true"
+                    class="h-6 w-6 cursor-pointer text-gray-600 lg:hidden"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+                </svg>
+                <div></div>
+                <div class="relative" x-data="{ dropped: false }" x-on:click.outside="dropped = false">
+                    <div class="flex items-center pl-2 mr-2 cursor-pointer" x-on:click="dropped = !dropped">
+                        <div class="text-gray-500 font-semibold mx-1 ml-4">{{ auth()->user()->name }}</div>
+                        <svg
+                            class="w-3 h-3 fill-current text-gray-400 ml-2"
+                            viewBox="0 0 12 12"
+                        >
+                            <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z"></path>
+                        </svg>
+                    </div>
+                    <div class="w-48 fixed top-14 right-0 bg-white rounded-b shadow"
+                         x-show="dropped"
+                         x-transition:enter="transition origin-top ease-out duration-100"
+                         x-transition:enter-start="opacity-0 scale-y-0"
+                         x-transition:enter-end="opacity-100 scale-y-100"
+                         x-transition:leave="transition origin-top ease-in duration-100"
+                         x-transition:leave-start="opacity-100 scale-y-100"
+                         x-transition:leave-end="opacity-0 scale-y-0"
+                    >
+                        <div class="p-2 cursor-pointer hover:font-semibold">
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+
+                                <x-dropdown-link :href="route('logout')"
+                                                 onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                    {{ __('Log Out') }}
+                                </x-dropdown-link>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow lg:ml-64">
+            <div class="px-4 py-8">
+                {{ $slot }}
+            </div>
+        </main>
+        <footer class="w-full p-2 text-center">
+            Copyright 2022
+        </footer>
+    </div>
+</div>
+<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+<script type="text/javascript">
+    window.onload = () => {
+        document.querySelectorAll("a.active").forEach((element) => {
+            element.classList.remove('border-transparent')
+            element.classList.add('border-teal-400')
+            element.dispatchEvent(
+                new CustomEvent("active", {
+                    bubbles: true,
+                })
+            );
+        });
+    };
+</script>
+</body>
 </html>
