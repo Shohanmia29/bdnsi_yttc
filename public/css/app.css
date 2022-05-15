@@ -1580,6 +1580,30 @@ select {
   --tw-text-opacity: 1;
   color: rgb(109 40 217 / var(--tw-text-opacity));
 }
+.datatable .sortable:before {
+    position: absolute;
+    content: '▲';
+    top: 0;
+    right: 0;
+    padding: 2px 5px;
+    opacity: .2;
+    font-size: .7em;
+}
+.datatable .sortable:after {
+    position: absolute;
+    content: '▼';
+    bottom: 0;
+    right: 0;
+    padding: 2px 5px;
+    opacity: .2;
+    font-size: .7em;
+}
+.datatable .sorting_asc:before {
+    opacity: .8;
+}
+.datatable .sorting_desc:after {
+    opacity: .8;
+}
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
