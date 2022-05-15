@@ -22,8 +22,8 @@ class AdminRegistrationTest extends TestCase
         $response = $this->post('admin/register', [
             'name' => 'Test Admin',
             'email' => 'test@example.com',
-            'update-password' => 'update-password',
-            'password_confirmation' => 'update-password',
+            'password' => 'password',
+            'password_confirmation' => 'password',
         ]);
 
         $this->assertAuthenticated('admin');

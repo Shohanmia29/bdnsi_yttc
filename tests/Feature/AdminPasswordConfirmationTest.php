@@ -14,7 +14,7 @@ class AdminPasswordConfirmationTest extends TestCase
     {
         $admin = Admin::factory()->create();
 
-        $response = $this->actingAs($admin, 'admin')->get('admin/confirm-update-password');
+        $response = $this->actingAs($admin, 'admin')->get('admin/confirm-password');
 
         $response->assertStatus(200);
     }
@@ -23,8 +23,8 @@ class AdminPasswordConfirmationTest extends TestCase
     {
         $admin = Admin::factory()->create();
 
-        $response = $this->actingAs($admin, 'admin')->post('admin/confirm-update-password', [
-            'update-password' => 'update-password',
+        $response = $this->actingAs($admin, 'admin')->post('admin/confirm-password', [
+            'password' => 'password',
         ]);
 
         $response->assertRedirect();
@@ -35,8 +35,8 @@ class AdminPasswordConfirmationTest extends TestCase
     {
         $admin = Admin::factory()->create();
 
-        $response = $this->actingAs($admin, 'admin')->post('admin/confirm-update-password', [
-            'update-password' => 'wrong-update-password',
+        $response = $this->actingAs($admin, 'admin')->post('admin/confirm-password', [
+            'password' => 'wrong-password',
         ]);
 
         $response->assertSessionHasErrors();
