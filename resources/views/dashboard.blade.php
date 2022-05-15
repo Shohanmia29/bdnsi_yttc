@@ -5,13 +5,22 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
+    <div class="w-full flex flex-wrap">
+        @foreach($cards as $card)
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+                <div class="rounded w-full bg-slate-800 text-white shadow">
+                    <div class="w-full p-4">
+                        <div class="w-full text-xl">{{ $card->title }}</div>
+                        <div class="w-full text-2xl text-right font-semibold">{{ $card->value }}</div>
+                    </div>
+                    @foreach($card->kv as $k => $v)
+                        <div class="w-full border-t flex justify-between">
+                            <span class="p-2">{{ $k }}</span>
+                            <span class="p-2 font-semibold">{{ $v }}</span>
+                        </div>
+                    @endforeach
                 </div>
             </div>
-        </div>
+        @endforeach
     </div>
 </x-app-layout>
