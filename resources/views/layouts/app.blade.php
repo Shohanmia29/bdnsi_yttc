@@ -45,7 +45,7 @@
                 <div class="w-full text-slate-300 text-sm text-right md:text-left">Admin</div>
             </div>
         </div>
-        <div class="w-full flex flex-col text-slate-300">
+        <div class="w-full flex flex-col text-slate-300 nav-links">
             <div class="w-full p-3 mt-4 font-semibold">General</div>
             <div class="w-full flex flex-col">
                 <a
@@ -136,6 +136,12 @@
             </div>
         </header>
         <main class="flex-grow lg:ml-64">
+            @if(session(\App\Mixin\ResponseMixin::SUCCESS_MESSAGE_SESSION_KEY))
+                <x-alert type="success">{{ session(\App\Mixin\ResponseMixin::SUCCESS_MESSAGE_SESSION_KEY) }}</x-alert>
+            @endif
+            @if(session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY))
+                <x-alert type="error">{{ session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY) }}</x-alert>
+            @endif
             <div class="px-4 py-8">
                 {{ $slot }}
             </div>
@@ -148,7 +154,15 @@
 <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
 <script type="text/javascript">
     window.onload = () => {
-        document.querySelectorAll("a.active").forEach((element) => {
+        const url = location.href.indexOf('?') > 0
+            ? location.href.substring(0, location.href.indexOf('?'))
+            : location.href;
+        document.querySelector('.nav-links').querySelectorAll("a").forEach(element => {
+            if(element.href === url) {
+                element.classList.add('active')
+            }
+        })
+        document.querySelectorAll("a.active").forEach(element => {
             element.classList.remove('border-transparent')
             element.classList.add('border-teal-400')
             element.dispatchEvent(

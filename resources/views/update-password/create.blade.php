@@ -8,7 +8,7 @@
                 <div class="w-full p-4 flex justify-center items-center">
                     <img src="{{ auth()->user()->avatar }}" class="w-64"/>
                 </div>
-                <table class="w-full">
+                <table class="w-full text-sm">
                     <tr>
                         <td class="p-2 border-t border-b font-semibold">{{ __('Name') }}</td>
                         <td class="p-2 border-t border-b">{{ auth()->user()->name }}</td>
