@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Password;
 class PasswordResetLinkController extends Controller
 {
     /**
-     * Display the update-password reset link request view.
+     * Display the password reset link request view.
      *
      * @return \Illuminate\View\View
      */
@@ -20,7 +20,7 @@ class PasswordResetLinkController extends Controller
     }
 
     /**
-     * Handle an incoming update-password reset link request.
+     * Handle an incoming password reset link request.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse
@@ -34,13 +34,13 @@ class PasswordResetLinkController extends Controller
         ]);
 
         ResetPassword::createUrlUsing(function($notifiable, $token){
-            return url(route('admin.update-password.reset', [
+            return url(route('admin.password.reset', [
                 'token' => $token,
                 'email' => $notifiable->getEmailForPasswordReset(),
             ], false));
         });
 
-        // We will send the update-password reset link to this admin. Once we have attempted
+        // We will send the password reset link to this admin. Once we have attempted
         // to send the link, we will examine the response then see the message we
         // need to show to the admin. Finally, we'll send out a proper response.
         $status = Password::broker('admins')->sendResetLink(
