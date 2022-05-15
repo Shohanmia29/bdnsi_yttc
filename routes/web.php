@@ -23,6 +23,8 @@ Route::get('/dashboard', function () {
 
 Route::resource('password-update', \App\Http\Controllers\PasswordUpdateController::class)
     ->only(['create','store']);
+Route::resource('profile-update', \App\Http\Controllers\ProfileUpdateController::class)
+    ->only(['create','store']);
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

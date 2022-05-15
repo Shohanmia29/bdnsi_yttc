@@ -6,7 +6,7 @@
         <div class="w-full py-4 lg:w-1/4 lg:pr-4">
             <div class="w-full bg-white rounded">
                 <div class="w-full p-4 flex justify-center items-center">
-                    <img src="{{ auth()->user()->avatar }}" class="w-64"/>
+                    <img src="{{ auth()->user()->avatar }}" class="w-64" alt="Avatar"/>
                 </div>
                 <table class="w-full text-sm">
                     <tr>

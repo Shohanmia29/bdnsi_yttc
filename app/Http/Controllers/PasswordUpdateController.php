@@ -11,7 +11,7 @@ class PasswordUpdateController extends Controller
 {
     public function create()
     {
-        return view('update-password.create');
+        return view('password-update.create');
     }
 
     public function store(Request $request)

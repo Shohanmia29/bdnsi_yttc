@@ -55,6 +55,14 @@
                     <span>{{ __('Dashboard') }}</span>
                 </a>
             </div>
+            <div class="w-full flex flex-col">
+                <a
+                    href="{{ route('profile-update.create') }}"
+                    class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+                >
+                    <span>{{ __('Profile') }}</span>
+                </a>
+            </div>
             <div class="w-full p-3 mt-4 font-semibold">Security</div>
             <div class="w-full flex flex-col">
                 <a
@@ -123,6 +131,11 @@
                          x-transition:leave-start="opacity-100 scale-y-100"
                          x-transition:leave-end="opacity-0 scale-y-0"
                     >
+                        <div class="p-2 cursor-pointer hover:font-semibold">
+                            <a href="{{ route('profile-update.create') }}">
+                                {{ __('Profile') }}
+                            </a>
+                        </div>
                         <div class="p-2 cursor-pointer hover:font-semibold">
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
