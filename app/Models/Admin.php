@@ -21,6 +21,7 @@ class Admin extends Authenticatable
         'name',
         'email',
         'password',
+        'avatar'
     ];
 
     /**
@@ -41,4 +42,13 @@ class Admin extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getAvatarAttribute($user){
+        if(isset($user)){
+            return  \App\Lib\Image::url($user);
+        }
+        else{
+            return  asset('images/avatar.png');
+        }
+    }
 }

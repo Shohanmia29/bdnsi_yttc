@@ -39,7 +39,7 @@
                             item.action = actionIcons({
                                 'show': '{{ route('admin.user.show', '@') }}'.replace('@', item.id),
                                 @can('user-update')
-                                'portal': '{{ route('admin.user.portal', '@') }}'.replace('@', item.id),
+                                {{--'portal': '{{ route('admin.user.portal', '@') }}'.replace('@', item.id),--}}
                                 'edit': '{{ route('admin.user.edit', '@') }}'.replace('@', item.id),
                                 @endcan
                                 @can('user-delete')

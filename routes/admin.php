@@ -73,6 +73,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
         ->middleware('auth:admin')
         ->name('logout');
 
-
-    Route::resource('user', \App\Http\Controllers\Admin\UserController::class)->middleware('auth:admin');
+    Route::middleware('auth:admin')->group(function(){
+        Route::resource('password-update', \App\Http\Controllers\Admin\PasswordUpdateController::class)
+            ->only(['create','store']);
+        Route::resource('profile-update', \App\Http\Controllers\Admin\ProfileUpdateController::class)
+            ->only(['create','store']);
+        Route::resource('user', \App\Http\Controllers\Admin\UserController::class)->middleware('auth:admin');
+    });
 });

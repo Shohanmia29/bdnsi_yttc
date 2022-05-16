@@ -194,7 +194,7 @@ return [
              * If the message content is empty it won't be added to the redirection.
              */
             'redirect' => [
-                'url' => '/home',
+                'url' => '/admin',
                 'message' => [
                     'key' => 'error',
                     'content' => ''
@@ -248,7 +248,7 @@ return [
     | Determines if you can check if a user has a permission using the "can" method.
     |
     */
-    'permissions_as_gates' => false,
+    'permissions_as_gates' => true,
 
     /*
     |--------------------------------------------------------------------------
