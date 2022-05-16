@@ -14,5 +14,5 @@ interface WithdrawAble
 
     public function allowedWithdrawMethods(): array;
 
-    public function allowedCashInModels(): array;
+    public function allowedWithdrawModels(): array;
 }
