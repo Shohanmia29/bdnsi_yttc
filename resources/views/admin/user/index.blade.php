@@ -15,16 +15,20 @@
         </div>
     </x-slot>
 
-    <table class="w-full" id="users-table">
-        <thead>
-        <tr>
-            <th>{{ __('ID') }}</th>
-            <th>{{ __('Name') }}</th>
-            <th>{{ __('Email') }}</th>
-            <th>{{ __('Action') }}</th>
-        </tr>
-        </thead>
-    </table>
+    <div class="w-full mt-8">
+        <table class="w-full" id="users-table">
+            <thead>
+            <tr>
+                <th>{{ __('ID') }}</th>
+                <th>{{ __('Username') }}</th>
+                <th>{{ __('Name') }}</th>
+                <th>{{ __('Phone') }}</th>
+                <th>{{ __('Email') }}</th>
+                <th>{{ __('Action') }}</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
     <x-slot name="script">
         <script type="text/javascript" src="{{ mix('js/datatable.js') }}"></script>
         <script type="text/javascript">
@@ -53,7 +57,9 @@
                 },
                 columns: [
                     {data: 'id'},
+                    {data: 'username'},
                     {data: 'name'},
+                    {data: 'phone'},
                     {data: 'email'},
                     {data: 'action', orderable: false, searchable: false},
                 ]

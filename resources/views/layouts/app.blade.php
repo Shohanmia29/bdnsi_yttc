@@ -37,12 +37,13 @@
             </svg>
             <img
                 src="{{ auth()->user()->avatar }}"
-                alt="Avatar of {{ auth()->user()->name }}"
+                alt="Avatar of {{ auth()->user()->username }}"
                 class="h-8 w-8 rounded-full"
             />
             <div class="w-full md:w-auto pt-2 md:pt-0">
-                <div class="w-full text-slate-300 font-semibold text-right md:text-left">{{ auth()->user()->name }}</div>
-                <div class="w-full text-slate-300 text-sm text-right md:text-left">Admin</div>
+                <div
+                    class="w-full text-slate-300 font-semibold text-right md:text-left">{{ auth()->user()->name }}</div>
+                <div class="w-full text-slate-300 text-sm text-right md:text-left">{{ auth()->user()->username }}</div>
             </div>
         </div>
         <div class="w-full flex flex-col text-slate-300 nav-links">
