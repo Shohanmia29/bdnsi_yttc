@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admin;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -24,6 +26,14 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('password')
         ])->markPhoneAsVerified();
 
+        $admin = Admin::create([
+            'name' => 'Admin',
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('12345678')
+        ]);
+
         $this->call(LaratrustSeeder::class);
+
+        $admin->attachRole(Role::whereName('admin')->first());
     }
 }
