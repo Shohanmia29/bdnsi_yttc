@@ -16,7 +16,7 @@ class CreateCentersTable extends Migration
     {
         Schema::create('centers', function (Blueprint $table) {
             $table->id();
-            $table->string('branch_name');
+            $table->string('name');
             $table->string('owner_name');
             $table->string('fathers_name');
             $table->string('mothers_name');

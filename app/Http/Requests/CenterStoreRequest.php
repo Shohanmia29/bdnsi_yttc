@@ -17,7 +17,7 @@ class CenterStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'branch_name' => 'required|string',
+            'name' => 'required|string',
             'owner_name' => 'required|string',
             'fathers_name' => 'required|string',
             'mothers_name' => 'required|string',

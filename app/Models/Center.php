@@ -13,7 +13,7 @@ class Center extends Model
     use HasFactory;
 
     protected $fillable = [
-        'branch_name',
+        'name',
         'owner_name',
         'fathers_name',
         'mothers_name',
@@ -70,7 +70,7 @@ class Center extends Model
             return  asset('images/stop.png');
         }
     }
-    
+
     public function getTradeLicenseAttribute($model){
         if(isset($model)){
             return  \App\Lib\Image::url($model);

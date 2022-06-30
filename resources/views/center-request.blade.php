@@ -6,7 +6,12 @@
         <form action="{{ route('center-request.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="w-full flex flex-wrap py-8" x-data="centerRequestData">
-                <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="center_name" required/>
+                <div class="w-full py-4">
+                    <x-auth-validation-errors />
+                </div>
+            </div>
+            <div class="w-full flex flex-wrap py-8" x-data="centerRequestData">
+                <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="owner_name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="fathers_name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="mothers_name" required/>
@@ -39,7 +44,7 @@
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="post_office" required/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="postal_code" required/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="facebook_url" type="url"/>
-                <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="number_of_computers" type="number" required/>
+                <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="no_of_computers" type="number" required/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="institute_age" type="number" required/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="address" required/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="mobile" required/>
