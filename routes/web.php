@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('center-request', \App\Http\Controllers\CenterRequestController::class)->only(['create','store']);
+
 Route::get('/dashboard', \App\Http\Controllers\DashboardController::class)->middleware(['auth'])->name('dashboard');
 
 Route::resource('password-update', \App\Http\Controllers\PasswordUpdateController::class)
