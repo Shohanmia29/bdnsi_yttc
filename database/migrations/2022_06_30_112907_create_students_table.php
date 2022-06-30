@@ -31,8 +31,8 @@ class CreateStudentsTable extends Migration
             $table->string('gurdian_name');
             $table->string('nid_or_birth');
             $table->string('student_address');
-            $table->unsignedTinyInteger('training_session');
-            $table->unsignedTinyInteger('training_subject');
+            $table->foreignId('session_id')->constrained();
+            $table->foreignId('subject_id')->constrained();
             $table->string('month_of_duration');
             $table->string('picture');
             $table->unsignedTinyInteger('status')->default(StudentStatus::Pending);

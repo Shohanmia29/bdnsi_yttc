@@ -2,83 +2,75 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Lib\Image;
+use App\Enums\Gender;
 use App\Models\Student;
+use App\Enums\BloodGroup;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class StudentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if ($request->ajax()) {
+            return datatables(Student::query())->toJson();
+        }
+
+        return view('admin.student.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('admin.student.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'center_id' => 'required|exists:centers,id',
+            'name' => 'required|string',
+            'fathers_name' => 'required|string',
+            'mothers_name' => 'required|string',
+            'date_of_birth' => 'required|date',
+            'gender' => 'required|numeric|enum_value:'.Gender::class.',false',
+            'blood_group' => 'required|numeric|enum_value:'.BloodGroup::class.',false',
+            'religion' => 'required|numeric|enum_value:'.Religion::class.',false',
+            'present_address' => 'required|string',
+            'permanent_address' => 'required|string',
+            'phone' =>'required|string|min:11|max:11',
+            'email' =>'required|email',
+            'gurdian_name' =>'required|string',
+            'nid_or_birth' =>'required|string',
+            'student_address' =>'required|string',
+            'session_id' =>'required|exists:sessions,id',
+            'subject_id' =>'required|exists:subjects,id',
+            'month_of_duration' =>'required|string',
+            'picture' =>'required|image',
+        ]);
+        
+        if($request->hasFile('picture')){
+            $validated['picture'] = Image::store('picture','upload/student');
+        }
+
+        return response()->report(Student::create($validated), 'Student Created successfully');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Student  $student
-     * @return \Illuminate\Http\Response
-     */
     public function show(Student $student)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Student  $student
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Student $student)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Student  $student
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Student $student)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Student  $student
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Student $student)
     {
         //
