@@ -1,6 +1,5 @@
 <?php
 
-use App\Lib\Wallets\WalletManager;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -20,11 +19,6 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('avatar')->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            foreach (WalletManager::all() as $wallet) {
-                $table->unsignedDecimal($wallet->getColumn(), 12)->default(0);
-                $table->unsignedDecimal($wallet->getColumn().'_in', 12)->default(0);
-                $table->unsignedDecimal($wallet->getColumn().'_out', 12)->default(0);
-            }
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
