@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CenterStoreRequest;
 use Illuminate\Http\Request;
 
 class CenterRequestController extends Controller
@@ -11,8 +12,11 @@ class CenterRequestController extends Controller
         return view('center-request');
     }
 
-    public function store(Request $request)
+    public function store(CenterStoreRequest $request)
     {
-        return $request;
+        return response()->report(
+            $request->store(),
+            'Center request submitted successfully'
+        );
     }
 }
