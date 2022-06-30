@@ -16,11 +16,6 @@
             <x-labeled-input name="email" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="nid" label="NID" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="referrer" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-            <x-labeled-select name="gender" required class="w-full p-1 md:w-1/2 lg:w-1/3">
-                @foreach(\App\Enums\Gender::getInstances() as $gender)
-                    <option value="{{ $gender->value }}" @if(old('gender') == $gender->value) selected @endif>{{ $gender->key }}</option>
-                @endforeach
-            </x-labeled-select>
             <x-labeled-input type="date" name="birthday" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input type="password" name="password" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input type="password" name="password_confirmation" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>

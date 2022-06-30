@@ -52,45 +52,5 @@
                 </tr>
             </table>
         </div>
-        <div class="w-full md:w-1/2 lg:w-1/3">
-            <table>
-                @foreach(\App\Lib\Wallets\WalletManager::all() as $wallet)
-                    <tr>
-                        <td class="p-2 font-semibold">{{ $wallet->getName() }} Balance</td>
-                        <td class="p-2">{{ $wallet->getBalanceFor($user) }}</td>
-                    </tr>
-                    <tr>
-                        <td class="p-2 font-semibold">{{ $wallet->getName() }} Total In</td>
-                        <td class="p-2">{{ $wallet->getTotalInFor($user) }}</td>
-                    </tr>
-                    <tr>
-                        <td class="p-2 font-semibold">{{ $wallet->getName() }} Total Out</td>
-                        <td class="p-2">{{ $wallet->getTotalOutFor($user) }}</td>
-                    </tr>
-                    @if($wallet instanceof \App\Lib\Wallets\CashInAble)
-                        <tr>
-                            <td class="p-2 font-semibold">{{ $wallet->getName() }} Cash In</td>
-                            <td class="p-2">{{ $wallet->getTotalCashInAmountFor($user) }}</td>
-                        </tr>
-                    @endif
-                    @if($wallet instanceof \App\Lib\Wallets\WithdrawAble)
-                        <tr>
-                            <td class="p-2 font-semibold">{{ $wallet->getName() }} Withdraw</td>
-                            <td class="p-2">{{ $wallet->getTotalWithdrawAmountFor($user) }}</td>
-                        </tr>
-                    @endif
-                    @if($wallet instanceof \App\Lib\Wallets\TransferAble)
-                        <tr>
-                            <td class="p-2 font-semibold">{{ $wallet->getName() }} Received</td>
-                            <td class="p-2">{{ $wallet->totalTransferInFor($user) }}</td>
-                        </tr>
-                        <tr>
-                            <td class="p-2 font-semibold">{{ $wallet->getName() }} Send</td>
-                            <td class="p-2">{{ $wallet->totalTransferOutFor($user) }}</td>
-                        </tr>
-                    @endif
-                @endforeach
-            </table>
-        </div>
     </div>
 </x-admin-app-layout>
