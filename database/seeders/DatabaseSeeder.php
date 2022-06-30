@@ -19,15 +19,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // User::factory(10)->create();
-        tap(
-            User::create([
-                'name' => 'User',
-                'username' => 'user',
-                'phone' => '01777777777',
-                'email' => 'user@gmail.com',
-                'password' => Hash::make('password')
-            ])
-        )->markEmailAsVerified()->markPhoneAsVerified();
+//        tap(
+//            User::create([
+//                'name' => 'User',
+//                'username' => 'user',
+//                'phone' => '01777777777',
+//                'email' => 'user@gmail.com',
+//                'password' => Hash::make('password')
+//            ])
+//        )->markEmailAsVerified()->markPhoneAsVerified();
 
         $admin = Admin::create([
             'name' => 'Admin',
