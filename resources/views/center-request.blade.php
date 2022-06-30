@@ -5,7 +5,17 @@
         </div>
         <form action="{{ route('center-request.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <div class="w-full flex flex-wrap py-8" x-data="centerRequestData">
+            @if($success = session(\App\Mixin\ResponseMixin::SUCCESS_MESSAGE_SESSION_KEY))
+            <div class="w-full flex flex-wrap">
+                <div class="w-full p-4 bg-green-300">{{ $success }}</div>
+            </div>
+            @endif
+            @if($error = session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY))
+                <div class="w-full flex flex-wrap">
+                    <div class="w-full p-4 bg-red-300">{{ $error }}</div>
+                </div>
+            @endif
+            <div class="w-full flex flex-wrap py-2">
                 <div class="w-full py-4">
                     <x-auth-validation-errors />
                 </div>
