@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Enums\CenterStatus;
 use App\Http\Controllers\Controller;
+use App\Models\Center;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -23,7 +25,9 @@ class UserController extends Controller
 
     public function create()
     {
-        //
+        return view('admin.user.create', [
+            'centers' => Center::select(['id','name'])->whereStatus(CenterStatus::Approved)->get()
+        ]);
     }
 
 

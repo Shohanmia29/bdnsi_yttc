@@ -1,8 +1,8 @@
 <x-admin-app-layout>
     <x-slot name="header">
         <div class="w-full flex justify-between">
-            <div class="text-3xl">{{ __('Users') }}</div>
-{{--            @can('user-create')--}}
+            <div class="text-xl">{{ __('Users') }}</div>
+            @can('user-create')
                 <div>
                     <a
                         href="{{ route('admin.user.create') }}"
@@ -11,7 +11,7 @@
                         + {{ __('Create User') }}
                     </a>
                 </div>
-{{--            @endcan--}}
+            @endcan
         </div>
     </x-slot>
 
