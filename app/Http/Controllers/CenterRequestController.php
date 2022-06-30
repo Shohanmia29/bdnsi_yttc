@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CenterStoreRequest;
-use Illuminate\Http\Request;
 
 class CenterRequestController extends Controller
 {

@@ -3,9 +3,13 @@
 namespace App\Http\Requests;
 
 use App\Enums\CenterStatus;
+use App\Enums\Gender;
+use App\Enums\Religion;
+use App\Lib\Geo;
 use App\Lib\Image;
 use App\Models\Center;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class CenterStoreRequest extends FormRequest
 {
@@ -21,17 +25,17 @@ class CenterStoreRequest extends FormRequest
             'owner_name' => 'required|string',
             'fathers_name' => 'required|string',
             'mothers_name' => 'required|string',
-            'religion' => 'required|numeric',
-            'gender' => 'required|numeric',
+            'religion' => 'required|numeric|enum_value:'.Religion::class.',false',
+            'gender' => 'required|numeric|enum_value:'.Gender::class.',false',
             'nationality' => 'required|string',
-            'division' => 'required|numeric',
-            'district' => 'required|numeric',
-            'upazilla' => 'required|numeric',
+            'division' => ['required|numeric',Rule::in(array_keys(Geo::divisions()))],
+            'district' => ['required|numeric',Rule::in(array_keys(Geo::districts()))],
+            'upazilla' => ['required|numeric',Rule::in(array_keys(Geo::upazillas()))],
             'post_office' => 'required|string',
             'postal_code' => 'required|string',
-            'facebook_url' => 'nullable|string',
+            'facebook_url' => 'nullable|string|url',
             'no_of_computers' => 'required|numeric',
-            'institute_age' => 'required|string',
+            'institute_age' => 'required|numeric',
             'address' => 'required|string',
             'mobile' => 'required|string|max:11|min:11',
             'email' => 'required|email',

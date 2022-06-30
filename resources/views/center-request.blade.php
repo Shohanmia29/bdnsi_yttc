@@ -5,7 +5,17 @@
         </div>
         <form action="{{ route('center-request.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <div class="w-full flex flex-wrap py-8" x-data="centerRequestData">
+            @if($success = session(\App\Mixin\ResponseMixin::SUCCESS_MESSAGE_SESSION_KEY))
+            <div class="w-full flex flex-wrap">
+                <div class="w-full p-4 bg-green-300">{{ $success }}</div>
+            </div>
+            @endif
+            @if($error = session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY))
+                <div class="w-full flex flex-wrap">
+                    <div class="w-full p-4 bg-red-300">{{ $error }}</div>
+                </div>
+            @endif
+            <div class="w-full flex flex-wrap py-2">
                 <div class="w-full py-4">
                     <x-auth-validation-errors />
                 </div>
@@ -47,7 +57,7 @@
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="no_of_computers" type="number" required/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="institute_age" type="number" required/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="address" required/>
-                <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="mobile" required/>
+                <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="mobile" pattern="\d{11}" x-on:input="$event.target.setCustomValidity($event.target.validity.patternMismatch ? 'Phone number should be 11 digits' : '')" required/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="email" required type="email"/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="photo" required type="file" accept="image/*"/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="authority_signature" required type="file" accept="image/*"/>
