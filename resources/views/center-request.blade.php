@@ -57,7 +57,7 @@
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="no_of_computers" type="number" required/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="institute_age" type="number" required/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="address" required/>
-                <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="mobile" required/>
+                <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="mobile" pattern="\d{11}" x-on:input="$event.target.setCustomValidity($event.target.validity.patternMismatch ? 'Phone number should be 11 digits' : '')" required/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="email" required type="email"/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="photo" required type="file" accept="image/*"/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="authority_signature" required type="file" accept="image/*"/>
