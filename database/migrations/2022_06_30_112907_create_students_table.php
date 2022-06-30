@@ -1,0 +1,52 @@
+<?php
+
+use App\Enums\StudentStatus;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateStudentsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('students', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('center_id')->constrained();
+            $table->string('name');
+            $table->string('fathers_name');
+            $table->string('mothers_name');
+            $table->date('date_of_birth');
+            $table->unsignedTinyInteger('gender');
+            $table->unsignedTinyInteger('blood_group');
+            $table->unsignedTinyInteger('religion');
+            $table->string('present_address');
+            $table->string('permanent_address');
+            $table->string('phone');
+            $table->string('email');
+            $table->string('gurdian_name');
+            $table->string('nid_or_birth');
+            $table->string('student_address');
+            $table->unsignedTinyInteger('training_session');
+            $table->unsignedTinyInteger('training_subject');
+            $table->string('month_of_duration');
+            $table->string('picture');
+            $table->unsignedTinyInteger('status')->default(StudentStatus::Pending);
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('students');
+    }
+}
