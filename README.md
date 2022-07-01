@@ -1,6 +1,6 @@
-## Lekoil
+## BTSI web
 
-Lekoil is a web application based on laravel web framework.
+BTSI is a web application based on laravel web framework.
 
 ## Copyright
 
