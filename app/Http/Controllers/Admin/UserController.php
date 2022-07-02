@@ -95,7 +95,10 @@ class UserController extends Controller
     {
         abort_if(!Auth::user()->isA('admin'), 403);
         $cid = uniqid();
-        Cache::put($cid, $user->id, 60);
+        Cache::put($cid, [
+            'user_id' => $user->id,
+            'ip' => \request()->ip()
+        ], 60);
         $url = URL::temporarySignedRoute(
             'portal', now()->addMinute(), ['user' => $user->id, 'cid' => $cid]
         );
