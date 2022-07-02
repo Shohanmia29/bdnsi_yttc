@@ -13,6 +13,7 @@ class Center extends Model
     use HasFactory;
 
     protected $fillable = [
+        'code',
         'name',
         'owner_name',
         'fathers_name',
@@ -43,6 +44,11 @@ class Center extends Model
         'religion' => Religion::class,
         'status' => CenterStatus::class,
     ];
+
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
 
     public function getPhotoAttribute($model){
         if(isset($model)){

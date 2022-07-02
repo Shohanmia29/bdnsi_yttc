@@ -167,17 +167,17 @@
             </div>
         </header>
         <main class="flex-grow lg:ml-64">
+            @isset($header)
+                <div class="w-full bg-white p-4">
+                    {{ $header }}
+                </div>
+            @endisset
             @if(session(\App\Mixin\ResponseMixin::SUCCESS_MESSAGE_SESSION_KEY))
                 <x-alert type="success">{{ session(\App\Mixin\ResponseMixin::SUCCESS_MESSAGE_SESSION_KEY) }}</x-alert>
             @endif
             @if(session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY))
                 <x-alert type="error">{{ session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY) }}</x-alert>
             @endif
-            @isset($header)
-                <div class="w-full bg-white p-4">
-                    {{ $header }}
-                </div>
-            @endisset
             <div class="px-4 py-8">
                 {{ $slot }}
             </div>

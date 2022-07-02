@@ -20,9 +20,17 @@ class PortalController extends Controller
         abort_if($request->missing('cid'), 401);
         $cid = $request->get('cid');
 
-        abort_if(Cache::get($cid) !== $user->id, 401);
+        abort_unless(Cache::has($cid), 401);
 
-        Auth::guard()->login($user, false);
+        $cache = Cache::get($cid);
+
+        abort_unless(isset($cache['user_id'], $cache['ip']), 401);
+
+        abort_if($cache['user_id'] !== $user->id && $cache['ip'] !== \request()->ip(), 401);
+
+        Cache::forget($cid);
+
+        Auth::guard()->login($user);
         return redirect(RouteServiceProvider::HOME);
     }
 }

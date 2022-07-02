@@ -40,7 +40,7 @@ class StudentController extends Controller
             'permanent_address' => 'required|string',
             'phone' =>'required|string|min:11|max:11',
             'email' =>'required|email',
-            'gurdian_name' =>'required|string',
+            'guardian_name' =>'required|string',
             'nid_or_birth' =>'required|string',
             'student_address' =>'required|string',
             'session_id' =>'required|exists:sessions,id',
@@ -48,7 +48,7 @@ class StudentController extends Controller
             'month_of_duration' =>'required|string',
             'picture' =>'required|image',
         ]);
-        
+
         if($request->hasFile('picture')){
             $validated['picture'] = Image::store('picture','upload/student');
         }

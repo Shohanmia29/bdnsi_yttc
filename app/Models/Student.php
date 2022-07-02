@@ -26,7 +26,7 @@ class Student extends Model
         'permanent_address',
         'phone',
         'email',
-        'gurdian_name',
+        'guardian_name',
         'nid_or_birth',
         'student_address',
         'training_session',

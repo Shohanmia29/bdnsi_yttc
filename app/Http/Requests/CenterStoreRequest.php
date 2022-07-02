@@ -28,9 +28,9 @@ class CenterStoreRequest extends FormRequest
             'religion' => 'required|numeric|enum_value:'.Religion::class.',false',
             'gender' => 'required|numeric|enum_value:'.Gender::class.',false',
             'nationality' => 'required|string',
-            'division' => ['required|numeric',Rule::in(array_keys(Geo::divisions()))],
-            'district' => ['required|numeric',Rule::in(array_keys(Geo::districts()))],
-            'upazilla' => ['required|numeric',Rule::in(array_keys(Geo::upazillas()))],
+            'division' => ['required','numeric',Rule::in(array_keys(Geo::divisions()))],
+            'district' => ['required','numeric',Rule::in(array_keys(Geo::districts()))],
+            'upazilla' => ['required','numeric',Rule::in(array_keys(Geo::upazillas()))],
             'post_office' => 'required|string',
             'postal_code' => 'required|string',
             'facebook_url' => 'nullable|string|url',
@@ -49,6 +49,8 @@ class CenterStoreRequest extends FormRequest
     public function store($status = null)
     {
         $validated = $this->validated();
+
+        $validated['code'] = $validated['code'] ?? random_int(111111, 999999);
 
         if($this->hasFile('photo')){
             $validated['photo'] = Image::store('photo','upload/center/photo');

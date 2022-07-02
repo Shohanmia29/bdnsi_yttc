@@ -17,7 +17,7 @@
             <x-labeled-input name="email" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input type="password" name="password" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input type="password" name="password_confirmation" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-            <x-labeled-select name="center" required class="w-full p-1 md:w-1/2 lg:w-1/3">
+            <x-labeled-select name="center_id" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                 @foreach($centers as $center)
                     <option value="{{ $center->id }}">{{ $center->name }}</option>
                 @endforeach
