@@ -13,6 +13,7 @@ class Center extends Model
     use HasFactory;
 
     protected $fillable = [
+        'code',
         'name',
         'owner_name',
         'fathers_name',
