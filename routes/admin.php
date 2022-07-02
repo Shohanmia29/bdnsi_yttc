@@ -82,5 +82,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('subject', \App\Http\Controllers\Admin\SubjectController::class);
         Route::resource('session', \App\Http\Controllers\Admin\SessionController::class);
         Route::get('user/portal/{user}', [\App\Http\Controllers\Admin\UserController::class, 'portal'])->name('user.portal');
+
+        Route::resource('center', \App\Http\Controllers\Admin\CenterController::class);
     });
 });

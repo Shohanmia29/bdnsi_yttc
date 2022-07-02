@@ -1,14 +1,14 @@
 <x-admin-app-layout>
     <x-slot name="header">
         <div class="w-full flex justify-between">
-            <div class="text-xl">{{ __('Users') }}</div>
-            @can('user-create')
+            <div class="text-xl">{{ __('Centers') }}</div>
+            @can('center-create')
                 <div>
                     <a
-                        href="{{ route('admin.user.create') }}"
+                        href="{{ route('admin.center.create') }}"
                         class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
                     >
-                        + {{ __('Create User') }}
+                        + {{ __('Create Center') }}
                     </a>
                 </div>
             @endcan
@@ -16,14 +16,14 @@
     </x-slot>
 
     <div class="w-full mt-8">
-        <table class="w-full" id="users-table">
+        <table class="w-full" id="centers-table">
             <thead>
             <tr>
                 <th>{{ __('ID') }}</th>
-                <th>{{ __('Username') }}</th>
+                <th>{{ __('Code') }}</th>
                 <th>{{ __('Name') }}</th>
-                <th>{{ __('Phone') }}</th>
-                <th>{{ __('Email') }}</th>
+                <th>{{ __('Owner') }}</th>
+                <th>{{ __('Status') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
             </thead>
@@ -32,21 +32,21 @@
     <x-slot name="script">
         <script type="text/javascript" src="{{ mix('js/datatable.js') }}"></script>
         <script type="text/javascript">
-            $('#users-table').DataTable({
+            $('#centers-table').DataTable({
                 serverSide: true,
                 processing: true,
                 ajax: {
-                    url: '{{ route('admin.user.index') }}',
+                    url: '{{ route('admin.center.index') }}',
                     dataSrc(response) {
                         response.data.map(function (item) {
+                            item.status = @js(\App\Enums\CenterStatus::asSelectArray())[item.status];
                             item.action = actionIcons({
-                                'show': '{{ route('admin.user.show', '@') }}'.replace('@', item.id),
-                                @can('user-update')
-                                'portal': '{{ route('admin.user.portal', '@') }}'.replace('@', item.id),
-                                'edit': '{{ route('admin.user.edit', '@') }}'.replace('@', item.id),
+                                'show': '{{ route('admin.center.show', '@') }}'.replace('@', item.id),
+                                @can('center-update')
+                                'edit': '{{ route('admin.center.edit', '@') }}'.replace('@', item.id),
                                 @endcan
-                                @can('user-delete')
-                                'delete': '{{ route('admin.user.destroy', '@') }}'.replace('@', item.id),
+                                @can('center-delete')
+                                'delete': '{{ route('admin.center.destroy', '@') }}'.replace('@', item.id),
                                 @endcan
                             });
                             return item;
@@ -56,10 +56,10 @@
                 },
                 columns: [
                     {data: 'id'},
-                    {data: 'username'},
+                    {data: 'code'},
                     {data: 'name'},
-                    {data: 'phone'},
-                    {data: 'email'},
+                    {data: 'owner_name'},
+                    {data: 'status'},
                     {data: 'action', orderable: false, searchable: false},
                 ]
             });

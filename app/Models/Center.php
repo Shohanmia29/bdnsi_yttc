@@ -35,11 +35,11 @@ class Center extends Model
         'photo',
         'authority_signature',
         'nid_photo',
-        'tread_license',
+        'trade_license',
         'status',
     ];
 
-    protected $cast = [
+    protected $casts = [
         'gender' => Gender::class,
         'religion' => Religion::class,
         'status' => CenterStatus::class,
