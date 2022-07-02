@@ -39,16 +39,20 @@ class SubjectController extends Controller
 
     public function edit(Subject $subject)
     {
-        //
+        return view('admin.subject.edit', compact('subject'));
     }
 
     public function update(Request $request, Subject $subject)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string',
+        ]);
+
+        return response()->report($subject->update($validated), 'Subject Updated successfully');
     }
 
     public function destroy(Subject $subject)
     {
-        //
+        return response()->report($subject->delete(), 'Subject deleted successfully');
     }
 }
