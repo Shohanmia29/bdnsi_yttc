@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Enums\CenterStatus;
 use App\Http\Requests\CenterStoreRequest;
+use App\Http\Requests\CenterUpdateRequest;
 use App\Lib\Image;
 use App\Models\Center;
 use Illuminate\Http\Request;
@@ -32,21 +33,25 @@ class CenterController extends Controller
 
     public function show(Center $center)
     {
-        //
+        return view('admin.center.show', [
+            'center' => $center
+        ]);
     }
 
     public function edit(Center $center)
     {
-        //
+        return view('admin.center.edit', [
+            'center' => $center
+        ]);
     }
 
-    public function update(Request $request, Center $center)
+    public function update(CenterUpdateRequest $request, Center $center)
     {
-        //
+        return response()->report($request->update($center), 'Center updated successfully');
     }
 
     public function destroy(Center $center)
     {
-        //
+        return response()->report($center->delete(), 'Center deleted successfully');
     }
 }

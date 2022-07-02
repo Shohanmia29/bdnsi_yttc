@@ -80,5 +80,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
             ->only(['create','store']);
         Route::resource('user', \App\Http\Controllers\Admin\UserController::class);
         Route::get('user/portal/{user}', [\App\Http\Controllers\Admin\UserController::class, 'portal'])->name('user.portal');
+
+        Route::resource('center', \App\Http\Controllers\Admin\CenterController::class);
     });
 });

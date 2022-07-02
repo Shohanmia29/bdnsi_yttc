@@ -14,6 +14,7 @@ return [
     'roles_structure' => [
         'admin' => [
             'user' => 'c,r,u,d',
+            'center' => 'c,r,u,d',
         ]
     ],
 

@@ -62,7 +62,7 @@
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="photo" required type="file" accept="image/*"/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="authority_signature" required type="file" accept="image/*"/>
                 <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="nid_photo" required type="file" accept="image/*"/>
-                <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="tread_license" required type="file" accept="image/*"/>
+                <x-labeled-input class="w-full lg:w-1/2 odd:pr-2 even:pl-2" name="trade_license" required type="file" accept="image/*"/>
                 <div class="w-full py-8 flex justify-center">
                     <x-button>{{ __('Submit') }}</x-button>
                 </div>

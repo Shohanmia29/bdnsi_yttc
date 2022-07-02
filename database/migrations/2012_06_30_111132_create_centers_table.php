@@ -38,7 +38,7 @@ class CreateCentersTable extends Migration
             $table->string('photo');
             $table->string('authority_signature');
             $table->string('nid_photo');
-            $table->string('tread_license');
+            $table->string('trade_license');
             $table->unsignedTinyInteger('status')->default(CenterStatus::Pending);
             $table->timestamps();
         });
