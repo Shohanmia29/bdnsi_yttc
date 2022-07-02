@@ -44,6 +44,11 @@ class Center extends Model
         'status' => CenterStatus::class,
     ];
 
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
+
     public function getPhotoAttribute($model){
         if(isset($model)){
             return  \App\Lib\Image::url($model);

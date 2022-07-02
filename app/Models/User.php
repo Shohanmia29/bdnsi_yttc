@@ -38,6 +38,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function center()
+    {
+        return $this->belongsTo(Center::class);
+    }
+
     public function getAvatarAttribute($user){
         if(isset($user)){
             return  \App\Lib\Image::url($user);

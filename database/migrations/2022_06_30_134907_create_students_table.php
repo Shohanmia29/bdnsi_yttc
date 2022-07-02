@@ -28,7 +28,7 @@ class CreateStudentsTable extends Migration
             $table->string('permanent_address');
             $table->string('phone');
             $table->string('email');
-            $table->string('gurdian_name');
+            $table->string('guardian_name');
             $table->string('nid_or_birth');
             $table->string('student_address');
             $table->foreignId('session_id')->constrained();
