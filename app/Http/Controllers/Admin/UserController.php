@@ -18,6 +18,10 @@ class UserController extends Controller
 {
     use ChecksPermission;
 
+    protected $mapExtraActionPermission = [
+        'portal' => 'user-update'
+    ];
+
     public function index(Request $request)
     {
         if ($request->ajax()) {
