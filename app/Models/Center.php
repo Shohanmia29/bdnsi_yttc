@@ -2,15 +2,18 @@
 
 namespace App\Models;
 
+use App\Casts\ImageField;
 use App\Enums\CenterStatus;
 use App\Enums\Gender;
 use App\Enums\Religion;
+use App\Lib\Image;
+use App\Traits\DeletesImage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Center extends Model
 {
-    use HasFactory;
+    use HasFactory, DeletesImage;
 
     protected $fillable = [
         'code',
@@ -43,47 +46,14 @@ class Center extends Model
         'gender' => Gender::class,
         'religion' => Religion::class,
         'status' => CenterStatus::class,
+        'photo' => ImageField::class.':center/photo',
+        'authority_signature' => ImageField::class.':center/authority_signature',
+        'nid_photo' => ImageField::class.':center/nid_photo',
+        'trade_license' => ImageField::class.':center/trade_license',
     ];
 
     public function users()
     {
         return $this->hasMany(User::class);
     }
-
-    public function getPhotoAttribute($model){
-        if(isset($model)){
-            return  \App\Lib\Image::url($model);
-        }
-        else{
-            return  asset('images/stop.png');
-        }
-    }
-
-    public function getAuthoritySignatureAttribute($model){
-        if(isset($model)){
-            return  \App\Lib\Image::url($model);
-        }
-        else{
-            return  asset('images/stop.png');
-        }
-    }
-
-    public function getNidPhotoAttribute($model){
-        if(isset($model)){
-            return  \App\Lib\Image::url($model);
-        }
-        else{
-            return  asset('images/stop.png');
-        }
-    }
-
-    public function getTradeLicenseAttribute($model){
-        if(isset($model)){
-            return  \App\Lib\Image::url($model);
-        }
-        else{
-            return  asset('images/stop.png');
-        }
-    }
-
 }

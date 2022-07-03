@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Casts\ImageField;
+use App\Traits\DeletesImage;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -9,7 +11,7 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, DeletesImage;
 
 
     protected $fillable = [
@@ -30,19 +32,11 @@ class User extends Authenticatable
 
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'avatar' => ImageField::class.':images/avatar/user,images/avatar.png',
     ];
 
     public function center()
     {
         return $this->belongsTo(Center::class);
-    }
-
-    public function getAvatarAttribute($user){
-        if(isset($user)){
-            return  \App\Lib\Image::url($user);
-        }
-        else{
-            return  asset('images/avatar.png');
-        }
     }
 }

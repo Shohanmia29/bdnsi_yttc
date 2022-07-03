@@ -2,16 +2,18 @@
 
 namespace App\Models;
 
+use App\Casts\ImageField;
 use App\Enums\BloodGroup;
 use App\Enums\Gender;
 use App\Enums\Religion;
 use App\Enums\StudentStatus;
+use App\Traits\DeletesImage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
-    use HasFactory;
+    use HasFactory, DeletesImage;
 
     protected $fillable = [
         'center_id',
@@ -41,14 +43,6 @@ class Student extends Model
         'gender' => Gender::class,
         'religion' => Religion::class,
         'status' => StudentStatus::class,
+        'picture' => ImageField::class.':images/students',
     ];
-
-    public function getPictureAttribute($model){
-        if(isset($model)){
-            return  \App\Lib\Image::url($model);
-        }
-        else{
-            return  asset('images/stop.png');
-        }
-    }
 }

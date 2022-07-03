@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Enums\Religion;
 use App\Lib\Image;
 use App\Enums\Gender;
 use App\Models\Student;
@@ -48,10 +49,6 @@ class StudentController extends Controller
             'month_of_duration' =>'required|string',
             'picture' =>'required|image',
         ]);
-
-        if($request->hasFile('picture')){
-            $validated['picture'] = Image::store('picture','upload/student');
-        }
 
         return response()->report(Student::create($validated), 'Student Created successfully');
     }

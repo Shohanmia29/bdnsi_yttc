@@ -22,12 +22,6 @@ class ProfileUpdateController extends Controller
             'avatar' => 'nullable|image|max:2048'
         ]);
 
-        unset($validated['avatar']);
-        if ($request->hasFile('avatar')) {
-            Image::delete(Auth::user(), 'avatar');
-            $validated['avatar'] = Image::store('avatar', 'admin/avatar');
-        }
-
         return response()->report(Auth::user()->update($validated), 'Profile updated successfully');
     }
 }
