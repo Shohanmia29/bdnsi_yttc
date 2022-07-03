@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class SubjectController extends Controller
 {
-    
+
     public function index(Request $request)
     {
         if ($request->ajax()) {
@@ -30,11 +30,6 @@ class SubjectController extends Controller
         ]);
 
         return response()->report(Subject::create($validated), 'Subject Created successfully');
-    }
-
-    public function show(Subject $subject)
-    {
-        //
     }
 
     public function edit(Subject $subject)

@@ -1,32 +1,22 @@
 <x-admin-app-layout>
-    <div class="w-full flex flex-wrap mt-4">
-        <div class="w-full py-4">
-            <div class="w-full bg-white rounded">
-                <div class="w-full flex justify-between">
-                    <div class=" border-b text-lg p-4">
-                        {{ __('Session Create') }}
-                    </div>
-
-                    <div class="text-lg p-4">
-                        <a href="{{ route('admin.session.index') }}" class="bg-transparent hover:bg-blue-500 text-blue-700 text-sm font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" >
-                             {{ __('Session List') }}
-                        </a>
-                    </div>
-                </div>
-                <div class="w-full p-4">
-                    <form action="{{route('admin.session.store')}}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                        <x-labeled-input class="mt-4" type="text" name="name" required/>
-                        <x-labeled-input class="mt-4" type="date" name="start_date" required/>
-                        <x-labeled-input class="mt-4" type="date" name="end_date" required/>
-                        <div class="w-full flex justify-center mt-8 mb-4">
-                            <button class="bg-transparent border border-slate-600 py-2 px-4 text-slate-600 font-semibold rounded hover:bg-slate-600 hover:text-white">
-                                {{ __('Create') }}
-                            </button>
-                        </div>
-                    </form>
-                </div>
+    <x-slot name="header">
+        <div class="w-full flex justify-between">
+            <div class="text-xl">{{ __('Create Session') }}</div>
+            <div>
+                <a class="text-primary-700 underline font-semibold" href="{{ route('admin.session.index') }}">{{ __('Sessions') }}</a>
             </div>
         </div>
-    </div>
+    </x-slot>
+
+    <form action="{{ route('admin.session.store') }}" method="POST">
+        @csrf
+        <div class="flex flex-wrap justify-center w-full bg-white p-4">
+            <x-labeled-input name="name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <x-labeled-input type="date" name="start_date" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <x-labeled-input type="date" name="end_date" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <div class="w-full py-8 flex justify-center">
+                <x-button>{{ __('Create') }}</x-button>
+            </div>
+        </div>
+    </form>
 </x-admin-app-layout>

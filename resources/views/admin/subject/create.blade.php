@@ -1,30 +1,20 @@
 <x-admin-app-layout>
-    <div class="w-full flex flex-wrap mt-4">
-        <div class="w-full py-4">
-            <div class="w-full bg-white rounded">
-                <div class="w-full flex justify-between">
-                    <div class=" border-b text-lg p-4">
-                        {{ __('Subject Create') }}
-                    </div>
-
-                    <div class="text-lg p-4">
-                        <a href="{{ route('admin.subject.index') }}" class="bg-transparent hover:bg-blue-500 text-blue-700 text-sm font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" >
-                             {{ __('Subject List') }}
-                        </a>
-                    </div>
-                </div>
-                <div class="w-full p-4">
-                    <form action="{{route('admin.subject.store')}}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                        <x-labeled-input class="mt-4" type="text" name="name" required/>
-                        <div class="w-full flex justify-center mt-8 mb-4">
-                            <button class="bg-transparent border border-slate-600 py-2 px-4 text-slate-600 font-semibold rounded hover:bg-slate-600 hover:text-white">
-                                {{ __('Create') }}
-                            </button>
-                        </div>
-                    </form>
-                </div>
+    <x-slot name="header">
+        <div class="w-full flex justify-between">
+            <div class="text-xl">{{ __('Create Subject') }}</div>
+            <div>
+                <a class="text-primary-700 underline font-semibold" href="{{ route('admin.subject.index') }}">{{ __('Subjects') }}</a>
             </div>
         </div>
-    </div>
+    </x-slot>
+
+    <form action="{{ route('admin.subject.store') }}" method="POST">
+        @csrf
+        <div class="flex flex-wrap justify-center w-full bg-white p-4">
+            <x-labeled-input name="name" required class="w-full p-1"/>
+            <div class="w-full py-8 flex justify-center">
+                <x-button>{{ __('Create') }}</x-button>
+            </div>
+        </div>
+    </form>
 </x-admin-app-layout>

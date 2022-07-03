@@ -1,18 +1,18 @@
 <x-admin-app-layout>
-    <div class="w-full flex justify-between">
-        <div class="text-xl">{{ __('Subject List') }}</div>
-        <div>
-            <a
-                href="{{ route('admin.subject.create') }}"
-                class="bg-transparent hover:bg-blue-500 text-blue-700 text-sm font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-            >
-                + {{ __('Subject') }}
-            </a>
+    <x-slot name="header">
+        <div class="w-full flex justify-between">
+            <div class="text-xl">{{ __('Subjects') }}</div>
+            @can('subject-create')
+                <div>
+                    <a class="text-primary-700 underline font-semibold"
+                       href="{{ route('admin.subject.create') }}">{{ __('Create Subject') }}</a>
+                </div>
+            @endcan
         </div>
-    </div>
+    </x-slot>
 
     <div class="w-full mt-8">
-        <table class="w-full" id="subcategory_table">
+        <table class="w-full" id="subject_table">
             <thead>
             <tr>
                 <th>{{ __('ID') }}</th>
@@ -25,7 +25,7 @@
     <x-slot name="script">
         <script type="text/javascript" src="{{ mix('js/datatable.js') }}"></script>
         <script type="text/javascript">
-            $('#subcategory_table').DataTable({
+            $('#subject_table').DataTable({
                 serverSide: true,
                 processing: true,
                 ajax: {

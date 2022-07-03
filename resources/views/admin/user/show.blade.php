@@ -1,12 +1,12 @@
 <x-admin-app-layout :title="__('User Details')">
-
-
-    <div class="py-6 flex justify-between">
-        <div class="text-3xl">{{ __('User Details') }}</div>
-        <div>
-            <a class="text-primary-700 underline font-semibold" href="{{ route('admin.user.index') }}">{{ __('Users') }}</a>
+    <x-slot name="header">
+        <div class="w-full flex justify-between">
+            <div class="text-xl">{{ __('User Details') }}</div>
+            <div>
+                <a class="text-primary-700 underline font-semibold" href="{{ route('admin.user.index') }}">{{ __('Users') }}</a>
+            </div>
         </div>
-    </div>
+    </x-slot>
 
     <div class="w-full bg-white flex flex-wrap p-4">
         <div class="w-full md:w-1/2 lg:w-1/3 flex justify-center p-2">

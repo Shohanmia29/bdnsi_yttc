@@ -33,11 +33,6 @@ class SessionController extends Controller
         return response()->report(Session::create($validated), 'Session Created successfully');
     }
 
-    public function show(Session $session)
-    {
-        //
-    }
-
     public function edit(Session $session)
     {
         return view('admin.session.edit', compact('session'));

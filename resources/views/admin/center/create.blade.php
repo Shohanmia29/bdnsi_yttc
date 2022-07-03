@@ -2,9 +2,12 @@
     <x-slot name="header">
         <div class="w-full flex justify-between">
             <div class="text-xl">{{ __('Create Center') }}</div>
-            <div>
-                <a class="text-primary-700 underline font-semibold" href="{{ route('admin.center.index') }}">{{ __('Centers') }}</a>
-            </div>
+            @can('center-read')
+                <div>
+                    <a class="text-primary-700 underline font-semibold"
+                       href="{{ route('admin.center.index') }}">{{ __('Centers') }}</a>
+                </div>
+            @endcan
         </div>
     </x-slot>
 

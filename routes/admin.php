@@ -79,8 +79,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('profile-update', \App\Http\Controllers\Admin\ProfileUpdateController::class)
             ->only(['create','store']);
         Route::resource('user', \App\Http\Controllers\Admin\UserController::class);
-        Route::resource('subject', \App\Http\Controllers\Admin\SubjectController::class);
-        Route::resource('session', \App\Http\Controllers\Admin\SessionController::class);
+        Route::resource('subject', \App\Http\Controllers\Admin\SubjectController::class)->except(['show']);
+        Route::resource('session', \App\Http\Controllers\Admin\SessionController::class)->except(['show']);
         Route::get('user/portal/{user}', [\App\Http\Controllers\Admin\UserController::class, 'portal'])->name('user.portal');
 
         Route::resource('center', \App\Http\Controllers\Admin\CenterController::class);

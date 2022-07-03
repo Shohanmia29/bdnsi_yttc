@@ -4,12 +4,8 @@
             <div class="text-xl">{{ __('Centers') }}</div>
             @can('center-create')
                 <div>
-                    <a
-                        href="{{ route('admin.center.create') }}"
-                        class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-                    >
-                        + {{ __('Create Center') }}
-                    </a>
+                    <a class="text-primary-700 underline font-semibold"
+                       href="{{ route('admin.center.create') }}">{{ __('Create Center') }}</a>
                 </div>
             @endcan
         </div>

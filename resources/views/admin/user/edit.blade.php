@@ -23,8 +23,8 @@
                     <option value="{{ $center->id }}" @selected(old('center_id', $user->center_id) == $center->id)>{{ $center->name }}</option>
                 @endforeach
             </x-labeled-select>
-            <div class="w-full pt-4 flex justify-end">
-                <x-button>{{ __('Edit') }}</x-button>
+            <div class="w-full py-8 flex justify-center">
+                <x-button>{{ __('Update') }}</x-button>
             </div>
         </div>
     </form>

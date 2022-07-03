@@ -22,7 +22,7 @@
                     <option value="{{ $center->id }}">{{ $center->name }}</option>
                 @endforeach
             </x-labeled-select>
-            <div class="w-full pt-4 flex justify-end">
+            <div class="w-full py-8 flex justify-center">
                 <x-button>{{ __('Create') }}</x-button>
             </div>
         </div>

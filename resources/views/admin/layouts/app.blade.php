@@ -60,6 +60,14 @@
                 >
                     <span>{{ __('Profile') }}</span>
                 </a>
+                @can('center-read')
+                    <a
+                        href="{{ route('admin.center.index') }}"
+                        class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+                    >
+                        <span>{{ __('Center') }}</span>
+                    </a>
+                @endcan
                 @can('user-read')
                 <a
                     href="{{ route('admin.user.index') }}"

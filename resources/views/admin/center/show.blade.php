@@ -1,7 +1,7 @@
 <x-admin-app-layout>
     <x-slot name="header">
         <div class="flex justify-between">
-            <div class="text-3xl">{{ __('Center Details') }}</div>
+            <div class="text-xl">{{ __('Center Details') }}</div>
             <div>
                 <a class="text-primary-700 underline font-semibold" href="{{ route('admin.center.index') }}">{{ __('Centers') }}</a>
             </div>
@@ -43,33 +43,33 @@
         </div>
         <div class="w-full flex flex-wrap mt-4">
             <div class="w-full py-4 font-semibold">
-                Photo
+                {{ __('Photo') }}
             </div>
-            <div class="w-full">
+            <div class="w-full border">
                 <img src="{{ $center->photo }}" alt="Photo"/>
             </div>
         </div>
         <div class="w-full flex flex-wrap mt-4">
             <div class="w-full py-4 font-semibold">
-                Authority Signature
+                {{ __('Authority Signature') }}
             </div>
-            <div class="w-full">
+            <div class="w-full border">
                 <img src="{{ $center->authority_signature }}" alt="Authority Signature"/>
             </div>
         </div>
         <div class="w-full flex flex-wrap mt-4">
             <div class="w-full py-4 font-semibold">
-                NID Photo
+                {{ __('NID Photo') }}
             </div>
-            <div class="w-full">
+            <div class="w-full border">
                 <img src="{{ $center->nid_photo }}" alt="NID Photo"/>
             </div>
         </div>
         <div class="w-full flex flex-wrap mt-4">
             <div class="w-full py-4 font-semibold">
-                Tread License
+                {{ __('Tread License') }}
             </div>
-            <div class="w-full">
+            <div class="w-full border">
                 <img src="{{ $center->trade_license }}" alt="Trade License"/>
             </div>
         </div>

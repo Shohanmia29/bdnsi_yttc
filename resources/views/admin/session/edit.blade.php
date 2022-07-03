@@ -1,20 +1,22 @@
 <x-admin-app-layout>
-    <div class="py-8 w-full flex justify-between">
-        <div class="text-3xl">{{ __('Edit Session') }}</div>
-        <div>
-            <a class="bg-transparent hover:bg-blue-500 text-blue-700 text-sm font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" href="{{ route('admin.session.index') }}">{{ __('Session List') }}</a>
+    <x-slot name="header">
+        <div class="flex justify-between">
+            <div class="text-xl">{{ __('Edit Session') }}</div>
+            <div>
+                <a class="text-primary-700 underline font-semibold" href="{{ route('admin.session.index') }}">{{ __('Sessions') }}</a>
+            </div>
         </div>
-    </div>
+    </x-slot>
 
-    <form action="{{ route('admin.session.update', $session->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.session.update', $session->id) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="flex flex-wrap justify-center w-full bg-white p-4">
-            <x-labeled-input name="name" required value="{{$session->name}}" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-            <x-labeled-input type="date" name="start_date" required value="{{$session->start_date}}" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-            <x-labeled-input type="date" name="end_date" required value="{{$session->end_date}}" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-            <div class="w-full pt-4 flex justify-end">
-                <x-button>{{ __('Edit') }}</x-button>
+            <x-labeled-input name="name" required value="{{ old('name', $session->name) }}" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <x-labeled-input name="start_date" type="date" required value="{{ old('start_date', $session->start_date) }}" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <x-labeled-input name="end_date" type="date" required value="{{ old('end_date', $session->end_date) }}" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <div class="w-full py-8 flex justify-center">
+                <x-button>{{ __('Update') }}</x-button>
             </div>
         </div>
     </form>
