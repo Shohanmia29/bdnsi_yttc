@@ -14,6 +14,7 @@
             <x-labeled-input name="name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input type="date" name="start_date" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input type="date" name="end_date" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <x-labeled-input type="number" min="1" name="duration" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <div class="w-full py-8 flex justify-center">
                 <x-button>{{ __('Create') }}</x-button>
             </div>

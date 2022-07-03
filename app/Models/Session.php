@@ -13,5 +13,10 @@ class Session extends Model
         'name',
         'start_date',
         'end_date',
+        'duration'
+    ];
+
+    protected $casts = [
+        'duration' => 'int'
     ];
 }

@@ -19,6 +19,7 @@
                 <th>{{ __('Name') }}</th>
                 <th>{{ __('Start Date') }}</th>
                 <th>{{ __('End Date') }}</th>
+                <th>{{ __('Duration') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
             </thead>
@@ -50,6 +51,7 @@
                     {data: 'name'},
                     {data: 'start_date'},
                     {data: 'end_date'},
+                    {data: 'duration'},
                     {data: 'action', orderable: false, searchable: false},
                 ]
             });
