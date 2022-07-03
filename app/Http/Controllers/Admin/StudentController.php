@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Enums\CenterStatus;
 use App\Enums\Religion;
+use App\Enums\StudentStatus;
 use App\Lib\Image;
 use App\Enums\Gender;
 use App\Models\Center;
@@ -36,7 +37,6 @@ class StudentController extends Controller
 
     public function store(Request $request)
     {
-
         $validated = $request->validate([
             'center_id' => 'required|exists:centers,id',
             'name' => 'required|string',
@@ -56,6 +56,7 @@ class StudentController extends Controller
             'nid_or_birth' =>'required|string',
             'session_id' =>'required|exists:sessions,id',
             'subject_id' =>'required|exists:subjects,id',
+            'status' => 'required|numeric|enum_value:'.StudentStatus::class.',false',
             'picture' =>'required|image',
         ]);
 
@@ -100,6 +101,7 @@ class StudentController extends Controller
             'nid_or_birth' =>'required|string',
             'session_id' =>'required|exists:sessions,id',
             'subject_id' =>'required|exists:subjects,id',
+            'status' => 'required|numeric|enum_value:'.StudentStatus::class.',false',
             'picture' =>'nullable|image',
         ]);
 

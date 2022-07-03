@@ -20,6 +20,7 @@
                 <th>{{ __('Center') }}</th>
                 <th>{{ __('Phone') }}</th>
                 <th>{{ __('Email') }}</th>
+                <th>{{ __('Status') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
             </thead>
@@ -35,6 +36,7 @@
                     url: '{{ route('admin.student.index') }}',
                     dataSrc(response) {
                         response.data.map(function (item) {
+                            item.status = @js(\App\Enums\StudentStatus::asSelectArray())[item.status]
                             item.action = actionIcons({
                                 'show': '{{ route('admin.student.show', '@') }}'.replace('@', item.id),
                                 @can('student-update')
@@ -55,6 +57,7 @@
                     {data: 'center.code'},
                     {data: 'phone'},
                     {data: 'email'},
+                    {data: 'status'},
                     {data: 'action', orderable: false, searchable: false},
                 ]
             });

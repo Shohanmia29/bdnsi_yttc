@@ -60,4 +60,9 @@ class Student extends Model
     {
         return $this->belongsTo(Subject::class);
     }
+
+    public function result()
+    {
+        return $this->hasOne(Result::class);
+    }
 }

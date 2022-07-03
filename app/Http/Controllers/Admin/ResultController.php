@@ -1,0 +1,98 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Enums\CenterStatus;
+use App\Http\Controllers\Controller;
+use App\Models\Center;
+use App\Models\Result;
+use App\Models\Session;
+use App\Models\Student;
+use App\Models\Subject;
+use App\Traits\ChecksPermission;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+class ResultController extends Controller
+{
+    use ChecksPermission;
+
+    public function index()
+    {
+        return view('admin.result.index');
+    }
+
+    public function create(Request $request)
+    {
+        $students = collect([]);
+        if ($request->has(['center','session','subject'])) {
+            $students = Student::where([
+                'center_id' => $request->get('center'),
+                'session_id' => $request->get('session'),
+                'subject_id' => $request->get('subject'),
+            ])->with('result')->get();
+        }
+
+        return view('admin.result.create', [
+            'students' => $students,
+            'centers' => Center::select(['id','code','name'])->whereStatus(CenterStatus::Approved)->get(),
+            'sessions' => Session::select(['id','name'])->get(),
+            'subjects' => Subject::select(['id','name'])->get(),
+        ]);
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'id' => 'array',
+            'written.*' => 'required|numeric',
+            'practical.*' => 'required|numeric',
+            'viva.*' => 'required|numeric',
+        ]);
+
+
+        if (count($request->get('id', [])) !== Student::whereIn('id', $request->get('id', []))->count()) {
+            return response()->error('Student missing');
+        }
+
+        try {
+            $written = $request->get('written', []);
+            $practical = $request->get('practical', []);
+            $viva = $request->get('viva', []);
+            DB::beginTransaction();
+            foreach ($request->get('id') as $id) {
+                Result::create([
+                    'student_id' => $id,
+                    'written' => $written[$id],
+                    'practical' => $practical[$id],
+                    'viva' => $viva[$id],
+                ]);
+            }
+            DB::commit();
+            return response()->success('Result published successfully');
+        } catch (\Exception $ex) {
+            DB::rollBack();
+        }
+        return response()->error('Something went wrong');
+    }
+
+    public function show(Result $result)
+    {
+        //
+    }
+
+    public function edit(Result $result)
+    {
+        //
+    }
+
+    public function update(Request $request, Result $result)
+    {
+        //
+    }
+
+    public function destroy(Result $result)
+    {
+        //
+    }
+}
