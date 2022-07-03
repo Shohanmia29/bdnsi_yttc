@@ -40,16 +40,22 @@ class SessionController extends Controller
 
     public function edit(Session $session)
     {
-        //
+        return view('admin.session.edit', compact('session'));
     }
 
     public function update(Request $request, Session $session)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string',
+            'start_date' => 'required|date',
+            'end_date' => 'required|date',
+        ]);
+
+        return response()->report($session->update($validated), 'Session Updated successfully');
     }
 
     public function destroy(Session $session)
     {
-        //
+        return response()->report($session->delete(), 'Session deleted successfully');
     }
 }
