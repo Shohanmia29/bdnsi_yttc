@@ -7,11 +7,14 @@ use App\Http\Requests\CenterStoreRequest;
 use App\Http\Requests\CenterUpdateRequest;
 use App\Lib\Image;
 use App\Models\Center;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class CenterController extends Controller
 {
+    use ChecksPermission;
+
     public function index(Request $request)
     {
         if ($request->ajax()) {

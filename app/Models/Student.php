@@ -20,6 +20,8 @@ class Student extends Model
         'name',
         'fathers_name',
         'mothers_name',
+        'roll',
+        'registration',
         'date_of_birth',
         'gender',
         'blood_group',
@@ -30,19 +32,32 @@ class Student extends Model
         'email',
         'guardian_name',
         'nid_or_birth',
-        'student_address',
-        'training_session',
-        'training_subject',
-        'month_of_duration',
+        'session_id',
+        'subject_id',
         'picture',
         'status',
     ];
 
-    protected $cast = [
+    protected $casts = [
         'blood_group' => BloodGroup::class,
         'gender' => Gender::class,
         'religion' => Religion::class,
         'status' => StudentStatus::class,
         'picture' => ImageField::class.':images/students',
     ];
+
+    public function center()
+    {
+        return $this->belongsTo(Center::class);
+    }
+
+    public function session()
+    {
+        return $this->belongsTo(Session::class);
+    }
+
+    public function subject()
+    {
+        return $this->belongsTo(Subject::class);
+    }
 }

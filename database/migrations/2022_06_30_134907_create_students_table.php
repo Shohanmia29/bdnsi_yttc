@@ -20,6 +20,8 @@ class CreateStudentsTable extends Migration
             $table->string('name');
             $table->string('fathers_name');
             $table->string('mothers_name');
+            $table->string('roll')->nullable();
+            $table->string('registration')->nullable();
             $table->date('date_of_birth');
             $table->unsignedTinyInteger('gender');
             $table->unsignedTinyInteger('blood_group');
@@ -27,14 +29,12 @@ class CreateStudentsTable extends Migration
             $table->string('present_address');
             $table->string('permanent_address');
             $table->string('phone');
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->string('guardian_name');
-            $table->string('nid_or_birth');
-            $table->string('student_address');
+            $table->string('nid_or_birth')->nullable();
             $table->foreignId('session_id')->constrained();
             $table->foreignId('subject_id')->constrained();
-            $table->string('month_of_duration');
-            $table->string('picture');
+            $table->string('picture')->nullable();
             $table->unsignedTinyInteger('status')->default(StudentStatus::Pending);
             $table->timestamps();
         });

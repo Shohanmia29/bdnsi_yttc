@@ -6,6 +6,7 @@ use App\Enums\CenterStatus;
 use App\Http\Controllers\Controller;
 use App\Models\Center;
 use App\Models\User;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
@@ -15,12 +16,13 @@ use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
+    use ChecksPermission;
+
     public function index(Request $request)
     {
         if ($request->ajax()) {
             return datatables(User::query())->toJson();
         }
-
         return view('admin.user.index');
     }
 

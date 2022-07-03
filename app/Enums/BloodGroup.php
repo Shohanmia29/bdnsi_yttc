@@ -29,6 +29,6 @@ final class BloodGroup extends Enum
 
     public function __toString() : string
     {
-        return str_replace(['Positive','Negative', '_'], ['+','-',''], parent::__toString());
+        return str_replace(['Positive','Negative', '_'], ['+','-',''], $this->key);
     }
 }

@@ -52,22 +52,6 @@ class CenterStoreRequest extends FormRequest
 
         $validated['code'] = $validated['code'] ?? random_int(111111, 999999);
 
-//        if($this->hasFile('photo')){
-//            $validated['photo'] = Image::store('photo','upload/center/photo');
-//        }
-//
-//        if($this->hasFile('authority_signature')){
-//            $validated['authority_signature'] = Image::store('authority_signature','upload/center/authority_signature');
-//        }
-//
-//        if($this->hasFile('nid_photo')){
-//            $validated['nid_photo'] = Image::store('nid_photo','upload/center/nid_photo');
-//        }
-//
-//        if($this->hasFile('trade_license')){
-//            $validated['trade_license'] = Image::store('trade_license','upload/center/trade_license');
-//        }
-
         $validated['status'] = $status ?? CenterStatus::Pending;
 
         return Center::create($validated);

@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Subject;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 
 class SubjectController extends Controller
 {
+    use ChecksPermission;
 
     public function index(Request $request)
     {

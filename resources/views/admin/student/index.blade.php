@@ -1,0 +1,63 @@
+<x-admin-app-layout>
+    <x-slot name="header">
+        <div class="w-full flex justify-between">
+            <div class="text-xl">{{ __('Students') }}</div>
+            @can('student-create')
+                <div>
+                    <a class="text-primary-700 underline font-semibold"
+                       href="{{ route('admin.student.create') }}">{{ __('Create Student') }}</a>
+                </div>
+            @endcan
+        </div>
+    </x-slot>
+
+    <div class="w-full mt-8">
+        <table class="w-full" id="students-table">
+            <thead>
+            <tr>
+                <th>{{ __('ID') }}</th>
+                <th>{{ __('Name') }}</th>
+                <th>{{ __('Center') }}</th>
+                <th>{{ __('Phone') }}</th>
+                <th>{{ __('Email') }}</th>
+                <th>{{ __('Action') }}</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <x-slot name="script">
+        <script type="text/javascript" src="{{ mix('js/datatable.js') }}"></script>
+        <script type="text/javascript">
+            $('#students-table').DataTable({
+                serverSide: true,
+                processing: true,
+                ajax: {
+                    url: '{{ route('admin.student.index') }}',
+                    dataSrc(response) {
+                        response.data.map(function (item) {
+                            item.action = actionIcons({
+                                'show': '{{ route('admin.student.show', '@') }}'.replace('@', item.id),
+                                @can('student-update')
+                                'edit': '{{ route('admin.student.edit', '@') }}'.replace('@', item.id),
+                                @endcan
+                                    @can('student-delete')
+                                'delete': '{{ route('admin.student.destroy', '@') }}'.replace('@', item.id),
+                                @endcan
+                            });
+                            return item;
+                        });
+                        return response.data;
+                    }
+                },
+                columns: [
+                    {data: 'id'},
+                    {data: 'name'},
+                    {data: 'center.code'},
+                    {data: 'phone'},
+                    {data: 'email'},
+                    {data: 'action', orderable: false, searchable: false},
+                ]
+            });
+        </script>
+    </x-slot>
+</x-admin-app-layout>
