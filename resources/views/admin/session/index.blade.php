@@ -37,8 +37,12 @@
                         response.data.map(function (item) {
                             item.name = `<p class="text-center">${item.name}</p>`;
                             item.action = actionIcons({
+                                @can('session-update')
                                 'edit': '{{ route('admin.session.edit', '@') }}'.replace('@', item.id),
+                                @endcan
+                                @can('session-delete')
                                 'delete': '{{ route('admin.session.destroy', '@') }}'.replace('@', item.id),
+                                @endcan
                             });
                             return item;
                         });

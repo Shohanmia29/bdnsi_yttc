@@ -40,7 +40,7 @@
                                 @can('student-update')
                                 'edit': '{{ route('admin.student.edit', '@') }}'.replace('@', item.id),
                                 @endcan
-                                    @can('student-delete')
+                                @can('student-delete')
                                 'delete': '{{ route('admin.student.destroy', '@') }}'.replace('@', item.id),
                                 @endcan
                             });

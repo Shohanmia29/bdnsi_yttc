@@ -2,9 +2,11 @@
     <x-slot name="header">
         <div class="w-full flex justify-between">
             <div class="text-xl">{{ __('Create Session') }}</div>
+            @can('session-read')
             <div>
                 <a class="text-primary-700 underline font-semibold" href="{{ route('admin.session.index') }}">{{ __('Sessions') }}</a>
             </div>
+            @endcan
         </div>
     </x-slot>
 

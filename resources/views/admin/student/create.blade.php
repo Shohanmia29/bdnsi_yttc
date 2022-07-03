@@ -2,9 +2,11 @@
     <x-slot name="header">
         <div class="w-full flex justify-between">
             <div class="text-xl">{{ __('Create Student') }}</div>
+            @can('student-read')
             <div>
                 <a class="text-primary-700 underline font-semibold" href="{{ route('admin.student.index') }}">{{ __('Students') }}</a>
             </div>
+            @endcan
         </div>
     </x-slot>
 

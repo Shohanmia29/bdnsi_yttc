@@ -34,8 +34,12 @@
                         response.data.map(function (item) {
                             item.name = `<p class="text-center">${item.name}</p>`;
                             item.action = actionIcons({
+                                @can('subject-update')
                                 'edit': '{{ route('admin.subject.edit', '@') }}'.replace('@', item.id),
+                                @endcan
+                                @can('subject-delete')
                                 'delete': '{{ route('admin.subject.destroy', '@') }}'.replace('@', item.id),
+                                @endcan
                             });
                             return item;
                         });

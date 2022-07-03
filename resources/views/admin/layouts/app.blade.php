@@ -76,29 +76,32 @@
                     <span>{{ __('User') }}</span>
                 </a>
                 @endcan
-
-                {{-- Subject Module --}}
+                @can('subject-read')
                 <a
                     href="{{ route('admin.subject.index') }}"
                     class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
                 >
                     <span>{{ __('Subject') }}</span>
                 </a>
-
-                {{-- Session --}}
+                @endcan
+                @can('session-read')
                 <a
                     href="{{ route('admin.session.index') }}"
                     class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
                 >
                     <span>{{ __('Session') }}</span>
                 </a>
+                @endcan
+                @can('student-read')
                 <a
                     href="{{ route('admin.student.index') }}"
                     class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
                 >
                     <span>{{ __('Student') }}</span>
                 </a>
+                @endcan
             </div>
+            @role('admin')
             <div class="w-full p-3 mt-4 font-semibold">Security</div>
             <div class="w-full flex flex-col">
                 <a
@@ -114,6 +117,7 @@
                     <span>{{ __('Update password') }}</span>
                 </a>
             </div>
+            @endrole
         </div>
     </sidebar>
 
