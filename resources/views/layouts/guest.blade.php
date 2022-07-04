@@ -26,7 +26,8 @@
             <a href="/" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600">Home</a>
             <a href="{{ route('result') }}" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600">Result</a>
             <a href="{{ route('center-request.create') }}" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600">Center Request</a>
-            <a href="" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600">About Us</a>
+            <div class="flex-grow"></div>
+            <a href="{{ route('login') }}" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600 self-end">Center Login</a>
         </div>
     </div>
     <div class="w-full flex-grow">
