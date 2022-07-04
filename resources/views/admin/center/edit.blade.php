@@ -20,7 +20,7 @@
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="owner_name" :value="old('owner_name', $center->owner_name)" required/>
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="fathers_name" :value="old('fathers_name', $center->fathers_name)" required/>
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="mothers_name" :value="old('mothers_name', $center->mothers_name)" required/>
-            <x-labeled-select class="w-full lg:w-1/2 p-1" name="religion" :value="old('religion', $center->religion)" required>
+            <x-labeled-select class="w-full lg:w-1/2 p-1" name="religion" required>
                 @foreach(\App\Enums\Religion::getInstances() as $religion)
                     <option value="{{ $religion->value }}" @selected(old('religion', $center->religion->value) == $religion->value)>{{ $religion->key }}</option>
                 @endforeach

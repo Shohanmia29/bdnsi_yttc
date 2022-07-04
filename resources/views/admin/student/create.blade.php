@@ -49,12 +49,12 @@
             <x-labeled-input name="nid_or_birth" label="NID or Birth Certificate No." required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-select name="session_id" label="Session" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                 @foreach($sessions as $session)
-                    <option value="{{ $session->id }}" @selected(old('sessions') == $session->id)>{{ $session->name }}</option>
+                    <option value="{{ $session->id }}" @selected(old('session_id') == $session->id)>{{ $session->name }}</option>
                 @endforeach
             </x-labeled-select>
             <x-labeled-select name="subject_id" label="Subject" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                 @foreach($subjects as $subject)
-                    <option value="{{ $subject->id }}" @selected(old('subject') == $subject->id)>{{ $subject->name }}</option>
+                    <option value="{{ $subject->id }}" @selected(old('subject_id') == $subject->id)>{{ $subject->name }}</option>
                 @endforeach
             </x-labeled-select>
             <x-labeled-select name="status" required class="w-full p-1 md:w-1/2 lg:w-1/3">
