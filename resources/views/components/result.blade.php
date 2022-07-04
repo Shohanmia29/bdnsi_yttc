@@ -3,7 +3,7 @@
 <div class="w-full flex flex-wrap">
     <div class="w-full flex flex-wrap">
         <div class="w-full md:w-1/4 lg:w-1/5 print:w-1/5">
-            <img class="mx-auto w-32 h-32" src="http://btsi.test/images/avatar.png" />
+            <img class="mx-auto w-32 h-32" src="{{ asset('logo.png') }}" />
         </div>
         <div class="w-full md:w-1/2 lg:w-3/5 print:w-3/5 flex flex-col justify-center items-center">
             <div class="w-full py-2 text-2xl text-center">Bangladesh Technical and Software institute</div>
