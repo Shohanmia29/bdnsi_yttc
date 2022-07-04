@@ -30,7 +30,7 @@
                 </tr>
                 <tr>
                     <td class="p-2 font-semibold">{{ __('Date of Birth') }}</td>
-                    <td class="p-2">{{ $student->date_of_birth }}</td>
+                    <td class="p-2">{{ $student->date_of_birth->toDateString() }}</td>
                 </tr>
                 <tr>
                     <td class="p-2 font-semibold">{{ __('Gender') }}</td>
