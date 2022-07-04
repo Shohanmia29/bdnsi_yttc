@@ -63,6 +63,7 @@
                         <div class="text-center" x-html="calculateGPA(parseInt(w)+parseInt(p)+parseInt(v))"></div>
                     </td>
                     <td class="p-1 border">
+                        @if($student->result)
                         <div class="w-full flex justify-center">
                             <a href="{{ route('admin.result.show', $student->result->id) }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
@@ -71,6 +72,7 @@
                                 </svg>
                             </a>
                         </div>
+                        @endif
                     </td>
                 </tr>
             @endforeach
