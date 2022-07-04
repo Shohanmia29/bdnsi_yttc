@@ -19,12 +19,12 @@
 <body class="antialiased">
 <div class="flex min-h-screen flex-col">
     <div class="w-full py-16 text-center text-4xl">
-        <div class="mx-auto w-full max-w-4xl text-center">BTSI</div>
+        <div class="mx-auto w-full max-w-4xl text-center">{{ config('app.name') }}</div>
     </div>
     <div class="w-full bg-slate-500">
         <div class="mx-auto flex w-full max-w-4xl">
-            <a href="" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600">Home</a>
-            <a href="" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600">Result</a>
+            <a href="/" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600">Home</a>
+            <a href="{{ route('result') }}" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600">Result</a>
             <a href="{{ route('center-request.create') }}" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600">Center Request</a>
             <a href="" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600">About Us</a>
         </div>
@@ -32,7 +32,7 @@
     <div class="w-full flex-grow">
         {{ $slot }}
     </div>
-    <div class="w-full">
+    <div class="w-full mt-8">
         <div class="mx-auto w-full max-w-4xl py-2 text-center">Copyright 2022</div>
     </div>
     {{ $script ?? '' }}

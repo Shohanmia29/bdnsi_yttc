@@ -18,6 +18,8 @@ Route::get('/', function () {
 });
 
 Route::resource('center-request', \App\Http\Controllers\CenterRequestController::class)->only(['create','store']);
+Route::get('result', \App\Http\Controllers\ResultController::class)->name('result');
+Route::Post('result', \App\Http\Controllers\ResultController::class);
 
 Route::get('/dashboard', \App\Http\Controllers\DashboardController::class)->middleware(['auth'])->name('dashboard');
 

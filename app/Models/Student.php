@@ -10,6 +10,34 @@ use App\Enums\StudentStatus;
 use App\Traits\DeletesImage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
+
+/**
+ * @property Center center
+ * @property Session session
+ * @property Subject subject
+ * @property Result result
+ * @property int center_id
+ * @property string name
+ * @property string fathers_name
+ * @property string mothers_name
+ * @property string roll
+ * @property string registration
+ * @property Carbon date_of_birth
+ * @property Gender gender
+ * @property BloodGroup blood_group
+ * @property Religion religion
+ * @property string present_address
+ * @property string permanent_address
+ * @property string phone
+ * @property string email
+ * @property string guardian_name
+ * @property string nid_or_birth
+ * @property int session_id
+ * @property int subject_id
+ * @property string picture
+ * @property StudentStatus status
+ */
 
 class Student extends Model
 {
@@ -39,6 +67,7 @@ class Student extends Model
     ];
 
     protected $casts = [
+        'date_of_birth' => 'datetime',
         'blood_group' => BloodGroup::class,
         'gender' => Gender::class,
         'religion' => Religion::class,

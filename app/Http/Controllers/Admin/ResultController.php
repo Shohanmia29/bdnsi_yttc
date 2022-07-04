@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Enums\CenterStatus;
+use App\Enums\StudentStatus;
 use App\Http\Controllers\Controller;
 use App\Models\Center;
 use App\Models\Result;
@@ -17,27 +18,45 @@ class ResultController extends Controller
 {
     use ChecksPermission;
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.result.index');
+        $students = collect([]);
+        if ($request->has(['center', 'session', 'subject'])) {
+            $students = Student::where([
+                'center_id' => $request->get('center'),
+                'session_id' => $request->get('session'),
+                'subject_id' => $request->get('subject'),
+            ])
+            ->whereStatus(StudentStatus::Approved)
+            ->with('result')->get();
+        }
+
+        return view('admin.result.index', [
+            'students' => $students,
+            'centers' => Center::select(['id', 'code', 'name'])->whereStatus(CenterStatus::Approved)->get(),
+            'sessions' => Session::select(['id', 'name'])->get(),
+            'subjects' => Subject::select(['id', 'name'])->get(),
+        ]);
     }
 
     public function create(Request $request)
     {
         $students = collect([]);
-        if ($request->has(['center','session','subject'])) {
+        if ($request->has(['center', 'session', 'subject'])) {
             $students = Student::where([
                 'center_id' => $request->get('center'),
                 'session_id' => $request->get('session'),
                 'subject_id' => $request->get('subject'),
-            ])->with('result')->get();
+            ])
+            ->whereStatus(StudentStatus::Approved)
+            ->with('result')->get();
         }
 
         return view('admin.result.create', [
             'students' => $students,
-            'centers' => Center::select(['id','code','name'])->whereStatus(CenterStatus::Approved)->get(),
-            'sessions' => Session::select(['id','name'])->get(),
-            'subjects' => Subject::select(['id','name'])->get(),
+            'centers' => Center::select(['id', 'code', 'name'])->whereStatus(CenterStatus::Approved)->get(),
+            'sessions' => Session::select(['id', 'name'])->get(),
+            'subjects' => Subject::select(['id', 'name'])->get(),
         ]);
     }
 
@@ -61,12 +80,12 @@ class ResultController extends Controller
             $viva = $request->get('viva', []);
             DB::beginTransaction();
             foreach ($request->get('id') as $id) {
-                Result::create([
-                    'student_id' => $id,
-                    'written' => $written[$id],
-                    'practical' => $practical[$id],
-                    'viva' => $viva[$id],
-                ]);
+                Result::updateOrCreate(['student_id' => $id],
+                    [
+                        'written' => $written[$id],
+                        'practical' => $practical[$id],
+                        'viva' => $viva[$id],
+                    ]);
             }
             DB::commit();
             return response()->success('Result published successfully');
@@ -78,17 +97,9 @@ class ResultController extends Controller
 
     public function show(Result $result)
     {
-        //
-    }
-
-    public function edit(Result $result)
-    {
-        //
-    }
-
-    public function update(Request $request, Result $result)
-    {
-        //
+        return view('admin.result.show', [
+            'result' => $result
+        ]);
     }
 
     public function destroy(Result $result)

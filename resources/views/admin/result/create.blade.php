@@ -53,8 +53,7 @@
                 </thead>
                 <tbody>
                 @foreach($students as $student)
-                    @dd($student->toArray())
-                    <tr x-data="{ w: 0, p: 0, v: 0 }">
+                    <tr x-data="{ w: {{ optional($student->result)->written ?? 0 }}, p: {{ optional($student->result)->practical ?? 0 }}, v: {{ optional($student->result)->viva ?? 0 }} }">
                         <td class="p-1 border">{{ $student->name }}</td>
                         <td class="p-1 border">{{ $student->roll }}</td>
                         <td class="p-1 border">{{ $student->registration }}</td>
@@ -63,7 +62,7 @@
                         <td class="p-1 border w-28"><input class="w-full border p-1" x-bind:class="parseInt(w)+parseInt(p)+parseInt(v) > 100 ? 'border-red-500' : ''" type="number" max="100" x-model="v" name="viva[{{ $student->id }}]"/></td>
                         <td class="p-1 border">
                             <input type="hidden" name="id[]" value="{{ $student->id }}">
-                            <div class="text-center" x-html="getGPA(parseInt(w)+parseInt(p)+parseInt(v))"></div>
+                            <div class="text-center" x-html="calculateGPA(parseInt(w)+parseInt(p)+parseInt(v))"></div>
                         </td>
                     </tr>
                 @endforeach
@@ -76,25 +75,6 @@
     </form>
 
     <x-slot name="beforeScript">
-        <script>
-            function getGPA(mark){
-                switch (true) {
-                    case mark >= 80:
-                        return 'A+';
-                    case mark >= 70:
-                        return 'A';
-                    case mark >= 60:
-                        return 'A-';
-                    case mark >= 50:
-                        return 'B';
-                    case mark >= 40:
-                        return 'C';
-                    case mark >=0:
-                        return 'F';
-                    default:
-                        return '';
-                }
-            }
-        </script>
+        <x-calculate-gpa-script />
     </x-slot>
 </x-admin-app-layout>
