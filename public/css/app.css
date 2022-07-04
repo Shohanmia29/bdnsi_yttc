@@ -628,6 +628,9 @@ select {
     max-width: 1536px;
   }
 }
+.pointer-events-none {
+  pointer-events: none;
+}
 .fixed {
   position: fixed;
 }
@@ -857,6 +860,9 @@ select {
 .max-w-6xl {
   max-width: 72rem;
 }
+.max-w-\[93vw\] {
+  max-width: 93vw;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -996,6 +1002,9 @@ select {
 }
 .overflow-y-scroll {
   overflow-y: scroll;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 .rounded-md {
   border-radius: 0.375rem;
@@ -1746,10 +1755,6 @@ select {
 }
 @media print {
 
-  .print\:fixed {
-    position: fixed;
-  }
-
   .print\:absolute {
     position: absolute;
   }
@@ -1763,10 +1768,6 @@ select {
 
   .print\:hidden {
     display: none;
-  }
-
-  .print\:w-full {
-    width: 100%;
   }
 
   .print\:w-1\/5 {
@@ -1891,6 +1892,10 @@ select {
 
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
   }
 
   .md\:flex-row-reverse {
