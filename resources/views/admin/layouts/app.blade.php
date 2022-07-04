@@ -54,12 +54,6 @@
                 >
                     <span>{{ __('Dashboard') }}</span>
                 </a>
-                <a
-                    href="{{ route('admin.profile-update.create') }}"
-                    class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
-                >
-                    <span>{{ __('Profile') }}</span>
-                </a>
                 @can('center-read')
                     <a
                         href="{{ route('admin.center.index') }}"
@@ -98,6 +92,14 @@
                     class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
                 >
                     <span>{{ __('Student') }}</span>
+                </a>
+                @endcan
+                @can('result-read')
+                <a
+                    href="{{ route('admin.result.index') }}"
+                    class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+                >
+                    <span>{{ __('Result') }}</span>
                 </a>
                 @endcan
             </div>
