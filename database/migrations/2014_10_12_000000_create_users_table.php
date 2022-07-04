@@ -16,9 +16,9 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('username')->unique();
-            $table->string('email')->unique();
-            $table->string('phone')->unique();
+            $table->string('username', config('database.connections.mysql.default_key_len'))->unique();
+            $table->string('email', config('database.connections.mysql.default_key_len'))->unique();
+            $table->string('phone', config('database.connections.mysql.default_key_len'))->unique();
             $table->string('avatar')->nullable();
             $table->foreignId('center_id')->constrained();
             $table->timestamp('email_verified_at')->nullable();

@@ -13,10 +13,11 @@ class LaratrustSetupTables extends Migration
      */
     public function up()
     {
+        define('DEFAULE_KEY_LEN', config('database.connections.mysql.default_key_len'));
         // Create table for storing roles
         Schema::create('roles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name')->unique();
+            $table->string('name', DEFAULE_KEY_LEN)->unique();
             $table->string('display_name')->nullable();
             $table->string('description')->nullable();
             $table->timestamps();
@@ -25,7 +26,7 @@ class LaratrustSetupTables extends Migration
         // Create table for storing permissions
         Schema::create('permissions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name')->unique();
+            $table->string('name', DEFAULE_KEY_LEN)->unique();
             $table->string('display_name')->nullable();
             $table->string('description')->nullable();
             $table->timestamps();
@@ -35,7 +36,7 @@ class LaratrustSetupTables extends Migration
         Schema::create('role_user', function (Blueprint $table) {
             $table->unsignedBigInteger('role_id');
             $table->unsignedBigInteger('user_id');
-            $table->string('user_type');
+            $table->string('user_type', DEFAULE_KEY_LEN);
 
             $table->foreign('role_id')->references('id')->on('roles')
                 ->onUpdate('cascade')->onDelete('cascade');
@@ -47,7 +48,7 @@ class LaratrustSetupTables extends Migration
         Schema::create('permission_user', function (Blueprint $table) {
             $table->unsignedBigInteger('permission_id');
             $table->unsignedBigInteger('user_id');
-            $table->string('user_type');
+            $table->string('user_type', DEFAULE_KEY_LEN);
 
             $table->foreign('permission_id')->references('id')->on('permissions')
                 ->onUpdate('cascade')->onDelete('cascade');

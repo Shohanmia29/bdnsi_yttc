@@ -16,7 +16,7 @@ class CreateCentersTable extends Migration
     {
         Schema::create('centers', function (Blueprint $table) {
             $table->id();
-            $table->string('code')->unique();
+            $table->string('code', config('database.connections.mysql.default_key_len'))->unique();
             $table->string('name');
             $table->string('owner_name');
             $table->string('fathers_name');
