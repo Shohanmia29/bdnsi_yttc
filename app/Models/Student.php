@@ -11,6 +11,7 @@ use App\Traits\DeletesImage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * @property Center center
@@ -93,5 +94,11 @@ class Student extends Model
     public function result()
     {
         return $this->hasOne(Result::class);
+    }
+
+    public function scopeOwn($query, $centerId = null)
+    {
+        $centerId = $centerId ?? Auth::user()->center_id;
+        return $query->where(['center_id' => $centerId]);
     }
 }

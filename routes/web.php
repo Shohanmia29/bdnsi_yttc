@@ -21,6 +21,9 @@ Route::resource('center-request', \App\Http\Controllers\CenterRequestController:
 Route::get('result', \App\Http\Controllers\ResultController::class)->name('result');
 Route::Post('result', \App\Http\Controllers\ResultController::class);
 
+Route::resource('student', \App\Http\Controllers\StudentController::class);
+Route::resource('student-submission', \App\Http\Controllers\StudentSubmissionController::class)->only(['create','store']);
+
 Route::get('/dashboard', \App\Http\Controllers\DashboardController::class)->middleware(['auth'])->name('dashboard');
 
 Route::resource('password-update', \App\Http\Controllers\PasswordUpdateController::class)

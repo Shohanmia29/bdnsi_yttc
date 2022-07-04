@@ -55,13 +55,17 @@
                 >
                     <span>{{ __('Dashboard') }}</span>
                 </a>
-            </div>
-            <div class="w-full flex flex-col">
                 <a
-                    href="{{ route('profile-update.create') }}"
+                    href="{{ route('student.index') }}"
                     class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
                 >
-                    <span>{{ __('Profile') }}</span>
+                    <span>{{ __('Student') }}</span>
+                </a>
+                <a
+                    href="{{ route('student-submission.create') }}"
+                    class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+                >
+                    <span>{{ __('Student Submission') }}</span>
                 </a>
             </div>
             <div class="w-full p-3 mt-4 font-semibold">Security</div>
@@ -150,6 +154,11 @@
             </div>
         </header>
         <main class="flex-grow lg:ml-64">
+            @isset($header)
+                <div class="w-full bg-white p-4">
+                    {{ $header }}
+                </div>
+            @endisset
             @if(session(\App\Mixin\ResponseMixin::SUCCESS_MESSAGE_SESSION_KEY))
                 <x-alert type="success">{{ session(\App\Mixin\ResponseMixin::SUCCESS_MESSAGE_SESSION_KEY) }}</x-alert>
             @endif
@@ -187,5 +196,6 @@
         });
     };
 </script>
+{{ $script ?? '' }}
 </body>
 </html>
