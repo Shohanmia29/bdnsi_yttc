@@ -29,13 +29,13 @@
             </tr>
             <tr>
                 <td class="border p-2">{{ __('Father\'s Name') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->name }}</td>
+                <td class="border p-2" colspan="2">{{ $result->student->fathers_name }}</td>
                 <td class="border p-2" rowspan="2" valign="top">{{ __('Registration') }}</td>
                 <td class="border p-2" rowspan="2" valign="top" colspan="2">{{ $result->student->registration }}</td>
             </tr>
             <tr>
                 <td class="border p-2">{{ __('Mother\'s Name') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->name }}</td>
+                <td class="border p-2" colspan="2">{{ $result->student->mothers_name }}</td>
             </tr>
             <tr>
                 <td class="border p-2 text-center font-semibold" colspan="6">{{ __('Mark') }}</td>
