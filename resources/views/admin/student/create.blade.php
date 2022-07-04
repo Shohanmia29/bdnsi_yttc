@@ -4,7 +4,9 @@
             <div class="text-xl">{{ __('Create Student') }}</div>
             @can('student-read')
             <div>
-                <a class="text-primary-700 underline font-semibold" href="{{ route('admin.student.index') }}">{{ __('Students') }}</a>
+                <a
+                    class="border border-slate-500 py-1 px-4 rounded text-slate-700 text-sm hover:text-white hover:bg-slate-700"
+                    href="{{ route('admin.student.index') }}">{{ __('Students') }}</a>
             </div>
             @endcan
         </div>

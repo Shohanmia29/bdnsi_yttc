@@ -4,7 +4,9 @@
             <div class="text-xl">{{ __('Create Subject') }}</div>
             @can('subject-read')
             <div>
-                <a class="text-primary-700 underline font-semibold" href="{{ route('admin.subject.index') }}">{{ __('Subjects') }}</a>
+                <a
+                    class="border border-slate-500 py-1 px-4 rounded text-slate-700 text-sm hover:text-white hover:bg-slate-700"
+                    href="{{ route('admin.subject.index') }}">{{ __('Subjects') }}</a>
             </div>
             @endcan
         </div>

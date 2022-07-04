@@ -3,7 +3,9 @@
         <div class="w-full flex justify-between">
             <div class="text-xl">{{ __('User Details') }}</div>
             <div>
-                <a class="text-primary-700 underline font-semibold" href="{{ route('admin.user.index') }}">{{ __('Users') }}</a>
+                <a
+                    class="border border-slate-500 py-1 px-4 rounded text-slate-700 text-sm hover:text-white hover:bg-slate-700"
+                    href="{{ route('admin.user.index') }}">{{ __('Users') }}</a>
             </div>
         </div>
     </x-slot>
