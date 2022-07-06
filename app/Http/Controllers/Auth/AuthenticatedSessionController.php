@@ -13,9 +13,6 @@ class AuthenticatedSessionController extends Controller
 {
     public function __construct()
     {
-        $this->middleware([
-            CaptchaCodeChecker::class
-        ])->only('store');
     }
 
     /**
