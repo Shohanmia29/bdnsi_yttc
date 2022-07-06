@@ -101,4 +101,14 @@ class Student extends Model
         $centerId = $centerId ?? Auth::user()->center_id;
         return $query->where(['center_id' => $centerId]);
     }
+
+    public static function getLastFreeRoll()
+    {
+        return (static::orderBy('roll', 'desc')->value('roll') ?? 652187) + 1;
+    }
+
+    public static function getLastFreeRegistration()
+    {
+        return (static::orderBy('registration', 'desc')->value('registration') ?? 305197) + 1;
+    }
 }
