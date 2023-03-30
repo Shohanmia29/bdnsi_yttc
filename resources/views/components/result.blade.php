@@ -13,6 +13,7 @@
     <div class="w-full flex flex-wrap justify-end">
         <div class="w-full md:w-1/2 lg:w-3/5 print:w-3/5 flex flex-col justify-center items-center">
             <div class="w-full py-2 text-xl text-center">{{ $result->student->center->name }}</div>
+            <div class="w-full py-1 text-center font-semibold">{{ $result->student->subject->name }}</div>
             <div class="w-full py-2 text-center">Center code: {{ $result->student->center->code }}</div>
         </div>
         <div class="w-full md:w-1/4 lg:w-1/5 print:w-1/5">
@@ -30,12 +31,14 @@
             <tr>
                 <td class="border p-2">{{ __('Father\'s Name') }}</td>
                 <td class="border p-2" colspan="2">{{ $result->student->fathers_name }}</td>
-                <td class="border p-2" rowspan="2" valign="top">{{ __('Registration') }}</td>
-                <td class="border p-2" rowspan="2" valign="top" colspan="2">{{ $result->student->registration }}</td>
+                <td class="border p-2">{{ __('Registration') }}</td>
+                <td class="border p-2" colspan="2">{{ $result->student->registration }}</td>
             </tr>
             <tr>
                 <td class="border p-2">{{ __('Mother\'s Name') }}</td>
                 <td class="border p-2" colspan="2">{{ $result->student->mothers_name }}</td>
+                <td class="border p-2">{{ __('Session') }}</td>
+                <td class="border p-2" colspan="2">{{ $result->student->session->name }}</td>
             </tr>
             <tr>
                 <td class="border p-2 text-center font-semibold" colspan="6">{{ __('Mark') }}</td>
