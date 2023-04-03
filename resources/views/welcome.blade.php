@@ -48,11 +48,11 @@
         </div>
     </div>
 
-    <div class="w-full bg-[#F3F4F6]">
+    <div class="w-full bg-[#F3F4F6] pb-5">
         <div class="mx-auto flex w-full max-w-6xl ">
             <!-- ====== Cards Section Start -->
 
-            <section class="bg-[#F3F4F6] pt-20 pb-10 lg:pt-[50px] lg:pb-10">
+            <div class="bg-[#F3F4F6] pt-20 pb-10 lg:pt-[50px] lg:pb-10">
                 <div class="text-center pb-5  text-3xl ">
 
                     Our Courses
@@ -126,10 +126,27 @@
                     <button type="button" class=" float-right  focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">SHOW ALL</button>
                 </div>
 
-            </section>
+            </div>
             <!-- ====== Cards Section End -->
 
         </div>
     </div>
+
+
+    <div class="flex mx-auto max-w-6xl bg-pink-600 text-white p-10 m-10">
+        <div class="text-4xl font-semibold flex gap-4 items-center">
+            <div class="">
+                Apply Now for Your Institute Registration
+            </div>
+            <div>
+                <a class=" focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-lg px-5 py-2.5  mb-4 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                   href="#">APPLY NOW</a>
+
+            </div>
+        </div>
+
+    </div>
+
+
 
 </x-guest-layout>
