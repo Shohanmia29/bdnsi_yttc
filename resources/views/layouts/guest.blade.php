@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
     <!-- Styles -->
+<<<<<<< HEAD
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link
         rel="stylesheet"
@@ -18,9 +19,12 @@
     />
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
 
+=======
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+>>>>>>> ea55fe7a90c767b78a3e9be0a5f10cfa38da52fc
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 <body class="antialiased">
 <div class="flex min-h-screen flex-col">

@@ -213,7 +213,7 @@
             </div>
         </main>
         <footer class="w-full p-2 text-center">
-            Copyright 2022
+            Copyright 2022 - {{ date('Y') }}
         </footer>
     </div>
 </div>

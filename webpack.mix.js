@@ -19,4 +19,6 @@ mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'pub
 
 mix.js('resources/js/datatable.js', 'public/js');
 
+mix.version()
+
 mix.disableSuccessNotifications()

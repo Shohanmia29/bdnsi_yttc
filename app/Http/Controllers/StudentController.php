@@ -57,9 +57,6 @@ class StudentController extends Controller
         $validated['center_id'] = Auth::user()->center_id;
         $validated['status'] = StudentStatus::Pending;
 
-        $validated['roll'] = Student::getLastFreeRoll();
-        $validated['registration'] = Student::getLastFreeRegistration();
-
         return response()->report(Student::create($validated), 'Student Created successfully');
     }
 

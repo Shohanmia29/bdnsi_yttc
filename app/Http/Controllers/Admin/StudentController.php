@@ -12,15 +12,18 @@ use App\Models\Session;
 use App\Models\Student;
 use App\Enums\BloodGroup;
 use App\Models\Subject;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class StudentController extends Controller
 {
+    use ChecksPermission;
+
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            return datatables(Student::with('center:id,code,name'))->toJson();
+            return datatables(Student::with('center:id,code','subject:id,name'))->toJson();
         }
 
         return view('admin.student.index');
@@ -60,6 +63,9 @@ class StudentController extends Controller
             'picture' =>'required|image',
         ]);
 
+        $validated['roll'] = $validated['roll'] ?? Student::getLastFreeRoll();
+        $validated['registration'] = $validated['registration'] ?? Student::getLastFreeRegistration();
+
         return response()->report(Student::create($validated), 'Student Created successfully');
     }
 
@@ -85,8 +91,8 @@ class StudentController extends Controller
         $validated = $request->validate([
             'center_id' => 'required|exists:centers,id',
             'name' => 'required|string',
-            'roll' => 'required|string',
-            'registration' => 'required|string',
+            'roll' => 'nullable|string',
+            'registration' => 'nullable|string',
             'fathers_name' => 'required|string',
             'mothers_name' => 'required|string',
             'date_of_birth' => 'required|date',
@@ -104,6 +110,12 @@ class StudentController extends Controller
             'status' => 'required|numeric|enum_value:'.StudentStatus::class.',false',
             'picture' =>'nullable|image',
         ]);
+
+        $validated['roll'] = $validated['roll']
+            ?? ($student->roll ?: Student::getLastFreeRoll());
+        $validated['registration'] = $validated['registration']
+            ?? ($student->registration ?: Student::getLastFreeRegistration());
+
 
         return response()->report($student->update($validated), 'Student Updated successfully');
     }

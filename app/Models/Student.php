@@ -104,11 +104,11 @@ class Student extends Model
 
     public static function getLastFreeRoll()
     {
-        return (static::orderBy('roll', 'desc')->value('roll') ?? 652187) + 1;
+        return (static::max('roll') ?? 652187) + 1;
     }
 
     public static function getLastFreeRegistration()
     {
-        return (static::orderBy('registration', 'desc')->value('registration') ?? 305197) + 1;
+        return (static::max('registration') ?? 305197) + 1;
     }
 }

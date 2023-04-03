@@ -52,9 +52,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
   /* Set the defaults for DataTables initialisation */
 
   $.extend(true, DataTable.defaults, {
-    dom: "<'flex flex-col items-center md:flex-row'<'w-auto md:w-1/2 py-1'l><'w-auto text-right md:w-1/2 py-1'f>>" + "<'flex my-4'<'w-full overflow-y-auto max-w-[93vw]'tr>>" + "<'flex flex-col md:flex-row'<'w-full md:w-1/3'i><'w-full md:w-2/3 text-right'p>>",
+    dom: "<'flex flex-col items-center md:flex-row'<'w-auto md:w-1/2 py-1'l><'w-auto text-right md:w-1/2 py-1'f>>" + "<'flex my-4'<'w-full overflow-y-auto max-w-table'tr>>" + "<'flex flex-col md:flex-row'<'w-full md:w-1/3'i><'w-full md:w-2/3 text-right'p>>",
     renderer: 'tailwindcss',
-    autoWidth: false
+    autoWidth: false,
+    drawCallback: function drawCallback() {
+      document.querySelector('.max-w-table').style.maxWidth = window.outerWidth - (window.outerWidth > 768) * document.querySelector('sidebar').clientWidth - 48 + 'px';
+    }
   });
   $.extend(DataTable.ext.classes, {
     sWrapper: "w-full whitespace-nowrap drag-scroll",
