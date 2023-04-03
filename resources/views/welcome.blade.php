@@ -133,17 +133,18 @@
     </div>
 
 
-    <div class="flex mx-auto max-w-6xl bg-pink-600 text-white p-10 m-10">
-        <div class="text-4xl font-semibold flex gap-4 items-center">
-            <div class="">
-                Apply Now for Your Institute Registration
-            </div>
-            <div>
-                <a class=" focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-lg px-5 py-2.5  mb-4 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-                   href="#">APPLY NOW</a>
-
-            </div>
-        </div>
+    <div class="flex mx-auto max-w-6xl bg-pink-600 text-white py-6 m-10">
+      <div class="w-full md:w-4/5 mx-auto">
+          <div class="w-full text-2xl  font-semibold flex gap-2 items-center">
+              <div class="">
+                  Apply Now for Your Institute Registration
+              </div>
+              <div>
+                  <a class=" focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-lg px-5 py-2.5  mb-4 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                     href="#">APPLY NOW</a>
+              </div>
+          </div>
+      </div>
 
     </div>
 

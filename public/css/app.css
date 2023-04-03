@@ -895,6 +895,9 @@ select {
 .w-2\/4 {
   width: 50%;
 }
+.w-3\/4 {
+  width: 75%;
+}
 .min-w-full {
   min-width: 100%;
 }
@@ -1346,6 +1349,10 @@ select {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -1443,6 +1450,10 @@ select {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 .font-medium {
   font-weight: 500;
@@ -2039,6 +2050,14 @@ select {
 
   .md\:w-2\/3 {
     width: 66.666667%;
+  }
+
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
+  .md\:w-4\/5 {
+    width: 80%;
   }
 
   .md\:grid-cols-4 {
