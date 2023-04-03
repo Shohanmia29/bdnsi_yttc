@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
     <!-- Styles -->
-<<<<<<< HEAD
+
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link
         rel="stylesheet"
@@ -19,9 +19,9 @@
     />
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
 
-=======
+
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
->>>>>>> ea55fe7a90c767b78a3e9be0a5f10cfa38da52fc
+
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
@@ -104,8 +104,8 @@
                 <div class="flex flex-wrap items-center md:justify-between justify-center">
                     <div class="w-full md:w-4/12 px-4 mx-auto text-center">
                         <div class="text-sm text-blueGray-500 font-semibold py-1">
-                            Copyright © <span id="get-current-year">2021</span><a href="https://www.creative-tim.com/product/notus-js" class="text-blueGray-500 hover:text-gray-800" target="_blank"> Notus JS by</a>
-                                <a href="https://www.creative-tim.com?ref=njs-profile" class="text-blueGray-500 hover:text-blueGray-800">MMIT Soft Ltd.</a>.
+                            Copyright © <span id="get-current-year">2023</span><a href="#" class="text-blueGray-500 hover:text-gray-800" target="_blank"> Design & Development by</a>
+                                <a href="#" class="text-blueGray-500 hover:text-blueGray-800">MMIT Soft Ltd</a>.
                         </div>
                     </div>
                 </div>
