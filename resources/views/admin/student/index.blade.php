@@ -18,9 +18,12 @@
                 <th>{{ __('ID') }}</th>
                 <th>{{ __('Name') }}</th>
                 <th>{{ __('Center') }}</th>
+                <th>{{ __('Subject') }}</th>
                 <th>{{ __('Phone') }}</th>
                 <th>{{ __('Email') }}</th>
                 <th>{{ __('Status') }}</th>
+                <th>{{ __('Roll') }}</th>
+                <th>{{ __('Registration') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
             </thead>
@@ -55,8 +58,11 @@
                     {data: 'id'},
                     {data: 'name'},
                     {data: 'center.code'},
+                    {data: 'subject.name'},
                     {data: 'phone'},
                     {data: 'email'},
+                    {data: 'roll'},
+                    {data: 'registration'},
                     {data: 'status'},
                     {data: 'action', orderable: false, searchable: false},
                 ]

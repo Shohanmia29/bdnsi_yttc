@@ -20,7 +20,7 @@ class StudentController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            return datatables(Student::with('center:id,code,name'))->toJson();
+            return datatables(Student::with('center:id,code','subject:id,name'))->toJson();
         }
 
         return view('admin.student.index');
