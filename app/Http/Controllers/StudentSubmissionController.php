@@ -19,6 +19,7 @@ class StudentSubmissionController extends Controller
                 'subject_id' => $request->get('subject'),
             ])
                 ->whereStatus(StudentStatus::Pending)
+                ->own()
                 ->get();
         }
 
