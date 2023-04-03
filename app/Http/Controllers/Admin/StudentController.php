@@ -60,6 +60,9 @@ class StudentController extends Controller
             'picture' =>'required|image',
         ]);
 
+        $validated['roll'] = $validated['roll'] ?? Student::getLastFreeRoll();
+        $validated['registration'] = $validated['registration'] ?? Student::getLastFreeRegistration();
+
         return response()->report(Student::create($validated), 'Student Created successfully');
     }
 
@@ -85,8 +88,8 @@ class StudentController extends Controller
         $validated = $request->validate([
             'center_id' => 'required|exists:centers,id',
             'name' => 'required|string',
-            'roll' => 'required|string',
-            'registration' => 'required|string',
+            'roll' => 'nullable|string',
+            'registration' => 'nullable|string',
             'fathers_name' => 'required|string',
             'mothers_name' => 'required|string',
             'date_of_birth' => 'required|date',
@@ -104,6 +107,12 @@ class StudentController extends Controller
             'status' => 'required|numeric|enum_value:'.StudentStatus::class.',false',
             'picture' =>'nullable|image',
         ]);
+
+        $validated['roll'] = $validated['roll']
+            ?? ($student->roll ?: Student::getLastFreeRoll());
+        $validated['registration'] = $validated['registration']
+            ?? ($student->registration ?: Student::getLastFreeRegistration());
+
 
         return response()->report($student->update($validated), 'Student Updated successfully');
     }
