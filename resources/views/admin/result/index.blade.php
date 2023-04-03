@@ -62,6 +62,7 @@
                     <td class="p-1 border">
                         <div class="text-center" x-html="calculateGPA(parseInt(w)+parseInt(p)+parseInt(v))"></div>
                     </td>
+                    <td class="p-1 border">{{ optional(optional($student->result)->created_at)->toDateString() }}</td>
                     <td class="p-1 border">
                         @if($student->result)
                         <div class="w-full flex justify-center">
@@ -78,9 +79,6 @@
             @endforeach
             </tbody>
         </table>
-        <div class="w-full p-4 flex justify-end">
-            <x-button>{{ __('Publish') }}</x-button>
-        </div>
     </div>
 
     <x-slot name="beforeScript">
