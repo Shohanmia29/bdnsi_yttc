@@ -50,7 +50,13 @@ class CenterStoreRequest extends FormRequest
     {
         $validated = $this->validated();
 
-        $validated['code'] = $validated['code'] ?? random_int(111111, 999999);
+        do {
+            $validated['code'] = Center::max('code') + 1;
+
+            $validated['code'] = $validated['code'] < 999999
+                ? $validated['code']
+                : random_int(111111, 999999);
+        } while (Center::where(['code' => $validated['code']])->count());
 
         $validated['status'] = $status ?? CenterStatus::Pending;
 
