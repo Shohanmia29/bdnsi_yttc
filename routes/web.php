@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+Route::get('/', [HomeController::class,'index']);
+Route::get('/all_course', [HomeController::class,'all_course']);
 
 Route::resource('center-request', \App\Http\Controllers\CenterRequestController::class)->only(['create','store']);
 Route::get('result', \App\Http\Controllers\ResultController::class)->name('result');

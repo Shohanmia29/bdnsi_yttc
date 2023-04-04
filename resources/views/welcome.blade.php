@@ -61,69 +61,37 @@
 
                 <div class="container mx-auto">
                     <div class="-mx-4 flex flex-wrap">
+                        @foreach($courses as $course)
                         <div class="w-full px-2 md:w-1/2 xl:w-1/3">
                             <div class="mb-10 overflow-hidden rounded-lg bg-white">
                                 <img
-                                    src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-01.jpg"
+                                    src="{{asset('/images/course/'.$course->photo)}}"
                                     alt="image"
                                     class="w-full"
                                 />
-                                <div class="p-8 text-center sm:p-3 md:p-2 xl:p-3">
+                                <div class="p-8  text-center sm:p-3 md:p-2 xl:p-3">
                                     <h3>
                                         <a
                                             href="javascript:void(0)"
                                             class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
                                         >
-                                            50+ Best creative website themes & templates
+                                            {{$course->name}}
                                         </a>
                                     </h3>
 
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full px-2 md:w-1/2 xl:w-1/3">
-                            <div class="mb-10 overflow-hidden rounded-lg bg-white">
-                                <img
-                                    src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-02.jpg"
-                                    alt="image"
-                                    class="w-full"
-                                />
-                                <div class="p-8 text-center sm:p-3 md:p-3 xl:p-3">
-                                    <h3>
-                                        <a
-                                            href="javascript:void(0)"
-                                            class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
-                                        >
-                                            The ultimate UX and UI guide to card design
-                                        </a>
-                                    </h3>
+                        @endforeach
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full px-2 md:w-1/2 xl:w-1/3">
-                            <div class="mb-10 overflow-hidden rounded-lg bg-white">
-                                <img
-                                    src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                                    alt="image"
-                                    class="w-full"
-                                />
-                                <div class="p-8 text-center sm:p-3 md:p-3 xl:p-3">
-                                    <h3>
-                                        <a
-                                            href="javascript:void(0)"
-                                            class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
-                                        >
-                                            Creative Card Component designs graphic elements
-                                        </a>
-                                    </h3>
-
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
-                    <button type="button" class=" float-right  focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">SHOW ALL</button>
+                    <a
+                        href="{{url('/all_course')}}"
+                        class="float-right focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                    >
+                        SHOW ALL
+                    </a>
                 </div>
 
             </div>
