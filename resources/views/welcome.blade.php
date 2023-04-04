@@ -3,28 +3,16 @@
         <div class="mx-auto flex w-full max-w-full h-[30rem] sm: h-[20rem]">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
+                    @foreach($sliders as $slider)
                     <div class="swiper-slide">
                         <img
                             class="object-cover w-full h-[30rem]"
-                            src="https://source.unsplash.com/user/erondu/3000x900"
-                            alt="image"
+                            src="{{asset('/images/slider/'.$slider->photo)}}" /> 3000/900
+                            alt="banner"
                         />
 
                     </div>
-                    <div class="swiper-slide">
-                        <img
-                            class="object-cover w-full h-[30rem]"
-                            src="https://source.unsplash.com/collection/190727/3000x900"
-                            alt="image"
-                        />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            class="object-cover w-full h-[30rem]"
-                            src="https://source.unsplash.com/collection/190728/3000x900"
-                            alt="image"
-                        />
-                    </div>
+                    @endforeach
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -99,8 +87,8 @@
     </div>
 
 
-    <div class="flex flex-col max-w-6xl bg-pink-600 text-white py-6 m-10">
-        <div class="md:w-4/5 mx-auto">
+    <div class="flex flex-col max-w-6xl bg-pink-600 text-white p-6 m-10 mx-auto">
+        <div class="md:w-6xl mx-auto">
             <div class="text-2xl font-semibold flex flex-wrap gap-4 items-center text-center">
                 <div class="w-full md:w-auto">
                     Apply Now for Your Institute Registration
