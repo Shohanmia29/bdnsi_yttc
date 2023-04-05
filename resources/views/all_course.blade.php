@@ -28,7 +28,7 @@
                                             alt="image"
                                             class="w-full"
                                         />
-                                    @endifgi
+                                    @endif
                                     <div class="p-8 text-center sm:p-3 md:p-2 xl:p-3">
                                         <h3>
                                             <a
