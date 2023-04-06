@@ -12,6 +12,11 @@
     </x-slot>
 
     <div class="w-full mt-8">
+        <style>
+            .id-column {
+                display: none;
+            }
+        </style>
         <table class="w-full" id="students-table">
             <thead>
             <tr>
@@ -34,11 +39,7 @@
                     dataSrc(response) {
                         response.data.map(function (item) {
                             item.action = actionIcons({
-                                'show': '{{ route('admin.slider.show', '@') }}'.replace('@', item.id),
-                                @can('student-update')
-                                'edit': '{{ route('admin.slider.edit', '@') }}'.replace('@', item.id),
-                                @endcan
-                                    @can('student-delete')
+                                @can('student-delete')
                                 'delete': '{{ route('admin.slider.destroy', '@') }}'.replace('@', item.id),
                                 @endcan
                             });
@@ -48,9 +49,30 @@
                     }
                 },
                 columns: [
-                    {data: 'id'},
+                    {
+                        data: 'id',
+                        className: 'id-column'
+                    },
+                    {
+                        data: null,
+                        render: function(data, type, row, meta) {
+                            // Return the row index + 1 as the 'ID'
+                            return meta.row + 1;
+                        }
+                    },
                     {data: 'title'},
-                    {data: 'photo'},
+                    {
+                        data: 'photo',
+                        render: function(data, type, row, meta) {
+                            // Check if photo data exists
+                            if (data) {
+                                // Return an HTML img tag with the photo URL or file path
+                                return '<img src="/images/slider/' + data + '" width="150" height="100">';
+                            } else {
+                                return '';
+                            }
+                        }
+                    },
                     {data: 'action', orderable: false, searchable: false},
                 ]
             });

@@ -50,4 +50,21 @@ class SliderController extends Controller
         return response()->report($slider, 'Slider Created successfully');
 
     }
+
+    public function destroy(Slider $slider)
+    {
+
+        // Get the image file path
+        $filePath = public_path('/images/slider/'.$slider->photo);
+
+        // Delete the image file using unlink
+        if (file_exists($filePath)) {
+            unlink($filePath);
+        }
+
+        // Delete the Slider model from the database
+        $slider->delete();
+
+        return response()->report($slider, 'Slider Deleted successfully');
+    }
 }
