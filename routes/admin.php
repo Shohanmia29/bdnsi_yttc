@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\RegisteredUserController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\SliderController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->name('admin.')->group(function () {
@@ -19,6 +20,15 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])
         ->middleware('auth:admin')
         ->name('dashboard');
+
+/*    Route::get('/slider', [SliderController::class, 'index'])
+        ->middleware('auth:admin')
+        ->name('slide.index');
+
+    Route::get('/slider/create', [SliderController::class, 'create'])
+        ->middleware('auth:admin')
+        ->name('slide.create');*/
+
 
     Route::get('/register', [RegisteredUserController::class, 'create'])
         ->middleware('guest:admin')
@@ -83,6 +93,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('session', \App\Http\Controllers\Admin\SessionController::class)->except(['show']);
         Route::resource('student', \App\Http\Controllers\Admin\StudentController::class);
         Route::resource('result', \App\Http\Controllers\Admin\ResultController::class)->only(['index','create','store','show']);
+        Route::resource('slider', \App\Http\Controllers\Admin\SliderController::class);
         Route::get('user/portal/{user}', [\App\Http\Controllers\Admin\UserController::class, 'portal'])->name('user.portal');
 
         Route::resource('center', \App\Http\Controllers\Admin\CenterController::class);

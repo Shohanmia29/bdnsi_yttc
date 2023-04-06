@@ -31,6 +31,7 @@ Route::resource('password-update', \App\Http\Controllers\PasswordUpdateControlle
 Route::resource('profile-update', \App\Http\Controllers\ProfileUpdateController::class)
     ->only(['create','store']);
 
+
 Route::middleware('auth')->group(function(){
     Route::resource('password-update', \App\Http\Controllers\PasswordUpdateController::class)
         ->only(['create','store']);
