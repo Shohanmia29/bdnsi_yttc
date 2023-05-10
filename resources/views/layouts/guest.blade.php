@@ -28,12 +28,21 @@
 </head>
 <body class="antialiased">
 <div class="flex min-h-screen flex-col">
-    <div class="w-full py-16 text-center text-4xl">
+    <div class="w-full py-8 text-center text-4xl">
         <div class="mx-auto w-full max-w-4xl text-center">{{ config('app.name') }}</div>
     </div>
-
-
-
+   <div class="w-full md:w-1/2 mx-auto flex ">
+              <div class="md:w-[15%]">
+                    <div class="   py-1 px-6 bg-[#002147] text-white font-bold">
+                        Notice
+                    </div>
+              </div>
+          <div class="w-[90%]">
+              <marquee behavior="" direction="">
+                  {{\App\Models\ConfigDictionary::get('notice')}}
+              </marquee>
+          </div>
+   </div>
     <div class="w-full bg-slate-500">
         <section class="shadow-lg sticky top-0 z-50 bg-slate-500" style="box-shadow: 0px 0px 7px 0pxrgba(0,0,0,0.5);">
             <div class="max-w-7xl mx-auto  flex flex-wrap md:flex-nowrap justify-between items-center my-1 py-2" x-data="{ menuOpen: false }">
@@ -87,17 +96,10 @@
                                 <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful Links</span>
                                 <ul class="list-unstyled">
                                     <li>
-                                        <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#">About Us</a>
+                                        <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="{{route('dynamicPage',['about_us'=>'about_us'])}}">About Us </a>
                                     </li>
-                                    <li>
-                                        <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#">Blog</a>
-                                    </li>
-                                    <li>
-                                        <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#">Github</a>
-                                    </li>
-                                    <li>
-                                        <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#">Free Products</a>
-                                    </li>
+                                    <li>            <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="{{route('contactUs')}}">Contact Us</a></li>
+
                                 </ul>
                             </div>
                             <div class="w-full lg:w-4/12 px-4">
@@ -107,14 +109,13 @@
                                         <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#">MIT License</a>
                                     </li>
                                     <li>
-                                        <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#">Terms &amp; Conditions</a>
+
+                                        <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="{{route('dynamicPage',['terms_and_condition'=>'terms_and_condition'])}}">Terms &amp; Conditions</a>
                                     </li>
                                     <li>
-                                        <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#">Privacy Policy</a>
+                                        <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="{{route('dynamicPage',['privacy_policy'=>'privacy_policy'])}}">Privacy Policy</a>
                                     </li>
-                                    <li>
-                                        <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#">Contact Us</a>
-                                    </li>
+
                                 </ul>
                             </div>
                         </div>

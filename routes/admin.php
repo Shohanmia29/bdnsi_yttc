@@ -97,6 +97,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('user/portal/{user}', [\App\Http\Controllers\Admin\UserController::class, 'portal'])->name('user.portal');
 
         Route::resource('center', \App\Http\Controllers\Admin\CenterController::class);
+        Route::resource('configDictionary', \App\Http\Controllers\Admin\ConfigDictionaryController::class)->only(['create','store']);
 
         Route::get('contactUs',[DashboardController::class,'contactUs'])->name('contactUs');
 
