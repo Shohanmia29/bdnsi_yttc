@@ -21,9 +21,9 @@
                 <th>{{ __('Subject') }}</th>
                 <th>{{ __('Phone') }}</th>
                 <th>{{ __('Email') }}</th>
-                <th>{{ __('Status') }}</th>
                 <th>{{ __('Roll') }}</th>
                 <th>{{ __('Registration') }}</th>
+                <th>{{ __('Status') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
             </thead>

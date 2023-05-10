@@ -19,4 +19,18 @@ class HomeController extends Controller
         $courses = Subject::all();
         return view('all_course',compact('courses'));
     }
+
+
+    public function contactUs()
+    {
+
+        return view('page.contact');
+    }
+
+
+
+
+
+
+
 }

@@ -31,15 +31,35 @@
     <div class="w-full py-16 text-center text-4xl">
         <div class="mx-auto w-full max-w-4xl text-center">{{ config('app.name') }}</div>
     </div>
+
+
+
     <div class="w-full bg-slate-500">
-        <div class="mx-auto flex w-full max-w-4xl">
-            <a href="/" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600">Home</a>
-            <a href="{{ route('result') }}" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600">Result</a>
-            <a href="{{ route('center-request.create') }}" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600">Center Request</a>
-            <div class="flex-grow"></div>
-            <a href="{{ route('login') }}" class="cursor-pointer py-2 px-4 text-white hover:bg-slate-600 self-end">Center Login</a>
-        </div>
+        <section class="shadow-lg sticky top-0 z-50 bg-slate-500" style="box-shadow: 0px 0px 7px 0pxrgba(0,0,0,0.5);">
+            <div class="max-w-7xl mx-auto  flex flex-wrap md:flex-nowrap justify-between items-center my-1 py-2" x-data="{ menuOpen: false }">
+                <div class="flex w-1/2 justify-end md:hidden">
+                    <a href="#" x-on:click="menuOpen = !menuOpen">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="w-full md:flex md:justify-end mb-3 md:mb-0" x-bind:class="menuOpen ? 'flex' :'hidden'">
+                    <ul class="flex flex-wrap  md:flex-nowrap font-semibold text-white">
+                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('welcome')}}">Home</a></li>
+                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="">Verified Institutions</a></li>
+                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="">Courses</a></li>
+                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="">Our Students Success</a></li>
+                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{ route('result') }}">Result</a></li>
+                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('contactUs')}}">Contact Us</a></li>
+                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{ route('center-request.create') }}">Center Request</a></li>
+                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{ route('login') }}">Center Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
+
     <div class="w-full flex-grow">
         {{ $slot }}
     </div>
