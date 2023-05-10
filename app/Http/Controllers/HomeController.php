@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactUs;
 use App\Models\Slider;
 use App\Models\Subject;
 use Illuminate\Http\Request;
@@ -21,8 +22,18 @@ class HomeController extends Controller
     }
 
 
-    public function contactUs()
+    public function contactUs(Request  $request)
     {
+        if ($request->post()){
+         $validated=  $request->validate([
+                'name'=>'required',
+                'email'=>'required|email',
+                'phone'=>'required|numeric',
+                'message'=>'required',
+           ]);
+
+           return  response()->report(ContactUs::create($validated),'Successfully Done Your Message');
+        }
 
         return view('page.contact');
     }

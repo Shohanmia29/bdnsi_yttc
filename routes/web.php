@@ -16,7 +16,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class,'index'])->name('welcome');
 Route::get('/all_course', [HomeController::class,'all_course']);
-Route::get('/contact-us', [HomeController::class,'contactUs'])->name('contactUs');
+Route::match(['get','post'],'/contact-us', [HomeController::class,'contactUs'])->name('contactUs');
 
 Route::resource('center-request', \App\Http\Controllers\CenterRequestController::class)->only(['create','store']);
 Route::get('result', \App\Http\Controllers\ResultController::class)->name('result');

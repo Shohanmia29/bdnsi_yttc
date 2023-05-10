@@ -97,5 +97,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('user/portal/{user}', [\App\Http\Controllers\Admin\UserController::class, 'portal'])->name('user.portal');
 
         Route::resource('center', \App\Http\Controllers\Admin\CenterController::class);
+
+        Route::get('contactUs',[DashboardController::class,'contactUs'])->name('contactUs');
+
     });
 });
