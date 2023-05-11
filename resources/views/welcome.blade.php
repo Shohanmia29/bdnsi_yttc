@@ -6,7 +6,7 @@
                     @foreach($sliders as $slider)
                     <div class="swiper-slide">
                         <img
-                            class="object-cover w-full h-[30rem]"
+                            class=" h-auto w-full  "
                             src="{{asset('/images/slider/'.$slider->photo)}}"
                             alt="banner"
                         />
