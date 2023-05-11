@@ -38,9 +38,7 @@
                     </div>
               </div>
           <div class="w-[90%]">
-              <marquee behavior="" direction="">
-                  {{\App\Models\ConfigDictionary::get('notice')}}
-              </marquee>
+              <marquee behavior="" direction=""></marquee>
           </div>
    </div>
     <div class="w-full bg-slate-500">
