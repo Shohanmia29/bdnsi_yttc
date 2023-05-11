@@ -44,7 +44,7 @@
     <div class="w-full bg-slate-500">
         <section class="shadow-lg sticky top-0 z-50 bg-slate-500" style="box-shadow: 0px 0px 7px 0pxrgba(0,0,0,0.5);">
             <div class="max-w-7xl mx-auto  flex flex-wrap md:flex-nowrap justify-between items-center my-1 py-2" x-data="{ menuOpen: false }">
-                <div class="flex w-1/2 justify-end md:hidden">
+                <div class="flex w-full justify-end  md:hidden">
                     <a href="#" x-on:click="menuOpen = !menuOpen">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
