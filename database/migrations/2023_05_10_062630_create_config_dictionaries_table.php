@@ -14,7 +14,8 @@ class CreateConfigDictionariesTable extends Migration
     public function up()
     {
         Schema::create('config_dictionaries', function (Blueprint $table) {
-            $table->string('key')->primary();
+            $keyLen = config('database.connections.mysql.max_str_key_len');
+            $table->string('key',$keyLen)->primary();
             $table->json('value');
         });
     }
