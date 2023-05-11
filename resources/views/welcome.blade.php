@@ -1,16 +1,15 @@
 <x-guest-layout>
     <div class="w-full">
-        <div class="mx-auto flex w-full max-w-full h-[30rem] sm: h-[20rem]">
+        <div class="mx-auto flex w-full max-w-full     h-auto">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     @foreach($sliders as $slider)
                     <div class="swiper-slide">
                         <img
                             class="object-cover w-full h-[30rem]"
-                            src="{{asset('/images/slider/'.$slider->photo)}}" /> {{--3000/900--}}
+                            src="{{asset('/images/slider/'.$slider->photo)}}"
                             alt="banner"
                         />
-
 
                     </div>
                     @endforeach

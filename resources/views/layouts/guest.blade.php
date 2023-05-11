@@ -129,7 +129,7 @@
                     <div class="w-full md:w-4/12 px-4 mx-auto text-center">
                         <div class="text-sm text-blueGray-500 font-semibold py-1 text-white">
                             Copyright © <span id="get-current-year">2023</span><a href="#" class="text-blueGray-500 hover:text-gray-800" target="_blank"> Design & Development by</a>
-                                <a href="#" class="text-blueGray-500 hover:text-blueGray-800">MMIT Soft Ltd</a>.
+                                <a href="https://www.mmitsoft.com/" class="text-blueGray-500 hover:text-blueGray-800">MMIT Soft Ltd</a>.
                         </div>
                     </div>
                 </div>
