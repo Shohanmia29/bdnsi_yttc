@@ -31,6 +31,10 @@ class ConfigDictionaryController extends Controller
             'about_us' => 'required',
             'terms_and_condition' => 'required',
             'privacy_policy' => 'required',
+            'twitter_link'=>'required',
+            'facebook_link'=>'required',
+            'youtube_link'=>'required',
+            'linkedin_link'=>'required',
         ]);
         $validated['created_at'] = now()->toDateTimeString();
         $config=ConfigDictionary::setMany($validated);

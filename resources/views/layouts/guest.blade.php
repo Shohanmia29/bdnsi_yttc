@@ -55,8 +55,8 @@
                     <ul class="flex flex-wrap  md:flex-nowrap font-semibold text-white">
                         <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('welcome')}}">Home</a></li>
                         <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="">Verified Institutions</a></li>
-                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="">Courses</a></li>
-                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="">Our Students Success</a></li>
+                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="#course">Courses</a></li>
+                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="">Our Success Students </a></li>
                         <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{ route('result') }}">Result</a></li>
                         <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('contactUs')}}">Contact Us</a></li>
                         <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{ route('center-request.create') }}">Center Request</a></li>
@@ -80,12 +80,17 @@
                             Find us on any of these platforms, we respond 1-2 business days.
                         </h5>
                         <div class="mt-6 lg:mb-0 mb-6">
-                            <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-                                <i class="fab fa-twitter"></i></button><button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-                                <i class="fab fa-facebook-square"></i></button><button class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-                                <i class="fab fa-dribbble"></i></button><button class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-                                <i class="fab fa-github"></i>
-                            </button>
+                            <a href="{{\App\Models\ConfigDictionary::get('twitter_link')??'#'}}" class=" p-2 bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"  >
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="{{\App\Models\ConfigDictionary::get('facebook_link')??'#'}}" class=" p-2 bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"  >
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                            <a href="{{\App\Models\ConfigDictionary::get('youtube_link')??'#'}}" class=" p-2 bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"  >
+                                <i class="fab fa-youtube"></i></a>
+                            <a href="{{\App\Models\ConfigDictionary::get('linkedin_link')??'#'}}" class=" p-2 bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"  >
+                                <i class="fab fa-linkedin"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="w-full lg:w-6/12 px-4">
