@@ -16,7 +16,7 @@
     x-init="window.addEventListener('resize', () => { sidebarOpen = window.innerWidth >= 1024 })"
 >
     <sidebar
-        class="bg-slate-800 h-screen w-64 overflow-y-scroll scrollbar-hide fixed z-10 transition duration-300"
+        class="bg-slate-800 h-screen w-64 print:hidden overflow-y-scroll scrollbar-hide fixed z-10 transition duration-300"
         :class="{ '-translate-x-64' : !sidebarOpen }"
     >
         <div class="p-8 md:pl-4 flex md:flex-row-reverse justify-between items-center flex-wrap">
@@ -154,7 +154,7 @@
     </template>
 
     <div class="flex flex-col flex-grow">
-        <header class="w-full flex-grow-0">
+        <header class="w-full flex-grow-0 print:hidden">
             <div
                 class="w-full flex justify-between items-center bg-white border-b border-gray-200 p-4"
             >
@@ -219,7 +219,7 @@
         </header>
         <main class="flex-grow lg:ml-64">
             @isset($header)
-                <div class="w-full bg-white p-4">
+                <div class="w-full bg-white print:hidden p-4">
                     {{ $header }}
                 </div>
             @endisset
@@ -233,7 +233,7 @@
                 {{ $slot }}
             </div>
         </main>
-        <footer class="w-full p-2 text-center">
+        <footer class="w-full p-2 text-center print:hidden">
             Copyright 2022 - {{ date('Y') }}
         </footer>
     </div>
