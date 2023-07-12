@@ -19,7 +19,14 @@ class StudentController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            return datatables(Student::select(['id','center_id','session_id','subject_id','name','status'])->own()->with(['session','subject']))->toJson();
+            return datatables(Student::select(['id','center_id','session_id','subject_id','name','status'])
+                ->own()
+                ->with(['session','subject']))
+                ->addColumn('admit', function ($admit) {
+                    return '<a    target="_blank" href="' . route("student.show",[$admit->id,'admit'=>'admit']) . '">' . 'Admit Card'. '</a>';
+                })
+                ->rawColumns(['admit'])
+                ->toJson();
         }
 
         return view('student.index');
@@ -60,13 +67,17 @@ class StudentController extends Controller
         return response()->report(Student::create($validated), 'Student Created successfully');
     }
 
-    public function show(Student $student)
+    public function show(Request $request,  Student $student)
     {
         abort_if(
             Auth::user()->center_id != $student->center_id,
             403
         );
-
+          if ($request->admit=='admit'){
+              return view('student.admit', [
+                  'student' => $student
+              ]);
+             }
         return view('student.show', [
             'student' => $student
         ]);

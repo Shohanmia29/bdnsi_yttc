@@ -91,7 +91,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('user', \App\Http\Controllers\Admin\UserController::class);
         Route::resource('subject', \App\Http\Controllers\Admin\SubjectController::class)->except(['show']);
         Route::resource('session', \App\Http\Controllers\Admin\SessionController::class)->except(['show']);
+
         Route::resource('student', \App\Http\Controllers\Admin\StudentController::class);
+        Route::get('student-registration-form/{id}', [\App\Http\Controllers\Admin\StudentController::class, 'registrationForm'])->name('registrationForm');
+
         Route::resource('result', \App\Http\Controllers\Admin\ResultController::class)->only(['index','create','store','show']);
         Route::resource('slider', \App\Http\Controllers\Admin\SliderController::class);
         Route::get('user/portal/{user}', [\App\Http\Controllers\Admin\UserController::class, 'portal'])->name('user.portal');

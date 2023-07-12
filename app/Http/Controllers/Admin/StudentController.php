@@ -23,11 +23,18 @@ class StudentController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            return datatables(Student::with('center:id,code','subject:id,name'))->toJson();
+            return datatables(Student::with('center:id,code','subject:id,name'))
+                ->addColumn('registration', function ($registration) {
+                    return '<a    target="_blank" href="' . route("admin.student.show",[$registration->id,'registration'=>'registration']) . '">' . $registration->registration . '</a>';
+                })
+                ->rawColumns(['registration'])
+                ->toJson();
         }
 
         return view('admin.student.index');
     }
+
+
 
     public function create()
     {
@@ -69,11 +76,18 @@ class StudentController extends Controller
         return response()->report(Student::create($validated), 'Student Created successfully');
     }
 
-    public function show(Student $student)
+    public function show(Request $request,Student $student)
     {
-        return view('admin.student.show', [
-            'student' => $student
-        ]);
+     if ($request->registration=='registration'){
+              $student= Student::where('id',$student->id)->firstOrFail();
+            return view('admin.student.registrationForm',compact('student'));
+     }else{
+         return view('admin.student.show', [
+             'student' => $student
+         ]);
+     }
+
+
     }
 
     public function edit(Student $student)
