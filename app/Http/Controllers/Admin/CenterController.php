@@ -50,6 +50,7 @@ class CenterController extends Controller
 
     public function update(CenterUpdateRequest $request, Center $center)
     {
+
         return response()->report($request->update($center), 'Center updated successfully');
     }
 

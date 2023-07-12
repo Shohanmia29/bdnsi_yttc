@@ -63,6 +63,10 @@
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="authority_signature" :value="old('authority_signature', $center->authority_signature)" type="file" accept="image/*"/>
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="nid_photo" :value="old('nid_photo', $center->nid_photo)" type="file" accept="image/*"/>
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="trade_license" :value="old('trade_license', $center->trade_license)" type="file" accept="image/*"/>
+
+            <x-labeled-input class="w-full lg:w-1/2 p-1" name="password"    label="Password" type="password"/>
+            <x-labeled-input class="w-full lg:w-1/2 p-1" name="password_confirmation"   label="Confirm Password" type="password"/>
+
             <div class="w-full pt-4 flex justify-end">
                 <x-button>{{ __('Update') }}</x-button>
             </div>

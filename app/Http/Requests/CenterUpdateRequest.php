@@ -8,7 +8,9 @@ use App\Enums\Religion;
 use App\Lib\Geo;
 use App\Lib\Image;
 use App\Models\Center;
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\Unique;
 
@@ -47,6 +49,7 @@ class CenterUpdateRequest extends FormRequest
             'authority_signature' => 'nullable|image',
             'nid_photo' => 'nullable|image',
             'trade_license' => 'nullable|image',
+            'password' => 'nullable|confirmed|min:6',
         ];
     }
 
@@ -75,7 +78,7 @@ class CenterUpdateRequest extends FormRequest
             Image::delete($center, 'trade_license');
             $validated['trade_license'] = Image::store('trade_license','upload/center/trade_license');
         }
-
+         User::where('center_id',$center->id)->first()->update(['password'=> Hash::make($this->password)]);
         return $center->update($validated);
     }
 }
