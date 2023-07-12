@@ -33,7 +33,7 @@
             <div class="absolute top-[59.5%] left-[19.5%] w-38 text-xs font-bold text-left">Regular</div>
             <div class="absolute top-[59%] left-[62.5%] w-38 text-xs font-bold text-left">{{$student->fathers_name??''}}</div>
             <div class="absolute top-[67.5%] left-[19.5%] w-38 text-xs font-bold text-left">{{\Carbon\Carbon::now()}}</div>
-            <div class="absolute top-[67.5%] left-[62.5%] w-38 text-xs font-bold text-left">{{$student->fathers_name??''}}</div>
+            <div class="absolute top-[67.5%] left-[62.5%] w-38 text-xs font-bold text-left">{{$student->mothers_name??''}}</div>
         </div>
 
     </div>
