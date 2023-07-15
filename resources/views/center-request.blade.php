@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="w-full flex flex-wrap py-8 px-2 md:px-4" x-data="centerRequestData">
-                <x-labeled-input class="w-full lg:w-1/2 p-1" name="name" required/>
+                <x-labeled-input class="w-full lg:w-1/2 p-1" name="name" label="Center Name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="owner_name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="fathers_name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="mothers_name" required/>

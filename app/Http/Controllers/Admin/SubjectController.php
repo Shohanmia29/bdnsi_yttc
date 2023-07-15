@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Lib\Image;
 use App\Models\Subject;
 use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
@@ -13,6 +14,8 @@ class SubjectController extends Controller
 
     public function index(Request $request)
     {
+
+
         if ($request->ajax()) {
             return datatables(Subject::query())->toJson();
         }
@@ -29,8 +32,11 @@ class SubjectController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string',
+            'photo' => 'required',
         ]);
-
+          if (isset($validated['photo'])){
+               $validated['photo']= Image::store('photo','upload/subject');
+          }
         return response()->report(Subject::create($validated), 'Subject Created successfully');
     }
 
@@ -43,8 +49,12 @@ class SubjectController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string',
+            'photo' => 'nullable|image',
         ]);
-
+        if (isset($validated['photo'])){
+            Image::delete($subject->photo,'Photo');
+            $validated['photo']= Image::store('photo','upload/subject');
+        }
         return response()->report($subject->update($validated), 'Subject Updated successfully');
     }
 

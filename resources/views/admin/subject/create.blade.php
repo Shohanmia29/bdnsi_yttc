@@ -12,10 +12,11 @@
         </div>
     </x-slot>
 
-    <form action="{{ route('admin.subject.store') }}" method="POST">
+    <form action="{{ route('admin.subject.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="flex flex-wrap justify-center w-full bg-white p-4">
             <x-labeled-input name="name" required class="w-full p-1"/>
+            <x-labeled-input type="file" name="photo"  required class="w-full p-1"/>
             <div class="w-full py-8 flex justify-center">
                 <x-button>{{ __('Create') }}</x-button>
             </div>

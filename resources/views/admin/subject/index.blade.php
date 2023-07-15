@@ -17,6 +17,7 @@
             <tr>
                 <th>{{ __('ID') }}</th>
                 <th>{{ __('Name') }}</th>
+                <th>{{ __('Image') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
             </thead>
@@ -32,7 +33,7 @@
                     url: '{{ route('admin.subject.index') }}',
                     dataSrc(response) {
                         response.data.map(function (item) {
-                            item.name = `<p class="text-center">${item.name}</p>`;
+                            item.photo= `<img class="w-10 h-10 mx-auto" src="${item.photo}" alt="${item.name}"/> `;
                             item.action = actionIcons({
                                 @can('subject-update')
                                 'edit': '{{ route('admin.subject.edit', '@') }}'.replace('@', item.id),
@@ -50,6 +51,7 @@
                 columns: [
                     {data: 'id'},
                     {data: 'name'},
+                    {data: 'photo'},
                     {data: 'action', orderable: false, searchable: false},
                 ]
             });

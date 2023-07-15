@@ -10,11 +10,12 @@
         </div>
     </x-slot>
 
-    <form action="{{ route('admin.subject.update', $subject->id) }}" method="POST">
+    <form action="{{ route('admin.subject.update', $subject->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="flex flex-wrap justify-center w-full bg-white p-4">
             <x-labeled-input name="name" required value="{{ old('name', $subject->name) }}" class="w-full p-1"/>
+            <x-labeled-input type="file" name="photo"    class="w-full p-1"/>
             <div class="w-full py-8 flex justify-center">
                 <x-button>{{ __('Update') }}</x-button>
             </div>

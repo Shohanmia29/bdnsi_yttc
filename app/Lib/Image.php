@@ -28,10 +28,10 @@ class Image
     public static function storeFile($file, $uploadPath, $name = null)
     {
         if (is_null($name)) {
-            return $file->store('public' . DIRECTORY_SEPARATOR . $uploadPath);
+            return $file->store('public' . DIRECTORY_SEPARATOR . $uploadPath, ['visibility' => 'public']);
         }
 
-        return $file->storeAs('public' . DIRECTORY_SEPARATOR . $uploadPath, $name);
+        return $file->storeAs('public' . DIRECTORY_SEPARATOR . $uploadPath, $name, ['visibility' => 'public']);
     }
 
     public static function url($model, $attribute = null)
