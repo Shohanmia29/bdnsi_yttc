@@ -78,7 +78,11 @@ class CenterUpdateRequest extends FormRequest
             Image::delete($center, 'trade_license');
             $validated['trade_license'] = Image::store('trade_license','upload/center/trade_license');
         }
-         User::where('center_id',$center->id)->first()->update(['password'=> Hash::make($this->password)]);
+
+        if (User::where('center_id',$center->id)->count() > 0){
+            User::where('center_id',$center->id)->first()->update(['password'=> Hash::make($this->password)]);
+        }
+
         return $center->update($validated);
     }
 }
