@@ -26,7 +26,7 @@
                 <div class="w-full text-3xl text-[#076e37] pb-1"> Welcome to </div>
                 <span class="text-2xl text-[#eb1c24]">BTSI</span>
                 <hr class="mt-2 ">
-                <p class="pt-5">With the help of the Government BICTF has built up greatest science and information technology, vocational based education in every Union, Thana, District and the main intention of it is to create the employment of the unemployed people through Information and Technology based research and training. Almost every sector in a country i..</p>
+                <p class="pt-5">{{\App\Models\ConfigDictionary::get('about_us')??''}}</p>
                 <button type="button" class=" mt-5 float-right pt-2 mt-4 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mt-2  mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">READ MORE</button>
             </div>
             <div class="mt-20 sm: mt-5">
@@ -52,9 +52,9 @@
                               <div class="w-full flex flex-wrap">
                                   @foreach($courses as $course)
                                      <div class="w-full md:w-1/4 p-3 ">
-                                         <div class=" bg-white   rounded-lg shadow-md ">
-                                             <img src="{{$course->photo}}" alt="Card Image" class="w-full    ">
-                                             <div  class="text-xl  p-2   text-center font-semibold mb-2">{{$course->name}}</div>
+                                         <div class="w-full bg-white   rounded-lg shadow-md ">
+                                             <img src="{{$course->photo}}" alt="Card Image" class="w-full     ">
+                                             <div  class="text-xl  px-2 py-4   text-center font-semibold mb-2">{{$course->name}}</div>
                                          </div>
                                      </div>
                                   @endforeach

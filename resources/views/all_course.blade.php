@@ -16,19 +16,13 @@
                         @foreach($courses as $course)
                             <div class="w-full px-2 md:w-1/2 xl:w-1/3">
                                 <div class="mb-10 overflow-hidden rounded-lg bg-white">
-                                    @if($course->image !== NULL)
+
                                         <img
-                                            src="{{asset('/images/course/'.$course->photo?$course->photo:'no-image.jpg')}}"
+                                            src="{{$course->photo}}"
                                             alt="image"
-                                            class="w-full"
+                                            class="w-full  "
                                         />
-                                    @else
-                                        <img
-                                            src="{{asset('/images/course/no-image.jpg')}}"
-                                            alt="image"
-                                            class="w-full"
-                                        />
-                                    @endif
+
                                     <div class="p-8 text-center sm:p-3 md:p-2 xl:p-3">
                                         <h3>
                                             <a
