@@ -48,42 +48,22 @@
                         <hr class="m-2 ">
                     </div>
 
+                      <div class=" max-w-7xl mx-auto   ">
+                              <div class="w-full flex flex-wrap">
+                                  @foreach($courses as $course)
+                                     <div class="w-full md:w-1/4 p-3 ">
+                                         <div class=" bg-white   rounded-lg shadow-md ">
+                                             <img src="{{$course->photo}}" alt="Card Image" class="w-full    ">
+                                             <div  class="text-xl  p-2   text-center font-semibold mb-2">{{$course->name}}</div>
+                                         </div>
+                                     </div>
+                                  @endforeach
+                              </div>
+                      </div>
+
                     <div class="container mx-auto">
-                        <div class="-mx-4 flex flex-wrap">
-                            @foreach($courses as $course)
-                                <div class="w-full px-2 md:w-1/2 xl:w-1/3">
-                                    <div class="mb-10 overflow-hidden rounded-lg bg-white">
-                                        @if($course->image !== NULL)
-                                            <img
-                                                src="{{asset('/images/course/'.$course->photo?$course->photo:'no-image.jpg')}}"
-                                                alt="image"
-                                                class="w-full"
-                                            />
-                                        @else
-                                            <img
-                                                src="{{asset('/images/course/no-image.jpg')}}"
-                                                alt="image"
-                                                class="w-full"
-                                            />
-                                        @endif
-                                        <div class="p-8  text-center sm:p-3 md:p-2 xl:p-3">
-                                            <h3>
-                                                <a
-                                                    href="javascript:void(0)"
-                                                    class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
-                                                >
-                                                    {{$course->name}}
-                                                </a>
-
-                                            </h3>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-
+                        <div class=" flex flex-wrap">
                         </div>
-
                         <a href="{{url('/all_course')}}" class="float-right text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 rounded-lg px-4 py-2.5 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                             SHOW ALL
                         </a>
