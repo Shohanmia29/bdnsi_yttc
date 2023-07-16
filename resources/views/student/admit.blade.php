@@ -21,10 +21,13 @@
         }
     </style>
     <div class="w-full mt-8 bg-white   ">
-        <div class="r-bg relative text-gray-500" style="background-image: url({{asset('images/admit.png')}});font-family: Roboto">
+        <div class="r-bg relative text-gray-500" style="background-image: url({{asset('images/admit.png')}});font-family: Apple">
+            <div class="absolute top-[20.3%] left-[70.5%] w-38 text-xs font-bold text-left">
+                <img class="w-20 h-20" src="{{$student->picture}}" alt="">
+            </div>
             <div class="absolute top-[13.3%] left-[41.5%] text-[#1C77B9] uppercase  tracking-[3px] text-lg font-bold w-38 text-xs tracking-y-[20px] font-bold text-left">{{$student->subject->name  .'-'.   date('y',strtotime($student->session->start_date))??''}}</div>
             <div class="absolute top-[23.3%] left-[12.5%] w-38 text-xs font-bold text-left">{{$student->id??''}}</div>
-            <div class="absolute top-[19%] left-[56.5%] w-38 text-sm font-bold text-left">{{$student->registration??''}}</div>
+            <div class="absolute top-[19%] left-[56.5%] w-38 text-sm font-bold text-left">C-{{$student->center->code??''}}/{{date('y',strtotime($student->session->start_date))}} </div>
             <div class="absolute top-[31%] left-[19.5%] w-38 text-xs font-bold text-left">{{$student->center->code??''}}</div>
             <div class="absolute top-[38%] left-[19.5%] w-38 text-xs font-bold text-left">{{$student->roll??''}}</div>
             <div class="absolute top-[45.2%] left-[19.5%] w-38 text-xs font-bold text-left">{{$student->registration??''}}</div>
@@ -34,13 +37,12 @@
             <div class="absolute top-[51.5%] left-[62.5%] w-38 text-xs font-bold text-left">{{$student->name??''}}</div>
             <div class="absolute top-[59.5%] left-[19.5%] w-38 text-xs font-bold text-left">Regular</div>
             <div class="absolute top-[59%] left-[62.5%] w-38 text-xs font-bold text-left">{{$student->fathers_name??''}}</div>
-            <div class="absolute top-[67.5%] left-[19.5%] w-38 text-xs font-bold text-left">{{\Carbon\Carbon::now()}}</div>
+            <div class="absolute top-[67.5%] left-[19.5%] w-38 text-xs font-bold text-left">{{$student->exam_date??''}}</div>
             <div class="absolute top-[67.5%] left-[62.5%] w-38 text-xs font-bold text-left">{{$student->mothers_name??''}}</div>
             <div class="absolute top-[85.5%] text-[#7CA299]  left-[12.5%] w-38 text-sm capitalize tracking-[.1em] font-bold text-left">{{$student->center->name??''}}</div>
         </div>
-
+         <div class="w-full flex justify-end py-1 print:hidden">
+             <button onClick="window.print()" type="button" class="px-2 py-1 bg-green-700 text-white rounded-lg ">Print</button>
+         </div>
     </div>
-
-
-
 </x-app-layout>

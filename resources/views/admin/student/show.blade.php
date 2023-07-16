@@ -100,6 +100,10 @@
                     <td class="p-2 font-semibold">{{ __('Email') }}</td>
                     <td class="p-2">{{ $student->email }}</td>
                 </tr>
+                <tr>
+                    <td class="p-2 font-semibold">{{ __('Exam Date') }}</td>
+                    <td class="p-2">{{ $student->exam_date??"" }}</td>
+                </tr>
             </table>
         </div>
     </div>

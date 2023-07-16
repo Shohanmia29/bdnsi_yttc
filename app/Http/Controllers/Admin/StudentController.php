@@ -123,6 +123,7 @@ class StudentController extends Controller
             'subject_id' =>'required|exists:subjects,id',
             'status' => 'required|numeric|enum_value:'.StudentStatus::class.',false',
             'picture' =>'nullable|image',
+            'exam_date' =>'required',
         ]);
 
         $validated['roll'] = $validated['roll']

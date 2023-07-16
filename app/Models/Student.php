@@ -65,6 +65,7 @@ class Student extends Model
         'subject_id',
         'picture',
         'status',
+        'exam_date',
     ];
 
     protected $casts = [
