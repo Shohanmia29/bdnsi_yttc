@@ -21,11 +21,12 @@
         }
     </style>
     <div class="w-full mt-8 bg-white   ">
-        <div class="r-bg relative text-gray-500" style="background-image: url({{asset('images/admit.png')}});font-family: Apple">
+        <div class="r-bg relative text-gray-500" style="background-image: url({{asset('images/admit.png')}});font-family: 'Times New Roman'">
             <div class="absolute top-[20.3%] left-[70.5%] w-38 text-xs font-bold text-left">
                 <img class="w-20 h-20" src="{{$student->picture}}" alt="">
             </div>
-            <div class="absolute top-[13.3%] left-[41.5%] text-[#1C77B9] uppercase  tracking-[3px] text-lg font-bold w-38 text-xs tracking-y-[20px] font-bold text-left">{{$student->subject->name  .'-'.   date('y',strtotime($student->session->start_date))??''}}</div>
+            <div class="absolute top-[9%] left-[30.5%] text-[#1C77B9]      text-xl font-bold   w-38    text-left uppercase">Bangladesh Technical & Software Institute</div>
+            <div class="absolute top-[13.3%] left-[41.5%] text-[#1C77B9] uppercase  tracking-[3px] text-lg font-bold   w-38  tracking-y-[20px]  text-left">{{$student->subject->name  .'-'.   date('y',strtotime($student->session->start_date))??''}}</div>
             <div class="absolute top-[23.3%] left-[12.5%] w-38 text-xs font-bold text-left">{{$student->id??''}}</div>
             <div class="absolute top-[19%] left-[56.5%] w-38 text-sm font-bold text-left">C-{{$student->center->code??''}}/{{date('y',strtotime($student->session->start_date))}} </div>
             <div class="absolute top-[31%] left-[19.5%] w-38 text-xs font-bold text-left">{{$student->center->code??''}}</div>
