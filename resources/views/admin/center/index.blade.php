@@ -11,6 +11,34 @@
         </div>
     </x-slot>
 
+      <div class="w-full flex flex-wrap">
+             <div class="w-full md:w-1/6 p-2">
+                 <a href="{{route('admin.center.index')}}">
+                     <div class="w-full bg-white rounded-lg font-bold">
+                         <div class="py-2 border-b text-center ">All Center</div>
+                         <div class="text-center py-3">{{\App\Models\Center::count()}}</div>
+                     </div>
+                 </a>
+             </div>
+             <div class="w-full md:w-1/6 p-2">
+                 <a href="{{route('admin.center.index',['active'=>'active'])}}">
+                     <div class="w-full bg-white rounded-lg font-bold">
+                         <div class="py-2 border-b text-center ">Active Center</div>
+                         <div class="text-center py-3">{{\App\Models\Center::where('status',\App\Enums\CenterStatus::Approved)->count()??''}}</div>
+                     </div>
+                 </a>
+
+             </div>
+             <div class="w-full md:w-1/6 p-2">
+                 <a href="{{route('admin.center.index',['pending'=>'pending'])}}">
+                     <div class="w-full bg-white rounded-lg font-bold">
+                         <div class="py-2 border-b text-center ">Pending Center</div>
+                         <div class="text-center py-3">{{\App\Models\Center::where('status',\App\Enums\CenterStatus::Pending)->count()??''}}</div>
+                     </div>
+                 </a>
+             </div>
+      </div>
+
     <div class="w-full mt-8">
         <table class="w-full" id="centers-table">
             <thead>

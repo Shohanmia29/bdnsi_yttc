@@ -20,6 +20,14 @@ class CenterController extends Controller
         if ($request->ajax()) {
             return datatables(Center::query())->toJson();
         }
+        if ($request->active=='active'){
+            $centers=Center::where('status',CenterStatus::Approved)->get();
+            return view('admin.center.activeList',compact('centers'));
+        }
+        if ($request->pending=='pending'){
+            $centers=Center::where('status',CenterStatus::Pending)->get();
+            return view('admin.center.pendingList',compact('centers'));
+        }
 
         return view('admin.center.index');
     }
