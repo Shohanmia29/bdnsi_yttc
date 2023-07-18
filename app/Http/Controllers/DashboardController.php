@@ -13,4 +13,7 @@ class DashboardController extends Controller
         $cards = [];
         return view('dashboard', compact('cards'));
     }
+
+
+
 }

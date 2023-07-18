@@ -83,6 +83,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         ->middleware('auth:admin')
         ->name('logout');
 
+    Route::post('/userCreate', [DashboardController::class, 'userCreate'])
+        ->middleware('auth:admin')
+        ->name('userCreate');
+
     Route::middleware('auth:admin')->group(function(){
         Route::resource('password-update', \App\Http\Controllers\Admin\PasswordUpdateController::class)
             ->only(['create','store']);
