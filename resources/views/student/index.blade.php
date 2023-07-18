@@ -18,6 +18,7 @@
                 <th>{{ __('Session') }}</th>
                 <th>{{ __('Subject') }}</th>
                 <th>{{ __('Status') }}</th>
+                <th>{{ __('Registration') }}</th>
                 <th>{{ __('Admit Card') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
@@ -52,6 +53,7 @@
                     {data: 'session.name'},
                     {data: 'subject.name'},
                     {data: 'status'},
+                    {data: 'registration'},
                     {data: 'admit'},
                     {data: 'action', orderable: false, searchable: false},
                 ]

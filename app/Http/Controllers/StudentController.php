@@ -23,9 +23,11 @@ class StudentController extends Controller
                 ->own()
                 ->with(['session','subject']))
                 ->addColumn('admit', function ($admit) {
-                    return '<a    target="_blank" href="' . route("student.show",[$admit->id,'admit'=>'admit']) . '">' . 'Admit Card'. '</a>';
+                    return '<a    target="_blank" href="' . route("student.show",[$admit->id,'admit'=>'admit']) . '">' .'Admit' . '</a>';
+                })->addColumn('registration', function ($registration) {
+                    return '<a    target="_blank" href="' . route("student.show",[$registration->id,'registration'=>'registration']) . '">' . 'Registration'. '</a>';
                 })
-                ->rawColumns(['admit'])
+                ->rawColumns(['admit','registration'])
                 ->toJson();
         }
 
@@ -80,6 +82,17 @@ class StudentController extends Controller
               );
 
               return view('student.admit', [
+                  'student' => $student
+              ]);
+             }
+
+          if ($request->registration=='registration'){
+              abort_if(
+                  $student->status != StudentStatus::Approved(),
+                  403
+              );
+
+              return view('student.registration', [
                   'student' => $student
               ]);
              }
