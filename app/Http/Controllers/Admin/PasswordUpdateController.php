@@ -18,9 +18,13 @@ class PasswordUpdateController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'old_password' => 'required|password:web',
+            'old_password' => 'required',
             'password' => ['required', 'confirmed', \Illuminate\Validation\Rules\Password::defaults()]
         ]);
+
+        if (!Hash::check($validated['old_password'], Auth::guard('admin')->user()->password)) {
+            return response()->error('The old password does not match our records.');
+        }
 
         return response()->report(
             Auth::user()->forceFill([

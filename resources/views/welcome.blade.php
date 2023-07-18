@@ -108,7 +108,7 @@
                     Apply Now for Your Institute Registration
                 </div>
                 <div class="w-full md:w-auto">
-                    <a href="#" class="px-5 py-2.5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 text-lg font-medium text-white rounded-lg focus:outline-none dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 md:mb-0 mb-4">
+                    <a href="{{route('center-request.create')}}" class="px-5 py-2.5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 text-lg font-medium text-white rounded-lg focus:outline-none dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 md:mb-0 mb-4">
                         APPLY NOW
                     </a>
                 </div>

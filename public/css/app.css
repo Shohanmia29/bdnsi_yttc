@@ -659,6 +659,18 @@ select {
 .top-16 {
   top: 4rem;
 }
+.top-\[20\.3\%\] {
+  top: 20.3%;
+}
+.left-\[70\.5\%\] {
+  left: 70.5%;
+}
+.top-\[9\%\] {
+  top: 9%;
+}
+.left-\[30\.5\%\] {
+  left: 30.5%;
+}
 .top-\[13\.3\%\] {
   top: 13.3%;
 }
@@ -757,39 +769,6 @@ select {
 }
 .top-\[71\.5\%\] {
   top: 71.5%;
-}
-.left-\[70\.5\%\] {
-  left: 70.5%;
-}
-.top-\[21\.3\%\] {
-  top: 21.3%;
-}
-.top-\[20\.3\%\] {
-  top: 20.3%;
-}
-.top-\[10\.3\%\] {
-  top: 10.3%;
-}
-.top-\[18\.3\%\] {
-  top: 18.3%;
-}
-.top-\[8\.3\%\] {
-  top: 8.3%;
-}
-.top-\[7\.3\%\] {
-  top: 7.3%;
-}
-.left-\[30\.5\%\] {
-  left: 30.5%;
-}
-.top-\[8\%\] {
-  top: 8%;
-}
-.top-\[8\.5\%\] {
-  top: 8.5%;
-}
-.top-\[9\%\] {
-  top: 9%;
 }
 .z-0 {
   z-index: 0;
@@ -1794,14 +1773,6 @@ select {
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.shadow-black {
-  --tw-shadow-color: #000;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-.shadow-\[\#438FC4\] {
-  --tw-shadow-color: #438FC4;
-  --tw-shadow: var(--tw-shadow-colored);
-}
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1821,10 +1792,6 @@ select {
 }
 .ring-opacity-5 {
   --tw-ring-opacity: 0.05;
-}
-.drop-shadow-lg {
-  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
