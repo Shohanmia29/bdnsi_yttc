@@ -1136,6 +1136,15 @@ select {
 .h-\[10rem\] {
   height: 10rem;
 }
+.h-\[10\.4rem\] {
+  height: 10.4rem;
+}
+.h-\[10\.5rem\] {
+  height: 10.5rem;
+}
+.h-\[10\.6rem\] {
+  height: 10.6rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
