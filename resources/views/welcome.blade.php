@@ -66,15 +66,13 @@
 
                 <div class="bg-[#F3F4F6] pt-20 pb-10 lg:pt-[50px] lg:pb-10">
                     <div class="text-center pb-5  text-3xl ">
-
                         Our Courses
                         <hr class="m-2 ">
                     </div>
-
                       <div class=" max-w-7xl mx-auto   ">
                               <div class="w-full flex flex-wrap">
                                   @foreach($courses as $course)
-                                     <div class="w-full md:w-1/4 p-3 ">
+                                     <div class="w-full md:w-1/5 p-3 ">
                                          <div class="w-full bg-white   rounded-lg shadow-md ">
                                              <img src="{{$course->photo}}" alt="Card Image" class="w-full     ">
                                              <div  class="text-xl  px-2 py-4   text-center font-semibold mb-2">{{$course->name}}</div>
@@ -90,17 +88,11 @@
                         <a href="{{url('/all_course')}}" class="float-right text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 rounded-lg px-4 py-2.5 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                             SHOW ALL
                         </a>
-
                     </div>
-
                 </div>
-                <!-- ====== Cards Section End -->
-
             </div>
         </div>
     </section>
-
-
     <div class="flex flex-col max-w-6xl bg-pink-600 text-white p-6 m-10 mx-auto">
         <div class="md:w-6xl mx-auto">
             <div class="text-2xl font-semibold flex flex-wrap gap-4 items-center text-center">
@@ -115,8 +107,4 @@
             </div>
         </div>
     </div>
-
-
-
-
 </x-guest-layout>
