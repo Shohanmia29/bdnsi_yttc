@@ -63,7 +63,6 @@
         <div class="w-full bg-[#F3F4F6] pb-5">
             <div class="mx-auto flex w-full max-w-6xl ">
                 <!-- ====== Cards Section Start -->
-
                 <div class="bg-[#F3F4F6] pt-20 pb-10 lg:pt-[50px] lg:pb-10">
                     <div class="text-center pb-5  text-3xl ">
                         Our Courses
@@ -80,8 +79,7 @@
                                      </div>
                                   @endforeach
                               </div>
-                      </div>
-
+                          </div>
                     <div class="container mx-auto">
                         <div class=" flex flex-wrap">
                         </div>
