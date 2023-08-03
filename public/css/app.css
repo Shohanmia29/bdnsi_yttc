@@ -1145,6 +1145,9 @@ select {
 .h-\[10\.6rem\] {
   height: 10.6rem;
 }
+.h-full {
+  height: 100%;
+}
 .min-h-screen {
   min-height: 100vh;
 }
