@@ -35,17 +35,17 @@
                     <option value="{{ $divisionId }}" @selected(old('division', $center->division) == $divisionId)>{{ $division['name'] }}</option>
                 @endforeach
             </x-labeled-select>
-            <x-labeled-select class="w-full lg:w-1/2 p-1" x-model="district" x-model="district" x-ref="district" name="district" required>
-                <template x-for="district in districts">
-                    <option x-bind:value="district.id" x-html="district.name"></option>
+            <x-labeled-select class="w-full lg:w-1/2 p-1" x-model="district"   x-ref="district" name="district" required>
+                <template x-for="_district in districts">
+                    <option x-bind:value="_district.id" x-html="_district.name"></option>
                 </template>
             </x-labeled-select>
-            <x-labeled-select class="w-full lg:w-1/2 p-1" x-model="upazilla" name="upazilla" required>
-                <template x-for="upazilla in upazillas">
-                    <option x-bind:value="upazilla.id" x-html="upazilla.name"></option>
+            <x-labeled-select class="w-full lg:w-1/2 p-1" x-model="upazilla"  name="upazilla" required>
+                <template x-for="upazill in upazillas">
+                    <option x-bind:value="upazill.id"  x-html="upazill.name"></option>
                 </template>
             </x-labeled-select>
-            <x-labeled-input class="w-full lg:w-1/2 p-1" name="nationality" :value="old('nationality', $center->nationality)" required/>
+            <x-labeled-input class="w-full lg:w-1/2 p-1"  name="nationality" :value="old('nationality', $center->nationality)" required/>
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="post_office" :value="old('post_office', $center->post_office)" required/>
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="postal_code" :value="old('postal_code', $center->postal_code)" required/>
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="facebook_url" :value="old('facebook_url', $center->facebook_url)" type="url"/>
@@ -79,6 +79,7 @@
                 Alpine.data('centerData', () => ({
                     division: @js(old('division', $center->division)),
                     district: @js(old('district', $center->district)),
+                    upazilla:  @js(old('upazilla', $center->upazilla)),
                     districts: [],
                     upazillas: [],
                     init(){
@@ -86,6 +87,7 @@
                         this.$watch('division', this.filterDistricts.bind(this))
                         this.$watch('district', this.filterUpazillas.bind(this))
                     },
+
                     filterDistricts(division){
                         const districts = Object.entries(@js(\App\Lib\Geo::districts())).map(item => ({
                             id: item[0],
@@ -93,7 +95,9 @@
                             division_id: item[1].division_id,
                         }))
                         this.districts = districts.filter(district => district.division_id == division)
+
                         setTimeout(() => {
+                            this.district = parseInt(this.district) + '';
                             this.filterUpazillas(this.district ?? this.$refs.district.value)
                         }, 10)
                     },
@@ -104,6 +108,9 @@
                             district_id: item[1].district_id,
                         }))
                         this.upazillas = upazillas.filter(upazilla => upazilla.district_id == district)
+                        setTimeout(() => {
+                            this.upazilla = parseInt(this.upazilla) + '';
+                        }, 10)
                     }
                 }))
             })

@@ -64,6 +64,6 @@
             <div class="w-full p-4 flex justify-end">
                 <x-button>{{ __('Submit') }}</x-button>
             </div>
-    </form>
     </div>
+    </form>
 </x-app-layout>
