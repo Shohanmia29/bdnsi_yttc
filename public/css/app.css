@@ -986,6 +986,30 @@ select {
 .h-32 {
   height: 8rem;
 }
+.h-\[600px\] {
+  height: 600px;
+}
+.h-14 {
+  height: 3.5rem;
+}
+.h-\[250px\] {
+  height: 250px;
+}
+.h-\[100px\] {
+  height: 100px;
+}
+.h-\[104px\] {
+  height: 104px;
+}
+.h-\[106px\] {
+  height: 106px;
+}
+.h-\[107px\] {
+  height: 107px;
+}
+.h-\[109px\] {
+  height: 109px;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1057,6 +1081,33 @@ select {
 }
 .w-4\/12 {
   width: 33.333333%;
+}
+.w-16 {
+  width: 4rem;
+}
+.w-\[300px\] {
+  width: 300px;
+}
+.w-\[280px\] {
+  width: 280px;
+}
+.w-\[200px\] {
+  width: 200px;
+}
+.w-\[100px\] {
+  width: 100px;
+}
+.w-\[85px\] {
+  width: 85px;
+}
+.w-\[87px\] {
+  width: 87px;
+}
+.w-\[89px\] {
+  width: 89px;
+}
+.w-\[90px\] {
+  width: 90px;
 }
 .min-w-full {
   min-width: 100%;
@@ -2338,6 +2389,10 @@ select {
     height: 9rem;
   }
 
+  .md\:h-full {
+    height: 100%;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2376,6 +2431,10 @@ select {
 
   .md\:w-2\/3 {
     width: 66.666667%;
+  }
+
+  .md\:w-full {
+    width: 100%;
   }
 
   .md\:grid-cols-2 {
