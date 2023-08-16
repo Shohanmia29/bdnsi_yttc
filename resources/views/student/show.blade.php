@@ -70,11 +70,11 @@
                 </tr>
                 <tr>
                     <td class="p-2 font-semibold">{{ __('Roll') }}</td>
-                    <td class="p-2">{{ $student->roll }}</td>
+                    <td class="p-2">{{ $student->roll ??'Pending' }}</td>
                 </tr>
                 <tr>
                     <td class="p-2 font-semibold">{{ __('Registration') }}</td>
-                    <td class="p-2">{{ $student->registration }}</td>
+                    <td class="p-2">{{ $student->registration??'Pending' }}</td>
                 </tr>
                 <tr>
                     <td class="p-2 font-semibold">{{ __('Session') }}</td>
