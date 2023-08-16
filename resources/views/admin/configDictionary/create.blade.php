@@ -1,14 +1,13 @@
 <x-admin-app-layout>
+    <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
     <x-slot name="header">
         <div class="w-full flex justify-between">
             <div class="text-xl">{{ __('Configration') }}</div>
-
                 <div>
                     <a
                         class="border border-slate-500 py-1 px-4 rounded text-slate-700 text-sm hover:text-white hover:bg-slate-700"
                         href="{{ route('admin.configDictionary.create') }}">{{ __('Configration') }}</a>
                 </div>
-
         </div>
     </x-slot>
 
@@ -31,8 +30,18 @@
                  </div>
          </div>
 
+        <div class="w-full">
+              <div class="font-bold">Contact  Us</div>
+            <div>
+                <textarea   name="description" id="editor1"  class="w-full">{{\App\Models\ConfigDictionary::get('description')}}</textarea>
+            </div>
+        </div>
         <div class="w-full py-8 flex justify-center">
             <x-button>{{ __('Update') }}</x-button>
         </div>
     </form>
+
+    <script>
+        CKEDITOR.replace( 'editor1' );
+    </script>
 </x-admin-app-layout>

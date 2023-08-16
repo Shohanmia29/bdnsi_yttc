@@ -46,13 +46,9 @@
                         </div>
                         <div>
                             <h2 class="text-xl font-bold mb-4">Get in Touch</h2>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus ornare neque, vel accumsan sapien bibendum sit amet. Sed aliquet massa nibh, nec iaculis lacus volutpat vel.</p>
-                            <ul class="list-disc pl-4">
-                                <li class="mb-2">123 Main St</li>
-                                <li class="mb-2">Dhaka, 12345</li>
-                                <li class="mb-2">Phone: 019999999999</li>
-                                <li>Email: info@example.com</li>
-                            </ul>
+                             <div>
+                                 {!! \App\Models\ConfigDictionary::get('description')??"" !!}
+                             </div>
                         </div>
                     </div>
                 </div>
