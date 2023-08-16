@@ -10,9 +10,9 @@
             @endcan
         </div>
     </x-slot>
+
     <style>
         .r-bg{
-
             background-size: 100% 100%;
             background-repeat: no-repeat;
             background-position: center center;
@@ -20,13 +20,13 @@
     </style>
     <div class="w-full mt-8 bg-white p-3 print:p-0  ">
         <div class="w-full print:hidden flex justify-end"><button onclick="window.print()" class="px-3 py-1 rounded-md bg-green-600 text-white ">Print</button></div>
-        <div class="r-bg relative w-full md:h-[130vh] text-lg font-bold print:h-[90vh]" style="background-image: url({{asset('images/register.jpg')}})">
+        <div class="r-bg relative w-full h-[600px] md:h-[130vh] text-lg font-bold print:h-[90vh]" style="background-image: url({{asset('images/register.jpg')}})">
             <div class="absolute top-[16%] left-[17%]  w-38 ">{{$student->id??''}}</div>
             <div class="absolute top-[25.5%]  left-[35.8%]  w-38 ">{{$student->registration??'N/A'}}</div>
             <div class="absolute top-[31%] left-[35.8%]  w-38 ">{{$student->roll??'N/A'}}</div>
             <div class="absolute top-[36.5%] left-[35.8%]  w-38 ">{{$student->session->name??'N/A'}}</div>
             <div class="absolute top-[25.5%] left-[75.8%]     w-[9.7rem] md:w-[12.5rem]  md:h-[9rem]  h-[10.6rem]">
-                <img class=" w-full h-full rounded-3xl" src="{{$student->picture??'N/A'}}" alt="">
+                <img class="w-[90px] h-[109px] md:w-full  md:h-full rounded-3xl" src="{{$student->picture??'N/A'}}" alt="">
             </div>
             <div class="absolute top-[42%] left-[35.8%]  w-38 ">{{$student->name??'N/A'}}</div>
             <div class="absolute top-[47.5%] left-[35.8%]  w-38 ">{{$student->fathers_name??'N/A'}}</div>
