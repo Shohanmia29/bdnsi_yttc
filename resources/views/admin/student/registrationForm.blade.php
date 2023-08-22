@@ -25,7 +25,7 @@
               <div class="absolute top-[31%] left-[35.8%]  w-38 ">{{$student->roll??'N/A'}}</div>
               <div class="absolute top-[36.5%] left-[35.8%]  w-38 ">{{$student->session->name??'N/A'}}</div>
               <div class="absolute top-[25.5%] left-[75.8%]     w-[9.7rem] md:w-[12.5rem]  md:h-[9rem]  h-[10.6rem]">
-                  <img class="w-[90px] h-[109px] md:w-full  md:h-full rounded-3xl" src="{{$student->picture??'N/A'}}" alt="">
+                  <img class="w-[90px] h-[109px] md:w-full print:w-full print:h-full  md:h-full rounded-3xl" src="{{$student->picture??'N/A'}}" alt="">
               </div>
           <div class="absolute top-[42%] left-[35.8%]  w-38 ">{{$student->name??'N/A'}}</div>
           <div class="absolute top-[47.5%] left-[35.8%]  w-38 ">{{$student->fathers_name??'N/A'}}</div>
