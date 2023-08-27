@@ -31,7 +31,7 @@
             <div class="absolute top-[38%] left-[19.5%] w-38  ">{{$student->roll??''}}</div>
             <div class="absolute top-[45.2%] left-[19.5%] w-38  ">{{$student->registration??''}}</div>
             <div class="absolute top-[37.5%] left-[62.3%] w-38  ">{{$student->center->name??''}}</div>
-            <div class="absolute top-[45.5%] md:top-[44%] left-[62.5%] w-38  ">Computer Office Application</div>
+            <div class="absolute top-[45.5%] md:top-[44%] left-[62.5%] w-38  ">{{$student->subject->name??''}}</div>
             <div class="absolute top-[51.5%]  left-[19.5%] w-38  ">{{$student->session->name??''}}</div>
             <div class="absolute top-[51.5%] left-[62.5%] w-38  ">{{$student->name??''}}</div>
             <div class="absolute top-[59.5%] left-[19.5%] w-38  ">Regular</div>
