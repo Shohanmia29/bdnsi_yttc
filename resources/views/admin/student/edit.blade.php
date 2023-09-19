@@ -63,6 +63,10 @@
                     <option value="{{ $status->value }}" @selected(old('status', $student->status->value) == $status->value)>{{ $status->key }}</option>
                 @endforeach
             </x-labeled-select>
+            <x-labeled-input type="number" name="paid_amount" :value="$student->paid_amount" required class="w-full p-1 md:w-1/2"/>
+            <x-labeled-input type="number" name="due_amount" :value="$student->due_amount" required class="w-full p-1 md:w-1/2"/>
+
+
             <div class="w-full py-8 flex justify-center">
                 <x-button>{{ __('Update') }}</x-button>
             </div>
