@@ -18,14 +18,14 @@ class CenterController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            return datatables(Center::query())->toJson();
+            return datatables(Center::orderBy('id','desc')->get())->addIndexColumn()->toJson();
         }
         if ($request->active=='active'){
-            $centers=Center::where('status',CenterStatus::Approved)->get();
+            $centers=Center::where('status',CenterStatus::Approved)->orderBy('id','desc')->get();
             return view('admin.center.activeList',compact('centers'));
         }
         if ($request->pending=='pending'){
-            $centers=Center::where('status',CenterStatus::Pending)->get();
+            $centers=Center::where('status',CenterStatus::Pending)->orderBy('id','desc')->get();
             return view('admin.center.pendingList',compact('centers'));
         }
 

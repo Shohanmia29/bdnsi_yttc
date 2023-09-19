@@ -78,8 +78,9 @@
                         return response.data;
                     }
                 },
+
                 columns: [
-                    {data: 'id'},
+                    {data: 'DT_RowIndex',orderable: false, searchable: false},
                     {data: 'code'},
                     {data: 'name'},
                     {data: 'owner_name'},
