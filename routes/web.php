@@ -31,6 +31,7 @@ Route::get('/dashboard', \App\Http\Controllers\DashboardController::class)->midd
 
 Route::get('center-student-result', \App\Http\Controllers\CenterTotalResultController::class)->name('centerStudentResult');
 
+Route::get('verified-institute', [\App\Http\Controllers\FrontendController::class,'verifyInstitute'])->name('verifiedInstitute');
 
 Route::resource('password-update', \App\Http\Controllers\PasswordUpdateController::class)
     ->only(['create','store']);

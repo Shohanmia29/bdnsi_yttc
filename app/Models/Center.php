@@ -6,6 +6,7 @@ use App\Casts\ImageField;
 use App\Enums\CenterStatus;
 use App\Enums\Gender;
 use App\Enums\Religion;
+use App\Enums\StudentStatus;
 use App\Lib\Image;
 use App\Traits\DeletesImage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -51,6 +52,20 @@ class Center extends Model
         'nid_photo' => ImageField::class.':center/nid_photo',
         'trade_license' => ImageField::class.':center/trade_license',
     ];
+
+    public function students(){
+        return $this->hasMany(Student::class,'center_id')->where('status',StudentStatus::Approved);
+    }
+
+    public function getPhotoAttribute($photo){
+        if (isset($photo)){
+            return Image::url($photo);
+        }else{
+            return  asset('images/avatar.png');
+        }
+
+    }
+
 
     public function users()
     {

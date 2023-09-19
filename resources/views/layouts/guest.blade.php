@@ -54,7 +54,7 @@
                 <div class="w-full md:flex md:justify-end mb-3 md:mb-0" x-bind:class="menuOpen ? 'flex' :'hidden'">
                     <ul class="flex flex-wrap  md:flex-nowrap font-semibold text-white">
                         <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('welcome')}}">Home</a></li>
-                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="">Verified Institutions</a></li>
+                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('verifiedInstitute')}}">Verified Institutions</a></li>
                         <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="#course">Courses</a></li>
                         <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="">Our Success Students </a></li>
                         <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{ route('result') }}">Result</a></li>
@@ -67,7 +67,7 @@
         </section>
     </div>
 
-    <div class="w-full flex-grow">
+    <div class="w-full  min-h-screen">
         {{ $slot }}
     </div>
     <div class="w-full mt-8">
