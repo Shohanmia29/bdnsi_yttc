@@ -5,8 +5,8 @@
         </div>
     </x-slot>
 
-    <div class="flex flex-wrap justify-center w-full bg-white p-4">
-        <form class="w-full" action="{{route('centerStudentResult')}} " method="GET">
+    <div class="flex flex-wrap print:hidden justify-center w-full bg-white p-4">
+        <form class="w-full"  action="{{route('centerStudentResult')}} " method="GET">
             <div class="w-full flex flex-wrap">
                 <x-labeled-select name="session_id" label="Session" required class="w-full p-1 md:w-1/2  ">
                     @foreach($sessions as $session)
