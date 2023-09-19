@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Enums\CenterStatus;
 use App\Enums\Religion;
+use App\Enums\SessionStatus;
 use App\Enums\StudentStatus;
 use App\Enums\Gender;
 use App\Models\Center;
@@ -37,7 +38,7 @@ class StudentController extends Controller
     public function create()
     {
         return view('student.create', [
-            'sessions' => Session::select(['id','name'])->get(),
+            'sessions' => Session::select(['id','name'])->where('status',SessionStatus::Active)->get(),
             'subjects' => Subject::select(['id','name'])->get(),
         ]);
     }
@@ -114,7 +115,7 @@ class StudentController extends Controller
 
         return view('student.edit', [
             'student' => $student,
-            'sessions' => Session::select(['id','name'])->get(),
+            'sessions' => Session::select(['id','name'])->where('status',SessionStatus::Active)->get(),
             'subjects' => Subject::select(['id','name'])->get(),
         ]);
     }

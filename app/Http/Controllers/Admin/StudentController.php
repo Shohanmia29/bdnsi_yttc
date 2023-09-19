@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Enums\CenterStatus;
 use App\Enums\Religion;
+use App\Enums\SessionStatus;
 use App\Enums\StudentStatus;
 use App\Lib\Image;
 use App\Enums\Gender;
@@ -40,7 +41,7 @@ class StudentController extends Controller
     {
         return view('admin.student.create', [
             'centers' => Center::select(['id','code','name'])->whereStatus(CenterStatus::Approved)->get(),
-            'sessions' => Session::select(['id','name'])->get(),
+            'sessions' => Session::select(['id','name'])->where('status',SessionStatus::Active)->get(),
             'subjects' => Subject::select(['id','name'])->get(),
         ]);
     }
@@ -95,7 +96,7 @@ class StudentController extends Controller
         return view('admin.student.edit', [
             'student' => $student,
             'centers' => Center::select(['id','code','name'])->whereStatus(CenterStatus::Approved)->get(),
-            'sessions' => Session::select(['id','name'])->get(),
+            'sessions' => Session::select(['id','name'])->where('status',SessionStatus::Active)->get(),
             'subjects' => Subject::select(['id','name'])->get(),
         ]);
     }

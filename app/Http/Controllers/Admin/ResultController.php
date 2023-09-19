@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Enums\CenterStatus;
+use App\Enums\SessionStatus;
 use App\Enums\StudentStatus;
 use App\Http\Controllers\Controller;
 use App\Models\Center;
@@ -34,7 +35,7 @@ class ResultController extends Controller
         return view('admin.result.index', [
             'students' => $students,
             'centers' => Center::select(['id', 'code', 'name'])->whereStatus(CenterStatus::Approved)->get(),
-            'sessions' => Session::select(['id', 'name'])->get(),
+            'sessions' => Session::select(['id', 'name'])->where('status',SessionStatus::Active)->get(),
             'subjects' => Subject::select(['id', 'name'])->get(),
         ]);
     }
@@ -55,7 +56,7 @@ class ResultController extends Controller
         return view('admin.result.create', [
             'students' => $students,
             'centers' => Center::select(['id', 'code', 'name'])->whereStatus(CenterStatus::Approved)->get(),
-            'sessions' => Session::select(['id', 'name'])->get(),
+            'sessions' => Session::select(['id', 'name'])->where('status',SessionStatus::Active)->get(),
             'subjects' => Subject::select(['id', 'name'])->get(),
         ]);
     }

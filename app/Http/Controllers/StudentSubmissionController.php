@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\SessionStatus;
 use App\Enums\StudentStatus;
 use App\Models\Session;
 use App\Models\Student;
@@ -25,7 +26,7 @@ class StudentSubmissionController extends Controller
 
         return view('result.index', [
             'students' => $students,
-            'sessions' => Session::select(['id', 'name'])->get(),
+            'sessions' => Session::select(['id', 'name'])->where('status',SessionStatus::Active)->get(),
             'subjects' => Subject::select(['id', 'name'])->get(),
         ]);
     }

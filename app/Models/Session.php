@@ -13,7 +13,8 @@ class Session extends Model
         'name',
         'start_date',
         'end_date',
-        'duration'
+        'duration',
+        'status'
     ];
 
     protected $casts = [

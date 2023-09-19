@@ -20,6 +20,7 @@
                 <th>{{ __('Start Date') }}</th>
                 <th>{{ __('End Date') }}</th>
                 <th>{{ __('Duration') }}</th>
+                <th>{{ __('Status') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
             </thead>
@@ -44,6 +45,7 @@
                                 'delete': '{{ route('admin.session.destroy', '@') }}'.replace('@', item.id),
                                 @endcan
                             });
+                            item.status=@js(\App\Enums\SessionStatus::asSelectArray())[item.status]
                             return item;
                         });
                         return response.data;
@@ -56,6 +58,7 @@
                     {data: 'start_date'},
                     {data: 'end_date'},
                     {data: 'duration'},
+                    {data: 'status'},
                     {data: 'action', orderable: false, searchable: false},
                 ]
             });

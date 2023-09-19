@@ -1004,6 +1004,9 @@ select {
 .h-32 {
   height: 8rem;
 }
+.h-\[80vh\] {
+  height: 80vh;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -2360,6 +2363,10 @@ select {
 
   .md\:h-\[130vh\] {
     height: 130vh;
+  }
+
+  .md\:h-\[70vh\] {
+    height: 70vh;
   }
 
   .md\:w-1\/2 {
