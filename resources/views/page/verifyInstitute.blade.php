@@ -12,7 +12,7 @@
                      @forelse($centers as $center)
                          <div class="w-full px-4 md:w-1/2 xl:w-1/4">
                              <div class="mb-10 overflow-hidden rounded-lg bg-white">
-                                 <img src="{{$center->photo??''}}" alt="image" class="w-full">
+                                 <img  src="{{$center->photo??''}}" alt="image" class="w-full    object-cover h-64">
                                  <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
                                      <h3>
                                          <a class="text-dark hover:text-primary mb-4   text-lg font-semibold  ">
