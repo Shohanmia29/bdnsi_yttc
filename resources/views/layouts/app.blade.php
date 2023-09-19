@@ -55,12 +55,20 @@
                 >
                     <span>{{ __('Dashboard') }}</span>
                 </a>
+
                 <a
                     href="{{ route('student.index') }}"
                     class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
                 >
                     <span>{{ __('Student') }}</span>
                 </a>
+                <a
+                    href="{{ route('centerStudentResult') }}"
+                    class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+                >
+                    <span>{{ __(' Student Result') }}</span>
+                </a>
+
                 <a
                     href="{{ route('student-submission.create') }}"
                     class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"

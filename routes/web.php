@@ -29,6 +29,9 @@ Route::resource('student-submission', \App\Http\Controllers\StudentSubmissionCon
 
 Route::get('/dashboard', \App\Http\Controllers\DashboardController::class)->middleware(['auth'])->name('dashboard');
 
+Route::get('center-student-result', \App\Http\Controllers\CenterTotalResultController::class)->name('centerStudentResult');
+
+
 Route::resource('password-update', \App\Http\Controllers\PasswordUpdateController::class)
     ->only(['create','store']);
 Route::resource('profile-update', \App\Http\Controllers\ProfileUpdateController::class)
