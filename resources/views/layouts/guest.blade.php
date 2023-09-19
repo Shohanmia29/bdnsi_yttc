@@ -55,7 +55,7 @@
                     <ul class="flex flex-wrap  md:flex-nowrap font-semibold text-white">
                         <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('welcome')}}">Home</a></li>
                         <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('verifiedInstitute')}}">Verified Institutions</a></li>
-                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="#course">Courses</a></li>
+                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('all_course')}}">Courses</a></li>
                         <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('successStudent')}}">Our Success Students </a></li>
                         <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{ route('result') }}">Result</a></li>
                         <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('contactUs')}}">Contact Us</a></li>

@@ -15,7 +15,7 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class,'index'])->name('welcome');
-Route::get('/all_course', [HomeController::class,'all_course']);
+Route::get('/all_course', [HomeController::class,'all_course'])->name('all_course');
 Route::get('/page', [HomeController::class,'dymamicPage'])->name('dynamicPage');
 
 Route::match(['get','post'],'/contact-us', [HomeController::class,'contactUs'])->name('contactUs');
