@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Enums\CenterStatus;
+use App\Enums\StudentStatus;
 use App\Models\Center;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -12,6 +14,10 @@ class FrontendController extends Controller
       public function verifyInstitute(Request $request){
                   $centers=Center::withCount('students')->where('status',CenterStatus::Approved)->paginate(50);
               return view('page.verifyInstitute',compact('centers'));
+      }
+      public function successStudent(Request $request){
+             $students=Student::whereHas('result')->select('id','name','picture')->where('status',StudentStatus::Approved)->paginate(50);
+              return view('page.successStudent',compact('students'));
       }
 
 
