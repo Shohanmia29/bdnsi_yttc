@@ -223,7 +223,7 @@
                 </div>
             </div>
         </header>
-        <main class="flex-grow lg:ml-64">
+        <main class="flex-grow lg:ml-64 print:ml-0">
             @isset($header)
                 <div class="w-full bg-white print:hidden p-4">
                     {{ $header }}

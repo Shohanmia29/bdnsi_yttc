@@ -17,9 +17,9 @@
               background-position: center center;
           }
     </style>
-    <div class="  mt-8 bg-white p-3 print:p-0  ">
+    <div class="  mt-8 bg-white p-3 print:p-0 min-w-[800px] overflow-x-auto">
           <div class="w-full print:hidden flex justify-end"><button onclick="window.print()" class="px-3 py-1 rounded-md bg-green-600 text-white ">Print</button></div>
-          <div class="r-bg relative w-full h-[600px] md:h-[130vh] text-lg font-bold print:h-[90vh]" style="background-image: url({{asset('images/register.jpg')}})">
+          <div class="r-bg relative w-full   h-[130vh] print:h-[90vh] text-lg font-bold " style="background-image: url({{asset('images/register.jpg')}})">
               <div class="absolute top-[16%] left-[17%]  w-38 ">{{$student->id??''}}</div>
               <div class="absolute top-[20%] left-[40%]  w-38 text-2xl">{{$student->subject->name??''}}</div>
               <div class="absolute top-[25.5%]  left-[35.8%]  w-38 ">{{$student->registration??'N/A'}}</div>
