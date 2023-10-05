@@ -102,6 +102,12 @@
                     <span>{{ __('Result') }}</span>
                 </a>
                 @endcan
+                <a
+                    href="{{ route('admin.password-update.create') }}"
+                    class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+                >
+                    <span>{{ __('Update password') }}</span>
+                </a>
                 @role('admin')
                 <a
                     href="{{ route('admin.slider.index') }}"
