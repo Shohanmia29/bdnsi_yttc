@@ -18,7 +18,7 @@
             background-position: center center;
         }
     </style>
-    <div class="w-full mt-8 bg-white   ">
+    <div class="w-full mt-8 bg-white min-w-[800px] overflow-x-auto  ">
         <div class="r-bg  h-[80vh] md:h-[70vh] w-full relative text-[16px] font-bold text-gray-500" style="background-image: url({{asset('images/admit.png')}});font-family: 'Times New Roman'">
             <div class="absolute top-[18.3%] left-[85.5%] w-38  ">
                 <img class="w-24 h-24 rounded-md" src="{{$student->picture}}" alt="">
