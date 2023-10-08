@@ -1040,6 +1040,9 @@ select {
 .h-\[40vh\] {
   height: 40vh;
 }
+.h-\[65vh\] {
+  height: 65vh;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -2257,6 +2260,10 @@ select {
 
   .print\:h-\[48vh\] {
     height: 48vh;
+  }
+
+  .print\:h-screen {
+    height: 100vh;
   }
 
   .print\:min-h-screen {

@@ -20,8 +20,8 @@
     </style>
  <div class="print:min-h-screen">
      <div class="w-full   bg-white min-w-[800px] overflow-x-auto  ">
-         <div class="flex flex-col   h-screen  justify-between">
-             <div class="r-bg  print:h-[48vh] lg:h-[65vh]   w-full relative text-[16px] font-bold text-gray-500" style="background-image: url({{asset('images/admit.png')}});font-family: 'Times New Roman'">
+         <div class="flex flex-col   print:h-screen  justify-between">
+             <div class="r-bg  print:h-[48vh] h-screen   w-full relative text-[16px] font-bold text-gray-500" style="background-image: url({{asset('images/admit.png')}});font-family: 'Times New Roman'">
                  <div class="absolute top-[18.3%] left-[85.5%] w-38  ">
                      <img class="w-24 h-24 rounded-md" src="{{$student->picture}}" alt="">
                  </div>
@@ -42,7 +42,7 @@
                  <div class="absolute top-[67.5%] left-[62.5%] w-38  ">{{$student->mothers_name??''}}</div>
                  <div class="absolute top-[85.5%] text-[#7CA299]  left-[11%] w-38 capitalize tracking-[.1em] ">{{$student->center->name??''}}</div>
              </div>
-             <div class="r-bg  print:h-[48vh] lg:h-[65vh]   w-full relative text-[16px] font-bold text-gray-500" style="background-image: url({{asset('images/admit.png')}});font-family: 'Times New Roman'">
+             <div class="r-bg  print:h-[48vh] h-screen   w-full relative text-[16px] font-bold text-gray-500" style="background-image: url({{asset('images/admit.png')}});font-family: 'Times New Roman'">
                  <div class="absolute top-[18.3%] left-[85.5%] w-38  ">
                      <img class="w-24 h-24 rounded-md" src="{{$student->picture}}" alt="">
                  </div>
