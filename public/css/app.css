@@ -785,6 +785,24 @@ select {
 .left-\[84\.3\%\] {
   left: 84.3%;
 }
+.left-\[33\.5\%\] {
+  left: 33.5%;
+}
+.left-\[25\.5\%\] {
+  left: 25.5%;
+}
+.left-\[28\.5\%\] {
+  left: 28.5%;
+}
+.top-\[8\%\] {
+  top: 8%;
+}
+.top-\[7\%\] {
+  top: 7%;
+}
+.top-\[12\.3\%\] {
+  top: 12.3%;
+}
 .z-0 {
   z-index: 0;
 }
@@ -983,8 +1001,8 @@ select {
 .h-24 {
   height: 6rem;
 }
-.h-\[600px\] {
-  height: 600px;
+.h-\[130vh\] {
+  height: 130vh;
 }
 .h-\[17\.8\%\] {
   height: 17.8%;
@@ -995,8 +1013,32 @@ select {
 .h-16 {
   height: 4rem;
 }
-.h-\[130vh\] {
-  height: 130vh;
+.h-\[60vh\] {
+  height: 60vh;
+}
+.h-\[50vh\] {
+  height: 50vh;
+}
+.h-\[45vh\] {
+  height: 45vh;
+}
+.h-\[47vh\] {
+  height: 47vh;
+}
+.h-\[49vh\] {
+  height: 49vh;
+}
+.h-\[48vh\] {
+  height: 48vh;
+}
+.h-1\/2 {
+  height: 50%;
+}
+.h-\[100vh\] {
+  height: 100vh;
+}
+.h-\[40vh\] {
+  height: 40vh;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -1070,20 +1112,11 @@ select {
 .w-4\/12 {
   width: 33.333333%;
 }
-.w-\[1100px\] {
-  width: 1100px;
+.min-w-\[800px\] {
+  min-width: 800px;
 }
 .min-w-full {
   min-width: 100%;
-}
-.min-w-\[1100px\] {
-  min-width: 1100px;
-}
-.min-w-\[900px\] {
-  min-width: 900px;
-}
-.min-w-\[800px\] {
-  min-width: 800px;
 }
 .max-w-7xl {
   max-width: 80rem;
@@ -1258,9 +1291,6 @@ select {
 }
 .overflow-y-auto {
   overflow-y: auto;
-}
-.overflow-x-scroll {
-  overflow-x: scroll;
 }
 .overflow-y-scroll {
   overflow-y: scroll;
@@ -2201,8 +2231,20 @@ select {
     left: 0px;
   }
 
+  .print\:m-0 {
+    margin: 0px;
+  }
+
   .print\:ml-0 {
     margin-left: 0px;
+  }
+
+  .print\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .print\:\!mb-0 {
+    margin-bottom: 0px !important;
   }
 
   .print\:hidden {
@@ -2213,8 +2255,12 @@ select {
     height: 90vh;
   }
 
-  .print\:h-\[70vh\] {
-    height: 70vh;
+  .print\:h-\[48vh\] {
+    height: 48vh;
+  }
+
+  .print\:min-h-screen {
+    min-height: 100vh;
   }
 
   .print\:w-1\/5 {
@@ -2231,6 +2277,16 @@ select {
 
   .print\:p-0 {
     padding: 0px;
+  }
+
+  .print\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .print\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 @media (min-width: 640px) {
@@ -2374,8 +2430,20 @@ select {
     height: 70vh;
   }
 
-  .md\:h-\[130vh\] {
-    height: 130vh;
+  .md\:h-\[60vh\] {
+    height: 60vh;
+  }
+
+  .md\:h-\[50vh\] {
+    height: 50vh;
+  }
+
+  .md\:h-\[45vh\] {
+    height: 45vh;
+  }
+
+  .md\:h-\[65vh\] {
+    height: 65vh;
   }
 
   .md\:w-1\/2 {
@@ -2488,6 +2556,10 @@ select {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:h-\[65vh\] {
+    height: 65vh;
   }
 
   .lg\:w-1\/3 {

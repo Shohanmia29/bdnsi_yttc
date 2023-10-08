@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"/>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}"/>
 </head>
-<body class="font-sans antialiased">
+<body class="font-sans antialiased print:!mb-0">
 <div
     class="flex min-h-screen bg-gray-200"
     x-data="{ sidebarOpen : window.innerWidth >= 1024, width: window.innerWidth }"
@@ -173,7 +173,7 @@
             @if(session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY))
                 <x-alert type="error">{{ session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY) }}</x-alert>
             @endif
-            <div class="px-4 py-8">
+            <div class="px-4 py-8 print:px-0 print:py-0">
                 {{ $slot }}
             </div>
         </main>
