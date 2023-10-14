@@ -71,12 +71,16 @@
                       <div class=" max-w-7xl mx-auto   ">
                               <div class="w-full flex flex-wrap">
                                   @foreach($courses as $course)
-                                     <div class="w-full md:w-1/5 p-3 ">
-                                         <div class="w-full bg-white   rounded-lg shadow-md ">
-                                             <img src="{{$course->photo}}" alt="Card Image" class="w-full     ">
-                                             <div  class="text-xl  px-2 py-4   text-center font-semibold mb-2">{{$course->name}}</div>
-                                         </div>
-                                     </div>
+                                      <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                                          <div class="shadow rounded-3xl bg-white">
+                                              <div>
+                                                  <img class="w-full h-60 md:h-52  rounded-2xl" src="{{ $course->photo ?? '' }}" alt="">
+                                              </div>
+                                              <div class="py-4 text-center font-bold ">
+                                                  {{ $course->name ?? '' }}
+                                              </div>
+                                          </div>
+                                      </div>
                                   @endforeach
                               </div>
                           </div>
