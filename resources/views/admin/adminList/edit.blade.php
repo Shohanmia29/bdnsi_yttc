@@ -11,7 +11,7 @@
         @method('put')
         <div class="flex flex-wrap justify-center w-full bg-white p-4">
             <x-labeled-input name="password"  class="w-full p-1 md:w-1/2 lg:w-1/3" required/>
-            <x-labeled-input name="confirm_password"  class="w-full p-1 md:w-1/2 lg:w-1/3" required/>
+            <x-labeled-input name="password_confirmation"  class="w-full p-1 md:w-1/2 lg:w-1/3" required/>
             <div class="w-full py-8 flex justify-center">
                 <x-button>{{ __('Update') }}</x-button>
             </div>

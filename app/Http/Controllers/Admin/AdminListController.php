@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules;
 
 class AdminListController extends Controller
 {
@@ -71,8 +74,19 @@ class AdminListController extends Controller
      */
     public function update(Request $request, $id)
     {
-      return  $admin=Admin::findOrFail($id);
-
+         $admin=Admin::findOrFail($id);
+         $validated=$request->validate([
+             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+         ]);
+        try {
+            DB::beginTransaction();
+            $admin->update(['password'=>Hash::make($validated['password'])]);
+            DB::commit();
+            return  response()->success('Password Change');
+        }catch (\Exception $exception){
+            DB::rollBack();
+            return  $exception;
+        }
 
     }
 
