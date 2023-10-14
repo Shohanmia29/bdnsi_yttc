@@ -28,6 +28,7 @@
             {{ __('Center Information') }}
         </div>
         @php($center = auth()->user()->center)
+        @if($center)
         <div class="w-full flex flex-wrap p-4">
             <div class="w-full md:w-1/2 lg:w-1/3">
                 <table>
@@ -62,5 +63,8 @@
                 </table>
             </div>
         </div>
+        @else
+            <div class="text-center text-red-500 font-bold ">Center Not Found</div>
+        @endif
     </div>
 </x-app-layout>
