@@ -1,154 +1,166 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="{{asset('image/img/icon.png')}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> {{$title ?? "BTSI 2"}}</title>
+    <link rel="stylesheet" href="{{mix('css/app.css')}}" />
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
-    <!-- Styles -->
-
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- owl carouse -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <!-- facebook sdk -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="YcJh7p6P"></script>
 
-
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
-<body class="antialiased">
-<div class="flex min-h-screen flex-col">
-    <div class="w-full py-8 text-center text-4xl">
-        <div class="mx-auto w-full max-w-4xl text-center">{{ config('app.name') }}</div>
-    </div>
-   <div class="w-full md:w-1/2 mx-auto flex ">
-              <div class="md:w-[15%]">
-                    <div class="   py-1 px-6 bg-[#002147] text-white font-bold">
-                        Notice
-                    </div>
-              </div>
-          <div class="w-[90%]">
-              <marquee behavior="" direction="">{{\App\Models\ConfigDictionary::get('notice')}}</marquee>
-          </div>
-   </div>
-    <div class="w-full bg-slate-500">
-        <section class="shadow-lg sticky top-0 z-50 bg-slate-500" style="box-shadow: 0px 0px 7px 0pxrgba(0,0,0,0.5);">
-            <div class="max-w-7xl mx-auto  flex flex-wrap md:flex-nowrap justify-between items-center my-1 py-2" x-data="{ menuOpen: false }">
-                <div class="flex w-full justify-end  md:hidden">
-                    <a href="#" x-on:click="menuOpen = !menuOpen">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-                    </a>
-                </div>
-                <div class="w-full md:flex md:justify-end mb-3 md:mb-0" x-bind:class="menuOpen ? 'flex' :'hidden'">
-                    <ul class="flex flex-wrap  md:flex-nowrap font-semibold text-white">
-                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('welcome')}}">Home</a></li>
-                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('verifiedInstitute')}}">Verified Institutions</a></li>
-                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('all_course')}}">Courses</a></li>
-                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('successStudent')}}">Our Success Students </a></li>
-                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{ route('result') }}">Result</a></li>
-                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{route('contactUs')}}">Contact Us</a></li>
-                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{ route('center-request.create') }}">Center Request</a></li>
-                        <li class="w-full md:w-auto mx-4 border-b md:border-none my-2 md:my-0"><a href="{{ route('login') }}">Center Login</a></li>
-                    </ul>
-                </div>
+<body  >
+
+
+@include('frontend.layouts.header')
+
+
+{{$slot}}
+
+
+<section class="bg-[#21225F] ">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4  py-14">
+        <div class="mb-6 md:mb-0">
+            <p class="text-2xl text-white font-bold text-center sm:text-start">Map</p>
+            <div class="w-full bg-white mt-1" style="height: 1px;"></div>
+
+            <div class="flex justify-center mt-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.243704160623!2d90.37240771445558!3d23.738687395141767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bf35540c0001%3A0xf8f3861e006ec576!2sMMIT%20Soft%20Ltd.!5e0!3m2!1sen!2sbd!4v1663664930553!5m2!1sen!2sbd" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-        </section>
-    </div>
+        </div>
+        <div class="mb-6 md:mb-0">
+            <p class="text-2xl text-white font-bold text-center sm:text-start">Contact Us</p>
+            <div class="w-full bg-white mt-1" style="height: 1px;"></div>
 
-    <div class="w-full  min-h-screen">
-        {{ $slot }}
-    </div>
-    <div class="w-full mt-8">
-        <footer class="relative bg-slate-500 pt-8 pb-6">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap text-left lg:text-left">
-                    <div class="w-full lg:w-6/12 px-4">
-                        <h4 class="text-3xl fonat-semibold text-blueGray-700 text-white">Let's keep in touch!</h4>
-                        <h5 class="text-lg mt-0 mb-2 text-blueGray-600 text-white">
-                            Find us on any of these platforms, we respond 1-2 business days.
-                        </h5>
-                        <div class="mt-6 lg:mb-0 mb-6">
-                            <a href="{{\App\Models\ConfigDictionary::get('twitter_link')??'#'}}" class=" p-2 bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"  >
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="{{\App\Models\ConfigDictionary::get('facebook_link')??'#'}}" class=" p-2 bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"  >
-                                <i class="fab fa-facebook-square"></i>
-                            </a>
-                            <a href="{{\App\Models\ConfigDictionary::get('youtube_link')??'#'}}" class=" p-2 bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"  >
-                                <i class="fab fa-youtube"></i></a>
-                            <a href="{{\App\Models\ConfigDictionary::get('linkedin_link')??'#'}}" class=" p-2 bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"  >
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="w-full lg:w-6/12 px-4">
-                        <div class="flex flex-wrap items-top mb-6 text-white">
-                            <div class="w-full lg:w-4/12 px-4 ml-auto">
-                                <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful Links</span>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="{{route('dynamicPage',['about_us'=>'about_us'])}}">About Us </a>
-                                    </li>
-                                    <li>            <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="{{route('contactUs')}}">Contact Us</a></li>
+            <div class="flex justify-center mt-6">
+                <ul>
+                    <li class="flex text-white mb-4">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                            </svg>
+                        </a>
+                        <span class="ml-3 text-lg">21/1, Haque Mansion, Zigatola, Dhanmondi, Dhaka</span>
+                    </li>
+                    <li class="flex items-center text-white mb-4">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                            </svg>
+                        </a>
+                        <span class="ml-3 text-lg">btsi@gmail.com</span>
+                    </li>
+                    <li class="flex items-center text-white mb-4">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                            </svg>
+                        </a>
+                        <span class="ml-3 text-lg">+880239399393 +880333378787</span>
+                    </li>
 
-                                </ul>
-                            </div>
-                            <div class="w-full lg:w-4/12 px-4">
-                                <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Other Resources</span>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#">MIT License</a>
-                                    </li>
-                                    <li>
-
-                                        <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="{{route('dynamicPage',['terms_and_condition'=>'terms_and_condition'])}}">Terms &amp; Conditions</a>
-                                    </li>
-                                    <li>
-                                        <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="{{route('dynamicPage',['privacy_policy'=>'privacy_policy'])}}">Privacy Policy</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr class="my-6 border-blueGray-300">
-                <div class="flex flex-wrap items-center md:justify-between justify-center">
-                    <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-                        <div class="text-sm text-blueGray-500 font-semibold py-1 text-white">
-                            Copyright © <span id="get-current-year">2023</span><a href="#" class="text-blueGray-500 hover:text-gray-800" target="_blank"> Design & Development by</a>
-                                <a href="https://www.mmitsoft.com/" class="text-blueGray-500 hover:text-blueGray-800">MMIT Soft Ltd</a>.
-                        </div>
-                    </div>
-                </div>
+                </ul>
             </div>
-        </footer>
+
+        </div>
+        <div class="mb-6 md:mb-0">
+            <p class="text-2xl text-white font-bold text-center sm:text-start">Facebook</p>
+            <div class="w-full bg-white mt-1" style="height: 1px;"></div>
+
+            <div class="flex justify-center text-center w-full mt-6 px-5">
+
+                <div class="fb-page w-full" data-href="https://www.facebook.com/mmitinstitute" data-tabs="timeline"  data-height="300" data-width="400"  data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/mmitinstitute" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/mmitinstitute">MMIT Institute</a></blockquote></div>
+
+            </div>
+        </div>
     </div>
-    {{ $script ?? '' }}
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.mySwiper', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            autoplay: {
-                delay: 5000,
-            },
+</section>
+
+<section>
+    <p class="flex justify-center py-2 px-4 text-sm sm:text-base">BTSI © 2022 All rights reserved. Developed by <a class="ml-1 " href="http://www.mmitsoft.com" target="_blank"> MMIT SOFT LTD</a></p>
+</section>
+
+<script src="{{mix('js/app.js')}}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+<script>
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 24,
+            items: 1,
+            autoplay:true,
+            autoplayTimeout:5000,
+            autoplayHoverPause:true,
         });
-    </script>
-</div>
+    });
+</script>
+
+<script>
+    $('#owl-carousel-partner').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:6
+            }
+        }
+    });
+
+</script>
+
+<script>
+    $('#owl-carousel-course').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            400:{
+                items:2
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:4
+            }
+        }
+    });
+
+</script>
+
+
 </body>
 </html>
