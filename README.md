@@ -1,6 +1,6 @@
 ## BTSI web
 
-BTSI is a web application based on laravel web framework.
+BTSI version 2 is a web application based on laravel web framework.
 
 ## Copyright
 
