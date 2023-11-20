@@ -3,7 +3,7 @@
         <div class="w-full text-center text-xl border-b">
             Center request
 
-            <div>-----------------------------</div>
+            <div>..........................................................................................................</div>
 
         </div>
         <form action="{{ route('center-request.store') }}" method="POST" enctype="multipart/form-data">
