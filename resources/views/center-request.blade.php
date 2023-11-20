@@ -2,6 +2,9 @@
     <div class="w-full mx-auto max-w-4xl shadow-lg  my-5 flex flex-wrap">
         <div class="w-full py-4 text-center text-xl border-b">
             Center request
+
+            <div>-----------------------------</div>
+
         </div>
         <form action="{{ route('center-request.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
