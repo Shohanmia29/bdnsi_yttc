@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <div class="w-full mx-auto max-w-4xl shadow-lg  my-5 flex flex-wrap">
+    <div class="w-full mx-auto max-w-4xl    my-5 flex flex-wrap">
         <div class="w-full text-center text-xl border-b">
             Center request
 
