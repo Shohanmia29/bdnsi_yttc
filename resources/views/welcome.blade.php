@@ -22,9 +22,9 @@
                     @foreach($courses as $course)
                     <div class="w-1/2 md:w-1/4 p-4">
                         <div class="w-full  shadow-lg rounded-md border ">
-                            <img class="w-full border-b" src="https://cdn.elearningindustry.com/wp-content/uploads/2020/08/5-ways-to-improve-your-course-cover-design-1024x575.png" alt="">
+                            <img class="w-full border-b" src="{{$course->image??''}}" alt="">
                             <div class="p-2 text-center">
-                                Coure Name
+                               {{$course->name??''}}
                             </div>
                         </div>
                     </div>
