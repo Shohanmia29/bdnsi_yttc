@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="w-full mx-auto max-w-4xl shadow-lg  my-5 flex flex-wrap">
-        <div class="w-full py-4 text-center text-xl border-b">
+        <div class="w-full text-center text-xl border-b">
             Center request
 
             <div>-----------------------------</div>
@@ -19,7 +19,7 @@
                 </div>
             @endif
             <div class="w-full flex flex-wrap py-2">
-                <div class="w-full py-4">
+                <div class="w-full ">
                     <x-auth-validation-errors />
                 </div>
             </div>
