@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <div class="w-full mx-auto max-w-4xl flex flex-wrap">
+    <div class="w-full mx-auto max-w-4xl shadow-lg  my-5 flex flex-wrap">
         <div class="w-full py-4 text-center text-xl border-b">
             Center request
         </div>
@@ -20,7 +20,7 @@
                     <x-auth-validation-errors />
                 </div>
             </div>
-            <div class="w-full flex flex-wrap py-8 px-2 md:px-4" x-data="centerRequestData">
+            <div class="w-full flex flex-wrap py-3 px-2 md:px-4" x-data="centerRequestData">
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="name" label="Center Name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="owner_name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="fathers_name" required/>
@@ -64,7 +64,7 @@
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="nid_photo" required type="file" accept="image/*"/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="trade_license" required type="file" accept="image/*"/>
                 <div class="w-full py-8 flex justify-center">
-                    <x-button>{{ __('Submit') }}</x-button>
+                    <x-button class="bg-green-600">{{ __('Submit') }}</x-button>
                 </div>
             </div>
         </form>
