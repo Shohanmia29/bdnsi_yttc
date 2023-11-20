@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <div class="max-w-7xl mx-auto">
+    <div class="max-w-6xl mx-auto">
         <main>
             <!-- banner section -->
             <section class="">
