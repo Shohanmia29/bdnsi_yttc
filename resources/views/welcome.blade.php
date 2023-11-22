@@ -52,10 +52,9 @@
                         </div>
                         <div class="mx-0 sm:mx-4 my-4 sm:my-5">
                             <p class="text-2xl md:text-3xl lg:text-4xl font-semibold md:mt-14">About Us</p>
-                            <p class="mt-4 text-md md:text-xl text-justify">From a hands-on education to opportunities to work alongside industry professionals, there are countless reasons students choose us.</p>
-                            <p class="mt-4 text-md md:text-xl text-justify">WE'RE NOT YOUR AVERAGE IT TRAINING COMPANY</p>
-                            <p class="mt-4 text-md md:text-xl text-justify">Nothing makes us more proud than watching our students thrive and achieve their goals. We believe in delivering quality education to our students and going the extra mile!
-                                Also We Provide Internship Opportunity in our company so that you can learn extra from others because we believe you are the future.</p>
+                            <p class="mt-4 text-md md:text-xl text-justify">
+                                বাংলা‌দেশ যুব কা‌রিগ‌রি প্রশিক্ষন সেল দীর্ঘ পথ পা‌ড়ি দি‌য়ে ৬ বছরে পর্দাপণ করেছে। এ জন্য সকল ছাত্রছাত্রী, অভিভাবক এবং সকল শুভানুধায়ীদের জানাই আন্তরিক শুভেচ্ছা। পল্লী চিকিৎসকসহ কম্পিউটার, ভূমি জরিপ, ইলেকট্রিক এন্ড হাউজ ওয়্যারিংসহ বিভিন্ন সর্টকোর্সে ভর্তি চলছে। বিস্তারিত জানার জন্য যোগাযোগ করুন আপনার জেলার আঞ্চ‌লিক শাখায়।
+                            </p>
 
                             <div class="flex mt-4 sm:mt-6">
                                 <a href="" class="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-gray-700">Read More</a>
