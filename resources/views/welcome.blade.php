@@ -17,7 +17,7 @@
 
                  <div class="flex items-center">
                      <button class="px-4 py-2 bg-black text-white ">Notice</button>
-                     <marquee class="font-bold" behavior="" direction="right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, minus?</marquee>
+                     <marquee class="font-bold" behavior="" direction="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, minus?</marquee>
                  </div>
             </section>
 
