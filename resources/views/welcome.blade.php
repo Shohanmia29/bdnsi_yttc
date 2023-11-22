@@ -4,9 +4,15 @@
             <!-- banner section -->
             <section class="">
                 <div class="owl-carousel owl-theme">
-                    <div class="item overflow-hidden md:h-[500px] w-full " style="background-color: black;">
-                        <img class="" style="height: 500px;" src="https://blogassets.leverageedu.com/blog/wp-content/uploads/2019/10/23170101/List-of-Professional-Courses-after-Graduation.gif" alt="">
-                    </div>
+                      @forelse(\App\Models\Slider::get() as $slider)
+                        <div class="item overflow-hidden md:h-[500px] w-full " style="background-color: black;">
+                            <img class="" style="height: 500px;" src="{{$slider->photo??''}}" alt="">
+                        </div>
+                    @empty
+                        <div class="item overflow-hidden md:h-[500px] w-full " style="background-color: black;">
+                            <img class="" style="height: 500px;" src="https://blogassets.leverageedu.com/blog/wp-content/uploads/2019/10/23170101/List-of-Professional-Courses-after-Graduation.gif" alt="">
+                        </div>
+                    @endforelse
                 </div>
             </section>
 
@@ -22,7 +28,7 @@
                     @foreach($courses as $course)
                     <div class="w-1/2 md:w-1/4 p-4">
                         <div class="w-full  shadow-lg rounded-md border ">
-                            <img class="w-full border-b" src="{{$course->image??''}}" alt="">
+                            <img class="w-full border-b" src="{{$course->photo??''}}" alt="">
                             <div class="p-2 text-center">
                                {{$course->name??''}}
                             </div>
