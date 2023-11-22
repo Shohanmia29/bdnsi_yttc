@@ -28,7 +28,7 @@
                     @foreach($courses as $course)
                     <div class="w-1/2 md:w-1/4 p-4">
                         <div class="w-full  shadow-lg rounded-md border ">
-                            <img class="w-full border-b" src="{{$course->photo??''}}" alt="">
+                            <img class="w-full border-b md:h-40" src="{{$course->photo??''}}" alt="">
                             <div class="p-2 text-center">
                                {{$course->name??''}}
                             </div>
