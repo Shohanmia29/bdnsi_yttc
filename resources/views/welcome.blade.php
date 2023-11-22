@@ -68,20 +68,46 @@
 
             <!-- Partners -->
             <section class="my-10 md:my-20">
-                <div class="w-full bg-gray-900 grid grid-cols-1 md:grid-cols-3 py-12 rounded text-white">
-                    <div class="text-center mb-10 md:mb-0">
-                        <p class="text-2xl font-bold mb-3">Sharing Knowledge</p>
-                        <p>Opportunity to share knowledge with developers</p>
-                    </div>
-                    <div class="text-center mb-10 md:mb-0">
-                        <p class="text-2xl font-bold mb-3">Small Class Sizes</p>
-                        <p>With an average class size of 20 students</p>
-                    </div>
-                    <div class="text-center mb-10 md:mb-0">
-                        <p class="text-2xl font-bold mb-3">Experienced Faculty</p>
-                        <p>With first-hand industry experience</p>
-                    </div>
-                </div>
+               <div class="">
+                   <div class="   md:p-14  shadow-lg p-5 mb-2 bg-body rounded">
+                       <div class="w-full flex flex-wrap justify-center md:justify-between text-lg font-bold">
+                           <div class=" w-full md:w-auto ">
+                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-10 h-10">
+                                   <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z" clip-rule="evenodd" />
+                               </svg>
+
+                               <h2 class="text-[#683091]">1050</h2>
+                               <h3>Center</h3>
+                           </div>
+                           <div class="w-full md:w-auto  ">
+
+                               <svg  class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"  >
+                                   <path d="M10.75 16.82A7.462 7.462 0 0115 15.5c.71 0 1.396.098 2.046.282A.75.75 0 0018 15.06v-11a.75.75 0 00-.546-.721A9.006 9.006 0 0015 3a8.963 8.963 0 00-4.25 1.065V16.82zM9.25 4.065A8.963 8.963 0 005 3c-.85 0-1.673.118-2.454.339A.75.75 0 002 4.06v11a.75.75 0 00.954.721A7.506 7.506 0 015 15.5c1.579 0 3.042.487 4.25 1.32V4.065z" />
+                               </svg>
+
+                               <h2 class="text-[#683091]">300</h2>
+                               <h3>Courses</h3>
+                           </div>
+                           <div class="w-full md:w-auto  ">
+                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-10 h-10">
+                                   <path fill-rule="evenodd" d="M3.25 3A2.25 2.25 0 001 5.25v9.5A2.25 2.25 0 003.25 17h13.5A2.25 2.25 0 0019 14.75v-9.5A2.25 2.25 0 0016.75 3H3.25zM2.5 9v5.75c0 .414.336.75.75.75h13.5a.75.75 0 00.75-.75V9h-15zM4 5.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V6a.75.75 0 00-.75-.75H4zM6.25 6A.75.75 0 017 5.25h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H7a.75.75 0 01-.75-.75V6zM10 5.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V6a.75.75 0 00-.75-.75H10z" clip-rule="evenodd" />
+                               </svg>
+                               <h2 class="text-[#683091]">50</h2>
+                               <h3>Exam</h3>
+                           </div>
+                           <div class="w-full md:w-auto  ">
+                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-10 h-10">
+                                   <path d="M10 9a3 3 0 100-6 3 3 0 000 6zM6 8a2 2 0 11-4 0 2 2 0 014 0zM1.49 15.326a.78.78 0 01-.358-.442 3 3 0 014.308-3.516 6.484 6.484 0 00-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 01-2.07-.655zM16.44 15.98a4.97 4.97 0 002.07-.654.78.78 0 00.357-.442 3 3 0 00-4.308-3.517 6.484 6.484 0 011.907 3.96 2.32 2.32 0 01-.026.654zM18 8a2 2 0 11-4 0 2 2 0 014 0zM5.304 16.19a.844.844 0 01-.277-.71 5 5 0 019.947 0 .843.843 0 01-.277.71A6.975 6.975 0 0110 18a6.974 6.974 0 01-4.696-1.81z" />
+                               </svg>
+
+
+                               <h2 class="text-[#683091]">40675788</h2>
+                               <h3>Students</h3>
+
+                           </div>
+                       </div>
+                   </div>
+               </div>
             </section>
 
 

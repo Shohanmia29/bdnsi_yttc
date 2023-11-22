@@ -1491,6 +1491,9 @@ select {
 .p-10 {
   padding: 2.5rem;
 }
+.p-5 {
+  padding: 1.25rem;
+}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1795,6 +1798,10 @@ select {
 .text-slate-800 {
   --tw-text-opacity: 1;
   color: rgb(30 41 59 / var(--tw-text-opacity));
+}
+.text-\[\#683091\] {
+  --tw-text-opacity: 1;
+  color: rgb(104 48 145 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;
@@ -2505,12 +2512,24 @@ select {
     flex-direction: row-reverse;
   }
 
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
   .md\:p-2 {
     padding: 0.5rem;
   }
 
   .md\:p-7 {
     padding: 1.75rem;
+  }
+
+  .md\:p-10 {
+    padding: 2.5rem;
+  }
+
+  .md\:p-14 {
+    padding: 3.5rem;
   }
 
   .md\:px-4 {
