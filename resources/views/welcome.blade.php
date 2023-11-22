@@ -14,6 +14,11 @@
                         </div>
                     @endforelse
                 </div>
+
+                 <div class="flex items-center">
+                     <button class="px-4 py-2 bg-black text-white ">Notice</button>
+                     <marquee class="font-bold" behavior="" direction="right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, minus?</marquee>
+                 </div>
             </section>
 
 
@@ -46,7 +51,7 @@
                             <img src="{{asset('about.png')}}" alt="">
                         </div>
                         <div class="mx-0 sm:mx-4 my-4 sm:my-5">
-                            <p class="text-2xl md:text-3xl lg:text-4xl font-semibold md:mt-14">We Focused on Your Success</p>
+                            <p class="text-2xl md:text-3xl lg:text-4xl font-semibold md:mt-14">About Us</p>
                             <p class="mt-4 text-md md:text-xl text-justify">From a hands-on education to opportunities to work alongside industry professionals, there are countless reasons students choose us.</p>
                             <p class="mt-4 text-md md:text-xl text-justify">WE'RE NOT YOUR AVERAGE IT TRAINING COMPANY</p>
                             <p class="mt-4 text-md md:text-xl text-justify">Nothing makes us more proud than watching our students thrive and achieve their goals. We believe in delivering quality education to our students and going the extra mile!
