@@ -10,7 +10,7 @@
                         </div>
                     @empty
                         <div class="item overflow-hidden md:h-[500px] w-full " style="background-color: black;">
-                            <img class="" style="height: 500px;" src="https://blogassets.leverageedu.com/blog/wp-content/uploads/2019/10/23170101/List-of-Professional-Courses-after-Graduation.gif" alt="">
+                            <img class="" style="height: 500px;" src="{{asset('images/slider/slider.gif')}}" alt="">
                         </div>
                     @endforelse
                 </div>
