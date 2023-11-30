@@ -1381,9 +1381,9 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
-.bg-\[\#015691\] {
+.bg-green-700 {
   --tw-bg-opacity: 1;
-  background-color: rgb(1 86 145 / var(--tw-bg-opacity));
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 }
 .bg-\[\#21225F\] {
   --tw-bg-opacity: 1;
@@ -1423,10 +1423,6 @@ select {
 }
 .bg-transparent {
   background-color: transparent;
-}
-.bg-green-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 }
 .bg-red-200 {
   --tw-bg-opacity: 1;
