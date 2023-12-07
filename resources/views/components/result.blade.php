@@ -6,8 +6,8 @@
             <img class="mx-auto w-32 h-32" src="{{ asset('logo.png') }}" />
         </div>
         <div class="w-full md:w-1/2 lg:w-3/5 print:w-3/5 flex flex-col justify-center items-center">
-            <div class="w-full py-2 text-2xl text-center">Bangladesh Technical and Software institute</div>
-            <div class="w-full py-2 text-center">Govt. License No: C-170275</div>
+            <div class="w-full py-2 text-2xl text-center">Bangladesh Engineering & IT Development</div>
+            <div class="w-full py-2 text-center">Govt. License No:  CH-15691</div>
         </div>
     </div>
     <div class="w-full flex flex-wrap justify-end">
