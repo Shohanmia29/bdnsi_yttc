@@ -6,7 +6,7 @@
                 <div class="owl-carousel owl-theme">
                       @forelse(\App\Models\Slider::get() as $slider)
                         <div class="item overflow-hidden md:h-[500px] w-full " style="background-color: black;">
-                            <img class="" style="height: 500px;" src="{{$slider->photo??''}}" alt="">
+                            <img class="h-[300px] md:h-[500px]"   src="{{$slider->photo??''}}" alt="">
                         </div>
                     @empty
                         <div class="item overflow-hidden md:h-[500px] w-full " style="background-color: black;">
@@ -17,7 +17,7 @@
 
                  <div class="flex items-center">
                      <button class="px-4 py-2 bg-black text-white ">Notice</button>
-                     <marquee class="font-bold" behavior="" direction="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, minus?</marquee>
+                     <marquee class="font-bold" behavior="" direction="">{{\App\Models\ConfigDictionary::get('notice','This is Notice')}} </marquee>
                  </div>
             </section>
 

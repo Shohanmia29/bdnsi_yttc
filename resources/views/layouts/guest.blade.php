@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="{{asset('image/img/icon.png')}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> {{$title ?? "Bangladesh Technical & IT Institute"}}</title>
-    <link rel="stylesheet" href="{{mix('css/app.css')}}" />
-
+    <link rel="stylesheet" href="{{mix('css/app.css')}}"   />
+    <link rel="icon" href="{{ asset('logo.png') }}">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
