@@ -82,14 +82,6 @@
 <section class="bg-[#21225F] ">
     <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4  py-14">
         <div class="mb-6 md:mb-0">
-            <p class="text-2xl text-white font-bold text-center sm:text-start">Map</p>
-            <div class="w-full bg-white mt-1" style="height: 1px;"></div>
-
-            <div class="flex justify-center mt-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.243704160623!2d90.37240771445558!3d23.738687395141767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bf35540c0001%3A0xf8f3861e006ec576!2sMMIT%20Soft%20Ltd.!5e0!3m2!1sen!2sbd!4v1663664930553!5m2!1sen!2sbd" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-        <div class="mb-6 md:mb-0">
             <p class="text-2xl text-white font-bold text-center sm:text-start">Contact Us</p>
             <div class="w-full bg-white mt-1" style="height: 1px;"></div>
 
@@ -126,13 +118,23 @@
 
         </div>
         <div class="mb-6 md:mb-0">
-            <p class="text-2xl text-white font-bold text-center sm:text-start">Facebook</p>
+            <p class="text-2xl text-white font-bold text-center sm:text-start">Social Link</p>
             <div class="w-full bg-white mt-1" style="height: 1px;"></div>
 
-            <div class="flex justify-center text-center w-full mt-6 px-5">
+            <div class="   text-white font-bold w-full mt-6 px-5">
+                   <ul>
+                        <li>Contact Us</li>
+                        <li>About Us</li>
+                        <li>Gallery</li>
+                   </ul>
 
-                <div class="fb-page w-full" data-href="https://www.facebook.com/mmitinstitute" data-tabs="timeline"  data-height="300" data-width="400"  data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/mmitinstitute" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/mmitinstitute">MMIT Institute</a></blockquote></div>
-
+                  <div class="mt-3">
+                      <ul class="flex gap-2">
+                          <li><a href="https://facebook.com"><img src="facebook-icon.svg" alt="Facebook"></a></li>
+                          <li><a href="https://twitter.com"><img src="twitter-icon.svg" alt="Twitter"></a></li>
+                          <li><a href="https://instagram.com"><img src="instagram-icon.svg" alt="Instagram"></a></li>
+                      </ul>
+                  </div>
             </div>
         </div>
     </div>
