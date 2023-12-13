@@ -51,7 +51,7 @@
                 </svg>
             </button>
         </div>
-        <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+        <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1 hidden" id="mobile-menu-2">
             <ul class="flex flex-col text-white mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                 <li>
                     <a href="{{route('welcome')}}"

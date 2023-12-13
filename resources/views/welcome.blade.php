@@ -42,7 +42,7 @@
                     @endforeach
                 </div>
                   <div class="w-full flex justify-center">
-                      <a href="all_course" class="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-gray-700">Read More</a>
+                      <a href="all_course" class="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-gray-700">Show All</a>
                   </div>
             </section>
 
