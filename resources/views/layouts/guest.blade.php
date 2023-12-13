@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="{{asset('image/img/icon.png')}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> {{$title ?? "Bangladesh Technical & IT Institute"}}</title>
+    <title> {{$title ?? "Bangladesh Engineering & IT DEVELOPMENT"}}</title>
     <link rel="stylesheet" href="{{mix('css/app.css')}}"   />
     <link rel="icon" href="{{ asset('logo.png') }}">
     <!-- font awesome -->
