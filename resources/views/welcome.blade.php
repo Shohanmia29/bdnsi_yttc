@@ -159,11 +159,11 @@
             <section class="my-10 md:my-20 w-full ">
                 <div class="bg-blue-600 py-20 rounded  flex justify-center items-center">
                     <div class="text-center text-white px-2">
-                        <p class="text-3xl font-bold">Join our Happy Community!</p>
+                        <p class="text-3xl font-bold">Apply now for your center Registration</p>
                         <p class="mt-5 text-lg">Subscribe & get latest news and growth opportunities!</p>
                         <div class="mt-5 block sm:flex items-center justify-center">
                             <input type="email" class="px-8 py-2 rounded-lg focus:shadow-lg focus:shadow-gray-300 focus:outline-none focus:ring focus:bg-primary-300">
-                            <button class="bg-gray-900 mt-4 sm:mt-0 px-5 py-2 ml-4 focus:shadow-lg focus:shadow-gray-300 rounded-lg">Get Started</button>
+                            <a href="{{route('center-request.create')}}" class="bg-gray-900 mt-4 sm:mt-0 px-5 py-2 ml-4 focus:shadow-lg focus:shadow-gray-300 rounded-lg">Apply Now</a>
                         </div>
                     </div>
                 </div>
