@@ -651,6 +651,12 @@ select {
 .relative {
   position: relative;
 }
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
 .top-0 {
   top: 0px;
 }
@@ -929,6 +935,9 @@ select {
 .mb-3 {
   margin-bottom: 0.75rem;
 }
+.mt-10 {
+  margin-top: 2.5rem;
+}
 .block {
   display: block;
 }
@@ -1189,6 +1198,9 @@ select {
 }
 .flex-wrap {
   flex-wrap: wrap;
+}
+.items-end {
+  align-items: flex-end;
 }
 .items-center {
   align-items: center;
@@ -1501,6 +1513,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(67 56 202 / var(--tw-bg-opacity));
 }
+.bg-\[\#15803D\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+}
 .fill-current {
   fill: currentColor;
 }
@@ -1658,6 +1674,9 @@ select {
 .pb-4 {
   padding-bottom: 1rem;
 }
+.pb-20 {
+  padding-bottom: 5rem;
+}
 .text-left {
   text-align: left;
 }
@@ -1672,6 +1691,9 @@ select {
 }
 .align-middle {
   vertical-align: middle;
+}
+.align-bottom {
+  vertical-align: bottom;
 }
 .font-sans {
   font-family: Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -1897,6 +1919,11 @@ select {
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .ring-1 {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -1927,6 +1954,16 @@ select {
   transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-all {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -2196,8 +2233,15 @@ select {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity));
 }
+.focus\:ring-blue-500:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
+}
 .focus\:ring-opacity-50:focus {
   --tw-ring-opacity: 0.5;
+}
+.focus\:ring-offset-2:focus {
+  --tw-ring-offset-width: 2px;
 }
 .active\:bg-gray-100:active {
   --tw-bg-opacity: 1;
@@ -2368,6 +2412,11 @@ select {
     margin-bottom: -1px;
   }
 
+  .sm\:my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
   .sm\:mr-2 {
     margin-right: 0.5rem;
   }
@@ -2388,6 +2437,14 @@ select {
     margin-left: 1.5rem;
   }
 
+  .sm\:ml-3 {
+    margin-left: 0.75rem;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+
   .sm\:inline-block {
     display: inline-block;
   }
@@ -2402,6 +2459,10 @@ select {
 
   .sm\:h-9 {
     height: 2.25rem;
+  }
+
+  .sm\:h-screen {
+    height: 100vh;
   }
 
   .sm\:w-full {
@@ -2424,6 +2485,10 @@ select {
     max-width: 36rem;
   }
 
+  .sm\:max-w-lg {
+    max-width: 32rem;
+  }
+
   .sm\:flex-1 {
     flex: 1 1 0%;
   }
@@ -2434,6 +2499,10 @@ select {
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:flex-row-reverse {
+    flex-direction: row-reverse;
   }
 
   .sm\:items-center {
@@ -2484,6 +2553,14 @@ select {
     padding: 2.25rem;
   }
 
+  .sm\:p-0 {
+    padding: 0px;
+  }
+
+  .sm\:p-6 {
+    padding: 1.5rem;
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -2503,8 +2580,16 @@ select {
     padding-top: 0px;
   }
 
+  .sm\:pb-4 {
+    padding-bottom: 1rem;
+  }
+
   .sm\:text-left {
     text-align: left;
+  }
+
+  .sm\:align-middle {
+    vertical-align: middle;
   }
 
   .sm\:text-\[22px\] {
@@ -2519,6 +2604,11 @@ select {
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 @media (min-width: 768px) {
