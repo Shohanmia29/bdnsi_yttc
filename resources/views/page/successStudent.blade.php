@@ -20,7 +20,7 @@
                             </div>
                         </div>
                     @empty
-                        <div class="w-full font-bold text-red-500">Not Found Institute</div>
+                        <div class="w-full font-bold text-red-500">Not Found Student</div>
                     @endforelse
                 </div>
                 <div class="w-full">
