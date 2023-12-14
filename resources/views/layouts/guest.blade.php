@@ -27,7 +27,7 @@
     <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
         <a href="#" class="flex items-center text-white">
             <img src="{{asset('logo.png')}}" class="h-6 mr-3 sm:h-9" alt="Landwind Logo">
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Btsibd</span>
+            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Beitbd</span>
         </a>
         <div class="flex items-center lg:order-2">
             <div class="hidden mt-2 mr-4 sm:inline-block">
@@ -87,7 +87,7 @@
                          <div class="flex gap-2">
                              <img class="w-10 h-10" src="{{asset('logo.png')}}" alt="">
                                <div class="text-2xl md:text-3xl font-bold">
-                                   Btsibd
+                                   Beitbd
                                </div>
                          </div>
                     </a>
