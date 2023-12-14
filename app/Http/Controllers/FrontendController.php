@@ -6,6 +6,7 @@ use App\Enums\CenterStatus;
 use App\Enums\StudentStatus;
 use App\Models\Center;
 use App\Models\Student;
+use App\Models\SuccessStudent;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -16,7 +17,7 @@ class FrontendController extends Controller
               return view('page.verifyInstitute',compact('centers'));
       }
       public function successStudent(Request $request){
-             $students=Student::whereHas('result')->select('id','name','picture')->where('status',StudentStatus::Approved)->paginate(50);
+             $students=SuccessStudent::paginate(50);
               return view('page.successStudent',compact('students'));
       }
 

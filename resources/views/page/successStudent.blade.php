@@ -13,7 +13,7 @@
                         <div class="w-full md:w-1/2 xl:w-1/4 p-3">
                             <div class="bg-white border border-coolGray-100 shadow-dashboard rounded-md">
                                 <div class="flex flex-col justify-center items-center px-4 pt-8 pb-6 border-b border-coolGray-100">
-                                    <img class="mb-4 w-full object-cover h-64 " src="{{$student->picture??''}}" alt="" data-config-id="auto-img-3-1">
+                                    <img class="mb-4 w-full object-cover h-64 " src="{{$student->image??''}}" alt="" data-config-id="auto-img-3-1">
                                     <h2 class="text-sm font-medium text-coolGray-900" data-config-id="auto-txt-19-1">{{$student->name??''}}</h2>
 
                                 </div>
