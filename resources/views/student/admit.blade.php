@@ -21,7 +21,7 @@
  <div class="print:min-h-screen">
      <div class="w-full   bg-white min-w-[800px] overflow-x-auto  ">
          <div class="flex flex-col   print:h-screen  justify-between">
-             <div class="r-bg  print:h-[48vh] h-screen   w-full relative text-[16px] font-bold text-gray-500" style="background-image: url({{asset('images/admit.png')}});font-family: 'Times New Roman'">
+             <div class="r-bg  print:h-[48vh] h-screen   w-full relative text-[16px] font-bold text-gray-500" style="background-image: url({{asset('images/admit.jpg')}});font-family: 'Times New Roman'">
                  <div class="absolute top-[18.3%] left-[81.5%] w-38  ">
                      <img class="w-24 h-24 rounded-md" src="{{$student->picture}}" alt="">
                  </div>
