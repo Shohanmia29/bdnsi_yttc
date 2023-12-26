@@ -19,15 +19,6 @@
                                              {{$center->name??''}}
                                          </a>
                                      </h3>
-                                    <div>
-                                        <table>
-                                                <tr>
-                                                     <td>Total Students</td>
-                                                      <td>:</td>
-                                                      <td> {{$center->students_count??''}}</td>
-                                                </tr>
-                                        </table>
-                                    </div>
 
                                  </div>
                              </div>

@@ -23,6 +23,7 @@
                 <th>{{ __('ID') }}</th>
                 <th>{{ __('Title') }}</th>
                 <th>{{ __('Photo') }}</th>
+                <th>{{ __('type') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
             </thead>
@@ -44,15 +45,17 @@
                                     'delete': '{{ route('admin.slider.destroy', '@') }}'.replace('@', item.id),
                                 });
                                 item.photo = '<img class="w-10 h-10 mx-auto" src="' + item.photo + '" alt=""/>';
+                                item.type=@js(\App\Enums\SliderType::asSelectArray())[item.type]
                                 return item;
                             });
                             return response.data;
                         },
                     },
                     columns: [
-                        { data: 'DT_RowIndex' },
+                        { data: 'DT_RowIndex',orderable:false,searchable:false },
                         { data: 'title' },
                         { data: 'photo' },
+                        { data: 'type' },
                         { data: 'action', orderable: false, searchable: false },
                     ],
                 });

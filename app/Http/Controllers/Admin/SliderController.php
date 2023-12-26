@@ -12,7 +12,7 @@ class SliderController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            return datatables(Slider::select(['id','title','photo'])->get())->addIndexColumn()->toJson();
+            return datatables(Slider::query())->addIndexColumn()->toJson();
         }
 
         return view('admin.slider.index');
@@ -20,7 +20,7 @@ class SliderController extends Controller
     public function create()
     {
         return view('admin.slider.create', [
-            'photo' => Slider::select(['id','title','photo'])->get(),
+            'photo' => Slider::select(['id','title','photo','type'])->get(),
         ]);
     }
 
@@ -29,6 +29,7 @@ class SliderController extends Controller
         $validated = $request->validate([
             'title' => 'nullable|string',
             'photo' => 'required|image',
+            'type' => 'required',
         ]);
 
 

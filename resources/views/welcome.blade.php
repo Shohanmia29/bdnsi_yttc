@@ -4,7 +4,7 @@
             <!-- banner section -->
             <section class="">
                 <div class="owl-carousel owl-theme">
-                      @forelse(\App\Models\Slider::get() as $slider)
+                      @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Slider)->get() as $slider)
                         <div class="item overflow-hidden md:h-[500px] w-full " style="background-color: black;">
                             <img class="h-[300px] md:h-[500px]"   src="{{$slider->photo??''}}" alt="">
                         </div>

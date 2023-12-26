@@ -52,7 +52,7 @@
             </button>
         </div>
         <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1 hidden" id="mobile-menu-2">
-            <ul class="flex flex-col text-white mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <ul class="flex flex-col text-white mt-4 font-medium lg:flex-row lg:space-x-5 lg:mt-0">
                 <li>
                     <a href="{{route('welcome')}}"
                        class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent   lg:p-0 dark:text-white"
@@ -60,6 +60,7 @@
                 </li>
                 <li><a class="block py-2 pl-3 pr-4  border-b border-gray-100 hover:bg-green-500 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700" href="{{route('verifiedInstitute')}}">Verified Institutions</a></li>
                 <li><a class="block py-2 pl-3 pr-4  border-b border-gray-100 hover:bg-green-500 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700" href="{{route('all_course')}}">Courses</a></li>
+                <li><a class="block py-2 pl-3 pr-4  border-b border-gray-100 hover:bg-green-500 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700" href="{{route('gallery')}}">Gallery</a></li>
                 <li><a class="block py-2 pl-3 pr-4  border-b border-gray-100 hover:bg-green-500 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700" href="{{route('successStudent')}}">Our Success Students </a></li>
                 <li><a class="block py-2 pl-3 pr-4  border-b border-gray-100 hover:bg-green-500 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700" href="{{ route('result') }}">Result</a></li>
                 <li><a class="block py-2 pl-3 pr-4  border-b border-gray-100 hover:bg-green-500 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700" href="{{route('contactUs')}}">Contact Us</a></li>
@@ -168,7 +169,7 @@
         <div class="container mx-auto px-4">
             <div class="-mx-4 flex flex-wrap justify-between">
                 <div class="px-4 w-full text-center sm:w-auto sm:text-left">
-                    Copyright ©
+                    Copyright © 2018
                     <script>new Date().getFullYear() > 2020 && document.write("- " + new Date().getFullYear())</script>-
                      . All Rights Reserved.
                 </div>

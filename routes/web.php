@@ -33,6 +33,7 @@ Route::get('center-student-result', \App\Http\Controllers\CenterTotalResultContr
 
 Route::get('verified-institute', [\App\Http\Controllers\FrontendController::class,'verifyInstitute'])->name('verifiedInstitute');
 Route::get('success-student', [\App\Http\Controllers\FrontendController::class,'successStudent'])->name('successStudent');
+Route::get('gallery', [\App\Http\Controllers\FrontendController::class,'gallery'])->name('gallery');
 
 Route::resource('password-update', \App\Http\Controllers\PasswordUpdateController::class)
     ->only(['create','store']);

@@ -17,6 +17,7 @@ class Slider extends Model
         'id',
         'title',
         'photo',
+        'type'
 
     ];
 
