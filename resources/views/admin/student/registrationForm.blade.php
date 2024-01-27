@@ -1,7 +1,7 @@
 <x-admin-app-layout>
     <x-slot name="header">
         <div class="w-full flex justify-between">
-            <div class="text-xl">{{ __('Students') }}</div>
+{{--            <div class="text-xl">{{ __('Students') }}</div>--}}
             @can('student-create')
                 <div>
                     <a class="border border-slate-500 py-1 px-4 rounded text-slate-700 text-sm hover:text-white hover:bg-slate-700"
@@ -34,7 +34,7 @@
             <div class="absolute top-[55.7%] left-[45.8%] print:text-sm  w-38 ">{{$student->permanent_address??'N/A'}}</div>
             <div class="absolute top-[59.2%]  left-[45.8%]  w-38 ">{{$student->registration??'N/A'}}</div>
             <div class="absolute top-[62.5%] left-[45.8%]  w-38 ">{{$student->session->name??'N/A'}}</div>
-            <div class="absolute top-[82.5%] left-[84.3%]  w-38 "><img class="w-14 h-10" src="{{asset('signature.png')}}" alt=""></div>
+            <div class="absolute top-[92.5%] left-[16%] italic w-38 text-xs text-gray-700 ">{{now()->format('d-M-Y')}}</div>
         </div>
     </div>
 </x-admin-app-layout>

@@ -28,18 +28,18 @@
 
                  <div class="absolute top-[26%]   left-[10.5%] w-38  ">{{$student->id??''}}</div>
                  <div class="absolute   top-[19%] left-[52%] w-38  ">C-{{$student->center->code??''}}/{{date('y',strtotime($student->session->start_date))}} </div>
-                 <div class="absolute top-[31%] left-[19.5%] w-38  ">{{$student->center->code??''}}</div>
+                 <div class="absolute top-[31.5%] left-[19.5%] w-38  ">{{$student->center->code??''}}</div>
                  <div class="absolute top-[38%] left-[19.5%] w-38  ">{{$student->roll??''}}</div>
                  <div class="absolute top-[45.2%] left-[19.5%] w-38  ">{{$student->registration??''}}</div>
                  <div class="absolute top-[37.5%] left-[62.3%] w-38  ">{{$student->center->name??''}}</div>
                  <div class="absolute top-[45.5%] md:top-[44%] left-[62.5%] w-38  ">{{$student->subject->name??''}}</div>
                  <div class="absolute top-[51.5%]  left-[19.5%] w-38  ">{{$student->session->name??''}}</div>
                  <div class="absolute top-[51.5%] left-[62.5%] w-38  ">{{$student->name??''}}</div>
-                 <div class="absolute top-[59.5%] left-[19.5%] w-38  ">Regular</div>
+                 <div class="absolute top-[60.5%] left-[19.5%] w-38  ">Regular</div>
                  <div class="absolute top-[59.4%] md:top-[59%] left-[62.5%] w-38  ">{{$student->fathers_name??''}}</div>
                  <div class="absolute top-[67.5%] left-[19.5%] w-38  ">{{$student->exam_date??''}}</div>
                  <div class="absolute top-[67.5%] left-[62.5%] w-38  ">{{$student->mothers_name??''}}</div>
-                 <div class="absolute top-[85.5%] text-[#7CA299]  left-[11%] w-38 capitalize tracking-[.1em] ">{{$student->center->name??''}}</div>
+                 <div class="absolute top-[84%] text-[#7CA299]  left-[11%] w-38 capitalize tracking-[.1em] ">{{$student->center->name??''}}</div>
              </div>
              <div class="r-bg  print:h-[48vh] h-screen   w-full relative text-[16px] font-bold text-gray-500" style="background-image: url({{asset('images/admit.jpeg')}});font-family: 'Times New Roman'">
                  <div class="absolute top-[18.3%] left-[81.5%] w-38  ">
@@ -48,19 +48,20 @@
 
                  <div class="absolute top-[26%]   left-[10.5%] w-38  ">{{$student->id??''}}</div>
                  <div class="absolute   top-[19%] left-[52%] w-38  ">C-{{$student->center->code??''}}/{{date('y',strtotime($student->session->start_date))}} </div>
-                 <div class="absolute top-[31%] left-[19.5%] w-38  ">{{$student->center->code??''}}</div>
+                 <div class="absolute top-[31.5%] left-[19.5%] w-38  ">{{$student->center->code??''}}</div>
                  <div class="absolute top-[38%] left-[19.5%] w-38  ">{{$student->roll??''}}</div>
                  <div class="absolute top-[45.2%] left-[19.5%] w-38  ">{{$student->registration??''}}</div>
                  <div class="absolute top-[37.5%] left-[62.3%] w-38  ">{{$student->center->name??''}}</div>
                  <div class="absolute top-[45.5%] md:top-[44%] left-[62.5%] w-38  ">{{$student->subject->name??''}}</div>
                  <div class="absolute top-[51.5%]  left-[19.5%] w-38  ">{{$student->session->name??''}}</div>
                  <div class="absolute top-[51.5%] left-[62.5%] w-38  ">{{$student->name??''}}</div>
-                 <div class="absolute top-[59.5%] left-[19.5%] w-38  ">Regular</div>
+                 <div class="absolute top-[60.5%] left-[19.5%] w-38  ">Regular</div>
                  <div class="absolute top-[59.4%] md:top-[59%] left-[62.5%] w-38  ">{{$student->fathers_name??''}}</div>
                  <div class="absolute top-[67.5%] left-[19.5%] w-38  ">{{$student->exam_date??''}}</div>
                  <div class="absolute top-[67.5%] left-[62.5%] w-38  ">{{$student->mothers_name??''}}</div>
-                 <div class="absolute top-[85.5%] text-[#7CA299]  left-[11%] w-38 capitalize tracking-[.1em] ">{{$student->center->name??''}}</div>
+                 <div class="absolute top-[84%] text-[#7CA299]  left-[11%] w-38 capitalize tracking-[.1em] ">{{$student->center->name??''}}</div>
              </div>
+
 
          </div>
          <div class="w-full flex justify-end py-1 print:hidden">
