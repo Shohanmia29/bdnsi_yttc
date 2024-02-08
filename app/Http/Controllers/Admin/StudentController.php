@@ -51,8 +51,8 @@ class StudentController extends Controller
         $validated = $request->validate([
             'center_id' => 'required|exists:centers,id',
             'name' => 'required|string',
-            'roll' => 'required|string',
-            'registration' => 'required|string',
+            'roll' => 'nullable|string',
+            'registration' => 'nullable|string',
             'fathers_name' => 'required|string',
             'mothers_name' => 'required|string',
             'date_of_birth' => 'required|date',
