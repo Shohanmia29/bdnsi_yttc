@@ -1,6 +1,6 @@
-## BTSI web
+## btcisbd.com
 
-BTSI version 2 is a web application based on laravel web framework.
+btcisbd.com is a web application based on laravel web framework.
 
 ## Copyright
 
