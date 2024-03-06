@@ -23,7 +23,7 @@
         <img class=" w-full h-[100px]  " src="{{asset('logo.png')}}" alt="Logo">
     </div>--}}
 
-    <div class="container max-w-7xl mx-auto">
+    <div class="  max-w-6xl mx-auto p-3">
         <div class="bg-gray-200 my-5">
             <div class="flex w-full gap-5">
                 <div>
