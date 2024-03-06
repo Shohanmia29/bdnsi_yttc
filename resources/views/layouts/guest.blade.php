@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="index.css" rel="stylesheet">
-</head>
+    <title>Btcisbd</title>
+    <link rel="stylesheet" href="{{mix('css/app.css')}}">
+    <!-- owl carouse -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+</head>
+<body>
 <div class="">
-    <img class="h-[250px] w-full object-cover" src="{{asset('frontend/Navbar.jpg')}}" alt="Logo">
+    <img class="h-[250px] w-full  " src="{{asset('frontend/Navbar.jpg')}}" alt="Logo">
 </div>
 
 <div class="">
-    <nav class="container mx-auto flex flex-wrap items-center justify-between py-4">
-        <div class="block lg:hidden">
-            <button id="menu-toggle" class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white">
+    <nav class="container mx-auto flex flex-wrap items-center justify-between py-1">
+        <div class="block lg:hidden p-2">
+            <button id="menu-toggle" class="flex items-center px-3 py-2 border rounded text-gray-600 border-gray-400  ">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
             </button>
         </div>
-        <div class="container shadow-lg flex justify-center">
-            <div class="w-full items-center block lg:flex lg:items-center lg:w-auto hidden" id="menu">
+        <div class="container flex justify-center">
+            <div class="w-full items-center block lg:flex p-2 md:p-0 lg:items-center lg:w-auto hidden" id="menu">
                 <div class="text-sm text-lg font-bold lg:flex-grow">
                     <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">HOME</a>
                     <a href="Courses.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">COURSES</a>
@@ -76,7 +78,9 @@
 </footer>
 
 
-
+<script src="{{mix('js/app.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </body>
 </html>
