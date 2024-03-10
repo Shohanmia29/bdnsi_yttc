@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function index()
     {
         $sliders = Slider::all();
-        $courses = Subject::orderBy('name', 'asc')->limit(8)->get();;
+        $courses = Subject::orderBy('name', 'asc')->limit(5)->get();;
         return view('welcome',compact('courses','sliders'));
     }
     public function all_course()

@@ -55,7 +55,7 @@ class StudentController extends Controller
             'religion' => 'required|numeric|enum_value:'.Religion::class.',false',
             'present_address' => 'required|string',
             'permanent_address' => 'required|string',
-            'phone' =>'required|string|min:11|max:11',
+            'phone' =>'required|string|min:11|max:11|unique:students,phone',
             'email' =>'nullable|email',
             'guardian_name' =>'required|string',
             'nid_or_birth' =>'required|string',

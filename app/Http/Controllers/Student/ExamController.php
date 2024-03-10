@@ -1,21 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Student;
 
 use App\Http\Controllers\Controller;
-use App\Lib\Image;
-use App\Models\SuccessStudent;
 use Illuminate\Http\Request;
 
-class SuccessStudentController extends Controller
+class ExamController extends Controller
 {
-
-    public function index(Request $request)
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-          if ($request->ajax()){
-              return  datatables(SuccessStudent::get())->toJson();
-          }
-         return view('admin.successStudent.index');
+        return view('student.exam.index');
     }
 
     /**
@@ -25,7 +24,7 @@ class SuccessStudentController extends Controller
      */
     public function create()
     {
-        return view('admin.successStudent.create');
+        //
     }
 
     /**
@@ -36,15 +35,7 @@ class SuccessStudentController extends Controller
      */
     public function store(Request $request)
     {
-        $validated=$request->validate([
-                 'name'=>'required',
-                 'image'=>'required',
-                 'company_name'=>'required',
-        ]);
-         $validated['image']=Image::store('image','upload/student');
-        SuccessStudent::create($validated);
-        return  response()->success('Successfully Created');
-
+        //
     }
 
     /**

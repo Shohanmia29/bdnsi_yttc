@@ -1,6 +1,6 @@
-## btcisbd.com
+## BTSI web
 
-btcisbd.com is a web application based on laravel web framework.
+BTSI is a web application based on laravel web framework.
 
 ## Copyright
 

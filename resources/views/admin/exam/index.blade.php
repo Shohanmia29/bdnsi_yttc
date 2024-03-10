@@ -1,24 +1,23 @@
 <x-admin-app-layout>
     <x-slot name="header">
         <div class="w-full flex justify-between">
-            <div class="text-xl">{{ __('Students') }}</div>
-            @can('success-student-create')
+            <div class="text-xl">{{ __('Exam') }}</div>
                 <div>
                     <a class="border border-slate-500 py-1 px-4 rounded text-slate-700 text-sm hover:text-white hover:bg-slate-700"
-                       href="{{ route('admin.success-student.create') }}">{{ __('Create Student') }}</a>
+                       href="{{ route('admin.exam.create') }}">{{ __('Create Exam') }}</a>
                 </div>
-            @endcan
         </div>
     </x-slot>
 
     <div class="w-full mt-8">
-        <table class="w-full" id="students-table">
+        <table class="w-full" id="users-table">
             <thead>
             <tr>
                 <th>{{ __('ID') }}</th>
-                <th>{{ __('Name') }}</th>
-                <th>{{ __('Image') }}</th>
-                <th>{{ __('Company Name') }}</th>
+                <th>{{ __('Subject') }}</th>
+                <th>{{ __('Exam Name') }}</th>
+                <th>{{ __('Start Time') }}</th>
+                <th>{{ __('End Time') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
             </thead>
@@ -27,22 +26,15 @@
     <x-slot name="script">
         <script type="text/javascript" src="{{ mix('js/datatable.js') }}"></script>
         <script type="text/javascript">
-            $('#students-table').DataTable({
+            $('#users-table').DataTable({
                 serverSide: true,
                 processing: true,
                 ajax: {
-                    url: '{{ route('admin.success-student.index') }}',
+                    url: '{{ route('admin.exam.index') }}',
                     dataSrc(response) {
                         response.data.map(function (item) {
-                            item.status = @js(\App\Enums\StudentStatus::asSelectArray())[item.status]
                             item.action = actionIcons({
-                                'show': '{{ route('admin.success-student.show', '@') }}'.replace('@', item.id),
-                                @can('success-student-update')
-                                'edit': '{{ route('admin.success-student.edit', '@') }}'.replace('@', item.id),
-                                @endcan
-                                    @can('success-student-delete')
-                                'delete': '{{ route('admin.success-student.destroy', '@') }}'.replace('@', item.id),
-                                @endcan
+                                'show': '{{ route('admin.exam.show', '@') }}'.replace('@', item.id),
                             });
                             return item;
                         });
@@ -50,10 +42,11 @@
                     }
                 },
                 columns: [
-                    {data: 'id'},
+                    {data: 'DT_RowIndex',orderable:false,searchable:false},
+                    {data: 'subject.name'},
                     {data: 'name'},
-                    {data: 'image'},
-                    {data: 'company_name'},
+                    {data: 'start_time'},
+                    {data: 'end_time'},
                     {data: 'action', orderable: false, searchable: false},
                 ]
             });

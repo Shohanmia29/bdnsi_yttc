@@ -7,7 +7,6 @@
     <title>Admin | {{ $title ?? config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"/>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}"/>
-    <link rel="icon" href="{{ asset('logo.png') }}">
 </head>
 <body class="font-sans antialiased">
 <div
@@ -116,11 +115,18 @@
                 >
                     <span>{{ __('Slider') }}</span>
                 </a>
+
                 <a
-                    href="{{ route('admin.success-student.index') }}"
+                    href="{{ route('admin.exam.index') }}"
                     class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
                 >
-                    <span>{{ __('Success Student') }}</span>
+                    <span>{{ __('Exam') }}</span>
+                </a>
+                <a
+                    href="{{ route('admin.question.create') }}"
+                    class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+                >
+                    <span>{{ __('question') }}</span>
                 </a>
 
                 <a
@@ -230,7 +236,7 @@
                 </div>
             </div>
         </header>
-        <main class="flex-grow lg:ml-64 print:ml-0">
+        <main class="flex-grow lg:ml-64 print:lg:ml-0">
             @isset($header)
                 <div class="w-full bg-white print:hidden p-4">
                     {{ $header }}
@@ -242,7 +248,7 @@
             @if(session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY))
                 <x-alert type="error">{{ session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY) }}</x-alert>
             @endif
-            <div class="px-4 py-8">
+            <div class="px-4 py-8 print:px-0 print:py-0">
                 {{ $slot }}
             </div>
         </main>

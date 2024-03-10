@@ -10,6 +10,7 @@ use App\Enums\StudentStatus;
 use App\Traits\DeletesImage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 
@@ -40,7 +41,7 @@ use Illuminate\Support\Facades\Auth;
  * @property StudentStatus status
  */
 
-class Student extends Model
+class Student extends Authenticatable
 {
     use HasFactory, DeletesImage;
 
@@ -107,11 +108,11 @@ class Student extends Model
 
     public static function getLastFreeRoll()
     {
-        return max(static::max('roll'), 552570) + 1;
+        return (static::max('roll') ?? 652187) + 1;
     }
 
     public static function getLastFreeRegistration()
     {
-        return max(static::max('registration'), 353480) + 1;
+        return (static::max('registration') ?? 305197) + 1;
     }
 }

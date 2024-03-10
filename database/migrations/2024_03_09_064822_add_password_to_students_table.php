@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddTypeToSlidersTable extends Migration
+class AddPasswordToStudentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class AddTypeToSlidersTable extends Migration
      */
     public function up()
     {
-        Schema::table('sliders', function (Blueprint $table) {
-            $table->unsignedTinyInteger('type')->default(\App\Enums\SliderType::Slider);
+        Schema::table('students', function (Blueprint $table) {
+            $table->string('password')->default(\Illuminate\Support\Facades\Hash::make('12345678'))->after('phone');
+            $table->rememberToken();
         });
     }
 
@@ -25,8 +26,8 @@ class AddTypeToSlidersTable extends Migration
      */
     public function down()
     {
-        Schema::table('sliders', function (Blueprint $table) {
-              $table->dropColumn('type');
+        Schema::table('students', function (Blueprint $table) {
+              $table->dropColumn('password');
         });
     }
 }

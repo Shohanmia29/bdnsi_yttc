@@ -17,12 +17,8 @@
         <div class="flex flex-wrap justify-center w-full bg-white p-4">
 
             <x-labeled-input name="title"  class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+
             <x-labeled-input name="photo" required type="file" accept="image/*" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-            <x-labeled-select class="w-full p-1 md:w-1/2 lg:w-1/3" name="type">
-                @foreach(\App\Enums\SliderType::asArray() as $key=> $value)
-                <option value="{{$value}}">{{$key}}</option>
-                @endforeach
-            </x-labeled-select>
             <div class="w-full py-8 flex justify-center">
                 <x-button>{{ __('Create') }}</x-button>
             </div>

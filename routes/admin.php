@@ -94,11 +94,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('profile-update', \App\Http\Controllers\Admin\ProfileUpdateController::class)
             ->only(['create','store']);
         Route::resource('user', \App\Http\Controllers\Admin\UserController::class);
-        Route::resource('success-student', \App\Http\Controllers\Admin\SuccessStudentController::class);
         Route::resource('subject', \App\Http\Controllers\Admin\SubjectController::class)->except(['show']);
         Route::resource('session', \App\Http\Controllers\Admin\SessionController::class)->except(['show']);
 
         Route::resource('student', \App\Http\Controllers\Admin\StudentController::class);
+        Route::resource('exam', \App\Http\Controllers\Admin\ExamController::class);
+        Route::resource('question', \App\Http\Controllers\Admin\QuestionController::class);
+        Route::get('admit-card/{id}',[\App\Http\Controllers\Admin\StudentController::class,'admit'])->name('student.admit');
+
         Route::get('student-registration-form/{id}', [\App\Http\Controllers\Admin\StudentController::class, 'registrationForm'])->name('registrationForm');
 
         Route::resource('result', \App\Http\Controllers\Admin\ResultController::class)->only(['index','create','store','show']);

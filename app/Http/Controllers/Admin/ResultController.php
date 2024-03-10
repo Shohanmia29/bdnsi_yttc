@@ -98,6 +98,7 @@ class ResultController extends Controller
 
     public function show(Result $result)
     {
+
         return view('admin.result.show', [
             'result' => $result
         ]);

@@ -19,9 +19,9 @@
         </div>
     </section>
 
-{{--    <div class="w-full  h-auto">
-        <img class=" w-full h-[100px]  " src="{{asset('logo.png')}}" alt="Logo">
-    </div>--}}
+    {{--    <div class="w-full  h-auto">
+            <img class=" w-full h-[100px]  " src="{{asset('logo.png')}}" alt="Logo">
+        </div>--}}
 
     <div class="  max-w-6xl mx-auto p-3">
         <div class="bg-gray-200 my-5">
@@ -49,7 +49,7 @@
         <div class="mt-5 flex justify-center mt-20">
             <div class="shopping-cart mx-auto">
                 @forelse(\App\Models\Subject::take(9)->get() as $subject)
-                   <x-course :subject="$subject" />
+                    <x-course :subject="$subject" />
                 @empty
                     <div class="card">
                         <div class="card-inner">

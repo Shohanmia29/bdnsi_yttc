@@ -18,6 +18,9 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, ...$guards)
     {
+        if(in_array('student', $guards, true) && Auth::guard('student')->check()) {
+            return redirect(route('student.dashboard'));
+        }
         if(in_array('admin', $guards, true) && Auth::guard('admin')->check()) {
             return redirect(route('admin.dashboard'));
         }

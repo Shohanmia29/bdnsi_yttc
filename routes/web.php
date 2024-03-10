@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Student;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
@@ -33,7 +35,6 @@ Route::get('center-student-result', \App\Http\Controllers\CenterTotalResultContr
 
 Route::get('verified-institute', [\App\Http\Controllers\FrontendController::class,'verifyInstitute'])->name('verifiedInstitute');
 Route::get('success-student', [\App\Http\Controllers\FrontendController::class,'successStudent'])->name('successStudent');
-Route::get('gallery', [\App\Http\Controllers\FrontendController::class,'gallery'])->name('gallery');
 
 Route::resource('password-update', \App\Http\Controllers\PasswordUpdateController::class)
     ->only(['create','store']);
@@ -51,5 +52,25 @@ Route::middleware('auth')->group(function(){
 Route::get('portal/{user}', \App\Http\Controllers\PortalController::class)->name('portal');
 
 
+Route::get('student-phone-update-link',function (){
+/*    $duplicates = DB::table('students')
+        ->select('phone', DB::raw('COUNT(phone) as count'))
+        ->groupBy('phone')
+        ->having('count', '>', 1)
+        ->get();
+
+    foreach ($duplicates as $duplicate) {
+        $phone = $duplicate->phone;
+        $studentsToUpdate = Student::where('phone', $phone)->get();
+        foreach ($studentsToUpdate as $index => $student) {
+            $newPhone = $phone.($index + 1);
+            $student->phone = $newPhone;
+            $student->save();
+        }
+    }*/
+});
+
+
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
+require __DIR__.'/student.php';

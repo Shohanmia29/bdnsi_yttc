@@ -23,7 +23,6 @@
                 <th>{{ __('ID') }}</th>
                 <th>{{ __('Title') }}</th>
                 <th>{{ __('Photo') }}</th>
-                <th>{{ __('type') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
             </thead>
@@ -32,37 +31,51 @@
     <x-slot name="script">
         <script type="text/javascript" src="{{ mix('js/datatable.js') }}"></script>
         <script type="text/javascript">
-            $(document).ready(function() {
-                $('#students-table').DataTable({
-                    serverSide: true,
-                    processing: true,
-                    ajax: {
-                        url: '{{ route('admin.slider.index') }}',
-                        dataSrc(response) {
-                            response.data.map(function(item) {
-                                item.action = actionIcons({
-
-                                    'delete': '{{ route('admin.slider.destroy', '@') }}'.replace('@', item.id),
-                                });
-                                item.photo = '<img class="w-10 h-10 mx-auto" src="' + item.photo + '" alt=""/>';
-                                item.type=@js(\App\Enums\SliderType::asSelectArray())[item.type]
-                                return item;
+            $('#students-table').DataTable({
+                serverSide: true,
+                processing: true,
+                ajax: {
+                    url: '{{ route('admin.slider.index') }}',
+                    dataSrc(response) {
+                        response.data.map(function (item) {
+                            item.action = actionIcons({
+                                @can('student-delete')
+                                'delete': '{{ route('admin.slider.destroy', '@') }}'.replace('@', item.id),
+                                @endcan
                             });
-                            return response.data;
-                        },
+                            return item;
+                        });
+                        return response.data;
+                    }
+                },
+                columns: [
+                    {
+                        data: 'id',
+                        className: 'id-column'
                     },
-                    columns: [
-                        { data: 'DT_RowIndex',orderable:false,searchable:false },
-                        { data: 'title' },
-                        { data: 'photo' },
-                        { data: 'type' },
-                        { data: 'action', orderable: false, searchable: false },
-                    ],
-                });
+                    {
+                        data: null,
+                        render: function(data, type, row, meta) {
+                            // Return the row index + 1 as the 'ID'
+                            return meta.row + 1;
+                        }
+                    },
+                    {data: 'title'},
+                    {
+                        data: 'photo',
+                        render: function(data, type, row, meta) {
+                            // Check if photo data exists
+                            if (data) {
+                                // Return an HTML img tag with the photo URL or file path
+                                return '<img src="/images/slider/' + data + '" width="150" height="100">';
+                            } else {
+                                return '';
+                            }
+                        }
+                    },
+                    {data: 'action', orderable: false, searchable: false},
+                ]
             });
-
-
-
         </script>
     </x-slot>
 </x-admin-app-layout>
