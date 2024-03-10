@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\ExamStatus;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -13,13 +14,17 @@ class Exam extends Model
 
 
     protected $fillable = [
-            'subject_id',
-            'name',
-            'per_mcq_mark',
-            'start_time',
-            'end_time' ,
+        'subject_id',
+        'name',
+        'per_mcq_mark',
+        'start_time',
+        'end_time',
+        'status',
     ];
 
+    protected $casts = [
+        'status' => ExamStatus::class
+    ];
 
     public function subject(): BelongsTo
     {

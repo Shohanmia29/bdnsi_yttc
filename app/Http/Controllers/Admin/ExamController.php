@@ -13,7 +13,13 @@ class ExamController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            return datatables(Exam::with('subject'))->addIndexColumn()->toJson();
+            return datatables(Exam::with('subject'))
+                ->addIndexColumn()
+                ->addColumn('edit_exam', function ($data) {
+                    return view('admin.exam.edit', compact('data'))->render();
+                })
+                ->rawColumns(['edit_exam'])
+                ->toJson();
         }
         return view('admin.exam.index');
     }
@@ -82,7 +88,16 @@ class ExamController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
+            'status' => 'required',
+        ]);
+        $data = Exam::findOrFail($id);
+        $data->update($validated);
+        return response()->success('Successfully Updated');
+
     }
 
     /**

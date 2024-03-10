@@ -20,6 +20,7 @@ class CreateExamsTable extends Migration
             $table->unsignedInteger('per_mcq_mark')->default(1);
             $table->dateTime('start_time');
             $table->dateTime('end_time');
+            $table->unsignedInteger('status')->default(\App\Enums\ExamStatus::Created);
             $table->timestamps();
         });
     }

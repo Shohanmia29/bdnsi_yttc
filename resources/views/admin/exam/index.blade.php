@@ -18,6 +18,8 @@
                 <th>{{ __('Exam Name') }}</th>
                 <th>{{ __('Start Time') }}</th>
                 <th>{{ __('End Time') }}</th>
+                <th>{{ __('Status') }}</th>
+                <th>{{ __('Edit') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
             </thead>
@@ -36,6 +38,7 @@
                             item.action = actionIcons({
                                 'show': '{{ route('admin.exam.show', '@') }}'.replace('@', item.id),
                             });
+                            item.status=@js(\App\Enums\ExamStatus::asSelectArray())[item.status]
                             return item;
                         });
                         return response.data;
@@ -47,6 +50,8 @@
                     {data: 'name'},
                     {data: 'start_time'},
                     {data: 'end_time'},
+                    {data: 'status',orderable:false,searchable:false},
+                    {data: 'edit_exam',orderable:false,searchable:false},
                     {data: 'action', orderable: false, searchable: false},
                 ]
             });
