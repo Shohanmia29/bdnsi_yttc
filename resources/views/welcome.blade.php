@@ -1,23 +1,17 @@
 <x-guest-layout>
 
-    {{--<section class="">
+    <section class="">
         <div class="owl-carousel owl-theme">
             <div class="item overflow-hidden md:h-[500px] w-full " style="background-color: black;">
-                <img class="" style="height: 500px;" src="{{asset('frontend/banner.jpeg')}}" alt="">
+                <img class=""   src="{{asset('frontend/banner.jpeg')}}" alt="">
             </div>
             <div class="item">
-                <img class="" style="height: 500px;" src="{{asset('frontend/banner.jpeg')}}" alt="">
-            </div>
-        </div>
-    </section>--}}
-
-    <section class="w-full">
-        <div class="w-full">
-            <div class="overflow-hidden md:h-[500px] w-full " style="background-color: black;">
-                <img class="w-full" style="height: 500px;" src="{{asset('frontend/banner.jpeg')}}" alt="">
+                <img class=""  src="{{asset('frontend/banner.jpeg')}}" alt="">
             </div>
         </div>
     </section>
+
+
 
     {{--    <div class="w-full  h-auto">
             <img class=" w-full h-[100px]  " src="{{asset('logo.png')}}" alt="Logo">
