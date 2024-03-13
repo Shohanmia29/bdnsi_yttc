@@ -2,11 +2,11 @@
 
     <section class="">
         <div class="owl-carousel owl-theme">
-            <div class="item overflow-hidden md:h-[500px] w-full " style="background-color: black;">
-                <img class=""   src="{{asset('frontend/banner.jpeg')}}" alt="">
+            <div class="item overflow-hidden  w-full " style="background-color: black;">
+                <img class="md:h-[500px] w-full"   src="{{asset('frontend/banner.jpeg')}}" alt="">
             </div>
             <div class="item">
-                <img class=""  src="{{asset('frontend/banner.jpeg')}}" alt="">
+                <img class="md:h-[500px] w-full"  src="{{asset('frontend/banner.jpeg')}}" alt="">
             </div>
         </div>
     </section>
