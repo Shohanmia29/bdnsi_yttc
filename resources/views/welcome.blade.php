@@ -11,7 +11,14 @@
         </div>
     </section>
 
-
+  <div class="max-w-6xl mx-auto">
+         <div class="w-full flex ">
+               <button class="px-3 py-1 bg-blue-700 text-white rounded-md">Notice</button>
+             <marquee class="font" behavior="" direction="">
+                 ২১‌শে ফেব্রুয়া‌রি পালন সংক্রান্ত নানা রকম সরকা‌রি বি‌ধি নিষেধ পালনের জরু‌রি অ‌ফিস আদেশ
+             </marquee>
+         </div>
+  </div>
 
     {{--    <div class="w-full  h-auto">
             <img class=" w-full h-[100px]  " src="{{asset('logo.png')}}" alt="Logo">
