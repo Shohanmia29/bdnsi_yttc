@@ -11,31 +11,10 @@
                     <hr class="m-2 ">
                 </div>
 
-                <div class="container mx-auto">
-                    <div class="-mx-4 flex flex-wrap">
+                <div class="container mx-auto w-full">
+                    <div class="w-full flex flex-wrap gap-2">
                         @foreach($courses as $course)
-                            <div class="w-full px-2 md:w-1/2 xl:w-1/3">
-                                <div class="mb-10 overflow-hidden rounded-lg bg-white">
-
-                                        <img
-                                            src="{{$course->photo}}"
-                                            alt="image"
-                                            class="w-full  "
-                                        />
-
-                                    <div class="p-8 text-center sm:p-3 md:p-2 xl:p-3">
-                                        <h3>
-                                            <a
-                                                href="javascript:void(0)"
-                                                class="text-dark hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
-                                            >
-                                                {{$course->name}}
-                                            </a>
-                                        </h3>
-
-                                    </div>
-                                </div>
-                            </div>
+                            <x-course :subject="$course" />
                         @endforeach
 
                     </div>

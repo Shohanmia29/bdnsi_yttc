@@ -1,7 +1,7 @@
 <x-guest-layout>
-    <div class="w-full mx-auto max-w-4xl flex flex-wrap">
-        <div class="w-full py-4 text-center text-xl border-b">
-            Center request
+    <div class="w-full mx-auto max-w-4xl shadow-lg mt-2 flex flex-wrap">
+        <div class="w-full py-4 text-[#683091] font-bold text-xl md:text-2xl text-center text-xl border-b">
+            Institute Apply Form
         </div>
         <form action="{{ route('center-request.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -20,7 +20,7 @@
                     <x-auth-validation-errors />
                 </div>
             </div>
-            <div class="w-full flex flex-wrap py-8 px-2 md:px-4" x-data="centerRequestData">
+            <div class="w-full flex flex-wrap   px-2 md:px-4" x-data="centerRequestData">
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="name" label="Center Name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="owner_name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="fathers_name" required/>
@@ -64,7 +64,7 @@
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="nid_photo" required type="file" accept="image/*"/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="trade_license" required type="file" accept="image/*"/>
                 <div class="w-full py-8 flex justify-center">
-                    <x-button>{{ __('Submit') }}</x-button>
+                    <button class="px-4 py-1 bg-[#683091] rounded-md text-lg text-white">{{ __('Apply Now') }}</button>
                 </div>
             </div>
         </form>

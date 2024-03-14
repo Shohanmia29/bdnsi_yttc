@@ -25,14 +25,14 @@
         <div class="container flex justify-center">
             <div class="w-full items-center block lg:flex p-2 md:p-0 lg:items-center lg:w-auto hidden" id="menu">
                 <div class="text-sm text-lg font-semibold lg:flex-grow">
-                    <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">HOME</a>
-                    <a href="Courses.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">COURSES</a>
-                    <a href="verified institutes.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">VERIFIED INSTITUTES</a>
-                    <a href="success students.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">SUCCESS STUDENTS</a>
-                    <a href="Student Result.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">STUDENT RESULT</a>
-                    <a href="institute apply.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">INSTITUTE APPLY</a>
-                    <a href="institute login.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">INSTITUTE LOGIN</a>
-                    <a href="notice.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">NOTICE</a>
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">HOME</a>
+                    <a href="{{route('all_course')}}" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">COURSES</a>
+                    <a href="{{route('verifiedInstitute')}}" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">VERIFIED INSTITUTES</a>
+                    <a href="{{route('successStudent')}}" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">SUCCESS STUDENTS</a>
+                    <a href="{{route('result')}}" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">STUDENT RESULT</a>
+                    <a href="{{route('center-request.create')}}" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">INSTITUTE APPLY</a>
+                    <a href="{{route('login')}}" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">INSTITUTE LOGIN</a>
+                    <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">NOTICE</a>
                 </div>
             </div>
         </div>
@@ -67,7 +67,7 @@
             </p>
             <p>
                 <i class="text-white far fa-envelope mr-2"></i>
-                byttc@gmail.com
+                btcisbd@gmail.com
             </p>
         </div>
         <div class="flex  mt-4">
