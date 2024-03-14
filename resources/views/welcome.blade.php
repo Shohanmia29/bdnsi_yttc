@@ -72,7 +72,7 @@
         </div>
 
         <div class="flex items-center justify-center mt-10">
-            <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">All Courses</button>
+            <a href="{{route('all_course')}}" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">All Courses</a>
         </div>
         <!-- Apply Now for Your Institute Registration  -->
         <div class="rounded border mt-20">
