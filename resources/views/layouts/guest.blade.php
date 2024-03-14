@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="">
-    <img class="h-[250px] w-full  " src="{{asset('frontend/banner.jpg')}}" alt="Logo">
+    <img class="md:h-[250px] w-full  " src="{{asset('frontend/banner.jpg')}}" alt="Logo">
 </div>
 
 <div class="">
@@ -22,6 +22,7 @@
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
             </button>
         </div>
+
         <div class="container flex justify-center">
             <div class="w-full items-center block lg:flex p-2 md:p-0 lg:items-center lg:w-auto hidden" id="menu">
                 <div class="text-sm text-lg font-semibold lg:flex-grow">
