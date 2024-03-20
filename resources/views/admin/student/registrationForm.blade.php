@@ -20,7 +20,7 @@
     <div class="  mt-8 bg-white p-3 print:p-0 min-w-[800px] overflow-x-auto">
         <div class="w-full print:hidden flex justify-end"><button onclick="window.print()" class="px-3 py-1 rounded-md bg-green-600 text-white ">Print</button></div>
         <div class="r-bg relative w-full   h-[130vh] print:h-[90vh] text-lg font-bold " style="background-image: url({{asset('images/register.jpg')}})">
-            <div class="absolute top-[18%] left-[18.8%]  w-38 ">{{$student->registration??'N/A'}}</div>
+            <div class="absolute top-[18%] left-[18.8%]  w-38 ">{{$student->id??'N/A'}}</div>
             <div class="absolute top-[18%] left-[82.8%]  w-38 ">{{$student->registration??'N/A'}}</div>
             <div class="absolute top-[25%] left-[70.7%] w-[19.5%] h-[17.8%]  ">
                 <img class="w-full h-full border-2 border-black rounded-[2.3rem]" src="{{$student->picture??'N/A'}}" alt="">
