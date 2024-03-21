@@ -24,6 +24,10 @@
                     <div class="absolute top-[22.3%] left-[81.5%] w-38 ">
                         <img class="w-24 h-24 rounded-md" src="{{$student->picture}}" alt="">
                     </div>
+                    <div class="absolute top-[42.3%] left-[81.5%] w-38 ">
+                        <div id="qrcode_1"></div>
+
+                    </div>
 
                     <div class="absolute top-[23.3%]   print:top-[22%]  left-[12.5%] w-38  ">{{$student->id??''}}</div>
                     <div class="absolute top-[34%] left-[35.5%] w-38  ">{{$student->center->code??''}}</div>
@@ -41,4 +45,16 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="{{ asset('js/qrcode.js') }}"></script>
+    <script type="text/javascript">
+        var qrcode = new QRCode(document.getElementById("qrcode_1"), {
+            text: "{{ $student->id }}",
+            width: 70,
+            height: 70,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H,
+        });
+    </script>
 </x-admin-app-layout>
