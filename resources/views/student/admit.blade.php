@@ -33,7 +33,7 @@
                     <div class="absolute top-[23.3%]   print:top-[22%]  left-[12.5%] w-38  ">{{$student->id??''}}</div>
                     <div class="absolute top-[34%] left-[35.5%] w-38  ">{{$student->center->code??''}}</div>
                     <div class="absolute top-[39%] left-[35.5%] w-38  ">{{$student->center->name??''}}</div>
-                    <div class="absolute top-[44%] left-[35.5%] w-38  ">{{$student->subject->name??''}}</div>
+                    <div class="absolute top-[44%] left-[35.5%] w-38  ">{{$student->name??''}}</div>
                     <div class="absolute top-[50%] left-[35.5%] w-38  ">{{$student->fathers_name??''}}</div>
                     <div class="absolute top-[55%] left-[35.5%] w-38  ">{{$student->fathers_name??''}}</div>
                     <div class="absolute top-[60%] left-[35.5%] w-38  ">{{$student->roll??''}}</div>
