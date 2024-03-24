@@ -10,7 +10,7 @@
             @endif
              <div class="max-w-7xl mx-auto">
                  <div class="w-full flex flex-wrap py-8    px-2 md:px-4">
-                      <div class="shadow-lg w-full w-1/2 mx-auto rounded-md">
+                      <div class="shadow-lg w-full md:w-1/2 mx-auto rounded-md">
                           <div class="font-bold text-sm md:text-lg text-center">  {{ __('Student Result') }}</div>
                           <x-labeled-input class="w-full  px-3 mx-auto p-1" name="roll" required/>
                           <div class="w-full flex justify-center py-4 items-center">
