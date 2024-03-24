@@ -3,20 +3,23 @@
         <div class="w-full py-4 text-center text-xl border-b print:hidden">
             {{ __('Result') }}
         </div>
-        <form class="w-full print:hidden" action="{{ route('result') }}" method="POST">
-            @csrf
+        <form class="w-full print:hidden" action="{{ route('studentResult') }}" method="get">
+
             @if($error = session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY))
                 <div class="w-full flex flex-wrap">
                     <div class="w-full p-4 bg-red-300">{{ $error }}</div>
                 </div>
             @endif
-            <div class="w-full flex flex-wrap py-8 px-2 md:px-4">
-                <x-labeled-input class="w-full md:w-1/2 p-1" name="roll" required/>
-                <x-labeled-input class="w-full md:w-1/2 p-1" name="registration" required/>
-                <div class="w-full flex justify-center py-4 items-center">
-                    <x-button>{{ __('Search') }}</x-button>
-                </div>
-            </div>
+             <div class="max-w-7xl mx-auto">
+                 <div class="w-full flex flex-wrap py-8    px-2 md:px-4">
+                      <div class="shadow-lg w-1/2 mx-auto rounded-md">
+                          <x-labeled-input class="w-full  px-3 mx-auto p-1" name="roll" required/>
+                          <div class="w-full flex justify-center py-4 items-center">
+                              <x-button>{{ __('Search') }}</x-button>
+                          </div>
+                      </div>
+                 </div>
+             </div>
         </form>
         @if($result)
             <div class="w-full my-4">

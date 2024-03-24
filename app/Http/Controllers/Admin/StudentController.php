@@ -17,6 +17,7 @@ use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class StudentController extends Controller
 {
@@ -65,8 +66,8 @@ class StudentController extends Controller
         $validated = $request->validate([
             'center_id' => 'required|exists:centers,id',
             'name' => 'required|string',
-            'roll' => 'required|string',
-            'registration' => 'required|string',
+            'roll' => 'required|string|unique:students,roll',
+            'registration' => 'required|string|unique:students,registration',
             'fathers_name' => 'required|string',
             'mothers_name' => 'required|string',
             'date_of_birth' => 'required|date',
@@ -124,8 +125,8 @@ class StudentController extends Controller
             $validated = $request->validate([
                 'center_id' => 'required|exists:centers,id',
                 'name' => 'required|string',
-                'roll' => 'nullable|string',
-                'registration' => 'nullable|string',
+                'roll' => ['nullable',Rule::unique('students')->ignore($admin->id)],
+                'registration' => ['nullable',Rule::unique('students')->ignore($admin->id)],
                 'fathers_name' => 'required|string',
                 'mothers_name' => 'required|string',
                 'date_of_birth' => 'required|date',

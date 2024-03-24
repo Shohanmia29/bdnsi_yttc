@@ -11,10 +11,9 @@ class ResultController extends Controller
     public function __invoke(Request $request)
     {
         $result = null;
-        if ($request->has(['roll','registration']) && strlen($request->get('roll')) && strlen($request->get('registration'))) {
+        if ($request->has(['roll']) && strlen($request->get('roll')) ) {
             $student = Student::where([
                 'roll' => $request->get('roll'),
-                'registration' => $request->get('registration'),
                 'status' => StudentStatus::Approved
             ])->select('id')->first();
 

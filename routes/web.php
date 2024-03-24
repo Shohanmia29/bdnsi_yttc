@@ -24,7 +24,7 @@ Route::match(['get','post'],'/contact-us', [HomeController::class,'contactUs'])-
 
 Route::resource('center-request', \App\Http\Controllers\CenterRequestController::class)->only(['create','store']);
 Route::get('result', \App\Http\Controllers\ResultController::class)->name('result');
-Route::Post('result', \App\Http\Controllers\ResultController::class);
+Route::get('student-result', \App\Http\Controllers\ResultController::class)->name('studentResult');
 
 Route::resource('student', \App\Http\Controllers\StudentController::class);
 Route::resource('student-submission', \App\Http\Controllers\StudentSubmissionController::class)->only(['create','store']);
