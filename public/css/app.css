@@ -665,63 +665,6 @@ select {
 .top-16 {
   top: 4rem;
 }
-.top-\[16\%\] {
-  top: 16%;
-}
-.left-\[17\%\] {
-  left: 17%;
-}
-.top-\[20\%\] {
-  top: 20%;
-}
-.left-\[40\%\] {
-  left: 40%;
-}
-.top-\[25\.5\%\] {
-  top: 25.5%;
-}
-.left-\[35\.8\%\] {
-  left: 35.8%;
-}
-.top-\[31\%\] {
-  top: 31%;
-}
-.top-\[36\.5\%\] {
-  top: 36.5%;
-}
-.left-\[75\.7\%\] {
-  left: 75.7%;
-}
-.top-\[42\%\] {
-  top: 42%;
-}
-.top-\[47\.5\%\] {
-  top: 47.5%;
-}
-.top-\[53\%\] {
-  top: 53%;
-}
-.top-\[58\.5\%\] {
-  top: 58.5%;
-}
-.top-\[64\%\] {
-  top: 64%;
-}
-.top-\[69\.7\%\] {
-  top: 69.7%;
-}
-.top-\[75\.2\%\] {
-  top: 75.2%;
-}
-.top-\[80\.7\%\] {
-  top: 80.7%;
-}
-.top-\[82\.5\%\] {
-  top: 82.5%;
-}
-.left-\[84\.3\%\] {
-  left: 84.3%;
-}
 .top-\[18\%\] {
   top: 18%;
 }
@@ -785,6 +728,12 @@ select {
 .left-\[16\%\] {
   left: 16%;
 }
+.top-\[45\%\] {
+  top: 45%;
+}
+.left-\[75\.7\%\] {
+  left: 75.7%;
+}
 .top-\[22\.3\%\] {
   top: 22.3%;
 }
@@ -845,6 +794,9 @@ select {
 .left-\[56\.5\%\] {
   left: 56.5%;
 }
+.top-\[31\%\] {
+  top: 31%;
+}
 .left-\[19\.5\%\] {
   left: 19.5%;
 }
@@ -884,23 +836,62 @@ select {
 .left-\[11\%\] {
   left: 11%;
 }
+.top-\[16\%\] {
+  top: 16%;
+}
+.left-\[17\%\] {
+  left: 17%;
+}
+.top-\[20\%\] {
+  top: 20%;
+}
+.left-\[40\%\] {
+  left: 40%;
+}
+.top-\[25\.5\%\] {
+  top: 25.5%;
+}
+.left-\[35\.8\%\] {
+  left: 35.8%;
+}
+.top-\[36\.5\%\] {
+  top: 36.5%;
+}
+.top-\[42\%\] {
+  top: 42%;
+}
+.top-\[47\.5\%\] {
+  top: 47.5%;
+}
+.top-\[53\%\] {
+  top: 53%;
+}
+.top-\[58\.5\%\] {
+  top: 58.5%;
+}
+.top-\[64\%\] {
+  top: 64%;
+}
+.top-\[69\.7\%\] {
+  top: 69.7%;
+}
+.top-\[75\.2\%\] {
+  top: 75.2%;
+}
+.top-\[80\.7\%\] {
+  top: 80.7%;
+}
+.top-\[82\.5\%\] {
+  top: 82.5%;
+}
+.left-\[84\.3\%\] {
+  left: 84.3%;
+}
 .left-\[37\.5\%\] {
   left: 37.5%;
 }
 .left-\[7\%\] {
   left: 7%;
-}
-.top-\[30\%\] {
-  top: 30%;
-}
-.top-\[40\%\] {
-  top: 40%;
-}
-.top-\[45\%\] {
-  top: 45%;
-}
-.left-\[74\.7\%\] {
-  left: 74.7%;
 }
 .z-0 {
   z-index: 0;
@@ -1173,9 +1164,6 @@ select {
 .w-\[19\.5\%\] {
   width: 19.5%;
 }
-.w-14 {
-  width: 3.5rem;
-}
 .w-12 {
   width: 3rem;
 }
@@ -1205,6 +1193,9 @@ select {
 }
 .w-3\/12 {
   width: 25%;
+}
+.w-14 {
+  width: 3.5rem;
 }
 .w-3\/4 {
   width: 75%;
@@ -1645,6 +1636,10 @@ select {
 .bg-blue-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 .fill-current {
   fill: currentColor;
@@ -2298,6 +2293,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(127 29 29 / var(--tw-text-opacity));
 }
+.hover\:underline:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
 .focus\:z-10:focus {
   z-index: 10;
 }
@@ -2868,6 +2867,11 @@ select {
 
   .md\:text-xl {
     font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }

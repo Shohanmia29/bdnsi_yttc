@@ -15,29 +15,20 @@
     <img class="md:h-[250px] w-full  " src="{{asset('frontend/banner.jpg')}}" alt="Logo">
 </div>
 
-<div class="">
-    <nav class="  bg-[#F8F9FA] flex flex-wrap items-center justify-between py-1">
-        <div class="block lg:hidden p-2">
-            <button id="menu-toggle" class="flex items-center px-3 py-2 border rounded text-gray-600 border-gray-400  ">
-                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-            </button>
+<div class="w-full">
+    <nav class=" w-full bg-gray-200   py-1">
+        <div class=" max-w-6xl mx-auto flex font-semibold   ">
+                   <div class="text-xs md:text-lg flex flex-wrap">
+                       <a href="/" class="px-3 py-1">Home</a>
+                       <a href="{{route('all_course')}}" class="px-3 py-1  hover:underline">Courses</a>
+                       <a href="{{route('verifiedInstitute')}}" class="px-3 py-1 hover:underline "> Verified Institute  </a>
+                       <a href="{{route('successStudent')}}" class="px-3 py-1 hover:underline ">Success Students</a>
+                       <a href="{{route('result')}}" class="px-3 py-1 hover:underline ">Student Result</a>
+                       <a href="{{route('center-request.create')}}" class="px-3 py-1 hover:underline ">Institute Apply</a>
+                       <a href="{{route('login')}}" class="px-3 py-1 hover:underline ">Institute Login</a>
+                       <a href="" class="px-3 py-1 ">Notice</a>
+                   </div>
         </div>
-
-        <div class="container flex justify-center">
-            <div class="w-full items-center block lg:flex p-2 md:p-0 lg:items-center lg:w-auto hidden" id="menu">
-                <div class="text-sm text-lg font-semibold lg:flex-grow ">
-                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-black capitalize hover:text-gray-500 mr-5">Home</a>
-                    <a href="{{route('all_course')}}" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">Courses</a>
-                    <a href="{{route('verifiedInstitute')}}" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5"> Verified Institute  </a>
-                    <a href="{{route('successStudent')}}" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">Success Students</a>
-                    <a href="{{route('result')}}" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">Student Result</a>
-                    <a href="{{route('center-request.create')}}" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">Institute Apply</a>
-                    <a href="{{route('login')}}" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">Institute Login</a>
-                    <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-5">Notice</a>
-                </div>
-            </div>
-        </div>
-
 
     </nav>
 </div>
