@@ -15,6 +15,8 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('result', \App\Http\Controllers\ResultController::class)->name('result');
+Route::get('student-result', \App\Http\Controllers\ResultController::class)->name('studentResult');
 
 Route::get('/', [HomeController::class,'index'])->name('welcome');
 Route::get('/all_course', [HomeController::class,'all_course'])->name('all_course');
@@ -23,8 +25,7 @@ Route::get('/page', [HomeController::class,'dymamicPage'])->name('dynamicPage');
 Route::match(['get','post'],'/contact-us', [HomeController::class,'contactUs'])->name('contactUs');
 
 Route::resource('center-request', \App\Http\Controllers\CenterRequestController::class)->only(['create','store']);
-Route::get('result', \App\Http\Controllers\ResultController::class)->name('result');
-Route::get('student-result', \App\Http\Controllers\ResultController::class)->name('studentResult');
+
 
 Route::resource('student', \App\Http\Controllers\StudentController::class);
 Route::resource('student-submission', \App\Http\Controllers\StudentSubmissionController::class)->only(['create','store']);
