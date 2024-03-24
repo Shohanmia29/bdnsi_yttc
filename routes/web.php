@@ -16,7 +16,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 Route::get('result', \App\Http\Controllers\ResultController::class)->name('result');
-Route::get('student-result', \App\Http\Controllers\ResultController::class)->name('studentResult');
+
 
 Route::get('/', [HomeController::class,'index'])->name('welcome');
 Route::get('/all_course', [HomeController::class,'all_course'])->name('all_course');

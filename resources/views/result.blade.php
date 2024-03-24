@@ -1,7 +1,7 @@
 <x-guest-layout>
     <div class="w-full mx-auto max-w-4xl flex flex-wrap bg-white print:absolute print:inset-0 print:max-w-full">
 
-        <form class="w-full print:hidden" action="{{ route('studentResult') }}" method="get">
+        <form class="w-full print:hidden" action="{{ route('result') }}" method="get">
 
             @if($error = session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY))
                 <div class="w-full flex flex-wrap">
