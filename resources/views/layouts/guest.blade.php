@@ -43,31 +43,31 @@
 
 {{$slot}}
 
-
-<!--Footer-->
-<footer class="bg-gray-800  flex p-10 mt-10 left-5 items-center justify-center">
-    <div class="flex">
-        <div class="container mx-auto flex flex-col  text-white">
-            <p>Gazipur Hi-Tech park, Gazipur</p>
-            <p>
-                <i class="text-white fas fa-map-marker-alt mr-2"></i>
-                Gazipur, Bangladesh
-            </p>
-            <p>
-                <i class="text-white fas fa-phone-alt mr-2"></i>
-                +8801915161764
-            </p>
-            <p>
-                <i class="text-white far fa-envelope mr-2"></i>
-                btcisbd@gmail.com
-            </p>
+<footer class="bg-gray-800 text-white py-10">
+    <div class="container mx-auto flex justify-between items-center">
+        <div>
+            <h3 class="text-lg font-bold">Bangladesh Techical creative Institute</h3>
+            <p class="mt-2"> .</p>
         </div>
-        <div class="flex  mt-4">
-            <img class="object-cover w-100 h-80 mr-4" src="{{asset('frontend/Footer.jpg')}}" alt="Logo">
-            <img class="object-cover w-100 h-auto" src="{{asset('frontend/Footer.jpg')}}" alt="Logo">
+        <div>
+            <h4 class="text-lg font-bold">Contact Us</h4>
+            <ul class="mt-2">
+                <li>Email: btcisbd@gmail.com</li>
+                <li>Phone: +8801915161764</li>
+                <li>Address: Gazipur Hi-Tech park, Gazipur</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-lg font-bold">Follow Us</h4>
+            <ul class="mt-2 flex space-x-4">
+                <li><a href="#" class="hover:text-blue-500">Facebook</a></li>
+                <li><a href="#" class="hover:text-blue-500">Twitter</a></li>
+                <li><a href="#" class="hover:text-blue-500">Instagram</a></li>
+            </ul>
         </div>
     </div>
 </footer>
+
 
 {{$script??''}}
 <script src="{{mix('js/app.js')}}"></script>

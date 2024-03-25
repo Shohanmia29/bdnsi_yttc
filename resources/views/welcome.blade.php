@@ -19,7 +19,7 @@
         </div>
     </section>
 
-  <div class="max-w-6xl mx-auto">
+  <div class="max-w-6xl mx-auto px-2 py-2">
          <div class="w-full flex ">
                <button class="px-3 py-1 bg-blue-700 text-white rounded-md">Notice</button>
              <marquee class="font-bold" behavior="" direction="">

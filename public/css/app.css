@@ -1068,6 +1068,9 @@ select {
 .h-5 {
   height: 1.25rem;
 }
+.h-\[170px\] {
+  height: 170px;
+}
 .h-20 {
   height: 5rem;
 }
@@ -1124,9 +1127,6 @@ select {
 }
 .h-\[100px\] {
   height: 100px;
-}
-.h-\[170px\] {
-  height: 170px;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -1384,6 +1384,11 @@ select {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .self-end {
   align-self: flex-end;
@@ -1723,6 +1728,10 @@ select {
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+}
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
@@ -2288,6 +2297,10 @@ select {
 .hover\:text-red-900:hover {
   --tw-text-opacity: 1;
   color: rgb(127 29 29 / var(--tw-text-opacity));
+}
+.hover\:text-blue-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
