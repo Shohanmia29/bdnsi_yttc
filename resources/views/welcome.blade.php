@@ -2,12 +2,20 @@
 
     <section class="">
         <div class="owl-carousel owl-theme">
+
+            @forelse(\App\Models\Slider::get() as $slider)
             <div class="item overflow-hidden  w-full " style="background-color: black;">
-                <img class="md:h-[500px] w-full"   src="{{asset('frontend/banner.jpeg')}}" alt="">
+                <img class="md:h-[500px] w-full"   src="{{asset('images/slider/'.$slider->photo)}}" alt="">
             </div>
-            <div class="item">
-                <img class="md:h-[500px] w-full"  src="{{asset('frontend/banner.jpeg')}}" alt="">
-            </div>
+            @empty
+                <div class="item overflow-hidden  w-full " style="background-color: black;">
+                    <img class="md:h-[500px] w-full"   src="{{asset('frontend/banner.jpeg')}}" alt="">
+                </div>
+                <div class="item">
+                    <img class="md:h-[500px] w-full"  src="{{asset('frontend/banner.jpeg')}}" alt="">
+                </div>
+            @endforelse
+
         </div>
     </section>
 
