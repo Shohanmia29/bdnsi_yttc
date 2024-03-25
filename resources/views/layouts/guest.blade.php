@@ -41,7 +41,9 @@
 </script>
 
 
-{{$slot}}
+ <div class="bg-white">
+     {{$slot}}
+ </div>
 
 <footer class="bg-gray-800 text-white py-10  ">
         <div class="max-w-6xl mx-auto px-2">
