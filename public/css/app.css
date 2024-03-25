@@ -1101,11 +1101,11 @@ select {
 .h-12 {
   height: 3rem;
 }
-.h-16 {
-  height: 4rem;
-}
 .h-4 {
   height: 1rem;
+}
+.h-16 {
+  height: 4rem;
 }
 .h-32 {
   height: 8rem;
@@ -1140,9 +1140,6 @@ select {
 .w-20 {
   width: 5rem;
 }
-.w-1\/2 {
-  width: 50%;
-}
 .w-6 {
   width: 1.5rem;
 }
@@ -1170,11 +1167,14 @@ select {
 .w-\[90\%\] {
   width: 90%;
 }
-.w-auto {
-  width: auto;
+.w-28 {
+  width: 7rem;
 }
 .w-4 {
   width: 1rem;
+}
+.w-auto {
+  width: auto;
 }
 .w-32 {
   width: 8rem;
@@ -1188,9 +1188,6 @@ select {
 .w-2\/3 {
   width: 66.666667%;
 }
-.w-28 {
-  width: 7rem;
-}
 .w-3\/12 {
   width: 25%;
 }
@@ -1199,6 +1196,9 @@ select {
 }
 .w-3\/4 {
   width: 75%;
+}
+.w-1\/2 {
+  width: 50%;
 }
 .w-4\/12 {
   width: 33.333333%;

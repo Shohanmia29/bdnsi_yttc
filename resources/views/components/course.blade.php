@@ -1,10 +1,11 @@
 @props(['subject'])
 
+
 <div class="card">
     <div class="card-inner">
         <div class="card-front w-full">
              <div class="w-full">
-                 <img class="w-full" src="https://beitbd.com/storage/upload/subject/4EHMFarO1u2dgaCiDkfomxnoNL0ULXIjimnF5Qxt.png" alt="">
+                 <img class="w-full" src="{{asset($subject->photo)}}" alt="">
                  <div class="w-full flex justify-center font-bold text-lg md:text-sm">{{$subject->name??''}}</div>
              </div>
         </div>
