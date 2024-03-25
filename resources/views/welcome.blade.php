@@ -86,7 +86,7 @@
         <div class="rounded border mt-20">
             <div class="bg-purple-400 h-64 w-full flex flex-col justify-center items-center mt-5">
                 <p class="text-white text-center text-3xl font-bold mb-4">Apply Now for Your Institute Registration</p>
-                <button class="bg-white text-purple-400 font-bold py-2 px-4 rounded hover:bg-purple-400 hover:text-white">Apply Now</button>
+                <a href="{{route('center-request.create')}}" class="bg-white text-purple-400 font-bold py-2 px-4 rounded hover:bg-purple-400 hover:text-white">Apply Now</a>
             </div>
         </div>
 
