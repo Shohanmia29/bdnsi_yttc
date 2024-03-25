@@ -43,29 +43,33 @@
 
 {{$slot}}
 
-<footer class="bg-gray-800 text-white py-10">
-    <div class="container mx-auto flex justify-between items-center">
-        <div>
-            <h3 class="text-lg font-bold">Bangladesh Techical creative Institute</h3>
-            <p class="mt-2"> .</p>
+<footer class="bg-gray-800 text-white py-10  ">
+        <div class="max-w-6xl mx-auto px-2">
+            <div class="container mx-auto flex flex-wrap md:justify-between items-center">
+                <div>
+                    <h3 class="text-lg font-bold">Bangladesh Techical creative Institute</h3>
+                    <p class="mt-2"> .</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold">Contact Us</h4>
+                    <ul class="mt-2">
+                        <li>Email: btcisbd@gmail.com</li>
+                        <li>Phone: 01895270146</li>
+                        <li>Address:   idb Computer Village Second Level-6, Block-A, Dhaka
+
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold">Follow Us</h4>
+                    <ul class="mt-2 flex space-x-4">
+                        <li><a href="#" class="hover:text-blue-500">Facebook</a></li>
+                        <li><a href="#" class="hover:text-blue-500">Twitter</a></li>
+                        <li><a href="#" class="hover:text-blue-500">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div>
-            <h4 class="text-lg font-bold">Contact Us</h4>
-            <ul class="mt-2">
-                <li>Email: btcisbd@gmail.com</li>
-                <li>Phone: +8801915161764</li>
-                <li>Address: Gazipur Hi-Tech park, Gazipur</li>
-            </ul>
-        </div>
-        <div>
-            <h4 class="text-lg font-bold">Follow Us</h4>
-            <ul class="mt-2 flex space-x-4">
-                <li><a href="#" class="hover:text-blue-500">Facebook</a></li>
-                <li><a href="#" class="hover:text-blue-500">Twitter</a></li>
-                <li><a href="#" class="hover:text-blue-500">Instagram</a></li>
-            </ul>
-        </div>
-    </div>
 </footer>
 
 
