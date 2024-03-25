@@ -23,7 +23,7 @@
          <div class="w-full flex ">
                <button class="px-3 py-1 bg-blue-700 text-white rounded-md">Notice</button>
              <marquee class="font-bold" behavior="" direction="">
-                 ২১‌শে ফেব্রুয়া‌রি পালন সংক্রান্ত নানা রকম সরকা‌রি বি‌ধি নিষেধ পালনের জরু‌রি অ‌ফিস আদেশ
+                  {{\App\Models\ConfigDictionary::get('notice','শীঘ্রই আসছে')}}
              </marquee>
          </div>
   </div>
@@ -91,44 +91,54 @@
         </div>
 
         <!-- Cart  -->
-        <div class="flex justify-center mt-20">
-            <div class="bg-white container w-full rounded-lg shadow-lg p-8 flex justify-between">
-                <div class="flex flex-col justify-center items-center mr-4 mb-4">
-                    <div class="rounded-full bg-gray-800  flex items-center justify-center w-12 h-12 mb-2">
-                        <i class="fas fa-institute"></i>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-gray-800 text-lg font-bold">1050</p>
-                        <p class=" text-2xl font-bold text-black ">Institute</p>
-                    </div>
-                </div>
-                <div class="flex flex-col justify-center items-center mr-8 mb-4">
-                    <div class="rounded-full bg-gray-800  flex items-center justify-center w-12 h-12 mb-2">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-gray-800 text-lg font-bold">300</p>
-                        <p class=" text-2xl font-bold text-black ">Courses</p>
-                    </div>
-                </div>
-                <div class="flex flex-col justify-center items-center mr-8 mb-4">
-                    <div class="rounded-full bg-gray-800 text-white flex items-center justify-center w-12 h-12 mb-2">
-                        <i class="fas fa-exam"></i>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-gray-800 text-lg font-bold">120</p>
-                        <p class=" text-2xl font-bold text-black ">Exam</p>
-                    </div>
-                </div>
-                <div class="flex flex-col justify-center items-center">
-                    <div class="rounded-full bg-gray-800 text-white flex items-center justify-center w-12 h-12 mb-2">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-gray-800 text-lg font-bold">144,223</p>
-                        <p class=" text-2xl font-bold text-black ">Students</p>
-                    </div>
-                </div>
+        <div class="w-full mt-20">
+            <div class="bg-white   w-full rounded-lg shadow-lg p-8  ">
+                  <div class="flex flex-wrap">
+                      <div class="w-full md:w-1/4">
+                               <div>
+                                   <div class="rounded-full bg-gray-800   mx-auto w-12 h-12 mb-2">
+                                       <i class="fas fa-institute"></i>
+                                   </div>
+                                   <div class="text-center">
+                                       <p class="text-gray-800 text-lg font-bold">1050</p>
+                                       <p class=" text-2xl font-bold text-black ">Institute</p>
+                                   </div>
+                               </div>
+                      </div>
+                      <div class="w-full md:w-1/4">
+                              <div>
+                                  <div class="rounded-full bg-gray-800    mx-auto  w-12 h-12 mb-2">
+                                      <i class="fas fa-book"></i>
+                                  </div>
+                                  <div class="text-center">
+                                      <p class="text-gray-800 text-lg font-bold">300</p>
+                                      <p class=" text-2xl font-bold text-black ">Courses</p>
+                                  </div>
+                              </div>
+                      </div>
+                      <div class="w-full md:w-1/4">
+                              <div>
+                                  <div class="rounded-full bg-gray-800 text-white   mx-auto w-12 h-12 mb-2">
+                                      <i class="fas fa-exam"></i>
+                                  </div>
+                                  <div class="text-center">
+                                      <p class="text-gray-800 text-lg font-bold">120</p>
+                                      <p class=" text-2xl font-bold text-black ">Exam</p>
+                                  </div>
+                              </div>
+                      </div>
+                      <div class="w-full md:w-1/4">
+                           <div>
+                               <div class="rounded-full bg-gray-800 text-white  mx-auto  w-12 h-12 mb-2">
+                                   <i class="fas fa-users"></i>
+                               </div>
+                               <div class="text-center">
+                                   <p class="text-gray-800 text-lg font-bold">144,223</p>
+                                   <p class=" text-2xl font-bold text-black ">Students</p>
+                               </div>
+                           </div>
+                      </div>
+                  </div>
             </div>
         </div>
     </div>
