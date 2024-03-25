@@ -1,7 +1,7 @@
 <x-guest-layout>
 
     <div class="w-full bg-[#F3F4F6] pb-5">
-        <div class="mx-auto flex w-full max-w-6xl ">
+        <div class="mx-auto max-w-6xl px-2   w-full  ">
             <!-- ====== Cards Section Start -->
 
             <div class="bg-[#F3F4F6] pt-20 pb-10 lg:pt-[50px] lg:pb-10">
@@ -11,8 +11,8 @@
                     <hr class="m-2 ">
                 </div>
 
-                <div class="container mx-auto w-full">
-                    <div class="w-full flex flex-wrap gap-2">
+                <div class="   w-full ">
+                    <div class="w-full flex flex-wrap  gap-2 justify-center">
                         @foreach($courses as $course)
                             <x-course :subject="$course" />
                         @endforeach
