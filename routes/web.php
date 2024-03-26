@@ -15,6 +15,13 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('all-notice-list',function (){
+    $notices=\App\Models\Notice::paginate(15);
+    return view('noticeList',compact('notices'));
+})->name('frontendNoticeList');
+
+
 Route::get('result', \App\Http\Controllers\ResultController::class)->name('result');
 
 
@@ -22,10 +29,7 @@ Route::get('/', [HomeController::class,'index'])->name('welcome');
 Route::get('/all_course', [HomeController::class,'all_course'])->name('all_course');
 Route::get('/page', [HomeController::class,'dymamicPage'])->name('dynamicPage');
 
-Route::get('notice-list',function (){
-    $notices=\App\Models\Notice::paginate(15);
-      return view('noticeList',compact('notices'));
-})->name('noticeList');
+
 
 Route::match(['get','post'],'/contact-us', [HomeController::class,'contactUs'])->name('contactUs');
 

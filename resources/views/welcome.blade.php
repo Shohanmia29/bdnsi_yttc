@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="flex w-full justify-end px-3   py-1">
-                <a href="{{route('noticeList')}}" class="bg-[#6B6B6B] px-3 font-semibold text-white">All Notice</a>
+                <a href="{{route('frontendNoticeList')}}" class="bg-[#6B6B6B] px-3 font-semibold text-white">All Notice</a>
             </div>
         </div>
 
