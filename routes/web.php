@@ -22,6 +22,11 @@ Route::get('/', [HomeController::class,'index'])->name('welcome');
 Route::get('/all_course', [HomeController::class,'all_course'])->name('all_course');
 Route::get('/page', [HomeController::class,'dymamicPage'])->name('dynamicPage');
 
+Route::get('notice-list',function (){
+    $notices=\App\Models\Notice::paginate(15);
+      return view('noticeList',compact('notices'));
+})->name('noticeList');
+
 Route::match(['get','post'],'/contact-us', [HomeController::class,'contactUs'])->name('contactUs');
 
 Route::resource('center-request', \App\Http\Controllers\CenterRequestController::class)->only(['create','store']);
