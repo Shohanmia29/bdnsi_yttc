@@ -40,12 +40,23 @@
                 </div>
                 <div>
                     <div class="text-md font-bold md:text-2xl">Notice Board</div>
+                    @forelse(\App\Models\Notice::take(5)->get() as $notice)
                     <div class="mt-2 flex items-center gap-3 text-[#5258CC]">
                         <div>
                             <img src="https://byttc.com.bd/public/bullet_tick.png" alt="" />
                         </div>
-                        <div class="border-b border-dashed border-black">২১‌শে ফেব্রুয়া‌রি পালন সংক্রান্ত...</div>
+                        <div class="border-b border-dashed border-black w-full">{{\Illuminate\Support\Str::limit($notice->details, '30', $end='...')}}</div>
                     </div>
+                    @empty
+                        <div class="mt-2 flex items-center gap-3 text-[#5258CC]">
+                            <div>
+                                <img src="https://byttc.com.bd/public/bullet_tick.png" alt="" />
+                            </div>
+
+                            <div class="border-b border-dashed border-black w-full">২১‌শে ফেব্রুয়া‌রি পালন সংক্রান্ত...</div>
+
+                        </div>
+                    @endforelse
                 </div>
             </div>
             <div class="flex w-full justify-end px-3   py-1">
