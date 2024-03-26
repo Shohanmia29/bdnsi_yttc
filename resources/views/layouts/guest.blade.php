@@ -18,7 +18,7 @@
 <div class="w-full">
     <nav class=" w-full bg-gray-200   py-1">
         <div class=" max-w-6xl mx-auto flex font-semibold   ">
-                   <div class="text-xs md:text-lg flex flex-wrap">
+                   <div class="text-xs w-full md:text-lg flex flex-wrap md:justify-between">
                        <a href="/" class="px-3 py-1">Home</a>
                        <a href="{{route('all_course')}}" class="px-3 py-1  hover:underline">Courses</a>
                        <a href="{{route('verifiedInstitute')}}" class="px-3 py-1 hover:underline "> Verified Institute  </a>
