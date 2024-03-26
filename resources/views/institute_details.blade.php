@@ -5,7 +5,7 @@
             <div class="shadow-lg rounded-md border p-10">
                 <div class="w-full flex flex-wrap">
                     <div class="w-full md:w-[30%] p-3">
-                        <img class="w-full" src="{{asset('center/photo/'.$data->photo) ??''}}" alt="">
+                        <img class="w-full" src="{{$data->photo}}" alt="">
                     </div>
                     <div class="w-full md:w-[70%] p-3">
                          <div class="w-full text-center py-2 text-lg md:text-2xl font-bold">
