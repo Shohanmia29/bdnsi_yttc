@@ -5,7 +5,7 @@
         <img  src="{{$institute->photo??''}}" alt="image" class="w-full   h-64">
         <div class="p-8 bg-gray-200 text-center ">
             <h3>
-                <a class="text-dark hover:text-primary mb-4   text-lg font-semibold  ">
+                <a href="{{route('institute.details',$institute->id)}}" class="text-dark hover:text-primary mb-4 underline  text-lg font-semibold  ">
                     {{$institute->name??''}}
                 </a>
             </h3>

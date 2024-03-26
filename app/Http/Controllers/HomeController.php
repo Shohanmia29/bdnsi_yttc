@@ -57,16 +57,21 @@ class HomeController extends Controller
 
 
 
-public function frontendNoticeList(){
-    $notices=\App\Models\Notice::paginate(15);
-    return view('noticeList',compact('notices'));
-}
+    public function frontendNoticeList(){
+        $notices=\App\Models\Notice::paginate(15);
+        return view('noticeList',compact('notices'));
+    }
 
-public function courseDetails($id){
-    $data=\App\Models\Subject::findOrFail($id);
+    public function courseDetails($id){
+        $data=\App\Models\Subject::findOrFail($id);
 
-    return view('course_details',compact('data'));
-}
+        return view('course_details',compact('data'));
+    }
+    public function instituteDetails($id){
+        $data=\App\Models\Center::findOrFail($id);
+
+        return view('institute_details',compact('data'));
+    }
 
 
 }
