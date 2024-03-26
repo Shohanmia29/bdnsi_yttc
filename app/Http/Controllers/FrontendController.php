@@ -12,7 +12,10 @@ class FrontendController extends Controller
 {
 
       public function verifyInstitute(Request $request){
-                  $centers=Center::withCount('students')->where('status',CenterStatus::Approved)->paginate(50);
+
+             $centers=Center::when($request->district && $request->upazilla,function ($query)use($request){
+                 return $query->where(['district'=>$request->district,'upazilla'=>$request->upazilla]);
+             })->withCount('students')->where('status',CenterStatus::Approved)->paginate(50);
               return view('page.verifyInstitute',compact('centers'));
       }
       public function successStudent(Request $request){
