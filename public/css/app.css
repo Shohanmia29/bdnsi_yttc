@@ -1182,6 +1182,12 @@ select {
 .w-auto {
   width: auto;
 }
+.w-\[40\%\] {
+  width: 40%;
+}
+.w-\[50\%\] {
+  width: 50%;
+}
 .w-32 {
   width: 8rem;
 }
@@ -1193,12 +1199,6 @@ select {
 }
 .w-2\/3 {
   width: 66.666667%;
-}
-.w-\[40\%\] {
-  width: 40%;
-}
-.w-\[50\%\] {
-  width: 50%;
 }
 .w-3\/12 {
   width: 25%;
@@ -1417,6 +1417,9 @@ select {
 .overflow-y-auto {
   overflow-y: auto;
 }
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
 .overflow-y-scroll {
   overflow-y: scroll;
 }
@@ -1518,6 +1521,10 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
 .border-slate-600 {
   --tw-border-opacity: 1;
   border-color: rgb(71 85 105 / var(--tw-border-opacity));
@@ -1529,14 +1536,6 @@ select {
 .border-blue-500 {
   --tw-border-opacity: 1;
   border-color: rgb(59 130 246 / var(--tw-border-opacity));
-}
-.border-gray-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(75 85 99 / var(--tw-border-opacity));
-}
-.border-gray-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(107 114 128 / var(--tw-border-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -1696,6 +1695,9 @@ select {
 .p-10 {
   padding: 2.5rem;
 }
+.p-7 {
+  padding: 1.75rem;
+}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1755,6 +1757,10 @@ select {
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+}
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
