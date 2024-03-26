@@ -62,5 +62,11 @@ public function frontendNoticeList(){
     return view('noticeList',compact('notices'));
 }
 
+public function courseDetails($id){
+    $data=\App\Models\Subject::findOrFail($id);
+
+    return view('course_details',compact('data'));
+}
+
 
 }

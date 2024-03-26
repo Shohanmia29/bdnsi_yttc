@@ -11,7 +11,7 @@
         </div>
         <div class="card-back">
              <div class="w-full px-2  bg-[#683091] py-2 text-center rounded-md ">
-                 <a href="" class="px-3 py-3    w-full text-white font-bold  ">Read More </a>
+                 <a href="{{route('course.details',$subject->id)}}" class="px-3 py-3    w-full text-white font-bold  ">Read More </a>
              </div>
         </div>
     </div>

@@ -23,6 +23,7 @@ Route::get('result', \App\Http\Controllers\ResultController::class)->name('resul
 
 Route::get('/', [HomeController::class,'index'])->name('welcome');
 Route::get('/all_course', [HomeController::class,'all_course'])->name('all_course');
+Route::get('/course-details/{id}', [HomeController::class,'courseDetails'])->name('course.details');
 Route::get('/page', [HomeController::class,'dymamicPage'])->name('dynamicPage');
 Route::get('/all-notice-list', [HomeController::class,'frontendNoticeList'])->name('frontendNoticeList');
 
