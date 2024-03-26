@@ -53,7 +53,7 @@
                                     :
                                 </div>
                                 <div class=" w-[50%]">
-
+                                    {{ \App\Lib\Geo::districts()[$data->district]['name']??'' }}
                                 </div>
                             </li>
                             <li class="w-full border p-2 rounded-md mt-2 flex  ">
@@ -65,6 +65,7 @@
                                 </div>
                                 <div class=" w-[50%]">
 
+                                    {{ \App\Lib\Geo::upazillas()[$data->upazilla]['name']??'' }}
                                 </div>
                             </li>
 
