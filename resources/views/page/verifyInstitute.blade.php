@@ -10,27 +10,8 @@
              <div class="max-w-7xl mx-auto p-3">
                  <div class="w-full flex flex-wrap">
                      @forelse($centers as $center)
-                         <div class="w-full px-4 md:w-1/2 xl:w-1/4">
-                             <div class="mb-10 overflow-hidden rounded-lg bg-white">
-                                 <img  src="{{$center->photo??''}}" alt="image" class="w-full    object-cover h-64">
-                                 <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
-                                     <h3>
-                                         <a class="text-dark hover:text-primary mb-4   text-lg font-semibold  ">
-                                             {{$center->name??''}}
-                                         </a>
-                                     </h3>
-                                    <div>
-                                        <table>
-                                                <tr>
-                                                     <td>Total Students</td>
-                                                      <td>:</td>
-                                                      <td> {{$center->students_count??''}}</td>
-                                                </tr>
-                                        </table>
-                                    </div>
-
-                                 </div>
-                             </div>
+                         <div class="w-full p-4 md:w-1/2 xl:w-1/4">
+                          <x-institute :institute="$center"/>
                          </div>
                      @empty
                          <div class="w-full font-bold text-red-500">Not Found Institute</div>
