@@ -40,7 +40,7 @@
                 </div>
                 <div>
                     <div class="text-md font-bold md:text-2xl">Notice Board</div>
-                    @forelse(\App\Models\Notice::take(5)->get() as $notice)
+                    @forelse(\App\Models\Notice::take(1)->latest()->get() as $notice)
                     <div class="mt-2 flex items-center gap-3 text-[#5258CC]">
                         <div>
                             <img src="https://byttc.com.bd/public/bullet_tick.png" alt="" />
