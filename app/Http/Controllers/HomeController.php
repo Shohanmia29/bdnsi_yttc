@@ -57,7 +57,10 @@ class HomeController extends Controller
 
 
 
-
+public function frontendNoticeList(){
+    $notices=\App\Models\Notice::paginate(15);
+    return view('noticeList',compact('notices'));
+}
 
 
 }

@@ -16,10 +16,6 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('all-notice-list',function (){
-    $notices=\App\Models\Notice::paginate(15);
-    return view('noticeList',compact('notices'));
-})->name('frontendNoticeList');
 
 
 Route::get('result', \App\Http\Controllers\ResultController::class)->name('result');
@@ -28,6 +24,7 @@ Route::get('result', \App\Http\Controllers\ResultController::class)->name('resul
 Route::get('/', [HomeController::class,'index'])->name('welcome');
 Route::get('/all_course', [HomeController::class,'all_course'])->name('all_course');
 Route::get('/page', [HomeController::class,'dymamicPage'])->name('dynamicPage');
+Route::get('/all-notice-list', [HomeController::class,'frontendNoticeList'])->name('frontendNoticeList');
 
 
 
