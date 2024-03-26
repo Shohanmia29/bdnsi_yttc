@@ -5,8 +5,8 @@
     <div class="card-inner">
         <div class="card-front w-full">
              <div class="w-full">
-                 <img class="w-full h-[170px]" src="{{asset($subject->photo)}}" alt="">
-                 <div class="w-full flex justify-center font-bold text-lg md:text-sm">{{$subject->name??''}}</div>
+                 <img class="w-full  h-[200px] -mt-24" src="{{asset($subject->photo)}}" alt="">
+                 <div class="w-full flex justify-center mt-2 font-bold text-lg md:text-sm">{{$subject->name??''}}</div>
              </div>
         </div>
         <div class="card-back">
