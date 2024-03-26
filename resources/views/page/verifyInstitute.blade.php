@@ -32,7 +32,7 @@
 
                  <div class="w-full flex flex-wrap">
                      @forelse($centers as $center)
-                         <div class="md:w-1/2 p-2 md:p-8 md:w-1/2 xl:w-1/4  ">
+                         <div class="w-1/2 p-1 md:p-8 md:w-1/2 xl:w-1/4  ">
                           <x-institute :institute="$center"/>
                          </div>
                      @empty
