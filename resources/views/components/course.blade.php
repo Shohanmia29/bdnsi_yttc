@@ -2,11 +2,11 @@
 
 
 <div class="card">
-    <div class="card-inner bg-white">
+    <div class="card-inner bg-white ">
         <div class="card-front w-full ">
              <div class="w-full ">
-                 <img class="w-full  h-[250px] -mt-24" src="{{asset($subject->photo)}}" alt="">
-                 <div class="w-full flex justify-center py-10  font-bold text-lg md:text-xl">{{$subject->name??''}}</div>
+                 <img class="w-full  h-[250px] -mt-[5.5rem]" src="{{asset($subject->photo)}}" alt="">
+                 <div class="w-full flex justify-center  mt-14 font-bold text-lg md:text-xl">{{$subject->name??''}}</div>
              </div>
         </div>
         <div class="card-back">

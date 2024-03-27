@@ -957,9 +957,6 @@ select {
 .-ml-px {
   margin-left: -1px;
 }
-.-mt-24 {
-  margin-top: -6rem;
-}
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -1037,6 +1034,36 @@ select {
 }
 .ml-10 {
   margin-left: 2.5rem;
+}
+.-mt-28 {
+  margin-top: -7rem;
+}
+.-mt-\[13rem\] {
+  margin-top: -13rem;
+}
+.-mt-\[10rem\] {
+  margin-top: -10rem;
+}
+.-mt-\[8rem\] {
+  margin-top: -8rem;
+}
+.-mt-\[7rem\] {
+  margin-top: -7rem;
+}
+.-mt-\[6rem\] {
+  margin-top: -6rem;
+}
+.-mt-\[5rem\] {
+  margin-top: -5rem;
+}
+.-mt-\[5\.5rem\] {
+  margin-top: -5.5rem;
+}
+.mt-12 {
+  margin-top: 3rem;
+}
+.mt-14 {
+  margin-top: 3.5rem;
 }
 .block {
   display: block;
@@ -1694,10 +1721,6 @@ select {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1730,6 +1753,10 @@ select {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -1745,6 +1772,12 @@ select {
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+}
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+.pt-5 {
+  padding-top: 1.25rem;
 }
 .pt-4 {
   padding-top: 1rem;
@@ -1773,9 +1806,6 @@ select {
 .pb-2 {
   padding-bottom: 0.5rem;
 }
-.pb-3 {
-  padding-bottom: 0.75rem;
-}
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -1793,9 +1823,6 @@ select {
 }
 .pb-10 {
   padding-bottom: 2.5rem;
-}
-.pt-5 {
-  padding-top: 1.25rem;
 }
 .pl-8 {
   padding-left: 2rem;
@@ -2181,7 +2208,7 @@ select {
 }
 .card {
     width: 300px; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height as needed */
+    height: 400px; /* Adjust the height as needed */
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;

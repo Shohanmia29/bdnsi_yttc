@@ -47,7 +47,7 @@
 
 .card {
     width: 300px; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height as needed */
+    height: 400px; /* Adjust the height as needed */
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
