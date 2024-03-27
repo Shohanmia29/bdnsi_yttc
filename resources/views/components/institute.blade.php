@@ -9,10 +9,7 @@
                     {{$institute->name??''}}
                 </a>
             </div>
-
-
         </div>
-
     </div>
 </div>
 

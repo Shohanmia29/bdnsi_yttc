@@ -1206,11 +1206,11 @@ select {
 .w-14 {
   width: 3.5rem;
 }
-.w-3\/4 {
-  width: 75%;
-}
 .w-1\/2 {
   width: 50%;
+}
+.w-3\/4 {
+  width: 75%;
 }
 .w-4\/12 {
   width: 33.333333%;
@@ -1416,9 +1416,6 @@ select {
 }
 .overflow-y-auto {
   overflow-y: auto;
-}
-.overflow-x-scroll {
-  overflow-x: scroll;
 }
 .overflow-y-scroll {
   overflow-y: scroll;
@@ -1695,9 +1692,6 @@ select {
 .p-10 {
   padding: 2.5rem;
 }
-.p-7 {
-  padding: 1.75rem;
-}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1758,9 +1752,9 @@ select {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
 }
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
@@ -2774,6 +2768,10 @@ select {
 
   .md\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
   }
 
   .md\:block {
