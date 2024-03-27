@@ -17,6 +17,10 @@
         <div class="flex flex-wrap justify-center w-full bg-white p-4">
             <x-labeled-input name="name" required class="w-full p-1"/>
             <x-labeled-input type="file" name="photo"  required class="w-full p-1"/>
+            <x-labeled-input name="duration" required class="w-full p-1"/>
+            <x-labeled-input name="rate" required class="w-full p-1"/>
+            <x-labeled-input name="education_qualification" required class="w-full p-1"/>
+            <x-labeled-textarea name="course_details" required class="w-full p-1"> </x-labeled-textarea>
             <div class="w-full py-8 flex justify-center">
                 <x-button>{{ __('Create') }}</x-button>
             </div>

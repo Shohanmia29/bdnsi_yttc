@@ -29,18 +29,19 @@
                                                 :
                                             </div>
                                          <div class=" w-[50%]">
-
+                                             {{$data->duration??'N/A'}}
                                          </div>
                                      </li>
                                      <li class="w-full border p-2 rounded-md mt-2 flex  ">
                                            <div class="font-bold w-[40%]">
                                                Course Rate
                                            </div>
-                                            <div class=" w-[10%]">
-                                                :
-                                            </div>
-                                         <div class=" w-[50%]">
+                                         <div class=" w-[10%]">
+                                             :
+                                         </div>
 
+                                         <div class=" w-[50%]">
+                                             {{$data->rate??'N/A'}}
                                          </div>
                                      </li>
                                      <li class="w-full border p-2 rounded-md mt-2 flex  ">
@@ -51,7 +52,7 @@
                                                 :
                                             </div>
                                          <div class=" w-[50%]">
-
+                                             {{$data->education_qualification??'N/A'}}
                                          </div>
                                      </li>
                                      <li class="w-full border p-2 rounded-md mt-2 flex  ">
@@ -62,7 +63,7 @@
                                                 :
                                             </div>
                                          <div class=" w-[50%]">
-
+                                             {{$data->course_details??'N/A'}}
                                          </div>
                                      </li>
 
