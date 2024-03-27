@@ -23,7 +23,7 @@
             <x-labeled-input name="name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="roll" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="registration" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-            <x-labeled-input name="passport" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <x-labeled-input name="passport" label="Passport Number" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="fathers_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="mothers_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="date_of_birth" type="date" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
@@ -53,7 +53,7 @@
                     <option value="{{ $session->id }}" @selected(old('session_id') == $session->id)>{{ $session->name }}</option>
                 @endforeach
             </x-labeled-select>
-            <x-labeled-select name="subject_id" label="Subject" required class="w-full p-1 md:w-1/2 lg:w-1/3">
+            <x-labeled-select name="subject_id" label="Course Name" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                 @foreach($subjects as $subject)
                     <option value="{{ $subject->id }}" @selected(old('subject_id') == $subject->id)>{{ $subject->name }}</option>
                 @endforeach
