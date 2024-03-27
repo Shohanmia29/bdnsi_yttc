@@ -1122,6 +1122,12 @@ select {
 .h-\[100px\] {
   height: 100px;
 }
+.h-\[220px\] {
+  height: 220px;
+}
+.h-\[230px\] {
+  height: 230px;
+}
 .min-h-screen {
   min-height: 100vh;
 }
