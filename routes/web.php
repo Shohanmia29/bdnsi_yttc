@@ -44,6 +44,7 @@ Route::get('center-student-result', \App\Http\Controllers\CenterTotalResultContr
 
 Route::get('verified-institute', [\App\Http\Controllers\FrontendController::class,'verifyInstitute'])->name('verifiedInstitute');
 Route::get('success-student', [\App\Http\Controllers\FrontendController::class,'successStudent'])->name('successStudent');
+Route::get('success-student-details/{id}', [\App\Http\Controllers\FrontendController::class,'successStudentDetails'])->name('successStudentDetails');
 
 Route::resource('password-update', \App\Http\Controllers\PasswordUpdateController::class)
     ->only(['create','store']);

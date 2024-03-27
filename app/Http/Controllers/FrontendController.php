@@ -22,6 +22,10 @@ class FrontendController extends Controller
              $students=Student::whereHas('result')->select('id','name','picture')->where('status',StudentStatus::Approved)->paginate(50);
               return view('page.successStudent',compact('students'));
       }
+      public function successStudentDetails($id){
+             $data=Student::whereHas('result')->where('status',StudentStatus::Approved)->findOrFail($id);
+              return view('page.successStudentDetails',compact('data'));
+      }
 
 
 }
