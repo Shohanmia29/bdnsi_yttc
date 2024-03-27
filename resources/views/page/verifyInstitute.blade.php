@@ -10,6 +10,9 @@
 
              <div class="max-w-7xl mx-auto p-3">
                   <div class="max-w-3xl mx-auto p-2">
+                       <div class="font-bold text-lg md:text-xl text-center">
+                           Filter Verified Branch
+                       </div>
                       <form action="{{route('verifiedInstitute')}}" method="get">
                           <div class="flex w-full flex-wrap">
                               <x-labeled-select class="w-full lg:w-1/3 p-1" name="division" x-model="division" x-ref="division" required>
