@@ -12,18 +12,24 @@
                   <div class="max-w-3xl mx-auto p-2">
                       <form action="{{route('verifiedInstitute')}}" method="get">
                           <div class="flex w-full flex-wrap">
-                              <x-labeled-select class="w-full lg:w-1/2 p-1" x-model="district" x-model="district" x-ref="district" name="district" required>
+                              <x-labeled-select class="w-full lg:w-1/3 p-1" name="division" x-model="division" x-ref="division" required>
+                                  @foreach(\App\Lib\Geo::divisions() as $divisionId => $division)
+                                      <option value="{{ $divisionId }}" @selected(old('division') == $divisionId)>{{ $division['name'] }}</option>
+                                  @endforeach
+                              </x-labeled-select>
+                              <x-labeled-select class="w-full lg:w-1/3 p-1" x-model="district" x-model="district" x-ref="district" name="district" required>
                                   <template x-for="district in districts">
                                       <option x-bind:value="district.id" x-html="district.name"></option>
                                   </template>
                               </x-labeled-select>
-                              <x-labeled-select class="w-full lg:w-1/2 p-1" x-model="upazilla" name="upazilla" required>
+                              <x-labeled-select class="w-full lg:w-1/3 p-1" x-model="upazilla" name="upazilla" required>
                                   <template x-for="upazilla in upazillas">
                                       <option x-bind:value="upazilla.id" x-html="upazilla.name"></option>
                                   </template>
                               </x-labeled-select>
-                              <div class="w-full flex justify-center">
+                              <div class="w-full flex gap-2 py-2 justify-center">
                                    <button class="px-3 py-1 rounded-md border bg-blue-700 text-white">Search</button>
+                                   <a href="{{route('verifiedInstitute')}}" class="px-3 py-1 rounded-md border bg-red-700 text-white">Reset</a>
                               </div>
                           </div>
                       </form>
