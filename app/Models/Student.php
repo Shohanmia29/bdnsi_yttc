@@ -52,6 +52,7 @@ class Student extends Authenticatable
         'mothers_name',
         'roll',
         'registration',
+        'passport',
         'date_of_birth',
         'gender',
         'blood_group',

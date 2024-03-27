@@ -24,6 +24,7 @@
                 <x-labeled-input name="name" :value="$student->name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
                 <x-labeled-input name="roll" :value="$student->roll" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
                 <x-labeled-input name="registration" :value="$student->registration" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+                <x-labeled-input name="passport" :value="$student->passport" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
                 <x-labeled-input name="fathers_name" :value="$student->fathers_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
                 <x-labeled-input name="mothers_name" :value="$student->mothers_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
                 <x-labeled-input name="date_of_birth" :value="$student->date_of_birth->toDateString()" type="date" class="w-full p-1 md:w-1/2 lg:w-1/3"/>

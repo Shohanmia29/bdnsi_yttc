@@ -15,7 +15,7 @@ class ResultController extends Controller
             $student = Student::where([
                 'roll' => $request->get('roll'),
                 'status' => StudentStatus::Approved
-            ])->select('id')->first();
+            ])->orWhere('passport',$request->get('roll'))->select('id')->first();
 
             if ($student === null) {
                 return response()->error('Result not found');

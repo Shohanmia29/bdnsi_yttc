@@ -67,6 +67,7 @@ class StudentController extends Controller
             'center_id' => 'required|exists:centers,id',
             'name' => 'required|string',
             'roll' => 'required|string|unique:students,roll',
+            'passport' => 'required|string|unique:students,passport',
             'registration' => 'required|string|unique:students,registration',
             'fathers_name' => 'required|string',
             'mothers_name' => 'required|string',
@@ -119,14 +120,15 @@ class StudentController extends Controller
     public function update(Request $request, Student $student)
     {
 
-        $admin=Auth::guard('admin')->user();
+         $admin=Auth::guard('admin')->user();
 
         if ($admin->id ==1){
             $validated = $request->validate([
                 'center_id' => 'required|exists:centers,id',
                 'name' => 'required|string',
-                'roll' => ['nullable',Rule::unique('students')->ignore($admin->id)],
-                'registration' => ['nullable',Rule::unique('students')->ignore($admin->id)],
+                'roll' => ['nullable',Rule::unique('students')->ignore($student->id)],
+                'registration' => ['nullable',Rule::unique('students')->ignore($student->id)],
+                'passport' => ['nullable',Rule::unique('students')->ignore($student->id)],
                 'fathers_name' => 'required|string',
                 'mothers_name' => 'required|string',
                 'date_of_birth' => 'required|date',

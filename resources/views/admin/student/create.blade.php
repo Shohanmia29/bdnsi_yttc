@@ -23,6 +23,7 @@
             <x-labeled-input name="name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="roll" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="registration" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <x-labeled-input name="passport" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="fathers_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="mothers_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="date_of_birth" type="date" class="w-full p-1 md:w-1/2 lg:w-1/3"/>

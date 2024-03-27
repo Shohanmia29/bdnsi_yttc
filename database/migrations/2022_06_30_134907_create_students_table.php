@@ -35,6 +35,7 @@ class CreateStudentsTable extends Migration
             $table->foreignId('session_id')->constrained();
             $table->foreignId('subject_id')->constrained();
             $table->string('picture')->nullable();
+            $table->string('passport')->nullable();
             $table->unsignedTinyInteger('status')->default(StudentStatus::Pending);
             $table->timestamps();
         });

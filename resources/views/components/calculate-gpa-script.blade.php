@@ -17,4 +17,26 @@
                 return '';
         }
     }
+
+
+
+    function calculateCGPA(mark){
+        switch (true) {
+            case mark >= 80:
+                return 5 +'.00';
+            case mark >= 70:
+                return 4 +'.70';
+            case mark >= 60:
+                return 4+'.50';
+            case mark >= 50:
+                return 3+'.50';
+            case mark >= 40:
+                return 3+'.00';
+            case mark >= 0:
+                return 'F';
+            default:
+                return '';
+        }
+    }
+
 </script>
