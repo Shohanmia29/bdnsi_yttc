@@ -45,7 +45,7 @@
                 <td class="border"></td>
             </tr>
             <tr class=" bg-gray-100">
-                <td class="border p-2">{{ __('Institute name') }}</td>
+                <td class="border p-2">{{ __('Institute Name') }}</td>
                 <td class="border p-2" colspan="2">{{ $result->student->center->name }}</td>
                 <td class="border p-2">{{ __('Institute Code') }}</td>
                 <td class="border p-2" colspan="2">{{ $result->student->center->code }}</td>
