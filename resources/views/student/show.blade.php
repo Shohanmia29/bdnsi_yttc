@@ -77,6 +77,15 @@
                     <td class="p-2">{{ $student->registration??'Pending' }}</td>
                 </tr>
                 <tr>
+                    <td class="p-2 font-semibold">{{ __('Passport Number') }}</td>
+                    <td class="p-2">{{ $student->passport??'' }}</td>
+                </tr>
+                <tr>
+                    <td class="p-2 font-semibold">{{ __('Course Duration') }}</td>
+                    <td class="p-2">{{ $student->course_duration??'' }}</td>
+                </tr>
+
+                <tr>
                     <td class="p-2 font-semibold">{{ __('Session') }}</td>
                     <td class="p-2">{{ $student->session->name }}</td>
                 </tr>
