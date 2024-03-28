@@ -53,11 +53,14 @@
                     <option value="{{ $session->id }}" @selected(old('session_id') == $session->id)>{{ $session->name }}</option>
                 @endforeach
             </x-labeled-select>
+
             <x-select2 name="subject_id" label="Course Name" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                 @foreach($subjects as $subject)
                     <option value="{{ $subject->id }}" @selected(old('subject_id') == $subject->id)>{{ $subject->name }}</option>
                 @endforeach
             </x-select2>
+            <x-labeled-select name="course_duration" label="Course Duration" required class="w-full p-1 md:w-1/2 lg:w-1/3">
+
             <x-labeled-select name="status" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                 @foreach(\App\Enums\StudentStatus::getInstances() as $status)
                     <option value="{{ $status->value }}" @selected(old('status') == $status->value)>{{ $status->key }}</option>

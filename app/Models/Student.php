@@ -65,6 +65,7 @@ class Student extends Authenticatable
         'nid_or_birth',
         'session_id',
         'subject_id',
+        'course_duration',
         'picture',
         'status',
         'exam_date',

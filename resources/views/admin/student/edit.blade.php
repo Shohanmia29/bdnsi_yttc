@@ -59,6 +59,7 @@
                         <option value="{{ $subject->id }}" @selected(old('subject_id', $student->subject_id) == $subject->id)>{{ $subject->name }}</option>
                     @endforeach
                 </x-select2>
+                <x-labeled-input name="course_duration"  value="{{$student->course_duration}}" type="text" label="Course Duration"  class="w-full p-1 md:w-1/2 lg:w-1/3"/>
                 <x-labeled-input name="picture" type="file" accept="image/*" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
                 <x-labeled-input  name="exam_date" :value="$student->exam_date" type="date" class="w-full p-1 md:w-1/2 lg:w-1/3" required/>
                 <x-labeled-select name="status" required class="w-full p-1 ">

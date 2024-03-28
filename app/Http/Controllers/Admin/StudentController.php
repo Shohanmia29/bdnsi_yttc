@@ -83,6 +83,7 @@ class StudentController extends Controller
             'nid_or_birth' =>'required|string',
             'session_id' =>'required|exists:sessions,id',
             'subject_id' =>'required|exists:subjects,id',
+            'course_duration' =>'required',
             'status' => 'required|numeric|enum_value:'.StudentStatus::class.',false',
             'picture' =>'required|image',
         ]);
@@ -143,6 +144,7 @@ class StudentController extends Controller
                 'nid_or_birth' =>'required|string',
                 'session_id' =>'required|exists:sessions,id',
                 'subject_id' =>'required|exists:subjects,id',
+                'course_duration' =>'required',
                 'status' => 'required|numeric|enum_value:'.StudentStatus::class.',false',
                 'picture' =>'nullable|image',
                 'exam_date' =>'required',
