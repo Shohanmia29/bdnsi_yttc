@@ -1,11 +1,11 @@
 <x-admin-app-layout>
     <x-slot name="header">
         <div class="flex justify-between">
-            <div class="text-xl">{{ __('Edit Subject') }}</div>
+            <div class="text-xl">{{ __('Edit Course') }}</div>
             <div>
                 <a
                     class="border border-slate-500 py-1 px-4 rounded text-slate-700 text-sm hover:text-white hover:bg-slate-700"
-                    href="{{ route('admin.subject.index') }}">{{ __('Subjects') }}</a>
+                    href="{{ route('admin.subject.index') }}">{{ __('Course') }}</a>
             </div>
         </div>
     </x-slot>
