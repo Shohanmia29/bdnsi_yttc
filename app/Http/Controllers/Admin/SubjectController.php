@@ -33,10 +33,10 @@ class SubjectController extends Controller
         $validated = $request->validate([
             'name' => 'required|string',
             'photo' => 'required',
-            'duration' => 'required',
-            'rate' => 'required',
-            'education_qualification' => 'required',
-            'course_details' => 'required',
+            'duration' => 'nullable',
+            'rate' => 'nullable',
+            'education_qualification' => 'nullable',
+            'course_details' => 'nullable',
         ]);
           if (isset($validated['photo'])){
                $validated['photo']= Image::store('photo','upload/subject');
@@ -54,10 +54,10 @@ class SubjectController extends Controller
         $validated = $request->validate([
             'name' => 'required|string',
             'photo' => 'nullable|image',
-            'duration' => 'required',
-            'rate' => 'required',
-            'education_qualification' => 'required',
-            'course_details' => 'required',
+            'duration' => 'nullable',
+            'rate' => 'nullable',
+            'education_qualification' => 'nullable',
+            'course_details' => 'nullable',
         ]);
         if (isset($validated['photo'])){
             Image::delete($subject->photo,'Photo');

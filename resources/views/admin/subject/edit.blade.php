@@ -16,10 +16,10 @@
         <div class="flex flex-wrap justify-center w-full bg-white p-4">
             <x-labeled-input name="name" required value="{{ old('name', $subject->name) }}" class="w-full p-1"/>
             <x-labeled-input type="file" name="photo"    class="w-full p-1"/>
-            <x-labeled-input name="duration" required value="{{ old('duration', $subject->duration) }}" class="w-full p-1"/>
-            <x-labeled-input name="rate" required value="{{ old('rate', $subject->rate) }}" class="w-full p-1"/>
-            <x-labeled-input name="education_qualification" required value="{{ old('education_qualification', $subject->education_qualification) }}" class="w-full p-1"/>
-            <x-labeled-textarea name="course_details" required value="{{ old('course_details', $subject->course_details) }}" class="w-full p-1" ></x-labeled-textarea>
+            <x-labeled-input name="duration"  value="{{ old('duration', $subject->duration) }}" class="w-full p-1"/>
+            <x-labeled-input name="rate"  value="{{ old('rate', $subject->rate) }}" class="w-full p-1"/>
+            <x-labeled-input name="education_qualification"  value="{{ old('education_qualification', $subject->education_qualification) }}" class="w-full p-1"/>
+            <x-labeled-textarea name="course_details"  value="{{ old('course_details', $subject->course_details) }}" class="w-full p-1" ></x-labeled-textarea>
             <div class="w-full py-8 flex justify-center">
                 <x-button>{{ __('Update') }}</x-button>
             </div>
