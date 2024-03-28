@@ -44,11 +44,11 @@
                     <option value="{{ $session->id }}" @selected(old('session_id') == $session->id)>{{ $session->name }}</option>
                 @endforeach
             </x-labeled-select>
-            <x-labeled-select name="subject_id" label="Course Name" required class="w-full p-1 md:w-1/2 lg:w-1/3">
+            <x-select2 name="subject_id" label="Course Name" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                 @foreach($subjects as $subject)
                     <option value="{{ $subject->id }}" @selected(old('subject_id') == $subject->id)>{{ $subject->name }}</option>
                 @endforeach
-            </x-labeled-select>
+            </x-select2>
             <x-labeled-input name="picture" required type="file" accept="image/*" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <div class="w-full py-8 flex justify-center">
                 <x-button>{{ __('Create') }}</x-button>
