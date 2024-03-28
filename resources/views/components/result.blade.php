@@ -41,7 +41,7 @@
                 <td class="border p-2">{{ __('Course Name') }}</td>
                 <td class="border p-2" colspan="2">{{ $result->student->subject->name }}</td>
                 <td class="border p-2">{{ __('Course Duration') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->subject->duration }}</td>
+                <td class="border p-2" colspan="2">{{ $result->student->course_duration??'' }}</td>
                 <td class="border"></td>
             </tr>
             <tr class=" bg-gray-100">
