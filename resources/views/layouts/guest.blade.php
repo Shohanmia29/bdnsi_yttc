@@ -26,6 +26,7 @@
                        <a href="{{route('result')}}" class="px-3 py-1 hover:underline ">Student Result</a>
                        <a href="{{route('center-request.create')}}" class="px-3 py-1 hover:underline ">Institute Apply</a>
                        <a href="{{route('login')}}" class="px-3 py-1 hover:underline ">Institute Login</a>
+                       <a href="{{route('contactUs')}}" class="px-3 py-1 hover:underline ">Contact Us</a>
 
                    </div>
         </div>
