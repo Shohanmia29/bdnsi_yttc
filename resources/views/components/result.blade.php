@@ -38,23 +38,23 @@
             </tr>
 
             <tr class=" ">
-                <td class="border p-2">{{ __('Course') }}</td>
+                <td class="border p-2">{{ __('Course Name') }}</td>
                 <td class="border p-2" colspan="2">{{ $result->student->subject->name }}</td>
                 <td class="border p-2">{{ __('Course Duration') }}</td>
                 <td class="border p-2" colspan="2">{{ $result->student->subject->duration }}</td>
                 <td class="border"></td>
             </tr>
             <tr class=" bg-gray-100">
-                <td class="border p-2">{{ __('Institute') }}</td>
+                <td class="border p-2">{{ __('Institute name') }}</td>
                 <td class="border p-2" colspan="2">{{ $result->student->center->name }}</td>
-                <td class="border p-2">{{ __('Code') }}</td>
+                <td class="border p-2">{{ __('Institute Code') }}</td>
                 <td class="border p-2" colspan="2">{{ $result->student->center->code }}</td>
                 <td class="border"></td>
             </tr>
             <tr class="  ">
                 <td class="border p-2">{{ __('') }}</td>
                 <td class="border p-2" colspan="2"></td>
-                <td class="border p-2">{{ __('Passport') }}</td>
+                <td class="border p-2">{{ __('Passport Number') }}</td>
                 <td class="border p-2" colspan="2">{{ $result->student->passport??'' }}</td>
                 <td class="border"></td>
             </tr>
