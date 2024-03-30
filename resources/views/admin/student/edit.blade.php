@@ -16,7 +16,7 @@
         <div class="flex flex-wrap justify-center w-full bg-white p-4">
 
           @if(auth()->user()->id==1)
-                <x-labeled-select name="center_id" label="Center" required class="w-full p-1 md:w-1/2 lg:w-1/3">
+                <x-labeled-select name="center_id" label="Institute Name" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                     @foreach($centers as $center)
                         <option value="{{ $center->id }}" @selected(old('center_id', $student->center_id) == $center->id)>{{ $center->name }}</option>
                     @endforeach
