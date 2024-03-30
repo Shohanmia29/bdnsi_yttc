@@ -53,8 +53,8 @@
             </tr>
             <tr class="  ">
                 <td class="border p-2">{{ __('') }}</td>
-                <td class="border p-2" colspan="2"></td>
-                <td class="border p-2">{{ __('Passport Number') }}</td>
+                <td class="border-l p-2"  ></td>
+                <td class="border-r p-2 text-center   " colspan="2">{{ __('Passport Number') }}</td>
                 <td class="border p-2" colspan="2">{{ $result->student->passport??'' }}</td>
                 <td class="border"></td>
             </tr>
