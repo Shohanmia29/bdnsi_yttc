@@ -16,9 +16,11 @@ class HomeController extends Controller
         $courses = Subject::orderBy('name', 'asc')->limit(5)->get();;
         return view('welcome',compact('courses','sliders'));
     }
-    public function all_course()
+    public function all_course(Request $request)
     {
-        $courses = Subject::all();
+        $courses = Subject::when($request->course_name,function ($q)use($request){
+             return $q->where('name','LIKE','%'.$request->course_name.'%');
+        })->paginate(50);
         return view('all_course',compact('courses'));
     }
 

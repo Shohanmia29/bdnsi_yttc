@@ -11,16 +11,32 @@
                     <hr class="m-2 ">
                 </div>
 
-                <div class="   w-full ">
+                <div class="   w-full  ">
+                      <div class="pb-4">
+                          <div class="max-w-xl mx-auto p-4 shadow-lg rounded-md ">
+                              <form action="{{route('all_course')}}" method="get">
+                                  <x-labeled-input name="course_name" value="{{request('course_name')}}" class="w-full" placeholder="Enter  Course name"/>
+                                  <div class="flex py-4 justify-center w-full">
+                                      <button class="px-3 py-1 rounded-md border bg-blue-700 text-white ">Search</button>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
                     <div class="w-full flex flex-wrap  gap-2 justify-center">
-                        @foreach($courses as $course)
+                        @forelse($courses as $course)
                             <x-course :subject="$course" />
-                        @endforeach
+                        @empty
+                            <div class="font-bold text-red-500">
+                                  Not Found
+                            </div>
+                        @endforelse
 
                     </div>
 
                 </div>
-
+                 <div>
+                     {{$courses->links()}}
+                 </div>
             </div>
             <!-- ====== Cards Section End -->
 
