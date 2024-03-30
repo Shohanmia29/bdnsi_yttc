@@ -1830,6 +1830,9 @@ select {
 .font-sans {
   font-family: Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+.font-\[poppins\] {
+  font-family: poppins;
+}
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;

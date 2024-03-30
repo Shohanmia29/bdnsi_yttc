@@ -1,4 +1,5 @@
 <x-guest-layout>
+    <meta name="viewport" content="width=1024">
     <div class="w-full mx-auto max-w-4xl flex flex-wrap bg-white print:absolute print:inset-0 print:max-w-full">
          @if(!request('roll'))
         <form class="w-full print:hidden" action="{{ route('result') }}" method="get">
