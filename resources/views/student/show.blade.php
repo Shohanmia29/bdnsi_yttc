@@ -45,11 +45,11 @@
                     <td class="p-2">{{ $student->religion->key }}</td>
                 </tr>
                 <tr>
-                    <td class="p-2 font-semibold">{{ __('Present Address') }}</td>
+                    <td class="p-2 font-semibold">{{ __('District') }}</td>
                     <td class="p-2">{{ $student->present_address }}</td>
                 </tr>
                 <tr>
-                    <td class="p-2 font-semibold">{{ __('Permanent Address') }}</td>
+                    <td class="p-2 font-semibold">{{ __('Upazila') }}</td>
                     <td class="p-2">{{ $student->permanent_address }}</td>
                 </tr>
                 <tr>

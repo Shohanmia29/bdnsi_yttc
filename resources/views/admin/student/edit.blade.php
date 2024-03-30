@@ -43,8 +43,8 @@
                         <option value="{{ $religion->value }}" @selected(old('religion', $student->religion->value) == $religion->value)>{{ $religion->key }}</option>
                     @endforeach
                 </x-labeled-select>
-                <x-labeled-input name="present_address" :value="$student->present_address" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-                <x-labeled-input name="permanent_address" :value="$student->permanent_address" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+                <x-labeled-input name="present_address" :value="$student->present_address" required  label="District" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+                <x-labeled-input name="permanent_address" :value="$student->permanent_address" required  label="Upazila" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
                 <x-labeled-input name="phone" :value="$student->phone"    class="w-full p-1 md:w-1/2 lg:w-1/3"/>
                 <x-labeled-input name="email" :value="$student->email" type="email" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
                 <x-labeled-input name="guardian_name" :value="$student->guardian_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
