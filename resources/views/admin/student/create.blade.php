@@ -32,11 +32,7 @@
                     <option value="{{ $gender->value }}" @selected(old('gender') == $gender->value)>{{ $gender->key }}</option>
                 @endforeach
             </x-labeled-select>
-            <x-labeled-select name="blood_group" required class="w-full p-1 md:w-1/2 lg:w-1/3">
-                @foreach(\App\Enums\BloodGroup::getInstances() as $bloodGroup)
-                    <option value="{{ $bloodGroup->value }}" @selected(old('blood_group') == $bloodGroup->value)>{{ $bloodGroup }}</option>
-                @endforeach
-            </x-labeled-select>
+
             <x-labeled-select name="religion" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                 @foreach(\App\Enums\Religion::getInstances() as $religion)
                     <option value="{{ $religion->value }}" @selected(old('religion') == $religion->value)>{{ $religion->key }}</option>
@@ -48,11 +44,11 @@
             <x-labeled-input name="email" type="email" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="guardian_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="nid_or_birth" label="NID or Birth Certificate No." required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-            <x-labeled-select name="session_id" label="Session" required class="w-full p-1 md:w-1/2 lg:w-1/3">
+            <x-select2 name="session_id" label="Session" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                 @foreach($sessions as $session)
                     <option value="{{ $session->id }}" @selected(old('session_id') == $session->id)>{{ $session->name }}</option>
                 @endforeach
-            </x-labeled-select>
+            </x-select2>
 
             <x-select2 name="subject_id" label="Course Name" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                 @foreach($subjects as $subject)

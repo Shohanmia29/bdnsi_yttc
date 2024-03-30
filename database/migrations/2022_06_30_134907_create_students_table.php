@@ -24,7 +24,7 @@ class CreateStudentsTable extends Migration
             $table->string('registration')->nullable();
             $table->date('date_of_birth');
             $table->unsignedTinyInteger('gender');
-            $table->unsignedTinyInteger('blood_group');
+            $table->unsignedTinyInteger('blood_group')->nullable();
             $table->unsignedTinyInteger('religion');
             $table->string('present_address');
             $table->string('permanent_address');

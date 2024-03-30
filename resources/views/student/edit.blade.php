@@ -23,11 +23,7 @@
                     <option value="{{ $gender->value }}" @selected(old('gender', $student->gender->value) == $gender->value)>{{ $gender->key }}</option>
                 @endforeach
             </x-labeled-select>
-            <x-labeled-select name="blood_group" required class="w-full p-1 md:w-1/2 lg:w-1/3">
-                @foreach(\App\Enums\BloodGroup::getInstances() as $bloodGroup)
-                    <option value="{{ $bloodGroup->value }}" @selected(old('blood_group', $student->blood_group->value) == $bloodGroup->value)>{{ $bloodGroup }}</option>
-                @endforeach
-            </x-labeled-select>
+
             <x-labeled-select name="religion" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                 @foreach(\App\Enums\Religion::getInstances() as $religion)
                     <option value="{{ $religion->value }}" @selected(old('religion', $student->religion->value) == $religion->value)>{{ $religion->key }}</option>
