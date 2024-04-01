@@ -27,22 +27,16 @@ class CenterStoreRequest extends FormRequest
             'mothers_name' => 'required|string',
             'religion' => 'required|numeric|enum_value:'.Religion::class.',false',
             'gender' => 'required|numeric|enum_value:'.Gender::class.',false',
-            'nationality' => 'required|string',
             'division' => ['required','numeric',Rule::in(array_keys(Geo::divisions()))],
             'district' => ['required','numeric',Rule::in(array_keys(Geo::districts()))],
             'upazilla' => ['required','numeric',Rule::in(array_keys(Geo::upazillas()))],
             'post_office' => 'required|string',
-            'postal_code' => 'required|string',
-            'facebook_url' => 'nullable|string|url',
-            'no_of_computers' => 'required|numeric',
-            'institute_age' => 'required|numeric',
             'address' => 'required|string',
             'mobile' => 'required|string|max:11|min:11',
             'email' => 'required|email',
             'photo' => 'required|image',
             'authority_signature' => 'required|image',
             'nid_photo' => 'required|image',
-            'trade_license' => 'required|image',
         ];
     }
 
