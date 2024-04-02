@@ -17,7 +17,7 @@
             <x-labeled-input name="name" :value="$student->name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="fathers_name" :value="$student->fathers_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="mothers_name" :value="$student->mothers_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-            <x-labeled-input name="date_of_birth" :value="$student->date_of_birth->toDateString()" type="date" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <x-labeled-input name="date_of_birth" :value="$student->date_of_birth" type="text" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-select name="gender" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                 @foreach(\App\Enums\Gender::getInstances() as $gender)
                     <option value="{{ $gender->value }}" @selected(old('gender', $student->gender->value) == $gender->value)>{{ $gender->key }}</option>
@@ -31,7 +31,7 @@
             </x-labeled-select>
             <x-labeled-input name="present_address" label="District" :value="$student->present_address" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="permanent_address" label="Upazila" :value="$student->permanent_address" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-            <x-labeled-input name="passport" label="Passport Number" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <x-labeled-input name="passport" label="Passport Number"  class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="phone" :value="$student->phone" pattern="\d{11}" x-data x-on:input="$event.target.setCustomValidity($event.target.validity.patternMismatch ? 'Phone number should be 11 digits' : '')" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="email" :value="$student->email" type="email" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="guardian_name" :value="$student->guardian_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
@@ -46,7 +46,25 @@
                     <option value="{{ $subject->id }}" @selected(old('subject_id', $student->subject_id) == $subject->id)>{{ $subject->name }}</option>
                 @endforeach
             </x-select2>
-            <x-labeled-input name="course_duration" type="text"  value="{{$student->course_duration}}" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <x-labeled-select name="course_duration"    type="text" label="Course Duration"  class="w-full p-1 md:w-1/2 lg:w-1/3">
+                <option {{$student->course_duration=='2 Month' ? 'selected': ''}}  value="2 Month">2 Month</option>
+                <option {{$student->course_duration=='3 Month' ? 'selected': ''}}  value="3 Month">3 Month</option>
+                <option {{$student->course_duration=='6 Month' ? 'selected': ''}}  value="6 Month">6 Month</option>
+                <option {{$student->course_duration=='1 Year' ? 'selected': ''}}  value="1 Year">1 Year</option>
+                <option {{$student->course_duration=='2 Years' ? 'selected': ''}}  value="2 Years">2 Years</option>
+                <option {{$student->course_duration=='3 Years' ? 'selected': ''}}  value="3 Years">3Years</option>
+                <option {{$student->course_duration=='4 Years' ? 'selected': ''}}  value="4 Years">4 Years</option>
+            </x-labeled-select>
+
+            <x-labeled-select name="qualification" label="Qualification" required class="w-full p-1 md:w-1/2 lg:w-1/3">
+                <option  value=" ">--Select-- </option>
+                <option {{$student->qualification =='Jsc'  ? 'selected' : ''}} value="Jsc">Jsc</option>
+                <option {{$student->qualification =='Ssc'  ? 'selected' : ''}} value="Ssc">Ssc</option>
+                <option {{$student->qualification =='Hsc' ? 'selected'  : ''}} value="Hsc">Hsc</option>
+                <option {{$student->qualification =='Hon\'s' ? 'selected'  : ''}} value="Hon's">Hon's</option>
+                <option {{$student->qualification =='Master\'s' ? 'selected'  : ''}} value=Master's>Master's</option>
+                <option {{$student->qualification =='Diploma Engineering' ? 'selected'  : ''}} value="Diploma Engineering">Diploma Engineering</option>
+            </x-labeled-select>
             <x-labeled-input name="picture" type="file" accept="image/*" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <div class="w-full py-8 flex justify-center">
                 <x-button>{{ __('Update') }}</x-button>

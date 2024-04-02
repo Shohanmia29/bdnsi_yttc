@@ -71,10 +71,10 @@ class Student extends Authenticatable
         'exam_date',
         'due_amount',
         'paid_amount',
+        'qualification',
     ];
 
     protected $casts = [
-        'date_of_birth' => 'datetime',
         'blood_group' => BloodGroup::class,
         'gender' => Gender::class,
         'religion' => Religion::class,

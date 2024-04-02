@@ -22,7 +22,7 @@ class CreateStudentsTable extends Migration
             $table->string('mothers_name');
             $table->string('roll')->nullable();
             $table->string('registration')->nullable();
-            $table->date('date_of_birth');
+            $table->string('date_of_birth');
             $table->unsignedTinyInteger('gender');
             $table->unsignedTinyInteger('blood_group')->nullable();
             $table->unsignedTinyInteger('religion');
