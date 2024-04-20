@@ -122,7 +122,7 @@
             </table>
         </div>
     </div>
-    <x-slot name="script">
+    <x-slot name="beforeScript">
         <x-calculate-gpa-script />
     </x-slot>
 </x-admin-app-layout>
