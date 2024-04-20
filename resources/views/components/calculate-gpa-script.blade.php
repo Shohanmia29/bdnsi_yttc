@@ -50,7 +50,7 @@
                 return 'B';
             case mark >= 40:
                 return 'C';
-            case mark >= 10:
+            case mark >= 1:
                 return 'F';
             default:
                 return 'Not Found';
