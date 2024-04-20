@@ -30,7 +30,7 @@
                 </tr>
                 <tr>
                     <td class="p-2 font-semibold">{{ __('Date of Birth') }}</td>
-                    <td class="p-2">{{ $student->date_of_birth->toDateString() }}</td>
+                    <td class="p-2">{{ \Illuminate\Support\Carbon::parse($student->date_of_birth)->toDateString() }}</td>
                 </tr>
                 <tr>
                     <td class="p-2 font-semibold">{{ __('Gender') }}</td>
@@ -68,6 +68,12 @@
                     <td class="p-2 font-semibold">{{ __('Center Name') }}</td>
                     <td class="p-2">{{ $student->center->name }}</td>
                 </tr>
+
+                <tr x-data="{ w: {{ optional($student->result)->written ?? 0 }}, p: {{ optional($student->result)->practical ?? 0 }}, v: {{ optional($student->result)->viva ?? 0 }} }">
+                    <td class="p-2 font-semibold">{{ __('Result') }}</td>
+                    <td class="p-2" x-html="calculateCGPAResult(parseInt(w) + parseInt(p) + parseInt(v))"></td>
+                </tr>
+
                 <tr>
                     <td class="p-2 font-semibold">{{ __('Roll') }}</td>
                     <td class="p-2">{{ $student->roll??'Pending' }}</td>
@@ -116,4 +122,7 @@
             </table>
         </div>
     </div>
+    <x-slot name="script">
+        <x-calculate-gpa-script />
+    </x-slot>
 </x-admin-app-layout>
