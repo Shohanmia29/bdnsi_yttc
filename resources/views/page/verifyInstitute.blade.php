@@ -1,60 +1,62 @@
-<x-guest-layout>
-    <div class="bg-[#F8F9FA]">
-        <div class="flex flex-wrap space-x-2 py-2   border-b shadow px-4">
-            <a href="#" class="text-gray-500 hover:text-gray-700">Home</a>
-            <span class="mx-2 text-gray-400">/</span>
-            <a href="#" class="text-gray-500 hover:text-gray-700">Verified Institute</a>
+<x-frontend-layouts>
+    <script defer src="{{mix('js/app.js')}}"></script>
+    <div class="container" x-data="centerData">
+        <div class="branch-fillter-wrap mt-4 py-4">
+            <div class="text-center mb-3">
+                <h5>Filter Verified Branch</h5>
+            </div>
+            <form action="{{route('verifiedInstitute')}}" method="get">
+                <div class="row gap-2 justify-content-center">
+                    <div class="col-md-3">
+                        <select class="form-select" name="division" x-model="division" x-ref="division" required  aria-label="District select">
+                            @foreach(\App\Lib\Geo::divisions() as $divisionId => $division)
+                                <option value="{{ $divisionId }}" @selected(old('division') == $divisionId)>{{ $division['name'] }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select"  x-model="district" x-model="district" x-ref="district" name="district" required>
+                            <template x-for="district in districts">
+                                <option x-bind:value="district.id" x-html="district.name"></option>
+                            </template>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select" x-model="upazilla" name="upazilla" required>
+                            <template x-for="upazilla in upazillas">
+                                <option x-bind:value="upazilla.id" x-html="upazilla.name"></option>
+                            </template>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-outline-success"  >Reset</button>
+                    </div>
+                </div>
+            </form>
         </div>
-
-        <div class="min-h-screen    " x-data="centerData">
-
-             <div class="max-w-7xl mx-auto p-3">
-                  <div class="max-w-3xl mx-auto p-2">
-                       <div class="font-bold text-lg md:text-xl text-center">
-                           Filter Verified Branch
-                       </div>
-                      <form action="{{route('verifiedInstitute')}}" method="get">
-                          <div class="flex w-full flex-wrap">
-                              <x-labeled-select class="w-full lg:w-1/3 p-1" name="division" x-model="division" x-ref="division" required>
-                                  @foreach(\App\Lib\Geo::divisions() as $divisionId => $division)
-                                      <option value="{{ $divisionId }}" @selected(old('division') == $divisionId)>{{ $division['name'] }}</option>
-                                  @endforeach
-                              </x-labeled-select>
-                              <x-labeled-select class="w-full lg:w-1/3 p-1" x-model="district" x-model="district" x-ref="district" name="district" required>
-                                  <template x-for="district in districts">
-                                      <option x-bind:value="district.id" x-html="district.name"></option>
-                                  </template>
-                              </x-labeled-select>
-                              <x-labeled-select class="w-full lg:w-1/3 p-1" x-model="upazilla" name="upazilla" required>
-                                  <template x-for="upazilla in upazillas">
-                                      <option x-bind:value="upazilla.id" x-html="upazilla.name"></option>
-                                  </template>
-                              </x-labeled-select>
-                              <div class="w-full flex gap-2 py-2 justify-center">
-                                   <button class="px-3 py-1 rounded-md border bg-blue-700 text-white">Search</button>
-                                   <a href="{{route('verifiedInstitute')}}" class="px-3 py-1 rounded-md border bg-red-700 text-white">Reset</a>
-                              </div>
-                          </div>
-                      </form>
-
-                  </div>
-
-                 <div class="w-full flex flex-wrap">
-                     @forelse($centers as $center)
-                         <div class="w-1/2 p-1 md:p-8 md:w-1/2 xl:w-1/4  ">
-                          <x-institute :institute="$center"/>
-                         </div>
-                     @empty
-                         <div class="w-full font-bold text-red-500">Not Found Institute</div>
-                     @endforelse
-                 </div>
-                 <div class="w-full">
-                         {{$centers->links()}}
-                 </div>
-             </div>
-
+        <div class="row" id="branch_wrap">
+            @forelse($centers as $center)
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <x-institute :institute="$center"/>
+                </div>
+            @empty
+                <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+                    <div class="container-fluid py-5 text-center">
+                        <h1 class="display-5 fw-bold">No Institute Found</h1>
+                    </div>
+                </div>
+            @endforelse
+        </div>
+        <div class="w-100">
+              {{$centers->links()}}
         </div>
     </div>
+
+
+
+
+
+
     <x-slot name="script">
         <script>
             document.addEventListener('alpine:init', () => {
@@ -91,4 +93,4 @@
             })
         </script>
     </x-slot>
-</x-guest-layout>
+</x-frontend-layouts>
