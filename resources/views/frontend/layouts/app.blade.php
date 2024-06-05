@@ -179,7 +179,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav fw-bold justify-content-center flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="" style="padding: 0 10px; font-size: 16px;">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/" style="padding: 0 10px; font-size: 16px;">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('all_course')}}" style="padding: 0 10px; font-size: 16px;">Courses</a>
