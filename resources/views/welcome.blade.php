@@ -156,7 +156,7 @@
                     <div class="col-md-4 offset-md-4">
                         <center>
                             <button class="btn btn-outline-success mt-2"><a class="text-white shadow"
-                                                                            href="/branch-apply" style="text-decoration:none">APPLY NOW</a></button>
+                                                                            href="{{route('center-request.create')}}" style="text-decoration:none">APPLY NOW</a></button>
 
                         </center>
 
