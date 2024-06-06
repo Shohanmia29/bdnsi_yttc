@@ -23,10 +23,11 @@ class StudentController extends Controller
             return datatables(Student::select(['id','center_id','session_id','subject_id','name','status'])
                 ->own()
                 ->with(['session','subject']))
+
                 ->addColumn('admit', function ($admit) {
-                    return '<a     target="_blank" href="' . route("student.show",[$admit->id,'admit'=>'admit']) . '">' .'Admit' . '</a>';
+                    return '<a   style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank"   target="_blank" href="' . route("student.show",[$admit->id,'admit'=>'admit']) . '">' .'Admit' . '</a>';
                 })->addColumn('registration', function ($registration) {
-                    return '<a      target="_blank" href="' . route("student.show",[$registration->id,'registration'=>'registration']) . '">' . 'Registration'. '</a>';
+                    return '<a  style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank"     target="_blank" href="' . route("student.show",[$registration->id,'registration'=>'registration']) . '">' . 'Registration'. '</a>';
                 })
                 ->rawColumns(['admit','registration'])
                 ->toJson();

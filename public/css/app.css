@@ -728,12 +728,6 @@ select {
 .left-\[16\%\] {
   left: 16%;
 }
-.top-\[45\%\] {
-  top: 45%;
-}
-.left-\[75\.7\%\] {
-  left: 75.7%;
-}
 .top-\[18\.3\%\] {
   top: 18.3%;
 }
@@ -824,6 +818,9 @@ select {
 .top-\[36\.5\%\] {
   top: 36.5%;
 }
+.left-\[75\.7\%\] {
+  left: 75.7%;
+}
 .top-\[42\%\] {
   top: 42%;
 }
@@ -890,6 +887,9 @@ select {
 .left-\[7\%\] {
   left: 7%;
 }
+.top-\[45\%\] {
+  top: 45%;
+}
 .z-0 {
   z-index: 0;
 }
@@ -927,13 +927,13 @@ select {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
-.my-1 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-}
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 .my-2 {
   margin-top: 0.5rem;
@@ -1706,6 +1706,10 @@ select {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1713,10 +1717,6 @@ select {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 .py-2\.5 {
   padding-top: 0.625rem;
