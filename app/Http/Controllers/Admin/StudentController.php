@@ -36,15 +36,15 @@ class StudentController extends Controller
         if ($request->ajax()) {
             return datatables(Student::with('center:id,code','subject:id,name','result'))
                 ->editColumn('registration', function ($registration) {
-                    return '<a    target="_blank" href="' . route("admin.student.show",[$registration->id,'registration'=>'registration']) . '">' . $registration->registration . '</a>';
+                    return '<a   style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank" href="' . route("admin.student.show",[$registration->id,'registration'=>'registration']) . '">' . $registration->registration . '</a>';
                 }) ->editColumn('roll', function ($roll) {
-                    return '<a    target="_blank" href="' . route("admin.student.admit",[$roll->id,'admit'=>'admit']) . '">' . $roll->roll . '</a>';
+                    return '<a   style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank" href="' . route("admin.student.admit",[$roll->id,'admit'=>'admit']) . '">' . $roll->roll . '</a>';
                 })
                 ->addColumn('student_result', function ($student_result) {
                     return '<a target="_blank" href="' . route("admin.result.show", $student_result->result->id??'') . '">' . ($student_result->result()->count() == 1 ? 'Result' : 'N/A') . '</a>';
                 })
                 ->rawColumns(['registration','roll','student_result'])
-                ->toJson();
+                ->toJson(); 
         }
 
         return view('admin.student.index');

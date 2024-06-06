@@ -1,3 +1,8 @@
+
+
+
+
+
 <x-app-layout>
     <x-slot name="header">
         <div class="w-full flex justify-between">

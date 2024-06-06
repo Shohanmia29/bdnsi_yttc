@@ -24,9 +24,9 @@ class StudentController extends Controller
                 ->own()
                 ->with(['session','subject']))
                 ->addColumn('admit', function ($admit) {
-                    return '<a    target="_blank" href="' . route("student.show",[$admit->id,'admit'=>'admit']) . '">' .'Admit' . '</a>';
+                    return '<a     target="_blank" href="' . route("student.show",[$admit->id,'admit'=>'admit']) . '">' .'Admit' . '</a>';
                 })->addColumn('registration', function ($registration) {
-                    return '<a    target="_blank" href="' . route("student.show",[$registration->id,'registration'=>'registration']) . '">' . 'Registration'. '</a>';
+                    return '<a      target="_blank" href="' . route("student.show",[$registration->id,'registration'=>'registration']) . '">' . 'Registration'. '</a>';
                 })
                 ->rawColumns(['admit','registration'])
                 ->toJson();
