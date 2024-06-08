@@ -27,7 +27,7 @@
         .admit-card-wrap {
             width: 1185px;
             height: 835px;
-            background-image: url(https://byttc.com.bd/public/cards/admin-card-bg.webp);
+            background-image: url({{asset('images/AdmitCard.jpg')}});
             margin: auto auto;
             background-position: center center;
             background-repeat: no-repeat;

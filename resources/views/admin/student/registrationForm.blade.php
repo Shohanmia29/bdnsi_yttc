@@ -24,7 +24,7 @@
         .admit-card-wrap {
             width: 1170px;
             height: 1650px;
-            background-image: url(https://byttc.com.bd/public/cards/card-bg-with-round.webp);
+            background-image: url({{asset('images/RegistrationCard.jpg')}});
             margin: auto;
             background-position: center center;
             background-repeat: no-repeat;
