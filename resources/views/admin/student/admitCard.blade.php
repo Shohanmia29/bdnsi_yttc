@@ -144,7 +144,7 @@
                 <img src="{{asset('logo.png')}}" style="width: 140px;" alt="logo" />
             </div>
             <div class="cert-headings w-82">
-                <img src="https://byttc.com.bd/public/cards/header-text-logo.webp" class="w-100" alt="">
+                <img src="{{asset('images/banner.png')}}" class="w-100" alt="">
                 <h5 class="normal-font" style="margin-top: -15px;">Approved By Government of the People's Republic of Bangladesh.</h5>
             </div>
         </div>
@@ -227,7 +227,7 @@
                 </ol>
             </div>
             <div class="sign-cont w-25 text-center">
-                <img style="width: 250px;" src="https://byttc.com.bd/admitsignature.PNG" alt="signature" />
+                <img style="width: 250px;" src="{{asset('images/Signature1.png')}}" alt="signature" />
                 <hr />
                 <p>Controller Of Examinations <br /> Bangladesh Youth Technical Training</p>
             </div>

@@ -141,7 +141,7 @@
                 <img src="{{asset('logo.png')}}" style="width: 140px;" alt="logo" />
             </div>
             <div class="cert-headings w-82">
-                <img src="https://byttc.com.bd/public/cards/header-text-logo.webp" class="w-100" alt="">
+                <img src="{{asset('images/banner.png')}}" class="w-100" alt="">
                 <h5 class="normal-font"> Approved By Government of the People's Republic of Bangladesh.</h5>
             </div>
         </div>
@@ -258,7 +258,7 @@
                 <p>Signature Of The Regional <br /> Director</p>
             </div>
             <div class="sign-cont text-center">
-                <img class="text-center" style="width: 250px" src="https://byttc.com.bd/admitsignature.PNG" alt="signature" />
+                <img class="text-center" style="width: 250px" src="{{asset('images/Signature1.png')}}" alt="signature" />
                 <hr />
                 <p>Exam Controller <br /> BTCIS</p>
             </div>
