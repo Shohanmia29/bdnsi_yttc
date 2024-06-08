@@ -145,7 +145,7 @@
             </div>
             <div class="cert-headings w-82">
                 <img src="{{asset('images/banner.png')}}" class="w-100" alt="">
-                <h5 class="normal-font" style="margin-top: -15px;">Approved By Government of the People's Republic of Bangladesh.</h5>
+                <h5 class="normal-font" style="margin-top: -5px;">Approved By Government of the People's Republic of Bangladesh.</h5>
             </div>
         </div>
     </div>
