@@ -155,7 +155,7 @@
     </div>
     <div class="d-flex justify-content-between px-2">
         <div class="">
-            <p class="mb-0">Serial No. : {{$student->id}}</p>
+            <p class="mb-0">Serial No. : {{\App\Lib\Helper::serialNumber($student->id)}}  </p>
         </div>
     </div>
     <div class="admit-card-body">
