@@ -143,7 +143,7 @@
             </div>
             <div class="cert-headings w-82">
                 <img src="{{asset('images/banner.png')}}" class="w-100" alt="">
-                <h5 class="normal-font"> Approved By Government of the People's Republic of Bangladesh.</h5>
+                <h5 class="normal-font" style="margin-left: 38px;"> Approved By Government of the People's Republic of Bangladesh.</h5>
             </div>
         </div>
     </div>
@@ -263,7 +263,7 @@
             <div class="sign-cont text-center">
                 <img class="text-center" style="width: 250px" src="{{asset('images/Signature1.png')}}" alt="signature" />
                 <hr />
-                <p>Exam Controller <br /> BTCIS</p>
+                <p>Exam Controller <br /> bystt</p>
             </div>
         </div>
         <hr />
@@ -271,7 +271,7 @@
             <p></p>
             <ol>
                 <li>This Registration card is valid till 8 Consecutive years</li>
-                <li>For All Correspondence with the byttc, Institute code, registration number and session are to be mentioned
+                <li>For All Correspondence with the bystt, Institute code, registration number and session are to be mentioned
                 </li>
                 <li>Scan the QR code and follow the link in the QR code to verify the Registration card from   </li>
             </ol>

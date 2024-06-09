@@ -145,7 +145,7 @@
             </div>
             <div class="cert-headings w-82">
                 <img src="{{asset('images/banner.png')}}" class="w-100" alt="">
-                <h5 class="normal-font" style="margin-top: -5px;">Approved By Government of the People's Republic of Bangladesh.</h5>
+                <h5 class="normal-font" style="margin-top: -2px; margin-left: 59px">Approved By Government of the People's Republic of Bangladesh.</h5>
             </div>
         </div>
     </div>
@@ -232,7 +232,7 @@
             <div class="sign-cont w-25 text-center">
                 <img style="width: 250px;" src="{{asset('images/Signature1.png')}}" alt="signature" />
                 <hr />
-                <p>Controller Of Examinations <br /> Bangladesh Youth Technical Training</p>
+                <p>Controller Of Examinations <br /> Bangladesh Youth Skills & Technical Training</p>
             </div>
         </div>
     </div>
