@@ -476,8 +476,8 @@
             </div>
             <div class="col-lg-5 column-2">
                 <div class="footer_image">
-                    <img src="" style="width: 100%; height: inherit;">
-                    <img src="" style="width: 100%; height: inherit;">
+                    <img src="{{asset('images/1711405466.jpg')}}" style="width: 100%; height: inherit;">
+
                 </div>
             </div>
         </div>
