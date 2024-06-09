@@ -167,27 +167,27 @@
     </section>
 
 
-    <section id="counter">
+    <section id="section_counter">
         <div class="container counter-number shadow p-5 mb-2 bg-body rounded">
             <div class="row">
                 <div class="col-lg-3 icon counter-box">
                     <i class="fa fa-home" aria-hidden="true"></i>
-                    <h2 class="counter counter-numbers">1050</h2>
+                    <h2 class="counter " data-target="200">0</h2>
                     <h3>Institute</h3>
                 </div>
                 <div class="col-lg-3 icon counter-box">
                     <i class="fa fa-book" aria-hidden="true"></i>
-                    <h2 class="counter counter-numbers">300</h2>
+                    <h2 class="counter " data-target="300">0</h2>
                     <h3>Courses</h3>
                 </div>
                 <div class="col-lg-3 icon counter-box">
                     <i class="fa fa-sticky-note-o" aria-hidden="true"></i>
-                    <h2 class="counter counter-numbers">120</h2>
+                    <h2 class="counter " data-target="120">0</h2>
                     <h3>Exam</h3>
                 </div>
                 <div class="col-lg-3 icon counter-box">
                     <i class="fa fa-users" aria-hidden="true"></i>
-                    <h2 class="counter counter-numbers">144223</h2>
+                    <h2 class="counter " data-target="144223">0</h2>
                     <h3>Students</h3>
                 </div>
             </div>
@@ -196,6 +196,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
         $(document).ready(function () {
             $(".owl-carousel").owlCarousel({
@@ -208,4 +209,52 @@
             });
         });
     </script>
+
+
+    <script>
+        let section_counter = document.querySelector('#section_counter');
+        let counters = document.querySelectorAll('.counter');
+
+        // Scroll Animation
+
+        let CounterObserver = new IntersectionObserver(
+            (entries, observer) => {
+                let [entry] = entries;
+                if (!entry.isIntersecting) return;
+
+                let speed = 20;
+                counters.forEach((counter, index) => {
+                    counter.style.color='rgb(192 132 252';
+                    function UpdateCounter() {
+                        const targetNumber = +counter.dataset.target;
+                        const initialNumber = +counter.innerText;
+                        const incPerCount = targetNumber / speed;
+                        if (initialNumber < targetNumber) {
+                            counter.innerText = Math.ceil(initialNumber + incPerCount);
+                            setTimeout(UpdateCounter, 50);
+                        }
+                    }
+
+                    UpdateCounter();
+
+                    if (counter.parentElement.style.animation) {
+                        counter.parentElement.style.animation = '';
+                    } else {
+                        counter.parentElement.style.animation = `slide-up 0.3s ease forwards ${
+                            index / counters.length + 0.5
+                        }s`;
+                    }
+
+                });
+                observer.unobserve(section_counter);
+            },
+            {
+                root: null,
+                threshold: window.innerWidth > 768 ? 0.4 : 0.3,
+            }
+        );
+
+        CounterObserver.observe(section_counter);
+    </script>
+
 </x-frontend-layouts>
