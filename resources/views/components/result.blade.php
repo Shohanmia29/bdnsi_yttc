@@ -3,7 +3,7 @@
 <div class="w-full flex flex-wrap">
     <div class="w-full flex flex-wrap">
         <div class="w-full   print:w-3/5  ">
-            <div class="w-full py-2 text-xl md:text-4xl text-center font-bold">Bangladesh Technical Creative institute</div>
+            <div class="w-full py-2 text-xl md:text-4xl text-center font-bold">Bangladesh Youth Skills & Technical Training</div>
             <div class="w-full py-2 text-center font-semibold">Govt. License No: C-444444</div>
         </div>
     </div>
@@ -54,8 +54,8 @@
             <tr class="  ">
                 <td class="border p-2">{{ __('') }}</td>
                 <td class="border-l p-2"  ></td>
-                <td class="border-r p-2 text-center   " colspan="2">{{ __('Passport Number') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->passport??'' }}</td>
+                <td class="border-r p-2 text-center   " colspan="2">{{ __('Registration No') }}</td>
+                <td class="border p-2" colspan="2">{{ \App\Lib\Helper::serialNumber($result->student->id) }}</td>
                 <td class="border"></td>
             </tr>
 
