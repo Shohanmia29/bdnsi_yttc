@@ -4,7 +4,7 @@
 
 <style>
     #qrcode_1 img{
-        width: 120px;
+        width: 148px;
         margin-left:68px;
     }
 </style>
