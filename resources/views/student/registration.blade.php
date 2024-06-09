@@ -243,7 +243,9 @@
                     <img src="{{$student->picture}}" style="width: 150px; margin-bottom: 55px;" alt="portrait" />
                 </div>
                 <div>
-
+                    <div class="visible-print  text-center">
+                        <x-qr-code :student="$student"/>
+                    </div>
                 </div>
             </div>
         </div>
