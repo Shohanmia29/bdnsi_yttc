@@ -141,7 +141,7 @@
     <div class="admit-card-header">
         <div class="d-flex align-items-center ">
             <div class="w-18 text-center">
-                <img src="{{asset('logo.png')}}" style="width: 140px;" alt="logo" />
+                <img src="{{asset('logo.png')}}" style="width: 140px;margin-top: -29px;" alt="logo" />
             </div>
             <div class="cert-headings w-82">
                 <img src="{{asset('images/banner.png')}}" class="w-100" alt="">
