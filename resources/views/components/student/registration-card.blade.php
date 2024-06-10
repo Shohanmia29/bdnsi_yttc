@@ -244,7 +244,7 @@
                 </div>
                 <div>
                     <div class="visible-print  text-center">
-                        <x-qr-code :student="$student"/>
+                        <x-student.registration-qr :student="$student"/>
                     </div>
                 </div>
             </div>
