@@ -154,6 +154,67 @@
                 justify-content: center;
             }
         }
+
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .flex {
+            display: flex;
+        }
+        .w-full {
+            width: 100%;
+        }
+        .max-w-6xl {
+            max-width: 72rem;
+        }
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+        .justify-between {
+            justify-content: space-between;
+        }
+        .bg-gray-200 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+        }
+        .px-3 {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+        }
+        .py-1 {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+        }
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+        }
+        .text-xs {
+            font-size: 0.75rem;
+            line-height: 1rem;
+        }
+        .font-semibold {
+            font-weight: 600;
+        }
+        .underline {
+            text-decoration-line: underline;
+        }
+        .hover\:underline:hover {
+            text-decoration-line: underline;
+        }
+        @media (min-width: 768px) {
+            .md\:justify-between {
+                justify-content: space-between;
+            }
+            .md\:text-lg {
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+            }
+        }
+
+
     </style>
 
 
@@ -166,47 +227,24 @@
         <img style="width:100%;max-height:250px;" src="{{asset('frontend/banner.jpg')}}" class="img-fluid" alt="...">
     </div>
 
-    <nav class="navbar navbar-expand-md bg-body-tertiary">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav class=" ">
+        <div class="w-full">
+            <nav class=" w-full bg-gray-200   py-1">
+                <div class=" max-w-6xl mx-auto flex flex-wrap font-semibold   ">
+                    <div class="text-xs w-full md:text-lg flex flex-wrap   md:justify-between">
+                        <a href="/" class="px-3 py-1">Home</a>
+                        <a style="color: black;  text-decoration: none!important;" href="{{route('all_course')}}" class="px-3 py-1    ">Courses</a>
+                        <a style="color: black;  text-decoration: none!important;" href="{{route('verifiedInstitute')}}" class="px-3  py-1 hover:underline "> Verified Institute  </a>
+                        <a style="color: black;  text-decoration: none!important;" href="{{route('successStudent')}}" class="px-3 py-1  hover:underline ">Success Students</a>
+                        <a style="color: black;  text-decoration: none!important;" href="{{route('result')}}" class="px-3 py-1  hover:underline ">Student Result</a>
+                        <a style="color: black;  text-decoration: none!important;" href="{{route('center-request.create')}}" class="px-3  py-1 hover:underline ">Institute Apply</a>
+                        <a style="color: black;  text-decoration: none!important;" href="{{route('login')}}" class="px-3 py-1  hover:underline ">Institute Login</a>
+                        <a style="color: black;  text-decoration: none!important;" href="{{route('contactUs')}}" class="px-3  py-1 hover:underline ">Contact Us</a>
 
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
                 </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav fw-bold justify-content-center flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/" style="padding: 0 10px; font-size: 16px;">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('all_course')}}" style="padding: 0 10px; font-size: 16px;">Courses</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('verifiedInstitute')}}" style="padding: 0 10px; font-size: 16px;">Verified Institutes</a>
-                        </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('successStudent')}}" style="padding: 0 10px; font-size: 16px;">Success Students</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('result')}}" style="padding: 0 10px; font-size: 16px;">Student Result</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('center-request.create')}}" style="padding: 0 10px; font-size: 16px;">Institute Apply</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('login')}}" style="padding: 0 10px; font-size: 16px;">Institute Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('contactUs')}}" style="padding: 0 10px; font-size: 16px;">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            </nav>
         </div>
     </nav>
 
