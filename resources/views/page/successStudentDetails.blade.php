@@ -15,6 +15,17 @@
                         <ul class="w-full">
                             <li class="w-full border p-2 rounded-md mt-2 flex  ">
                                 <div class="font-bold w-[40%]">
+                                    Registration No
+                                </div>
+                                <div class=" w-[10%]">
+                                    :
+                                </div>
+                                <div class=" w-[50%]">
+                                    {{$data->registration??'N/A'}}
+                                </div>
+                            </li>
+                            <li class="w-full border p-2 rounded-md mt-2 flex  ">
+                                <div class="font-bold w-[40%]">
                                     Student Name
                                 </div>
                                 <div class=" w-[10%]">
@@ -113,6 +124,28 @@
                                 </div>
                                 <div class=" w-[50%]">
                                     {{$data->subject->name??'N/A'}}
+                                </div>
+                            </li>
+                          <li class="w-full border p-2 rounded-md mt-2 flex  ">
+                                <div class="font-bold w-[40%]">
+                                   Course Duration
+                                </div>
+                                <div class=" w-[10%]">
+                                    :
+                                </div>
+                                <div class=" w-[50%]">
+                                    {{$data->course_duration??'N/A'}}
+                                </div>
+                            </li>
+                          <li class="w-full border p-2 rounded-md mt-2 flex  ">
+                                <div class="font-bold w-[40%]">
+                                   Session
+                                </div>
+                                <div class=" w-[10%]">
+                                    :
+                                </div>
+                                <div class=" w-[50%]">
+                                    {{$data->session->name??'N/A'}}
                                 </div>
                             </li>
 
