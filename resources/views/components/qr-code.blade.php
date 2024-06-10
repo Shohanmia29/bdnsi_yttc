@@ -5,7 +5,7 @@
 <style>
     #qrcode_1 img{
         width: 148px;
-        margin-left:37px;
+        margin-left:45px;
     }
 </style>
 <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
