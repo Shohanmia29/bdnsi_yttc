@@ -224,7 +224,7 @@
 
 <header>
     <div class="image">
-        <img style="width:100%;max-height:250px;" src="{{asset('frontend/banner.jpg')}}" class="img-fluid" alt="...">
+        <img style="width:100%;max-height:250px;" src="{{asset('images/new/BannerDesign.jpg')}}" class="img-fluid" alt="...">
     </div>
 
     <nav class=" ">

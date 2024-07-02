@@ -27,7 +27,7 @@
         .admit-card-wrap {
             width: 1185px;
             height: 835px;
-            background-image: url({{asset('images/AdmitCard.jpg')}});
+            background-image: url({{asset('images/new/AdmitCard.jpg')}});
             margin: auto auto;
             background-position: center center;
             background-repeat: no-repeat;

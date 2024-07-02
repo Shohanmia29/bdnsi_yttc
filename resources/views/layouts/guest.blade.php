@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="">
-    <img class="md:h-[250px] w-full  " src="{{asset('frontend/banner.jpg')}}" alt="Logo">
+    <img class="md:h-[250px] w-full  " src="{{asset('images/new/BannerDesign.jpg')}}" alt="Logo">
 </div>
 
 <div class="w-full">
