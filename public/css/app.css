@@ -1534,9 +1534,9 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
-.bg-\[purple\] {
+.bg-\[\#683091\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(128 0 128 / var(--tw-bg-opacity));
+  background-color: rgb(104 48 145 / var(--tw-bg-opacity));
 }
 .bg-green-700 {
   --tw-bg-opacity: 1;
@@ -1548,10 +1548,6 @@ select {
 }
 .bg-transparent {
   background-color: transparent;
-}
-.bg-\[\#683091\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(104 48 145 / var(--tw-bg-opacity));
 }
 .bg-red-700 {
   --tw-bg-opacity: 1;
@@ -2815,14 +2811,6 @@ select {
 
   .md\:w-1\/4 {
     width: 25%;
-  }
-
-  .md\:w-\[40\%\] {
-    width: 40%;
-  }
-
-  .md\:w-\[60\%\] {
-    width: 60%;
   }
 
   .md\:w-2\/3 {
