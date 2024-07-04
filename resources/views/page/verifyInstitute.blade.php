@@ -38,9 +38,9 @@
                 </div>
             </form>
         </div>
-        <div class="row" id="branch_wrap">
+        <div class="row w-100" id="branch_wrap">
             @forelse($centers as $center)
-                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6 p-2">
                     <x-institute :institute="$center"/>
                 </div>
             @empty
