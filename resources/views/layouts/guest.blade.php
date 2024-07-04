@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1024">
     <title>Bangladesh Youth Technical Training</title>
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
     <link rel="icon" href="{{asset('images/new/logo.png')}}">
