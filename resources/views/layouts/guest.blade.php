@@ -56,7 +56,7 @@
  <div class="bg-white">
      {{$slot}}
  </div>
-<link rel="stylesheet" href="{{asset('frontend/style.css')}}">
+
 
 
 <section id="footer">
