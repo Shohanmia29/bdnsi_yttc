@@ -4,7 +4,7 @@
             <div class="text-xl">{{ __('Students') }}</div>
             <div>
                 <a class="border border-slate-500 py-1 px-4 rounded text-slate-700 text-sm hover:text-white hover:bg-slate-700"
-                   href="{{ route('student.create') }}">{{ __('Create Student') }}</a>
+                   href="{{ route('student.create') }}">{{ __('Create Register') }}</a>
             </div>
         </div>
     </x-slot>

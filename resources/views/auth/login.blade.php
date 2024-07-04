@@ -5,7 +5,7 @@
 
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                    <center><img src="{{asset('logo.png')}}" alt="" style="width: 100%; margin-top: 5px;"></center>
+                    <center><img src="{{asset('images/new/logo.png')}}" alt="" style="width: 100%; margin-top: 5px;"></center>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-12 col-12">
                      <div class="font-weight-bold text-danger">

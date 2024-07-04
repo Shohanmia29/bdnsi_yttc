@@ -54,8 +54,8 @@
             <tr class="  ">
                 <td class="border p-2">{{ __('') }}</td>
                 <td class="border-l p-2"  ></td>
-                <td class="border-r p-2 text-center   " colspan="2">{{ __('Registration No') }}</td>
-                <td class="border p-2" colspan="2">{{ \App\Lib\Helper::serialNumber($result->student->id) }}</td>
+                <td class="border-r p-2 text-center   " colspan="2">{{ __('Password No') }}</td>
+                <td class="border p-2" colspan="2">{{ $result->student->passport??'' }}</td>
                 <td class="border"></td>
             </tr>
 
