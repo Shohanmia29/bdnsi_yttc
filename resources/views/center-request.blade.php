@@ -24,7 +24,7 @@
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="name" label="Institute Name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="owner_name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="director_name" required/>
-                <x-labeled-input type="file" class="w-full lg:w-1/2 p-1" name="director_image" required/>
+                <x-labeled-input type="file" class="w-full lg:w-1/2 p-1" name="director_image" label="Director Photo" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="fathers_name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="mothers_name" required/>
                 <x-labeled-select class="w-full lg:w-1/2 p-1" name="religion" required>
