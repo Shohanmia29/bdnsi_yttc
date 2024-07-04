@@ -2,14 +2,25 @@
     <!-- owl carouse -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .img_slider{
+            height: 200px!important;
+        }
 
+        @media (min-width: 600px) {
+            .img_slider {
+                height: 500px!important;
+            }
+        }
+
+    </style>
 
     <section id="home">
         <section class="">
             <div class="owl-carousel owl-theme">
                 @forelse(\App\Models\Slider::get() as $slider)
                     <div class="item   rslides img">
-                        <img    src="{{asset('images/slider/'.$slider->photo)}}" alt="">
+                        <img  class=" img_slider"   src="{{asset('images/slider/'.$slider->photo)}}" alt="">
                     </div>
                 @empty
                     <div class="item overflow-hidden  w-full " style="background-color: black;">

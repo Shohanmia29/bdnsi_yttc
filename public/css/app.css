@@ -1034,6 +1034,9 @@ select {
 .h-full {
   height: 100%;
 }
+.h-\[200px\] {
+  height: 200px;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -2797,6 +2800,14 @@ select {
 
   .md\:h-52 {
     height: 13rem;
+  }
+
+  .md\:h-\[550px\] {
+    height: 550px;
+  }
+
+  .md\:h-\[600px\] {
+    height: 600px;
   }
 
   .md\:w-1\/2 {
