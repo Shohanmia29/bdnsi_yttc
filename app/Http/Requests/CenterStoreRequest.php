@@ -23,7 +23,7 @@ class CenterStoreRequest extends FormRequest
         return [
             'name' => 'required|string',
             'owner_name' => 'required|string',
-            'director_name' => 'required|string',
+//            'director_name' => 'required|string',
             'director_image' => 'required|image',
             'fathers_name' => 'required|string',
             'mothers_name' => 'required|string',
@@ -39,6 +39,7 @@ class CenterStoreRequest extends FormRequest
             'photo' => 'required|image',
             'authority_signature' => 'required|image',
             'nid_photo' => 'required|image',
+            'nid_back_photo' => 'required|image',
         ];
     }
 

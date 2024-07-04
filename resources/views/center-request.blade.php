@@ -22,8 +22,8 @@
             </div>
             <div class="w-full flex flex-wrap   px-2 md:px-4" x-data="centerRequestData">
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="name" label="Institute Name" required/>
-                <x-labeled-input class="w-full lg:w-1/2 p-1" name="owner_name" required/>
-                <x-labeled-input class="w-full lg:w-1/2 p-1" name="director_name" required/>
+                <x-labeled-input class="w-full lg:w-1/2 p-1" label="Director Name" name="owner_name" required/>
+{{--                <x-labeled-input class="w-full lg:w-1/2 p-1" name="director_name" required/>--}}
                 <x-labeled-input type="file" class="w-full lg:w-1/2 p-1" name="director_image" label="Director Photo" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="fathers_name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="mothers_name" required/>
@@ -54,11 +54,12 @@
                 </x-labeled-select>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="post_office" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="address" required/>
-                <x-labeled-input class="w-full lg:w-1/2 p-1" name="mobile" pattern="\d{11}" x-on:input="$event.target.setCustomValidity($event.target.validity.patternMismatch ? 'Phone number should be 11 digits' : '')" required/>
+                <x-labeled-input class="w-full lg:w-1/2 p-1" name="mobile" pattern="\d{11}" x-on:input="$event.target.setCustomValidity($event.target.validity.patternMismatch ? 'Phone number should be 11 digits' : '')" />
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="email" required type="email"/>
-                <x-labeled-input class="w-full lg:w-1/2 p-1" name="photo" required type="file" accept="image/*"/>
-                <x-labeled-input class="w-full lg:w-1/2 p-1" name="authority_signature" required type="file" accept="image/*"/>
-                <x-labeled-input class="w-full lg:w-1/2 p-1" name="nid_photo" required type="file" accept="image/*"/>
+                <x-labeled-input class="w-full lg:w-1/2 p-1" label="Institute Photo" name="photo" required type="file" accept="image/*"/>
+                <x-labeled-input class="w-full lg:w-1/2 p-1" label="Director Signature" name="authority_signature" required type="file" accept="image/*"/>
+                <x-labeled-input class="w-full lg:w-1/2 p-1" label="Nid (Front Part)" name="nid_photo" required type="file" accept="image/*"/>
+                <x-labeled-input class="w-full lg:w-1/2 p-1" label="Nid (Back Part)" name="nid_back_photo" required type="file" accept="image/*"/>
 
                 <div class="w-full py-8 flex justify-center">
                     <button class="px-4 py-1 bg-[#683091] rounded-md text-lg text-white">{{ __('Apply Now') }}</button>

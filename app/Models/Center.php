@@ -36,6 +36,7 @@ class Center extends Model
         'photo',
         'authority_signature',
         'nid_photo',
+        'nid_back_photo',
         'status',
     ];
 
@@ -47,6 +48,7 @@ class Center extends Model
         'director_image' => ImageField::class.':center/photo',
         'authority_signature' => ImageField::class.':center/authority_signature',
         'nid_photo' => ImageField::class.':center/nid_photo',
+        'nid_back_photo' => ImageField::class.':center/nid_photo',
     ];
 
     public function students(){

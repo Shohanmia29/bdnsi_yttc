@@ -10,7 +10,7 @@
         <img src="{{$institute->photo??''}}" class="card-img-top" alt="Director Photo" style="height: 200px;">
         <div class="card-body" style="background-color:#c7c7c7d1; ">
             <a style="color:black;" href="{{route('institute.details',$institute->id)}}">
-                <h5 class="card-title">{{$institute->name??''}}</h5>
+                <h5 class="card-title" style=""><a  class="underline" >{{$institute->name??''}}</a></h5>
             </a>
         </div>
     </div>

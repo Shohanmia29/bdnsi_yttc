@@ -60,9 +60,9 @@
 
 
 <section id="footer">
-    <div class="bg-[purple]">
+    <div class="bg-[#683091]">
         <div class=" max-w-5xl mx-auto flex px-2 py-5 md:px-10">
-            <div class="  w-full md:w-[40%]  text-white">
+            <div class="  w-full md:w-[30%]  text-white">
                 <ul class="contact-list">
                     <li class="flex items-center py-2 gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
@@ -88,16 +88,18 @@
 
                 </ul>
             </div>
-            <div class="  w-full md:w-[60%]">
-                <div class=" ">
-                    <img src="{{asset('images/1711405466.jpg')}}" style="width: 100%; height: inherit;" />
+            <div class="  w-full md:w-[70%]">
+                <div class="w-full ">
+                    <img class="w-full" src="{{asset('images/1711405466.jpg')}}"  />
                 </div>
             </div>
+
+        </div>
+        <div class=" w-full flex justify-center py-10">
+            <h1 class="text-white">&copy; Copyright 2024. All Rights Reserved By  </h1>
         </div>
     </div>
-    <div class="copyRight">
-        <h1>&copy; Copyright 2024. All Rights Reserved By  </h1>
-    </div>
+
 </section>
 {{--<footer class="bg-gray-800 text-white py-10  ">
         <div class="max-w-6xl mx-auto px-2">
