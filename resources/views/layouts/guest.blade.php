@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <style>
+        .navActive{
+            background-color: lightgrey;
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: #000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
 </head>
 <body>
 <div class="">
@@ -21,13 +31,13 @@
         <div class=" max-w-6xl mx-auto flex flex-wrap font-semibold   ">
                    <div class="text-xs w-full md:text-lg flex flex-wrap   md:justify-between">
                        <a href="/" class="px-3 py-1">Home</a>
-                       <a href="{{route('all_course')}}" class="px-3 py-1  hover:underline">Courses</a>
-                       <a href="{{route('verifiedInstitute')}}" class="px-3 py-1 hover:underline "> Verified Institute  </a>
-                       <a href="{{route('successStudent')}}" class="px-3 py-1 hover:underline ">Success Students</a>
-                       <a href="{{route('result')}}" class="px-3 py-1 hover:underline ">Student Result</a>
-                       <a href="{{route('center-request.create')}}" class="px-3 py-1 hover:underline ">Institute Apply</a>
-                       <a href="{{route('login')}}" class="px-3 py-1 hover:underline ">Institute Login</a>
-                       <a href="{{route('contactUs')}}" class="px-3 py-1 hover:underline ">Contact Us</a>
+                       <a href="{{route('all_course')}}" class="px-3 py-1  @if(request()->routeIs('all_course'))  navActive @endif  hover:underline">Courses</a>
+                       <a href="{{route('verifiedInstitute')}}" class="px-3 @if(request()->routeIs('verifiedInstitute')) navActive @endif  py-1 hover:underline "> Verified Institute  </a>
+                       <a href="{{route('successStudent')}}" class="px-3 py-1 @if(request()->routeIs('successStudent')) navActive @endif  hover:underline ">Success Students</a>
+                       <a href="{{route('result')}}" class="px-3 py-1 @if(request()->routeIs('result')) navActive @endif  hover:underline ">Student Result</a>
+                       <a href="{{route('center-request.create')}}" class="px-3 py-1 @if(request()->routeIs('center-request.create')) navActive @endif  hover:underline ">Institute Apply</a>
+                       <a href="{{route('login')}}" class="px-3 py-1 hover:underline @if(request()->routeIs('login')) navActive @endif  ">Institute Login</a>
+                       <a href="{{route('contactUs')}}" class="px-3 py-1 hover:underline  @if(request()->routeIs('contactUs')) navActive @endif ">Contact Us</a>
 
                    </div>
         </div>
@@ -48,9 +58,7 @@
  </div>
 <link rel="stylesheet" href="{{asset('frontend/style.css')}}">
 
-<style>
 
-</style>
 <section id="footer">
     <div class="bg-[purple]">
         <div class=" max-w-5xl mx-auto flex px-2 py-5 md:px-10">

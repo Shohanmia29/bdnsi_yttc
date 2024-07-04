@@ -26,6 +26,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <title>Bangladesh Youth Technical Training</title>
     <style>
+        .navActive{
+            background-color: lightgrey;
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: #000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+    <style>
         ul.contact-list li svg {
             width: 20px;
             height: 20px;
@@ -233,13 +243,13 @@
                 <div class=" max-w-6xl mx-auto flex flex-wrap font-semibold   ">
                     <div class="text-xs w-full md:text-lg flex flex-wrap   md:justify-between">
                         <a href="/" class="px-3 py-1">Home</a>
-                        <a style="color: black;  text-decoration: none!important;" href="{{route('all_course')}}" class="px-3 py-1    ">Courses</a>
-                        <a style="color: black;  text-decoration: none!important;" href="{{route('verifiedInstitute')}}" class="px-3  py-1 hover:underline "> Verified Institute  </a>
-                        <a style="color: black;  text-decoration: none!important;" href="{{route('successStudent')}}" class="px-3 py-1  hover:underline ">Success Students</a>
-                        <a style="color: black;  text-decoration: none!important;" href="{{route('result')}}" class="px-3 py-1  hover:underline ">Student Result</a>
-                        <a style="color: black;  text-decoration: none!important;" href="{{route('center-request.create')}}" class="px-3  py-1 hover:underline ">Institute Apply</a>
-                        <a style="color: black;  text-decoration: none!important;" href="{{route('login')}}" class="px-3 py-1  hover:underline ">Institute Login</a>
-                        <a style="color: black;  text-decoration: none!important;" href="{{route('contactUs')}}" class="px-3  py-1 hover:underline ">Contact Us</a>
+                        <a style="color: black;  text-decoration: none!important;" href="{{route('all_course')}}" class="px-3 py-1   @if(request()->routeIs('all_course')) navActive @endif  ">Courses</a>
+                        <a style="color: black;  text-decoration: none!important;" href="{{route('verifiedInstitute')}}" class="px-3 @if(request()->routeIs('verifiedInstitute')) navActive @endif  py-1 hover:underline "> Verified Institute  </a>
+                        <a style="color: black;  text-decoration: none!important;" href="{{route('successStudent')}}" class="px-3 py-1 @if(request()->routeIs('successStudent')) navActive @endif  hover:underline ">Success Students</a>
+                        <a style="color: black;  text-decoration: none!important;" href="{{route('result')}}" class="px-3 py-1 @if(request()->routeIs('result')) navActive @endif  hover:underline ">Student Result</a>
+                        <a style="color: black;  text-decoration: none!important;" href="{{route('center-request.create')}}" class="px-3 @if(request()->routeIs('center-request.create')) navActive @endif  py-1 hover:underline ">Institute Apply</a>
+                        <a style="color: black;  text-decoration: none!important;" href="{{route('login')}}" class="px-3 py-1 @if(request()->routeIs('login')) navActive @endif  hover:underline ">Institute Login</a>
+                        <a style="color: black;  text-decoration: none!important;" href="{{route('contactUs')}}" class="px-3 @if(request()->routeIs('contactUs')) navActive @endif  py-1 hover:underline ">Contact Us</a>
 
                     </div>
                 </div>
