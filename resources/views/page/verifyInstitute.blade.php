@@ -41,7 +41,9 @@
         <div class="row w-100" id="branch_wrap">
             @forelse($centers as $center)
                 <div class="col-lg-3 col-md-3 col-sm-6 col-6 p-2">
-                    <x-institute :institute="$center"/>
+
+                       <x-institute :institute="$center"/>
+
                 </div>
             @empty
                 <div class="p-5 mb-4 bg-body-tertiary rounded-3">
