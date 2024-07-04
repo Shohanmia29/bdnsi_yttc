@@ -31,7 +31,9 @@
                @endforelse
 
            </div>
-
+       <div>
+           {{$courses->links()}}
+       </div>
         </div>
     </section>
 

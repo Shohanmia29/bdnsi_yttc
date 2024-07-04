@@ -19,7 +19,7 @@ class FrontendController extends Controller
               return view('page.verifyInstitute',compact('centers'));
       }
       public function successStudent(Request $request){
-             $students=Student::whereHas('result')->select('id','name','picture')->where('status',StudentStatus::Approved)->paginate(50);
+             $students=Student::whereHas('result')->select('id','name','picture')->where('status',StudentStatus::Approved)->paginate(2);
               return view('page.successStudent',compact('students'));
       }
       public function successStudentDetails($id){

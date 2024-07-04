@@ -20,7 +20,7 @@ class HomeController extends Controller
     {
         $courses = Subject::when($request->course_name,function ($q)use($request){
              return $q->where('name','LIKE','%'.$request->course_name.'%');
-        })->paginate(50);
+        })->paginate(40);
         return view('all_course',compact('courses'));
     }
 

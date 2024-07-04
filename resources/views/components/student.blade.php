@@ -1,6 +1,6 @@
 @props(['student'])
 
-<div class="bg-white border border-gray-500 shadow-dashboard rounded-md">
+<div class="bg-white shadow-dashboard rounded-md" style="    border: 3px double black;">
     <a href="{{route('successStudentDetails',$student->id)}}">
         <div class="flex   justify-center items-center    ">
             <img class="  w-full   h-64 " src="{{$student->picture??''}}" alt=""  >

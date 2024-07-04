@@ -1,4 +1,5 @@
 <x-frontend-layouts>
+    <link rel="stylesheet" href="{{mix('css/app.css')}}">
     <div class="container" x-data="centerData">
         <div class="branch-filter-wrap mt-4 py-4">
             <div class="text-center mb-3">
@@ -31,7 +32,8 @@
                         </select>
                     </div>
                     <div class="col-md-2">
-                        <button type="reset" class="btn btn-outline-success" x-on:click="resetFilters">Reset</button>
+                        <button type="submit" class="btn btn-outline-success" >Search</button>
+                        <button type="reset" class="btn btn-outline-danger" x-on:click="resetFilters">Reset</button>
                     </div>
                 </div>
             </form>
@@ -50,7 +52,7 @@
             @endforelse
         </div>
         <div class="w-100">
-            {{ $centers->links() }}
+            {{ $centers->links('page.paginate') }}
         </div>
     </div>
 
