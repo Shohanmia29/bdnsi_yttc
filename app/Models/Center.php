@@ -20,6 +20,8 @@ class Center extends Model
         'code',
         'name',
         'owner_name',
+        'director_name',
+        'director_image',
         'fathers_name',
         'mothers_name',
         'religion',
@@ -42,6 +44,7 @@ class Center extends Model
         'religion' => Religion::class,
         'status' => CenterStatus::class,
         'photo' => ImageField::class.':center/photo',
+        'director_image' => ImageField::class.':center/photo',
         'authority_signature' => ImageField::class.':center/authority_signature',
         'nid_photo' => ImageField::class.':center/nid_photo',
     ];

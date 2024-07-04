@@ -3015,6 +3015,10 @@ select {
     width: 33.333333%;
   }
 
+  .xl\:w-1\/5 {
+    width: 20%;
+  }
+
   .xl\:p-9 {
     padding: 2.25rem;
   }

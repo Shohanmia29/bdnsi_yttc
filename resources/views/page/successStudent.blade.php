@@ -11,7 +11,7 @@
             <div class="max-w-7xl mx-auto p-3">
                 <div class="w-full flex flex-wrap">
                     @forelse($students as $student)
-                        <div class="w-full md:w-1/2 xl:w-1/4 p-3">
+                        <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/5 p-3">
                            <x-student :student="$student" />
                         </div>
                     @empty

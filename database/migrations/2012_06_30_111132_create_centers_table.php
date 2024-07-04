@@ -19,6 +19,8 @@ class CreateCentersTable extends Migration
             $table->string('code', config('database.connections.mysql.default_key_len'))->unique();
             $table->string('name');
             $table->string('owner_name');
+            $table->string('director_name')->nullable();
+            $table->string('director_image')->nullable();
             $table->string('fathers_name');
             $table->string('mothers_name');
             $table->unsignedTinyInteger('religion');

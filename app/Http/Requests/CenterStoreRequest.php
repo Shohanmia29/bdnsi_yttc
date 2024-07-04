@@ -23,6 +23,8 @@ class CenterStoreRequest extends FormRequest
         return [
             'name' => 'required|string',
             'owner_name' => 'required|string',
+            'director_name' => 'required|string',
+            'director_image' => 'required|image',
             'fathers_name' => 'required|string',
             'mothers_name' => 'required|string',
             'religion' => 'required|numeric|enum_value:'.Religion::class.',false',

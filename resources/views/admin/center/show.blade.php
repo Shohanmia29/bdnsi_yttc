@@ -15,6 +15,9 @@
             <table>
                 <tr><td class="p-2 font-semibold">{{ __('Code') }}</td><td class="p-2">{{ $center->code }}</td></tr>
                 <tr><td class="p-2 font-semibold">{{ __('Name') }}</td><td class="p-2">{{ $center->name }}</td></tr>
+                <tr><td class="p-2 font-semibold">{{ __('Director Name') }}</td><td class="p-2">{{ $center->director_name??'' }}</td></tr>
+                <tr><td class="p-2 font-semibold">{{ __('Director Image') }}</td><td class="p-2"><a href="{{ $center->director_image??'' }}"><img
+                                src="{{ $center->director_image??'' }}" class="w-5" alt=""></a></td></tr>
                 <tr><td class="p-2 font-semibold">{{ __('Owner Name') }}</td><td class="p-2">{{ $center->owner_name }}</td></tr>
                 <tr><td class="p-2 font-semibold">{{ __('Fathers Name') }}</td><td class="p-2">{{ $center->fathers_name }}</td></tr>
                 <tr><td class="p-2 font-semibold">{{ __('Mothers Name') }}</td><td class="p-2">{{ $center->mothers_name }}</td></tr>
