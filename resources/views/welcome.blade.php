@@ -151,7 +151,7 @@
 
 
 
-    <button class="btn3 mt-5"><a href=" ">Our All Courses</a></button>
+    <button class="btn3 mt-5"><a href="{{route('all_course')}}">Our All Courses</a></button>
 
 
 
