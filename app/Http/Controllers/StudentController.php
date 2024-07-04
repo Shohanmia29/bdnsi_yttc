@@ -20,16 +20,20 @@ class StudentController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            return datatables(Student::select(['id','center_id','session_id','subject_id','name','status'])
+            return datatables(Student::select(['id','center_id','session_id','subject_id','name','status','roll'])
                 ->own()
                 ->with(['session','subject']))
 
                 ->addColumn('admit', function ($admit) {
                     return '<a   style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank"   target="_blank" href="' . route("student.show",[$admit->id,'admit'=>'admit']) . '">' .'Admit' . '</a>';
-                })->addColumn('registration', function ($registration) {
+                })
+                ->addColumn('registration', function ($registration) {
                     return '<a  style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank"     target="_blank" href="' . route("student.show",[$registration->id,'registration'=>'registration']) . '">' . 'Registration'. '</a>';
                 })
-                ->rawColumns(['admit','registration'])
+                ->addColumn('result', function ($result) {
+                    return '<a  style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank"       href="' .  route('result', ['roll' => $result->roll] ) . '">' . 'Result'. '</a>';
+                })
+                ->rawColumns(['admit','registration','result'])
                 ->toJson();
         }
 

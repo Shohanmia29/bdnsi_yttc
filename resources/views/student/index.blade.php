@@ -19,7 +19,8 @@
                 <th>{{ __('Subject') }}</th>
                 <th>{{ __('Status') }}</th>
                 <th>{{ __('Registration') }}</th>
-                <th>{{ __('Admit Card') }}</th>
+                <th>{{ __('Registration') }}</th>
+                <th>{{ __('Result') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
             </thead>
@@ -55,6 +56,7 @@
                     {data: 'status'},
                     {data: 'registration'},
                     {data: 'admit'},
+                    {data: 'result'},
                     {data: 'action', orderable: false, searchable: false},
                 ]
             });
