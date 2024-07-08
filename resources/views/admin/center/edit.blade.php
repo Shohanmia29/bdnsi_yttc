@@ -16,7 +16,7 @@
         @method('PUT')
         <div class="flex flex-wrap justify-center w-full bg-white p-4" x-data="centerData">
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="code" :value="old('code', $center->code)" required/>
-            <x-labeled-input class="w-full lg:w-1/2 p-1" name="name" :value="old('name', $center->name)" required/>
+            <x-labeled-input class="w-full lg:w-1/2 p-1" name="name" label="Institute Name" :value="old('name', $center->name)" required/>
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="owner_name" :value="old('owner_name', $center->owner_name)" required/>
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="fathers_name" :value="old('fathers_name', $center->fathers_name)" required/>
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="mothers_name" :value="old('mothers_name', $center->mothers_name)" required/>
@@ -45,15 +45,12 @@
                     <option x-bind:value="upazill.id"  x-html="upazill.name"></option>
                 </template>
             </x-labeled-select>
-            <x-labeled-input class="w-full lg:w-1/2 p-1"  name="nationality" :value="old('nationality', $center->nationality)" required/>
-            <x-labeled-input class="w-full lg:w-1/2 p-1" name="post_office" :value="old('post_office', $center->post_office)" required/>
-            <x-labeled-input class="w-full lg:w-1/2 p-1" name="postal_code" :value="old('postal_code', $center->postal_code)" required/>
-            <x-labeled-input class="w-full lg:w-1/2 p-1" name="facebook_url" :value="old('facebook_url', $center->facebook_url)" type="url"/>
-            <x-labeled-input class="w-full lg:w-1/2 p-1" name="no_of_computers" :value="old('no_of_computers', $center->no_of_computers)" type="number" required/>
-            <x-labeled-input class="w-full lg:w-1/2 p-1" name="institute_age" :value="old('institute_age', $center->institute_age)" type="number" required/>
+            <x-labeled-input class="w-full lg:w-1/2 p-1"  name="nationality" :value="old('nationality', $center->nationality)"  />
+            <x-labeled-input class="w-full lg:w-1/2 p-1" name="post_office" :value="old('post_office', $center->post_office)"  />
+
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="address" :value="old('address', $center->address)" required/>
             <x-labeled-input class="w-full lg:w-1/2 p-1" name="mobile" :value="old('mobile', $center->mobile)" pattern="\d{11}" x-on:input="$event.target.setCustomValidity($event.target.validity.patternMismatch ? 'Phone number should be 11 digits' : '')" required/>
-            <x-labeled-input class="w-full lg:w-1/2 p-1" name="email" :value="old('email', $center->email)" required type="email"/>
+            <x-labeled-input class="w-full lg:w-1/2 p-1" name="email" :value="old('email', $center->email)"   type="email"/>
             <x-labeled-select class="w-full lg:w-1/2 p-1" name="status" required>
                 @foreach(\App\Enums\CenterStatus::getInstances() as $status)
                     <option value="{{ $status->value }}" @selected(old('status', $center->status->value) == $status->value)>{{ $status->key }}</option>
