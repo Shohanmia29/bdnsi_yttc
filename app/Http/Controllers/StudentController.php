@@ -148,7 +148,7 @@ class StudentController extends Controller
             'present_address' => 'required|string',
             'permanent_address' => 'required|string',
             'passport' => 'nullable|string',
-            'phone' =>'required|string|min:11|max:11',
+            'phone' =>'nullable|string|min:11|max:11',
             'email' =>'nullable|email',
             'guardian_name' =>'required|string',
             'nid_or_birth' =>'required|string',
