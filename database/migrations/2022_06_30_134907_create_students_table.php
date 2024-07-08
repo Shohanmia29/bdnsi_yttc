@@ -28,7 +28,7 @@ class CreateStudentsTable extends Migration
             $table->unsignedTinyInteger('religion');
             $table->string('present_address');
             $table->string('permanent_address');
-            $table->string('phone')->unique();
+            $table->string('phone')->nullable();
             $table->string('email')->nullable();
             $table->string('guardian_name');
             $table->string('nid_or_birth')->nullable();

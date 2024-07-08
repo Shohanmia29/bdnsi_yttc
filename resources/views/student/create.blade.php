@@ -30,7 +30,7 @@
             <x-labeled-input name="present_address" label="District" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="permanent_address" label="Upazila" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="passport" label="Passport Number"   class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-            <x-labeled-input label="Mobile No" name="phone" pattern="\d{11}" x-data x-on:input="$event.target.setCustomValidity($event.target.validity.patternMismatch ? 'Phone number should be 11 digits' : '')" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <x-labeled-input label="Mobile No" name="phone" pattern="\d{11}" x-data x-on:input="$event.target.setCustomValidity($event.target.validity.patternMismatch ? 'Phone number should be 11 digits' : '')"   class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="email" type="email" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="guardian_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="nid_or_birth" label="NID or Birth Certificate No." required class="w-full p-1 md:w-1/2 lg:w-1/3"/>

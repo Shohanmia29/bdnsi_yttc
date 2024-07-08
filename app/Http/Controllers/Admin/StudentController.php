@@ -44,7 +44,7 @@ class StudentController extends Controller
                     return '<a target="_blank" href="' . route("admin.result.show", $student_result->result->id??'') . '">' . ($student_result->result()->count() == 1 ? 'Result' : 'N/A') . '</a>';
                 })
                 ->rawColumns(['registration','roll','student_result'])
-                ->toJson(); 
+                ->toJson();
         }
 
         return view('admin.student.index');
@@ -76,7 +76,7 @@ class StudentController extends Controller
             'religion' => 'required|numeric|enum_value:'.Religion::class.',false',
             'present_address' => 'required|string',
             'permanent_address' => 'required|string',
-            'phone' =>'required|string|min:11|max:11|unique:students,phone',
+            'phone' =>'required',
             'email' =>'nullable|email',
             'guardian_name' =>'required|string',
             'nid_or_birth' =>'required|string',
@@ -137,7 +137,7 @@ class StudentController extends Controller
                 'religion' => 'required|numeric|enum_value:'.Religion::class.',false',
                 'present_address' => 'required|string',
                 'permanent_address' => 'required|string',
-                'phone' =>'required|string|min:11|max:11',
+                'phone' =>'nullable|min:11|max:11',
                 'email' =>'nullable|email',
                 'guardian_name' =>'required|string',
                 'nid_or_birth' =>'required|string',
