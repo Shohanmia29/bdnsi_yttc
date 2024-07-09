@@ -8,18 +8,18 @@
     <div class="flex flex-wrap justify-center w-full bg-white p-4">
         <form class="w-full" action="{{ route('student-submission.create') }}" method="GET">
             <div class="w-full flex flex-wrap">
-                <x-labeled-select name="session" label="Session" required class="w-full p-1 md:w-1/2 lg:w-1/3">
+                <x-select2 name="session" label="Session" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                     @foreach($sessions as $session)
                         <option
                             value="{{ $session->id }}" @selected(old('sessions', request('sessions')) == $session->id)>{{ $session->name }}</option>
                     @endforeach
-                </x-labeled-select>
-                <x-labeled-select name="subject" label="Subject" required class="w-full p-1 md:w-1/2 lg:w-1/3">
+                </x-select2>
+                <x-select2 name="subject" label="Subject" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                     @foreach($subjects as $subject)
                         <option
                             value="{{ $subject->id }}" @selected(old('subject', request('subject')) == $subject->id)>{{ $subject->name }}</option>
                     @endforeach
-                </x-labeled-select>
+                </x-select2>
                 <div class="w-full pt-4 flex justify-end lg:w-1/3">
                     <x-button>{{ __('Search') }}</x-button>
                 </div>
