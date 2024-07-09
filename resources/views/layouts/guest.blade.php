@@ -60,7 +60,7 @@
 
 
 <section id="footer">
-    <div class="bg-[#683091]">
+    <div class="bg-[#0d6efd]">
         <div class=" max-w-5xl mx-auto flex px-2 py-5 md:px-10">
             <div class="  w-full md:w-[30%]  text-white">
                 <ul class="contact-list">

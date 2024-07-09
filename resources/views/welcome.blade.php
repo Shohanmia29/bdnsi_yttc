@@ -100,7 +100,7 @@
                             </div>
                         </div>
                         <div class="flip-box-back">
-                            <a class="btn" style="background: #683091; color: white;" href="/course/48">Read More</a>
+                            <a class="btn" style="background: #0d6efd; color: white;" href="/course/48">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -139,7 +139,7 @@
                             </div>
                         </div>
                         <div class="flip-box-back">
-                            <a class="btn" style="background: #683091; color: white;" href="/course/217">Read More</a>
+                            <a class="btn" style="background: #0d6efd; color: white;" href="/course/217">Read More</a>
                         </div>
                     </div>
                 </div>
