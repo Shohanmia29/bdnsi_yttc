@@ -31,7 +31,7 @@
                                     :
                                 </div>
                                 <div class=" w-[50%]">
-                                    {{$data->name??'N/A'}}
+                                    {{$data->owner_name??'N/A'}}
                                 </div>
                             </li>
                             <li class="w-full border p-2 rounded-md mt-2 flex  ">
