@@ -70,7 +70,7 @@
                 <td class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Total') }}</td>
                 <td class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Full Mark') }}</td>
                 <td class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Grade') }}</td>
-                <td class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('CGPA') }}</td>
+                <td class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('GPA') }}</td>
             </tr>
             <tr class="w-full bg-gray-100" x-data="{ w: {{ optional($result)->written ?? 0 }}, p: {{ optional($result)->practical ?? 0 }}, v: {{ optional($result)->viva ?? 0 }} }">
                 <td class="border p-2 text-center w-1/6" x-html="w"></td>
