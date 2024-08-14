@@ -13,7 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
     <script src="{{mix('js/app.js')}}"></script>
     <x-calculate-gpa-script />
-    <title>Registration Card</title>
+    <title>Transcript  </title>
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -136,7 +136,8 @@
     <button onclick="generate_pdf()" class="btn btn-secondary">Download</button>
     <a type="button" class="btn btn-warning px-5 mx-4" href="">Back</a>
 </div>
-<div class="admit-card-wrap" id="html2pdf">
+@php($result=$student->result)
+<div class="admit-card-wrap" id="html2pdf" x-data="{ w: {{ optional($result)->written ?? 0 }}, p: {{ optional($result)->practical ?? 0 }}, v: {{ optional($result)->viva ?? 0 }} }">
     <div class="admit-card-header">
         <div class="d-flex align-items-center ">
             <div class="w-18 text-center ">
@@ -156,9 +157,9 @@
             <p>Serial No. : {{\App\Lib\Helper::serialNumber($student->id)}}</p>
         </div>
     </div>
-    @php($result=$student->result)
 
-    <div class="admit-card-body"  x-data="{ w: {{ optional($result)->written ?? 0 }}, p: {{ optional($result)->practical ?? 0 }}, v: {{ optional($result)->viva ?? 0 }} }">
+
+    <div class="admit-card-body"  >
 {{--        <h3 class="me-5 text-center fw-bold mb-4">{{$student->subject->name??'N/A'}}</h3>--}}
         <div class="cert-info fw-bold text-dark w-100 d-flex flex-row justify-content-center mt-2 ps-3 gap-2">
             <div class="w-75">
@@ -243,6 +244,7 @@
             </div>
 
 
+
             <div class="w-25 text-center pe-2">
                 <div style="/*margin-top: -175px;*/">
 {{--                    <img src="{{$student->picture}}" style="width: 150px; margin-bottom: 55px;" alt="portrait" />--}}
@@ -250,8 +252,34 @@
 
             </div>
         </div>
+
     </div>
     <div class="admit-card-footer">
+        <div>
+            <table class="table table-border ">
+                <thead>
+                <tr class="w-full">
+                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Written') }}</th>
+                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Practical') }}</th>
+                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Viva') }}</th>
+                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Total') }}</th>
+                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Full Mark') }}</th>
+                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Grade') }}</th>
+                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('CGPA') }}</th>
+                </tr>
+                </thead>
+                <tr class="w-full bg-gray-100"  >
+                    <td class="border p-2 text-center w-1/6" x-html="w"></td>
+                    <td class="border p-2 text-center w-1/6" x-html="p"></td>
+                    <td class="border p-2 text-center w-1/6" x-html="v"></td>
+                    <td class="border p-2 text-center w-1/6" x-html="parseInt(w)+parseInt(p)+parseInt(v)"></td>
+                    <td class="border p-2 text-center w-1/6">100</td>
+                    <td class="border p-2 text-center w-1/6" x-html="calculateGPA(parseInt(w)+parseInt(p)+parseInt(v))"></td>
+                    <td class="border p-2 text-center w-1/6" x-html="calculateCGPA(parseInt(w)+parseInt(p)+parseInt(v))">.</td>
+                </tr>
+
+            </table>
+        </div>
         <div class="footer-sign-wrap">
             <div class="sign-cont text-center">
 {{--                <hr />--}}
