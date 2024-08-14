@@ -36,8 +36,12 @@ class StudentController extends Controller
         if ($request->ajax()) {
             return datatables(Student::with('center:id,code','subject:id,name','result'))
                 ->editColumn('registration', function ($registration) {
-                    return '<a   style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank" href="' . route("admin.student.show",[$registration->id,'registration'=>'registration']) . '">' . $registration->registration . '</a>';
-                }) ->editColumn('roll', function ($roll) {
+                    return (
+                        '<a style="background-color:green; padding:3px; border-radius:4px; color:white" target="_blank" href="' . route("admin.student.show", [$registration->id, 'registration' => 'registration']) . '">' . $registration->registration . '</a>'
+                        . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.student.show", [$registration->id, 'transcript' => 'transcript']) . '">Transcript</a>'
+                    );
+                })
+                ->editColumn('roll', function ($roll) {
                     return '<a   style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank" href="' . route("admin.student.admit",[$roll->id,'admit'=>'admit']) . '">' . $roll->roll . '</a>';
                 })
                 ->addColumn('student_result', function ($student_result) {
@@ -99,7 +103,14 @@ class StudentController extends Controller
      if ($request->registration=='registration'){
               $student= Student::where('id',$student->id)->firstOrFail();
             return view('admin.student.registrationForm',compact('student'));
-     }else{
+     }
+     elseif($request->transcript=='transcript'){
+              $student= Student::where('id',$student->id)->firstOrFail();
+            return view('admin.student.transcript',compact('student'));
+     }
+
+
+     else{
          return view('admin.student.show', [
              'student' => $student
          ]);
