@@ -245,12 +245,61 @@
 
 
 
-            <div class="w-25 text-center pe-2">
-                <div style="/*margin-top: -175px;*/">
-{{--                    <img src="{{$student->picture}}" style="width: 150px; margin-bottom: 55px;" alt="portrait" />--}}
+
+                <div class="w-50 text-center pe-2 ">
+                    <div class=" ">
+                        <table class="table border">
+                            <thead>
+                            <tr>
+                                <th class="border">Range of Marks</th>
+                                <th class="border">Grade</th>
+                                <th class="border">Point</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="border">80 or above</td>
+                                <td class="border">A+</td>
+                                <td class="border">5.00</td>
+                            </tr>
+                            <tr>
+                                <td class="border">70 To 79</td>
+                                <td class="border">A</td>
+                                <td class="border">4.00</td>
+                            </tr>
+                            <tr>
+                                <td class="border">60 to 69</td>
+                                <td class="border">A-</td>
+                                <td class="border">3.5</td>
+                            </tr>
+                            <tr>
+                                <td class="border">50-59</td>
+                                <td class="border">B</td>
+                                <td class="border">3.0</td>
+                            </tr>
+                            <tr>
+                                <td class="border">40 to 59</td>
+                                <td class="border">C</td>
+                                <td class="border">2.0</td>
+                            </tr>
+                            <tr>
+                                <td class="border">33 to 39</td>
+                                <td class="border">D</td>
+                                <td class="border">1.0</td>
+                            </tr>
+                            <tr>
+                                <td class="border">0-32</td>
+                                <td class="border">F</td>
+                                <td class="border">0.0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
 
-            </div>
+
+
         </div>
 
     </div>
@@ -306,7 +355,7 @@
     function generate_pdf() {
         var opt = {
             margin: 0,
-            filename: 'myfile.pdf',
+            filename: 'transcript.pdf',
             image: {
                 type: 'jpeg',
                 quality: 0.99
