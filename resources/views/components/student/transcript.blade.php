@@ -314,7 +314,7 @@
                     <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Total') }}</th>
                     <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Full Mark') }}</th>
                     <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Grade') }}</th>
-                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('CGPA') }}</th>
+                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('GPA') }}</th>
                 </tr>
                 </thead>
                 <tr class="w-full bg-gray-100"  >
