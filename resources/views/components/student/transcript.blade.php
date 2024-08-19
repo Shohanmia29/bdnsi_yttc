@@ -70,7 +70,7 @@
         .admit-card-footer {
             position: absolute;
             width: 100%;
-            bottom: 157px;
+            bottom: 273px;
             left: 0;
             padding: 20px 130px;
         }
