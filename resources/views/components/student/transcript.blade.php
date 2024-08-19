@@ -343,11 +343,11 @@
 {{--                <hr />--}}
 {{--                <p>Signature Of The Regional <br /> Director</p>--}}
             </div>
-            <div class="sign-cont text-center">
+        {{--      <div class="sign-cont text-center">
                 <img class="text-center" style="width: 200px" src="{{asset('images/Signature1.png')}}" alt="signature" />
                 <hr />
                 <p>Exam Controller <br /> bystt</p>
-            </div>
+            </div>--}}
         </div>
         <hr />
         <div class="fw-semibold">
