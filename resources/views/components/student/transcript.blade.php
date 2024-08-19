@@ -131,6 +131,9 @@
              font-weight: 900;
 
         }
+        .border{
+            border-color: black!important;
+        }
     </style>
 </head>
 
@@ -157,7 +160,7 @@
         <div style="position: absolute;   left:70%;">
             <div class=" text-center pe-2 ">
                 <div class=" ">
-                    <div class="h5  "><strong>Gradding System</strong></div>
+                    <div class="h6  "><strong>Gradding System</strong></div>
                     <table class="table border"  >
                         <thead>
                         <tr>
