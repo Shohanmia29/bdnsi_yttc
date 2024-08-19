@@ -128,7 +128,7 @@
             text-align: center;
         }
         .bold{
-             font-weight: bold;
+             font-weight: 900;
 
         }
     </style>
