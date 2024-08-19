@@ -186,7 +186,7 @@
                             <td class="border bold">3.5</td>
                         </tr>
                         <tr>
-                            <td class="border bold">50-59</td>
+                            <td class="border bold">50 to 59</td>
                             <td class="border bold">B</td>
                             <td class="border bold">3.0</td>
                         </tr>
@@ -196,12 +196,12 @@
                             <td class="border bold">2.0</td>
                         </tr>
                         <tr>
-                            <td class="border bold">33 to 39</td>
+                            <td class="border bold">33 To 39</td>
                             <td class="border bold">D</td>
                             <td class="border bold">1.0</td>
                         </tr>
                         <tr>
-                            <td class="border bold">0-32</td>
+                            <td class="border bold">0 to 32</td>
                             <td class="border bold">F</td>
                             <td class="border bold">0.0</td>
                         </tr>
