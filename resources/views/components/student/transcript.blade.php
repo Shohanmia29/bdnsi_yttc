@@ -157,7 +157,7 @@
         </div>
     </div>
     <div style="position: relative;">
-        <div style="position: absolute;   left:70%;margin-top:2%;">
+        <div style="position: absolute;   left:70%;margin-top:6%;">
             <div class=" text-center pe-2 " >
                 <div class=" ">
                     <div class="h6  bold "><strong>Gradding System</strong></div>
