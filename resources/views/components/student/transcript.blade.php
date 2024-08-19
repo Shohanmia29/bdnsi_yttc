@@ -36,12 +36,12 @@
         }
 
         .info-btn {
-            border: 3px solid green;
             background: red;
             color: white !important;
             padding: 1px 26px;
             font-size: 28px;
-            border-radius: 21px;
+            border-radius: 21px  ;
+            border-color: red;
         }
 
         .admit-card-body {
@@ -70,7 +70,7 @@
         .admit-card-footer {
             position: absolute;
             width: 100%;
-            bottom: 80px;
+            bottom: 157px;
             left: 0;
             padding: 20px 130px;
         }
@@ -127,6 +127,10 @@
             width: 5%;
             text-align: center;
         }
+        .bold{
+             font-weight: bold;
+
+        }
     </style>
 </head>
 
@@ -145,7 +149,63 @@
             </div>
             <div class="cert-headings w-82">
                 <img src="{{asset('images/banner.png')}}" class="w-100" alt="">
-                <h5 class="normal-font" style="margin-left: 38px;"> Approved By Government of the People's Republic of Bangladesh.</h5>
+                <h5 class="normal-font" style="margin-left: 38px; margin-top: 10px"> Approved By Government of the People's Republic of Bangladesh.</h5>
+            </div>
+        </div>
+    </div>
+    <div style="position: relative;">
+        <div style="position: absolute;   left:70%;">
+            <div class=" text-center pe-2 ">
+                <div class=" ">
+                    <div class="h5  "><strong>Gradding System</strong></div>
+                    <table class="table border"  >
+                        <thead>
+                        <tr>
+                            <th class="border bold" >Range of Marks</th>
+                            <th class="border bold">Grade</th>
+                            <th class="border bold">Point</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="border bold">80 or above</td>
+                            <td class="border bold">A+</td>
+                            <td class="border bold">5.00</td>
+                        </tr>
+                        <tr>
+                            <td class="border bold">70 To 79</td>
+                            <td class="border bold">A</td>
+                            <td class="border bold">4.00</td>
+                        </tr>
+                        <tr>
+                            <td class="border bold">60 to 69</td>
+                            <td class="border bold">A-</td>
+                            <td class="border bold">3.5</td>
+                        </tr>
+                        <tr>
+                            <td class="border bold">50-59</td>
+                            <td class="border bold">B</td>
+                            <td class="border bold">3.0</td>
+                        </tr>
+                        <tr>
+                            <td class="border bold">40 to 59</td>
+                            <td class="border bold">C</td>
+                            <td class="border bold">2.0</td>
+                        </tr>
+                        <tr>
+                            <td class="border bold">33 to 39</td>
+                            <td class="border bold">D</td>
+                            <td class="border bold">1.0</td>
+                        </tr>
+                        <tr>
+                            <td class="border bold">0-32</td>
+                            <td class="border bold">F</td>
+                            <td class="border bold">0.0</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
     </div>
@@ -159,10 +219,10 @@
     </div>
 
 
-    <div class="admit-card-body"  >
+    <div class="admit-card-body"    >
 {{--        <h3 class="me-5 text-center fw-bold mb-4">{{$student->subject->name??'N/A'}}</h3>--}}
         <div class="cert-info fw-bold text-dark w-100 d-flex flex-row justify-content-center mt-2 ps-3 gap-2">
-            <div class="w-75">
+            <div class="w-100" >
                 <div class="data-item-wrap">
                     <div class="data-label">Name</div>
                     <div>:</div>
@@ -242,64 +302,6 @@
 
 
             </div>
-
-
-
-
-                <div class="w-50 text-center pe-2 ">
-                    <div class=" ">
-                        <table class="table border">
-                            <thead>
-                            <tr>
-                                <th class="border">Range of Marks</th>
-                                <th class="border">Grade</th>
-                                <th class="border">Point</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td class="border">80 or above</td>
-                                <td class="border">A+</td>
-                                <td class="border">5.00</td>
-                            </tr>
-                            <tr>
-                                <td class="border">70 To 79</td>
-                                <td class="border">A</td>
-                                <td class="border">4.00</td>
-                            </tr>
-                            <tr>
-                                <td class="border">60 to 69</td>
-                                <td class="border">A-</td>
-                                <td class="border">3.5</td>
-                            </tr>
-                            <tr>
-                                <td class="border">50-59</td>
-                                <td class="border">B</td>
-                                <td class="border">3.0</td>
-                            </tr>
-                            <tr>
-                                <td class="border">40 to 59</td>
-                                <td class="border">C</td>
-                                <td class="border">2.0</td>
-                            </tr>
-                            <tr>
-                                <td class="border">33 to 39</td>
-                                <td class="border">D</td>
-                                <td class="border">1.0</td>
-                            </tr>
-                            <tr>
-                                <td class="border">0-32</td>
-                                <td class="border">F</td>
-                                <td class="border">0.0</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                </div>
-
-
-
         </div>
 
     </div>
@@ -318,13 +320,13 @@
                 </tr>
                 </thead>
                 <tr class="w-full bg-gray-100"  >
-                    <td class="border p-2 text-center w-1/6" x-html="w"></td>
-                    <td class="border p-2 text-center w-1/6" x-html="p"></td>
-                    <td class="border p-2 text-center w-1/6" x-html="v"></td>
-                    <td class="border p-2 text-center w-1/6" x-html="parseInt(w)+parseInt(p)+parseInt(v)"></td>
-                    <td class="border p-2 text-center w-1/6">100</td>
-                    <td class="border p-2 text-center w-1/6" x-html="calculateGPA(parseInt(w)+parseInt(p)+parseInt(v))"></td>
-                    <td class="border p-2 text-center w-1/6" x-html="calculateCGPA(parseInt(w)+parseInt(p)+parseInt(v))">.</td>
+                    <td class="border p-2 bold text-center w-1/6" x-html="w"></td>
+                    <td class="border p-2 bold text-center w-1/6" x-html="p"></td>
+                    <td class="border p-2 bold text-center w-1/6" x-html="v"></td>
+                    <td class="border p-2 bold text-center w-1/6" x-html="parseInt(w)+parseInt(p)+parseInt(v)"></td>
+                    <td class="border p-2 bold text-center w-1/6">100</td>
+                    <td class="border p-2 bold text-center w-1/6" x-html="calculateGPA(parseInt(w)+parseInt(p)+parseInt(v))"></td>
+                    <td class="border p-2 bold text-center w-1/6" x-html="calculateCGPA(parseInt(w)+parseInt(p)+parseInt(v))">.</td>
                 </tr>
 
             </table>
