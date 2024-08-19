@@ -157,10 +157,10 @@
         </div>
     </div>
     <div style="position: relative;">
-        <div style="position: absolute;   left:70%;">
+        <div style="position: absolute;   left:70%;margin-top:2%;">
             <div class=" text-center pe-2 ">
                 <div class=" ">
-                    <div class="h6  "><strong>Gradding System</strong></div>
+                    <div class="h6  bold "><strong>Gradding System</strong></div>
                     <table class="table border"  >
                         <thead>
                         <tr>
