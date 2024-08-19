@@ -26,7 +26,7 @@
         .admit-card-wrap {
             width: 1170px;
             height: 1650px;
-            background-image: url({{asset('images/new/RegistrationCard.jpg')}});
+            background-image: url({{asset('images/new/transacpt.jpg')}});
             margin: auto;
             background-position: center center;
             background-repeat: no-repeat;
