@@ -101,6 +101,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('exam', \App\Http\Controllers\Admin\ExamController::class);
         Route::resource('question', \App\Http\Controllers\Admin\QuestionController::class);
         Route::get('admit-card/{id}',[\App\Http\Controllers\Admin\StudentController::class,'admit'])->name('student.admit');
+        Route::get('certificate/{id}',[\App\Http\Controllers\Admin\StudentController::class,'certificate'])->name('student.certificate');
 
         Route::get('student-registration-form/{id}', [\App\Http\Controllers\Admin\StudentController::class, 'registrationForm'])->name('registrationForm');
 

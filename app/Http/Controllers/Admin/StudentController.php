@@ -23,12 +23,16 @@ class StudentController extends Controller
 {
     use ChecksPermission;
 
-    protected  $skipActions=['admit'];
+    protected  $skipActions=['admit','certificate'];
 
     public function admit($id){
            $student=Student::where('id',$id)->firstOrFail();
-
            return view('admin.student.admitCard',compact('student'));
+    }
+
+    public function certificate($id){
+           $student=Student::where('id',$id)->firstOrFail();
+           return view('admin.student.certificate',compact('student'));
     }
 
     public function index(Request $request)
@@ -41,13 +45,16 @@ class StudentController extends Controller
                         . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.student.show", [$registration->id, 'transcript' => 'transcript']) . '">Transcript</a>'
                     );
                 })
+                ->editColumn('certificate', function ($certificate) {
+                    return '<a   style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank" href="' . route("admin.student.certificate",[$certificate->id,'certificate'=>'certificate']) . '">' . "Certificate" . '</a>';
+                })
                 ->editColumn('roll', function ($roll) {
                     return '<a   style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank" href="' . route("admin.student.admit",[$roll->id,'admit'=>'admit']) . '">' . $roll->roll . '</a>';
                 })
                 ->addColumn('student_result', function ($student_result) {
                     return '<a target="_blank" href="' . route("admin.result.show", $student_result->result->id??'') . '">' . ($student_result->result()->count() == 1 ? 'Result' : 'N/A') . '</a>';
                 })
-                ->rawColumns(['registration','roll','student_result'])
+                ->rawColumns(['registration','roll','student_result','certificate'])
                 ->toJson();
         }
 

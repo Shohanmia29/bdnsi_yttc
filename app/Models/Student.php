@@ -10,6 +10,7 @@ use App\Enums\StudentStatus;
 use App\Traits\DeletesImage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
@@ -101,6 +102,7 @@ class Student extends Authenticatable
     {
         return $this->hasOne(Result::class);
     }
+
 
     public function scopeOwn($query, $centerId = null)
     {

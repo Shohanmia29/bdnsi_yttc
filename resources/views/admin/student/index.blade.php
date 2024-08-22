@@ -20,6 +20,7 @@
                 <th>{{ __('Center') }}</th>
                 <th>{{ __('Subject') }}</th>
                 <th>{{ __('Phone') }}</th>
+                <th>{{ __('Certificate') }}</th>
                 <th>{{ __('Result') }}</th>
                 <th>{{ __('Roll') }}</th>
                 <th>{{ __('Registration') }}</th>
@@ -60,6 +61,7 @@
                     {data: 'center.code'},
                     {data: 'subject.name'},
                     {data: 'phone'},
+                    {data: 'certificate'},
                     {data: 'student_result'},
                     {data: 'roll',searchable:true},
                     {data: 'registration',searchable:true},
