@@ -45,7 +45,7 @@ class StudentController extends Controller
                         . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.student.show", [$registration->id, 'transcript' => 'transcript']) . '">Transcript</a>'
                     );
                 })
-                ->editColumn('certificate', function ($certificate) {
+                ->addColumn('certificate', function ($certificate) {
                     return '<a   style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank" href="' . route("admin.studentCertificate",$certificate->id) . '">' . "Certificate" . '</a>';
                 })
                 ->editColumn('roll', function ($roll) {
