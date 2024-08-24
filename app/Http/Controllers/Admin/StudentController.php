@@ -46,7 +46,7 @@ class StudentController extends Controller
                     );
                 })
                 ->editColumn('certificate', function ($certificate) {
-                    return '<a   style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank" href="' . route("admin.studentCertificate",[$certificate->id,'certificate'=>'certificate']) . '">' . "Certificate" . '</a>';
+                    return '<a   style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank" href="' . route("admin.studentCertificate",$certificate->id) . '">' . "Certificate" . '</a>';
                 })
                 ->editColumn('roll', function ($roll) {
                     return '<a   style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank" href="' . route("admin.student.admit",[$roll->id,'admit'=>'admit']) . '">' . $roll->roll . '</a>';
