@@ -61,7 +61,7 @@
                     {data: 'center.code'},
                     {data: 'subject.name'},
                     {data: 'phone'},
-                    {data: 'certificate'},
+                    {data: 'certificate',orderable:false,searchable:false},
                     {data: 'student_result'},
                     {data: 'roll',searchable:true},
                     {data: 'registration',searchable:true},
