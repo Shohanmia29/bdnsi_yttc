@@ -1,7 +1,7 @@
 <x-admin-app-layout>
 
         <style>
-
+            [x-cloak] { display: none !important; }
             @font-face {
                 font-family: 'English111 Vivace BT';
                 src: url('{{ asset('frontend/font-awesome-4.7.0/fonts/e111viva.ttf') }}') format('truetype');
@@ -40,7 +40,6 @@
             .absolute {
                 position: absolute;
             }
-
             /* Specific positioning of text elements */
             .student-id { top: 44%; left: 33.5%; }
             .student-roll { top: 38%; left: 77.5%; }
@@ -57,11 +56,16 @@
 
         </style>
 
-        <div class="success-student">
+        <div class="success-student" x-data="{ loading: true }" x-init="window.addEventListener('load', () => loading = false)" x-cloak>
+
+                <div x-show="loading" class="fixed print:hidden inset-0 bg-white flex items-center justify-center z-50">
+                    <!-- Loading spinner -->
+                    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
+                </div>
             <div class="flex justify-end print:hidden">
                   <button onclick="window.print()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100 ">Print</button>
             </div>
-                <div class="card-body">
+                <div class="card-body" x-show="!loading">
                     <div class="back-img " style="background-image:url({{ asset('images/new/certifcate.jpg')}}) ; position: relative;  font-weight: bold;">
                         <div class=" ">
                             <div class="absolute student-id">{{$student->id ?? ''}}</div>
