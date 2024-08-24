@@ -13,14 +13,26 @@
         font-size: 25px;
     }
 
+    @media print {
+        body {-webkit-print-color-adjust: exact;}
+    }
+    @page {
+        size:A4 landscape;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin: 0;
+    }
+
+
     /* Container styling */
     .admit-card-wrap {
-        width: 100%;
-        height: 835px;
+        width: 1000px;
+        height: 100vh;
         background-image: url({{ asset('images/new/certifcate.jpg') }});
         background-position: center center;
         background-repeat: no-repeat;
-        background-size: cover;
         background-color: #FAFCF2;
         position: relative;
     }
