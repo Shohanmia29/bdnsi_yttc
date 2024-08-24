@@ -856,6 +856,18 @@ select {
 .left-\[7\%\] {
   left: 7%;
 }
+.left-\[35\.5\%\] {
+  left: 35.5%;
+}
+.top-\[66\%\] {
+  top: 66%;
+}
+.top-\[62\%\] {
+  top: 62%;
+}
+.top-\[66\.3\%\] {
+  top: 66.3%;
+}
 .z-0 {
   z-index: 0;
 }
@@ -2910,6 +2922,10 @@ select {
 
   .md\:p-2 {
     padding: 0.5rem;
+  }
+
+  .md\:p-10 {
+    padding: 2.5rem;
   }
 
   .md\:px-4 {

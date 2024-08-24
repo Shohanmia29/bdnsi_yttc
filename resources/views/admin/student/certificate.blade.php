@@ -1,41 +1,83 @@
-<link rel="stylesheet" href="{{mix('css/app.css')}}">
-    <style>
-        .admit-card-wrap {
-            width: 1185px;
-            height: 835px;
-            background-image: url({{asset('images/new/certifcate.jpg')}});
-            margin: auto auto;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: #FAFCF2;
-            padding: 70px 90px;
-            position: relative;
+<link rel="stylesheet" href="{{ mix('css/app.css') }}">
+<style>
+    /* Define custom font */
+    @font-face {
+        font-family: 'English111 Vivace BT';
+        src: url('{{ asset('frontend/font-awesome-4.7.0/fonts/e111viva.ttf') }}') format('truetype');
+    }
+
+    /* Font styling */
+    .fontStyle {
+        font-family: 'English111 Vivace BT', serif;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    /* Container styling */
+    .admit-card-wrap {
+        width: 100%;
+        height: 835px;
+        background-image: url({{ asset('images/new/certifcate.jpg') }});
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #FAFCF2;
+        position: relative;
+    }
+
+    /* Absolute positioning of child elements */
+    .absolute {
+        position: absolute;
+    }
+
+    /* Specific positioning of text elements */
+    .student-id { top: 45.3%; left: 33.5%; }
+    .student-roll { top: 36.5%; left: 77.5%; }
+    .student-registration { top: 41.5%; left: 77.5%; }
+    .student-session { top: 46.5%; left: 77.5%; }
+    .student-name { top: 52.5%; left: 42.5%; }
+    .fathers-name { top: 57.4%; left: 35.5%; text-transform: capitalize !important; }
+    .mothers-name { top: 57.5%; left: 73.5%; text-transform: capitalize !important; }
+    .student-subject { top: 62%; left: 47.5%; }
+    .center-name { top: 67.5%; left: 44%; }
+    .center-code { top: 67%; left: 87%; }
+    .exam-date { top: 72.4%; left: 55%; }
+    .student-gpa { top: 72%; left: 87%; }
+
+    @media print {
+
+        /* Adjusting font size for print */
+        .fontStyle {
+            font-size: 14pt;
         }
 
+        .absolute {
+            font-size: 12pt; /* Adjust for print readability */
+            color: black; /* Ensure good contrast */
+        }
 
-    </style>
-    <div class=" ">
-        <div class="w-full    bg-white  overflow-x-auto  ">
-            <div class="">
-               <div class="admit-card-wrap font-bold"  >
-                   <div class="absolute top-[45.3%]      left-[33.5%] w-38  ">{{$student->id??''}}</div>
-                    <div class="absolute top-[38%] left-[77.5%] w-38  ">{{$student->roll??''}}</div>
-                    <div class="absolute top-[43%] left-[77.5%] w-38  ">{{$student->registration??''}}</div>
-                    <div class="absolute top-[47.5%] left-[77.5%] w-38  ">{{$student->session->name??''}}</div>
-                   <div class="absolute top-[52.5%] left-[42.5%] w-38  ">{{$student->name??''}}</div>
-                   <div class="absolute top-[57.4%]   left-[40.5%] w-38  ">{{$student->fathers_name??''}}</div>
-                   <div class="absolute top-[57.5%] left-[73.5%] w-38  ">{{$student->mothers_name??''}} </div>
-                   <div class="absolute top-[62.4%]   left-[47.5%] w-38  ">{{$student->subject->name??''}}</div>
-                   <div class="absolute top-[67%]   left-[44%] w-38  ">{{$student->center->name??''}}</div>
-                   <div class="absolute top-[67%]   left-[87%] w-38  ">{{$student->center->code??''}}</div>
-                   <div class="absolute top-[72%]   left-[55%] w-38  ">{{\Carbon\Carbon::make($student->exam_date)->format('M-Y')??''}}</div>
-                   <div class="absolute top-[72%]   left-[87%] w-38  ">{{$student->result->gpa()??''}}</div>
+        /* Hide elements not necessary for print */
+        .no-print {
+            display: none;
+        }
+    }
+</style>
 
-                </div>
-
-            </div>
-
+<div class="fontStyle">
+    <div class="w-full bg-white md:p-10">
+        <div class="admit-card-wrap">
+            <div class="absolute student-id">{{$student->id ?? ''}}</div>
+            <div class="absolute student-roll">{{$student->roll ?? ''}}</div>
+            <div class="absolute student-registration">{{$student->registration ?? ''}}</div>
+            <div class="absolute student-session">{{$student->session->name ?? ''}}</div>
+            <div class="absolute student-name">{{$student->name ?? ''}}</div>
+            <div class="absolute fathers-name">{{$student->fathers_name ?? ''}}</div>
+            <div class="absolute mothers-name">{{$student->mothers_name ?? ''}}</div>
+            <div class="absolute student-subject">{{$student->subject->name ?? ''}}</div>
+            <div class="absolute center-name">{{$student->center->name ?? ''}}</div>
+            <div class="absolute center-code">{{$student->center->code ?? ''}}</div>
+            <div class="absolute exam-date">{{\Carbon\Carbon::make($student->exam_date)->format('M-Y') ?? ''}}</div>
+            <div class="absolute student-gpa">{{$student->result->gpa() ?? ''}}</div>
         </div>
     </div>
-
+</div>
