@@ -43,16 +43,15 @@ class StudentController extends Controller
                     return (
                         '<a style="background-color:green; padding:3px; border-radius:4px; color:white" target="_blank" href="' . route("admin.student.show", [$registration->id, 'registration' => 'registration']) . '">' . $registration->registration . '</a>'
                         . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.student.show", [$registration->id, 'transcript' => 'transcript']) . '">Transcript</a>'
+                        . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.certificateStudent", [$registration->id, 'certificate' => 'certificate']) . '">Certificate</a>'
                     );
-                })
-                ->addColumn('certificate', function ($certificate) {
-                    return '<a style="background-color: green; padding: 3px; border-radius: 4px; color: white; text-decoration: none;" target="_blank" href="' . htmlspecialchars(route("admin.studentCertificate", $certificate->id), ENT_QUOTES, 'UTF-8') . '">Certificate</a>';
                 })
                 ->editColumn('roll', function ($roll) {
                     return '<a   style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank" href="' . route("admin.student.admit",[$roll->id,'admit'=>'admit']) . '">' . $roll->roll . '</a>';
                 })
                 ->addColumn('student_result', function ($student_result) {
                     return '<a target="_blank" href="' . route("admin.result.show", $student_result->result->id??'') . '">' . ($student_result->result()->count() == 1 ? 'Result' : 'N/A') . '</a>';
+
                 })
                 ->rawColumns(['registration','roll','student_result','certificate'])
                 ->toJson();
