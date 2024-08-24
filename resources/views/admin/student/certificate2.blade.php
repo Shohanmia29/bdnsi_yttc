@@ -45,7 +45,7 @@
             .student-id { top: 44%; left: 33.5%; }
             .student-roll { top: 38%; left: 77.5%; }
             .student-registration { top: 43%; left: 77.5%; }
-            .student-session { top: 46.5%; left: 77.5%; }
+            .student-session { top: 47%; left: 77.5%; }
             .student-name { top: 52.5%; left: 42.5%; }
             .fathers-name { top: 57.4%; left: 35.5%; text-transform: capitalize !important; }
             .mothers-name { top: 57.5%; left: 73.5%; text-transform: capitalize !important; }
@@ -58,6 +58,9 @@
         </style>
 
         <div class="success-student">
+            <div class="flex justify-end print:hidden">
+                  <button onclick="window.print()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100 ">Print</button>
+            </div>
                 <div class="card-body">
                     <div class="back-img " style="background-image:url({{ asset('images/new/certifcate.jpg')}}) ; position: relative;  font-weight: bold;">
                         <div class=" ">
