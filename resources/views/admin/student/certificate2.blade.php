@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="{{mix('css/app.css')}}">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+<meta name="viewport" content="width=1024">
 <script src="{{mix('js/app.js')}}"></script>
         <style>
             [x-cloak] { display: none !important; }
