@@ -111,13 +111,13 @@
                             <div class="absolute center-name">{{$student->center->name ?? ''}}</div>
                             <div class="absolute center-code">{{$student->center->code ?? ''}}</div>
                             <div class="absolute exam-date">
-                               @if($student->exam_date !=null) {{ \App\Lib\Helper::numberToText((int)Carbon\Carbon::make($student->exam_date)->format('d')) ?? '' }} @endif-{{ optional(Carbon\Carbon::make($student->exam_date))->format('M-Y') ?? '' }}
+                               @if($student->exam_date !=null) {{ \App\Lib\Helper::numberToText((int)Carbon\Carbon::make($student->exam_date)->format('d')) ?? '' }}@endif-{{ optional(Carbon\Carbon::make($student->exam_date))->format('M-Y') ?? '' }}
                             </div>
                             <div class="absolute student-gpa">
                                 {{ $student->result->gpa() ?? '' }}
                             </div>
                             <div class="absolute student-result-published">
-                                @if($student->result_published !=null)  {{ \App\Lib\Helper::numberToText((int)Carbon\Carbon::make($student->result_published)->format('d')) ?? '' }}@endif -{{ optional(Carbon\Carbon::make($student->result_published))->format('M-Y') ?? '' }}
+                                @if($student->result_published !=null)  {{ \App\Lib\Helper::numberToText((int)Carbon\Carbon::make($student->result_published)->format('d')) ?? '' }}@endif-{{ optional(Carbon\Carbon::make($student->result_published))->format('M-Y') ?? '' }}
                             </div>
 
                         </div>
