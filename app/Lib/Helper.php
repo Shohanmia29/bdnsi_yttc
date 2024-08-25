@@ -43,8 +43,11 @@ class Helper
 
 
 
-    public static function numberToText($number)
+    public static function numberToText($num)
     {
+
+        $number =   $num ;
+
         $words = [
             0 => 'zero',
             1 => 'one',
