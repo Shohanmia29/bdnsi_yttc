@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="{{mix('css/app.css')}}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
 <script src="{{mix('js/app.js')}}"></script>
         <style>
             [x-cloak] { display: none !important; }
@@ -33,6 +34,8 @@
                 justify-content: center;
             }
 
+
+
             .back-img{
                 width: 100%;
                 height: 100%;
@@ -48,7 +51,7 @@
             .absolute {
                 position: absolute;
             }
-            .student-id { top: 45%; left: 33.5%; }
+            .student-id { top: 45%; left: 32%; }
             .student-roll { top: 37%; left: 77.5%; }
             .student-registration { top: 42%; left: 77.5%; }
             .student-session { top: 46.5%; left: 74%; }
@@ -63,7 +66,7 @@
             .student-result-publisd { top: 88%; left: 23%; }
 
             @media (min-width: 775px) {
-                .student-id { top: 44%; left: 33.5%; }
+                .student-id { top: 44%; left: 32%; }
                 .student-roll { top: 36%; left: 77.5%; }
                 .student-registration { top: 41%; left: 77.5%; }
                 .student-session { top: 45.5%; left: 74%; }
@@ -87,16 +90,17 @@
 
         </style>
 
-        <div class=" "  x-data="{ hasBackground: true }">
-            <div class="flex justify-end gap-1 print:hidden">
-                  <button onclick="window.print()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100 ">Print</button>
-                  <button @click="hasBackground = !hasBackground" class="px-3 py-1 rounded-md bg-green-700 text-slate-100 ">Remove background</button>
+        <div class=" "  x-data="{ hasBackground: true }"  >
+            <div class="w-full flex justify-end gap-1 print:hidden py-5 print:py-0">
+                <button onclick="generate_pdf()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100 ">Download</button>
+                <button onclick="window.print()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100 ">Print</button>
+                <button @click="hasBackground = !hasBackground" class="px-3 py-1 rounded-md bg-green-700 text-slate-100 ">Remove background</button>
             </div>
-                <div class="card-body   min-h-screen "  >
-                    <div :class="{ 'no-background': !hasBackground }"  class="back-img   " style="background-image:url({{ asset('images/new/certifcate.jpg')}}) ; position: relative;  font-weight: bold;">
+                <div class="card-body   min-h-screen "  id="fullpage2">
+                    <div  :class="{ 'no-background': !hasBackground }"  class="back-img   " style="background-image:url({{ asset('images/new/certifcate.jpg')}}) ; position: relative;  font-weight: bold;">
 
                         <div class=" ">
-                            <div class="absolute student-id">{{$student->id ?? ''}}</div>
+                            <div class="absolute student-id" style="font-family: 'Segoe UI'; font-size:18px ">{{\App\Lib\Helper::certificateSerialNumber($student->id) ?? ''}}</div>
                             <div class="absolute student-roll">{{$student->roll ?? ''}}</div>
                             <div class="absolute student-registration">{{$student->registration ?? ''}}</div>
                             <div class="absolute student-session">{{$student->session->name ?? ''}}</div>
@@ -116,3 +120,31 @@
         </div>
 
 
+<script type="text/javascript">
+    function generate_pdf() {
+
+        var opt = {
+            margin: 0,
+            filename: 'certificate.pdf',
+            image: {
+                type: 'jpeg',
+                quality: 0.99
+            },
+            html2canvas: {
+                scale: 1,
+                width: 1100,
+                height: 860
+            },
+            jsPDF: {
+                unit: 'in',
+                format: 'A3',
+                orientation: 'portrait'
+            }
+        };
+
+
+        html2pdf().from(document.getElementById('fullpage2')).set(opt).save().then(function() {
+            document.getElementById('fullpage2').classList.add('hidePDFdata');
+        });
+    }
+</script>

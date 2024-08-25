@@ -22,6 +22,26 @@ class Helper
 
         return $paddedId;
     }
+    public static function certificateSerialNumber($id) {
+
+
+        $number = '11224';
+        $length = 9;
+
+        // Convert $id to string to handle numeric IDs
+        $id = (string)$id;
+
+        // Calculate how much padding is needed
+        $paddingLength = $length - strlen($id);
+
+        // Create the padding from $number and concatenate with $id
+        $paddedId = substr($number, 0, $paddingLength) . $id;
+
+        return $paddedId;
+    }
+
+
+
 
 
 }
