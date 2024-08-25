@@ -61,7 +61,7 @@
             .student-subject { top: 60.5%; left: 47.5%; }
             .center-name { top: 65.5%; left: 44%; }
             .center-code { top: 66%; left: 87%; }
-            .exam-date { top: 70.4%; left: 55%; }
+            .exam-date { top: 70.4%; left: 53%; }
             .student-gpa { top: 70.5%; left: 87%; }
             .student-result-publisd { top: 88%; left: 23%; }
 
@@ -76,7 +76,7 @@
                 .student-subject { top: 59.5%; left: 47.5%; }
                 .center-name { top: 64.5%; left: 44%; }
                 .center-code { top: 65%; left: 87%; }
-                .exam-date { top: 69.4%; left: 55%; }
+                .exam-date { top: 69.4%; left: 53%; }
                 .student-gpa { top: 69.5%; left: 87%; }
                 .student-result-publisd { top: 87%; left: 23%; }
 
@@ -110,9 +110,11 @@
                             <div class="absolute student-subject">{{$student->subject->name ?? ''}}</div>
                             <div class="absolute center-name">{{$student->center->name ?? ''}}</div>
                             <div class="absolute center-code">{{$student->center->code ?? ''}}</div>
-                            <div class="absolute exam-date">{{\Carbon\Carbon::make($student->exam_date)->format('d-M-Y') ?? ''}}</div>
+                            <div class="absolute exam-date">{{\App\Lib\Helper::numberToText(\Carbon\Carbon::make($student->exam_date)->format('d')) ?? ''}}-{{\Carbon\Carbon::make($student->exam_date)->format('M-Y') ?? ''}}</div>
                             <div class="absolute student-gpa">{{$student->result->gpa() ?? ''}}</div>
-                            <div class="absolute student-result-publisd">{{optional(\Carbon\Carbon::make($student->result_publised))->format('d-M-Y') ?? ''}}</div>
+                            <div class="absolute student-result-publisd">
+                                {{\App\Lib\Helper::numberToText(\Carbon\Carbon::make($student->result_publised)->format('d')) ?? ''}}-{{\Carbon\Carbon::make($student->result_publised)->format('M-Y') ?? ''}}
+                            </div>
                         </div>
                     </div>
                 </div>
