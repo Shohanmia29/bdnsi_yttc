@@ -61,7 +61,7 @@
             .student-subject { top: 60.5%; left: 47.5%; }
             .center-name { top: 65.5%; left: 44%; }
             .center-code { top: 66%; left: 87%; }
-            .exam-date { top: 70.4%; left: 53%; }
+            .exam-date { top: 70.4%; left: 51%; }
             .student-gpa { top: 70.5%; left: 87%; }
             .student-result-publisd { top: 88%; left: 23%; }
 
@@ -76,7 +76,7 @@
                 .student-subject { top: 59.5%; left: 47.5%; }
                 .center-name { top: 64.5%; left: 44%; }
                 .center-code { top: 65%; left: 87%; }
-                .exam-date { top: 69.4%; left: 53%; }
+                .exam-date { top: 69.4%; left: 51%; }
                 .student-gpa { top: 69.5%; left: 87%; }
                 .student-result-publisd { top: 87%; left: 23%; }
 
