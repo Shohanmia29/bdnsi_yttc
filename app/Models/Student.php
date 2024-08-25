@@ -70,6 +70,7 @@ class Student extends Authenticatable
         'picture',
         'status',
         'exam_date',
+        'result_publised',
         'due_amount',
         'paid_amount',
         'qualification',

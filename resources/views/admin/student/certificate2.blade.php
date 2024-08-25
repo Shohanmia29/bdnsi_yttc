@@ -1,5 +1,5 @@
-<x-admin-app-layout>
-
+<link rel="stylesheet" href="{{mix('css/app.css')}}">
+<script src="{{mix('js/app.js')}}"></script>
         <style>
             [x-cloak] { display: none !important; }
             @font-face {
@@ -26,9 +26,16 @@
                 margin: 0;
             }
 
-            .back-img{
+            .card-body{
                 width: 1100px;
                 height: 100vh;
+                display: flex;
+                justify-content: center;
+            }
+
+            .back-img{
+                width: 100%;
+                height: 100%;
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
                 background-position: center center;
@@ -53,6 +60,7 @@
             .center-code { top: 66%; left: 87%; }
             .exam-date { top: 70.4%; left: 55%; }
             .student-gpa { top: 70.5%; left: 87%; }
+            .student-result-publisd { top: 88%; left: 23%; }
 
             @media (min-width: 775px) {
                 .student-id { top: 44%; left: 33.5%; }
@@ -67,23 +75,26 @@
                 .center-code { top: 65%; left: 87%; }
                 .exam-date { top: 69.4%; left: 55%; }
                 .student-gpa { top: 69.5%; left: 87%; }
+                .student-result-publisd { top: 87%; left: 23%; }
 
+            }
+
+
+            .no-background {
+                background-image: none !important;
             }
 
 
         </style>
 
-        <div class="success-student"  >
-
-{{--                <div x-show="loading" class="fixed print:hidden inset-0 bg-white flex items-center justify-center z-50">--}}
-{{--                    <!-- Loading spinner -->--}}
-{{--                    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>--}}
-{{--                </div>--}}
-            <div class="flex justify-end print:hidden">
+        <div class=" "  x-data="{ hasBackground: true }">
+            <div class="flex justify-end gap-1 print:hidden">
                   <button onclick="window.print()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100 ">Print</button>
+                  <button @click="hasBackground = !hasBackground" class="px-3 py-1 rounded-md bg-green-700 text-slate-100 ">Remove background</button>
             </div>
-                <div class="card-body"  >
-                    <div class="back-img " style="background-image:url({{ asset('images/new/certifcate.jpg')}}) ; position: relative;  font-weight: bold;">
+                <div class="card-body   min-h-screen "  >
+                    <div :class="{ 'no-background': !hasBackground }"  class="back-img   " style="background-image:url({{ asset('images/new/certifcate.jpg')}}) ; position: relative;  font-weight: bold;">
+
                         <div class=" ">
                             <div class="absolute student-id">{{$student->id ?? ''}}</div>
                             <div class="absolute student-roll">{{$student->roll ?? ''}}</div>
@@ -97,6 +108,7 @@
                             <div class="absolute center-code">{{$student->center->code ?? ''}}</div>
                             <div class="absolute exam-date">{{\Carbon\Carbon::make($student->exam_date)->format('d-M-Y') ?? ''}}</div>
                             <div class="absolute student-gpa">{{$student->result->gpa() ?? ''}}</div>
+                            <div class="absolute student-result-publisd">{{optional(\Carbon\Carbon::make($student->result_publised))->format('d-M-Y') ?? ''}}</div>
                         </div>
                     </div>
                 </div>
@@ -104,4 +116,3 @@
         </div>
 
 
-</x-admin-app-layout>

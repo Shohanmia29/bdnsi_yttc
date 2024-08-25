@@ -165,6 +165,7 @@ class StudentController extends Controller
                 'status' => 'required|numeric|enum_value:'.StudentStatus::class.',false',
                 'picture' =>'nullable|image',
                 'exam_date' =>'required',
+                'result_publised' =>'nullable',
                 'due_amount' =>'required|numeric',
                 'paid_amount' =>'required|numeric',
             ]);
