@@ -63,7 +63,7 @@
             .center-code { top: 66%; left: 87%; }
             .exam-date { top: 70.4%; left: 51%; }
             .student-gpa { top: 70.5%; left: 87%; }
-            .student-result-publisd { top: 88%; left: 23%; }
+            .student-result-published { top: 88%; left: 23%; }
 
             @media (min-width: 775px) {
                 .student-id { top: 44%; left: 32%; }
@@ -78,7 +78,7 @@
                 .center-code { top: 65%; left: 87%; }
                 .exam-date { top: 69.4%; left: 51%; }
                 .student-gpa { top: 69.5%; left: 87%; }
-                .student-result-publisd { top: 87%; left: 23%; }
+                .student-result-published { top: 87%; left: 23%; }
 
             }
 
@@ -110,14 +110,14 @@
                             <div class="absolute student-subject">{{$student->subject->name ?? ''}}</div>
                             <div class="absolute center-name">{{$student->center->name ?? ''}}</div>
                             <div class="absolute center-code">{{$student->center->code ?? ''}}</div>
-                            <div class="absolute exam-date">
-                               @if($student->exam_date !=null) {{ \App\Lib\Helper::numberToText((int)Carbon\Carbon::make($student->exam_date)->format('d')) ?? '' }}@endif-{{ optional(Carbon\Carbon::make($student->exam_date))->format('M-Y') ?? '' }}
+                            <div class="absolute exam-date capitalize">
+                               @if($student->exam_date !=null) {{ \App\Lib\Helper::numberToText((int)Carbon\Carbon::make($student->exam_date)->format('d')) ?? '' }}-{{ optional(Carbon\Carbon::make($student->exam_date))->format('F-Y') ?? '' }}@endif
                             </div>
                             <div class="absolute student-gpa">
                                 {{ $student->result->gpa() ?? '' }}
                             </div>
-                            <div class="absolute student-result-published">
-                                @if($student->result_published !=null)  {{ \App\Lib\Helper::numberToText((int)Carbon\Carbon::make($student->result_published)->format('d')) ?? '' }}@endif-{{ optional(Carbon\Carbon::make($student->result_published))->format('M-Y') ?? '' }}
+                            <div class="absolute student-result-published capitalize" style="font-size: 18px">
+                                @if($student->result_publised !=null)  {{ \App\Lib\Helper::numberToText((int)Carbon\Carbon::make($student->result_publised)->format('d')) ?? '' }}-{{ optional(Carbon\Carbon::make($student->result_publised))->format('F-Y') ?? ''}}@endif
                             </div>
 
                         </div>

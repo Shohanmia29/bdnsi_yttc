@@ -77,6 +77,7 @@ class Student extends Authenticatable
     ];
 
     protected $casts = [
+        'result_publised' => 'datetime',
         'blood_group' => BloodGroup::class,
         'gender' => Gender::class,
         'religion' => Religion::class,

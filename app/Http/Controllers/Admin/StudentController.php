@@ -31,7 +31,7 @@ class StudentController extends Controller
     }
 
     public function certificate($id){
-           $student=Student::where('id',$id)->firstOrFail();
+             $student=Student::where('id',$id)->firstOrFail();
            return view('admin.student.certificate2',compact('student'));
     }
 
