@@ -56,10 +56,10 @@
             .student-roll { top: 37%; left: 77.5%; }
             .student-registration { top: 42%; left: 77.5%; }
             .student-session { top: 46.5%; left: 74%; }
-            .student-name { top: 51%; left: 42.5%; }
+            .student-name { top: 51.5%; left: 42.5%; }
             .fathers-name { top: 56.4%; left: 37.5%; text-transform: capitalize !important; }
             .mothers-name { top: 56.5%; left: 75.5%; text-transform: capitalize !important; }
-            .student-subject { top: 60.5%; left: 47.5%; }
+            .student-subject { top: 61%; left: 47.5%; }
             .center-name { top: 65.5%; left: 44%; }
             .center-code { top: 66%; left: 87%; }
             .exam-date { top: 70.4%; left: 51%; }
@@ -71,10 +71,10 @@
                 .student-roll { top: 36%; left: 77.5%; }
                 .student-registration { top: 41%; left: 77.5%; }
                 .student-session { top: 45.5%; left: 74%; }
-                .student-name { top: 50%; left: 42.5%; }
+                .student-name { top: 50.5%; left: 42.5%; }
                 .fathers-name { top: 55.4%; left: 37.5%; text-transform: capitalize !important; }
                 .mothers-name { top: 55.5%; left: 75.5%; text-transform: capitalize !important; }
-                .student-subject { top: 59.5%; left: 47.5%; }
+                .student-subject { top: 60%; left: 47.5%; }
                 .center-name { top: 64.5%; left: 44%; }
                 .center-code { top: 65%; left: 87%; }
                 .exam-date { top: 69.4%; left: 51%; }
