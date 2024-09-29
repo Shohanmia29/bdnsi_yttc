@@ -65,8 +65,8 @@
             .exam-date { top: 70.4%; left: 51%; }
             .student-gpa { top: 70.5%; left: 87%; }
             .student-result-published { top: 88%; left: 23%; }
-            .exam-sign { top: 80%; left: 43%; }
-            .ChairmanSignnature { top: 78%; left: 80%; }
+            .exam-sign { top: 81.5%; left: 43%; }
+            .ChairmanSignnature { top: 80.5%; left: 80%; }
             @media (min-width: 775px) {
                 .student-id { top: 44%; left: 32%; }
                 .student-roll { top: 36%; left: 77.5%; }
