@@ -26,7 +26,7 @@
         .admit-card-wrap {
             width: 1170px;
             height: 1650px;
-            background-image: url({{asset('images/new/transacpt.jpg')}});
+            background-image: url({{asset('images/new/transacpt1.jpg')}});
             margin: auto;
             background-position: center center;
             background-repeat: no-repeat;
@@ -160,7 +160,7 @@
         <div style="position: absolute;   left:70%;margin-top:6%;">
             <div class=" text-center pe-2 " >
                 <div class=" ">
-                    <div class="h6  bold "><strong>Gradding System</strong></div>
+                    <div class="h6  bold "><strong>Grading System</strong></div>
                     <table class="table border" style="font-size:13px;" >
                         <thead>
                         <tr>
@@ -333,27 +333,29 @@
                 </tr>
 
             </table>
-        </div>
-        <div class="footer-sign-wrap">
-            <div class="sign-cont text-center">
-{{--                <hr />--}}
-{{--                <p>Signature of the <br /> Student</p>--}}
+            <div class="footer-sign-wrap mt-4"  >
+                <div class="sign-cont text-center">
+                    {{--                <hr />--}}
+                    {{--                <p>Signature of the <br /> Student</p>--}}
+                </div>
+                <div class="sign-cont text-center">
+                    {{--                <hr />--}}
+                    {{--                <p>Signature Of The Regional <br /> Director</p>--}}
+                </div>
+                <div class="sign-cont text-center"  >
+                    <img class="text-center" style="width: 200px" src="{{asset('images/new/ExamController.png')}}" alt="signature" />
+                    <hr />
+                    <p>Exam Controller <br /> bystt</p>
+                </div>
             </div>
-            <div class="sign-cont text-center">
-{{--                <hr />--}}
-{{--                <p>Signature Of The Regional <br /> Director</p>--}}
-            </div>
-        {{--      <div class="sign-cont text-center">
-                <img class="text-center" style="width: 200px" src="{{asset('images/Signature1.png')}}" alt="signature" />
-                <hr />
-                <p>Exam Controller <br /> bystt</p>
-            </div>--}}
         </div>
-        <hr />
+
+
         <div class="fw-semibold">
             <p></p>
 
         </div>
+
     </div>
 </div>
 <script type="text/javascript">

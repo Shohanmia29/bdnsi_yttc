@@ -230,7 +230,7 @@
                 </ol>
             </div>
             <div class="sign-cont w-25 text-center">
-                <img style="width: 200px;" src="{{asset('images/Signature1.png')}}" alt="signature" />
+                <img style="width: 200px;" src="{{asset('images/new/ExamController.png')}}" alt="signature" />
                 <hr />
                 <p>Controller Of Examinations <br /> Bangladesh Youth Skills & Technical Training</p>
             </div>
