@@ -101,7 +101,7 @@
                 <button @click="hasBackground = !hasBackground" class="px-3 py-1 rounded-md bg-green-700 text-slate-100 ">Remove background</button>
             </div>
                 <div class="card-body   min-h-screen "  id="fullpage2">
-                    <div  :class="{ 'no-background': !hasBackground }"  class="back-img   " style="background-image:url({{ asset('images/new/certifcate.jpg')}}) ; position: relative;  font-weight: bold;">
+                    <div  :class="{ 'no-background': !hasBackground }"  class="back-img   " style="background-image:url({{ asset('images/new/certificate2.jpg')}}) ; position: relative;  font-weight: bold;">
 
                         <div class=" ">
                             <div class="absolute student-id" style="font-family: 'Segoe UI'; font-size:18px ">{{\App\Lib\Helper::certificateSerialNumber($student->id) ?? ''}}</div>
