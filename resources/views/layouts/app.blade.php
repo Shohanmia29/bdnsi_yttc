@@ -7,16 +7,29 @@
     <title>Bangladesh Youth Technical Training</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"/>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}"/>
+    <style>
+
+        .bg-gradient-success {
+            background-color: #1cc88a;
+            background-image: linear-gradient(180deg, #1cc88a 10%, #13855c 100%);
+            background-size: cover;
+        }
+        .bg-gradient-primary {
+            background-color: #4e73df;
+            background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+            background-size: cover;
+        }
+    </style>
 </head>
 <body class="font-sans antialiased print:!mb-0">
 <div
-    class="flex min-h-screen bg-gray-200"
+    class="flex min-h-screen bg-green-200"
     x-data="{ sidebarOpen : window.innerWidth >= 1024, width: window.innerWidth }"
     @resize.window="width = window.innerWidth"
     x-init="window.addEventListener('resize', () => { sidebarOpen = window.innerWidth >= 1024 })"
 >
     <sidebar
-        class="bg-slate-800 h-screen w-64 overflow-y-scroll scrollbar-hide print:hidden fixed z-10 transition duration-300"
+        class="bg-gradient-success shadow-lg h-screen w-64 overflow-y-scroll scrollbar-hide print:hidden fixed z-10 transition duration-300"
         :class="{ '-translate-x-64' : !sidebarOpen }"
     >
         <div class="p-8 md:pl-4 flex md:flex-row-reverse justify-between items-center flex-wrap">
@@ -98,9 +111,9 @@
     </template>
 
     <div class="flex flex-col flex-grow ">
-        <header class="w-full flex-grow-0 print:hidden">
+        <header class="w-full flex-grow-0  print:hidden ">
             <div
-                class="w-full flex justify-between items-center bg-white border-b border-gray-200 p-4"
+                class="w-full flex bg-gradient-success justify-between items-center bg-white border-b border-gray-200 p-4"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +133,7 @@
                 <div class="flex-grow flex justify-end items-center gap-2">
                     <div class="h-5 ml-1 mr-2"></div>
                 </div>
-                <div class="relative" x-data="{ dropped: false }" x-on:click.outside="dropped = false">
+                <div class="relative " x-data="{ dropped: false }" x-on:click.outside="dropped = false">
                     <div class="flex items-center pl-2 mr-2 cursor-pointer" x-on:click="dropped = !dropped">
                         <img
                             src="{{ auth()->user()->avatar }}"
@@ -163,7 +176,7 @@
         </header>
         <main class="flex-grow lg:ml-64 ">
             @isset($header)
-                <div class="w-full bg-white p-4 print:hidden">
+                <div class="w-full bg-green-700 text-white p-4 print:hidden">
                     {{ $header }}
                 </div>
             @endisset

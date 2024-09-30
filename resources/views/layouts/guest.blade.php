@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1024">
-    <title>Bangladesh Youth Technical Training</title>
+    <title>Bangladesh Youth Skills & Technical Training</title>
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
     <link rel="icon" href="{{asset('images/new/logo.png')}}">
     <!-- owl carouse -->
