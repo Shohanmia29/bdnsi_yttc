@@ -1030,6 +1030,12 @@ select {
 .h-full {
   height: 100%;
 }
+.h-12 {
+  height: 3rem;
+}
+.h-11 {
+  height: 2.75rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1119,6 +1125,15 @@ select {
 }
 .w-4\/12 {
   width: 33.333333%;
+}
+.w-16 {
+  width: 4rem;
+}
+.w-\[50px\] {
+  width: 50px;
+}
+.w-\[100px\] {
+  width: 100px;
 }
 .min-w-\[800px\] {
   min-width: 800px;

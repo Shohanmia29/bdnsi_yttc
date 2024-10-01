@@ -65,7 +65,7 @@
             .exam-date { top: 70.4%; left: 51%; }
             .student-gpa { top: 70.5%; left: 87%; }
             .student-result-published { top: 88%; left: 23%; }
-            .exam-sign { top: 81.5%; left: 43%; }
+            .exam-sign { top: 80.5%; left: 41%; }
             .ChairmanSignnature { top: 80.5%; left: 80%; }
             @media (min-width: 775px) {
                 .student-id { top: 44%; left: 32%; }
@@ -81,8 +81,8 @@
                 .exam-date { top: 69.4%; left: 51%; }
                 .student-gpa { top: 69.5%; left: 87%; }
                 .student-result-published { top: 87%; left: 23%; }
-                .exam-sign { top: 80%; left: 43%; }
-                .ChairmanSignnature { top: 78%; left: 80%; }
+                .exam-sign { top: 79%; left: 41%; }
+                .ChairmanSignnature { top: 79%; left: 80%; }
 
             }
 
@@ -124,10 +124,10 @@
                                 @if($student->result_publised !=null)  {{ \App\Lib\Helper::numberToText((int)Carbon\Carbon::make($student->result_publised)->format('d')) ?? '' }}{{ optional(Carbon\Carbon::make($student->result_publised))->format('F-Y') ?? ''}}@endif
                             </div>
                             <div class="absolute exam-sign capitalize" style="font-size: 18px">
-                                <img class="w-14 h-10" src="{{asset('images/new/ExamController.png')}}" alt="">
+                                <img class="w-[100px] h-11" src="{{asset('images/new/ExamController.png')}}" alt="">
                             </div>
                             <div class="absolute ChairmanSignnature capitalize" style="font-size: 18px">
-                                <img class="w-14 h-14" src="{{asset('images/new/ChairmanSignnature.png')}}" alt="">
+                                <img class="w-[100px] h-12" src="{{asset('images/new/ChairmanSignnature.png')}}" alt="">
                             </div>
                         </div>
                     </div>
