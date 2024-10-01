@@ -4,7 +4,7 @@
     <div class="w-full flex flex-wrap">
         <div class="w-full   print:w-3/5  ">
             <div class="w-full py-2 text-xl md:text-4xl text-center font-bold">Bangladesh Youth Skills & Technical Training</div>
-            <div class="w-full py-2 text-center font-semibold">Govt No : 195491</div>
+            <div class="w-full py-2 text-center font-semibold">Govt. License No: C-195491</div>
         </div>
     </div>
     <div class="w-full flex flex-wrap justify-center mt-3">
