@@ -19,7 +19,7 @@
                 <th>{{ __('Subject') }}</th>
                 <th>{{ __('Status') }}</th>
                 <th>{{ __('Registration') }}</th>
-                <th>{{ __('Registration') }}</th>
+                <th>{{ __('Admit') }}</th>
                 <th>{{ __('Result') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
