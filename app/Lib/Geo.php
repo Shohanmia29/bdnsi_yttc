@@ -93,6 +93,18 @@ class Geo
         ];
     }
 
+    public static function getDistrictIdByName($name)
+    {
+        $districts = static::districts();
+        foreach ($districts as $id => $district) {
+            if ($district['name'] === $name) {
+                return $id; // Return the district ID if the name matches
+            }
+        }
+        return null; // Return null if no match is found
+    }
+
+
     public static function upazillas($district = null)
     {
         if ($district) {

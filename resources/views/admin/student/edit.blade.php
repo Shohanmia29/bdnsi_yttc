@@ -13,7 +13,7 @@
     <form action="{{ route('admin.student.update', $student->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
-        <div class="flex flex-wrap justify-center w-full bg-white p-4">
+        <div class="flex flex-wrap justify-center w-full bg-white p-4" x-data="centerRequestData" >
 
           @if(auth()->user()->id==1)
                 <x-labeled-select name="center_id" label="Institute Name" required class="w-full p-1 md:w-1/2 lg:w-1/3">
@@ -40,8 +40,27 @@
                         <option value="{{ $religion->value }}" @selected(old('religion', $student->religion->value) == $religion->value)>{{ $religion->key }}</option>
                     @endforeach
                 </x-labeled-select>
-                <x-labeled-input name="present_address" :value="$student->present_address" required  label="District" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-                <x-labeled-input name="permanent_address" :value="$student->permanent_address" required  label="Upazila" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+
+                <!-- Hidden input field to store present_address -->
+                <input type="hidden" name="present_address" x-bind:value="present_address">
+
+                <!-- District Select -->
+                <x-labeled-select class="w-full p-1 md:w-1/2 lg:w-1/3" x-model="district" name="district" required>
+                    <option value="">Select District</option>
+                    @foreach(\App\Lib\Geo::districts() as $districtId => $district)
+                        <option value="{{ $districtId }}" {{$student->present_address == $district['name'] ? 'selected' : ''}}>{{ $district['name'] }}</option>
+                    @endforeach
+                </x-labeled-select>
+
+                <!-- Upazila Select -->
+                <x-labeled-select class="w-full p-1 md:w-1/2 lg:w-1/3" x-model="upazila" name="permanent_address" required>
+                    <option value="">Select Upazila</option>
+                    <template x-for="upazila in upazillas" :key="upazila.id">
+                        <option :value="upazila.name" :selected="upazila.name === upazila" x-text="upazila.name"></option>
+                    </template>
+                </x-labeled-select>
+
+
                 <x-labeled-input name="phone" :value="$student->phone"    class="w-full p-1 md:w-1/2 lg:w-1/3"/>
                 <x-labeled-input name="email" :value="$student->email" type="email" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
                 <x-labeled-input name="guardian_name" :value="$student->guardian_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
@@ -100,4 +119,59 @@
             </div>
         </div>
     </form>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('centerRequestData', () => ({
+                district: @json(\App\Lib\Geo::getDistrictIdByName($student->present_address) ?? ''), // Pre-fill district based on name
+                present_address: @json($student->present_address ?? ''), // Pre-fill present address
+                upazila: @json($student->permanent_address ?? ''), // Pre-fill upazila (permanent address)
+                upazillas: [],
+
+                init() {
+                    // Load upazillas if the district is pre-filled
+                    if (this.district) {
+                        this.filterUpazillas(this.district);
+                    }
+
+                    // Watch for district changes to filter and load upazillas
+                    this.$watch('district', (value) => {
+                        if (value) {
+                            this.filterUpazillas(value);
+                            this.updatePresentAddress(value); // Update present_address with district name
+                        } else {
+                            this.upazillas = [];
+                            this.present_address = '';
+                        }
+                    });
+                },
+
+                filterUpazillas(districtId) {
+                    const upazillas = Object.entries(@js(\App\Lib\Geo::upazillas())).map(([id, upazila]) => ({
+                        id: id,
+                        name: upazila.name,
+                        district_id: upazila.district_id
+                    }));
+
+                    // Filter upazillas based on districtId
+                    this.upazillas = upazillas.filter(upazila => upazila.district_id == districtId);
+
+                    // Automatically pre-select the upazila if editing
+                    if (this.upazila) {
+                        this.upazila = this.upazillas.find(u => u.name === this.upazila)?.name || '';
+                    }
+                },
+
+                updatePresentAddress(districtId) {
+                    const districts = @js(\App\Lib\Geo::districts());
+                    const selectedDistrict = districts[districtId];
+                    if (selectedDistrict) {
+                        this.present_address = selectedDistrict.name; // Set the district name in the hidden field
+                    }
+                }
+            }));
+        });
+    </script>
+
+
 </x-admin-app-layout>

@@ -27,8 +27,20 @@
                     <option value="{{ $religion->value }}" @selected(old('religion') == $religion->value)>{{ $religion->key }}</option>
                 @endforeach
             </x-labeled-select>
-            <x-labeled-input name="present_address" label="District" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-            <x-labeled-input name="permanent_address" label="Upazila" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <input type="hidden" name="present_address" x-bind:value="present_address">
+            <x-labeled-select class="w-full p-1 md:w-1/2 lg:w-1/3" x-model="district"   name="district" required>
+                <option value="">Select District</option>
+                @foreach(\App\Lib\Geo::districts() as $districtId => $district)
+                    <option value="{{ $districtId }}">{{ $district['name'] }}</option>
+                @endforeach
+            </x-labeled-select>
+
+            <x-labeled-select class="w-full p-1 md:w-1/2 lg:w-1/3" x-model="upazilla" name="permanent_address" label="Upazila" required>
+                <option value="">Select Upazila</option>
+                <template x-for="upazilla in upazillas" :key="upazilla.id">
+                    <option :value="upazilla.name" x-text="upazilla.name"></option>
+                </template>
+            </x-labeled-select>
             <x-labeled-input name="passport" label="Passport Number"   class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input label="Mobile No" name="phone" pattern="\d{11}" x-data x-on:input="$event.target.setCustomValidity($event.target.validity.patternMismatch ? 'Phone number should be 11 digits' : '')"   class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="email" type="email" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
@@ -69,4 +81,40 @@
             </div>
         </div>
     </form>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('centerRequestData', () => ({
+                district: '',
+                present_address: '',
+                upazillas: [],
+                init() {
+                    this.$watch('district', (value) => {
+                        if (value) {
+                            this.filterUpazillas(value);
+                            this.updatePresentAddress(value); // Update the present_address with district name
+                        } else {
+                            this.upazillas = [];
+                            this.present_address = '';
+                        }
+                    });
+                },
+                filterUpazillas(districtId) {
+                    const upazillas = Object.entries(@js(\App\Lib\Geo::upazillas())).map(([id, upazilla]) => ({
+                        id: id,
+                        name: upazilla.name,
+                        district_id: upazilla.district_id
+                    }));
+
+                    this.upazillas = upazillas.filter(upazilla => upazilla.district_id == districtId);
+                },
+                updatePresentAddress(districtId) {
+                    const districts = @js(\App\Lib\Geo::districts());
+                    const selectedDistrict = districts[districtId]; // Find the district by its id
+                    if (selectedDistrict) {
+                        this.present_address = selectedDistrict.name; // Set the district name in the hidden field
+                    }
+                }
+            }));
+        });
+    </script>
 </x-app-layout>

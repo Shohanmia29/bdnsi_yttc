@@ -205,18 +205,14 @@
                     <div class="data-label">Student Thana </div>
                     <div>:</div>
                     <div class="data-value">
-                        @foreach(\App\Lib\Geo::upazillas() as $upzilla_id => $upzila)
-                            {{$student->center->upazilla==$upzilla_id ? $upzila['name'] : ''}}
-                        @endforeach
+                   {{$student->present_address??''}}
                     </div>
                 </div>
                 <div class="data-item-wrap">
                     <div class="data-label">Student District </div>
                     <div>:</div>
                     <div class="data-value">
-                        @foreach(\App\Lib\Geo::districts() as $district_id => $district)
-                            {{$student->center->district==$district_id ? $district['name'] : ''}}
-                        @endforeach
+                     {{$student->permanent_address??''}}
                     </div>
                 </div>
 
