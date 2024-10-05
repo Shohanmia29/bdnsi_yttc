@@ -80,13 +80,12 @@
                     <option {{$student->course_duration=='3 Month' ? 'selected': ''}}  value="3 Month">3 Month</option>
                     <option {{$student->course_duration=='6 Month' ? 'selected': ''}}  value="6 Month">6 Month</option>
                     <option {{$student->course_duration=='1 Year' ? 'selected': ''}}  value="1 Year">1 Year</option>
-                    <option {{$student->course_duration=='2 Years' ? 'selected': ''}}  value="2 Years">2 Years</option>
-                    <option {{$student->course_duration=='3 Years' ? 'selected': ''}}  value="3 Years">3Years</option>
-                    <option {{$student->course_duration=='4 Years' ? 'selected': ''}}  value="4 Years">4 Years</option>
+                    <option {{$student->course_duration=='Others' ? 'selected': ''}}  value="2 Years">Others</option>
                 </x-labeled-select>
 
                 <x-labeled-select name="qualification" label="Qualification" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                     <option  value=" ">--Select-- </option>
+                    <option {{$student->qualification =='Psc'  ? 'selected' : ''}} value="Psc">Psc</option>
                     <option {{$student->qualification =='Jsc'  ? 'selected' : ''}} value="Jsc">Jsc</option>
                     <option {{$student->qualification =='Ssc'  ? 'selected' : ''}} value="Ssc">Ssc</option>
                     <option {{$student->qualification =='Hsc' ? 'selected'  : ''}} value="Hsc">Hsc</option>

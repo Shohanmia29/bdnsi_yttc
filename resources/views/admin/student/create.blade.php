@@ -76,12 +76,12 @@
                 <option value="3 Month">3 Month</option>
                 <option value="6 Month">6 Month</option>
                 <option value="1 Year">1 Year</option>
-                <option value="2 Years">2 Years</option>
-                <option value="3Years">3 Years</option>
-                <option value="4 Years">4 Years</option>
+                <option value="Others">Others</option>
+
             </x-labeled-select>
             <x-labeled-select name="qualification" label="Qualification" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                 <option value="">--Select-- </option>
+                <option value="Psc">Psc</option>
                 <option value="Jsc">Jsc</option>
                 <option value="Ssc">Ssc</option>
                 <option value="Hsc">Hsc</option>
