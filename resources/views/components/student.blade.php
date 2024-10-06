@@ -3,7 +3,7 @@
 <div class="bg-white shadow-dashboard rounded-md" style="    border: 3px double black;">
     <a href="{{route('successStudentDetails',$student->id)}}">
         <div class="flex   justify-center items-center    ">
-            <img class="  w-full    " style="height: 200px;" src="{{$student->picture??''}}" alt=""  >
+            <img class="  w-full    " style="height: 262px;" src="{{$student->picture??''}}" alt=""  >
 
         </div>
         <div class="p-3 text-center">
