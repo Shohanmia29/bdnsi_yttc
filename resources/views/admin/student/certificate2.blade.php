@@ -115,13 +115,13 @@
                             <div class="absolute center-name">{{$student->center->name ?? ''}}</div>
                             <div class="absolute center-code">{{$student->center->code ?? ''}}</div>
                             <div class="absolute exam-date capitalize">
-                               @if($student->exam_date !=null) {{ \App\Lib\Helper::numberToText((int)Carbon\Carbon::make($student->exam_date)->format('d')) ?? '' }}{{ optional(Carbon\Carbon::make($student->exam_date))->format('F -Y') ?? '' }}@endif
+                               @if($student->exam_date !=null) {{ \App\Lib\Helper::numberToText((int)Carbon\Carbon::make($student->exam_date)->format('d')) ?? '' }} - {{ optional(Carbon\Carbon::make($student->exam_date))->format('F -Y') ?? '' }}@endif
                             </div>
                             <div class="absolute student-gpa">
                                 {{ $student->result->gpa() ?? '' }}
                             </div>
                             <div class="absolute student-result-published capitalize" style="font-size: 18px">
-                                @if($student->result_publised !=null)  {{ \App\Lib\Helper::numberToText((int)Carbon\Carbon::make($student->result_publised)->format('d')) ?? '' }}{{ optional(Carbon\Carbon::make($student->result_publised))->format('F-Y') ?? ''}}@endif
+                                @if($student->result_publised !=null)  {{ \App\Lib\Helper::numberToText((int)Carbon\Carbon::make($student->result_publised)->format('d')) ?? '' }} - {{ optional(Carbon\Carbon::make($student->result_publised))->format('F-Y') ?? ''}}@endif
                             </div>
                             <div class="absolute exam-sign capitalize" style="font-size: 18px">
                                 <img class="w-[100px] h-11" src="{{asset('images/new/ExamController.png')}}" alt="">
