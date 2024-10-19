@@ -205,14 +205,15 @@
                     <div class="data-label">Student Thana </div>
                     <div>:</div>
                     <div class="data-value">
-                   {{$student->present_address??''}}
+                        {{$student->permanent_address??''}}
+
                     </div>
                 </div>
                 <div class="data-item-wrap">
                     <div class="data-label">Student District </div>
                     <div>:</div>
                     <div class="data-value">
-                     {{$student->permanent_address??''}}
+                        {{$student->present_address??''}}
                     </div>
                 </div>
 
