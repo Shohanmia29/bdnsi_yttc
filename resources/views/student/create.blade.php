@@ -12,6 +12,7 @@
 
     <form action="{{ route('student.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
+        <x-auth-validation-errors/>
         <div class="flex flex-wrap justify-center w-full bg-white p-4" x-data="centerRequestData">
             <x-labeled-input name="name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="fathers_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>

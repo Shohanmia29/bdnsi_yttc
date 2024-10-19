@@ -67,7 +67,6 @@ class StudentController extends Controller
             'session_id' =>'required|exists:sessions,id',
             'subject_id' =>'required|exists:subjects,id',
             'course_duration' =>'required',
-            'qualification' =>'required',
             'picture' =>'required|image',
         ]);
 
