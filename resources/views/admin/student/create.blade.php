@@ -70,15 +70,20 @@
                 @endforeach
             </x-select2>
 
-            <x-labeled-select name="course_duration" label="Course Duration" required class="w-full p-1 md:w-1/2 lg:w-1/3">
-                <option value="">--Select--</option>
-                <option value="2 Month">2 Month</option>
-                <option value="3 Month">3 Month</option>
-                <option value="6 Month">6 Month</option>
-                <option value="1 Year">1 Year</option>
-                <option value="Others">Others</option>
 
-            </x-labeled-select>
+            <div class="w-full p-1 md:w-1/2 lg:w-1/3">
+                <label for="course_duration" class="block font-medium text-sm text-gray-700 font-semibold py-2">Course Duration</label>
+                <input list="course_duration_options" class="rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full p-2 border-2 border-gray-400" name="course_duration" id="course_duration" required placeholder="Select or enter a duration">
+                <datalist id="course_duration_options">
+                    <option value="2 Month">
+                    <option value="3 Month">
+                    <option value="6 Month">
+                    <option value="1 Year">
+                    <option value="Others">
+                </datalist>
+            </div>
+
+
             <x-labeled-select name="qualification" label="Qualification" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                 <option value="">--Select-- </option>
                 <option value="Psc">Psc</option>
