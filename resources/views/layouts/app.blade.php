@@ -179,6 +179,14 @@
                 <div class="w-full bg-green-700 text-white p-4 print:hidden">
                     {{ $header }}
                 </div>
+                <div class="p-2 flex items-center">
+                      <div class="w-[10%]">
+                          <button class="px-2 border py-1 rounded-l-md bg-gradient-success text-white">Notice</button>
+                      </div>
+                    <div class="w-[90%]">
+                        <marquee behavior="" direction="">{{\App\Models\ConfigDictionary::get('notice','Coming Soon')}}</marquee>
+                    </div>
+                </div>
             @endisset
             @if(session(\App\Mixin\ResponseMixin::SUCCESS_MESSAGE_SESSION_KEY))
                 <x-alert type="success">{{ session(\App\Mixin\ResponseMixin::SUCCESS_MESSAGE_SESSION_KEY) }}</x-alert>
