@@ -184,7 +184,7 @@
                           <button class="px-2 border py-1 rounded-l-md bg-gradient-success text-white">Notice</button>
                       </div>
                     <div class="w-[90%]">
-                        <marquee behavior="" direction="">{{\App\Models\ConfigDictionary::get('notice','Coming Soon')}}</marquee>
+                        <marquee behavior="" direction="">{{\App\Models\ConfigDictionary::get('center_notice','Coming Soon')}}</marquee>
                     </div>
                 </div>
             @endisset

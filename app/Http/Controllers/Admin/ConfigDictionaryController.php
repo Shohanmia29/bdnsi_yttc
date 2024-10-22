@@ -27,6 +27,7 @@ class ConfigDictionaryController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'center_notice' => 'required',
             'notice' => 'required',
             'about_us' => 'required',
             'terms_and_condition' => 'required',

@@ -14,6 +14,7 @@
     <form action="{{route('admin.configDictionary.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="flex flex-wrap justify-center w-full bg-white p-4">
+            <x-labeled-textarea value="{{\App\Models\ConfigDictionary::get('center_notice')}}" name="center_notice"  label="Center Notice" class="w-full p-1 "> </x-labeled-textarea>
             <x-labeled-textarea value="{{\App\Models\ConfigDictionary::get('notice')}}" name="notice"  class="w-full p-1 "> </x-labeled-textarea>
             <x-labeled-textarea value="{{\App\Models\ConfigDictionary::get('about_us')}}" name="about_us"  class="w-full p-1 "> </x-labeled-textarea>
             <x-labeled-textarea value="{{\App\Models\ConfigDictionary::get('terms_and_condition')}}" name="terms_and_condition"  class="w-full p-1 "> </x-labeled-textarea>
