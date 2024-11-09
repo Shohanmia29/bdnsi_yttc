@@ -1,271 +1,981 @@
 <x-frontend-layouts>
-    <!-- owl carouse -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .img_slider{
-            height: 200px!important;
-        }
 
-        @media (min-width: 600px) {
-            .img_slider {
-                height: 500px!important;
-            }
-        }
 
-    </style>
+    <!-- Hero Area -->
+    <section class="hero-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="hero-slider">
 
-    <section id="home">
-        <section class="">
-            <div class="owl-carousel owl-theme">
-                @forelse(\App\Models\Slider::get() as $slider)
-                    <div class="item   rslides img">
-                        <img  class=" img_slider"   src="{{asset('images/slider/'.$slider->photo)}}" alt="">
+                        <!-- Hero Single Slider -->
+                        <div class="hero-single-slider background-image" style="background-image: url('https://bangla-eschool.getupdemo.xyz/storage/files/1/Sliders/slider-img-1(1).png');">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 col-md-8 col-12 align-self-end">
+                                    <div class="hero-content">
+                                        <h3 class="hero-content-title">
+                                            স্বাগতম এক্সওয়াইজেধ স্কুল এবং কলেজ এর পক্ষ থেকে!
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-single-slider background-image" style="background-image: url('https://bangla-eschool.getupdemo.xyz/storage/files/1/Sliders/slider-img-3(1).png');">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 col-md-8 col-12 align-self-end">
+                                    <div class="hero-content">
+                                        <h3 class="hero-content-title">
+                                            বিশ্বমানের শিক্ষাদানের একটি উপযুক্ত স্কুল প্রতিষ্ঠান।
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-single-slider background-image" style="background-image: url('https://bangla-eschool.getupdemo.xyz/storage/files/1/Sliders/slider-img-2(1).png');">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 col-md-8 col-12 align-self-end">
+                                    <div class="hero-content">
+                                        <h3 class="hero-content-title">
+                                            মনোরোম পরিবেশে আমরা দিচ্ছি সেরা মানের শিক্ষা ব্যবস্থা।
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                @empty
-                    <div class="item overflow-hidden  w-full " style="background-color: black;">
-                        <img class="md:h-[500px] w-full"   src="{{asset('frontend/banner.jpeg')}}" alt="">
-                    </div>
-                    <div class="item">
-                        <img class="md:h-[500px] w-full"  src="{{asset('frontend/banner.jpeg')}}" alt="">
-                    </div>
-                @endforelse
-
+                </div>
             </div>
-        </section>
-    </section>
-
-
-
-
-    <section class="container">
-        <div class="d-flex justify-content-center align-items-center py-5">
-            <button class="btn btn-primary">News</button>
-            <marquee behavior="" direction="" class="fw-bolder fs-5"> {{\App\Models\ConfigDictionary::get('notice','শীঘ্রই আসছে')}}</marquee>
         </div>
     </section>
+    <!-- End Hero Area -->
 
-    <section>
-        <div class="container mt-5">
-            <div class="">
-                <div class="">
-                    <div class="notice_board_wrap">
-                        <h5 class="fw-bold">Notice Board</h5>
-                        <div class="notice_board">
-                            <ul class="list-group">
-                                @forelse(\App\Models\Notice::take(1)->latest()->get() as $notice)
-                                    <li class="list-group-item d-flex justify-content-start align-items-center">
-                                    <span style="width: 24px;">
-                                            <img src="{{asset('frontend/bullet_tick.png')}}" />
-                                        </span>
-                                        <a href="" class="form-check-label" target="_blank" for="firstCheckbox">{{\Illuminate\Support\Str::limit($notice->details, '30', $end='...')}}</a>
-                                    </li>
-                                @empty
-                                    <li class="list-group-item d-flex justify-content-start align-items-center">
-                                    <span style="width: 24px;">
-                                            <img src="{{asset('frontend/bullet_tick.png')}}" />
-                                        </span>
-                                        <a href="" class="form-check-label" target="_blank" for="firstCheckbox">২১‌শে ফেব্রুয়া‌রি পালন সংক্রান্ত...</a>
-                                    </li>
-                                @endforelse
+    <!-- Page Main Area -->
+    <section class="home-page-main-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-12">
+                    <div class="home-page-main-left">
+                        <!-- About Us Area -->
+                        <div class="about-us-area section-padding">
+                            <div class="about-us-img">
+                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/AboutUs/about-img-2(1).png" alt="#" />
+                            </div>
+                            <div class="about-content">
+                                <h3 class="about-cont-title">প্রতিষ্ঠান সম্পর্কে</h3>
+                                <span class="title-seperetor"></span>
+                                <p>এক্সওয়াইজেধ স্কুল এবং কলেজ এর অতীত গৌরবোজ্জ্বল বর্তমান প্রশংসনীয়। ২০২৩ ইংরেজীর ২০ শে জানুয়ারী এক্সওয়াইজেধ স্কুল এবং কলেজ এর স্থানীয় ম্যাজিষ্ট্রেট অফিসের তৎকালীন প্রধান কারণিক মি: এক্সওয়াইজেধ কর্তৃক প্রতিষ্ঠিত। তখন এটা এক্সওয়াইজেধ
+                                    গভর্ণমেন্ট স্কুল নামে পরিচিত ছিল। ৯ জন বাংলাদেশী, ১ জন হিন্দু ও ৮ জন মুসলমান বিদ্যোৎসাহী ব্যক্তির একটি কমিটির উপর এর পরিচালনার দায়িত্ব ন্যাস্ত ছিল। এদেশের অধিবাসীদের বাংলায় শিক্ষায় শিক্ষিত করার জন্য এ বিদ্যালয় চালু
+                                    করা হয়। ২০২৩ ইংরেজির ১ ই মে মি: এক্সওয়াইজেধ বিদ্যালয়ের প্রধান শিক্ষক নিযুক্ত হন...
+                                <div class="about-cont-btn">
+                                    <a href="https://bangla-eschool.getupdemo.xyz/about" class="theme-btn secondary">বিস্তারিত পড়ুন</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Corner Message Area -->
+                        <div class="corner-message-area">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="section-head">
+                                        <h3 class="section-head-title">
+                                            স্কুল পরিচালকদের বাণী<span class="title-line style-4"></span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="corner-message-slider">
+                                        <!-- Single Corner Message -->
+                                        <div class="single-corner-message">
+                                            <div class="corner-message-top">
+                                                <div class="corner-message-img">
+                                                    <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/alexander-hipp-iEEBWgY_6lA-unsplash.jpg" alt="#" />
+
+                                                </div>
+                                                <div class="corner-message-info">
+                                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/quote.svg" alt="#" />
+                                                    <h4 class="corner-message-info-title">
+                                                        সভাপতির বাণী
+                                                    </h4>
+                                                    <span class="c-message-title-seperetor"></span>
+                                                    <p class="corner-message-info-name">
+                                                        মোঃ জাফর উল্লাহ্
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="corner-message-bottom">
+                                                <p>আস্সালামু আলাইকুম সম্মানিত অভিভাবক, শিক্ষক-শিক্ষিকা এবং শিক্ষার্থীবৃন্দ, আজকের এই দিনে আপনাদের সকলকে আমার আন্তরিক শুভেচ্ছা ও অভিনন্দন। শিক্ষা একটি জাতির মেরুদণ্ড। একটি শিক্ষিত জাতিই পারে একটি উন্নত ও সমৃদ্ধ
+                                                    সমাজ গড়ে তুলতে। এই বিশ্বাসের আলোকে আমরা আমাদের স্কুলটিকে একটি আদর্শ শিক্ষা প্রতিষ্ঠান হিসেবে গড়ে তুলতে কাজ করে যাচ্ছি। আমাদের স্কুলটিতে শিক্ষার্থীদের জন্য মানসম্মত শিক্ষা নিশ্চিত করার লক্ষ্যে আমরা
+                                                    বিভিন্ন পদক্ষেপ গ্রহণ করেছি। আমাদের শিক্ষক-শিক্ষিকাবৃন্দ অত্যন্ত দক্ষ ও অভিজ্ঞ। তারা শিক্ষার্থীদের প্রতিটি প্রশ্নের উত্তর দ...
+                                                <div class="corner-message-btn">
+                                                    <a href="https://bangla-eschool.getupdemo.xyz/message" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="single-corner-message">
+                                            <div class="corner-message-top">
+                                                <div class="corner-message-img">
+                                                    <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Personnel/img-1.png" alt="#" />
+
+                                                </div>
+                                                <div class="corner-message-info">
+                                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/quote.svg" alt="#" />
+                                                    <h4 class="corner-message-info-title">
+                                                        অধ্যক্ষের বাণী
+                                                    </h4>
+                                                    <span class="c-message-title-seperetor"></span>
+                                                    <p class="corner-message-info-name">
+                                                        মোঃ মোস্তফা কামাল ভূঁইয়া
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="corner-message-bottom">
+                                                <p>প্রিয় শিক্ষার্থীবৃন্দ, আজ আমি আপনাদের সামনে দাঁড়িয়েছি একজন শিক্ষক হিসেবে, একজন অভিভাবক হিসেবে, এবং একজন বন্ধু হিসেবে। আমি আপনাদেরকে বলতে চাই যে, আপনারা সকলেই সক্ষম। আপনারা সকলেই আপনার সম্পূর্ণ সম্ভাবনায়
+                                                    পৌঁছাতে পারেন। আপনাদেরকে শুধুমাত্র কঠোর পরিশ্রম করতে হবে, সৎ হতে হবে, এবং অন্যদের প্রতি শ্রদ্ধাশীল হতে হবে। আপনাদেরকে নিজের উপর বিশ্বাস রাখতে হবে এবং কখনই থেমে থাকতে হবে না।<br />
+                                                    <br /> আমি আপনাদের জন্য শুভকামনা জানাই। আমি আশা করি আপনারা সকলেই একজন ভালো মানুষ হিসেবে গড়ে উঠবেন এবং আপনারা আপনার লক্ষ্য অর্জনে সফল হবেন। ...
+                                                <div class="corner-message-btn">
+                                                    <a href="https://bangla-eschool.getupdemo.xyz/message" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="single-corner-message">
+                                            <div class="corner-message-top">
+                                                <div class="corner-message-img">
+                                                    <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Personnel/img-2.png" alt="#" />
+
+                                                </div>
+                                                <div class="corner-message-info">
+                                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/quote.svg" alt="#" />
+                                                    <h4 class="corner-message-info-title">
+                                                        উপাধ্যক্ষের বাণী
+                                                    </h4>
+                                                    <span class="c-message-title-seperetor"></span>
+                                                    <p class="corner-message-info-name">
+                                                        মিসেস শিউলী আক্তার
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="corner-message-bottom">
+                                                <p>প্রিয় শিক্ষার্থীবৃন্দ, আজ আমি আপনাদের সামনে দাঁড়িয়েছি একজন শিক্ষক হিসেবে, একজন অভিভাবক হিসেবে, এবং একজন বন্ধু হিসেবে। আমি আপনাদেরকে বলতে চাই যে, আপনারা সকলেই সক্ষম। আপনারা সকলেই আপনার সম্পূর্ণ সম্ভাবনায়
+                                                    পৌঁছাতে পারেন। আপনাদেরকে শুধুমাত্র কঠোর পরিশ্রম করতে হবে, সৎ হতে হবে, এবং অন্যদের প্রতি শ্রদ্ধাশীল হতে হবে। আপনাদেরকে নিজের উপর বিশ্বাস রাখতে হবে এবং কখনই থেমে থাকতে হবে না।<br />
+                                                    <br /> আমি আপনাদের জন্য শুভকামনা জানাই। আমি আশা করি আপনারা সকলেই একজন ভালো মানুষ হিসেবে গড়ে উঠবেন এবং আপনারা আপনার লক্ষ্য অর্জনে সফল হবেন। ...
+                                                <div class="corner-message-btn">
+                                                    <a href="https://bangla-eschool.getupdemo.xyz/message" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Teachers Area -->
+
+                        <div class="teachers-area">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="section-head">
+                                        <h3 class="section-head-title">
+                                            স্কুল শিক্ষক/শিক্ষিকা<span class="title-line"></span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="teachers-card-group">
+                                        <!-- Single Teachers Card -->
+                                        <div class="single-teachers">
+                                            <div class="teachers-img">
+                                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Teachers/img-2.png" alt="Teacher Image" />
+
+                                            </div>
+                                            <div class="teachers-content">
+                                                <h4 class="teachers-name">মাহবুব সরকার</h4>
+                                                <p class="teachers-designation">
+                                                    (সিনিয়র ইংরেজি শিক্ষক)
+                                                </p>
+                                                <ul class="teachers-social">
+                                                    <li>
+                                                        <a href="tel:01969005039"><i class="icofont-ui-call"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="mailto:info@xyzschools.com"><i class="icofont-envelope"></i></a>
+                                                    </li>
+
+
+                                                    <li>
+                                                        <a href="https://www.linkedin.com" target="_blank"><i class="icofont-linkedin"></i></a>
+                                                    </li>
+                                                </ul>
+                                                <div class="teachers-btn">
+                                                    <a href="https://bangla-eschool.getupdemo.xyz/teacher/details/1698640772rnKdI" class="theme-btn secondary">বিস্তারিত<i
+                                                            class="fi-rr-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="single-teachers">
+                                            <div class="teachers-img">
+                                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/alex-suprun-ZHvM3XIOHoE-unsplash.jpg" alt="Teacher Image" />
+
+                                            </div>
+                                            <div class="teachers-content">
+                                                <h4 class="teachers-name">Ina Prince</h4>
+                                                <p class="teachers-designation">
+                                                    (Ratione quo esse qu)
+                                                </p>
+                                                <ul class="teachers-social">
+                                                    <li>
+                                                        <a href="tel:+8801634567890"><i class="icofont-ui-call"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="mailto:rawynotyt@mailinator.com"><i class="icofont-envelope"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="Maxime omnis quisqua" target="_blank"><i class="icofont-facebook"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="Rerum culpa quisquam" target="_blank"><i class="icofont-linkedin"></i></a>
+                                                    </li>
+                                                </ul>
+                                                <div class="teachers-btn">
+                                                    <a href="https://bangla-eschool.getupdemo.xyz/teacher/details/16989257416XOzf" class="theme-btn secondary">বিস্তারিত<i
+                                                            class="fi-rr-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="single-teachers">
+                                            <div class="teachers-img">
+                                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Teachers/img-1.png" alt="Teacher Image" />
+
+                                            </div>
+                                            <div class="teachers-content">
+                                                <h4 class="teachers-name">আবদুল্লাহ আল নোমান</h4>
+                                                <p class="teachers-designation">
+                                                    (সিনিয়র বাংলা শিক্ষক)
+                                                </p>
+                                                <ul class="teachers-social">
+                                                    <li>
+                                                        <a href="tel:01969005139"><i class="icofont-ui-call"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="mailto:alifhossain174@gmail.com"><i class="icofont-envelope"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://facebook.com" target="_blank"><i class="icofont-facebook"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://www.linkedin.com" target="_blank"><i class="icofont-linkedin"></i></a>
+                                                    </li>
+                                                </ul>
+                                                <div class="teachers-btn">
+                                                    <a href="https://bangla-eschool.getupdemo.xyz/teacher/details/1698640715ljTKt" class="theme-btn secondary">বিস্তারিত<i
+                                                            class="fi-rr-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="section-bottom-btn">
+                                        <a href="https://bangla-eschool.getupdemo.xyz/teachers" class="theme-btn secondary">সকল শিক্ষকবৃন্দ<i
+                                                class="fi-rr-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-12">
+                    <div class="home-page-main-right">
+                        <!-- Single Sidebar Widget -->
+                        <div class="home-sidebar-widget notice-board">
+                            <h4 class="home-sidebar-widget-title">
+                                <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/mike.svg" alt="#" />নোটিশ বোর্ড
+                            </h4>
+
+                            <!-- Single Widget List -->
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/info-2.svg" alt="#" />
+                                    <p>স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1698922484WCuAP" target="_blank" class="theme-btn secondary">বিস্তারিত</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/info-2.svg" alt="#" />
+                                    <p>তাপপ্রবাহের সতর্কবার্তার কারণে শ্রেণি কার্যক্রম ও চলমান পরীক্ষা..</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/169864663613ysi" target="_blank" class="theme-btn secondary">বিস্তারিত</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/info-2.svg" alt="#" />
+                                    <p>প্রথম সাময়িক পরীক্ষা ২০২৩ এর প্রসঙ্গে বিজ্ঞপ্তি সকল শ্রেণীর</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1697707887saQt3" target="_blank" class="theme-btn secondary">বিস্তারিত</a>
+                                </div>
+                            </div>
+
+                            <div class="home-sidebar-widget-btn">
+                                <a href="https://bangla-eschool.getupdemo.xyz/notice-board" class="theme-btn">সকল নোটিশ<i class="fi-rr-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- Single Sidebar Widget -->
+                        <div class="home-sidebar-widget important-links">
+                            <h4 class="home-sidebar-widget-title">
+                                <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/book.svg" alt="#" />গুরুত্বপূর্ণ লিঙ্ক সমূহ
+                            </h4>
+                            <!-- Single Widget List -->
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="#" />
+                                    <p>মাধ্যমিক ও উচ্চ মাধ্যমিক শিক্ষা</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="https://dshe.gov.bd/" target="_blank" class="theme-btn secondary">ভিজিট করুন</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="#" />
+                                    <p>শিক্ষা মন্ত্রনালয়</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="https://moedu.gov.bd/" target="_blank" class="theme-btn secondary">ভিজিট করুন</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="#" />
+                                    <p>ব্যানবেইজ</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="https://banbeis.gov.bd/" target="_blank" class="theme-btn secondary">ভিজিট করুন</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="#" />
+                                    <p>নায়েম</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="http://www.naem.gov.bd/" target="_blank" class="theme-btn secondary">ভিজিট করুন</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="#" />
+                                    <p>এনসিটিবি</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="http://www.nctb.gov.bd/" target="_blank" class="theme-btn secondary">ভিজিট করুন</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="#" />
+                                    <p>শিক্ষক বাতায়ন</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="http://www.teachers.gov.bd/" target="_blank" class="theme-btn secondary">ভিজিট করুন</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="#" />
+                                    <p>কিশোর বাতায়ন</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="http://www.konnect.edu.bd/" target="_blank" class="theme-btn secondary">ভিজিট করুন</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Sidebar Widget -->
+                        <div class="home-sidebar-widget important-links">
+                            <h4 class="home-sidebar-widget-title">
+                                <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/book.svg" alt="#" />অন্যান্য লিঙ্ক সমূহ
+                            </h4>
+
+                            <!-- Single Widget List -->
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="#" />
+                                    <p>পাঠশালা</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="http://automation.sib.gov.bd/" target="_blank" class="theme-btn secondary">ভিজিট করুন</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="#" />
+                                    <p>ই-স্কুল</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="http://eschool.sib.gov.bd/" target="_blank" class="theme-btn secondary">ভিজিট করুন</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="#" />
+                                    <p>ভর্তি পরীক্ষার আবেদন</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="http://127.0.0.1:8000/" target="_blank" class="theme-btn secondary">ভিজিট করুন</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="#" />
+                                    <p>পিডিএস (সরকারি মাধ্যমিক)</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="#" target="_blank" class="theme-btn secondary">ভিজিট করুন</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="#" />
+                                    <p>ওয়েব মেইল লগিন</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="http://127.0.0.1:8000/" target="_blank" class="theme-btn secondary">ভিজিট করুন</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Page Main Area -->
+
+    <!-- Gallery Area -->
+    <section class="gallery-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-head">
+                        <h3 class="section-head-title">
+                            ছবি এবং ভিডিও গ্যালারী<span class="title-line style-3"></span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="gallery-slider">
+
+                        <!-- Single Gallery -->
+                        <div class="single-gallery">
+                            <div class="gallery-img">
+
+                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/successful-child-with-graduation-cap-backpack-full-books(1).jpg" alt="Gallery Image" />
+
+                                <a href="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/successful-child-with-graduation-cap-backpack-full-books(1).jpg" data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4 class="gallery-content-title">
+                                    https://bangla-eschool.getupdemo.xyz/বিদ্যালয়ের সেরা ছাত্র
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="single-gallery">
+                            <div class="gallery-img">
+
+                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/empty-classroom-due-coronavirus-pandemic(1).jpg" alt="Gallery Image" />
+
+                                <a href="https://www.youtube.com/watch?v=kCHeKc2R96o" class="video-popup-img popup-video image-view-btn"><i class="fi fi-br-play"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4 class="gallery-content-title">
+                                    https://bangla-eschool.getupdemo.xyz/সরাসরি ক্লাস চলাকালীন ভিডিও
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="single-gallery">
+                            <div class="gallery-img">
+
+                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/african-american-female-teacher-teaching-students-class-elementary-school(1).jpg" alt="Gallery Image" />
+
+                                <a href="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/african-american-female-teacher-teaching-students-class-elementary-school(1).jpg" data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4 class="gallery-content-title">
+                                    https://bangla-eschool.getupdemo.xyz/সরাসরি ক্লাস চলাকালীন ফটো
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="single-gallery">
+                            <div class="gallery-img">
+
+                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/young-asia-businesswoman-using-laptop-talk-colleague-about-plan-video-call-meeting-while-work-from-home-living-room(1).jpg" alt="Gallery Image" />
+
+                                <a href="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/young-asia-businesswoman-using-laptop-talk-colleague-about-plan-video-call-meeting-while-work-from-home-living-room(1).jpg" data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4 class="gallery-content-title">
+                                    https://bangla-eschool.getupdemo.xyz/অনলাইন ক্লাস চলাকালীন ফটো
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="single-gallery">
+                            <div class="gallery-img">
+
+                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/img-1.png" alt="Gallery Image" />
+
+                                <a href="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/img-1.png" data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4 class="gallery-content-title">
+                                    বিদ্যালয়ের ভিতরের ছবির একাংশ। এক্সওয়াইজেধ স্কুল এবং কলেজ
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="single-gallery">
+                            <div class="gallery-img">
+
+                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/img-2.png" alt="Gallery Image" />
+
+                                <a href="https://www.youtube.com/watch?v=t4ejFV6n4b8" class="video-popup-img popup-video image-view-btn"><i class="fi fi-br-play"></i></a>
+                            </div>
+                            <div class="gallery-content">
+                                <h4 class="gallery-content-title">
+                                    বিদ্যালয়ের ভিতরের ছবির একাংশ। এক্সওয়াইজেধ স্কুল এবং কলেজ
+                                </h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-bottom-btn">
+                        <a href="https://bangla-eschool.getupdemo.xyz/gallery" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Gallery Area -->
+
+    <!-- School Committe Area -->
+    <section class="school-committe-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-head">
+                        <h3 class="section-head-title">
+                            স্কুল কমিটি সদস্যবৃন্দ<span class="title-line"></span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row school-committe-group">
+
+                <!-- Single School Committe -->
+                <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+                    <div class="school-commite-card">
+                        <div class="school-commite-card-img">
+
+                            <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/1425ba7faf9c40cc17332869246f0c3ae31e3f8f(1).jpeg" alt="Committee Members Image" />
+                        </div>
+                        <div class="school-commite-card-info">
+                            <h4 class="s-commite-member-name">Ifeoma Roach</h4>
+                            <p class="s-commite-member-designation">(Commodi laborum Ame)</p>
+                            <ul class="s-commite-card-info-list">
+                                <li>সদস্য যোগদান: <span style="margin-left: 2px;">১৫ জুলাই, ১৯৭৮</span></li>
+                                <li>সদস্য মেয়াদকাল: <span style="margin-left: 2px;">০২ নভেম্বর, ২০২৩</span></li>
+                            </ul>
+                            <ul class="s-commite-card-social">
+                                <li>
+                                    <a href="tel:01702233333"><i class="icofont-ui-call"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="mailto:bekesury@mailinator.com"><i class="icofont-envelope"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" target="_blank"><i class="icofont-facebook"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" target="_blank"><i class="icofont-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+                    <div class="school-commite-card">
+                        <div class="school-commite-card-img">
+
+                            <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/nicolas-horn-MTZTGvDsHFY-unsplash.jpg" alt="Committee Members Image" />
+                        </div>
+                        <div class="school-commite-card-info">
+                            <h4 class="s-commite-member-name">Whitney May</h4>
+                            <p class="s-commite-member-designation">(Nostrum et voluptati)</p>
+                            <ul class="s-commite-card-info-list">
+                                <li>সদস্য যোগদান: <span style="margin-left: 2px;">০৯ জুলাই, ১৯৭১</span></li>
+                                <li>সদস্য মেয়াদকাল: <span style="margin-left: 2px;">০২ নভেম্বর, ২০২৩</span></li>
+                            </ul>
+                            <ul class="s-commite-card-social">
+                                <li>
+                                    <a href="tel:01969005035"><i class="icofont-ui-call"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="mailto:fysejafeva@mailinator.com"><i class="icofont-envelope"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" target="_blank"><i class="icofont-facebook"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" target="_blank"><i class="icofont-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+                    <div class="school-commite-card">
+                        <div class="school-commite-card-img">
+
+                            <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/alex-suprun-ZHvM3XIOHoE-unsplash.jpg" alt="Committee Members Image" />
+                        </div>
+                        <div class="school-commite-card-info">
+                            <h4 class="s-commite-member-name">Whitney Maldonado</h4>
+                            <p class="s-commite-member-designation">(Qui sit irure magna)</p>
+                            <ul class="s-commite-card-info-list">
+                                <li>সদস্য যোগদান: <span style="margin-left: 2px;">২২ এপ্রিল, ২০০২</span></li>
+                                <li>সদস্য মেয়াদকাল: <span style="margin-left: 2px;">০৪ অক্টোবর, ২০২৪</span></li>
+                            </ul>
+                            <ul class="s-commite-card-social">
+                                <li>
+                                    <a href="tel:01969005035"><i class="icofont-ui-call"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="mailto:qatimacub@mailinator.com"><i class="icofont-envelope"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" target="_blank"><i class="icofont-facebook"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" target="_blank"><i class="icofont-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+                    <div class="school-commite-card">
+                        <div class="school-commite-card-img">
+
+                            <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Teachers/img-3.png" alt="Committee Members Image" />
+                        </div>
+                        <div class="school-commite-card-info">
+                            <h4 class="s-commite-member-name">Jane Smith</h4>
+                            <p class="s-commite-member-designation">(Developer)</p>
+                            <ul class="s-commite-card-info-list">
+                                <li>সদস্য যোগদান: <span style="margin-left: 2px;">০৯ অক্টোবর, ২০২৩</span></li>
+                                <li>সদস্য মেয়াদকাল: <span style="margin-left: 2px;">০২ নভেম্বর, ২০২৩</span></li>
+                            </ul>
+                            <ul class="s-commite-card-social">
+                                <li>
+                                    <a href="tel:01968556466"><i class="icofont-ui-call"></i></a>
+                                </li>
+
+
+                                <li>
+                                    <a href="https://facebook.com" target="_blank"><i class="icofont-facebook"></i></a>
+                                </li>
 
                             </ul>
-                            <div class="text-end">
-                                <a href="{{route('frontendNoticeList')}}" class="all_btn">All Notice</a>
-                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+                    <div class="school-commite-card">
+                        <div class="school-commite-card-img">
+
+                            <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Teachers/img-2.png" alt="Committee Members Image" />
+                        </div>
+                        <div class="school-commite-card-info">
+                            <h4 class="s-commite-member-name">মোঃ মোস্তফা কামাল ভূঁইয়া</h4>
+                            <p class="s-commite-member-designation">(Web Developer)</p>
+                            <ul class="s-commite-card-info-list">
+                                <li>সদস্য যোগদান: <span style="margin-left: 2px;">২৪ অক্টোবর, ২০২৩</span></li>
+                                <li>সদস্য মেয়াদকাল: <span style="margin-left: 2px;">০৪ নভেম্বর, ২০২৩</span></li>
+                            </ul>
+                            <ul class="s-commite-card-social">
+                                <li>
+                                    <a href="tel:01969005035"><i class="icofont-ui-call"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="mailto:alifhossain174@gmail.com"><i class="icofont-envelope"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="http://127.0.0.1:8000/add/new/memeber" target="_blank"><i class="icofont-facebook"></i></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </section>
-
-
-
-
-    <section id="courses">
-        <div class="container courses-list">
             <div class="row">
-                @forelse(\App\Models\Subject::take(4)->get() as $subject)
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-6 mt-4 flip-box">
-                    <x-course :subject="$subject" />
-                    </div>
-                @empty
-                <div class="col-lg-3 col-md-3 col-sm-6 col-6 mt-4 flip-box">
-                    <div class="card flip-box-inner">
-                        <div class="flip-box-front">
-                            <img height="250" src="public/images/1698818046.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Diploma in Dressmaking &amp; Tailoring</h5>
-                            </div>
-                        </div>
-                        <div class="flip-box-back">
-                            <a class="btn" style="background: #0d6efd; color: white;" href="/course/48">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-6 mt-4 flip-box">
-                    <div class="card flip-box-inner">
-                        <div class="flip-box-front">
-                            <img height="250" src="public/images/1717073216.jpeg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Diploma in Ceramic Tiles</h5>
-                            </div>
-                        </div>
-                        <div class="flip-box-back">
-                            <a class="btn" style="background: #683091; color: white;" href="/course/495">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-6 mt-4 flip-box">
-                    <div class="card flip-box-inner">
-                        <div class="flip-box-front">
-                            <img height="250" src="public/images/1705855414.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Diploma in Fiber Optical Technician</h5>
-                            </div>
-                        </div>
-                        <div class="flip-box-back">
-                            <a class="btn" style="background: #683091; color: white;" href="/course/232">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-6 mt-4 flip-box">
-                    <div class="card flip-box-inner">
-                        <div class="flip-box-front">
-                            <img height="250" src="public/images/1704992120.jpeg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Diploma In MEP (Mechanical, Electrical, &amp; Plumbing.)</h5>
-                            </div>
-                        </div>
-                        <div class="flip-box-back">
-                            <a class="btn" style="background: #0d6efd; color: white;" href="/course/217">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                @endforelse
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <button class="btn3 mt-5"><a href="{{route('all_course')}}">Our All Courses</a></button>
-
-
-
-
-    <section id="review">
-        <div class="container-fluid review-student">
-            <div class="container review1">
-                <div class="row review">
-                    <div class="col-lg-12">
-                        <h1 class="text-center text-white">Apply Now for Your Institute Registration
-                        </h1>
-                    </div>
-                    <div class="col-md-4 offset-md-4">
-                        <center>
-                            <button class="btn btn-outline-success mt-2"><a class="text-white shadow"
-                                                                            href="{{route('center-request.create')}}" style="text-decoration:none">APPLY NOW</a></button>
-
-                        </center>
-
+                <div class="col-12">
+                    <div class="section-bottom-btn">
+                        <a href="https://bangla-eschool.getupdemo.xyz/committee" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- End School Committe Area -->
 
-
-    <section id="section_counter">
-        <div class="container counter-number shadow p-5 mb-2 bg-body rounded">
+    <!-- Total School Area -->
+    <section class="total-students-area section-padding">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-3 icon counter-box">
-                    <i class="fa fa-home" aria-hidden="true"></i>
-                    <h2 class="counter " data-target="200">0</h2>
-                    <h3>Institute</h3>
+                <div class="col-12">
+                    <div class="section-head">
+                        <h3 class="section-head-title">
+                            ছাত্র/ছাত্রীদের পরিসংখান<span class="title-line"></span>
+                        </h3>
+                    </div>
                 </div>
-                <div class="col-lg-3 icon counter-box">
-                    <i class="fa fa-book" aria-hidden="true"></i>
-                    <h2 class="counter " data-target="300">0</h2>
-                    <h3>Courses</h3>
-                </div>
-                <div class="col-lg-3 icon counter-box">
-                    <i class="fa fa-sticky-note-o" aria-hidden="true"></i>
-                    <h2 class="counter " data-target="120">0</h2>
-                    <h3>Exam</h3>
-                </div>
-                <div class="col-lg-3 icon counter-box">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                    <h2 class="counter " data-target="144223">0</h2>
-                    <h3>Students</h3>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="total-students-group">
+
+                        <!-- Single Total Student -->
+                        <div class="total-students-card">
+                            <h3 class="total-students-number counter">145</h3>
+                            <p class="total-students-text">Total Students</p>
+                            <span class="total-students-class">প্রথম শ্রেণী</span>
+                        </div>
+                        <div class="total-students-card">
+                            <h3 class="total-students-number counter">0</h3>
+                            <p class="total-students-text">Total Students</p>
+                            <span class="total-students-class">দ্বিতীয় শ্রেণী</span>
+                        </div>
+                        <div class="total-students-card">
+                            <h3 class="total-students-number counter">0</h3>
+                            <p class="total-students-text">Total Students</p>
+                            <span class="total-students-class">তৃতীয় শ্রেণী</span>
+                        </div>
+                        <div class="total-students-card">
+                            <h3 class="total-students-number counter">0</h3>
+                            <p class="total-students-text">Total Students</p>
+                            <span class="total-students-class">চতুর্থ শ্রেণী</span>
+                        </div>
+                        <div class="total-students-card">
+                            <h3 class="total-students-number counter">0</h3>
+                            <p class="total-students-text">Total Students</p>
+                            <span class="total-students-class">পঞ্চম শ্রেণী</span>
+                        </div>
+                        <div class="total-students-card">
+                            <h3 class="total-students-number counter">0</h3>
+                            <p class="total-students-text">Total Students</p>
+                            <span class="total-students-class">ষষ্ঠ শ্রেণী</span>
+                        </div>
+                        <div class="total-students-card">
+                            <h3 class="total-students-number counter">0</h3>
+                            <p class="total-students-text">Total Students</p>
+                            <span class="total-students-class">সপ্তম শ্রেণী</span>
+                        </div>
+                        <div class="total-students-card">
+                            <h3 class="total-students-number counter">0</h3>
+                            <p class="total-students-text">Total Students</p>
+                            <span class="total-students-class">অষ্টম শ্রেণী</span>
+                        </div>
+                        <div class="total-students-card">
+                            <h3 class="total-students-number counter">0</h3>
+                            <p class="total-students-text">Total Students</p>
+                            <span class="total-students-class">নবম শ্রেণী</span>
+                        </div>
+                        <div class="total-students-card">
+                            <h3 class="total-students-number counter">35</h3>
+                            <p class="total-students-text">Total Students</p>
+                            <span class="total-students-class">দশম শ্রেণী</span>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- End School Committe Area -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Students Area -->
+    <section class="students-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-head">
+                        <h3 class="section-head-title">
+                            সেরা ছাত্র/ছাত্রী <span class="title-line style-2"></span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="students-slider">
 
-    <script>
-        $(document).ready(function () {
-            $(".owl-carousel").owlCarousel({
-                loop: true,
-                margin: 24,
-                items: 1,
-                autoplay:true,
-                autoplayTimeout:5000,
-                autoplayHoverPause:true,
-            });
-        });
-    </script>
+                        <!-- Single Student Card -->
+                        <div class="students-card">
+                            <div class="students-card-img">
 
+                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Students/img-4.png" alt="Student" />
+                            </div>
+                            <div class="students-card-info">
+                                <h4>Md Fahim Hossain Alif</h4>
+                                <span>(দ্বিতীয় শ্রেণী)</span>
+                                <ul>
+                                    <li>রোল নং: <span>২</span></li>
+                                    <li>সময়: <span>২০২৩</span></li>
+                                </ul>
+                            </div>
+                        </div>
 
-    <script>
-        let section_counter = document.querySelector('#section_counter');
-        let counters = document.querySelectorAll('.counter');
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-bottom-btn">
+                        <a href="https://bangla-eschool.getupdemo.xyz/students" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Students Area -->
 
-        // Scroll Animation
+    <!-- Blog Area -->
+    <section class="blog-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-head">
+                        <h3 class="section-head-title">
+                            সংবাদ/ ব্লগ সমূহ <span class="title-line"></span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
 
-        let CounterObserver = new IntersectionObserver(
-            (entries, observer) => {
-                let [entry] = entries;
-                if (!entry.isIntersecting) return;
+                <!-- Single Blog -->
+                <div class="col-lg-6 col-xl-4 col-md-6 col-12">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Blog/Difference-Between-Technical-Support-and-Desktop-Support_2165113523.jpg" alt="Blog Image" />
+                        </div>
+                        <div class="blog-content">
+                            <ul class="blog-meta">
+                                <li>Post by:<span>Admin</span></li>
+                                <li>Date:<span>05 Nov, 2023</span></li>
+                            </ul>
+                            <a href="https://bangla-eschool.getupdemo.xyz/blog/details/how-to-improve-your-technical-skills">
+                                <h4 class="blog-content-title">
+                                    How to improve your technical skills
+                                </h4>
+                            </a>
+                            <div class="blog-content-btn">
+                                <a href="https://bangla-eschool.getupdemo.xyz/blog/details/how-to-improve-your-technical-skills" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 col-md-6 col-12">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/image (35).png" alt="Blog Image" />
+                        </div>
+                        <div class="blog-content">
+                            <ul class="blog-meta">
+                                <li>Post by:<span>Admin</span></li>
+                                <li>Date:<span>02 Nov, 2023</span></li>
+                            </ul>
+                            <a href="https://bangla-eschool.getupdemo.xyz/blog/details/ছাত্র-ছাত্রীদের-কেন-রাতের-বেলায়-পড়তে-গেলে-ঘুম-আসে">
+                                <h4 class="blog-content-title">
+                                    ছাত্র-ছাত্রীদের কেন রাতের বেলায় পড়তে গেলে ঘুম আসে
+                                </h4>
+                            </a>
+                            <div class="blog-content-btn">
+                                <a href="https://bangla-eschool.getupdemo.xyz/blog/details/ছাত্র-ছাত্রীদের-কেন-রাতের-বেলায়-পড়তে-গেলে-ঘুম-আসে" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 col-md-6 col-12">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Blog/img-3.png" alt="Blog Image" />
+                        </div>
+                        <div class="blog-content">
+                            <ul class="blog-meta">
+                                <li>Post by:<span>Admin</span></li>
+                                <li>Date:<span>21 Oct, 2023</span></li>
+                            </ul>
+                            <a href="https://bangla-eschool.getupdemo.xyz/blog/details/কলেজে-ভর্তি-হওয়ার-পূর্বে-যেসকল-বৈশিষ্ট-তোমার-মাঝে-থাকা-উচিত">
+                                <h4 class="blog-content-title">
+                                    কলেজে ভর্তি হওয়ার পূর্বে যেসকল বৈশিষ্ট তোমার মাঝে থাকা উচিত!
+                                </h4>
+                            </a>
+                            <div class="blog-content-btn">
+                                <a href="https://bangla-eschool.getupdemo.xyz/blog/details/কলেজে-ভর্তি-হওয়ার-পূর্বে-যেসকল-বৈশিষ্ট-তোমার-মাঝে-থাকা-উচিত" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                let speed = 20;
-                counters.forEach((counter, index) => {
-                    counter.style.color='rgb(192 132 252';
-                    function UpdateCounter() {
-                        const targetNumber = +counter.dataset.target;
-                        const initialNumber = +counter.innerText;
-                        const incPerCount = targetNumber / speed;
-                        if (initialNumber < targetNumber) {
-                            counter.innerText = Math.ceil(initialNumber + incPerCount);
-                            setTimeout(UpdateCounter, 50);
-                        }
-                    }
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-bottom-btn">
+                        <a href="https://bangla-eschool.getupdemo.xyz/blog" class="theme-btn secondary">সকল ব্লগ<i class="fi-rr-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Area -->
 
-                    UpdateCounter();
-
-                    if (counter.parentElement.style.animation) {
-                        counter.parentElement.style.animation = '';
-                    } else {
-                        counter.parentElement.style.animation = `slide-up 0.3s ease forwards ${
-                            index / counters.length + 0.5
-                        }s`;
-                    }
-
-                });
-                observer.unobserve(section_counter);
-            },
-            {
-                root: null,
-                threshold: window.innerWidth > 768 ? 0.4 : 0.3,
-            }
-        );
-
-        CounterObserver.observe(section_counter);
-    </script>
 
 </x-frontend-layouts>

@@ -1,617 +1,565 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="ZXX">
+
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024">
-    <link rel="stylesheet" href="{{asset('frontend/style.css')}}?v=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/user/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="icon" href="{{asset('images/new/logo.png')}}">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <!-- toastr -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <!-- Site Title -->
+    <title>Bangla E-school &amp; College Website</title>
+    <link rel="icon" href="https://bangla-eschool.getupdemo.xyz/storage/files/1/school-favicon.png" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/animate.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/owl.carousel.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/maginific-popup.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/fancybox.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/nice-select.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/icofont.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/uicons.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontendcss/toastr.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}" />
 
-    <meta name="robots" content="index, follow">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Bangladesh Youth Skills & Technical Training</title>
     <style>
-        .navActive{
-            background-color: lightgrey;
-            border-radius: 5px;
-            padding: 5px 10px;
-            color: #000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        .about-content p {
+            margin: 0;
+            padding-top: 16px;
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 9;
+            -webkit-box-orient: vertical;
         }
 
+        .corner-message-bottom p {
+            margin-bottom: 24px;
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 12;
+            -webkit-box-orient: vertical;
+            height: 286px;
+        }
     </style>
+
     <style>
-        ul.contact-list li svg {
-            width: 20px;
-            height: 20px;
+        :root {
+            --primary-color: #6aa84f;
+            --secondary-color: #3ccf4e;
+            --tertiary-color: #f45050;
+            --white-color: #ffffff;
+            --white-color-2: #f8f8f8;
+            --white-color-3: #e6f4f0;
+            --title-color: #20262e;
+            --paragraph-color: #2c3333;
+            --hints-color: #767a7a;
+            --border-color: #e9e9ea;
         }
 
-        ul.contact-list li {
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
+        /* customize pagination color start */
+
+        ul.pagination {
+            display: inline-flex;
         }
 
-        .footer-cust {
-            display: flex;
-            flex-wrap: wrap;
-            width: 80%;
-            margin: 0 auto;
+        .page-item .page-link {
+            color: #6aa84f !important;
         }
 
-        .column-1 {
-            flex: 1 !important;
-            padding-right: 20px;
-            /* Adjust spacing between columns */
+        .active>.page-link,
+        .page-link.active {
+            background-color: #6aa84f !important;
+            border-color: #6aa84f !important;
+            color: white;
         }
 
-        .column-2 {
-            flex: 3 !important;
+        .page-item.active .page-link {
+            color: white !important;
         }
 
-        .footer {
-            margin-top: 6% !important;
-            padding: 19px !important;
-        }
+        /* customize pagination color end */
 
-        .footer_image_wrap {
-            position: relative;
-            /* Set position to relative for containing the absolute positioned image */
-            height: 150px;
-            /* Adjust height to fit the rotated image */
-            box-sizing: border-box;
+        .row.school-committe-group {
+            row-gap: 24px;
         }
-
-        .footer_image_wrap_noeffect {
-            position: relative;
-            /* Set position to relative for containing the absolute positioned image */
-            box-sizing: border-box;
-            height: 190px;
-            /* Adjust height to fit the rotated image */
-        }
-
-        .footer_image_wrap img {
-            object-fit: contain;
-            object-position: left;
-            position: absolute;
-            /* Set position to absolute */
-            top: 0%;
-            transform: rotate(90deg);
-            transform-origin: 1% 1%;
-        }
-
-        .footer_image_wrap_noeffect img {
-            object-fit: contain;
-            position: absolute;
-            /* Set position to absolute */
-            top: 0%;
-            left: 0%;
-        }
-
-        /*
-        .footer_image_wrap {
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            transform: rotate(90deg);
-            flex-direction: row;
-        }
-
-
-        .footer_image_wrap img{
-            max-width: 150px;
-        }*/
-
-        /* Media query for mobile devices */
-
-        @media (max-width: 767px) {
-            .footer-cust {
-                flex-direction: column;
-                /* Change to a single column layout on small screens */
-                width: 100%;
-            }
-            .footer_image_wrap {
-                height: 100px;
-            }
-            .footer_image_wrap_noeffect {
-                height: 100px;
-            }
-            .column-1,
-            .column-2 {
-                width: 100%;
-                /* Make both columns take up full width */
-                padding-right: 0;
-                /* Remove padding between columns */
-            }
-        }
-
-        @media (max-width: 467px) {
-            .footer_image_wrap_noeffect {
-                height: 70px;
-            }
-            .footer_image_wrap {
-                height: 70px;
-            }
-        }
-
-        @media(max-width: 576px) {
-            .footer {
-                padding-bottom: 10px;
-            }
-            .footer_image_wrap_noeffect {
-                justify-content: center;
-            }
-            .footer_image_wrap {
-                justify-content: center;
-            }
-        }
-
-
-        .mx-auto {
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .flex {
-            display: flex;
-        }
-        .w-full {
-            width: 100%;
-        }
-        .max-w-6xl {
-            max-width: 72rem;
-        }
-        .flex-wrap {
-            flex-wrap: wrap;
-        }
-        .justify-between {
-            justify-content: space-between;
-        }
-        .bg-gray-200 {
-            --tw-bg-opacity: 1;
-            background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-        }
-        .px-3 {
-            padding-left: 0.75rem;
-            padding-right: 0.75rem;
-        }
-        .py-1 {
-            padding-top: 0.25rem;
-            padding-bottom: 0.25rem;
-        }
-        .text-lg {
-            font-size: 1.125rem;
-            line-height: 1.75rem;
-        }
-        .text-xs {
-            font-size: 0.75rem;
-            line-height: 1rem;
-        }
-        .font-semibold {
-            font-weight: 600;
-        }
-        .underline {
-            text-decoration-line: underline;
-        }
-        .hover\:underline:hover {
-            text-decoration-line: underline;
-        }
-        @media (min-width: 768px) {
-            .md\:justify-between {
-                justify-content: space-between;
-            }
-            .md\:text-lg {
-                font-size: 1.125rem;
-                line-height: 1.75rem;
-            }
-        }
-
-
     </style>
 
 
 </head>
 
-<body class="font-[poppins]">
+<body>
 
-<header>
-    <div class="image">
-        <img style="width:100%;max-height:250px;" src="{{asset('images/new/BannerDesign.jpg')}}" class="img-fluid" alt="...">
+<!-- Preloader  -->
+<div id="preloader">
+    <div class="preloader-main">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
+</div>
+<!-- End Preloader  -->
 
-    <nav class=" ">
-        <div class="w-full">
-            <nav class=" w-full bg-gray-200   py-1">
-                <div class=" max-w-6xl mx-auto flex flex-wrap font-semibold   ">
-                    <div class="text-xs w-full md:text-lg flex flex-wrap   md:justify-between">
-                        <a href="/" class="px-3 py-1">Home</a>
-                        <a style="color: black;  text-decoration: none!important;" href="{{route('all_course')}}" class="px-3 py-1   @if(request()->routeIs('all_course')) navActive @endif  ">Courses</a>
-                        <a style="color: black;  text-decoration: none!important;" href="{{route('verifiedInstitute')}}" class="px-3 @if(request()->routeIs('verifiedInstitute')) navActive @endif  py-1 hover:underline "> Verified Institute  </a>
-                        <a style="color: black;  text-decoration: none!important;" href="{{route('successStudent')}}" class="px-3 py-1 @if(request()->routeIs('successStudent')) navActive @endif  hover:underline ">Success Students</a>
-                        <a style="color: black;  text-decoration: none!important;" href="{{route('result')}}" class="px-3 py-1 @if(request()->routeIs('result')) navActive @endif  hover:underline ">Student Result</a>
-                        <a style="color: black;  text-decoration: none!important;" href="{{route('center-request.create')}}" class="px-3 @if(request()->routeIs('center-request.create')) navActive @endif  py-1 hover:underline ">Institute Apply</a>
-                        <a style="color: black;  text-decoration: none!important;" href="{{route('login')}}" class="px-3 py-1 @if(request()->routeIs('login')) navActive @endif  hover:underline ">Institute Login</a>
-                        <a style="color: black;  text-decoration: none!important;" href="{{route('contactUs')}}" class="px-3 @if(request()->routeIs('contactUs')) navActive @endif  py-1 hover:underline ">Contact Us</a>
+<!-- Back to top start -->
+<div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+</div>
+<!-- Back to top end -->
 
+<!-- Mobile Menu Modal -->
+<div class="modal mobile-menu-modal offcanvas-modal fade" id="offcanvas-modal">
+    <div class="modal-dialog offcanvas-dialog">
+        <div class="modal-content">
+            <div class="modal-header offcanvas-header">
+                <!-- offcanvas-logo-start -->
+                <div class="offcanvas-logo">
+                    <a href="https://bangla-eschool.getupdemo.xyz"><img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/logo.svg" alt="#" /></a>
+                </div>
+                <!-- offcanvas-logo-end -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fi fi-ss-cross"></i>
+                </button>
+            </div>
+            <div class="mobile-menu-modal-main-body">
+                <!-- offcanvas-menu start -->
+                <nav id="offcanvas-menu" class="navigation offcanvas-menu">
+                    <ul id="nav mobile-nav" class="list-none offcanvas-men-list">
+                        <li>
+                            <a href="https://bangla-eschool.getupdemo.xyz">মূলপাতা</a>
+                        </li>
+                        <li>
+                            <a class="menu-arrow" href="#">পরিচিতি</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="https://bangla-eschool.getupdemo.xyz/about">প্রতিষ্ঠান পরিচিতি</a>
+                                </li>
+                                <li>
+                                    <a href="https://bangla-eschool.getupdemo.xyz/info">বিদ্যালয়ের তথ্যাদি</a>
+                                </li>
+                                <li>
+                                    <a href="https://bangla-eschool.getupdemo.xyz/message">স্কুল পরিচালকদের বাণী</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="menu-arrow" href="#">জনবল</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="https://bangla-eschool.getupdemo.xyz/teachers">শিক্ষক/শিক্ষিকা</a>
+                                </li>
+                                <li>
+                                    <a href="https://bangla-eschool.getupdemo.xyz/committee">স্কুল কমিটি সদস্যবৃন্দ</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="menu-arrow" href="#">শিক্ষার্থী</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="https://bangla-eschool.getupdemo.xyz/running/students">অধ্যয়নরত শিক্ষার্থীর সংখ্যা</a>
+                                </li>
+                                <li>
+                                    <a href="https://bangla-eschool.getupdemo.xyz/students">অধ্যয়নরত শিক্ষার্থীর তালিকা</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="menu-arrow" href="#">পরীক্ষার ফলাফল</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="https://bangla-eschool.getupdemo.xyz/public-exam">পাবলিক পরীক্ষা</a>
+                                </li>
+                                <li>
+                                    <a href="https://bangla-eschool.getupdemo.xyz/school/exam">বিদ্যালয়ের অভ্যন্তরীন পরীক্ষা</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="https://bangla-eschool.getupdemo.xyz/gallery">ছবির গ্যালারী</a></li>
+                        <li><a href="https://bangla-eschool.getupdemo.xyz/contact">যোগাযোগ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mobile-menu-modal-main-bottom">
+                <div class="topbar-school-info">
+                    <ul class="topbar-school-info-list">
+                        <li>EIIN No:<span>12547</span></li>
+                        <li>School code:<span>44231</span></li>
+                        <li>Reg. No:<span>6100-KA</span></li>
+                    </ul>
+                </div>
+                <!-- offcanvas-menu end -->
+                <div class="mobile-menu-modal-bottom header-menu-btn">
+                    <a href="https://bangla-eschool.getupdemo.xyz/login" target="_blank" class="theme-btn"><span><i class="fi fi-rs-sign-in-alt"></i>Login</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Mobile Menu Modal -->
+
+<!-- Topbar Area -->
+<div class="topbar-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12 col-xl-6 col-12">
+                <div class="topbar-left">
+                    <div class="topbar-update-notice">
+                        <span class="topbar-update-notice-title">আপডেট</span>
+
+                        <!-- Update Notice Slider -->
+                        <div class="topbar-update-notice-slider">
+                            <div class="topbar-update-notice-main">
+                                <p class="topbar-update-notice-single">
+                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1698922484WCuAP" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
+                                </p>
+                            </div>
+                            <div class="topbar-update-notice-main">
+                                <p class="topbar-update-notice-single">
+                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/169864663613ysi" target="_blank">তাপপ্রবাহের সতর্কবার্তার কারণে শ্রেণি কার্যক্রম ও চলমান পরীক্ষা বন্ধ সংক্..</a>
+                                </p>
+                            </div>
+                            <div class="topbar-update-notice-main">
+                                <p class="topbar-update-notice-single">
+                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1697707887saQt3" target="_blank">প্রথম সাময়িক পরীক্ষা ২০২৩ এর প্রসঙ্গে বিজ্ঞপ্তি সকল শ্রেণীর</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Update Notice Scroll -->
+                        <div class="topbar-update-notice-scroll">
+                            <p class="topbar-update-notice-single">
+                                <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1698922484WCuAP" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
+                            </p>
+                            <p class="topbar-update-notice-single">
+                                <a href="https://bangla-eschool.getupdemo.xyz/notice/details/169864663613ysi" target="_blank">তাপপ্রবাহের সতর্কবার্তার কারণে শ্রেণি কার্যক্রম ও চলমান পরীক্ষা বন্ধ সংক্..</a>
+                            </p>
+                            <p class="topbar-update-notice-single">
+                                <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1697707887saQt3" target="_blank">প্রথম সাময়িক পরীক্ষা ২০২৩ এর প্রসঙ্গে বিজ্ঞপ্তি সকল শ্রেণীর</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-
-            </nav>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="topbar-right">
+                    <div class="topbar-school-info">
+                        <ul class="topbar-school-info-list">
+                            <li>EIIN No:<span>12547</span></li>
+                            <li>School code:<span>44231</span></li>
+                            <li>Reg. No:<span>6100-KA</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
+    </div>
+</div>
+<!-- End Topbar Area -->
 
+<!-- Header Area -->
+<header id="active-sticky" class="header-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="header-inner">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8 col-xl-3 col-md-8 col-8">
+                            <div class="header-logo">
+                                <a href="https://bangla-eschool.getupdemo.xyz"><img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/logo.svg" alt="#" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xl-9 col-md-4 col-4">
+                            <div class="header-right">
+                                <div class="header-menu">
+                                    <nav class="navigation">
+                                        <ul class="header-menu-list">
+                                            <li class="active">
+                                                <a href="https://bangla-eschool.getupdemo.xyz">মূলপাতা</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">পরিচিতি<i class="fi-rr-angle-small-down"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="https://bangla-eschool.getupdemo.xyz/about">প্রতিষ্ঠান পরিচিতি</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://bangla-eschool.getupdemo.xyz/info">বিদ্যালয়ের তথ্যাদি</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://bangla-eschool.getupdemo.xyz/message">স্কুল পরিচালকদের বাণী</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">জনবল<i class="fi-rr-angle-small-down"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="https://bangla-eschool.getupdemo.xyz/teachers">শিক্ষক/শিক্ষিকা</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://bangla-eschool.getupdemo.xyz/committee">স্কুল কমিটি সদস্যবৃন্দ</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">শিক্ষার্থী<i
+                                                        class="fi-rr-angle-small-down"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="https://bangla-eschool.getupdemo.xyz/running/students">অধ্যয়নরত শিক্ষার্থীর
+                                                            সংখ্যা</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://bangla-eschool.getupdemo.xyz/students">অধ্যয়নরত শিক্ষার্থীর তালিকা</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">পরীক্ষার ফলাফল<i
+                                                        class="fi-rr-angle-small-down"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="https://bangla-eschool.getupdemo.xyz/public-exam">পাবলিক পরীক্ষা</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://bangla-eschool.getupdemo.xyz/school/exam">বিদ্যালয়ের অভ্যন্তরীন
+                                                            পরীক্ষা</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="https://bangla-eschool.getupdemo.xyz/gallery">ছবির গ্যালারী</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://bangla-eschool.getupdemo.xyz/contact">যোগাযোগ</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-menu-btn">
+                                    <a href="https://bangla-eschool.getupdemo.xyz/login" target="_blank" class="theme-btn"><i class="fi fi-rs-sign-in-alt"></i>Login</a>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu Button -->
+                            <button type="button" class="mobile-menu-offcanvas-toggler" data-bs-toggle="modal" data-bs-target="#offcanvas-modal">
+                                <span class="line"></span>
+                                <span class="line"></span>
+                                <span class="line"></span>
+                            </button>
+                            <!-- End Mobile Menu Button -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
+<!-- End Header Area -->
 
-
-<style>
-    #carouselExample img {
-        max-width: 100%;
-        max-height: 700px;
-    }
-
-    #carouselExample {
-        overflow: hidden;
-    }
-
-    .ticker h6 {
-        color: white;
-        margin-top: 12%;
-        height: 10px;
-        text-transform: uppercase;
-        text-align: center;
-    }
-
-    @media (max-width: 768px) {
-        #carouselExample img {
-            max-height: 500px;
-            max-width: 80%;
-        }
-    }
-
-    @media (max-width: 576px) {
-        #carouselExample img {
-            max-height: 400px;
-            max-width: 56%;
-        }
-    }
-
-    /*notice_board*/
-
-    .notice_board_wrap {
-        border: 1px solid #dddddd;
-        padding: 0 0 10px 0;
-        background: #ffffff;
-        background: -moz-linear-gradient(top, #ffffff 0%, #ebebeb 100%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #ebebeb));
-        background: -webkit-linear-gradient(top, #ffffff 0%, #ebebeb 100%);
-        background: -o-linear-gradient(top, #ffffff 0%, #ebebeb 100%);
-        background: -ms-linear-gradient(top, #ffffff 0%, #ebebeb 100%);
-        background: linear-gradient(to bottom, #ffffff 0%, #ebebeb 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ebebeb', GradientType=0);
-        background: url("/public/bg_notice_board.png") no-repeat left top #EBEBEB !important;
-        padding: 20px;
-        padding-left: 100px;
-        padding-bottom: 10px;
-    }
-
-    .notice_board ul li {
-        background: transparent;
-        border: none;
-        padding: 0;
-        padding-left: 10px;
-    }
-
-    .notice_board ul li a {
-        border-bottom: 1px dashed;
-        text-decoration: none;
-    }
-
-    .notice_board .all_btn {
-        background-image: linear-gradient(to bottom, #666, #a6a6a6);
-        background-repeat: repeat-x;
-        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #a2a2a2;
-        padding: 0 5px;
-        color: #fff;
-        background-color: #a6a6a6;
-        text-decoration: none;
-    }
-
-    .swiper {
-        width: 100%;
-        height: 100%;
-    }
-
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .swipper_cont {
-        background-color: #EFEFEF;
-        border: 1px solid #CCCCCC;
-        margin: 20px auto;
-        padding: 10px;
-        padding-left: 100px;
-        position: relative;
-    }
-
-    .swpiiper_title {
-        display: inline-block;
-        position: absolute;
-        margin-top: 10px;
-        font-weight: 700;
-    }
-
-    .swipper_cont .swiper-slide {
-        justify-content: start;
-        text-align: start;
-    }
-
-    .swiper-wrapper {
-        padding-left: 55px;
-    }
-
-    .swpiiper_all_btn {
-        position: absolute;
-        right: 10px;
-        top: 5px;
-        background-image: linear-gradient(to bottom, #666, #a6a6a6);
-        background-repeat: repeat-x;
-        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #a2a2a2;
-        padding: 0 5px;
-        color: #fff;
-        background-color: #a6a6a6;
-        text-decoration: none;
-        z-index: 10;
-    }
-
-    .flip-box {
-        background-color: transparent;
-        /*width: 300px;*/
-        min-height: 387px;
-        /*border: 1px solid #f1f1f1;*/
-        perspective: 1000px;
-    }
-
-    .flip-box-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.8s;
-        transform-style: preserve-3d;
-    }
-
-    .flip-box:hover .flip-box-inner {
-        transform: rotateY(180deg);
-    }
-
-    .flip-box-front,
-    .flip-box-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-
-    .flip-box-front {
-        /*background-color: #bbb;*/
-        color: black;
-    }
-
-    .flip-box-back {
-        /*background-color: dodgerblue;*/
-        color: white;
-        transform: rotateY(180deg);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 8px;
-    }
-</style>
 
 {{$slot}}
 
-<style>
-    .carousel-inner {
-        height: 320px !important;
-        width: 960px;
-        margin: auto;
-    }
 
-    .carousel-item img {
-        max-width: 100%;
-        max-height: 100%;
-        display: block;
-        width: 100%;
-        height: auto;
-    }
 
-    .carousel-item img {
-        transition: opacity 2000ms ease-in-out 0s;
-    }
-</style>
+<!-- Footer Area -->
+<footer class="footer-area">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="footer-widget quick-links">
+                        <h4 class="footer-widget-title">অন্যান্য লিঙ্ক</h4>
+                        <ul class="quick-links-inner">
+                            <li>
+                                <a href="" target="_blank">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="Link"/>
+                                    পাঠশালা
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="Link"/>
+                                    ই-স্কুল
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="Link"/>
+                                    ভর্তি পরীক্ষার আবেদন
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="Link"/>
+                                    পিডিএস (সরকারি মাধ্যমিক)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://127.0.0.1:8000/" target="_blank">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="Link"/>
+                                    ওয়েব মেইল লগিন
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="footer-widget quick-links">
+                        <h4 class="footer-widget-title">সরাসরি লিঙ্ক</h4>
+                        <ul class="quick-links-inner">
+                            <li>
+                                <a href="">যোগাযোগ</a>
+                            </li>
+                            <li>
+                                <a href="">প্রতিষ্ঠান পরিচিতি</a>
+                            </li>
+                            <li>
+                                <a href="">প্রতিষ্ঠানের তথ্যাদি</a>
+                            </li>
+                            <li>
+                                <a href="">সকল শিক্ষক/শিক্ষিকা বৃন্দ</a>
+                            </li>
+                            <li>
+                                <a href="">স্কুল কমিটির সদস্যবৃন্দ</a>
+                            </li>
+                            <li>
+                                <a href="">ছবি এবং ভিডিও গ্যালারী</a>
+                            </li>
+                            <li>
+                                <a href="">অধ্যায়ণরত শিক্ষার্থীর সংখ্যা</a>
+                            </li>
+                            <li>
+                                <a href="">সংবাদ/ ব্লগ সমূহ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="footer-widget contact">
+                        <h4 class="footer-widget-title">যোগাযোগ</h4>
+                        <!-- Single Widget -->
+                        <div class="footer-contact-widget">
+                            <div class="footer-contact-icon">
+                                <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/map.svg" alt="#" />
+                            </div>
+                            <div class="footer-contact-info">
+                                <p class="footer-contact-text">
+                                    XYZ School &amp; College, Main Road, Khilgaon, Dhaka
+                                </p>
+                            </div>
+                        </div>
 
-<style>
-    .rslides {
-        position: relative;
-        list-style: none;
-        overflow: hidden;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
+                        <!-- Single Widget -->
+                        <div class="footer-contact-widget">
+                            <div class="footer-contact-icon">
+                                <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/phone.svg" alt="#" />
+                            </div>
+                            <div class="footer-contact-info">
+                                <a href="tel:+880 1234 567890">+8801000000000</a>
+                                <a href="tel:+880 1234 567890">+8801000000002</a>
+                            </div>
+                        </div>
 
-    .rslides li {
-        -webkit-backface-visibility: hidden;
-        position: absolute;
-        display: none;
-        width: 100%;
-        left: 0;
-        top: 0;
-    }
+                        <!-- Single Widget -->
+                        <div class="footer-contact-widget">
+                            <div class="footer-contact-icon">
+                                <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/envelope.svg" alt="#" />
+                            </div>
+                            <div class="footer-contact-info">
+                                <a href="mailto:info@xyzschool.com">example@yourschool.com</a>
+                                <a href="mailto:hello@xyzschool.com">example_two@yourschool.com</a>
+                            </div>
+                        </div>
 
-    .rslides li:first-child {
-        position: relative;
-        display: block;
-        float: left;
-    }
-
-    .rslides img {
-        display: block;
-        height: 450px;
-        float: left;
-        width: 100%;
-        border: 0;
-    }
-</style>
-
-<section id="footer">
-    <div class="container-fluid footer">
-        <div class="footer-cust">
-            <div class="column-1">
-                <ul class="contact-list">
-                    <li class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
-                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                        </svg>
-                        <span>Ashulia, Savar Dhaka</span>
-                    </li>
-                    <li class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-                        </svg>
-                        <a href="tel:+01895270146" class="content">01895270146</a>
-                    </li>
-
-                    <li class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-                        </svg>
-                        <a href="mailto:+bysttbd@gmail.com" class="content">bysttbd@gmail.com</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-5 column-2">
-                <div class="footer_image">
-                    <img src="{{asset('images/1711405466.jpg')}}" style="width: 100%; height: inherit;">
-
+                        <!-- Single Widget -->
+                        <div class="footer-contact-widget">
+                            <div class="footer-contact-icon">
+                                <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/info.svg" alt="#" />
+                            </div>
+                            <div class="footer-contact-info">
+                                <ul>
+                                    <li>EIIN No:<span>12547</span></li>
+                                    <li>School code:<span>44231</span></li>
+                                    <li>Reg. No:<span>6100-KA</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="copyRight">
-        <h1>&copy; Copyright 2024. All Rights Reserved By  </h1>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-12">
+                    <div class="footer-copyright">
+                        <p class="footer-copyright-text">
+                            © 2024 XYZ School &amp; College 21. All right reserved.
+                        </p>
+                        <span>Design & Developed by:<a href="#" target="_blank">Company Limited</a></span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="footer-social">
+                        <span>Connect us</span>
+
+                        <ul class="footer-social-list">
+                            <li>
+                                <a href="" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/facebook.svg" alt="#" /></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/messenger.png" alt="#" /></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/twitter.png" alt="#" /></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/instagram.png" alt="#" /></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/linkedin.svg" alt="#" /></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/whatsapp.svg" alt="#" /></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/telegram.svg" alt="#" /></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/youtube.svg" alt="#" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</section>
+</footer>
+<!-- End Footer Area -->
+
+<!-- Jquery JS -->
+<script src="{{asset('frontend/plugins/js/jquery.min.js')}}"></script>
+<script src="{{asset('frontend/plugins/js/jquery-migrate.js')}}"></script>
+<script src="{{asset('frontend/plugins/js/modernizer.min.js')}}"></script>
+<script src="{{asset('frontend/plugins/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('frontend/plugins/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('frontend/plugins/js/magnific-popup.min.js')}}"></script>
+<script src="{{asset('frontend/plugins/js/backToTop.js')}}"></script>
+<script src="{{asset('frontend/plugins/js/wow.min.js')}}"></script>
+<script src="{{asset('frontend/plugins/js/jquery-fancybox.min.js')}}"></script>
+<script src="{{asset('frontend/plugins/js/jquery.counterup.min.js')}}"></script>
+<script src="{{asset('frontend/plugins/js/waypoints.min.js')}}"></script>
+<script src="{{asset('frontend/plugins/js/nice-select.min.js')}}"></script>
+<script src="{{asset('frontend/plugins/js/active.js')}}"></script>
 
 
-
-
-
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-<script src="/user/jquery.counterup.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-    jQuery(document).ready(function($) {
-        $('.counter').counterUp({
-            delay: 5,
-            time: 1000
-        });
-    });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-<script>
-    var img = document.querySelector(".footer_image img");
-    var imgRect = img.getBoundingClientRect();
-
-    function res() {
-
-        var parent = document.querySelector(".column-2");
-        var parentRect = parent.getBoundingClientRect();
-
-
-        if (imgRect.width < imgRect.height) {
-            console.log(32)
-            $(`.footer_image`).removeClass(`footer_image_wrap_noeffect`);
-            $(`.footer_image`).addClass(`footer_image_wrap`);
-
-            $(`.footer_image_wrap img`).height(parentRect.width);
-            $(`.footer_image_wrap img`).width(parentRect.height);
-            img.style.height = parentRect.width;
-            img.style.right = -parentRect.height + "px";
-
-        } else {
-
-            $(`.footer_image`).removeClass(`footer_image_wrap`);
-            $(`.footer_image`).addClass(`footer_image_wrap_noeffect`);
-
-            $(`.footer_image_wrap_noeffect img`).height(parentRect.height);
-            $(`.footer_image_wrap_noeffect img`).width(parentRect.width);
-
-        }
-
-
-    }
-    window.addEventListener('resize', res);
-    window.addEventListener("DOMContentLoaded", function() {
-        res();
-        res();
-    });
-</script>
-<script>
-    jQuery(document).ready(function($) {
-        $(".rslides").responsiveSlides({
-            auto: true,
-            speed: 1000,
-            timeout: 4000,
-        });
-    })
-</script>
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        loop: true,
-        loopFillGroupWithBlank: false,
-        autoplay: true
-    });
-</script>
-
 </body>
 
 </html>
