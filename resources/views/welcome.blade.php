@@ -8,41 +8,56 @@
             <div class="row">
                 <div class="col-12">
                     <div class="hero-slider">
+                        @forelse(\App\Models\Slider::get() as $slider)
+                            <div class="hero-single-slider background-image" style="background-image: url({{asset('images/slider/'.$slider->photo)}});">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6 col-md-8 col-12 align-self-end">
+                                        <div class="hero-content">
+                                            <h3 class="hero-content-title">
+                                                স্বাগতম এক্সওয়াইজেধ স্কুল এবং কলেজ এর পক্ষ থেকে!
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <!-- Hero Single Slider -->
-                        <div class="hero-single-slider background-image" style="background-image: url('https://bangla-eschool.getupdemo.xyz/storage/files/1/Sliders/slider-img-1(1).png');">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-6 col-md-8 col-12 align-self-end">
-                                    <div class="hero-content">
-                                        <h3 class="hero-content-title">
-                                            স্বাগতম এক্সওয়াইজেধ স্কুল এবং কলেজ এর পক্ষ থেকে!
-                                        </h3>
+                        @empty
+                            <!-- Hero Single Slider -->
+                            <div class="hero-single-slider background-image" style="background-image: url('https://bangla-eschool.getupdemo.xyz/storage/files/1/Sliders/slider-img-1(1).png');">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6 col-md-8 col-12 align-self-end">
+                                        <div class="hero-content">
+                                            <h3 class="hero-content-title">
+                                                স্বাগতম এক্সওয়াইজেধ স্কুল এবং কলেজ এর পক্ষ থেকে!
+                                            </h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="hero-single-slider background-image" style="background-image: url('https://bangla-eschool.getupdemo.xyz/storage/files/1/Sliders/slider-img-3(1).png');">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-6 col-md-8 col-12 align-self-end">
-                                    <div class="hero-content">
-                                        <h3 class="hero-content-title">
-                                            বিশ্বমানের শিক্ষাদানের একটি উপযুক্ত স্কুল প্রতিষ্ঠান।
-                                        </h3>
+
+                            <div class="hero-single-slider background-image" style="background-image: url('https://bangla-eschool.getupdemo.xyz/storage/files/1/Sliders/slider-img-3(1).png');">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6 col-md-8 col-12 align-self-end">
+                                        <div class="hero-content">
+                                            <h3 class="hero-content-title">
+                                                বিশ্বমানের শিক্ষাদানের একটি উপযুক্ত স্কুল প্রতিষ্ঠান।
+                                            </h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="hero-single-slider background-image" style="background-image: url('https://bangla-eschool.getupdemo.xyz/storage/files/1/Sliders/slider-img-2(1).png');">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-6 col-md-8 col-12 align-self-end">
-                                    <div class="hero-content">
-                                        <h3 class="hero-content-title">
-                                            মনোরোম পরিবেশে আমরা দিচ্ছি সেরা মানের শিক্ষা ব্যবস্থা।
-                                        </h3>
+                            <div class="hero-single-slider background-image" style="background-image: url('https://bangla-eschool.getupdemo.xyz/storage/files/1/Sliders/slider-img-2(1).png');">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6 col-md-8 col-12 align-self-end">
+                                        <div class="hero-content">
+                                            <h3 class="hero-content-title">
+                                                মনোরোম পরিবেশে আমরা দিচ্ছি সেরা মানের শিক্ষা ব্যবস্থা।
+                                            </h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforelse
 
                     </div>
                 </div>
@@ -69,7 +84,7 @@
                                     গভর্ণমেন্ট স্কুল নামে পরিচিত ছিল। ৯ জন বাংলাদেশী, ১ জন হিন্দু ও ৮ জন মুসলমান বিদ্যোৎসাহী ব্যক্তির একটি কমিটির উপর এর পরিচালনার দায়িত্ব ন্যাস্ত ছিল। এদেশের অধিবাসীদের বাংলায় শিক্ষায় শিক্ষিত করার জন্য এ বিদ্যালয় চালু
                                     করা হয়। ২০২৩ ইংরেজির ১ ই মে মি: এক্সওয়াইজেধ বিদ্যালয়ের প্রধান শিক্ষক নিযুক্ত হন...
                                 <div class="about-cont-btn">
-                                    <a href="https://bangla-eschool.getupdemo.xyz/about" class="theme-btn secondary">বিস্তারিত পড়ুন</a>
+                                    <a href="" class="theme-btn secondary">বিস্তারিত পড়ুন</a>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +117,7 @@
                                     <p>তাপপ্রবাহের সতর্কবার্তার কারণে শ্রেণি কার্যক্রম ও চলমান পরীক্ষা..</p>
                                 </div>
                                 <div class="sidebar-widget-list-btn">
-                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/169864663613ysi" target="_blank" class="theme-btn secondary">বিস্তারিত</a>
+                                    <a href="" target="_blank" class="theme-btn secondary">বিস্তারিত</a>
                                 </div>
                             </div>
                             <div class="sidebar-widget-list">
@@ -111,12 +126,12 @@
                                     <p>প্রথম সাময়িক পরীক্ষা ২০২৩ এর প্রসঙ্গে বিজ্ঞপ্তি সকল শ্রেণীর</p>
                                 </div>
                                 <div class="sidebar-widget-list-btn">
-                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1697707887saQt3" target="_blank" class="theme-btn secondary">বিস্তারিত</a>
+                                    <a href="" target="_blank" class="theme-btn secondary">বিস্তারিত</a>
                                 </div>
                             </div>
 
                             <div class="home-sidebar-widget-btn">
-                                <a href="https://bangla-eschool.getupdemo.xyz/notice-board" class="theme-btn">সকল নোটিশ<i class="fi-rr-arrow-right"></i></a>
+                                <a href="" class="theme-btn">সকল নোটিশ<i class="fi-rr-arrow-right"></i></a>
                             </div>
                         </div>
 
@@ -161,7 +176,7 @@
                                         সমাজ গড়ে তুলতে। এই বিশ্বাসের আলোকে আমরা আমাদের স্কুলটিকে একটি আদর্শ শিক্ষা প্রতিষ্ঠান হিসেবে গড়ে তুলতে কাজ করে যাচ্ছি। আমাদের স্কুলটিতে শিক্ষার্থীদের জন্য মানসম্মত শিক্ষা নিশ্চিত করার লক্ষ্যে আমরা
                                         বিভিন্ন পদক্ষেপ গ্রহণ করেছি। আমাদের শিক্ষক-শিক্ষিকাবৃন্দ অত্যন্ত দক্ষ ও অভিজ্ঞ। তারা শিক্ষার্থীদের প্রতিটি প্রশ্নের উত্তর দ...
                                     <div class="corner-message-btn">
-                                        <a href="https://bangla-eschool.getupdemo.xyz/message" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
+                                        <a href="" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -187,7 +202,7 @@
                                         পৌঁছাতে পারেন। আপনাদেরকে শুধুমাত্র কঠোর পরিশ্রম করতে হবে, সৎ হতে হবে, এবং অন্যদের প্রতি শ্রদ্ধাশীল হতে হবে। আপনাদেরকে নিজের উপর বিশ্বাস রাখতে হবে এবং কখনই থেমে থাকতে হবে না।<br />
                                         <br /> আমি আপনাদের জন্য শুভকামনা জানাই। আমি আশা করি আপনারা সকলেই একজন ভালো মানুষ হিসেবে গড়ে উঠবেন এবং আপনারা আপনার লক্ষ্য অর্জনে সফল হবেন। ...
                                     <div class="corner-message-btn">
-                                        <a href="https://bangla-eschool.getupdemo.xyz/message" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
+                                        <a href="" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -213,7 +228,7 @@
                                         পৌঁছাতে পারেন। আপনাদেরকে শুধুমাত্র কঠোর পরিশ্রম করতে হবে, সৎ হতে হবে, এবং অন্যদের প্রতি শ্রদ্ধাশীল হতে হবে। আপনাদেরকে নিজের উপর বিশ্বাস রাখতে হবে এবং কখনই থেমে থাকতে হবে না।<br />
                                         <br /> আমি আপনাদের জন্য শুভকামনা জানাই। আমি আশা করি আপনারা সকলেই একজন ভালো মানুষ হিসেবে গড়ে উঠবেন এবং আপনারা আপনার লক্ষ্য অর্জনে সফল হবেন। ...
                                     <div class="corner-message-btn">
-                                        <a href="https://bangla-eschool.getupdemo.xyz/message" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
+                                        <a href="" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -249,79 +264,68 @@
 
                                 <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/successful-child-with-graduation-cap-backpack-full-books(1).jpg" alt="Gallery Image" />
 
-                                <a href="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/successful-child-with-graduation-cap-backpack-full-books(1).jpg" data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                <a  data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
                             </div>
                             <div class="gallery-content">
                                 <h4 class="gallery-content-title">
-                                    https://bangla-eschool.getupdemo.xyz/বিদ্যালয়ের সেরা ছাত্র
+                                  বিদ্যালয়ের সেরা ছাত্র
                                 </h4>
                             </div>
                         </div>
                         <div class="single-gallery">
                             <div class="gallery-img">
 
-                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/empty-classroom-due-coronavirus-pandemic(1).jpg" alt="Gallery Image" />
+                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/successful-child-with-graduation-cap-backpack-full-books(1).jpg" alt="Gallery Image" />
 
-                                <a href="https://www.youtube.com/watch?v=kCHeKc2R96o" class="video-popup-img popup-video image-view-btn"><i class="fi fi-br-play"></i></a>
+                                <a  data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
                             </div>
                             <div class="gallery-content">
                                 <h4 class="gallery-content-title">
-                                    https://bangla-eschool.getupdemo.xyz/সরাসরি ক্লাস চলাকালীন ভিডিও
+                                    বিদ্যালয়ের সেরা ছাত্র
                                 </h4>
                             </div>
                         </div>
                         <div class="single-gallery">
                             <div class="gallery-img">
 
-                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/african-american-female-teacher-teaching-students-class-elementary-school(1).jpg" alt="Gallery Image" />
+                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/successful-child-with-graduation-cap-backpack-full-books(1).jpg" alt="Gallery Image" />
 
-                                <a href="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/african-american-female-teacher-teaching-students-class-elementary-school(1).jpg" data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                <a  data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
                             </div>
                             <div class="gallery-content">
                                 <h4 class="gallery-content-title">
-                                    https://bangla-eschool.getupdemo.xyz/সরাসরি ক্লাস চলাকালীন ফটো
+                                    বিদ্যালয়ের সেরা ছাত্র
                                 </h4>
                             </div>
                         </div>
                         <div class="single-gallery">
                             <div class="gallery-img">
 
-                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/young-asia-businesswoman-using-laptop-talk-colleague-about-plan-video-call-meeting-while-work-from-home-living-room(1).jpg" alt="Gallery Image" />
+                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/successful-child-with-graduation-cap-backpack-full-books(1).jpg" alt="Gallery Image" />
 
-                                <a href="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/young-asia-businesswoman-using-laptop-talk-colleague-about-plan-video-call-meeting-while-work-from-home-living-room(1).jpg" data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                <a  data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
                             </div>
                             <div class="gallery-content">
                                 <h4 class="gallery-content-title">
-                                    https://bangla-eschool.getupdemo.xyz/অনলাইন ক্লাস চলাকালীন ফটো
+                                    বিদ্যালয়ের সেরা ছাত্র
                                 </h4>
                             </div>
                         </div>
                         <div class="single-gallery">
                             <div class="gallery-img">
 
-                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/img-1.png" alt="Gallery Image" />
+                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/successful-child-with-graduation-cap-backpack-full-books(1).jpg" alt="Gallery Image" />
 
-                                <a href="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/img-1.png" data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                <a  data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
                             </div>
                             <div class="gallery-content">
                                 <h4 class="gallery-content-title">
-                                    বিদ্যালয়ের ভিতরের ছবির একাংশ। এক্সওয়াইজেধ স্কুল এবং কলেজ
+                                    বিদ্যালয়ের সেরা ছাত্র
                                 </h4>
                             </div>
                         </div>
-                        <div class="single-gallery">
-                            <div class="gallery-img">
 
-                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/img-2.png" alt="Gallery Image" />
 
-                                <a href="https://www.youtube.com/watch?v=t4ejFV6n4b8" class="video-popup-img popup-video image-view-btn"><i class="fi fi-br-play"></i></a>
-                            </div>
-                            <div class="gallery-content">
-                                <h4 class="gallery-content-title">
-                                    বিদ্যালয়ের ভিতরের ছবির একাংশ। এক্সওয়াইজেধ স্কুল এবং কলেজ
-                                </h4>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
@@ -329,7 +333,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-bottom-btn">
-                        <a href="https://bangla-eschool.getupdemo.xyz/gallery" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
+                        <a href="" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -344,7 +348,7 @@
                 <div class="col-12">
                     <div class="section-head">
                         <h3 class="section-head-title">
-                            স্কুল কমিটি সদস্যবৃন্দ<span class="title-line"></span>
+                            Institute<span class="title-line"></span>
                         </h3>
                     </div>
                 </div>
@@ -404,7 +408,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="mailto:fysejafeva@mailinator.com"><i class="icofont-envelope"></i></a>
+                                    <a href=""><i class="icofont-envelope"></i></a>
                                 </li>
 
                                 <li>
@@ -497,11 +501,11 @@
                                 </li>
 
                                 <li>
-                                    <a href="mailto:alifhossain174@gmail.com"><i class="icofont-envelope"></i></a>
+                                    <a href=""><i class="icofont-envelope"></i></a>
                                 </li>
 
                                 <li>
-                                    <a href="http://127.0.0.1:8000/add/new/memeber" target="_blank"><i class="icofont-facebook"></i></a>
+                                    <a href="" target="_blank"><i class="icofont-facebook"></i></a>
                                 </li>
 
                             </ul>
@@ -513,7 +517,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-bottom-btn">
-                        <a href="https://bangla-eschool.getupdemo.xyz/committee" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
+                        <a href="" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
                     </div>
                 </div>
             </div>

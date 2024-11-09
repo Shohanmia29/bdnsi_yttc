@@ -120,58 +120,24 @@
                 <!-- offcanvas-menu start -->
                 <nav id="offcanvas-menu" class="navigation offcanvas-menu">
                     <ul id="nav mobile-nav" class="list-none offcanvas-men-list">
-                        <li>
-                            <a href="https://bangla-eschool.getupdemo.xyz">মূলপাতা</a>
+                        <li class="">
+                            <a href="">Courses</a>
                         </li>
-                        <li>
-                            <a class="menu-arrow" href="#">পরিচিতি</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="https://bangla-eschool.getupdemo.xyz/about">প্রতিষ্ঠান পরিচিতি</a>
-                                </li>
-                                <li>
-                                    <a href="https://bangla-eschool.getupdemo.xyz/info">বিদ্যালয়ের তথ্যাদি</a>
-                                </li>
-                                <li>
-                                    <a href="https://bangla-eschool.getupdemo.xyz/message">স্কুল পরিচালকদের বাণী</a>
-                                </li>
-                            </ul>
+                        <li class="">
+                            <a href="">Verified Institute </a>
                         </li>
-                        <li>
-                            <a class="menu-arrow" href="#">জনবল</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="https://bangla-eschool.getupdemo.xyz/teachers">শিক্ষক/শিক্ষিকা</a>
-                                </li>
-                                <li>
-                                    <a href="https://bangla-eschool.getupdemo.xyz/committee">স্কুল কমিটি সদস্যবৃন্দ</a>
-                                </li>
-                            </ul>
+                        <li class="">
+                            <a href="">Success Students </a>
                         </li>
-                        <li>
-                            <a class="menu-arrow" href="#">শিক্ষার্থী</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="https://bangla-eschool.getupdemo.xyz/running/students">অধ্যয়নরত শিক্ষার্থীর সংখ্যা</a>
-                                </li>
-                                <li>
-                                    <a href="https://bangla-eschool.getupdemo.xyz/students">অধ্যয়নরত শিক্ষার্থীর তালিকা</a>
-                                </li>
-                            </ul>
+                        <li class="">
+                            <a href="">Student Result</a>
                         </li>
-                        <li>
-                            <a class="menu-arrow" href="#">পরীক্ষার ফলাফল</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="https://bangla-eschool.getupdemo.xyz/public-exam">পাবলিক পরীক্ষা</a>
-                                </li>
-                                <li>
-                                    <a href="https://bangla-eschool.getupdemo.xyz/school/exam">বিদ্যালয়ের অভ্যন্তরীন পরীক্ষা</a>
-                                </li>
-                            </ul>
+                        <li class="">
+                            <a href="">Institute Apply</a>
                         </li>
-                        <li><a href="https://bangla-eschool.getupdemo.xyz/gallery">ছবির গ্যালারী</a></li>
-                        <li><a href="https://bangla-eschool.getupdemo.xyz/contact">যোগাযোগ</a></li>
+
+                        <li><a href="">ছবির গ্যালারী</a></li>
+                        <li><a href="">যোগাযোগ</a></li>
                     </ul>
                 </nav>
             </div>
@@ -185,7 +151,7 @@
                 </div>
                 <!-- offcanvas-menu end -->
                 <div class="mobile-menu-modal-bottom header-menu-btn">
-                    <a href="https://bangla-eschool.getupdemo.xyz/login" target="_blank" class="theme-btn"><span><i class="fi fi-rs-sign-in-alt"></i>Login</span></a>
+                    <a href="" target="_blank" class="theme-btn"><span><i class="fi fi-rs-sign-in-alt"></i>Login</span></a>
                 </div>
             </div>
         </div>
@@ -270,65 +236,27 @@
                                     <nav class="navigation">
                                         <ul class="header-menu-list">
                                             <li class="active">
-                                                <a href="">মূলপাতা</a>
+                                                <a href="">Courses</a>
                                             </li>
-                                            <li>
-                                                <a href="#">পরিচিতি<i class="fi-rr-angle-small-down"></i></a>
-                                                <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="">প্রতিষ্ঠান পরিচিতি</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">বিদ্যালয়ের তথ্যাদি</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">স্কুল পরিচালকদের বাণী</a>
-                                                    </li>
-                                                </ul>
+                                            <li class="">
+                                                <a href="">Verified Institute </a>
                                             </li>
-                                            <li>
-                                                <a href="#">জনবল<i class="fi-rr-angle-small-down"></i></a>
-                                                <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="">শিক্ষক/শিক্ষিকা</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">স্কুল কমিটি সদস্যবৃন্দ</a>
-                                                    </li>
-                                                </ul>
+                                            <li class="">
+                                                <a href="">Success Students </a>
                                             </li>
-                                            <li>
-                                                <a href="#">শিক্ষার্থী<i
-                                                        class="fi-rr-angle-small-down"></i></a>
-                                                <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="">অধ্যয়নরত শিক্ষার্থীর
-                                                            সংখ্যা</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">অধ্যয়নরত শিক্ষার্থীর তালিকা</a>
-                                                    </li>
-                                                </ul>
+                                            <li class="">
+                                                <a href="">Student Result</a>
                                             </li>
-                                            <li>
-                                                <a href="#">পরীক্ষার ফলাফল<i
-                                                        class="fi-rr-angle-small-down"></i></a>
-                                                <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="">পাবলিক পরীক্ষা</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">বিদ্যালয়ের অভ্যন্তরীন
-                                                            পরীক্ষা</a>
-                                                    </li>
-                                                </ul>
+                                            <li class="">
+                                                <a href="">Institute Apply</a>
                                             </li>
-                                            <li>
-                                                <a href="">ছবির গ্যালারী</a>
+                            {{--                <li class="">
+                                                <a href="">Institute Login</a>
                                             </li>
-                                            <li>
-                                                <a href="">যোগাযোগ</a>
-                                            </li>
+                                            <li class="">
+                                                <a href="">Contact Us</a>
+                                            </li>--}}
+
                                         </ul>
                                     </nav>
                                 </div>
