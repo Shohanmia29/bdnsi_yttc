@@ -1,6 +1,7 @@
 <x-frontend-layouts>
 
 
+
     <!-- Hero Area -->
     <section class="hero-area">
         <div class="container">

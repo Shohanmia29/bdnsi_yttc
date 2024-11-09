@@ -7,10 +7,11 @@
     <!-- Meta Tags -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+
 
     <!-- Site Title -->
-    <title>Bangla E-school &amp; College Website</title>
+    <title>Young Technical Training Center</title>
     <link rel="icon" href="https://bangla-eschool.getupdemo.xyz/storage/files/1/school-favicon.png" />
 
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/bootstrap.min.css')}}" />
@@ -21,7 +22,7 @@
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/nice-select.min.css')}}" />
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/icofont.css')}}" />
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/uicons.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontendcss/toastr.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontend/ss/toastr.min.css')}}" />
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}" />
 
     <style>
@@ -86,7 +87,7 @@
         }
     </style>
 
-
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -360,9 +361,7 @@
 </header>
 <!-- End Header Area -->
 
-
 {{$slot}}
-
 
 
 <!-- Footer Area -->
@@ -375,19 +374,19 @@
                         <h4 class="footer-widget-title">অন্যান্য লিঙ্ক</h4>
                         <ul class="quick-links-inner">
                             <li>
-                                <a href="" target="_blank">
+                                <a href= target="_blank">
                                     <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="Link"/>
                                     পাঠশালা
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="_blank">
+                                <a href= target="_blank">
                                     <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="Link"/>
                                     ই-স্কুল
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="_blank">
+                                <a href= target="_blank">
                                     <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="Link"/>
                                     ভর্তি পরীক্ষার আবেদন
                                 </a>
@@ -399,7 +398,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="http://127.0.0.1:8000/" target="_blank">
+                                <a href= target="_blank">
                                     <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="Link"/>
                                     ওয়েব মেইল লগিন
                                 </a>
@@ -412,28 +411,28 @@
                         <h4 class="footer-widget-title">সরাসরি লিঙ্ক</h4>
                         <ul class="quick-links-inner">
                             <li>
-                                <a href="">যোগাযোগ</a>
+                                <a href=>যোগাযোগ</a>
                             </li>
                             <li>
-                                <a href="">প্রতিষ্ঠান পরিচিতি</a>
+                                <a href=>প্রতিষ্ঠান পরিচিতি</a>
                             </li>
                             <li>
-                                <a href="">প্রতিষ্ঠানের তথ্যাদি</a>
+                                <a href=>প্রতিষ্ঠানের তথ্যাদি</a>
                             </li>
                             <li>
-                                <a href="">সকল শিক্ষক/শিক্ষিকা বৃন্দ</a>
+                                <a href=>সকল শিক্ষক/শিক্ষিকা বৃন্দ</a>
                             </li>
                             <li>
-                                <a href="">স্কুল কমিটির সদস্যবৃন্দ</a>
+                                <a href=>স্কুল কমিটির সদস্যবৃন্দ</a>
                             </li>
                             <li>
-                                <a href="">ছবি এবং ভিডিও গ্যালারী</a>
+                                <a href=>ছবি এবং ভিডিও গ্যালারী</a>
                             </li>
                             <li>
-                                <a href="">অধ্যায়ণরত শিক্ষার্থীর সংখ্যা</a>
+                                <a href=>অধ্যায়ণরত শিক্ষার্থীর সংখ্যা</a>
                             </li>
                             <li>
-                                <a href="">সংবাদ/ ব্লগ সমূহ</a>
+                                <a href=>সংবাদ/ ব্লগ সমূহ</a>
                             </li>
                         </ul>
                     </div>
