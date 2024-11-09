@@ -528,66 +528,42 @@
                 <div class="col-12">
                     <div class="section-head">
                         <h3 class="section-head-title">
-                            ছাত্র/ছাত্রীদের পরিসংখান<span class="title-line"></span>
+                              পরিসংখান<span class="title-line"></span>
                         </h3>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="total-students-group">
+                    <div class="total-students-group" id="section_counter">
 
                         <!-- Single Total Student -->
                         <div class="total-students-card">
                             <h3 class="total-students-number counter">145</h3>
-                            <p class="total-students-text">Total Students</p>
-                            <span class="total-students-class">প্রথম শ্রেণী</span>
+                            <p class="total-students-text">Total Institute</p>
+
+                        </div>
+                        <div class="total-students-card">
+                            <h3 class="total-students-number counter">100</h3>
+                            <p class="total-students-text">Total Course</p>
+
                         </div>
                         <div class="total-students-card">
                             <h3 class="total-students-number counter">0</h3>
-                            <p class="total-students-text">Total Students</p>
-                            <span class="total-students-class">দ্বিতীয় শ্রেণী</span>
+                            <p class="total-students-text">Total Exam</p>
+
                         </div>
                         <div class="total-students-card">
-                            <h3 class="total-students-number counter">0</h3>
+                            <h3 class="total-students-number counter">200</h3>
                             <p class="total-students-text">Total Students</p>
-                            <span class="total-students-class">তৃতীয় শ্রেণী</span>
+
                         </div>
                         <div class="total-students-card">
-                            <h3 class="total-students-number counter">0</h3>
-                            <p class="total-students-text">Total Students</p>
-                            <span class="total-students-class">চতুর্থ শ্রেণী</span>
+                            <h3 class="total-students-number counter">5</h3>
+                            <p class="total-students-text">Total Session</p>
+
                         </div>
-                        <div class="total-students-card">
-                            <h3 class="total-students-number counter">0</h3>
-                            <p class="total-students-text">Total Students</p>
-                            <span class="total-students-class">পঞ্চম শ্রেণী</span>
-                        </div>
-                        <div class="total-students-card">
-                            <h3 class="total-students-number counter">0</h3>
-                            <p class="total-students-text">Total Students</p>
-                            <span class="total-students-class">ষষ্ঠ শ্রেণী</span>
-                        </div>
-                        <div class="total-students-card">
-                            <h3 class="total-students-number counter">0</h3>
-                            <p class="total-students-text">Total Students</p>
-                            <span class="total-students-class">সপ্তম শ্রেণী</span>
-                        </div>
-                        <div class="total-students-card">
-                            <h3 class="total-students-number counter">0</h3>
-                            <p class="total-students-text">Total Students</p>
-                            <span class="total-students-class">অষ্টম শ্রেণী</span>
-                        </div>
-                        <div class="total-students-card">
-                            <h3 class="total-students-number counter">0</h3>
-                            <p class="total-students-text">Total Students</p>
-                            <span class="total-students-class">নবম শ্রেণী</span>
-                        </div>
-                        <div class="total-students-card">
-                            <h3 class="total-students-number counter">35</h3>
-                            <p class="total-students-text">Total Students</p>
-                            <span class="total-students-class">দশম শ্রেণী</span>
-                        </div>
+
 
                     </div>
                 </div>
@@ -642,5 +618,49 @@
     </section>
     <!-- End Students Area -->
 
+    <script>
+        let section_counter = document.querySelector('#section_counter');
+        let counters = document.querySelectorAll('.counter');
 
+        // Scroll Animation
+
+        let CounterObserver = new IntersectionObserver(
+            (entries, observer) => {
+                let [entry] = entries;
+                if (!entry.isIntersecting) return;
+
+                let speed = 20;
+                counters.forEach((counter, index) => {
+                    counter.style.color='rgb(192 132 252';
+                    function UpdateCounter() {
+                        const targetNumber = +counter.dataset.target;
+                        const initialNumber = +counter.innerText;
+                        const incPerCount = targetNumber / speed;
+                        if (initialNumber < targetNumber) {
+                            counter.innerText = Math.ceil(initialNumber + incPerCount);
+                            setTimeout(UpdateCounter, 50);
+                        }
+                    }
+
+                    UpdateCounter();
+
+                    if (counter.parentElement.style.animation) {
+                        counter.parentElement.style.animation = '';
+                    } else {
+                        counter.parentElement.style.animation = `slide-up 0.3s ease forwards ${
+                            index / counters.length + 0.5
+                        }s`;
+                    }
+
+                });
+                observer.unobserve(section_counter);
+            },
+            {
+                root: null,
+                threshold: window.innerWidth > 768 ? 0.4 : 0.3,
+            }
+        );
+
+        CounterObserver.observe(section_counter);
+    </script>
 </x-frontend-layouts>
