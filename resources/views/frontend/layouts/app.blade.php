@@ -1,16 +1,8 @@
 <!DOCTYPE html>
 <html class="no-js" lang="ZXX">
-
-
 <head>
-
-    <!-- Meta Tags -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-
-
-    <!-- Site Title -->
     <title>Young Technical Training Center</title>
     <link rel="icon" href="https://bangla-eschool.getupdemo.xyz/storage/files/1/school-favicon.png" />
 
@@ -87,7 +79,6 @@
         }
     </style>
 
-    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -270,7 +261,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-8 col-xl-3 col-md-8 col-8">
                             <div class="header-logo">
-                                <a href="https://bangla-eschool.getupdemo.xyz"><img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/logo.svg" alt="#" /></a>
+                                <a href=""><img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/logo.svg" alt="#" /></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-xl-9 col-md-4 col-4">
@@ -279,19 +270,19 @@
                                     <nav class="navigation">
                                         <ul class="header-menu-list">
                                             <li class="active">
-                                                <a href="https://bangla-eschool.getupdemo.xyz">মূলপাতা</a>
+                                                <a href="">মূলপাতা</a>
                                             </li>
                                             <li>
                                                 <a href="#">পরিচিতি<i class="fi-rr-angle-small-down"></i></a>
                                                 <ul class="sub-menu">
                                                     <li>
-                                                        <a href="https://bangla-eschool.getupdemo.xyz/about">প্রতিষ্ঠান পরিচিতি</a>
+                                                        <a href="">প্রতিষ্ঠান পরিচিতি</a>
                                                     </li>
                                                     <li>
-                                                        <a href="https://bangla-eschool.getupdemo.xyz/info">বিদ্যালয়ের তথ্যাদি</a>
+                                                        <a href="">বিদ্যালয়ের তথ্যাদি</a>
                                                     </li>
                                                     <li>
-                                                        <a href="https://bangla-eschool.getupdemo.xyz/message">স্কুল পরিচালকদের বাণী</a>
+                                                        <a href="">স্কুল পরিচালকদের বাণী</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -299,10 +290,10 @@
                                                 <a href="#">জনবল<i class="fi-rr-angle-small-down"></i></a>
                                                 <ul class="sub-menu">
                                                     <li>
-                                                        <a href="https://bangla-eschool.getupdemo.xyz/teachers">শিক্ষক/শিক্ষিকা</a>
+                                                        <a href="">শিক্ষক/শিক্ষিকা</a>
                                                     </li>
                                                     <li>
-                                                        <a href="https://bangla-eschool.getupdemo.xyz/committee">স্কুল কমিটি সদস্যবৃন্দ</a>
+                                                        <a href="">স্কুল কমিটি সদস্যবৃন্দ</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -311,11 +302,11 @@
                                                         class="fi-rr-angle-small-down"></i></a>
                                                 <ul class="sub-menu">
                                                     <li>
-                                                        <a href="https://bangla-eschool.getupdemo.xyz/running/students">অধ্যয়নরত শিক্ষার্থীর
+                                                        <a href="">অধ্যয়নরত শিক্ষার্থীর
                                                             সংখ্যা</a>
                                                     </li>
                                                     <li>
-                                                        <a href="https://bangla-eschool.getupdemo.xyz/students">অধ্যয়নরত শিক্ষার্থীর তালিকা</a>
+                                                        <a href="">অধ্যয়নরত শিক্ষার্থীর তালিকা</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -324,25 +315,25 @@
                                                         class="fi-rr-angle-small-down"></i></a>
                                                 <ul class="sub-menu">
                                                     <li>
-                                                        <a href="https://bangla-eschool.getupdemo.xyz/public-exam">পাবলিক পরীক্ষা</a>
+                                                        <a href="">পাবলিক পরীক্ষা</a>
                                                     </li>
                                                     <li>
-                                                        <a href="https://bangla-eschool.getupdemo.xyz/school/exam">বিদ্যালয়ের অভ্যন্তরীন
+                                                        <a href="">বিদ্যালয়ের অভ্যন্তরীন
                                                             পরীক্ষা</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="https://bangla-eschool.getupdemo.xyz/gallery">ছবির গ্যালারী</a>
+                                                <a href="">ছবির গ্যালারী</a>
                                             </li>
                                             <li>
-                                                <a href="https://bangla-eschool.getupdemo.xyz/contact">যোগাযোগ</a>
+                                                <a href="">যোগাযোগ</a>
                                             </li>
                                         </ul>
                                     </nav>
                                 </div>
                                 <div class="header-menu-btn">
-                                    <a href="https://bangla-eschool.getupdemo.xyz/login" target="_blank" class="theme-btn"><i class="fi fi-rs-sign-in-alt"></i>Login</a>
+                                    <a href="https:///login" target="_blank" class="theme-btn"><i class="fi fi-rs-sign-in-alt"></i>Login</a>
                                 </div>
                             </div>
                             <!-- Mobile Menu Button -->
