@@ -31,7 +31,7 @@
                @endforelse
 
            </div>
-       <div>
+       <div class="py-3 d-flex justify-content-end">
            {{$courses->links()}}
        </div>
         </div>

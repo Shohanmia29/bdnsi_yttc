@@ -1,4 +1,5 @@
 <x-guest-layout>
+    <link rel="stylesheet" href="{{mix('css/app.css')}}">
     <div class="w-full mx-auto max-w-4xl shadow-lg mt-2 flex flex-wrap">
         <div class="w-full py-4 text-[#683091] font-bold text-xl md:text-2xl text-center text-xl border-b">
             Institute Apply Form

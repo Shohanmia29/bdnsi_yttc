@@ -296,7 +296,7 @@
 <script src="{{asset('frontend/plugins/js/jquery-fancybox.min.js')}}"></script>
 <script src="{{asset('frontend/plugins/js/jquery.counterup.min.js')}}"></script>
 <script src="{{asset('frontend/plugins/js/waypoints.min.js')}}"></script>
-<script src="{{asset('frontend/plugins/js/nice-select.min.js')}}"></script>
+{{--<script src="{{asset('frontend/plugins/js/nice-select.min.js')}}"></script>--}}
 <script src="{{asset('frontend/plugins/js/active.js')}}"></script>
 
 

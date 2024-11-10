@@ -1071,6 +1071,9 @@ select {
 .justify-evenly {
   justify-content: space-evenly;
 }
+.justify-items-end {
+  justify-items: end;
+}
 .gap-2 {
   gap: 0.5rem;
 }

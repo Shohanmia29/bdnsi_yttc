@@ -1,59 +1,72 @@
 <x-guest-layout>
-    <div class="bg-[#F8F9FA]">
-        <div class="flex flex-wrap space-x-2 py-2   border-b shadow px-4">
-            <a href="#" class="text-gray-500 hover:text-gray-700">Home</a>
-            <span class="mx-2 text-gray-400">/</span>
-            <a href="#" class="text-gray-500 hover:text-gray-700">Contact Us</a>
+
+    <div class="bg-light">
+        <!-- Header Section -->
+        <div class="py-5 text-center   text-white" style="background: #6aa84f">
+            <h1>Contact Us</h1>
+            <p>We're here to help you. Reach out to us anytime!</p>
         </div>
 
-        <div class="min-h-screen flex flex-col">
-            <main class="flex-1">
-                @if($success = session(\App\Mixin\ResponseMixin::SUCCESS_MESSAGE_SESSION_KEY))
-                    <div class="w-full flex flex-wrap">
-                        <div class="w-full p-4 bg-green-300">{{ $success }}</div>
-                    </div>
-                @endif
-                @if($error = session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY))
-                    <div class="w-full flex flex-wrap">
-                        <div class="w-full p-4 bg-red-300">{{ $error }}</div>
-                    </div>
-                @endif
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Contact Form Section -->
+                <div class="col-md-6">
+                    <div class="card shadow-lg">
+                        <div class="card-body p-4">
+                            <h4 class="card-title mb-4">Send Us a Message</h4>
 
-                <div class="container mx-auto px-4 py-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h2 class="text-xl font-bold mb-4">Send Us a Message</h2>
-                            <form class="{{route('contactUs')}}" method="post">
+                            <!-- Success Message -->
+                            @if($success = session(\App\Mixin\ResponseMixin::SUCCESS_MESSAGE_SESSION_KEY))
+                                <div class="alert alert-success">
+                                    {{ $success }}
+                                </div>
+                            @endif
+
+                            <!-- Error Message -->
+                            @if($error = session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY))
+                                <div class="alert alert-danger">
+                                    {{ $error }}
+                                </div>
+                            @endif
+
+                            <form action="{{ route('contactUs') }}" method="post">
                                 @csrf
-                                     <div class="mb-4">
-                                    <label class="block text-gray-700 font-bold mb-2" for="name">Name</label>
-                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="name" id="name" type="text" placeholder="Your Name">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name">
                                 </div>
-                                <div class="mb-4">
-                                    <label class="block text-gray-700 font-bold mb-2" for="email">Email</label>
-                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="email" id="email" type="email" placeholder="Your Email">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
                                 </div>
-                                <div class="mb-4">
-                                    <label class="block text-gray-700 font-bold mb-2" for="email">Phone</label>
-                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="phone" id="phone" type="number" placeholder="Your phone">
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter your phone number">
                                 </div>
-                                <div class="mb-4">
-                                    <label class="block text-gray-700 font-bold mb-2" for="message">Message</label>
-                                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="message" id="message" placeholder="Your Message"></textarea>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" name="message" id="message" rows="4" placeholder="Type your message here"></textarea>
                                 </div>
-                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Send</button>
+                                <button type="submit" class="btn btn-primary w-100">Send Message</button>
                             </form>
-                        </div>
-                        <div>
-                            <h2 class="text-xl font-bold mb-4">Get in Touch</h2>
-                             <div>
-                                 {!! \App\Models\ConfigDictionary::get('description')??"" !!}
-                             </div>
                         </div>
                     </div>
                 </div>
-            </main>
 
+                <!-- Contact Info Section -->
+                <div class="col-md-6">
+                    <div class="bg-white p-4 shadow-lg rounded">
+                        <h4 class="mb-4">Get in Touch</h4>
+                        <p class="mb-3">
+                            We are available to assist you with any inquiries. Feel free to contact us through the following details.
+                        </p>
+                         <div>
+                             {!! \App\Models\ConfigDictionary::get('description')??"" !!}
+                         </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-  </x-guest-layout>
+
+</x-guest-layout>
