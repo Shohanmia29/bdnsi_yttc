@@ -2,26 +2,32 @@
 
 
     <section id="courses">
-        <div class="pt-2">
-            <div class="container py-4">
-                <div class="card shadow-lg rounded mx-auto" style="max-width: 500px;">
-                    <form action="{{route('all_course')}}" method="get">
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <input name="course_name" value="{{request('course_name')}}" class="form-control" placeholder="Enter Course name"/>
-                            </div>
-                            <div class="text-center">
-                                <button class="btn btn-primary">Search</button>
-                            </div>
+        <div class="d-flex justify-content-end py-3">
+            <div>
+                <form action="{{ route('all_course') }}" method="get">
+                    <div class="card-body">
+                        <div class="mb-3 input-group">
+                            <input
+                                name="course_name"
+                                value="{{ request('course_name') }}"
+                                class="form-control"
+                                placeholder="Enter Course name"
+                                aria-label="Course name"
+                            />
+                            <button class="btn btn-primary" type="submit">
+                                <i class="bi bi-search"></i>
+                                Search
+                            </button>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
+
         <div class="container courses-list">
            <div class="row">
                @forelse($courses as $course)
-                   <div class="col-lg-3 flip-box p-2">
+                   <div class="col-lg-3 flip-box p-2 ">
                    <x-course :subject="$course" />
                    </div>
                @empty

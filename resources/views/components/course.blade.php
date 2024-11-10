@@ -1,7 +1,7 @@
 @props(['subject'])
 
 
-<div class="single-blog">
+<div class="single-blog shadow">
     <div class="blog-img">
         <img src="{{asset($subject->photo)}}" alt="Image">
     </div>
