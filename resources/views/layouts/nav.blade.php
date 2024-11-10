@@ -17,19 +17,22 @@
                 <nav id="offcanvas-menu" class="navigation offcanvas-menu">
                     <ul id="nav mobile-nav" class="list-none offcanvas-men-list">
                         <li class="">
-                            <a href="">Courses</a>
+                            <a href="{{route('all_course')}}">Courses</a>
                         </li>
                         <li class="">
-                            <a href="">Verified Institute </a>
+                            <a href="{{route('verifiedInstitute')}}">Verified Institute </a>
                         </li>
                         <li class="">
-                            <a href="">Success Students </a>
+                            <a href="{{route('successStudent')}}">Success Students </a>
                         </li>
                         <li class="">
-                            <a href="">Student Result</a>
+                            <a href="{{route('result')}}">Student Result</a>
                         </li>
                         <li class="">
-                            <a href="">Institute Apply</a>
+                            <a href="{{route('center-request.create')}}">Institute Apply</a>
+                        </li>
+                        <li class="">
+                            <a href="{{route('contactUs')}}">Contact Us</a>
                         </li>
 
                         <li><a href="">ছবির গ্যালারী</a></li>
@@ -71,25 +74,22 @@
                                     <nav class="navigation">
                                         <ul class="header-menu-list">
                                             <li class="active">
-                                                <a href="">Courses</a>
+                                                <a href="{{route('all_course')}}">Courses</a>
                                             </li>
                                             <li class="">
-                                                <a href="">Verified Institute </a>
+                                                <a href="{{route('verifiedInstitute')}}">Verified Institute </a>
                                             </li>
                                             <li class="">
-                                                <a href="">Success Students </a>
+                                                <a href="{{route('successStudent')}}">Success Students </a>
                                             </li>
                                             <li class="">
-                                                <a href="">Student Result</a>
+                                                <a href="{{route('result')}}">Student Result</a>
                                             </li>
                                             <li class="">
-                                                <a href="">Institute Apply</a>
+                                                <a href="{{route('center-request.create')}}">Institute Apply</a>
                                             </li>
                                             <li class="">
-                                                <a href="">Institute Login</a>
-                                            </li>
-                                            <li class="">
-                                                <a href="">Contact Us</a>
+                                                <a href="{{route('contactUs')}}">Contact Us</a>
                                             </li>
 
                                         </ul>
