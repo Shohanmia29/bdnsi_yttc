@@ -354,170 +354,21 @@
                 </div>
             </div>
             <div class="row school-committe-group">
-
-                <!-- Single School Committe -->
-                <div class="col-lg-4 col-xl-3 col-md-6 col-12">
-                    <div class="school-commite-card">
-                        <div class="school-commite-card-img">
-
-                            <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/1425ba7faf9c40cc17332869246f0c3ae31e3f8f(1).jpeg" alt="Committee Members Image" />
-                        </div>
-                        <div class="school-commite-card-info">
-                            <h4 class="s-commite-member-name">Ifeoma Roach</h4>
-                            <p class="s-commite-member-designation">(Commodi laborum Ame)</p>
-                            <ul class="s-commite-card-info-list">
-                                <li>সদস্য যোগদান: <span style="margin-left: 2px;">১৫ জুলাই, ১৯৭৮</span></li>
-                                <li>সদস্য মেয়াদকাল: <span style="margin-left: 2px;">০২ নভেম্বর, ২০২৩</span></li>
-                            </ul>
-                            <ul class="s-commite-card-social">
-                                <li>
-                                    <a href="tel:01702233333"><i class="icofont-ui-call"></i></a>
-                                </li>
-
-                                <li>
-                                    <a href="mailto:bekesury@mailinator.com"><i class="icofont-envelope"></i></a>
-                                </li>
-
-                                <li>
-                                    <a href="#" target="_blank"><i class="icofont-facebook"></i></a>
-                                </li>
-
-                                <li>
-                                    <a href="#" target="_blank"><i class="icofont-linkedin"></i></a>
-                                </li>
-                            </ul>
-                        </div>
+                 @forelse(\App\Models\Center::where('status',\App\Enums\CenterStatus::Approved)->take(8)->get() as $institute)
+                    <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+                         <x-institute :institute="$institute"/>
                     </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-12">
-                    <div class="school-commite-card">
-                        <div class="school-commite-card-img">
-
-                            <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/nicolas-horn-MTZTGvDsHFY-unsplash.jpg" alt="Committee Members Image" />
-                        </div>
-                        <div class="school-commite-card-info">
-                            <h4 class="s-commite-member-name">Whitney May</h4>
-                            <p class="s-commite-member-designation">(Nostrum et voluptati)</p>
-                            <ul class="s-commite-card-info-list">
-                                <li>সদস্য যোগদান: <span style="margin-left: 2px;">০৯ জুলাই, ১৯৭১</span></li>
-                                <li>সদস্য মেয়াদকাল: <span style="margin-left: 2px;">০২ নভেম্বর, ২০২৩</span></li>
-                            </ul>
-                            <ul class="s-commite-card-social">
-                                <li>
-                                    <a href="tel:01969005035"><i class="icofont-ui-call"></i></a>
-                                </li>
-
-                                <li>
-                                    <a href=""><i class="icofont-envelope"></i></a>
-                                </li>
-
-                                <li>
-                                    <a href="#" target="_blank"><i class="icofont-facebook"></i></a>
-                                </li>
-
-                                <li>
-                                    <a href="#" target="_blank"><i class="icofont-linkedin"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-12">
-                    <div class="school-commite-card">
-                        <div class="school-commite-card-img">
-
-                            <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/alex-suprun-ZHvM3XIOHoE-unsplash.jpg" alt="Committee Members Image" />
-                        </div>
-                        <div class="school-commite-card-info">
-                            <h4 class="s-commite-member-name">Whitney Maldonado</h4>
-                            <p class="s-commite-member-designation">(Qui sit irure magna)</p>
-                            <ul class="s-commite-card-info-list">
-                                <li>সদস্য যোগদান: <span style="margin-left: 2px;">২২ এপ্রিল, ২০০২</span></li>
-                                <li>সদস্য মেয়াদকাল: <span style="margin-left: 2px;">০৪ অক্টোবর, ২০২৪</span></li>
-                            </ul>
-                            <ul class="s-commite-card-social">
-                                <li>
-                                    <a href="tel:01969005035"><i class="icofont-ui-call"></i></a>
-                                </li>
-
-                                <li>
-                                    <a href="mailto:qatimacub@mailinator.com"><i class="icofont-envelope"></i></a>
-                                </li>
-
-                                <li>
-                                    <a href="#" target="_blank"><i class="icofont-facebook"></i></a>
-                                </li>
-
-                                <li>
-                                    <a href="#" target="_blank"><i class="icofont-linkedin"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-12">
-                    <div class="school-commite-card">
-                        <div class="school-commite-card-img">
-
-                            <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Teachers/img-3.png" alt="Committee Members Image" />
-                        </div>
-                        <div class="school-commite-card-info">
-                            <h4 class="s-commite-member-name">Jane Smith</h4>
-                            <p class="s-commite-member-designation">(Developer)</p>
-                            <ul class="s-commite-card-info-list">
-                                <li>সদস্য যোগদান: <span style="margin-left: 2px;">০৯ অক্টোবর, ২০২৩</span></li>
-                                <li>সদস্য মেয়াদকাল: <span style="margin-left: 2px;">০২ নভেম্বর, ২০২৩</span></li>
-                            </ul>
-                            <ul class="s-commite-card-social">
-                                <li>
-                                    <a href="tel:01968556466"><i class="icofont-ui-call"></i></a>
-                                </li>
+                @empty
+                     <div>Not Found</div>
+                 @endforelse
 
 
-                                <li>
-                                    <a href="https://facebook.com" target="_blank"><i class="icofont-facebook"></i></a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-12">
-                    <div class="school-commite-card">
-                        <div class="school-commite-card-img">
-
-                            <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Teachers/img-2.png" alt="Committee Members Image" />
-                        </div>
-                        <div class="school-commite-card-info">
-                            <h4 class="s-commite-member-name">মোঃ মোস্তফা কামাল ভূঁইয়া</h4>
-                            <p class="s-commite-member-designation">(Web Developer)</p>
-                            <ul class="s-commite-card-info-list">
-                                <li>সদস্য যোগদান: <span style="margin-left: 2px;">২৪ অক্টোবর, ২০২৩</span></li>
-                                <li>সদস্য মেয়াদকাল: <span style="margin-left: 2px;">০৪ নভেম্বর, ২০২৩</span></li>
-                            </ul>
-                            <ul class="s-commite-card-social">
-                                <li>
-                                    <a href="tel:01969005035"><i class="icofont-ui-call"></i></a>
-                                </li>
-
-                                <li>
-                                    <a href=""><i class="icofont-envelope"></i></a>
-                                </li>
-
-                                <li>
-                                    <a href="" target="_blank"><i class="icofont-facebook"></i></a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
 
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="section-bottom-btn">
-                        <a href="" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
+                        <a href="{{route('verifiedInstitute')}}" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -592,29 +443,18 @@
                 <div class="col-12">
                     <div class="students-slider">
 
-                        <!-- Single Student Card -->
-                        <div class="students-card">
-                            <div class="students-card-img">
-
-                                <img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Students/img-4.png" alt="Student" />
-                            </div>
-                            <div class="students-card-info">
-                                <h4>Md Fahim Hossain Alif</h4>
-                                <span>(দ্বিতীয় শ্রেণী)</span>
-                                <ul>
-                                    <li>রোল নং: <span>২</span></li>
-                                    <li>সময়: <span>২০২৩</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
+                        @forelse(\App\Models\Student::where('status',\App\Enums\StudentStatus::Approved)->take(8)->get() as $student)
+                               <x-student :student="$student"/>
+                        @empty
+                            <div>Not Found</div>
+                        @endforelse
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="section-bottom-btn">
-                        <a href="https://bangla-eschool.getupdemo.xyz/students" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
+                        <a href="{{route('successStudent')}}" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
                     </div>
                 </div>
             </div>

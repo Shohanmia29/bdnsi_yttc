@@ -1,14 +1,14 @@
 @props(['student'])
 
-<div class="bg-white shadow-dashboard rounded-md" style="    border: 3px double black;">
-    <a href="{{route('successStudentDetails',$student->id)}}">
-        <div class="flex   justify-center items-center    ">
-            <img class="  w-full    " style="height: 262px;" src="{{$student->picture??''}}" alt=""  >
 
-        </div>
-        <div class="p-3 text-center">
-            <h2 class="text-sm font-medium text-coolGray-900 py-5 font-bold underline" data-config-id="auto-txt-19-1">{{$student->name??''}}</h2>
+<div class="students-card">
+    <div class="students-card-img">
 
-        </div>
-    </a>
+        <img src="{{$student->picture??''}}" alt="Student" />
+    </div>
+    <div class="students-card-info">
+        <h4><a href="{{route('successStudentDetails',$student->id)}}"> {{$student->name??''}}</a></h4>
+
+    </div>
 </div>
+

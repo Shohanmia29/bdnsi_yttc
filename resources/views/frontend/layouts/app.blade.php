@@ -225,12 +225,12 @@
             <div class="col-12">
                 <div class="header-inner">
                     <div class="row align-items-center">
-                        <div class="col-lg-8 col-xl-3 col-md-8 col-8">
+                        <div class=" col-md-2 col-8">
                             <div class="header-logo">
                                 <a href=""><img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/logo.svg" alt="#" /></a>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-xl-9 col-md-4 col-4">
+                        <div class="col-md-10 col-4">
                             <div class="header-right">
                                 <div class="header-menu">
                                     <nav class="navigation">
@@ -250,19 +250,19 @@
                                             <li class="">
                                                 <a href="">Institute Apply</a>
                                             </li>
-                            {{--                <li class="">
+                                            <li class="">
                                                 <a href="">Institute Login</a>
                                             </li>
                                             <li class="">
                                                 <a href="">Contact Us</a>
-                                            </li>--}}
+                                            </li>
 
                                         </ul>
                                     </nav>
                                 </div>
-                                <div class="header-menu-btn">
+                {{--                <div class="header-menu-btn">
                                     <a href="https:///login" target="_blank" class="theme-btn"><i class="fi fi-rs-sign-in-alt"></i>Login</a>
-                                </div>
+                                </div>--}}
                             </div>
                             <!-- Mobile Menu Button -->
                             <button type="button" class="mobile-menu-offcanvas-toggler" data-bs-toggle="modal" data-bs-target="#offcanvas-modal">
