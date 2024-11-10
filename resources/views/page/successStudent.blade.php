@@ -1,28 +1,36 @@
 <x-guest-layout>
-    <link rel="stylesheet" href="">
-    <div class="bg-[#F8F9FA]">
-        <div class="flex flex-wrap space-x-2 py-2   border-b shadow px-4">
-            <a href="#" class="text-gray-500 hover:text-gray-700">Home</a>
-            <span class="mx-2 text-gray-400">/</span>
-            <a href="#" class="text-gray-500 hover:text-gray-700">Our Success Students</a>
+
+
+    <div class="bg-light">
+        <!-- Breadcrumb -->
+        <div class="d-flex align-items-center py-2  mt-3  px-4">
+            <a href="#" class="text-secondary text-decoration-none">Home</a>
+            <span class="mx-2 text-muted">/</span>
+            <a href="#" class="text-secondary text-decoration-none">Our Success Students</a>
         </div>
 
-        <div class="min-h-screen    ">
-            <div class="max-w-7xl mx-auto p-3">
-                <div class="w-full flex flex-wrap">
+        <!-- Main Content -->
+        <div class="min-vh-100">
+            <div class="container py-3">
+                <div class="row">
                     @forelse($students as $student)
-                        <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-3">
-                           <x-student :student="$student" />
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                            <x-student :student="$student" />
                         </div>
                     @empty
-                        <div class="w-full font-bold text-red-500">Not Found Institute</div>
+                        <div class="col-12 text-center">
+                            <strong class="text-danger">Not Found Institute</strong>
+                        </div>
                     @endforelse
                 </div>
-                <div class="max-w-xl mx-auto py-8">
-                    {{$students->links('page.tailwind-paginate')}}
+
+                <!-- Pagination -->
+                <div class="d-flex justify-content-center py-4">
+                    {{$students->links()}}
                 </div>
             </div>
-
         </div>
     </div>
+
+
 </x-guest-layout>

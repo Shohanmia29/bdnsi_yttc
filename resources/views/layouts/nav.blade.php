@@ -56,7 +56,48 @@
         </div>
     </div>
 </div>
-<!-- End Mobile Menu Modal -->
+<div class="topbar-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12 col-xl-6 col-12">
+                <div class="topbar-left">
+                    <div class="topbar-update-notice">
+                        <span class="topbar-update-notice-title">আপডেট</span>
+
+                        <!-- Update Notice Slider -->
+                        <div class="topbar-update-notice-slider">
+                            <div class="topbar-update-notice-main">
+                                <p class="topbar-update-notice-single">
+                                    <a href="" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- Update Notice Scroll -->
+                        <div class="topbar-update-notice-scroll">
+                            <p class="topbar-update-notice-single">
+                                <a href="" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="topbar-right">
+                    <div class="topbar-school-info">
+                        <ul class="topbar-school-info-list">
+                            <li>EIIN No:<span>12547</span></li>
+                            <li>School code:<span>44231</span></li>
+                            <li>Reg. No:<span>6100-KA</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <header id="active-sticky" class="header-area">
     <div class="container">
         <div class="row">

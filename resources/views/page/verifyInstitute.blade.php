@@ -1,14 +1,14 @@
 <x-frontend-layouts>
-    <link rel="stylesheet" href="{{mix('css/app.css')}}">
+
     <div class="container" x-data="centerData">
         <div class="branch-filter-wrap mt-4 py-4">
             <div class="text-center mb-3">
                 <h5>Filter Verified Branch</h5>
             </div>
             <form action="{{ route('verifiedInstitute') }}" method="get">
-                <div class="row gap-2 justify-content-center">
+                <div class="row gap-2 justify-content-center shadow-lg p-4">
                     <div class="col-md-3">
-                        <select class="form-select" name="division" x-model="division" required aria-label="Division select">
+                        <select class="form-control" name="division" x-model="division" required aria-label="Division select">
                             <option value="" disabled selected>Select Division</option>
                             @foreach(\App\Lib\Geo::divisions() as $divisionId => $division)
                                 <option value="{{ $divisionId }}" @selected(old('division') == $divisionId)>{{ $division['name'] }}</option>
@@ -16,7 +16,7 @@
                         </select>
                     </div>
                     <div class="col-md-3">
-                        <select class="form-select" name="district" x-model="district" required aria-label="District select">
+                        <select class="form-control" name="district" x-model="district" required aria-label="District select">
                             <option value="" disabled selected>Select District</option>
                             <template x-for="district in districts" :key="district.id">
                                 <option :value="district.id" x-text="district.name"></option>
@@ -24,7 +24,7 @@
                         </select>
                     </div>
                     <div class="col-md-3">
-                        <select class="form-select" name="upazilla" x-model="upazilla" required aria-label="Upazilla select">
+                        <select class="form-control" name="upazilla" x-model="upazilla" required aria-label="Upazilla select">
                             <option value="" disabled selected>Select Upazilla</option>
                             <template x-for="upazilla in upazillas" :key="upazilla.id">
                                 <option :value="upazilla.id" x-text="upazilla.name"></option>
@@ -32,8 +32,8 @@
                         </select>
                     </div>
                     <div class="col-md-2">
-                        <button type="submit" class="btn btn-outline-success" >Search</button>
-                        <button type="reset" class="btn btn-outline-danger" x-on:click="resetFilters">Reset</button>
+                        <button type="submit" class="btn btn-success" >Search</button>
+                        <button type="reset" class="btn btn-danger" x-on:click="resetFilters">Reset</button>
                     </div>
                 </div>
             </form>
@@ -52,7 +52,7 @@
                 </div>
             @endforelse
         </div>
-        <div class="w-100">
+        <div class="w-100 py-4 d-flex justify-content-end">
             {{ $centers->links('page.paginate') }}
         </div>
     </div>

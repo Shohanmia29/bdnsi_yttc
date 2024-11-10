@@ -101,62 +101,7 @@
     </svg>
 </div>
 
-<div class="topbar-area">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-12 col-xl-6 col-12">
-                <div class="topbar-left">
-                    <div class="topbar-update-notice">
-                        <span class="topbar-update-notice-title">আপডেট</span>
 
-                        <!-- Update Notice Slider -->
-                        <div class="topbar-update-notice-slider">
-                            <div class="topbar-update-notice-main">
-                                <p class="topbar-update-notice-single">
-                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1698922484WCuAP" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
-                                </p>
-                            </div>
-                            <div class="topbar-update-notice-main">
-                                <p class="topbar-update-notice-single">
-                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/169864663613ysi" target="_blank">তাপপ্রবাহের সতর্কবার্তার কারণে শ্রেণি কার্যক্রম ও চলমান পরীক্ষা বন্ধ সংক্..</a>
-                                </p>
-                            </div>
-                            <div class="topbar-update-notice-main">
-                                <p class="topbar-update-notice-single">
-                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1697707887saQt3" target="_blank">প্রথম সাময়িক পরীক্ষা ২০২৩ এর প্রসঙ্গে বিজ্ঞপ্তি সকল শ্রেণীর</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Update Notice Scroll -->
-                        <div class="topbar-update-notice-scroll">
-                            <p class="topbar-update-notice-single">
-                                <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1698922484WCuAP" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
-                            </p>
-                            <p class="topbar-update-notice-single">
-                                <a href="https://bangla-eschool.getupdemo.xyz/notice/details/169864663613ysi" target="_blank">তাপপ্রবাহের সতর্কবার্তার কারণে শ্রেণি কার্যক্রম ও চলমান পরীক্ষা বন্ধ সংক্..</a>
-                            </p>
-                            <p class="topbar-update-notice-single">
-                                <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1697707887saQt3" target="_blank">প্রথম সাময়িক পরীক্ষা ২০২৩ এর প্রসঙ্গে বিজ্ঞপ্তি সকল শ্রেণীর</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-12">
-                <div class="topbar-right">
-                    <div class="topbar-school-info">
-                        <ul class="topbar-school-info-list">
-                            <li>EIIN No:<span>12547</span></li>
-                            <li>School code:<span>44231</span></li>
-                            <li>Reg. No:<span>6100-KA</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 @include('layouts.nav')
@@ -353,7 +298,7 @@
 <script src="{{asset('frontend/plugins/js/jquery-fancybox.min.js')}}"></script>
 <script src="{{asset('frontend/plugins/js/jquery.counterup.min.js')}}"></script>
 <script src="{{asset('frontend/plugins/js/waypoints.min.js')}}"></script>
-<script src="{{asset('frontend/plugins/js/nice-select.min.js')}}"></script>
+{{--<script src="{{asset('frontend/plugins/js/nice-select.min.js')}}"></script>--}}
 <script src="{{asset('frontend/plugins/js/active.js')}}"></script>
 
 
