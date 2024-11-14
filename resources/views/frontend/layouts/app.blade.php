@@ -365,7 +365,7 @@
                             </div>
                             <div class="footer-contact-info">
                                 <p class="footer-contact-text">
-                                    XYZ School &amp; College, Main Road, Khilgaon, Dhaka
+                                    yttc Main Road, Khilgaon, Dhaka
                                 </p>
                             </div>
                         </div>
@@ -416,9 +416,9 @@
                 <div class="col-lg-6 col-12">
                     <div class="footer-copyright">
                         <p class="footer-copyright-text">
-                            © 2024 XYZ School &amp; College 21. All right reserved.
+                            © 2024 . All right reserved.
                         </p>
-                        <span>Design & Developed by:<a href="#" target="_blank">Company Limited</a></span>
+                        <span>Design & Developed by:<a href="#" target="_blank">MMITSFOT Ltd.</a></span>
                     </div>
                 </div>
                 <div class="col-lg-6 col-12">
