@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Lib\Image;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 
@@ -30,22 +31,9 @@ class SliderController extends Controller
             'photo' => 'required|image',
         ]);
 
-        // Get the uploaded file
-        $file = $request->file('photo');
+          $validated['photo'] =Image::store('photo','upload/slider');
 
-        // Generate a unique name for the file
-        $fileName = time() . '_' . $file->getClientOriginalName();
-
-        // Move the uploaded file to the public directory
-//        $file->store('public/slider', $fileName);
-
-        $file->move(public_path('images/slider'), $fileName);
-
-        // Create a new Slider model instance
-        $slider = new Slider();
-        $slider->title = $validated['title'];
-        $slider->photo = $fileName;
-        $slider->save();
+        $slider=Slider::create($validated);
 
         return response()->report($slider, 'Slider Created successfully');
 
@@ -54,15 +42,7 @@ class SliderController extends Controller
     public function destroy(Slider $slider)
     {
 
-        // Get the image file path
-        $filePath = public_path('/images/slider/'.$slider->photo);
 
-        // Delete the image file using unlink
-        if (file_exists($filePath)) {
-            unlink($filePath);
-        }
-
-        // Delete the Slider model from the database
         $slider->delete();
 
         return response()->report($slider, 'Slider Deleted successfully');
