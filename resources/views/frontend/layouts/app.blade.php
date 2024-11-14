@@ -108,7 +108,7 @@
             <div class="modal-header offcanvas-header">
                 <!-- offcanvas-logo-start -->
                 <div class="offcanvas-logo">
-                    <a href=""><img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/logo.svg" alt="#" /></a>
+                    <a href=""><img src="{{asset('frontend/logo.png')}}" alt="#" /></a>
                 </div>
                 <!-- offcanvas-logo-end -->
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
@@ -229,7 +229,7 @@
                     <div class="row align-items-center">
                         <div class=" col-md-2 col-8">
                             <div class="header-logo">
-                                <a href=""><img src="https://bangla-eschool.getupdemo.xyz/storage/files/1/logo.svg" alt="#" /></a>
+                                <a href=""><img src="{{asset('frontend/logo.png')}}" alt="#" /></a>
                             </div>
                         </div>
                         <div class="col-md-10 col-4">
@@ -365,7 +365,7 @@
                             </div>
                             <div class="footer-contact-info">
                                 <p class="footer-contact-text">
-                                    yttc Main Road, Khilgaon, Dhaka
+                                    {{config('site.setting.address')}}
                                 </p>
                             </div>
                         </div>
@@ -376,8 +376,8 @@
                                 <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/phone.svg" alt="#" />
                             </div>
                             <div class="footer-contact-info">
-                                <a href="tel:+880 1234 567890">+8801000000000</a>
-                                <a href="tel:+880 1234 567890">+8801000000002</a>
+                                <a href="tel:{config('site.setting.phone')}}">   {{config('site.setting.phone')}}</a>
+
                             </div>
                         </div>
 
@@ -387,8 +387,7 @@
                                 <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/envelope.svg" alt="#" />
                             </div>
                             <div class="footer-contact-info">
-                                <a href="mailto:info@xyzschool.com">example@yourschool.com</a>
-                                <a href="mailto:hello@xyzschool.com">example_two@yourschool.com</a>
+                                <a href="mailto:{{config('site.setting.email')}}">{{config('site.setting.email')}}</a>
                             </div>
                         </div>
 
