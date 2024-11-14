@@ -6,6 +6,7 @@ use App\Mixin\ResponseMixin;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Routing\ResponseFactory;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -29,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useTailwind();
         Paginator::useBootstrap();
-
+        Schema::defaultStringLength(255);
 
         ResponseFactory::mixin(new ResponseMixin());
         Blade::directive('selected', function($expression){
