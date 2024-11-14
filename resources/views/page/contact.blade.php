@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-frontend-layouts>
 
     <div class="bg-light">
         <!-- Header Section -->
@@ -60,13 +60,12 @@
                         <p class="mb-3">
                             We are available to assist you with any inquiries. Feel free to contact us through the following details.
                         </p>
-                         <div>
-                             {!! \App\Models\ConfigDictionary::get('description')??"" !!}
-                         </div>
+                        <div>
+                            {!! \App\Models\ConfigDictionary::get('description')??"" !!}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-</x-guest-layout>
+</x-frontend-layouts>

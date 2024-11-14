@@ -25,21 +25,21 @@
         </div>
 
         <div class="container courses-list">
-           <div class="row">
-               @forelse($courses as $course)
-                   <div class="col-lg-3 flip-box p-2 ">
-                   <x-course :subject="$course" />
-                   </div>
-               @empty
-                   <div class="font-bold text-red-500">
-                       Not Found
-                   </div>
-               @endforelse
+            <div class="row">
+                @forelse($courses as $course)
+                    <div class="col-lg-3 flip-box p-2 ">
+                        <x-course :subject="$course" />
+                    </div>
+                @empty
+                    <div class="font-bold text-red-500">
+                        Not Found
+                    </div>
+                @endforelse
 
-           </div>
-       <div class="py-3 d-flex justify-content-end">
-           {{$courses->links()}}
-       </div>
+            </div>
+            <div class="py-3 d-flex justify-content-end">
+                {{$courses->links()}}
+            </div>
         </div>
     </section>
 

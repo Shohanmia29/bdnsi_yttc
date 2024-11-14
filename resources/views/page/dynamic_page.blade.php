@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-frontend-layouts>
 
      <div class=" mt-4 md:mt-10 w-3/4 mx-auto flex items-center  justify-center">
 
@@ -29,4 +29,4 @@
 
 
 
-</x-guest-layout>
+</x-frontend-layouts>

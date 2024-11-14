@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-frontend-layouts>
 
    <div class="max-w-6xl mx-auto py-4 px-3">
        <div class="w-full mt-8">
@@ -28,4 +28,4 @@
        </div>
    </div>
 
-</x-guest-layout>
+</x-frontend-layouts>

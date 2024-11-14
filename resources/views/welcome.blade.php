@@ -98,21 +98,37 @@
                         <!-- Single Sidebar Widget -->
                         <div class="home-sidebar-widget notice-board">
                             <h4 class="home-sidebar-widget-title">
-                                <img src="{{asset('frontend/svg/notice1.svg')}}" alt="#" />নোটিশ বোর্ড
+                                <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/mike.svg" alt="#" />নোটিশ বোর্ড
                             </h4>
-                             @forelse(\App\Models\Notice::take(8)->get()  as $notice)
-                                <div class="sidebar-widget-list">
-                                    <div class="sidebar-widget-list-content">
-                                        <img src="{{asset('frontend/svg/notice.svg')}}" alt="#" />
-                                        <p>{{\Illuminate\Support\Str::limit($notice->details,30,$end='...')}}</p>
-                                    </div>
-                                    <div class="sidebar-widget-list-btn">
-                                        <a href="" target="_blank" class="theme-btn secondary">বিস্তারিত</a>
-                                    </div>
-                                </div>
-                            @empty
-                             @endforelse
 
+                            <!-- Single Widget List -->
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/info-2.svg" alt="#" />
+                                    <p>স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1698922484WCuAP" target="_blank" class="theme-btn secondary">বিস্তারিত</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/info-2.svg" alt="#" />
+                                    <p>তাপপ্রবাহের সতর্কবার্তার কারণে শ্রেণি কার্যক্রম ও চলমান পরীক্ষা..</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="" target="_blank" class="theme-btn secondary">বিস্তারিত</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-list">
+                                <div class="sidebar-widget-list-content">
+                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/info-2.svg" alt="#" />
+                                    <p>প্রথম সাময়িক পরীক্ষা ২০২৩ এর প্রসঙ্গে বিজ্ঞপ্তি সকল শ্রেণীর</p>
+                                </div>
+                                <div class="sidebar-widget-list-btn">
+                                    <a href="" target="_blank" class="theme-btn secondary">বিস্তারিত</a>
+                                </div>
+                            </div>
 
                             <div class="home-sidebar-widget-btn">
                                 <a href="" class="theme-btn">সকল নোটিশ<i class="fi-rr-arrow-right"></i></a>

@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-frontend-layouts>
 
 
     <div class="bg-light">
@@ -33,4 +33,4 @@
     </div>
 
 
-</x-guest-layout>
+</x-frontend-layouts>

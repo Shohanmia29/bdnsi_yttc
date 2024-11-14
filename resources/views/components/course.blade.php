@@ -6,10 +6,10 @@
         <img src="{{asset($subject->photo)}}" alt="Image">
     </div>
     <div class="blog-content">
-    {{--    <ul class="blog-meta">
-            <li>Post by:<span>Admin</span></li>
-            <li>Date:<span>05 Nov, 2023</span></li>
-        </ul>--}}
+        {{--    <ul class="blog-meta">
+                <li>Post by:<span>Admin</span></li>
+                <li>Date:<span>05 Nov, 2023</span></li>
+            </ul>--}}
         <a href="{{route('course.details',$subject->id)}}" contenteditable="false" style="cursor: pointer;">
             <h4 class="blog-content-title">
                 {{$subject->name??''}}
@@ -20,6 +20,10 @@
         </div>
     </div>
 </div>
+
+
+
+
 
 
 

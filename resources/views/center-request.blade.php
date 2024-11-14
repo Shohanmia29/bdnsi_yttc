@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-frontend-layouts>
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
     <div class="w-full mx-auto max-w-4xl shadow-lg mt-2 flex flex-wrap">
         <div class="w-full py-4 text-[#683091] font-bold text-xl md:text-2xl text-center text-xl border-b">
@@ -7,9 +7,9 @@
         <form action="{{ route('center-request.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             @if($success = session(\App\Mixin\ResponseMixin::SUCCESS_MESSAGE_SESSION_KEY))
-            <div class="w-full flex flex-wrap">
-                <div class="w-full p-4 bg-green-300">{{ $success }}</div>
-            </div>
+                <div class="w-full flex flex-wrap">
+                    <div class="w-full p-4 bg-green-300">{{ $success }}</div>
+                </div>
             @endif
             @if($error = session(\App\Mixin\ResponseMixin::ERROR_MESSAGE_SESSION_KEY))
                 <div class="w-full flex flex-wrap">
@@ -24,7 +24,7 @@
             <div class="w-full flex flex-wrap   px-2 md:px-4" x-data="centerRequestData">
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="name" label="Institute Name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" label="Director Name" name="owner_name" required/>
-{{--                <x-labeled-input class="w-full lg:w-1/2 p-1" name="director_name" required/>--}}
+                {{--                <x-labeled-input class="w-full lg:w-1/2 p-1" name="director_name" required/>--}}
                 <x-labeled-input type="file" class="w-full lg:w-1/2 p-1" name="director_image" label="Director Photo" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="fathers_name" required/>
                 <x-labeled-input class="w-full lg:w-1/2 p-1" name="mothers_name" required/>
@@ -105,4 +105,4 @@
             })
         </script>
     </x-slot>
-</x-guest-layout>
+</x-frontend-layouts>
