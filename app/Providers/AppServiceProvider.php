@@ -30,8 +30,6 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useTailwind();
         Paginator::useBootstrap();
-        Schema::defaultStringLength(255);
-
         ResponseFactory::mixin(new ResponseMixin());
         Blade::directive('selected', function($expression){
             return "<?php echo ($expression) ? 'selected' : ''; ?>";
