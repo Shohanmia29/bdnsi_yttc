@@ -145,11 +145,7 @@
             </div>
             <div class="mobile-menu-modal-main-bottom">
                 <div class="topbar-school-info">
-                    <ul class="topbar-school-info-list">
-                        <li>EIIN No:<span>12547</span></li>
-                        <li>School code:<span>44231</span></li>
-                        <li>Reg. No:<span>6100-KA</span></li>
-                    </ul>
+
                 </div>
                 <!-- offcanvas-menu end -->
                 <div class="mobile-menu-modal-bottom header-menu-btn">
@@ -207,11 +203,7 @@
             <div class="col-lg-6 col-12">
                 <div class="topbar-right">
                     <div class="topbar-school-info">
-                        <ul class="topbar-school-info-list">
-                            <li>EIIN No:<span>12547</span></li>
-                            <li>School code:<span>44231</span></li>
-                            <li>Reg. No:<span>6100-KA</span></li>
-                        </ul>
+
                     </div>
                 </div>
             </div>
@@ -294,33 +286,10 @@
                             <li>
                                 <a href= target="_blank">
                                     <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="Link"/>
-                                    পাঠশালা
+
                                 </a>
                             </li>
-                            <li>
-                                <a href= target="_blank">
-                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="Link"/>
-                                    ই-স্কুল
-                                </a>
-                            </li>
-                            <li>
-                                <a href= target="_blank">
-                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="Link"/>
-                                    ভর্তি পরীক্ষার আবেদন
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="Link"/>
-                                    পিডিএস (সরকারি মাধ্যমিক)
-                                </a>
-                            </li>
-                            <li>
-                                <a href= target="_blank">
-                                    <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/link.svg" alt="Link"/>
-                                    ওয়েব মেইল লগিন
-                                </a>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -328,30 +297,10 @@
                     <div class="footer-widget quick-links">
                         <h4 class="footer-widget-title">সরাসরি লিঙ্ক</h4>
                         <ul class="quick-links-inner">
-                            <li>
+                        {{--    <li>
                                 <a href=>যোগাযোগ</a>
-                            </li>
-                            <li>
-                                <a href=>প্রতিষ্ঠান পরিচিতি</a>
-                            </li>
-                            <li>
-                                <a href=>প্রতিষ্ঠানের তথ্যাদি</a>
-                            </li>
-                            <li>
-                                <a href=>সকল শিক্ষক/শিক্ষিকা বৃন্দ</a>
-                            </li>
-                            <li>
-                                <a href=>স্কুল কমিটির সদস্যবৃন্দ</a>
-                            </li>
-                            <li>
-                                <a href=>ছবি এবং ভিডিও গ্যালারী</a>
-                            </li>
-                            <li>
-                                <a href=>অধ্যায়ণরত শিক্ষার্থীর সংখ্যা</a>
-                            </li>
-                            <li>
-                                <a href=>সংবাদ/ ব্লগ সমূহ</a>
-                            </li>
+                            </li>--}}
+
                         </ul>
                     </div>
                 </div>
@@ -397,11 +346,7 @@
                                 <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/info.svg" alt="#" />
                             </div>
                             <div class="footer-contact-info">
-                                <ul>
-                                    <li>EIIN No:<span>12547</span></li>
-                                    <li>School code:<span>44231</span></li>
-                                    <li>Reg. No:<span>6100-KA</span></li>
-                                </ul>
+
                             </div>
                         </div>
                     </div>
