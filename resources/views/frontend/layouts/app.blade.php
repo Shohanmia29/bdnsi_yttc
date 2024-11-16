@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/uicons.css')}}" />
     <link rel="stylesheet" href="{{asset('frontend/ss/toastr.min.css')}}" />
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}" />
+    <link rel="icon" type="image/png" href="{{ asset('frontend/logo.png') }}?v=2">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/logo.png') }}?v=4">
+    <link rel="apple-touch-icon" href="{{ asset('frontend/logo.png') }}?v=4" />
+    <meta name="msapplication-TileImage" content="{{ asset('frontend/logo.png') }}?v=4" />
 
     <style>
         .about-content p {
