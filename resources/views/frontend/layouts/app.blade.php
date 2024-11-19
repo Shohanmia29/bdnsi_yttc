@@ -139,6 +139,9 @@
                             <a href="{{route('center-request.create')}}">Institute Apply</a>
                         </li>
                         <li class="">
+                            <a href="{{route('login')}}">Institute Login</a>
+                        </li>
+                        <li class="">
                             <a href="{{route('contactUs')}}">Contact Us</a>
                         </li>
 
@@ -249,6 +252,9 @@
                                                 <a href="{{route('center-request.create')}}">Institute Apply</a>
                                             </li>
                                             <li class="">
+                                                <a href="{{route('login')}}">Institute Login</a>
+                                            </li>
+                                            <li class="">
                                                 <a href="{{route('contactUs')}}">Contact Us</a>
                                             </li>
 
@@ -284,7 +290,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-12">
-                    <div class="footer-widget quick-links">
+              {{--      <div class="footer-widget quick-links">
                         <h4 class="footer-widget-title">অন্যান্য লিঙ্ক</h4>
                         <ul class="quick-links-inner">
                             <li>
@@ -295,18 +301,18 @@
                             </li>
 
                         </ul>
-                    </div>
+                    </div>--}}
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <div class="footer-widget quick-links">
+        {{--            <div class="footer-widget quick-links">
                         <h4 class="footer-widget-title">সরাসরি লিঙ্ক</h4>
                         <ul class="quick-links-inner">
-                        {{--    <li>
+                        --}}{{--    <li>
                                 <a href=>যোগাযোগ</a>
-                            </li>--}}
+                            </li>--}}{{--
 
                         </ul>
-                    </div>
+                    </div>--}}
                 </div>
                 <div class="col-lg-4 col-12">
                     <div class="footer-widget contact">
