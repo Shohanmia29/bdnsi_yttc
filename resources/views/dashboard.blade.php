@@ -1,70 +1,115 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-bold text-2xl text-gray-900 leading-tight">
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
 
-    <div class="w-full flex flex-wrap">
+    <!-- Cards Section -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
         @foreach($cards as $card)
-            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
-                <div class="rounded w-full bg-slate-800 text-white shadow">
-                    <div class="w-full p-4">
-                        <div class="w-full text-xl">{{ $card->title??'' }}</div>
-                        <div class="w-full text-2xl text-right font-semibold">{{ $card->value??'' }}</div>
-                    </div>
-                    @foreach($card->kv as $k => $v)
-                        <div class="w-full border-t flex justify-between">
-                            <span class="p-2">{{ $k??'' }}</span>
-                            <span class="p-2 font-semibold">{{ $v??'' }}</span>
-                        </div>
-                    @endforeach
+            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg shadow-lg">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">{{ $card->title ?? '' }}</h3>
+                    <p class="text-4xl font-bold mt-4">{{ $card->value ?? '' }}</p>
                 </div>
+                @if(isset($card->kv) && is_array($card->kv))
+                    <div class="border-t border-indigo-400">
+                        @foreach($card->kv as $k => $v)
+                            <div class="flex justify-between p-4">
+                                <span>{{ $k ?? '' }}</span>
+                                <span class="font-bold">{{ $v ?? '' }}</span>
+                            </div>
+                        @endforeach
+                    </div>
+                @endif
             </div>
         @endforeach
     </div>
-    <div class="w-full mt-8 flex flex-wrap bg-white rounded-md">
-        <div class="w-full p-4 border-b text-xl font-semibold">
-            {{ __('Center Information') }}
+
+    <!-- Center Information Section -->
+    <div class="bg-white rounded-lg shadow-lg mt-8 p-6">
+        <div class="border-b pb-3">
+            <h3 class="text-2xl font-semibold text-gray-700">{{ __('Center Information') }}</h3>
         </div>
+
         @php($center = auth()->user()->center)
+
         @if($center)
-        <div class="w-full flex flex-wrap p-4">
-            <div class="w-full md:w-1/2 lg:w-1/3">
-                <table>
-                    <tr><td class="p-2 font-semibold">{{ __('Code') }}</td><td class="p-2">{{ $center->code??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Name') }}</td><td class="p-2">{{ $center->name??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Owner Name') }}</td><td class="p-2">{{ $center->owner_name??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Fathers Name') }}</td><td class="p-2">{{ $center->fathers_name??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Mothers Name') }}</td><td class="p-2">{{ $center->mothers_name??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Religion') }}</td><td class="p-2">{{ $center->religion->key??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Gender') }}</td><td class="p-2">{{ $center->gender->key??'' }}</td></tr>
-                </table>
+            <!-- Tabbed Interface -->
+            <div x-data="{ tab: 'basic' }" class="mt-6">
+                <!-- Tabs -->
+                <div class="flex border-b border-gray-300 mb-4">
+                    <button @click="tab = 'basic'" :class="tab === 'basic' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500'" class="py-2 px-4 font-semibold focus:outline-none">
+                        {{ __('Basic Info') }}
+                    </button>
+                    <button @click="tab = 'location'" :class="tab === 'location' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500'" class="py-2 px-4 font-semibold focus:outline-none">
+                        {{ __('Location') }}
+                    </button>
+                    <button @click="tab = 'other'" :class="tab === 'other' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500'" class="py-2 px-4 font-semibold focus:outline-none">
+                        {{ __('Other Info') }}
+                    </button>
+                </div>
+
+                <!-- Tab Content -->
+                <div x-show="tab === 'basic'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <table class="w-full">
+                        @foreach ([
+                            'Code' => $center->code ?? '',
+                            'Name' => $center->name ?? '',
+                            'Owner Name' => $center->owner_name ?? '',
+                            'Fathers Name' => $center->fathers_name ?? '',
+                            'Mothers Name' => $center->mothers_name ?? '',
+                            'Religion' => $center->religion->key ?? '',
+                            'Gender' => $center->gender->key ?? ''
+                        ] as $label => $value)
+                            <tr class="border-b">
+                                <td class="p-2 font-semibold">{{ __($label) }}</td>
+                                <td class="p-2">{{ $value }}</td>
+                            </tr>
+                        @endforeach
+                    </table>
+                </div>
+                <div x-show="tab === 'location'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <table class="w-full">
+                        @foreach ([
+                            'Nationality' => $center->nationality ?? '',
+                            'Division' => \App\Lib\Geo::divisions()[$center->division]['name'] ?? '',
+                            'District' => \App\Lib\Geo::districts()[$center->district]['name'] ?? '',
+                            'Upazilla' => \App\Lib\Geo::upazillas()[$center->upazilla]['name'] ?? '',
+                            'Post Office' => $center->post_office ?? '',
+                            'Postal Code' => $center->postal_code ?? '',
+                            'Facebook URL' => $center->facebook_url ?? ''
+                        ] as $label => $value)
+                            <tr class="border-b">
+                                <td class="p-2 font-semibold">{{ __($label) }}</td>
+                                <td class="p-2">{{ $value }}</td>
+                            </tr>
+                        @endforeach
+                    </table>
+                </div>
+                <div x-show="tab === 'other'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <table class="w-full">
+                        @foreach ([
+                            'No Of Computers' => $center->no_of_computers ?? '',
+                            'Institute Age' => $center->institute_age ?? '',
+                            'Address' => $center->address ?? '',
+                            'Mobile' => $center->mobile ?? '',
+                            'Email' => $center->email ?? '',
+                            'Status' => $center->status->key ?? ''
+                        ] as $label => $value)
+                            <tr class="border-b">
+                                <td class="p-2 font-semibold">{{ __($label) }}</td>
+                                <td class="p-2">{{ $value }}</td>
+                            </tr>
+                        @endforeach
+                    </table>
+                </div>
             </div>
-            <div class="w-full md:w-1/2 lg:w-1/3">
-                <table>
-                    <tr><td class="p-2 font-semibold">{{ __('Nationality') }}</td><td class="p-2">{{ $center->nationality??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Division') }}</td><td class="p-2">{{ \App\Lib\Geo::divisions()[$center->division]['name']??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('District') }}</td><td class="p-2">{{ \App\Lib\Geo::districts()[$center->district]['name']??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Upazilla') }}</td><td class="p-2">{{ \App\Lib\Geo::upazillas()[$center->upazilla]['name']??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Post Office') }}</td><td class="p-2">{{ $center->post_office??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Postal Code') }}</td><td class="p-2">{{ $center->postal_code??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Facebook URL') }}</td><td class="p-2">{{ $center->facebook_url??'' }}</td></tr>
-                </table>
-            </div>
-            <div class="w-full md:w-1/2 lg:w-1/3">
-                <table>
-                    <tr><td class="p-2 font-semibold">{{ __('No Of Computers') }}</td><td class="p-2">{{ $center->no_of_computers??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Institute Age') }}</td><td class="p-2">{{ $center->institute_age??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Address') }}</td><td class="p-2">{{ $center->address??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Mobile') }}</td><td class="p-2">{{ $center->mobile??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Email') }}</td><td class="p-2">{{ $center->email??'' }}</td></tr>
-                    <tr><td class="p-2 font-semibold">{{ __('Status') }}</td><td class="p-2">{{ $center->status->key??'' }}</td></tr>
-                </table>
-            </div>
-        </div>
         @else
-            <div class="text-center text-red-500 font-bold ">Center Not Found</div>
+            <div class="text-center text-red-500 font-bold mt-6">
+                {{ __('Center Not Found') }}
+            </div>
         @endif
     </div>
 </x-app-layout>
