@@ -177,17 +177,17 @@
                         <div class="topbar-update-notice-slider">
                             <div class="topbar-update-notice-main">
                                 <p class="topbar-update-notice-single">
-                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1698922484WCuAP" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
+                                    <a href="" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
                                 </p>
                             </div>
                             <div class="topbar-update-notice-main">
                                 <p class="topbar-update-notice-single">
-                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/169864663613ysi" target="_blank">তাপপ্রবাহের সতর্কবার্তার কারণে শ্রেণি কার্যক্রম ও চলমান পরীক্ষা বন্ধ সংক্..</a>
+                                    <a href="" target="_blank">তাপপ্রবাহের সতর্কবার্তার কারণে শ্রেণি কার্যক্রম ও চলমান পরীক্ষা বন্ধ সংক্..</a>
                                 </p>
                             </div>
                             <div class="topbar-update-notice-main">
                                 <p class="topbar-update-notice-single">
-                                    <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1697707887saQt3" target="_blank">প্রথম সাময়িক পরীক্ষা ২০২৩ এর প্রসঙ্গে বিজ্ঞপ্তি সকল শ্রেণীর</a>
+                                    <a href="" target="_blank">প্রথম সাময়িক পরীক্ষা ২০২৩ এর প্রসঙ্গে বিজ্ঞপ্তি সকল শ্রেণীর</a>
                                 </p>
                             </div>
                         </div>
@@ -195,13 +195,13 @@
                         <!-- Update Notice Scroll -->
                         <div class="topbar-update-notice-scroll">
                             <p class="topbar-update-notice-single">
-                                <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1698922484WCuAP" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
+                                <a href="" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
                             </p>
                             <p class="topbar-update-notice-single">
-                                <a href="https://bangla-eschool.getupdemo.xyz/notice/details/169864663613ysi" target="_blank">তাপপ্রবাহের সতর্কবার্তার কারণে শ্রেণি কার্যক্রম ও চলমান পরীক্ষা বন্ধ সংক্..</a>
+                                <a href="" target="_blank">তাপপ্রবাহের সতর্কবার্তার কারণে শ্রেণি কার্যক্রম ও চলমান পরীক্ষা বন্ধ সংক্..</a>
                             </p>
                             <p class="topbar-update-notice-single">
-                                <a href="https://bangla-eschool.getupdemo.xyz/notice/details/1697707887saQt3" target="_blank">প্রথম সাময়িক পরীক্ষা ২০২৩ এর প্রসঙ্গে বিজ্ঞপ্তি সকল শ্রেণীর</a>
+                                <a href="" target="_blank">প্রথম সাময়িক পরীক্ষা ২০২৩ এর প্রসঙ্গে বিজ্ঞপ্তি সকল শ্রেণীর</a>
                             </p>
                         </div>
                     </div>
