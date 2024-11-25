@@ -14,11 +14,14 @@
                 @endif
                 <div class="max-w-7xl mx-auto">
                     <div class="w-full flex flex-wrap py-8    px-2 md:px-4">
-                        <div class="shadow-lg w-full md:w-1/2 mx-auto rounded-md">
-                            <div class="font-bold text-sm md:text-lg text-purple-800 text-center">  {{ __('Student Result') }}</div>
-                            <x-labeled-input class="w-full  px-3 mx-auto p-1" name="roll" label="Roll Number / Passport Number" required/>
+                        <div class="shadow-lg w-full  bg-gray-50 md:w-1/2 mx-auto rounded-md">
+                            <div class="font-bold text-sm md:text-lg text-red-800 text-center">  {{ __('Student Result') }}</div>
+                             <div class="p-2">
+                                 <label for="" class="font-bold">Roll Number / Passport Number</label>
+                                 <input class="w-full  outline-none px-3 mx-auto p-1 border-[#6aa84f] border-2 rounded-full " name="roll" required/>
+                             </div>
                             <div class="w-full flex justify-center py-4 items-center">
-                                <button class="px-3 py-2 border bg-blue-700 rounded-md text-white">{{ __('Get Result') }}</button>
+                                <button class="px-3 py-2 border bg-[#6aa84f] rounded-md text-white">{{ __('Get Result') }}</button>
                             </div>
                         </div>
                     </div>

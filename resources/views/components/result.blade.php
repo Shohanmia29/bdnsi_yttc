@@ -3,7 +3,7 @@
 <div class="w-full flex flex-wrap">
     <div class="w-full flex flex-wrap">
         <div class="w-full   print:w-3/5  ">
-            <div class="w-full py-2 text-xl md:text-4xl text-center font-bold">Young Technical Training Center</div>
+            <div class="w-full py-2 text-xl md:text-4xl text-center font-bold">Bangladesh Youth Skills & Technical Training</div>
             <div class="w-full py-2 text-center font-semibold">Govt. License No: C-195491</div>
         </div>
     </div>
@@ -83,7 +83,7 @@
             </tr>
         </table>
         <div class="flex flex-wrap w-full justify-center py-4">
-            <a href="{{route('result')}}" class="px-3 py-1 bg-blue-700 text-white  ">Search Again</a>
+            <a href="{{route('result')}}" class="px-3 py-1 bg-[#6aa84f] rounded-full  text-white  ">Search Again</a>
         </div>
     </div>
 </div>
