@@ -1,5 +1,7 @@
-<x-frontend-layouts>
-    <link rel="stylesheet" href="{{mix('css/app.css')}}">
+
+
+<link rel="stylesheet" href="{{mix('css/app.css')}}">
+     <script src="{{mix('js/app.js')}}" ></script>
     <meta name="viewport" content="width=1024">
     <div class="w-full mx-auto max-w-4xl flex flex-wrap bg-white print:absolute print:inset-0 print:max-w-full">
         @if(!request('roll'))
@@ -33,4 +35,4 @@
     <x-slot name="script">
         <x-calculate-gpa-script />
     </x-slot>
-</x-frontend-layouts>
+
