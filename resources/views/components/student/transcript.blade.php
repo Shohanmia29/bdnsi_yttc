@@ -134,6 +134,32 @@
         .border{
             border-color: black!important;
         }
+
+
+        .button {
+            background: linear-gradient(to bottom, #4fa7f7, #007bfc); /* Gradient background */
+            color: white;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 25px; /* Fully rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease; /* Smooth hover effects */
+        }
+
+        .button:hover {
+            background: linear-gradient(to bottom, #007bfc, #005bb5); /* Darker gradient on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+        }
+
+        .button:active {
+            background: linear-gradient(to bottom, #005bb5, #004494); /* Darker gradient when active */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly pressed shadow */
+        }
     </style>
 </head>
 
@@ -148,10 +174,10 @@
     <div class="admit-card-header">
         <div class="d-flex align-items-center ">
             <div class="w-18 text-center ">
-                <img src="{{asset('images/new/logo.png')}}" style="width: 140px;margin-top: -4px;" alt="logo" />
+                <img src="{{asset('images/student/logo.png')}}" style="width: 140px;margin-top: -4px;" alt="logo" />
             </div>
-            <div class="cert-headings w-82">
-                <img src="{{asset('images/banner.png')}}" class="w-100" alt="">
+            <div class="cert-headings w-82" style="margin-top:10px">
+                <img src="{{asset('images/student/banner.png')}}" class="w-100" alt="">
                 <h5 class="normal-font" style="margin-left: 38px; margin-top: 10px"> Approved By Government of the People's Republic of Bangladesh.</h5>
             </div>
         </div>
@@ -213,7 +239,7 @@
         </div>
     </div>
     <div class="text-center">
-        <button class="info-btn">Academic Transcript</button>
+        <button class="button">Academic Transcript</button>
     </div>
     <div class="d-flex justify-content-between px-2">
         <div class="">
@@ -343,9 +369,9 @@
                     {{--                <p>Signature Of The Regional <br /> Director</p>--}}
                 </div>
                 <div class="sign-cont text-center"  >
-                    <img class="text-center" style="width: 200px" src="{{asset('images/new/ExamController.png')}}" alt="signature" />
+                    <img class="text-center" style="width: 200px" src="{{asset('images/student/examController.png')}}" alt="signature" />
                     <hr />
-                    <p>Exam Controller <br /> bystt</p>
+                    <p>Exam Controller <br /> Yttc</p>
                 </div>
             </div>
         </div>
