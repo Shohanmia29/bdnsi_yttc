@@ -18,3 +18,7 @@
 @import "mobile-menu.css";
 @import "footer.css";
 @import "reset.css";
+
+.bg-c{
+    background-color: #6aa84f;
+}
