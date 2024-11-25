@@ -27,7 +27,7 @@
         .admit-card-wrap {
             width: 1185px;
             height: 835px;
-            background-image: url({{asset('images/new/AdmitCard.jpg')}});
+            background-image: url({{asset('images/student/AdmitCard.jpg')}});
             margin: auto auto;
             background-position: center center;
             background-repeat: no-repeat;
@@ -78,7 +78,7 @@
             width: 100%;
             bottom: 50px;
             left: 0;
-            padding: 20px 88px;
+            padding: 40px 88px;
         }
 
         .footer-sign-wrap {
@@ -128,6 +128,30 @@
                 display: none;
             }
         }
+        .button {
+            background: linear-gradient(to bottom, #4fa7f7, #007bfc); /* Gradient background */
+            color: white;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 25px; /* Fully rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease; /* Smooth hover effects */
+        }
+
+        .button:hover {
+            background: linear-gradient(to bottom, #007bfc, #005bb5); /* Darker gradient on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+        }
+
+        .button:active {
+            background: linear-gradient(to bottom, #005bb5, #004494); /* Darker gradient when active */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly pressed shadow */
+        }
     </style>
 </head>
 
@@ -141,16 +165,16 @@
     <div class="admit-card-header">
         <div class="d-flex align-items-center ">
             <div class="w-18 text-center">
-                <img src="{{asset('images/new/logo.png')}}" style="width: 140px;margin-top: -29px;" alt="logo" />
+                <img src="{{asset('images/student/logo.png')}}" style="width: 140px;margin-top: -29px;" alt="logo" />
             </div>
             <div class="cert-headings w-82">
-                <img src="{{asset('images/banner.png')}}" class="w-100" alt="">
+                <img src="{{asset('images/student/banner.png')}}" class="w-100" alt="" style="margin-top:57px">
                 <h5 class="normal-font" style="margin-top: -2px; margin-left: 59px">Approved By Government of the People's Republic of Bangladesh.</h5>
             </div>
         </div>
     </div>
     <div class="text-center">
-        <button class="info-btn">Admit Card</button>
+        <button class="button">Admit Card</button>
     </div>
     <div class="d-flex justify-content-between px-2">
         <div class="">
@@ -230,7 +254,7 @@
                 </ol>
             </div>
             <div class="sign-cont w-25 text-center">
-                <img style="width: 200px;" src="{{asset('images/new/ExamController.png')}}" alt="signature" />
+                <img style="width: 200px;" src="{{asset('images/student/examController.png')}}" alt="signature" />
                 <hr />
                 <p>Controller Of Examinations <br /> Bangladesh Youth Skills & Technical Training</p>
             </div>
