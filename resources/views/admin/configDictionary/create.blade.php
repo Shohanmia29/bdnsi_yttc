@@ -37,6 +37,12 @@
                 <textarea   name="description" id="editor1"  class="w-full">{{\App\Models\ConfigDictionary::get('description')}}</textarea>
             </div>
         </div>
+        <div class="w-full">
+              <div class="font-bold">About Us</div>
+            <div>
+                <textarea   name="main_about_us" id="main_about_us"  class="w-full">{{\App\Models\ConfigDictionary::get('main_about_us')}}</textarea>
+            </div>
+        </div>
         <div class="w-full py-8 flex justify-center">
             <x-button>{{ __('Update') }}</x-button>
         </div>
@@ -44,5 +50,6 @@
 
     <script>
         CKEDITOR.replace( 'editor1' );
+        CKEDITOR.replace( 'main_about_us' );
     </script>
 </x-admin-app-layout>

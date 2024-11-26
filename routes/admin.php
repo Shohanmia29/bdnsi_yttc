@@ -113,6 +113,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('notice', \App\Http\Controllers\Admin\NoticeController::class);
         Route::resource('adminList', \App\Http\Controllers\Admin\AdminListController::class)->only(['edit','update']);
         Route::resource('configDictionary', \App\Http\Controllers\Admin\ConfigDictionaryController::class)->only(['create','store']);
+        Route::resource('team', \App\Http\Controllers\Admin\TeamController::class)->only(['index','create','store']);
 
         Route::get('contactUs',[DashboardController::class,'contactUs'])->name('contactUs');
 

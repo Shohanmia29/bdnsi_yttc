@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\ConfigDictionary;
 use Illuminate\Http\Request;
 
-class ConfigDictionaryController extends Controller
+class TeamController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,36 +17,27 @@ class ConfigDictionaryController extends Controller
         //
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
-       return view('admin.configDictionary.create');
+        //
     }
 
-
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'center_notice' => 'required',
-            'notice' => 'required',
-            'about_us' => 'required',
-            'terms_and_condition' => 'required',
-            'privacy_policy' => 'required',
-            'twitter_link'=>'required',
-            'facebook_link'=>'required',
-            'youtube_link'=>'required',
-            'linkedin_link'=>'required',
-            'description'=>'required',
-            'main_about_us'=>'required',
-        ]);
-        $validated['created_at'] = now()->toDateTimeString();
-        $config=ConfigDictionary::setMany($validated);
-        $newHistory = array_merge(
-            [$validated],
-            ConfigDictionary::get('setting-history', [])
-        );
-        ConfigDictionary::set('setting-history', $newHistory);
-        return response()->report($config,'Successfully Created');
+        //
     }
+
     /**
      * Display the specified resource.
      *

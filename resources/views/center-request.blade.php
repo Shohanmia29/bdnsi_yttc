@@ -71,6 +71,16 @@
 
     <x-slot name="script">
         <script>
+            $(document).ready(function () {
+                setTimeout(() => {
+                    $('select').niceSelect('destroy');
+                }, 1000);
+
+
+            });
+
+        </script>
+        <script>
             document.addEventListener('alpine:init', () => {
                 Alpine.data('centerRequestData', () => ({
                     division: @js(old('division')),

@@ -255,7 +255,18 @@
 {{ $beforeScript ?? '' }}
 
 <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
+
 <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof CKEDITOR !== 'undefined') {
+            // Find the instance of CKEditor and set the configuration
+            for (var instance in CKEDITOR.instances) {
+                if (CKEDITOR.instances.hasOwnProperty(instance)) {
+                    CKEDITOR.instances[instance].config.versionCheck = false;
+                }
+            }
+        }
+    });
     window.onload = () => {
         const url = location.href.indexOf('?') > 0
             ? location.href.substring(0, location.href.indexOf('?'))
@@ -274,6 +285,7 @@
                 })
             );
         });
+
     };
 </script>
 {{ $script ?? '' }}
