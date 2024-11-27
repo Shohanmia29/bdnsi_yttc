@@ -54,6 +54,14 @@
                 >
                     <span>{{ __('Dashboard') }}</span>
                 </a>
+                @can('team-read')
+                    <a
+                        href="{{ route('admin.team.index') }}"
+                        class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+                    >
+                        <span>{{ __('Team') }}</span>
+                    </a>
+                @endcan
                 @can('center-read')
                     <a
                         href="{{ route('admin.center.index') }}"

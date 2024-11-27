@@ -19,6 +19,7 @@ return [
             'session' => 'c,r,u,d',
             'student' => 'c,r,u,d',
             'result' => 'c,r,u,d',
+            'team' => 'c,r,u,d',
         ]
     ],
 
