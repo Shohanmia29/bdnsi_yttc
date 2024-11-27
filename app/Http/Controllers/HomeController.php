@@ -6,6 +6,7 @@ use App\Models\ConfigDictionary;
 use App\Models\ContactUs;
 use App\Models\Slider;
 use App\Models\Subject;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,8 +14,9 @@ class HomeController extends Controller
     public function index()
     {
         $sliders = Slider::all();
-        $courses = Subject::orderBy('name', 'asc')->limit(5)->get();;
-        return view('welcome',compact('courses','sliders'));
+        $courses = Subject::orderBy('name', 'asc')->limit(5)->get();
+        $teams=Team::get();
+        return view('welcome',compact('courses','sliders','teams'));
     }
     public function all_course(Request $request)
     {
