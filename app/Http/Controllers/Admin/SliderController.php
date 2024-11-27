@@ -12,7 +12,7 @@ class SliderController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            return datatables(Slider::select(['id','title','photo']))->toJson();
+            return datatables(Slider::select(['id','title','photo','type']))->addIndexColumn()->toJson();
         }
 
         return view('admin.slider.index');
@@ -29,6 +29,7 @@ class SliderController extends Controller
         $validated = $request->validate([
             'title' => 'nullable|string',
             'photo' => 'required|image',
+            'status' => 'required',
         ]);
 
           $validated['photo'] =Image::store('photo','upload/slider');
