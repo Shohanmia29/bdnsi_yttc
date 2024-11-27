@@ -1,7 +1,7 @@
 <x-frontend-layouts>
     <div class="container mt-4">
         <div class="row shadow-lg p-4">
-            <div class="col-12 text-center text-primary font-weight-bold h4 border-bottom mb-3">
+            <div class="col-12 text-center  font-weight-bold h4 border-bottom mb-3" style="color:#6aa84f">
                 Institute Apply Form
             </div>
 

@@ -1,37 +1,37 @@
 <x-frontend-layouts>
     <section id="login">
         <div class="container login border" style="padding:30px;">
-            <h1>Login Your Institute Account</h1>
+            <h4 class="text-center" style="color:#6aa84f">Login Your Institute Account</h4>
 
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                    <center><img src="{{asset('images/new/logo.png')}}" alt="" style="width: 100%; margin-top: 5px;"></center>
+                    <center><img src="{{asset('images/student/logo.png')}}" alt="" style="width: 100%; margin-top: 5px;"></center>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-12 col-12">
-                     <div class="font-weight-bold text-danger">
-                         <x-auth-session-status class="mb-4" :status="session('status')" />
-                         <x-auth-validation-errors class="mb-4" :errors="$errors" />
-                     </div>
-                    <form class="branch-login" method="POST" action="{{route('login')}}">
-                        @csrf
-                           <div class="form-group">
-                            <label for="exampleInputEmail1">Institute Email:</label>
-                            <input type="email" style="border:1px solid black" class="form-control shadow p-3 mb-5 bg-body rounded" name="email" required="" placeholder="Enter your Institute Email">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Password</label>
-                            <input type="password" style="border:1px solid black" class="form-control shadow p-3 mb-2 bg-body rounded" name="password" required="" placeholder="Enter Your Password">
-                            <div class="text-end">
-                                <a href="" class="text-end" contenteditable="false" style="cursor: pointer;">Forget Password?</a>
-                            </div>
-                        </div>
-                        <div class="checkBox mt-4">
-                            <input type="checkbox">
-                            <label for="exampleInputEmail1">Remember me</label>
-                            <button type="submit">Login</button>
-                            <h3><a style="color: black; text-decoration: none; cursor: pointer;" href="{{route('center-request.create')}}" contenteditable="false">Institute Apply</a></h3>
-                        </div>
-                    </form>
+                       <div class="shadow p-4">
+                           <div class="font-weight-bold text-danger">
+                               <x-auth-session-status class="mb-4" :status="session('status')" />
+                               <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                           </div>
+                           <form class="branch-login" method="POST" action="{{route('login')}}">
+                               @csrf
+                               <div class="form-group">
+                                   <x-frontend.input label="Institute Email" name="email" required/>
+                               </div>
+                               <div class="form-group">
+                                   <x-frontend.input type="password" label="Password" name="password" required/>
+                                   <div class="text-end">
+                                       <a href="" class="text-end" contenteditable="false" style="cursor: pointer;">Forget Password?</a>
+                                   </div>
+                               </div>
+                               <div class="checkBox  d-flex justify-content-center mt-4">
+                                   <button class="btn text-white" style="background:#6aa84f" type="submit">Login</button>
+                                   {{--      <div>
+                                             <a style="color: black; text-decoration: none; cursor: pointer;" href="{{route('center-request.create')}}" contenteditable="false">Institute Apply</a>
+                                         </div>--}}
+                               </div>
+                           </form>
+                       </div>
                 </div>
             </div>
         </div>
