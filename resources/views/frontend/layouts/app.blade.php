@@ -192,18 +192,7 @@
                             </div>
                         </div>
 
-                        <!-- Update Notice Scroll -->
-                        <div class="topbar-update-notice-scroll">
-                            <p class="topbar-update-notice-single">
-                                <a href="" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
-                            </p>
-                            <p class="topbar-update-notice-single">
-                                <a href="" target="_blank">তাপপ্রবাহের সতর্কবার্তার কারণে শ্রেণি কার্যক্রম ও চলমান পরীক্ষা বন্ধ সংক্..</a>
-                            </p>
-                            <p class="topbar-update-notice-single">
-                                <a href="" target="_blank">প্রথম সাময়িক পরীক্ষা ২০২৩ এর প্রসঙ্গে বিজ্ঞপ্তি সকল শ্রেণীর</a>
-                            </p>
-                        </div>
+
                     </div>
                 </div>
             </div>

@@ -13,6 +13,7 @@ class CenterRequestController extends Controller
 
     public function store(CenterStoreRequest $request)
     {
+
         return response()->report(
             $request->store(),
             'Center request submitted successfully'
