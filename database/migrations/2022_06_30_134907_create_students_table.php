@@ -30,6 +30,8 @@ class CreateStudentsTable extends Migration
             $table->string('permanent_address');
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
+            $table->string('course_duration')->nullable();
+            $table->string('qualification')->nullable();
             $table->string('guardian_name');
             $table->string('nid_or_birth')->nullable();
             $table->foreignId('session_id')->constrained();

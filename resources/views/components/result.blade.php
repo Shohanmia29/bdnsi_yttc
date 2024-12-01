@@ -1,9 +1,142 @@
 @props(['result'])
+<style>
+    .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mt-3 {
+        margin-top: 0.75rem;
+    }
+    .flex {
+        display: flex;
+    }
+    .table {
+        display: table;
+    }
+    .h-32 {
+        height: 8rem;
+    }
+    .w-1\/4 {
+        width: 25%;
+    }
+    .w-1\/5 {
+        width: 20%;
+    }
+    .w-1\/6 {
+        width: 16.666667%;
+    }
+    .w-3\/5 {
+        width: 60%;
+    }
+    .w-32 {
+        width: 8rem;
+    }
+    .w-full {
+        width: 100%;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .justify-center {
+        justify-content: center;
+    }
+    .rounded-full {
+        border-radius: 9999px;
+    }
+    .border {
+        border-width: 1px;
+    }
+    .border-l {
+        border-left-width: 1px;
+    }
+    .border-r {
+        border-right-width: 1px;
+    }
+    .bg-\[\#6aa84f\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(106 168 79 / var(--tw-bg-opacity, 1));
+    }
+    .bg-gray-100 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+    }
+    .p-2 {
+        padding: 0.5rem;
+    }
+    .px-3 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    .py-1 {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+    .py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .text-right {
+        text-align: right;
+    }
+    .text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+    .text-sm {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+    .text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    .font-bold {
+        font-weight: 700;
+    }
+    .font-semibold {
+        font-weight: 600;
+    }
+    .text-white {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+    }
+    @media (min-width: 768px) {
+        .md\:w-1\/4 {
+            width: 25%;
+        }
+        .md\:text-4xl {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+    }
+    @media (min-width: 1024px) {
+        .lg\:w-1\/5 {
+            width: 20%;
+        }
+    }
+    @media print {
+        .print\:w-1\/5 {
+            width: 20%;
+        }
+        .print\:w-3\/5 {
+            width: 60%;
+        }
+    }
+
+
+</style>
 
 <div class="w-full flex flex-wrap">
     <div class="w-full flex flex-wrap">
         <div class="w-full   print:w-3/5  ">
-            <div class="w-full py-2 text-xl md:text-4xl text-center font-bold">Bangladesh Youth Skills & Technical Training</div>
+            <div class="w-full h3 py-2 text-xl md:text-4xl text-center font-bold">Bangladesh Youth Skills & Technical Training</div>
             <div class="w-full py-2 text-center font-semibold">Govt. License No: C-195491</div>
         </div>
     </div>

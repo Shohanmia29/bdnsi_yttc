@@ -278,8 +278,8 @@
     <div class="footer-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
-              {{--      <div class="footer-widget quick-links">
+     {{--           <div class="col-lg-4 col-md-6 col-12">
+              --}}{{--      <div class="footer-widget quick-links">
                         <h4 class="footer-widget-title">অন্যান্য লিঙ্ক</h4>
                         <ul class="quick-links-inner">
                             <li>
@@ -290,64 +290,65 @@
                             </li>
 
                         </ul>
-                    </div>--}}
+                    </div>--}}{{--
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-        {{--            <div class="footer-widget quick-links">
+        --}}{{--            <div class="footer-widget quick-links">
                         <h4 class="footer-widget-title">সরাসরি লিঙ্ক</h4>
                         <ul class="quick-links-inner">
-                        --}}{{--    <li>
+                        --}}{{----}}{{--    <li>
                                 <a href=>যোগাযোগ</a>
-                            </li>--}}{{--
+                            </li>--}}{{----}}{{--
 
                         </ul>
-                    </div>--}}
-                </div>
-                <div class="col-lg-4 col-12">
-                    <div class="footer-widget contact">
-                        <h4 class="footer-widget-title">যোগাযোগ</h4>
-                        <!-- Single Widget -->
-                        <div class="footer-contact-widget">
-                            <div class="footer-contact-icon">
-                                <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/map.svg" alt="#" />
-                            </div>
-                            <div class="footer-contact-info">
-                                <p class="footer-contact-text">
-                                    {{config('site.setting.address')}}
-                                </p>
-                            </div>
+                    </div>--}}{{--
+                </div>--}}
+                <div class="col-12 py-4">
+                    <div class="row">
+                         <div class="col-12 col-md-6">
+                               <div>
+                                   <div class="footer-contact-widget">
+                                       <div class="footer-contact-icon">
+                                           <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/map.svg" alt="#" />
+                                       </div>
+                                       <div class="footer-contact-info">
+                                           <p class="footer-contact-text">
+                                               {{config('site.setting.address')}}
+                                           </p>
+                                       </div>
+                                   </div>
+                                   <div class="footer-contact-widget">
+                                       <div class="footer-contact-icon">
+                                           <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/phone.svg" alt="#" />
+                                       </div>
+                                       <div class="footer-contact-info">
+                                           <a href="tel:{config('site.setting.phone')}}">   {{config('site.setting.phone')}}</a>
+
+                                       </div>
+                                   </div>
+                               </div>
+                         </div>
+                        <div class="col-12 col-md-6">
+                              <div>
+                                  <div class="footer-contact-widget">
+                                      <div class="footer-contact-icon">
+                                          <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/envelope.svg" alt="#" />
+                                      </div>
+                                      <div class="footer-contact-info">
+                                          <a href="mailto:{{config('site.setting.email')}}">{{config('site.setting.email')}}</a>
+                                      </div>
+                                  </div>
+                                  <div class="footer-contact-widget">
+                                      <div class="footer-contact-icon">
+                                          <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/info.svg" alt="#" />
+                                      </div>
+                                      <div class="footer-contact-info">
+
+                                      </div>
+                                  </div>
+                              </div>
                         </div>
 
-                        <!-- Single Widget -->
-                        <div class="footer-contact-widget">
-                            <div class="footer-contact-icon">
-                                <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/phone.svg" alt="#" />
-                            </div>
-                            <div class="footer-contact-info">
-                                <a href="tel:{config('site.setting.phone')}}">   {{config('site.setting.phone')}}</a>
-
-                            </div>
-                        </div>
-
-                        <!-- Single Widget -->
-                        <div class="footer-contact-widget">
-                            <div class="footer-contact-icon">
-                                <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/envelope.svg" alt="#" />
-                            </div>
-                            <div class="footer-contact-info">
-                                <a href="mailto:{{config('site.setting.email')}}">{{config('site.setting.email')}}</a>
-                            </div>
-                        </div>
-
-                        <!-- Single Widget -->
-                        <div class="footer-contact-widget">
-                            <div class="footer-contact-icon">
-                                <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/info.svg" alt="#" />
-                            </div>
-                            <div class="footer-contact-info">
-
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
