@@ -1,24 +1,48 @@
 <x-frontend-layouts>
-
+    <style>
+        .search-bar {
+            border: 2px solid #6aa84f; /* Green border */
+            border-radius: 50px; /* Rounded edges */
+            padding: 5px 15px; /* Padding for better spacing */
+            display: flex;
+            align-items: center;
+            background-color: #fff; /* White background */
+        }
+        .search-bar input {
+            border: none; /* Remove input border */
+            outline: none; /* Remove input focus border */
+            box-shadow: none; /* Remove input shadow */
+            width: 100%; /* Full width */
+            margin-left: 10px; /* Space between icon and input */
+        }
+        .serc button {
+            background-color: #6aa84f; /* Green background */
+            color: #fff; /* White text */
+            border: none; /* Remove button border */
+            border-radius: 50px; /* Rounded edges */
+            padding: 5px 15px; /* Adjust button size */
+            transition: background-color 0.3s ease;
+        }
+        .serc button:hover {
+            background-color: #6aa84f; /* Darker green on hover */
+        }
+    </style>
 
     <section id="courses">
-        <div class="d-flex justify-content-end py-3">
+        <div class=" container p-3">
             <div>
                 <form action="{{ route('all_course') }}" method="get">
                     <div class="card-body">
-                        <div class="mb-3 input-group">
-                            <input
-                                name="course_name"
-                                value="{{ request('course_name') }}"
-                                class="form-control"
-                                placeholder="Enter Course name"
-                                aria-label="Course name"
-                            />
-                            <button class="btn btn-primary" type="submit">
-                                <i class="bi bi-search"></i>
-                                Search
-                            </button>
-                        </div>
+                  <div class="d-flex serc " style="gap: 3px">
+                      <div class="search-bar shadow w-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#28a745" viewBox="0 0 16 16">
+                              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85a1.007 1.007 0 0 0-.115-.098zm-5.442.656a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/>
+                          </svg>
+                          <input type="text" style="background: transparent" name="course_name" placeholder="Search" class="form-control">
+                      </div>
+                      <button class="btn">Search</button>
+                  </div>
+
                     </div>
                 </form>
             </div>
