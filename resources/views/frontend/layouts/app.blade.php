@@ -217,7 +217,7 @@
                     <div class="row align-items-center">
                         <div class=" col-md-2 col-8">
                             <div class="header-logo">
-                                <a href=""><img src="{{asset('frontend/logo.png')}}" alt="#" /></a>
+                                <a href=""><img src="{{asset('images/full-logo.png')}}" alt="#" /></a>
                             </div>
                         </div>
                         <div class="col-md-10 col-4">
