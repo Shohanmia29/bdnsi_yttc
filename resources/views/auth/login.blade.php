@@ -26,9 +26,10 @@
                                </div>
                                <div class="checkBox  d-flex justify-content-center mt-4">
                                    <button class="btn text-white" style="background:#6aa84f" type="submit">Login</button>
-                                   {{--      <div>
-                                             <a style="color: black; text-decoration: none; cursor: pointer;" href="{{route('center-request.create')}}" contenteditable="false">Institute Apply</a>
-                                         </div>--}}
+
+                               </div>
+                               <div>
+                                   <a class="text-danger" style="color: black; text-decoration: none; cursor: pointer;" href="{{route('center-request.create')}}" contenteditable="false">Institute Apply</a>
                                </div>
                            </form>
                        </div>

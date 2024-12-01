@@ -1,5 +1,6 @@
 <x-frontend-layouts>
     <div class="container mt-4"x-data="centerData">
+
         <div class="row shadow-lg p-4">
             <div class="col-12 text-center  font-weight-bold h4 border-bottom mb-3" style="color:#6aa84f">
                 Institute Apply Form
@@ -58,7 +59,7 @@
 
                     <!-- Gender -->
                     <div class="col-12 col-md-6 mb-3">
-                        <x-frontend.select class="form-control" name="gender" required>
+                        <x-frontend.select class="form-control " name="gender" required>
                             @foreach(\App\Enums\Gender::getInstances() as $gender)
                                 <option value="{{ $gender->value }}" @selected(old('gender') == $gender->value)>{{ $gender->key }}</option>
                             @endforeach
@@ -66,65 +67,43 @@
                     </div>
 
 
-                    <div class="col-12 col-md-6 mb-3 border rounded">
-                        <label for="division" class="font-weight-bold" style="color: #6aa84f">Division</label>
-                        <select class="form-control" name="division" x-model="division" required aria-label="Division select" @change="filterDistricts()">
-                            <option value="" disabled>Select Division</option>
-                            @foreach(\App\Lib\Geo::divisions() as $divisionId => $division)
-                                <option value="{{ $divisionId }}" @selected(old('division') == $divisionId)>{{ $division['name'] }}</option>
-                            @endforeach
-                        </select>
+                    <div class="col-12 col-md-6 mb-3 ">
+                            <div class="border rounded p-2">
+                                <label for="division" class="font-weight-bold label-name" style="color: #6aa84f">Division</label>
+                                <select   class="form-control input-name" name="division" x-model="division" required aria-label="Division select" @change="filterDistricts()">
+                                    <option value="" disabled>Select Division</option>
+                                    @foreach(\App\Lib\Geo::divisions() as $divisionId => $division)
+                                        <option value="{{ $divisionId }}" @selected(old('division') == $divisionId)>{{ $division['name'] }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                     </div>
 
-                    <div class="col-12 col-md-6 p-2 mb-3 border rounded">
-                        <label for="district" class="font-weight-bold" style="color: #6aa84f">District</label>
-                        <select class="form-control" name="district" x-model="district" required aria-label="District select" @change="filterUpazillas()">
-                            <option value="" disabled>Select District</option>
-                            <template x-for="district in districts" :key="district.id">
-                                <option :value="district.id" x-text="district.name"></option>
-                            </template>
-                        </select>
+                    <div class="col-12 col-md-6 p-2 mb-3 ">
+                             <div class="border rounded p-2">
+                                 <label for="district" class="font-weight-bold label-name " style="color: #6aa84f">District</label>
+                                 <select class="form-control input-name" name="district" x-model="district" required aria-label="District select" @change="filterUpazillas()">
+                                     <option value="" disabled>Select District</option>
+                                     <template x-for="district in districts" :key="district.id">
+                                         <option :value="district.id" x-text="district.name"></option>
+                                     </template>
+                                 </select>
+                             </div>
                     </div>
 
-                    <div class="col-12 col-md-6 mb-3 p-2 border rounded">
-                        <label for="upazilla" class="font-weight-bold" style="color: #6aa84f">Upazilla</label>
-                        <select class="form-control" name="upazilla" x-model="upazilla" required aria-label="Upazilla select">
-                            <option value="" disabled>Select Upazilla</option>
-                            <template x-for="upazilla in upazillas" :key="upazilla.id">
-                                <option :value="upazilla.id" x-text="upazilla.name"></option>
-                            </template>
-                        </select>
+                    <div class="col-12 col-md-6 mb-3 p-2 ">
+                           <div class="border rounded p-2">
+                               <label for="upazilla" class="font-weight-bold label-name" style="color: #6aa84f">Upazilla</label>
+                               <select class="form-control input-name" name="upazilla" x-model="upazilla" required aria-label="Upazilla select">
+                                   <option value="" disabled>Select Upazilla</option>
+                                   <template x-for="upazilla in upazillas" :key="upazilla.id">
+                                       <option :value="upazilla.id" x-text="upazilla.name"></option>
+                                   </template>
+                               </select>
+                           </div>
                     </div>
 
 
-                    {{--          <!-- Division -->
-                              <div class="col-12 col-md-6 mb-3">
-                                  <x-frontend.select class="form-control" name="division" x-model="division" x-ref="division" required>
-                                      @foreach(\App\Lib\Geo::divisions() as $divisionId => $division)
-                                          <option value="{{ $divisionId }}" @selected(old('division') == $divisionId)>{{ $division['name'] }}</option>
-                                      @endforeach
-                                  </x-frontend.select>
-                              </div>
-
-                              <!-- District -->
-                              <div class="col-12 col-md-6 mb-3">
-                                  <x-frontend.select class="form-control" x-model="district" x-ref="district" name="district" required>
-                                      <template x-for="district in districts">
-                                          <option x-bind:value="district.id" x-html="district.name"></option>
-                                      </template>
-                                  </x-frontend.select>
-                              </div>
-
-                              <!-- Upazilla -->
-                              <div class="col-12 col-md-6 mb-3">
-                                  <x-frontend.select class="form-control" x-model="upazilla" name="upazilla" required>
-                                      <template x-for="upazilla in upazillas">
-                                          <option x-bind:value="upazilla.id" x-html="upazilla.name"></option>
-                                      </template>
-                                  </x-frontend.select>
-                              </div>--}}
-
-                    <!-- Post Office -->
                     <div class="col-12 col-md-6 mb-3">
                         <x-frontend.input class="form-control" name="post_office" required />
                     </div>
