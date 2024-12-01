@@ -653,7 +653,7 @@
 
                 let speed = 20;
                 counters.forEach((counter, index) => {
-                    counter.style.color = 'rgb(192 132 252';
+
 
                     function UpdateCounter() {
                         const targetNumber = +counter.dataset.target;
