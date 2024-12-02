@@ -168,7 +168,7 @@
             <div class="w-18 text-center ">
                 <img src="{{asset('images/student/logo.png')}}" style="width: 140px;margin-top: -4px;" alt="logo" />
             </div>
-            <div class="cert-headings w-82" style="margin-top: 10px">
+            <div class="cert-headings w-82" style="margin-top: 20px">
                 <img src="{{asset('images/student/banner.png')}}" class="w-100" alt="">
                 <h5 class="normal-font" style="margin-left: 38px;"> Approved By Government of the People's Republic of Bangladesh.</h5>
             </div>
