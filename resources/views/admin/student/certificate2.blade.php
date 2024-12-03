@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{mix('css/app.css')}}">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+<script src="{{asset('js/pdf.js')}}"></script>
 {{--<meta name="viewport" content="width=1024">--}}
 <script src="{{mix('js/app.js')}}"></script>
         <style>
@@ -101,7 +101,7 @@
                 <button @click="hasBackground = !hasBackground" class="px-3 py-1 rounded-md bg-green-700 text-slate-100 ">Remove background</button>
             </div>
                 <div class="card-body   min-h-screen "  id="fullpage2">
-                    <div  :class="{ 'no-background': !hasBackground }"  class="back-img   " style="background-image:url({{ asset('images/student/certificate2.jpg')}}) ; position: relative;  font-weight: bold;">
+                    <div  :class="{ 'no-background': !hasBackground }"  class="back-img   " style="background-image:url({{ asset('images/student/certifcate.jpg')}}) ; position: relative;  font-weight: bold;">
 
                         <div class=" ">
                             <div class="absolute student-id" style="font-family: 'Segoe UI'; font-size:18px ">{{\App\Lib\Helper::certificateSerialNumber($student->id) ?? ''}}</div>

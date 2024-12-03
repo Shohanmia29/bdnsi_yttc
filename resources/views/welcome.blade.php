@@ -83,7 +83,7 @@
                                     alt="#"/>
                             </div>
                             <div class="about-content">
-                                <h3 class="about-cont-title">প্রতিষ্ঠান সম্পর্কে</h3>
+                                <h3 class="about-cont-title">About Us</h3>
                                 <span class="title-seperetor"></span>
                                 <p>
                                 {!! \App\Models\ConfigDictionary::get('main_about_us','
@@ -107,7 +107,7 @@
                         <!-- Single Sidebar Widget -->
                         <div class="home-sidebar-widget notice-board">
                             <h4 class="home-sidebar-widget-title">
-                                <img src="{{asset('frontend/svg/notice1.svg')}}" alt="#"/>নোটিশ বোর্ড
+                                <img src="{{asset('frontend/svg/notice1.svg')}}" alt="#"/>Notice Board
                             </h4>
                             @forelse(\App\Models\Notice::take(8)->get()  as $notice)
                                 <div class="sidebar-widget-list">
@@ -138,7 +138,7 @@
                     <div class="col-12">
                         <div class="section-head">
                             <h3 class="section-head-title">
-                                স্কুল পরিচালকদের বাণী<span class="title-line style-4"></span>
+                                Our Team<span class="title-line style-4"></span>
                             </h3>
                         </div>
                     </div>
@@ -417,7 +417,7 @@
                 <div class="col-12">
                     <div class="section-head">
                         <h3 class="section-head-title">
-                            ছবি এবং ভিডিও গ্যালারী<span class="title-line style-3"></span>
+                           Photo and video  gallery <span class="title-line style-3"></span>
                         </h3>
                     </div>
                 </div>
@@ -560,7 +560,7 @@
                 <div class="col-12">
                     <div class="section-head">
                         <h3 class="section-head-title">
-                            পরিসংখান<span class="title-line"></span>
+                            Counter<span class="title-line"></span>
                         </h3>
                     </div>
                 </div>
@@ -611,7 +611,7 @@
                 <div class="col-12">
                     <div class="section-head">
                         <h3 class="section-head-title">
-                            সেরা ছাত্র/ছাত্রী <span class="title-line style-2"></span>
+                           Success Students <span class="title-line style-2"></span>
                         </h3>
                     </div>
                 </div>
@@ -631,7 +631,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-bottom-btn">
-                        <a href="{{route('successStudent')}}" class="theme-btn secondary">আরো দেখুন<i
+                        <a href="{{route('successStudent')}}" class="theme-btn secondary">More<i
                                 class="fi-rr-arrow-right"></i></a>
                     </div>
                 </div>

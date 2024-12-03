@@ -149,7 +149,7 @@
                             <a href="{{route('contactUs')}}">Contact Us</a>
                         </li>
 
-                        <li><a href="">ছবির গ্যালারী</a></li>
+                        <li><a href="">Photo Gallery</a></li>
 
                     </ul>
                 </nav>
@@ -192,7 +192,7 @@
             <div class="col-lg-12 col-xl-6 col-12">
                 <div class="topbar-left">
                     <div class="topbar-update-notice">
-                        <span class="topbar-update-notice-title">আপডেট</span>
+                        <span class="topbar-update-notice-title">Notice</span>
 
                         <!-- Update Notice Slider -->
                         <div class="topbar-update-notice-slider">
