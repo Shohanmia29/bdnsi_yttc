@@ -68,7 +68,12 @@
         </div>
     </section>
     <!-- End Hero Area -->
-
+        <section class="container d-md-none py-2" >
+            <div class="d-flex justify-content-between">
+                <a href="{{route('all_course')}}" class="theme-btn">Course</a>
+                <a href="{{route('result')}}" class="theme-btn">Result</a>
+            </div>
+        </section>
     <!-- Page Main Area -->
     <section class="home-page-main-area">
         <div class="container">

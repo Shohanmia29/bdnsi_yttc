@@ -167,7 +167,7 @@
     </div>
 </div>
 
-@php
+{{--@php
     $notices = \App\Models\ConfigDictionary::get('notice');
 
     // স্ট্রিংকে স্পেস দিয়ে বিভক্ত করে ওয়ার্ডের অ্যারে তৈরি করা
@@ -179,7 +179,7 @@
     $noticeChunks = array_map(function ($chunk) {
         return implode(' ', $chunk);
     }, $chunkedWords);
-@endphp
+@endphp--}}
 
 
 
@@ -196,7 +196,7 @@
 
                         <!-- Update Notice Slider -->
                         <div class="topbar-update-notice-slider">
-                            @forelse($noticeChunks as $chunk)
+                 {{--           @forelse($noticeChunks as $chunk)
                                 <div class="topbar-update-notice-main">
                                     <p class="topbar-update-notice-single">
                                         <a href="" target="_blank">{{$chunk}}</a>
@@ -218,7 +218,7 @@
                                         <a href="" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
                                     </p>
                                 </div>
-                            @endforelse
+                            @endforelse--}}
                         </div>
                     </div>
                 </div>
