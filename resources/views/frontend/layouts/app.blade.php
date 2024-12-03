@@ -116,7 +116,11 @@
                 </div>
                 <!-- offcanvas-logo-end -->
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fi fi-ss-cross"></i>
+                    <svg style="height: 100%" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+
+
                 </button>
             </div>
             <div class="mobile-menu-modal-main-body">
@@ -163,6 +167,23 @@
     </div>
 </div>
 
+@php
+    $notices = \App\Models\ConfigDictionary::get('notice');
+
+    // স্ট্রিংকে স্পেস দিয়ে বিভক্ত করে ওয়ার্ডের অ্যারে তৈরি করা
+    $words = explode(' ', $notices);
+
+    // ২০টি ওয়ার্ড করে অ্যারে তৈরি করা
+    $chunkedWords = array_chunk($words, 20);
+
+    $noticeChunks = array_map(function ($chunk) {
+        return implode(' ', $chunk);
+    }, $chunkedWords);
+@endphp
+
+
+
+
 
 <!-- Topbar Area -->
 <div class="topbar-area">
@@ -175,31 +196,43 @@
 
                         <!-- Update Notice Slider -->
                         <div class="topbar-update-notice-slider">
-                            <div class="topbar-update-notice-main">
-                                <p class="topbar-update-notice-single">
-                                    <a href="" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
-                                </p>
-                            </div>
-                            <div class="topbar-update-notice-main">
-                                <p class="topbar-update-notice-single">
-                                    <a href="" target="_blank">তাপপ্রবাহের সতর্কবার্তার কারণে শ্রেণি কার্যক্রম ও চলমান পরীক্ষা বন্ধ সংক্..</a>
-                                </p>
-                            </div>
-                            <div class="topbar-update-notice-main">
-                                <p class="topbar-update-notice-single">
-                                    <a href="" target="_blank">প্রথম সাময়িক পরীক্ষা ২০২৩ এর প্রসঙ্গে বিজ্ঞপ্তি সকল শ্রেণীর</a>
-                                </p>
-                            </div>
+                            @forelse($noticeChunks as $chunk)
+                                <div class="topbar-update-notice-main">
+                                    <p class="topbar-update-notice-single">
+                                        <a href="" target="_blank">{{$chunk}}</a>
+                                    </p>
+                                </div>
+                            @empty
+                                <div class="topbar-update-notice-main">
+                                    <p class="topbar-update-notice-single">
+                                        <a href="" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
+                                    </p>
+                                </div>
+                                <div class="topbar-update-notice-main">
+                                    <p class="topbar-update-notice-single">
+                                        <a href="" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
+                                    </p>
+                                </div>
+                                <div class="topbar-update-notice-main">
+                                    <p class="topbar-update-notice-single">
+                                        <a href="" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
+                                    </p>
+                                </div>
+                            @endforelse
                         </div>
-
-
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-12">
                 <div class="topbar-right">
                     <div class="topbar-school-info">
-
+                        <div class="topbar-right">
+                            <div class="topbar-school-info">
+                                <ul class="topbar-school-info-list">
+                                    <li>RJSC NO: <span>C-178431</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
