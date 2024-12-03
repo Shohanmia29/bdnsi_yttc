@@ -510,7 +510,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-bottom-btn">
-                        <a href="" class="theme-btn secondary">আরো দেখুন<i class="fi-rr-arrow-right"></i></a>
+                        <a href="" class="theme-btn secondary">see more<i class="fi-rr-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -544,7 +544,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-bottom-btn">
-                        <a href="{{route('verifiedInstitute')}}" class="theme-btn secondary">আরো দেখুন<i
+                        <a href="{{route('verifiedInstitute')}}" class="theme-btn secondary">see more<i
                                 class="fi-rr-arrow-right"></i></a>
                     </div>
                 </div>
@@ -631,7 +631,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-bottom-btn">
-                        <a href="{{route('successStudent')}}" class="theme-btn secondary">More<i
+                        <a href="{{route('successStudent')}}" class="theme-btn secondary">see more<i
                                 class="fi-rr-arrow-right"></i></a>
                     </div>
                 </div>
