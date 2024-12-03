@@ -657,6 +657,24 @@ select {
   bottom: 0px;
   left: 0px;
 }
+.top-\[24\.4\%\] {
+  top: 24.4%;
+}
+.left-\[47\%\] {
+  left: 47%;
+}
+.top-\[26\.9\%\] {
+  top: 26.9%;
+}
+.top-\[29\.4\%\] {
+  top: 29.4%;
+}
+.top-\[31\.9\%\] {
+  top: 31.9%;
+}
+.top-\[34\.5\%\] {
+  top: 34.5%;
+}
 .top-0 {
   top: 0px;
 }
@@ -825,6 +843,9 @@ select {
 .h-10 {
   height: 2.5rem;
 }
+.h-screen {
+  height: 100vh;
+}
 .h-6 {
   height: 1.5rem;
 }
@@ -839,9 +860,6 @@ select {
 }
 .h-16 {
   height: 4rem;
-}
-.h-screen {
-  height: 100vh;
 }
 .h-64 {
   height: 16rem;
@@ -866,6 +884,9 @@ select {
 }
 .w-10 {
   width: 2.5rem;
+}
+.w-\[243px\] {
+  width: 243px;
 }
 .w-6 {
   width: 1.5rem;
@@ -1506,6 +1527,9 @@ select {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+.text-\[10px\] {
+  font-size: 10px;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -2482,6 +2506,30 @@ select {
   }
 }
 @media (min-width: 1024px) {
+
+  .lg\:top-\[29\.1\%\] {
+    top: 29.1%;
+  }
+
+  .lg\:left-\[49\%\] {
+    left: 49%;
+  }
+
+  .lg\:top-\[32\.1\%\] {
+    top: 32.1%;
+  }
+
+  .lg\:top-\[35\%\] {
+    top: 35%;
+  }
+
+  .lg\:top-\[38\%\] {
+    top: 38%;
+  }
+
+  .lg\:top-\[41\.1\%\] {
+    top: 41.1%;
+  }
 
   .lg\:ml-64 {
     margin-left: 16rem;
