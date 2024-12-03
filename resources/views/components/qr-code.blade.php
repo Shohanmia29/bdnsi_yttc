@@ -4,7 +4,7 @@
 
 <style>
     #qrcode_1 img{
-        width: 148px;
+        width: 100px;
         margin-left:45px;
     }
 </style>
@@ -13,8 +13,8 @@
 <script type="text/javascript">
     var qrcode = new QRCode(document.getElementById("qrcode_1"), {
         text: "{{route('result',['roll'=>$student->roll])}}",
-        width: 70,
-        height: 70,
+        width: 50,
+        height: 50,
         colorDark: "#000000",
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H,

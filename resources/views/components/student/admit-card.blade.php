@@ -229,8 +229,8 @@
                 </div>
             </div>
             <div class="w-25 text-center pe-2">
-                <div style="margin-top: -80px;">
-                    <img src="{{$student->picture??''}}" style="width: 150px; margin-bottom: 25px;" alt="portrait">
+                <div style="margin-top: -73px;">
+                    <img src="{{$student->picture??''}}" style="width: 155px; margin-bottom: 10px;" alt="portrait">
                 </div>
                 <div>
                     <div class="visible-print  text-center">
