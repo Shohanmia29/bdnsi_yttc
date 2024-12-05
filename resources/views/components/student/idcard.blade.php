@@ -6,7 +6,7 @@
             <div
                 class="relative h-[600px] w-full rounded-md p-2"
                 style="
-                    background-image: url('https://yttc.com.bd/images/student/idcardfront.jpg');
+                    background-image: url({{asset('images/student/idcard.jpg')}});
                     background-position: center center;
                     background-size: contain;
                     background-repeat: no-repeat;
@@ -55,7 +55,7 @@
             <div
                 class="relative h-[600px] w-full rounded-md p-2"
                 style="
-                    background-image: url('https://yttc.com.bd/images/student/idcardback.jpg');
+                    background-image: url({{asset('images/student/idcardback.jpg')}});
                     background-position: center center;
                     background-size: contain;
                     background-repeat: no-repeat;
