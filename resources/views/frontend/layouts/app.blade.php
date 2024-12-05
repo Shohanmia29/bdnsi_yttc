@@ -6,16 +6,16 @@
     <title>Young Technical Training Institute</title>
     <link rel="icon" href="https://bangla-eschool.getupdemo.xyz/storage/files/1/school-favicon.png" />
 
-    <link rel="stylesheet" href="{{asset('frontend/plugins/css/bootstrap.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/plugins/css/animate.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/plugins/css/owl.carousel.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/plugins/css/maginific-popup.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/plugins/css/fancybox.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/plugins/css/nice-select.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/plugins/css/icofont.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/plugins/css/uicons.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/ss/toastr.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/bootstrap.min.css')}}?v=2" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/animate.min.css')}}?v=2" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/owl.carousel.min.css')}}?v=2" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/maginific-popup.min.css')}}?v=2" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/fancybox.css')}}?v=2" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/nice-select.min.css')}}?v=2" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/icofont.css')}}?v=2" />
+    <link rel="stylesheet" href="{{asset('frontend/plugins/css/uicons.css')}}?v=2" />
+    <link rel="stylesheet" href="{{asset('frontend/ss/toastr.min.css')}}?v=2" />
+    <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}?v=2" />
     <link rel="icon" type="image/png" href="{{ asset('frontend/logo.png') }}?v=2">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/logo.png') }}?v=4">
     <link rel="apple-touch-icon" href="{{ asset('frontend/logo.png') }}?v=4" />
