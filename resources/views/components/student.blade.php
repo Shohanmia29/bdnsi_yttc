@@ -7,7 +7,7 @@
         <img src="{{$student->picture??''}}" alt="Student" />
     </div>
     <div class="students-card-info">
-        <h4><a href="{{route('successStudentDetails',$student->id)}}"> {{$student->name??''}}</a></h4>
+        <h4><a class="text-white" href="{{route('successStudentDetails',$student->id)}}"> {{$student->name??''}}</a></h4>
 
     </div>
 </div>
