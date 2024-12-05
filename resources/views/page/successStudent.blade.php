@@ -14,7 +14,7 @@
             <div class="container py-3">
                 <div class="row">
                     @forelse($students as $student)
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-4">
                             <x-student :student="$student" />
                         </div>
                     @empty
