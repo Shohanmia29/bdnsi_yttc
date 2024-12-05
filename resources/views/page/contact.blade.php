@@ -47,7 +47,7 @@
                                     <label for="message" class="form-label">Message</label>
                                     <textarea class="form-control" name="message" id="message" rows="4" placeholder="Type your message here"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                                <button type="submit" class="btn  w-100 text-white" style="background: #6aa84f">Send Message</button>
                             </form>
                         </div>
                     </div>
