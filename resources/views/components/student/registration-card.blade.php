@@ -126,7 +126,7 @@
 
 
         .button {
-            background: linear-gradient(to bottom, #4fa7f7, #007bfc); /* Gradient background */
+            background: linear-gradient(to bottom, #b8031e, #ac0b18); /* Gradient background */
             color: white;
             font-weight: 600;
             padding: 10px 20px;
@@ -141,12 +141,12 @@
         }
 
         .button:hover {
-            background: linear-gradient(to bottom, #007bfc, #005bb5); /* Darker gradient on hover */
+            background: linear-gradient(to bottom, #c10816, #af052c); /* Darker gradient on hover */
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
         }
 
         .button:active {
-            background: linear-gradient(to bottom, #005bb5, #004494); /* Darker gradient when active */
+            background: linear-gradient(to bottom, #ac0b18, #b30835); /* Darker gradient when active */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly pressed shadow */
         }
 

@@ -1,82 +1,50 @@
 <x-frontend-layouts>
 
-    <div class="mt-10">
-        <div class="max-w-6xl mx-auto px-3 py-4">
-            <div class="shadow-lg rounded-md border p-10">
-                <div class="w-full flex flex-wrap">
-                    <div class="w-full md:w-[30%] p-3">
-                        <img class="w-full" src="{{$data->director_image}}" alt="">
-                    </div>
-                    <div class="w-full md:w-[70%] p-3">
-                         <div class="w-full text-center py-2 text-lg md:text-2xl font-bold">
-                                {{$data->name??''}}
-                         </div>
-                        <ul class="w-full">
-                            <li class="w-full border p-2 rounded-md mt-2 flex  ">
-                                <div class="font-bold w-[40%]">
-                                    Email
-                                </div>
-                                <div class=" w-[10%]">
-                                    :
-                                </div>
-                                <div class=" w-[50%]">
-                                    {{$data->email??'N/A'}}
-                                </div>
-                            </li>
-                            <li class="w-full border p-2 rounded-md mt-2 flex  ">
-                                <div class="font-bold w-[40%]">
-                                    Director Name
-                                </div>
-                                <div class=" w-[10%]">
-                                    :
-                                </div>
-                                <div class=" w-[50%]">
-                                    {{$data->owner_name??'N/A'}}
-                                </div>
-                            </li>
-                            <li class="w-full border p-2 rounded-md mt-2 flex  ">
-                                <div class="font-bold w-[40%]">
-                                    Address
-                                </div>
-                                <div class=" w-[10%]">
-                                    :
-                                </div>
-                                <div class=" w-[50%]">
-                                    {{$data->address??'N/A'}}
-                                </div>
-                            </li>
-                            <li class="w-full border p-2 rounded-md mt-2 flex  ">
-                                <div class="font-bold w-[40%]">
-                                    District
-                                </div>
-                                <div class=" w-[10%]">
-                                    :
-                                </div>
-                                <div class=" w-[50%]">
-                                    {{ \App\Lib\Geo::districts()[$data->district]['name']??'' }}
-                                </div>
-                            </li>
-                            <li class="w-full border p-2 rounded-md mt-2 flex  ">
-                                <div class="font-bold w-[40%]">
-                                    Upazilla
-                                </div>
-                                <div class=" w-[10%]">
-                                    :
-                                </div>
-                                <div class=" w-[50%]">
-
-                                    {{ \App\Lib\Geo::upazillas()[$data->upazilla]['name']??'' }}
-                                </div>
-                            </li>
-
-
-
-                        </ul>
-
+    <div class="mt-5">
+        <div class="container">
+            <div class="card shadow-lg border-0 rounded-lg">
+                <div class="card-body p-5">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="{{$data->director_image}}" alt="" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="text-center mb-4">
+                                <h2 class="fw-bold">{{$data->name ?? ''}}</h2>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="fw-bold w-50">Email</span>
+                                    <span class="px-2">:</span>
+                                    <span>{{$data->email ?? 'N/A'}}</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="fw-bold w-50">Director Name</span>
+                                    <span class="px-2">:</span>
+                                    <span>{{$data->owner_name ?? 'N/A'}}</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="fw-bold w-50">Address</span>
+                                    <span class="px-2">:</span>
+                                    <span>{{$data->address ?? 'N/A'}}</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="fw-bold w-50">District</span>
+                                    <span class="px-2">:</span>
+                                    <span>{{ \App\Lib\Geo::districts()[$data->district]['name'] ?? '' }}</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="fw-bold w-50">Upazilla</span>
+                                    <span class="px-2">:</span>
+                                    <span>{{ \App\Lib\Geo::upazillas()[$data->upazilla]['name'] ?? '' }}</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
 </x-frontend-layouts>

@@ -73,7 +73,6 @@ class HomeController extends Controller
     }
     public function instituteDetails($id){
         $data=\App\Models\Center::findOrFail($id);
-
         return view('institute_details',compact('data'));
     }
 
