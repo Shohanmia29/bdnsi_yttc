@@ -230,7 +230,7 @@
                 </div>
                 <div>
                     <div class="visible-print  text-center">
-                        <x-qr-code :student="$student"/>
+                        <x-qr-code style="width:155px; height: 120px;margin-left: 42px" :student="$student"/>
                     </div>
                 </div>
 
