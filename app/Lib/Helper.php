@@ -41,8 +41,6 @@ class Helper
     }
 
 
-
-
     public static function numberToText($num)
     {
 
@@ -117,6 +115,33 @@ class Helper
         return '';
     }
 
+
+    public static function sendSms($phone,$message){
+        $api_key = config('site.bluck_api_key');
+        $secret_key = config('site.bluck_secret_key');
+        $sender_id = '';
+
+        $url = "https://smpp.revesms.com:7790/sendtext?apikey=" . urlencode($api_key) .
+            "&secretkey=" . urlencode($secret_key) .
+            "&callerID=" . urlencode($sender_id) .
+            "&toUser=" . urlencode($phone) .
+            "&messageContent=" . urlencode($message);
+
+        if (!empty($api_key)) {
+            $curl = curl_init($url);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            $result = curl_exec($curl);
+
+            if (curl_errno($curl)) {
+                $error_msg = curl_error($curl);
+
+            }
+
+            curl_close($curl);
+        }
+
+
+    }
 
 
 
