@@ -6,6 +6,7 @@ use App\Enums\CenterStatus;
 use App\Enums\Gender;
 use App\Enums\Religion;
 use App\Lib\Geo;
+use App\Lib\Helper;
 use App\Lib\Image;
 use App\Models\Center;
 use App\Models\User;
@@ -79,10 +80,10 @@ class CenterUpdateRequest extends FormRequest
             User::where('center_id',$center->id)->first()->update(['password'=> Hash::make($this->password)]);
         }
 
-
-
-
-
+       if ($center->status->is(CenterStatus::Pending())){
+           $message = 'Congratulations!! Dear, Your institute has been approved successfully by YTTC. Your institute Email: ' . $center->email . ' and password: ' . $validated['password'] . '. Please login to your institute portal here: ' . route('login') . '. Thanks for staying with YTTC.';
+             Helper::sendSms($center->mobile,$message);
+       }
         return $center->update($validated);
     }
 }
