@@ -6,6 +6,7 @@ use App\Enums\CenterStatus;
 use App\Enums\SessionStatus;
 use App\Enums\StudentStatus;
 use App\Http\Controllers\Controller;
+use App\Lib\Helper;
 use App\Models\Center;
 use App\Models\Result;
 use App\Models\Session;
@@ -81,12 +82,15 @@ class ResultController extends Controller
             $viva = $request->get('viva', []);
             DB::beginTransaction();
             foreach ($request->get('id') as $id) {
+                $student=Student::find($id);
                 Result::updateOrCreate(['student_id' => $id],
                     [
                         'written' => $written[$id],
                         'practical' => $practical[$id],
                         'viva' => $viva[$id],
                     ]);
+                $message = 'Congratulation!! ' . $student->name . ', You have successfully filled the application form for Fastly Youth Technical Training ' . $student->subject->name . ' course under Young Technical Training. Your Roll No: 475607 and Registration No: ' . $student->registration . '. Thanks for staying with Young Technical Training Institute.';
+                Helper::sendSms($student->phone,$message);
             }
             DB::commit();
             return response()->success('Result published successfully');

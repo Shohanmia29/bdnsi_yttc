@@ -79,6 +79,10 @@ class CenterUpdateRequest extends FormRequest
             User::where('center_id',$center->id)->first()->update(['password'=> Hash::make($this->password)]);
         }
 
+
+
+
+
         return $center->update($validated);
     }
 }
