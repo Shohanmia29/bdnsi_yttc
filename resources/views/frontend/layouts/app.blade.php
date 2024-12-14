@@ -264,21 +264,31 @@
                                             <li class="">
                                                 <a href="{{route('verifiedInstitute')}}">Verified Institute </a>
                                             </li>
-                                            <li class="">
-                                                <a href="{{route('successStudent')}}">Success Students </a>
-                                            </li>
+
                                             <li class="">
                                                 <a href="{{route('result')}}">Student Result</a>
                                             </li>
                                             <li class="">
                                                 <a href="{{route('center-request.create')}}">Institute Apply</a>
                                             </li>
+                                            <li>
+                                                <a href="#" contenteditable="false" style="cursor: pointer;">Contact Us<i class="fi-rr-angle-small-down"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li class="">
+                                                        <a href="{{route('successStudent')}}">Success Students </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="{{route('contactUs')}}">Contact Us</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
                                             <li class="">
                                                 <a href="{{route('login')}}">Institute Login</a>
                                             </li>
-                                            <li class="">
-                                                <a href="{{route('contactUs')}}">Contact Us</a>
-                                            </li>
+
+
+
+
 
                                         </ul>
                                     </nav>
