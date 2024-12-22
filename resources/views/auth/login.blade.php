@@ -5,7 +5,12 @@
 
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                    <center><img src="{{asset('images/student/logo.png')}}" alt="" style="width: 100%; margin-top: 5px;"></center>
+                    <center>
+                        <img class="p-2" src="{{asset('images/student/logo.png')}}"
+                             alt=""
+                             style="width: 80%; margin-top: 5px; border-radius: 50%; border: 5px solid #ef085c;">
+
+                    </center>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-12 col-12">
                        <div class="shadow p-4">
