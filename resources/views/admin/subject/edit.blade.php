@@ -20,6 +20,12 @@
             <x-labeled-input name="rate"  value="{{ old('rate', $subject->rate) }}" class="w-full p-1"/>
             <x-labeled-input name="education_qualification"  value="{{ old('education_qualification', $subject->education_qualification) }}" class="w-full p-1"/>
             <x-labeled-textarea name="course_details"  value="{{ old('course_details', $subject->course_details) }}" class="w-full p-1" ></x-labeled-textarea>
+
+            <x-labeled-select name="type" class="w-full p-1" required>
+                @foreach(\App\Enums\CourseType::getInstances() as $course_type)
+                    <option value="{{$course_type->value}}" {{$subject->type->value==$course_type->value ? 'selected':''}}>{{$course_type->description}}</option>
+                @endforeach
+            </x-labeled-select>
             <div class="w-full py-8 flex justify-center">
                 <x-button>{{ __('Update') }}</x-button>
             </div>

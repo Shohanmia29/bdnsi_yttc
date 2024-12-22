@@ -18,6 +18,7 @@
                 <th>{{ __('ID') }}</th>
                 <th>{{ __('Name') }}</th>
                 <th>{{ __('Image') }}</th>
+                <th>{{ __('Type') }}</th>
                 <th>{{ __('Action') }}</th>
             </tr>
             </thead>
@@ -34,6 +35,7 @@
                     dataSrc(response) {
                         response.data.map(function (item) {
                             item.photo= `<img class="w-10 h-10 mx-auto" src="${item.photo}" alt="${item.name}"/> `;
+                            item.type=@js(\App\Enums\CourseType::asSelectArray())[item.type]
                             item.action = actionIcons({
                                 @can('subject-update')
                                 'edit': '{{ route('admin.subject.edit', '@') }}'.replace('@', item.id),
@@ -49,9 +51,10 @@
                 },
                 order: [[0, 'desc']],
                 columns: [
-                    {data: 'id'},
+                    {data: 'DT_RowIndex',orderable:false,searchable:false},
                     {data: 'name'},
                     {data: 'photo'},
+                    {data: 'type'},
                     {data: 'action', orderable: false, searchable: false},
                 ]
             });

@@ -17,7 +17,7 @@ class SubjectController extends Controller
 
 
         if ($request->ajax()) {
-            return datatables(Subject::query())->toJson();
+            return datatables(Subject::query())->addIndexColumn()->toJson();
         }
 
         return view('admin.subject.index');
@@ -37,6 +37,7 @@ class SubjectController extends Controller
             'rate' => 'nullable',
             'education_qualification' => 'nullable',
             'course_details' => 'nullable',
+            'type' => 'required',
         ]);
           if (isset($validated['photo'])){
                $validated['photo']= Image::store('photo','upload/subject');
@@ -58,6 +59,7 @@ class SubjectController extends Controller
             'rate' => 'nullable',
             'education_qualification' => 'nullable',
             'course_details' => 'nullable',
+            'type' => 'required',
         ]);
         if (isset($validated['photo'])){
             Image::delete($subject->photo,'Photo');
