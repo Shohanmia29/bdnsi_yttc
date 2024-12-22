@@ -7,7 +7,11 @@
                 <div class="row g-0">
                     <!-- Image Section -->
                     <div class="col-md-4 p-4 text-center">
-                        <img src="{{$data->picture ?? ''}}" class="img-fluid rounded-circle border" alt="Student Image" style="max-width: 200px;">
+
+                        <img src="{{$data->picture ?? ''}}"
+                             class="rounded-circle"
+                             alt="Director Image"
+                             style="border: 4px solid #6aa84f; width: 200px; height: 200px;">
                     </div>
                     <style>
                           .pr-2{

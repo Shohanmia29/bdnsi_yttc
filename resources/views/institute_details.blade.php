@@ -10,7 +10,7 @@
                             <img src="{{$data->director_image ?? ''}}"
                                  class="rounded-circle"
                                  alt="Director Image"
-                                 style="border: 4px solid #6aa84f; width: 150px; height: 150px;">
+                                 style="border: 4px solid #6aa84f; width: 200px; height: 200px;">
 
 
                         </div>
