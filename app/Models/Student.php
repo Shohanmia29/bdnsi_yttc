@@ -114,11 +114,11 @@ class Student extends Authenticatable
 
     public static function getLastFreeRoll()
     {
-        return (static::max('roll') ?? 652187) + 1;
+        return (static::max('roll') ?? 608920) + 1;
     }
 
     public static function getLastFreeRegistration()
     {
-        return (static::max('registration') ?? 305197) + 1;
+        return (static::max('registration') ?? 80889620) + 1;
     }
 }

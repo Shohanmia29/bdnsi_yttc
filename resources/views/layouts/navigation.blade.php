@@ -1,5 +1,5 @@
 <sidebar
-    class="[background:#12436b] shadow-lg h-screen w-64 overflow-y-scroll scrollbar-hide print:hidden fixed z-10 transition duration-300"
+    class=" shadow-lg bg-white h-screen w-64 overflow-y-scroll scrollbar-hide print:hidden fixed z-10 transition duration-300"
     :class="{ '-translate-x-64' : !sidebarOpen }"
 >
     <div class="p-8 md:pl-4 flex md:flex-row-reverse justify-between items-center flex-wrap">
@@ -25,11 +25,11 @@
         />
         <div class="w-full md:w-auto pt-2 md:pt-0">
             <div
-                class="w-full text-slate-300 font-semibold text-right md:text-left">{{ auth()->user()->name }}</div>
-            <div class="w-full text-slate-300 text-sm text-right md:text-left">{{ auth()->user()->username }}</div>
+                class="w-full text-black font-semibold text-right md:text-left">{{ auth()->user()->name }}</div>
+            <div class="w-full text-black text-sm text-right md:text-left">{{ auth()->user()->username }}</div>
         </div>
     </div>
-    <div class="w-full flex flex-col text-slate-300 nav-links">
+    <div class="w-full flex flex-col text-black nav-links">
         <div class="w-full p-3 mt-4 font-semibold">General</div>
         <div class="w-full flex flex-col">
             <a

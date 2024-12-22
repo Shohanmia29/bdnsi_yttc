@@ -8,7 +8,7 @@
                     <center>
                         <img class="p-2" src="{{asset('images/student/logo.png')}}"
                              alt=""
-                             style="width: 80%; margin-top: 5px; border-radius: 50%; border: 5px solid #ef085c;">
+                             style="width: 80%; margin-top: 5px; border-radius: 50%; border: 5px solid #6aa84f;">
 
                     </center>
                 </div>

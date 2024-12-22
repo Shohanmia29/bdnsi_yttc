@@ -11,7 +11,7 @@
                         <img src="{{$data->picture ?? ''}}"
                              class="rounded-circle"
                              alt="Director Image"
-                             style="border: 4px solid #6aa84f; width: 200px; height: 200px;">
+                             style="border: 6px solid #6aa84f; width: 200px; height: 200px;">
                     </div>
                     <style>
                           .pr-2{

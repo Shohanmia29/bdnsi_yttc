@@ -68,7 +68,7 @@
             width: 100%;
             bottom: 80px;
             left: 0;
-            padding: 20px 130px;
+            padding: 31px 130px;
         }
 
         .footer-sign-wrap {
@@ -287,12 +287,12 @@
                 <p>Exam Controller <br /> yttc</p>
             </div>
         </div>
-        <hr />
+
         <div class="fw-semibold">
             <p></p>
             <ol>
                 <li>This Registration card is valid till 8 Consecutive years</li>
-                <li>For All Correspondence with the bystt, Institute code, registration number and session are to be mentioned
+                <li>For All Correspondence with the yttc, Institute code, registration number and session are to be mentioned
                 </li>
                 <li>Scan the QR code and follow the link in the QR code to verify the Registration card from   </li>
             </ol>

@@ -78,9 +78,9 @@ class StudentController extends Controller
         $validated = $request->validate([
             'center_id' => 'required|exists:centers,id',
             'name' => 'required|string',
-            'roll' => 'required|string|unique:students,roll',
+            'roll' => 'nullable|string|unique:students,roll',
             'passport' => 'required|string|unique:students,passport',
-            'registration' => 'required|string|unique:students,registration',
+            'registration' => 'nullable|string|unique:students,registration',
             'fathers_name' => 'required|string',
             'mothers_name' => 'required|string',
             'date_of_birth' => 'required',
@@ -90,8 +90,8 @@ class StudentController extends Controller
             'permanent_address' => 'required|string',
             'phone' => 'required',
             'email' => 'nullable|email',
-            'guardian_name' => 'required|string',
-            'nid_or_birth' => 'required|string',
+            'guardian_name' => 'nullable|string',
+            'nid_or_birth' => 'nullable|string',
             'session_id' => 'required|exists:sessions,id',
             'subject_id' => 'required|exists:subjects,id',
             'course_duration' => 'required',
@@ -99,7 +99,7 @@ class StudentController extends Controller
             'status' => 'required|numeric|enum_value:' . StudentStatus::class . ',false',
             'picture' => 'required|image',
         ]);
-
+        dd(Student::getLastFreeRoll());
         $validated['roll'] = $validated['roll'] ?? Student::getLastFreeRoll();
         $validated['registration'] = $validated['registration'] ?? Student::getLastFreeRegistration();
 
@@ -157,8 +157,8 @@ class StudentController extends Controller
                 'permanent_address' => 'required|string',
                 'phone' => 'nullable|min:11|max:11',
                 'email' => 'nullable|email',
-                'guardian_name' => 'required|string',
-                'nid_or_birth' => 'required|string',
+                'guardian_name' => 'nullable|string',
+                'nid_or_birth' => 'nullable|string',
                 'session_id' => 'required|exists:sessions,id',
                 'subject_id' => 'required|exists:subjects,id',
                 'course_duration' => 'required',
