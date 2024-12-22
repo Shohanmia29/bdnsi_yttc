@@ -7,7 +7,7 @@
     </div>
     <div class="school-commite-card-info">
         <h4 class="s-commite-member-name "><a class="text-white" href="{{route('institute.details',$institute->id)}}">{{\Illuminate\Support\Str::limit($institute->name,20,$end='...')}}</a></h4>
-        <p class="s-commite-member-designation text-white">({{$institute->owner_name??''}})</p>
+
 
 
     </div>
