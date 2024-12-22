@@ -44,12 +44,14 @@ class ResultController extends Controller
     public function create(Request $request)
     {
         $students = collect([]);
-        if ($request->has(['center', 'session', 'subject'])) {
+        if ($request->has(['center', 'session', 'subject','roll'])) {
             $students = Student::where([
                 'center_id' => $request->get('center'),
                 'session_id' => $request->get('session'),
                 'subject_id' => $request->get('subject'),
-            ])
+            ])->when($request->has('roll'), function ($query) use ($request) {
+                return $query->where('roll', $request->get('roll'));
+            })
             ->whereStatus(StudentStatus::Approved)
             ->with('result')->get();
         }

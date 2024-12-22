@@ -46,7 +46,7 @@
                 <th class="p-2 border">Written</th>
                 <th class="p-2 border">Practical</th>
                 <th class="p-2 border">Viva</th>
-                <th class="p-2 border">GPA</th>
+                <th class="p-2 border">C GPA</th>
                 <th class="p-2 border">View</th>
             </tr>
             </thead>

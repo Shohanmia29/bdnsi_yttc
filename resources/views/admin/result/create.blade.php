@@ -29,6 +29,8 @@
                         <option value="{{ $subject->id }}" @selected(old('subject', request('subject')) == $subject->id)>{{ $subject->name }}</option>
                     @endforeach
                 </x-select2>
+
+                <x-labeled-input label="Roll Number" name="roll" class="w-full p-1 md:w-1/2 lg:w-1/3" />
                 <div class="w-full pt-4 flex justify-end">
                     <x-button>{{ __('Search') }}</x-button>
                 </div>
@@ -48,7 +50,7 @@
                     <th class="p-2 border">Written</th>
                     <th class="p-2 border">Practical</th>
                     <th class="p-2 border">Viva</th>
-                    <th class="p-2 border">GPA</th>
+                    <th class="p-2 border">C GPA</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -57,9 +59,9 @@
                         <td class="p-1 border">{{ $student->name }}</td>
                         <td class="p-1 border">{{ $student->roll }}</td>
                         <td class="p-1 border">{{ $student->registration }}</td>
-                        <td class="p-1 border w-28"><input class="w-full border p-1" x-bind:class="parseInt(w)+parseInt(p)+parseInt(v) > 100 ? 'border-red-500' : ''" type="number" max="100" x-model="w" name="written[{{ $student->id }}]"/></td>
-                        <td class="p-1 border w-28"><input class="w-full border p-1" x-bind:class="parseInt(w)+parseInt(p)+parseInt(v) > 100 ? 'border-red-500' : ''" type="number" max="100" x-model="p" name="practical[{{ $student->id }}]"/></td>
-                        <td class="p-1 border w-28"><input class="w-full border p-1" x-bind:class="parseInt(w)+parseInt(p)+parseInt(v) > 100 ? 'border-red-500' : ''" type="number" max="100" x-model="v" name="viva[{{ $student->id }}]"/></td>
+                        <td class="p-1 border w-28"><input class="w-full border p-1" x-bind:class="parseInt(w)+parseInt(p)+parseInt(v) > 100 ? 'border-red-500' : ''" type="number"  x-model="w" name="written[{{ $student->id }}]"/></td>
+                        <td class="p-1 border w-28"><input class="w-full border p-1" x-bind:class="parseInt(w)+parseInt(p)+parseInt(v) > 100 ? 'border-red-500' : ''" type="number"  x-model="p" name="practical[{{ $student->id }}]"/></td>
+                        <td class="p-1 border w-28"><input class="w-full border p-1" x-bind:class="parseInt(w)+parseInt(p)+parseInt(v) > 100 ? 'border-red-500' : ''" type="number"  x-model="v" name="viva[{{ $student->id }}]"/></td>
                         <td class="p-1 border">
                             <input type="hidden" name="id[]" value="{{ $student->id }}">
                             <div class="text-center" x-html="calculateGPA(parseInt(w)+parseInt(p)+parseInt(v))"></div>
