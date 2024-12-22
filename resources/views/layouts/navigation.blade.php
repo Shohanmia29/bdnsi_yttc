@@ -40,10 +40,16 @@
             </a>
 
             <a
-                href="{{ route('student.index') }}"
+                href="{{ route('student.create') }}"
                 class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
             >
                 <span>{{ __('Add Registration') }}</span>
+            </a>
+            <a
+                href="{{ route('student.index') }}"
+                class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+            >
+                <span>{{ __('Student List') }}</span>
             </a>
             <a
                 href="{{ route('centerStudentResult') }}"
