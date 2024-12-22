@@ -7,7 +7,11 @@
                     <div class="row g-0">
                         <!-- Image Section -->
                         <div class="col-md-4 p-4 text-center">
-                            <img src="{{$data->director_image ?? ''}}" class="img-fluid rounded-circle border" alt="Director Image" style="max-width: 200px;">
+                            <img src="{{$data->director_image ?? ''}}"
+                                 class="rounded-circle border border-success"
+                                 style="border-width: 2px; width: 150px; height: 150px;"
+                                 alt="Director Image">
+
                         </div>
                         <!-- Details Section -->
                         <div class="col-md-8 p-5">
