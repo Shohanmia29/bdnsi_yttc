@@ -7,22 +7,13 @@
 
     <!-- Cards Section -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
-        @foreach($cards as $card)
+        @foreach($cards as $key=>$value)
             <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg shadow-lg">
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold">{{ $card->title ?? '' }}</h3>
-                    <p class="text-4xl font-bold mt-4">{{ $card->value ?? '' }}</p>
+                    <h3 class="text-xl font-semibold">{{ $key ?? '' }}</h3>
+                    <p class="text-4xl font-bold mt-4">{{$value ?? '' }}</p>
                 </div>
-                @if(isset($card->kv) && is_array($card->kv))
-                    <div class="border-t border-indigo-400">
-                        @foreach($card->kv as $k => $v)
-                            <div class="flex justify-between p-4">
-                                <span>{{ $k ?? '' }}</span>
-                                <span class="font-bold">{{ $v ?? '' }}</span>
-                            </div>
-                        @endforeach
-                    </div>
-                @endif
+
             </div>
         @endforeach
     </div>

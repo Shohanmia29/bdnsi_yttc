@@ -23,7 +23,7 @@
 </head>
 <body class="font-sans antialiased print:!mb-0">
 <div
-    class="flex min-h-screen bg-yellow-50"
+    class="flex min-h-screen bg-green-200"
     x-data="{ sidebarOpen : window.innerWidth >= 1024, width: window.innerWidth }"
     @resize.window="width = window.innerWidth"
     x-init="window.addEventListener('resize', () => { sidebarOpen = window.innerWidth >= 1024 })"
@@ -110,7 +110,7 @@
                 </div>
                 <div class="p-2 flex items-center">
                       <div class="w-[10%]">
-                          <button class="px-2 border py-1 rounded-l-md bg-gradient-success text-white">Notice</button>
+                          <button class="w-full px-2 border py-1 rounded-l-md bg-gradient-success text-white">Notice</button>
                       </div>
                     <div class="w-[90%]">
                         <marquee behavior="" direction="">{{\App\Models\ConfigDictionary::get('center_notice','Coming Soon')}}</marquee>
