@@ -100,8 +100,8 @@
             dots: true,
             margin: 24,
             navText: [
-                "<i class='fi-rr-angle-small-left'></i>",
-                "<i class='fi-rr-angle-small-right'></i>",
+                "<i class='fa fa-arrow-left'></i>",
+                "<i class='fa fa-arrow-right'></i>",
             ],
         });
 
@@ -120,8 +120,8 @@
             dots: false,
             margin: 12,
             navText: [
-                "<i class='fi-rr-angle-small-left'></i>",
-                "<i class='fi-rr-angle-small-right'></i>",
+                "<i class='fa fa-arrow-left'></i>",
+                "<i class='fa fa-arrow-right'></i>",
             ],
             responsive: {
                 300: {
@@ -157,8 +157,8 @@
             dots: false,
             margin: 24,
             navText: [
-                "<i class='fi-rr-angle-small-left'></i>",
-                "<i class='fi-rr-angle-small-right'></i>",
+                "<i class='fa fa-arrow-left'></i>",
+                "<i class='fa fa-arrow-right'></i>",
             ],
             responsive: {
                 300: {
@@ -191,8 +191,8 @@
             dots: false,
             margin: 24,
             navText: [
-                "<i class='fi-rr-angle-small-left'></i>",
-                "<i class='fi-rr-angle-small-right'></i>",
+                "<i class='fa fa-arrow-left'></i>",
+                "<i class='fa fa-arrow-right'></i>",
             ],
             responsive: {
                 300: {
@@ -222,8 +222,8 @@
             dots: false,
             margin: 24,
             navText: [
-                "<i class='fi-rr-angle-small-left'></i>",
-                "<i class='fi-rr-angle-small-right'></i>",
+                "<i class='fa fa-arrow-left'></i>",
+                "<i class='fa fa-arrow-right'></i>",
             ],
             responsive: {
                 300: {
