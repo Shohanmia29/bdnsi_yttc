@@ -8,9 +8,10 @@
                         <!-- Image Section -->
                         <div class="col-md-4 p-4 text-center">
                             <img src="{{$data->director_image ?? ''}}"
-                                 class="rounded-circle border  "
-                                 style="border-width: 4px; width: 150px; height: 150px;border-color: #6aa84f"
-                                 alt="Director Image">
+                                 class="rounded-circle"
+                                 alt="Director Image"
+                                 style="border: 4px solid #6aa84f; width: 150px; height: 150px;">
+
 
                         </div>
                         <!-- Details Section -->
