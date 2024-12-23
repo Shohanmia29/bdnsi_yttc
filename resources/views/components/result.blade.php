@@ -1,222 +1,244 @@
 @props(['result'])
 <style>
-    .mx-auto {
-        margin-left: auto;
-        margin-right: auto;
+    .m-auto {
+        margin: auto !important;
     }
-    .mt-3 {
-        margin-top: 0.75rem;
+    .mt-4 {
+        margin-top: 1rem !important;
     }
     .flex {
-        display: flex;
+        display: flex !important;
     }
-    .table {
-        display: table;
+    .h-52 {
+        height: 13rem !important;
     }
-    .h-32 {
-        height: 8rem;
+    .h-\[90\%\] {
+        height: 90% !important;
     }
-    .w-1\/4 {
-        width: 25%;
+    .w-10\/12 {
+        width: 83.333333% !important;
     }
-    .w-1\/5 {
-        width: 20%;
+    .w-4\/12 {
+        width: 33.333333% !important;
     }
-    .w-1\/6 {
-        width: 16.666667%;
+    .w-52 {
+        width: 13rem !important;
     }
-    .w-3\/5 {
-        width: 60%;
+    .w-64 {
+        width: 16rem !important;
     }
-    .w-32 {
-        width: 8rem;
+    .w-8\/12 {
+        width: 66.666667% !important;
     }
     .w-full {
-        width: 100%;
+        width: 100% !important;
+    }
+    .flex-row {
+        flex-direction: row !important;
+    }
+    .flex-col {
+        flex-direction: column !important;
     }
     .flex-wrap {
-        flex-wrap: wrap;
+        flex-wrap: wrap !important;
     }
-    .justify-center {
-        justify-content: center;
+    .items-center {
+        align-items: center !important;
     }
-    .rounded-full {
-        border-radius: 9999px;
+    .justify-between {
+        justify-content: space-between !important;
     }
-    .border {
-        border-width: 1px;
+    .gap-3 {
+        gap: 0.75rem !important;
     }
-    .border-l {
-        border-left-width: 1px;
+    .overflow-auto {
+        overflow: auto !important;
     }
-    .border-r {
-        border-right-width: 1px;
+    .whitespace-nowrap {
+        white-space: nowrap !important;
     }
-    .bg-\[\#6aa84f\] {
+    .rounded-3xl {
+        border-radius: 1.5rem !important;
+    }
+    .rounded-md {
+        border-radius: 0.375rem !important;
+    }
+    .rounded-bl-md {
+        border-bottom-left-radius: 0.375rem !important;
+    }
+    .rounded-br-md {
+        border-bottom-right-radius: 0.375rem !important;
+    }
+    .rounded-tl-md {
+        border-top-left-radius: 0.375rem !important;
+    }
+    .rounded-tr-md {
+        border-top-right-radius: 0.375rem !important;
+    }
+    .border-2 {
+        border-width: 2px !important;
+    }
+    .border-b-2 {
+        border-bottom-width: 2px !important;
+    }
+    .border-r-2 {
+        border-right-width: 2px !important;
+    }
+    .border-green-500 {
+        --tw-border-opacity: 1;
+        border-color: rgb(34 197 94 / var(--tw-border-opacity, 1)) !important;
+    }
+    .border-green-600 {
+        --tw-border-opacity: 1;
+        border-color: rgb(22 163 74 / var(--tw-border-opacity, 1)) !important;
+    }
+    .bg-green-100 {
         --tw-bg-opacity: 1;
-        background-color: rgb(106 168 79 / var(--tw-bg-opacity, 1));
+        background-color: rgb(220 252 231 / var(--tw-bg-opacity, 1)) !important;
     }
-    .bg-gray-100 {
+    .bg-green-200 {
         --tw-bg-opacity: 1;
-        background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+        background-color: rgb(187 247 208 / var(--tw-bg-opacity, 1)) !important;
     }
-    .p-2 {
-        padding: 0.5rem;
+    .object-center {
+        object-position: center !important;
     }
-    .px-3 {
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
+    .px-2 {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+    .px-4 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
     }
     .py-1 {
-        padding-top: 0.25rem;
-        padding-bottom: 0.25rem;
+        padding-top: 0.25rem !important;
+        padding-bottom: 0.25rem !important;
     }
     .py-2 {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
     }
     .py-4 {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
     }
     .text-center {
-        text-align: center;
+        text-align: center !important;
     }
-    .text-right {
-        text-align: right;
+    .text-3xl {
+        font-size: 1.875rem !important;
+        line-height: 2.25rem !important;
     }
-    .text-4xl {
-        font-size: 2.25rem;
-        line-height: 2.5rem;
+    .text-lg {
+        font-size: 1.125rem !important;
+        line-height: 1.75rem !important;
     }
     .text-sm {
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-    }
-    .text-xl {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
+        font-size: 0.875rem !important;
+        line-height: 1.25rem !important;
     }
     .font-bold {
-        font-weight: 700;
+        font-weight: 700 !important;
+    }
+    .font-medium {
+        font-weight: 500 !important;
     }
     .font-semibold {
-        font-weight: 600;
+        font-weight: 600 !important;
     }
-    .text-white {
+    .text-green-600 {
         --tw-text-opacity: 1;
-        color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+        color: rgb(22 163 74 / var(--tw-text-opacity, 1)) !important;
+    }
+    .text-orange-400 {
+        --tw-text-opacity: 1;
+        color: rgb(251 146 60 / var(--tw-text-opacity, 1)) !important;
     }
     @media (min-width: 768px) {
-        .md\:w-1\/4 {
-            width: 25%;
+        .md\:w-2\/12 {
+            width: 16.666667% !important;
         }
-        .md\:text-4xl {
-            font-size: 2.25rem;
-            line-height: 2.5rem;
+        .md\:w-4\/12 {
+            width: 33.333333% !important;
         }
-    }
-    @media (min-width: 1024px) {
-        .lg\:w-1\/5 {
-            width: 20%;
+        .md\:border-b-2 {
+            border-bottom-width: 2px !important;
         }
-    }
-    @media print {
-        .print\:w-1\/5 {
-            width: 20%;
-        }
-        .print\:w-3\/5 {
-            width: 60%;
+        .md\:border-r-2 {
+            border-right-width: 2px !important;
         }
     }
-
-
 </style>
-
-<div class="w-full flex flex-wrap">
-    <div class="w-full flex flex-wrap">
-        <div class="w-full   print:w-3/5  ">
-            <div class="w-full h3 py-2 text-xl md:text-4xl text-center font-bold">Young Technical Training Institute</div>
-            <div class="w-full py-2 text-center font-semibold">RJSC NO: C-178431</div>
+<div class="w-full">
+    <div class="w-10/12 m-auto flex items-center flex-col justify-between h-[90%] gap-3">
+        <div class="text-center py-4">
+            <h1 class="font-semibold text-3xl text-green-600">Youth Technical Training</h1>
+            <p class="text-lg font-medium text-orange-400">Govt. License No: C-100001</p>
         </div>
-    </div>
-    <div class="w-full flex flex-wrap justify-center mt-3">
-        <div class="w-full md:w-1/4 lg:w-1/5 print:w-1/5 py-4">
-            <img class="mx-auto w-32 h-32" src="{{ $result->student->picture }}" alt="{{ $result->student->name }}"/>
+        <img class="h-52 w-52 object-center border-2 rounded-3xl border-green-500" src="{{ $result->student->picture }}" alt="{{ $result->student->name }}" />
+        <div class="w-full border-2 border-green-600 rounded-md">
+            <!-- Header Row -->
+            <div class="w-full flex flex-wrap rounded-tl-md rounded-tr-md bg-green-100">
+                <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">Name</div>
+                <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->name ?? ''}}</div>
+                <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">Roll</div>
+                <div class="w-8/12 md:w-4/12 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->roll ?? ''}}</div>
+            </div>
+            <!-- Row 2 -->
+            <div class="w-full flex flex-wrap">
+                <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">Father's Name</div>
+                <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->fathers_name ?? ''}}</div>
+                <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4 text-center">Registration Number</div>
+                <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->registration ?? ''}}</div>
+            </div>
+            <!-- Row 3 -->
+            <div class="w-full bg-green-200 flex flex-wrap">
+                <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">Mother's Name</div>
+                <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->mothers_name ?? ''}}</div>
+                <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">Session</div>
+                <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->session->name ?? ''}}</div>
+            </div>
+            <!-- Row 4 -->
+            <div class="w-full flex flex-wrap">
+                <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">Course Name</div>
+                <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->subject->name ?? ''}}</div>
+                <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">Course Duration</div>
+                <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->subject->duration ?? ''}}</div>
+            </div>
+            <!-- Row 5 -->
+            <div class="w-full bg-green-200 flex flex-wrap">
+                <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">Institute Name</div>
+                <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->center->name ?? ''}}</div>
+                <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">Institute Code</div>
+                <div class="w-8/12 md:w-4/12 md:border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->center->code ?? ''}}</div>
+            </div>
+            <!-- Footer Row -->
+            <div class="w-full flex flex-wrap rounded-bl-md rounded-br-md">
+                <div class="w-4/12 md:w-2/12 border-r-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">Date of Birth</div>
+                <div class="w-8/12 md:w-4/12 md:border-r-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->date_of_birth ?? ''}}</div>
+                <div class="w-4/12 md:w-2/12 border-r-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">Passport No</div>
+                <div class="w-8/12 md:w-4/12 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->passport ?? ''}}</div>
+            </div>
         </div>
-    </div>
-    <div class="w-full p-2">
-        <table class="w-full">
-            <tr class="bg-gray-100">
-                <td class="border p-2">{{ __('Name') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->name }}</td>
-                <td class="border p-2">{{ __('Roll') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->roll }}</td>
-                <td class="border"></td>
-            </tr>
-            <tr >
-                <td class="border p-2">{{ __('Father\'s Name') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->fathers_name }}</td>
-                <td class="border p-2">{{ __('Registration') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->registration }}</td>
-                <td class="border"></td>
-            </tr>
+        <div class="w-full border-2 border-green-600 flex flex-col rounded-md mt-4">
+            <div class="bg-green-200 py-1 rounded-tl-md rounded-tr-md text-center">
+                <span class="font-bold">Marks</span>
+            </div>
+            <div class="w-full overflow-auto whitespace-nowrap">
+                <div class="w-full flex flex-row">
+                    @foreach(['Practical', 'Written', 'Viva', 'Total', 'Full Mark', 'Grade', 'GPA'] as $header)
+                        <div class="w-64 px-2 border-r-2 text-center flex flex-col py-2">
+                            <span class="font-medium">{{$header}}</span>
+                            <span>1</span>
+                        </div>
+                    @endforeach
 
-            <tr class="bg-gray-100">
-                <td class="border p-2">{{ __('Mother\'s Name') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->mothers_name }}</td>
-                <td class="border p-2">{{ __('Session') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->session->name }}</td>
-                <td class="border"></td>
-            </tr>
-
-            <tr class=" ">
-                <td class="border p-2">{{ __('Course Name') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->subject->name }}</td>
-                <td class="border p-2">{{ __('Course Duration') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->course_duration??'' }}</td>
-                <td class="border"></td>
-            </tr>
-            <tr class=" bg-gray-100">
-                <td class="border p-2">{{ __('Institute Name') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->center->name }}</td>
-                <td class="border p-2">{{ __('Institute Code') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->center->code }}</td>
-                <td class="border"></td>
-            </tr>
-            <tr class="  ">
-                <td class="border p-2">{{ __('') }}</td>
-                <td class="border-l p-2"  ></td>
-                <td class="border-r p-2 text-right  " colspan="2">{{ __('Passport No') }}</td>
-                <td class="border p-2" colspan="2">{{ $result->student->passport??'' }}</td>
-                <td class="border"></td>
-            </tr>
-
-            <tr class="bg-gray-100">
-                <td class="border p-2 text-center font-semibold" colspan="6">{{ __('Mark') }}</td>
-                <td class="border"></td>
-            </tr>
-            <tr class="w-full">
-                <td class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Written') }}</td>
-                <td class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Practical') }}</td>
-                <td class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Viva') }}</td>
-                <td class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Total') }}</td>
-                <td class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Full Mark') }}</td>
-                <td class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Grade') }}</td>
-                <td class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('GPA') }}</td>
-            </tr>
-            <tr class="w-full bg-gray-100" x-data="{ w: {{ optional($result)->written ?? 0 }}, p: {{ optional($result)->practical ?? 0 }}, v: {{ optional($result)->viva ?? 0 }} }">
-                <td class="border p-2 text-center w-1/6" x-html="w"></td>
-                <td class="border p-2 text-center w-1/6" x-html="p"></td>
-                <td class="border p-2 text-center w-1/6" x-html="v"></td>
-                <td class="border p-2 text-center w-1/6" x-html="parseInt(w)+parseInt(p)+parseInt(v)"></td>
-                <td class="border p-2 text-center w-1/6">100</td>
-                <td class="border p-2 text-center w-1/6" x-html="calculateGPA(parseInt(w)+parseInt(p)+parseInt(v))"></td>
-                <td class="border p-2 text-center w-1/6" x-html="calculateCGPA(parseInt(w)+parseInt(p)+parseInt(v))">.</td>
-            </tr>
-        </table>
-        <div class="flex flex-wrap w-full justify-center py-4">
-            <a href="{{route('result')}}" class="px-3 py-1 bg-[#6aa84f] rounded-full  text-white  ">Search Again</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+
+
