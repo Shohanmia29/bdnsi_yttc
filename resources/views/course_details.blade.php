@@ -12,27 +12,27 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-c text-white rounded d-flex align-items-center mb-2">
                             <div class="fw-bold w-50">Course Name</div>
-                            <div class="text-center w-10">:</div>
+                            <div class="text-center w-10 pr-2">:</div>
                             <div class="w-50">{{$data->name ?? 'N/A'}}</div>
                         </li>
                         <li class="list-group-item bg-c text-white rounded d-flex align-items-center mb-2">
                             <div class="fw-bold w-50">Course Duration</div>
-                            <div class="text-center w-10">:</div>
+                            <div class="text-center w-10 pr-2">:</div>
                             <div class="w-50">{{$data->duration ?? 'N/A'}}</div>
                         </li>
                         <li class="list-group-item bg-c text-white rounded d-flex align-items-center mb-2">
                             <div class="fw-bold w-50">Course Rate</div>
-                            <div class="text-center w-10">:</div>
+                            <div class="text-center w-10 pr-2">:</div>
                             <div class="w-50">{{$data->rate ?? 'N/A'}}</div>
                         </li>
                         <li class="list-group-item bg-c text-white rounded d-flex align-items-center mb-2">
                             <div class="fw-bold w-50">Educational Qualification</div>
-                            <div class="text-center w-10">:</div>
+                            <div class="text-center w-10 pr-2">:</div>
                             <div class="w-50">{{$data->education_qualification ?? 'N/A'}}</div>
                         </li>
                         <li class="list-group-item bg-c text-white rounded d-flex align-items-center">
                             <div class="fw-bold w-50">Course Details</div>
-                            <div class="text-center w-10">:</div>
+                            <div class="text-center w-10 pr-2">:</div>
                             <div class="w-50">{{$data->course_details ?? 'N/A'}}</div>
                         </li>
                     </ul>
