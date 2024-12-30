@@ -46,6 +46,7 @@
                     <option value="{{ $subject->id }}" @selected(old('subject_id', $student->subject_id) == $subject->id)>{{ $subject->name }}</option>
                 @endforeach
             </x-select2>
+
             <x-labeled-select name="course_duration"    type="text" label="Course Duration"  class="w-full p-1 md:w-1/2 lg:w-1/3">
                 <option {{$student->course_duration=='2 Month' ? 'selected': ''}}  value="2 Month">2 Month</option>
                 <option {{$student->course_duration=='3 Month' ? 'selected': ''}}  value="3 Month">3 Month</option>

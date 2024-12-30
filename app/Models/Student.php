@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Casts\ImageField;
 use App\Enums\BloodGroup;
+use App\Enums\CourseType;
 use App\Enums\Gender;
 use App\Enums\Religion;
 use App\Enums\StudentStatus;
@@ -74,6 +75,7 @@ class Student extends Authenticatable
         'due_amount',
         'paid_amount',
         'qualification',
+        'course_type',
     ];
 
     protected $casts = [
@@ -82,6 +84,7 @@ class Student extends Authenticatable
         'gender' => Gender::class,
         'religion' => Religion::class,
         'status' => StudentStatus::class,
+        'course_type' => CourseType::class,
         'picture' => ImageField::class.':images/students',
     ];
 

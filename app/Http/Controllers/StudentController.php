@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Enums\CenterStatus;
+use App\Enums\CourseType;
 use App\Enums\Religion;
 use App\Enums\SessionStatus;
 use App\Enums\StudentStatus;
@@ -14,6 +15,7 @@ use App\Enums\BloodGroup;
 use App\Models\Subject;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class StudentController extends Controller
 {
@@ -68,6 +70,7 @@ class StudentController extends Controller
             'subject_id' =>'required|exists:subjects,id',
             'course_duration' =>'required',
             'picture' =>'required|image',
+            'course_type' => ['required',Rule::in(CourseType::asArray())],
         ]);
 
         $validated['center_id'] = Auth::user()->center_id;
@@ -156,6 +159,7 @@ class StudentController extends Controller
             'course_duration' =>'required',
             'qualification' =>'required',
             'picture' =>'nullable|image',
+
         ]);
 
         return response()->report($student->update($validated), 'Student Updated successfully');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Enums\CenterStatus;
+use App\Enums\CourseType;
 use App\Enums\Religion;
 use App\Enums\SessionStatus;
 use App\Enums\StudentStatus;
@@ -98,8 +99,9 @@ class StudentController extends Controller
             'qualification' => 'required',
             'status' => 'required|numeric|enum_value:' . StudentStatus::class . ',false',
             'picture' => 'required|image',
+            'course_type' => ['required',Rule::in(CourseType::asArray())],
         ]);
-        dd(Student::getLastFreeRoll());
+
         $validated['roll'] = $validated['roll'] ?? Student::getLastFreeRoll();
         $validated['registration'] = $validated['registration'] ?? Student::getLastFreeRegistration();
 
@@ -169,6 +171,7 @@ class StudentController extends Controller
                 'result_publised' => 'nullable',
                 'due_amount' => 'required|numeric',
                 'paid_amount' => 'required|numeric',
+                'course_type' => ['required',Rule::in(CourseType::asArray())],
             ]);
 
             $validated['roll'] = $validated['roll']

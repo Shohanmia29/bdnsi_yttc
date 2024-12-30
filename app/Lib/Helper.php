@@ -2,10 +2,13 @@
 
 namespace App\Lib;
 
+use App\Models\Student;
+
 class Helper
 {
 
-    public static function serialNumber($id) {
+    public static function serialNumber($id)
+    {
 
 
         $number = '19524';
@@ -22,7 +25,9 @@ class Helper
 
         return $paddedId;
     }
-    public static function certificateSerialNumber($id) {
+
+    public static function certificateSerialNumber($id)
+    {
 
 
         $number = '11224';
@@ -44,7 +49,7 @@ class Helper
     public static function numberToText($num)
     {
 
-        $number =   $num ;
+        $number = $num;
 
         $words = [
             0 => 'zero',
@@ -116,7 +121,8 @@ class Helper
     }
 
 
-    public static function sendSms($phone,$message){
+    public static function sendSms($phone, $message)
+    {
         $api_key = config('site.bluck_api_key');
         $secret_key = config('site.bluck_secret_key');
         $sender_id = '';
@@ -143,6 +149,25 @@ class Helper
 
     }
 
+
+    public function written(Student $student)
+    {
+
+
+
+
+
+    }
+
+    public function viva(Student $student)
+    {
+
+    }
+
+    public function practical(Student $student)
+    {
+
+    }
 
 
 }
