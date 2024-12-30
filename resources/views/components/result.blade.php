@@ -226,15 +226,27 @@
                 <span class="font-bold">Marks</span>
             </div>
             <div class="w-full overflow-auto whitespace-nowrap">
-                <div class="w-full flex flex-row">
-                    @foreach(['Practical', 'Written', 'Viva', 'Total', 'Full Mark', 'Grade', 'GPA'] as $header)
-                        <div class="w-64 px-2 border-r-2 text-center flex flex-col py-2">
-                            <span class="font-medium">{{$header}}</span>
-                            <span>1</span>
-                        </div>
-                    @endforeach
+                <table class="min-w-full table-auto border-collapse border border-gray-200">
+                    <thead>
+                    <tr>
+                        @foreach(['Practical', 'Written', 'Viva','Grade', 'GPA'] as $header)
+                            <th class="border border-gray-300 px-4 py-2 text-center font-medium">{{ $header }}</th>
+                        @endforeach
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="border border-gray-300 text-center px-4 py-2">{{$result->student->practical($result->practical)}}</td>
+                        <td class="border border-gray-300 text-center px-4 py-2">{{$result->student->written($result->written)}}</td>
+                        <td class="border border-gray-300 text-center px-4 py-2">{{$result->student->viva($result->viva)}}</td>
+                        <td class="border border-gray-300 text-center px-4 py-2">1</td>
+                        <td class="border border-gray-300 text-center px-4 py-2">1</td>
 
-                </div>
+                    </tr>
+                    <!-- Repeat rows as needed -->
+                    </tbody>
+                </table>
+
             </div>
         </div>
     </div>

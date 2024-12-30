@@ -339,20 +339,16 @@
                     <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Written') }}</th>
                     <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Practical') }}</th>
                     <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Viva') }}</th>
-                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Total') }}</th>
-                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Full Mark') }}</th>
                     <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Grade') }}</th>
                     <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('GPA') }}</th>
                 </tr>
                 </thead>
                 <tr class="w-full bg-gray-100"  >
-                    <td class="border p-2 bold text-center w-1/6" x-html="w"></td>
-                    <td class="border p-2 bold text-center w-1/6" x-html="p"></td>
-                    <td class="border p-2 bold text-center w-1/6" x-html="v"></td>
-                    <td class="border p-2 bold text-center w-1/6" x-html="parseInt(w)+parseInt(p)+parseInt(v)"></td>
-                    <td class="border p-2 bold text-center w-1/6">100</td>
-                    <td class="border p-2 bold text-center w-1/6" x-html="calculateGPA(parseInt(w)+parseInt(p)+parseInt(v))"></td>
-                    <td class="border p-2 bold text-center w-1/6" x-html="calculateCGPA(parseInt(w)+parseInt(p)+parseInt(v))">.</td>
+                    <td class="border p-2 bold text-center w-1/6" >{{$student->written($student->result->written)}}</td>
+                    <td class="border p-2 bold text-center w-1/6" >{{$student->practical($student->result->practical)}}</td>
+                    <td class="border p-2 bold text-center w-1/6" >{{$student->viva($student->result->viva)}}</td>
+                    <td class="border p-2 bold text-center w-1/6" ></td>
+                    <td class="border p-2 bold text-center w-1/6" >.</td>
                 </tr>
 
             </table>

@@ -2,6 +2,7 @@
 
 namespace App\Lib;
 
+use App\Enums\CourseType;
 use App\Models\Student;
 
 class Helper
@@ -150,24 +151,7 @@ class Helper
     }
 
 
-    public function written(Student $student)
-    {
 
-
-
-
-
-    }
-
-    public function viva(Student $student)
-    {
-
-    }
-
-    public function practical(Student $student)
-    {
-
-    }
 
 
 }
