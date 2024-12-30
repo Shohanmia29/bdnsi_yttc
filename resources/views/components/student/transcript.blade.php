@@ -347,8 +347,8 @@
                     <td class="border p-2 bold text-center w-1/6" >{{$student->written($student->result->written)}}</td>
                     <td class="border p-2 bold text-center w-1/6" >{{$student->practical($student->result->practical)}}</td>
                     <td class="border p-2 bold text-center w-1/6" >{{$student->viva($student->result->viva)}}</td>
-                    <td class="border p-2 bold text-center w-1/6" ></td>
-                    <td class="border p-2 bold text-center w-1/6" >.</td>
+                    <td class="border p-2 bold text-center w-1/6" >N/A</td>
+                    <td class="border p-2 bold text-center w-1/6" >N/A</td>
                 </tr>
 
             </table>

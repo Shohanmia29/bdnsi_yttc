@@ -127,6 +127,7 @@ class Student extends Authenticatable
 
     public function written( $marks)
     {
+        $marks=$this->result->written;
         if ($this->course_type->is(CourseType::Regular())) {
             switch (true) {
                 case $marks >= 80:
@@ -204,6 +205,7 @@ class Student extends Authenticatable
 
     public function viva( $marks)
     {
+        $marks=$this->result->viva;
         if ($this->course_type->is(CourseType::Regular())) {
             switch (true) {
                 case $marks >= 80:
@@ -279,6 +281,7 @@ class Student extends Authenticatable
 
     public function practical($marks)
     {
+        $marks=$this->result->practical;
         if ($this->course_type->is(CourseType::Regular())) {
             switch (true) {
                 case $marks >= 80:
@@ -352,6 +355,16 @@ class Student extends Authenticatable
 
     }
     }
+
+
+    public function grade()
+    {
+
+    }
+
+
+
+
 
 
 }

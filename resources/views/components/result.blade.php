@@ -239,8 +239,8 @@
                         <td class="border border-gray-300 text-center px-4 py-2">{{$result->student->practical($result->practical)}}</td>
                         <td class="border border-gray-300 text-center px-4 py-2">{{$result->student->written($result->written)}}</td>
                         <td class="border border-gray-300 text-center px-4 py-2">{{$result->student->viva($result->viva)}}</td>
-                        <td class="border border-gray-300 text-center px-4 py-2">1</td>
-                        <td class="border border-gray-300 text-center px-4 py-2">1</td>
+                        <td class="border border-gray-300 text-center px-4 py-2">N/A</td>
+                        <td class="border border-gray-300 text-center px-4 py-2">N/A</td>
 
                     </tr>
                     <!-- Repeat rows as needed -->
