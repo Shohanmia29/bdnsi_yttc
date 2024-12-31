@@ -357,9 +357,84 @@ class Student extends Authenticatable
     }
 
 
-    public function grade()
+    public function gpa( $marks)
     {
+        $marks=$this->result->written;
+        if ($this->course_type->is(CourseType::Regular())) {
+            switch (true) {
+                case $marks >= 80:
+                    return 5 +'.00';
+                case $marks >= 70:
+                    return 4 +'.70';
+                case $marks >= 60:
+                    return 4+'.50';
+                case $marks >= 50:
+                    return 3+'.50';
+                case $marks >= 40:
+                    return 3+'.00';
+                case $marks >= 0:
+                    return 'F';
+                default:
+                    return '';
+            }
+        }
 
+        elseif  ($this->course_type->is(CourseType::Short_Course())) {
+            switch (true) {
+                case $marks >= 800:
+                    return '4.00';
+                case $marks >= 750:
+                    return '3.75';
+                case $marks >= 700:
+                    return '3.50';
+                case $marks >= 650:
+                    return '3.25';
+                case $marks >= 600:
+                    return '3.00';
+                case $marks >= 550:
+                    return '2.75';
+                case $marks >= 500:
+                    return '2.50';
+                case $marks >= 450:
+                    return '2.25';
+                case $marks >= 400:
+                    return '2.00';
+                case $marks >= 0:
+                    return '0.00';
+                default:
+                    return 'N/A';
+            }
+        }
+
+        elseif  ($this->course_type->is(CourseType::Diploma())) {
+            switch (true) {
+                case $marks >= 3040:
+                    return '4.00';
+                case $marks >= 2850:
+                    return '3.75';
+                case $marks >= 2660:
+                    return '3.50';
+                case $marks >= 2470:
+                    return '3.25';
+                case $marks >= 2280:
+                    return '3.00';
+                case $marks >= 2090:
+                    return '2.75';
+                case $marks >= 1900:
+                    return '2.50';
+                case $marks >= 1710:
+                    return '2.25';
+                case $marks >= 1520:
+                    return '2.00';
+                case $marks >= 0:
+                    return '0.00';
+                default:
+                    return 'N/A';
+            }
+        }
+        else{
+            return 'N/A';
+        }
     }
 
 

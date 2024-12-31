@@ -229,18 +229,18 @@
                 <table class="min-w-full table-auto border-collapse border border-gray-200">
                     <thead>
                     <tr>
-                        @foreach(['Practical', 'Written', 'Viva','Grade', 'GPA'] as $header)
+                        @foreach(['Written','Practical', 'Viva','Grade', 'GPA'] as $header)
                             <th class="border border-gray-300 px-4 py-2 text-center font-medium">{{ $header }}</th>
                         @endforeach
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="border border-gray-300 text-center px-4 py-2">{{$result->student->practical($result->practical)}}</td>
                         <td class="border border-gray-300 text-center px-4 py-2">{{$result->student->written($result->written)}}</td>
+                        <td class="border border-gray-300 text-center px-4 py-2">{{$result->student->practical($result->practical)}}</td>
                         <td class="border border-gray-300 text-center px-4 py-2">{{$result->student->viva($result->viva)}}</td>
-                        <td class="border border-gray-300 text-center px-4 py-2">N/A</td>
-                        <td class="border border-gray-300 text-center px-4 py-2">N/A</td>
+                        <td class="border border-gray-300 text-center px-4 py-2">{{$result->student->practical($result->practical)}}</td>
+                        <td class="border border-gray-300 text-center px-4 py-2">{{$result->student->gpa($result->written)}}</td>
 
                     </tr>
                     <!-- Repeat rows as needed -->
