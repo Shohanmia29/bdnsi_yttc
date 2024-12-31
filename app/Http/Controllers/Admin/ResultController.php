@@ -61,38 +61,34 @@ class ResultController extends Controller
 
     public function store(Request $request)
     {
+
         $request->validate([
-            'id' => 'array',
-            'written.*' => 'required|numeric',
-            'practical.*' => 'required|numeric',
-            'viva.*' => 'required|numeric',
+            'id' => 'required',
+            'written' => 'required|numeric',
+            'practical' => 'required|numeric',
+            'viva' => 'required|numeric',
         ]);
 
-
-        if (count($request->get('id', [])) !== Student::whereIn('id', $request->get('id', []))->count()) {
-            return response()->error('Student missing');
-        }
-
         try {
-            $written = $request->get('written', []);
-            $practical = $request->get('practical', []);
-            $viva = $request->get('viva', []);
+            $written = $request->get('written');
+            $practical = $request->get('practical');
+            $viva = $request->get('viva');
             DB::beginTransaction();
-            foreach ($request->get('id') as $id) {
-                $student=Student::find($id);
-                Result::updateOrCreate(['student_id' => $id],
+                $student=Student::find($request->id);
+                Result::updateOrCreate(['student_id' => $request->id],
                     [
-                        'written' => $written[$id],
-                        'practical' => $practical[$id],
-                        'viva' => $viva[$id],
+                        'written' => $written,
+                        'practical' => $practical,
+                        'viva' => $viva,
                     ]);
                 $message = 'Congratulation!! ' . $student->name . ', You have successfully filled the application form for Fastly Youth Technical Training ' . $student->subject->name . ' course under Young Technical Training. Your Roll No: 475607 and Registration No: ' . $student->registration . '. Thanks for staying with Young Technical Training Institute.';
                 Helper::sendSms($student->phone,$message);
-            }
+
             DB::commit();
             return response()->success('Result published successfully');
         } catch (\Exception $ex) {
             DB::rollBack();
+            return $ex;
         }
         return response()->error('Something went wrong');
     }
