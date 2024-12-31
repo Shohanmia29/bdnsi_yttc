@@ -130,7 +130,7 @@
             </div>
         </main>
         <footer class="w-full p-2 text-center print:hidden">
-            Copyright 2022
+             yttc.com.bd
         </footer>
     </div>
 </div>

@@ -30,8 +30,17 @@ class StudentController extends Controller
                     return '<a   style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank"   target="_blank" href="' . route("student.show",[$admit->id,'admit'=>'admit']) . '">' .'Admit' . '</a>';
                 })
                 ->addColumn('registration', function ($registration) {
-                    return '<a  style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank"     target="_blank" href="' . route("student.show",[$registration->id,'registration'=>'registration']) . '">' . 'Registration'. '</a>';
+                    $registrationLink = '<a style="background-color:green; padding:3px; border-radius:4px; color:white" target="_blank" href="'
+                        . route("student.show", [$registration->id, 'registration' => 'registration'])
+                        . '">Registration</a>';
+
+                    $idCardLink = '<a style="background-color:green; padding:3px; border-radius:4px; color:white" target="_blank" href="'
+                        . route("student.show", [$registration->id, 'idcard' => 'idcard'])
+                        . '">Id Card</a>';
+
+                    return $registrationLink . ' ' . $idCardLink;
                 })
+
                 ->addColumn('result', function ($result) {
                     return '<a  style="background-color:green; padding:3px; border-redius:4px 4px 4px 4px; color:white"   target="_blank"       href="' .  route('result', ['roll' => $result->roll] ) . '">' . 'Result'. '</a>';
                 })
@@ -103,6 +112,16 @@ class StudentController extends Controller
               );
 
               return view('student.registration', [
+                  'student' => $student
+              ]);
+             }
+          if ($request->idcard=='idcard'){
+              abort_if(
+                  $student->status != StudentStatus::Approved(),
+                  403
+              );
+
+              return view('student.idcard', [
                   'student' => $student
               ]);
              }
