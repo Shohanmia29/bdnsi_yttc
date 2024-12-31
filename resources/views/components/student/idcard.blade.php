@@ -36,29 +36,29 @@
                     <div class="text-center">
                         <img class="mx-auto h-28 w-28 rounded-full border-[4px] border-[#6aa84f]" src="{{$student->picture??''}}" alt="" />
 
-                        <div class="mt-5">
+                        <div class="mt-5 flex justify-center">
                             <table class="mx-auto w-full font-semibold text-xs text-left">
-                                <tr>
+                                <tr  class="">
                                     <td class="px-2">Reg No</td>
                                     <td class="px-2">:</td>
                                     <td class="px-2">444</td>
                                 </tr>
-                                <tr>
+                                <tr class="">
                                     <td class="px-2">Student Name</td>
                                     <td class="px-2">:</td>
                                     <td class="px-2">{{$student->name ?? ''}}</td>
                                 </tr>
-                                <tr>
+                                <tr class="">
                                     <td class="px-2">Father Name</td>
                                     <td class="px-2">:</td>
                                     <td class="px-2">{{$student->fathers_name ?? ''}}</td>
                                 </tr>
-                                <tr>
+                                <tr class="">
                                     <td class="px-2">Institute</td>
                                     <td class="px-2">:</td>
                                     <td class="px-2">{{$student->center->name ?? ''}}</td>
                                 </tr>
-                                <tr>
+                                <tr class="">
                                     <td class="px-2">Phone</td>
                                     <td class="px-2">:</td>
                                     <td class="px-2">{{$student->phone ?? ''}}</td>
