@@ -1,4 +1,5 @@
 <x-frontend-layouts>
+    <link rel="stylesheet" href="{{mix('css/app.css')}}">
     <style>
         .absolute {
             position: absolute;
