@@ -34,7 +34,7 @@
                 <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">Course Name</div>
                 <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->subject->name ?? ''}}</div>
                 <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">Course Duration</div>
-                <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->subject->duration ?? ''}}</div>
+                <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{$result->student->course_duration ?? ''}}</div>
             </div>
             <!-- Row 5 -->
             <div class="w-full bg-green-200 flex flex-wrap">
