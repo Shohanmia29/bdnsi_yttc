@@ -230,7 +230,7 @@
                 </div>
                 <div>
                     <div class="visible-print  text-center">
-                        <x-qr-code style="width:158px!important; height: 120px;margin-left: 42px" :student="$student"/>
+                        <x-qr-code route="hello" style="width:158px!important; height: 120px;margin-left: 42px" :student="$student"/>
                     </div>
                 </div>
 

@@ -1,4 +1,4 @@
-@props(['student', 'style' => ''])
+@props(['student', 'style' => '', 'route'=>''])
 
 <div id="qrcode_1"></div>
 
@@ -20,7 +20,7 @@
 <script type="text/javascript">
     // Adjusted for high-quality QR code generation
     var qrcode = new QRCode(document.getElementById("qrcode_1"), {
-        text: "{{ route('result', ['roll' => $student->roll]) }}",
+        text: "{{   route('successStudentDetails',$student->id)     }}",
         width: 500,  // Increased width for high resolution
         height: 500, // Increased height for high resolution
         colorDark: "#000000",
