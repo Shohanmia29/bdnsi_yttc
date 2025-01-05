@@ -34,39 +34,40 @@
             >
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="text-center">
-                        <img class="mx-auto h-28 w-28 rounded-full border-[4px] border-[#6aa84f]" src="{{$student->picture??''}}" alt="" />
+                        <img class="mx-auto h-28 w-28 rounded-full border-[4px] border-[#6aa84f]" src="{{$student->picture ?? ''}}" alt="" />
 
                         <div class="mt-5 flex justify-center">
                             <table class="mx-auto w-full font-semibold text-xs text-left">
-                                <tr  class="">
-                                    <td class="px-2">Reg No</td>
-                                    <td class="px-2">:</td>
-                                    <td class="px-2">444</td>
+                                <tr>
+                                    <td class="px-2 py-2">Reg No</td>
+                                    <td class="px-2 py-2">:</td>
+                                    <td class="px-2 py-2">444</td>
                                 </tr>
-                                <tr class="">
-                                    <td class="px-2">Student Name</td>
-                                    <td class="px-2">:</td>
-                                    <td class="px-2">{{$student->name ?? ''}}</td>
+                                <tr>
+                                    <td class="px-2 py-2">Student Name</td>
+                                    <td class="px-2 py-2">:</td>
+                                    <td class="px-2 py-2">{{$student->name ?? ''}}</td>
                                 </tr>
-                                <tr class="">
-                                    <td class="px-2">Father Name</td>
-                                    <td class="px-2">:</td>
-                                    <td class="px-2">{{$student->fathers_name ?? ''}}</td>
+                                <tr>
+                                    <td class="px-2 py-2">Father Name</td>
+                                    <td class="px-2 py-2">:</td>
+                                    <td class="px-2 py-2">{{$student->fathers_name ?? ''}}</td>
                                 </tr>
-                                <tr class="">
-                                    <td class="px-2">Institute</td>
-                                    <td class="px-2">:</td>
-                                    <td class="px-2">{{$student->center->name ?? ''}}</td>
+                                <tr>
+                                    <td class="px-2 py-2">Institute</td>
+                                    <td class="px-2 py-2">:</td>
+                                    <td class="px-2 py-2">{{$student->center->name ?? ''}}</td>
                                 </tr>
-                                <tr class="">
-                                    <td class="px-2">Phone</td>
-                                    <td class="px-2">:</td>
-                                    <td class="px-2">{{$student->phone ?? ''}}</td>
+                                <tr>
+                                    <td class="px-2 py-2">Phone</td>
+                                    <td class="px-2 py-2">:</td>
+                                    <td class="px-2 py-2">{{$student->phone ?? ''}}</td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
