@@ -78,7 +78,7 @@
 
                 <x-select2 name="course_type" label="Course Type" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                     @foreach(\App\Enums\CourseType::getInstances() as $type)
-                        <option value="{{ $type->value }}" @selected(old('course_type', $type->course_type) == $type->value) >{{ $type->description }}</option>
+                        <option value="{{ $type->value }}" @selected(old('course_type', $student->course_type->value) == $type->value) >{{ $type->description }}</option>
                     @endforeach
                 </x-select2>
 
