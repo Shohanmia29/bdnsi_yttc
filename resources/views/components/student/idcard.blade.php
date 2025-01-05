@@ -39,34 +39,35 @@
                         <div class="mt-5 flex justify-center">
                             <table class="mx-auto w-full font-semibold text-xs text-left">
                                 <tr>
-                                    <td class="px-2 py-2">Reg No</td>
-                                    <td class="px-2 py-2">:</td>
-                                    <td class="px-2 py-2">444</td>
+                                    <td class="px-2 py-3">Reg No</td>
+                                    <td class="px-2 py-3">:</td>
+                                    <td class="px-2 py-3">444</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-2 py-2">Student Name</td>
-                                    <td class="px-2 py-2">:</td>
-                                    <td class="px-2 py-2">{{$student->name ?? ''}}</td>
+                                    <td class="px-2 py-3">Student Name</td>
+                                    <td class="px-2 py-3">:</td>
+                                    <td class="px-2 py-3">{{$student->name ?? ''}}</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-2 py-2">Father Name</td>
-                                    <td class="px-2 py-2">:</td>
-                                    <td class="px-2 py-2">{{$student->fathers_name ?? ''}}</td>
+                                    <td class="px-2 py-3">Father Name</td>
+                                    <td class="px-2 py-3">:</td>
+                                    <td class="px-2 py-3">{{$student->fathers_name ?? ''}}</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-2 py-2">Institute</td>
-                                    <td class="px-2 py-2">:</td>
-                                    <td class="px-2 py-2">{{$student->center->name ?? ''}}</td>
+                                    <td class="px-2 py-3">Institute</td>
+                                    <td class="px-2 py-3">:</td>
+                                    <td class="px-2 py-3">{{$student->center->name ?? ''}}</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-2 py-2">Phone</td>
-                                    <td class="px-2 py-2">:</td>
-                                    <td class="px-2 py-2">{{$student->phone ?? ''}}</td>
+                                    <td class="px-2 py-3">Phone</td>
+                                    <td class="px-2 py-3">:</td>
+                                    <td class="px-2 py-3">{{$student->phone ?? ''}}</td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                 </div>
+
 
             </div>
         </div>
