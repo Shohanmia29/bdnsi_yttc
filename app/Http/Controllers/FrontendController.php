@@ -27,5 +27,10 @@ class FrontendController extends Controller
               return view('page.successStudentDetails',compact('data'));
       }
 
+      public function studentInfo($id){
+             $data=Student::where('status',StudentStatus::Approved)->findOrFail($id);
+              return view('page.studentInfo',compact('data'));
+      }
+
 
 }

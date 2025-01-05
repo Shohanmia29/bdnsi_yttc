@@ -66,16 +66,7 @@
                                 <div class="text-center w-10 pr-2">:</div>
                                 <div class="w-50">{{$data->subject->name ?? 'N/A'}}</div>
                             </li>
-                            <li class="list-group-item bg-c text-white rounded-2 mb-2 d-flex align-items-center">
-                                <div class="fw-bold w-50">Course Duration</div>
-                                <div class="text-center w-10 pr-2">:  </div>
-                                <div class="w-50">{{$data->course_duration ?? 'N/A'}}</div>
-                            </li>
-                            <li class="list-group-item bg-c text-white rounded-2 mb-2 d-flex align-items-center">
-                                <div class="fw-bold w-50">Session</div>
-                                <div class="text-center w-10 pr-2">:  </div>
-                                <div class="w-50">{{$data->session->name ?? 'N/A'}}</div>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
