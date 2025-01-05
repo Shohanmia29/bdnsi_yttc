@@ -16,9 +16,9 @@ class CreateResultsTable extends Migration
         Schema::create('results', function (Blueprint $table) {
             $table->id();
             $table->foreignId('student_id')->constrained();
-            $table->unsignedTinyInteger('written');
-            $table->unsignedTinyInteger('practical');
-            $table->unsignedTinyInteger('viva');
+            $table->integer('written');
+            $table->integer('practical');
+            $table->integer('viva');
             $table->timestamps();
         });
     }
