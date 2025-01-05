@@ -95,10 +95,7 @@ class StudentController extends Controller
             403
         );
           if ($request->admit=='admit'){
-              abort_if(
-                  $student->status != StudentStatus::Approved(),
-                  403
-              );
+
 
               return view('student.admit', [
                   'student' => $student
@@ -106,20 +103,14 @@ class StudentController extends Controller
              }
 
           if ($request->registration=='registration'){
-              abort_if(
-                  $student->status != StudentStatus::Approved(),
-                  403
-              );
+
 
               return view('student.registration', [
                   'student' => $student
               ]);
              }
           if ($request->idcard=='idcard'){
-              abort_if(
-                  $student->status != StudentStatus::Approved(),
-                  403
-              );
+
 
               return view('student.idcard', [
                   'student' => $student
