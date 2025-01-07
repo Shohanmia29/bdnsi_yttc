@@ -88,7 +88,7 @@
         .student-roll { top: 64%; left: 38.5%; }
         .student-subject { top: 64%; left: 57.5%; }
         .center-code { top: 66%; left: 87%; }
-        .exam-date { top: 68.5%; left: 48%; }
+        .exam-date { top: 68.2%; left: 48%; }
         .student-gpa { top: 68.5%; left: 75%; }
         .student-result-published { top: 85%; left: 24%; }
 
@@ -103,7 +103,7 @@
         .student-roll { top: 63%; left: 38.5%; }
         .student-subject { top: 63%; left: 57.5%; }
         .center-code { top: 66%; left: 87%; }
-        .exam-date { top: 67.5%; left: 48%; }
+        .exam-date { top: 67.2%; left: 48%; }
         .student-gpa { top: 67%; left: 75%; }
         .student-result-published { top: 85%; left: 24%; }
         }
