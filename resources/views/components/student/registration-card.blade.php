@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=1024">
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
     <script src="{{asset('js/pdf.js')}}"></script>
-
     <title>Registration Card</title>
     <style>
         body {
@@ -21,7 +20,7 @@
 
         .admit-card-wrap {
             width: 1170px;
-            height: 1650px;
+            height: 1660px;
             background-image: url({{asset('images/student/RegistrationCard.jpg')}});
             margin: auto;
             background-position: center center;

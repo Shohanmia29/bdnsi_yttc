@@ -1,5 +1,5 @@
 @props(['student'])
-    <!DOCTYPE html>
+{{--    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -246,7 +246,7 @@
 
 
     <div class="admit-card-body"    >
-{{--        <h3 class="me-5 text-center fw-bold mb-4">{{$student->subject->name??'N/A'}}</h3>--}}
+--}}{{--        <h3 class="me-5 text-center fw-bold mb-4">{{$student->subject->name??'N/A'}}</h3>--}}{{--
         <div class="cert-info fw-bold text-dark w-100 d-flex flex-row justify-content-center mt-2 ps-3 gap-2">
             <div class="w-100" >
                 <div class="data-item-wrap">
@@ -308,7 +308,7 @@
                     <div class="data-label">Letter Grade </div>
                     <div>:</div>
                     <div class="data-value" x-html="calculateGPA(parseInt(w)+parseInt(p)+parseInt(v))">
-{{--                         A+--}}
+--}}{{--                         A+--}}{{--
                     </div>
                 </div>
                 <div class="data-item-wrap">
@@ -354,12 +354,12 @@
             </table>
             <div class="footer-sign-wrap mt-4"  >
                 <div class="sign-cont text-center">
-                    {{--                <hr />--}}
-                    {{--                <p>Signature of the <br /> Student</p>--}}
+                    --}}{{--                <hr />--}}{{--
+                    --}}{{--                <p>Signature of the <br /> Student</p>--}}{{--
                 </div>
                 <div class="sign-cont text-center">
-                    {{--                <hr />--}}
-                    {{--                <p>Signature Of The Regional <br /> Director</p>--}}
+                    --}}{{--                <hr />--}}{{--
+                    --}}{{--                <p>Signature Of The Regional <br /> Director</p>--}}{{--
                 </div>
                 <div class="sign-cont text-center"  >
                     <img class="text-center" style="width: 200px" src="{{asset('images/student/examController.png')}}" alt="signature" />
@@ -409,6 +409,62 @@
 
 </body>
 
+</html>--}}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+<style>
+    .bg-image {
+        background: url({{asset('images/student/transacpt1.jpg')}});
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
+<div class="bg-image w-full h-screen relative font-bold text-[8px]">
+    <p class="absolute top-[232px] lg:top-[159px] left-[155px] lg:left-[566px]">Serial No</p>
+    <p class="absolute top-[262px] lg:top-[179px] left-[215px] lg:left-[620px]">Student Name</p>
+    <p class="absolute top-[281px] lg:top-[193px] left-[215px] lg:left-[620px]">Father's Name</p>
+    <p class="absolute top-[298px] lg:top-[208px] left-[215px] lg:left-[620px]">Mother's Name</p>
+    <p class="absolute top-[317px] lg:top-[220px] left-[215px] lg:left-[620px]">Roll No</p>
+    <p class="absolute top-[336px] lg:top-[233px] left-[215px] lg:left-[620px]">Reg No</p>
+    <p class="absolute top-[353px] lg:top-[247px] left-[215px] lg:left-[620px]">Institute Name</p>
+    <p class="absolute top-[372px] lg:top-[260px] left-[215px] lg:left-[620px]">Technology</p>
+    <p class="absolute top-[390px] lg:top-[273px] left-[215px] lg:left-[620px]">Course Duration</p>
+    <p class="absolute top-[408px] lg:top-[286px] left-[215px] lg:left-[620px]">Session</p>
+    <p class="absolute top-[426px] lg:top-[300px] left-[215px] lg:left-[620px]">Grade Point</p>
+    <p class="absolute top-[444px] lg:top-[314px] left-[215px] lg:left-[620px]">Letter Grade</p>
+
+    <p class="absolute top-[552px] lg:top-[392px] left-[185px] lg:left-[581px]">Written</p>
+    <p class="absolute top-[552px] lg:top-[392px] left-[458px] lg:left-[793px]">A+</p>
+    <p class="absolute top-[552px] lg:top-[392px] left-[573px] lg:left-[876px]">5.00</p>
+
+    <p class="absolute top-[584px] lg:top-[416px] left-[185px] lg:left-[581px]">Practical</p>
+    <p class="absolute top-[584px] lg:top-[417px] left-[458px] lg:left-[793px]">B++</p>
+    <p class="absolute top-[584px] lg:top-[417px] left-[575px] lg:left-[876px]">50</p>
+
+    <p class="absolute top-[618px] lg:top-[441px] left-[185px] lg:left-[581px]">Viva</p>
+    <p class="absolute top-[618px] lg:top-[441px] left-[458px] lg:left-[793px]">A+</p>
+    <p class="absolute top-[618px] lg:top-[441px] left-[575px] lg:left-[876px]">50</p>
+
+    <p class="absolute top-[657px] lg:top-[469px] left-[185px] lg:left-[581px]">GPA</p>
+    <p class="absolute top-[657px] lg:top-[469px] left-[353px] lg:left-[710px]">4.50</p>
+
+    <p class="absolute top-[684px] lg:top-[489px] left-[185px] lg:left-[581px]">CGPA</p>
+    <p class="absolute top-[684px] lg:top-[489px] left-[353px] lg:left-[710px]">3.25</p>
+
+    <p class="absolute top-[710px] lg:top-[508px] left-[185px] lg:left-[581px]">Result</p>
+</div>
+</body>
 </html>
+
 
 

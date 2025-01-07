@@ -32,7 +32,7 @@ class CreateStudentsTable extends Migration
             $table->string('email')->nullable();
             $table->string('course_duration')->nullable();
             $table->string('qualification')->nullable();
-            $table->string('guardian_name');
+            $table->string('guardian_name')->nullable();
             $table->string('nid_or_birth')->nullable();
             $table->foreignId('session_id')->constrained();
             $table->foreignId('subject_id')->constrained();

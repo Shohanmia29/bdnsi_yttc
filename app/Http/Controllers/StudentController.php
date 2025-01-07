@@ -154,7 +154,7 @@ class StudentController extends Controller
             'name' => 'required|string',
             'fathers_name' => 'required|string',
             'mothers_name' => 'required|string',
-            'date_of_birth' => 'required',
+            'date_of_birth' => 'nullable',
             'gender' => 'required|numeric|enum_value:'.Gender::class.',false',
             'religion' => 'required|numeric|enum_value:'.Religion::class.',false',
             'present_address' => 'required|string',
