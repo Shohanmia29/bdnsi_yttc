@@ -54,7 +54,7 @@
                 <option {{$student->course_duration=='2 Year' ? 'selected': ''}}  value="2 Year">2 Year</option>
                 <option {{$student->course_duration=='3 Year' ? 'selected': ''}}  value="3 Year">3 Year</option>
                 <option {{$student->course_duration=='4 Year' ? 'selected': ''}}  value="4 Year">4 Year</option>
-                <option {{$student->course_duration=='Others' ? 'selected': ''}}  value="Others">Others</option>
+
 
 
             </x-labeled-select>

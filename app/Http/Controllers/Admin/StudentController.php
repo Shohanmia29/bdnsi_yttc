@@ -18,6 +18,7 @@ use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
 class StudentController extends Controller
@@ -102,10 +103,21 @@ class StudentController extends Controller
             'course_type' => ['required',Rule::in(CourseType::asArray())],
         ]);
 
-        $validated['roll'] = $validated['roll'] ?? Student::getLastFreeRoll();
-        $validated['registration'] = $validated['registration'] ?? Student::getLastFreeRegistration();
 
-        return response()->report(Student::create($validated), 'Student Created successfully');
+        try {
+            DB::beginTransaction();
+            $validated['roll'] = $validated['roll'] ?? Student::getLastFreeRoll();
+            $validated['registration'] = $validated['registration'] ?? Student::getLastFreeRegistration();
+            DB::commit();
+            return response()->report(Student::create($validated), 'Student Created successfully');
+        }catch (\Exception $exception){
+            DB::rollBack();
+
+            return response()->error('something went wrong');
+        }
+
+
+
     }
 
     public function show(Request $request, Student $student)

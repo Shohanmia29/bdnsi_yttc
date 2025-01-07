@@ -121,7 +121,14 @@ class Student extends Authenticatable
 
     public static function getLastFreeRegistration()
     {
-        return (static::max('registration') ?? 80889620) + 1;
+        // Retrieve the maximum value from the 'registration' column or use 80889620 if null.
+        $maxRegistration = static::max('registration');
+
+        // Ensure the value is numeric. If not, default to 80889620.
+        $lastRegistration = is_numeric($maxRegistration) ? (int)$maxRegistration : 80889620;
+
+        // Return the next registration value.
+        return $lastRegistration + 1;
     }
 
 

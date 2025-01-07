@@ -75,7 +75,6 @@
                     <option value="2 Year">
                     <option value="3 Year">
                     <option value="4 Year">
-                    <option value="Others">
                 </datalist>
             </div>
             <x-labeled-input name="picture" required type="file" accept="image/*" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
