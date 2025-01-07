@@ -8,6 +8,9 @@
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/html2pdf.js"></script>
     <style>
+
+
+
         [x-cloak] {
             display: none !important;
         }
@@ -19,6 +22,7 @@
 
         body {
             font-family: 'Monotype Corsiva';
+            font-weight: normal!important;
         }
 
         @media print {
@@ -51,6 +55,23 @@
             background-position: center center;
             font-size: 22px;
         }
+
+        .student-id,
+        .student-registration,
+        .student-session,
+        .student-name,
+        .fathers-name,
+        .mothers-name,
+        .center-name,
+        .student-roll,
+        .student-subject,
+        .center-code,
+        .exam-date,
+        .student-gpa,
+        .student-result-published {
+            font-weight: normal !important;
+        }
+
 
         /* Absolute positioning of child elements */
         .absolute {
@@ -123,9 +144,9 @@
                     {{ $student->gpa($student->result->written??0)?? '' }}
                 </div>
                 <div class="absolute student-result-published capitalize" style="font-size: 18px">
-                    @if($student->result_published)
+                @if($student->result_published)
                         {{ \App\Lib\Helper::numberToText((int)\Carbon\Carbon::make($student->result_published)->format('d')) }}
-                        {{ \Carbon\Carbon::make($student->result_published)->format('F-Y') }}
+                        {{ \Carbon\Carbon::make($student->result_published)->format('j-F-Y') }}
                     @endif
                 </div>
             </div>
