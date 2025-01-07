@@ -48,11 +48,15 @@
             </x-select2>
 
             <x-labeled-select name="course_duration"    type="text" label="Course Duration"  class="w-full p-1 md:w-1/2 lg:w-1/3">
-                <option {{$student->course_duration=='2 Month' ? 'selected': ''}}  value="2 Month">2 Month</option>
                 <option {{$student->course_duration=='3 Month' ? 'selected': ''}}  value="3 Month">3 Month</option>
                 <option {{$student->course_duration=='6 Month' ? 'selected': ''}}  value="6 Month">6 Month</option>
                 <option {{$student->course_duration=='1 Year' ? 'selected': ''}}  value="1 Year">1 Year</option>
-                <option {{$student->course_duration=='Others' ? 'selected': ''}}  value="2 Years">Others</option>
+                <option {{$student->course_duration=='2 Year' ? 'selected': ''}}  value="2 Year">2 Year</option>
+                <option {{$student->course_duration=='3 Year' ? 'selected': ''}}  value="3 Year">3 Year</option>
+                <option {{$student->course_duration=='4 Year' ? 'selected': ''}}  value="4 Year">4 Year</option>
+                <option {{$student->course_duration=='Others' ? 'selected': ''}}  value="Others">Others</option>
+
+
             </x-labeled-select>
 
             <x-labeled-select name="qualification" label="Qualification" required class="w-full p-1 md:w-1/2 lg:w-1/3">
