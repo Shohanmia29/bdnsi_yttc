@@ -41,7 +41,7 @@
                                 <tr>
                                     <td class="px-2 py-3">Reg No</td>
                                     <td class="px-2 py-3">:</td>
-                                    <td class="px-2 py-3">444</td>
+                                    <td class="px-2 py-3">{{$student->registration??''}}</td>
                                 </tr>
                                 <tr>
                                     <td class="px-2 py-3">Student Name</td>
