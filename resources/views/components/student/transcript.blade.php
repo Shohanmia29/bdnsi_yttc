@@ -1,5 +1,5 @@
 @props(['student'])
-{{--    <!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -69,6 +69,7 @@
             width: 100%;
             bottom: 273px;
             left: 0;
+            top: 63%;
             padding: 20px 130px;
         }
 
@@ -134,11 +135,11 @@
 
 
         .button {
-            background: linear-gradient(to bottom, #4fa7f7, #007bfc); /* Gradient background */
+            background:  #73731d; /* Gradient background */
             color: white;
             font-weight: 600;
             padding: 10px 20px;
-            border-radius: 25px; /* Fully rounded corners */
+            border-radius: 9px; /* Fully rounded corners */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
             border: none;
             cursor: pointer;
@@ -149,20 +150,74 @@
         }
 
         .button:hover {
-            background: linear-gradient(to bottom, #007bfc, #005bb5); /* Darker gradient on hover */
+            background: #73731d; /* Darker gradient on hover */
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
         }
 
         .button:active {
-            background: linear-gradient(to bottom, #005bb5, #004494); /* Darker gradient when active */
+            background: #73731d; /* Darker gradient when active */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly pressed shadow */
         }
+
+        .grading-table th,
+        .grading-table td {
+            padding: 4px;
+
+            text-align: center;
+        }
+
+
+        .result-table-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+        }
+
+        .result-table {
+            width: 100%;
+            border-collapse: collapse;
+            /* Removed box shadow */
+        }
+
+        .result-table th,
+        .result-table td {
+            padding: 5px;
+            border: 1px solid black; /* Changed border color to black */
+            text-align: center;
+        }
+
+        .result-table thead th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+            border-bottom: 2px solid black; /* Changed border color to black */
+        }
+
+        .result-table tbody tr:nth-child(odd) {
+            background-color: #f9f9f9; /* Optional for alternating row colors */
+        }
+
+        .result-table tfoot td {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+
+        .pass {
+            color: green;
+            font-weight: bold;
+        }
+
+
+
+
     </style>
 </head>
 
 <body>
 <div class="print_btn">
-    <button type="button" class="btn btn-primary px-5 mx-4" onclick="window.print()">Print</button>
+{{--    <button type="button" class="btn btn-primary px-5 mx-4" onclick="window.print()">Print</button>--}}
     <button onclick="generate_pdf()" class="btn btn-secondary">Download</button>
     <a type="button" class="btn btn-warning px-5 mx-4" href="">Back</a>
 </div>
@@ -180,57 +235,78 @@
         </div>
     </div>
     <div style="position: relative;">
-        <div style="position: absolute;   left:70%;margin-top:6%;">
+        <div style="position: absolute;   left:70%;margin-top:13%;">
             <div class=" text-center pe-2 " >
-                <div class=" ">
-                    <div class="h6  bold "><strong>Grading System</strong></div>
-                    <table class="table border" style="font-size:13px;" >
+                <div class="grading-system-container">
+                    <strong class="grading-title">Grading System</strong>
+                    <table class="grading-table">
                         <thead>
                         <tr>
-                            <th class="border bold" >Range of Marks</th>
-                            <th class="border bold">Grade</th>
-                            <th class="border bold">Point</th>
+                            <th>Range of Mark</th>
+                            <th>Grade</th>
+                            <th>Point</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td class="border bold">80 or above</td>
-                            <td class="border bold">A+</td>
-                            <td class="border bold">5.00</td>
+                            <td>80 or above</td>
+                            <td>A+</td>
+                            <td>4.00</td>
                         </tr>
                         <tr>
-                            <td class="border bold">70 To 79</td>
-                            <td class="border bold">A</td>
-                            <td class="border bold">4.00</td>
+                            <td>75 - below 80</td>
+                            <td>A</td>
+                            <td>3.75</td>
                         </tr>
                         <tr>
-                            <td class="border bold">60 to 69</td>
-                            <td class="border bold">A-</td>
-                            <td class="border bold">3.5</td>
+                            <td>70 - below 75</td>
+                            <td>A-</td>
+                            <td>3.50</td>
                         </tr>
                         <tr>
-                            <td class="border bold">50 to 59</td>
-                            <td class="border bold">B</td>
-                            <td class="border bold">3.0</td>
+                            <td>65 - below 70</td>
+                            <td>B+</td>
+                            <td>3.25</td>
                         </tr>
                         <tr>
-                            <td class="border bold">40 to 59</td>
-                            <td class="border bold">C</td>
-                            <td class="border bold">2.0</td>
+                            <td>60 - below 65</td>
+                            <td>B</td>
+                            <td>3.00</td>
                         </tr>
                         <tr>
-                            <td class="border bold">33 To 39</td>
-                            <td class="border bold">D</td>
-                            <td class="border bold">1.0</td>
+                            <td>55 - below 60</td>
+                            <td>B-</td>
+                            <td>2.75</td>
                         </tr>
                         <tr>
-                            <td class="border bold">0 to 32</td>
-                            <td class="border bold">F</td>
-                            <td class="border bold">0.0</td>
+                            <td>50 - below 55</td>
+                            <td>C+</td>
+                            <td>2.50</td>
+                        </tr>
+                        <tr>
+                            <td>45 - below 50</td>
+                            <td>C</td>
+                            <td>2.25</td>
+                        </tr>
+                        <tr>
+                            <td>40 - below 45</td>
+                            <td>D+</td>
+                            <td>2.00</td>
+                        </tr>
+                        <tr>
+                            <td>35 - below 40</td>
+                            <td>D</td>
+                            <td>1.75</td>
+                        </tr>
+                        <tr>
+                            <td>00 - below 32</td>
+                            <td>F</td>
+                            <td>0.00</td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
+
 
             </div>
         </div>
@@ -246,7 +322,7 @@
 
 
     <div class="admit-card-body"    >
---}}{{--        <h3 class="me-5 text-center fw-bold mb-4">{{$student->subject->name??'N/A'}}</h3>--}}{{--
+{{--        <h3 class="me-5 text-center fw-bold mb-4">{{$student->subject->name??'N/A'}}</h3>--}}
         <div class="cert-info fw-bold text-dark w-100 d-flex flex-row justify-content-center mt-2 ps-3 gap-2">
             <div class="w-100" >
                 <div class="data-item-wrap">
@@ -308,7 +384,7 @@
                     <div class="data-label">Letter Grade </div>
                     <div>:</div>
                     <div class="data-value" x-html="calculateGPA(parseInt(w)+parseInt(p)+parseInt(v))">
---}}{{--                         A+--}}{{--
+                         A+
                     </div>
                 </div>
                 <div class="data-item-wrap">
@@ -331,35 +407,72 @@
         </div>
 
     </div>
+
+
+
+
     <div class="admit-card-footer">
-        <div>
-            <table class="table table-border ">
+
+
+    <div class="">
+        <div class=" ">
+            <table class="result-table">
                 <thead>
-                <tr class="w-full">
-                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Written') }}</th>
-                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Practical') }}</th>
-                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Viva') }}</th>
-                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('Grade') }}</th>
-                    <th class="border p-2 text-center font-semibold text-sm w-1/6">{{ __('GPA') }}</th>
+                <tr>
+                    <th>Name of Subjects</th>
+                    <th>Credit</th>
+                    <th>Letter Grade</th>
+                    <th>Grade Point</th>
                 </tr>
                 </thead>
-                <tr class="w-full bg-gray-100"  >
-                    <td class="border p-2 bold text-center w-1/6" >{{$student->written($student->result->written)}}</td>
-                    <td class="border p-2 bold text-center w-1/6" >{{$student->practical($student->result->practical)}}</td>
-                    <td class="border p-2 bold text-center w-1/6" >{{$student->viva($student->result->viva)}}</td>
-                    <td class="border p-2 bold text-center w-1/6" >{{$student->written($student->result->written)}}</td>
-                    <td class="border p-2 bold text-center w-1/6" >{{$student->gpa($student->result->written)}}</td>
+                <tbody>
+                <tr>
+                    <td>Written</td>
+                    <td>4</td>
+                    <td>A+</td>
+                    <td>4.00</td>
                 </tr>
-
+                <tr>
+                    <td>Practical</td>
+                    <td>4</td>
+                    <td>A</td>
+                    <td>3.75</td>
+                </tr>
+                <tr>
+                    <td>Viva</td>
+                    <td>4</td>
+                    <td>A-</td>
+                    <td>3.50</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="2">GPA:</td>
+                    <td colspan="2">4.00</td>
+                </tr>
+                <tr>
+                    <td colspan="2">CGPA:</td>
+                    <td colspan="2">3.90</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Result:</td>
+                    <td colspan="2" class="pass">PASS</td>
+                </tr>
+                </tfoot>
             </table>
+        </div>
+
+    </div>
+
+
             <div class="footer-sign-wrap mt-4"  >
                 <div class="sign-cont text-center">
-                    --}}{{--                <hr />--}}{{--
-                    --}}{{--                <p>Signature of the <br /> Student</p>--}}{{--
+{{--                                    <hr />--}}
+{{--                                    <p>Signature of the <br /> Student</p>--}}
                 </div>
                 <div class="sign-cont text-center">
-                    --}}{{--                <hr />--}}{{--
-                    --}}{{--                <p>Signature Of The Regional <br /> Director</p>--}}{{--
+{{--                                    <hr />--}}
+{{--                                    <p>Signature Of The Regional <br /> Director</p>--}}
                 </div>
                 <div class="sign-cont text-center"  >
                     <img class="text-center" style="width: 200px" src="{{asset('images/student/examController.png')}}" alt="signature" />
@@ -409,10 +522,10 @@
 
 </body>
 
-</html>--}}
+</html>
 
 
-<html lang="en">
+{{--<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -428,43 +541,127 @@
         background-repeat: no-repeat;
         background-position: center;
     }
+
+    .serial-no {position: absolute; top: 20.5%;left: 41%;}
+    .student-name {position: absolute;top: 24%;left: 31%;}
+    .father-name {position: absolute;top: 26.2%;left: 31%;}
+    .mother-name {position: absolute;top: 27%;left: 31%;}
+    .roll-no {position: absolute; top: 29%; left: 31%;}
+    .reg-no {position: absolute; top: 30%; left: 31%;}
+    .institute-name {position: absolute; top: 31%; left: 31%;}
+    .technology {position: absolute; top: 32%; left: 31%;}
+    .course-duration {position: absolute; top: 33%; left: 31%;}
+    .session {position: absolute; top: 34%; left: 31%;}
+    .grade-point {position: absolute; top: 35%; left: 31%;}
+    .letter-grade {position: absolute; top: 37%; left: 31%;}
+
+
+    .written-label { position: absolute; top: 47%; left: 20%; }
+    .written-grade { position: absolute; top: 34%; left: 40%; }
+    .written-point { position: absolute; top: 36%; left: 50%; }
+
+    .practical-label { position: absolute; top: 85%; left: 20%; }
+    .practical-grade { position: absolute; top: 85%; left: 40%; }
+    .practical-point { position: absolute; top: 85%; left: 50%; }
+
+    .viva-label { position: absolute; top: 90%; left: 20%; }
+    .viva-grade { position: absolute; top: 90%; left: 40%; }
+    .viva-point { position: absolute; top: 90%; left: 50%; }
+
+    .gpa-label { position: absolute; top: 95%; left: 20%; }
+    .gpa-value { position: absolute; top: 95%; left: 30%; }
+
+    .cgpa-label { position: absolute; top: 100%; left: 20%; }
+    .cgpa-value { position: absolute; top: 100%; left: 30%; }
+
+    .result-label { position: absolute; top: 105%; left: 20%; }
+
+
+
+
+
+    @media screen and (min-width: 768px) {
+        .serial-no {position: absolute; top: 20.5%;left: 41%;}
+        .student-name {position: absolute;top: 24%;left: 44%;}
+        .father-name {position: absolute;top: 25.8%;left: 44%;}
+        .mother-name {position: absolute;top: 28%;left: 44%;}
+        .roll-no {position: absolute;top: 29%;left: 44%;}
+        .reg-no {position: absolute;top: 29%;left: 44%;}
+        .institute-name {position: absolute;top: 30%;left: 44%;}
+        .technology {position: absolute;top: 31%;left: 44%;}
+        .course-duration {position: absolute;top: 32%;left: 44%;}
+        .session {position: absolute;top: 33%;left: 44%;}
+        .grade-point {position: absolute;top: 34%;left: 44%;}
+        .letter-grade {position: absolute;top: 36%;left: 44%;}
+
+
+
+        .written-label { position: absolute; top: 47%; left: 20%; }
+        .written-grade { position: absolute; top: 34%; left: 40%; }
+        .written-point { position: absolute; top: 36%; left: 50%; }
+
+        .practical-label { position: absolute; top: 85%; left: 20%; }
+        .practical-grade { position: absolute; top: 85%; left: 40%; }
+        .practical-point { position: absolute; top: 85%; left: 50%; }
+
+        .viva-label { position: absolute; top: 90%; left: 20%; }
+        .viva-grade { position: absolute; top: 90%; left: 40%; }
+        .viva-point { position: absolute; top: 90%; left: 50%; }
+
+        .gpa-label { position: absolute; top: 95%; left: 20%; }
+        .gpa-value { position: absolute; top: 95%; left: 30%; }
+
+        .cgpa-label { position: absolute; top: 100%; left: 20%; }
+        .cgpa-value { position: absolute; top: 100%; left: 30%; }
+
+        .result-label { position: absolute; top: 105%; left: 20%; }
+
+
+
+    }
+
+
 </style>
 <div class="bg-image w-full h-screen relative font-bold text-[8px]">
-    <p class="absolute top-[232px] lg:top-[159px] left-[155px] lg:left-[566px]">Serial No</p>
-    <p class="absolute top-[262px] lg:top-[179px] left-[215px] lg:left-[620px]">Student Name</p>
-    <p class="absolute top-[281px] lg:top-[193px] left-[215px] lg:left-[620px]">Father's Name</p>
-    <p class="absolute top-[298px] lg:top-[208px] left-[215px] lg:left-[620px]">Mother's Name</p>
-    <p class="absolute top-[317px] lg:top-[220px] left-[215px] lg:left-[620px]">Roll No</p>
-    <p class="absolute top-[336px] lg:top-[233px] left-[215px] lg:left-[620px]">Reg No</p>
-    <p class="absolute top-[353px] lg:top-[247px] left-[215px] lg:left-[620px]">Institute Name</p>
-    <p class="absolute top-[372px] lg:top-[260px] left-[215px] lg:left-[620px]">Technology</p>
-    <p class="absolute top-[390px] lg:top-[273px] left-[215px] lg:left-[620px]">Course Duration</p>
-    <p class="absolute top-[408px] lg:top-[286px] left-[215px] lg:left-[620px]">Session</p>
-    <p class="absolute top-[426px] lg:top-[300px] left-[215px] lg:left-[620px]">Grade Point</p>
-    <p class="absolute top-[444px] lg:top-[314px] left-[215px] lg:left-[620px]">Letter Grade</p>
 
-    <p class="absolute top-[552px] lg:top-[392px] left-[185px] lg:left-[581px]">Written</p>
-    <p class="absolute top-[552px] lg:top-[392px] left-[458px] lg:left-[793px]">A+</p>
-    <p class="absolute top-[552px] lg:top-[392px] left-[573px] lg:left-[876px]">5.00</p>
+    <p class="serial-no">Serial No</p>
+    <p class="student-name">Student Name</p>
+    <p class="father-name">Father's Name</p>
+    <p class="mother-name">Mother's Name</p>
+    <p class="roll-no">Roll No</p>
+    <p class="reg-no">Reg No</p>
+    <p class="institute-name">Institute Name</p>
+    <p class="technology">Technology</p>
+    <p class="course-duration">Course Duration</p>
+    <p class="session">Session</p>
+    <p class="grade-point">Grade Point</p>
+    <p class="letter-grade">Letter Grade</p>
 
-    <p class="absolute top-[584px] lg:top-[416px] left-[185px] lg:left-[581px]">Practical</p>
-    <p class="absolute top-[584px] lg:top-[417px] left-[458px] lg:left-[793px]">B++</p>
-    <p class="absolute top-[584px] lg:top-[417px] left-[575px] lg:left-[876px]">50</p>
+    <p class="written-label">Written</p>
+    <p class="written-grade">A+</p>
+    <p class="written-point">5.00</p>
 
-    <p class="absolute top-[618px] lg:top-[441px] left-[185px] lg:left-[581px]">Viva</p>
-    <p class="absolute top-[618px] lg:top-[441px] left-[458px] lg:left-[793px]">A+</p>
-    <p class="absolute top-[618px] lg:top-[441px] left-[575px] lg:left-[876px]">50</p>
+    <p class="practical-label">Practical</p>
+    <p class="practical-grade">B++</p>
+    <p class="practical-point">50</p>
 
-    <p class="absolute top-[657px] lg:top-[469px] left-[185px] lg:left-[581px]">GPA</p>
-    <p class="absolute top-[657px] lg:top-[469px] left-[353px] lg:left-[710px]">4.50</p>
+    <p class="viva-label">Viva</p>
+    <p class="viva-grade">A+</p>
+    <p class="viva-point">50</p>
 
-    <p class="absolute top-[684px] lg:top-[489px] left-[185px] lg:left-[581px]">CGPA</p>
-    <p class="absolute top-[684px] lg:top-[489px] left-[353px] lg:left-[710px]">3.25</p>
+    <p class="gpa-label">GPA</p>
+    <p class="gpa-value">4.50</p>
 
-    <p class="absolute top-[710px] lg:top-[508px] left-[185px] lg:left-[581px]">Result</p>
+    <p class="cgpa-label">CGPA</p>
+    <p class="cgpa-value">3.25</p>
+
+    <p class="result-label">Result</p>
+
+
 </div>
+
 </body>
-</html>
+</html>--}}
 
 
 
