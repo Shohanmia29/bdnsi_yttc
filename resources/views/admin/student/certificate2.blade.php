@@ -80,7 +80,7 @@
 
         .student-id { top: 39%; left: 33%; }
         .student-registration { top: 38.4%; left: 81.2%; }
-        .student-session { top: 43%; left: 81%;font-size: 13px }
+        .student-session { top: 43%; left: 81%;font-size: 15px }
         .student-name { top: 46.2%; left: 44.5%; }
         .fathers-name { top: 50.5%; left: 43.5%; text-transform: capitalize  ; }
         .mothers-name { top: 55%; left: 41.5%; text-transform: capitalize  ; }
@@ -95,7 +95,7 @@
         @media screen and (min-width: 740px) {
         .student-id { top: 39%; left: 33%; }
         .student-registration { top: 37%; left: 81%; }
-        .student-session { top: 42%; left: 80.5%; font-size: 13px}
+        .student-session { top: 42%; left: 80.5%; font-size: 15px}
         .student-name { top: 45.2%; left: 44.5%; }
         .fathers-name { top: 50%; left: 43.5%; text-transform: capitalize !important; }
         .mothers-name { top: 54.5%; left: 41.5%; text-transform: capitalize  ; }
