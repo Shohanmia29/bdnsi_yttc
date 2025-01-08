@@ -429,20 +429,20 @@
                 <tr>
                     <td>Written</td>
                     <td>4</td>
-                    <td>A+</td>
-                    <td>4.00</td>
+                    <td>{{$student->writtenResult()}}</td>
+                    <td>{{$student->gpa()}}</td>
                 </tr>
                 <tr>
                     <td>Practical</td>
                     <td>4</td>
-                    <td>A</td>
-                    <td>3.75</td>
+                    <td>{{$student->practicalResult()}}</td>
+                    <td>{{$student->gpaPractical()}}</td>
                 </tr>
                 <tr>
                     <td>Viva</td>
                     <td>4</td>
-                    <td>A-</td>
-                    <td>3.50</td>
+                    <td>{{$student->vivaResult()}}</td>
+                    <td>{{$student->gpaViva()}}</td>
                 </tr>
                 </tbody>
                 <tfoot>
@@ -452,7 +452,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">CGPA:</td>
-                    <td colspan="2">3.90</td>
+                    <td colspan="2">{{$student->gpa()}}</td>
                 </tr>
                 <tr>
                     <td colspan="2">Result:</td>
