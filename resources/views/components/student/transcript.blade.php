@@ -23,7 +23,7 @@
         .admit-card-wrap {
             width: 1170px;
             height: 1650px;
-            background-image: url({{asset('images/student/transacpt.jpg')}});
+            background-image: url({{asset('images/student/transacript22.jpg')}});
             margin: auto;
             background-position: center center;
             background-repeat: no-repeat;
@@ -190,18 +190,18 @@
         }
 
         .result-table thead th {
-            background-color: #f0f0f0;
+            /*background-color: #f0f0f0;*/
             font-weight: bold;
             border-bottom: 2px solid black; /* Changed border color to black */
         }
 
         .result-table tbody tr:nth-child(odd) {
-            background-color: #f9f9f9; /* Optional for alternating row colors */
+            /*background-color: #f9f9f9; !* Optional for alternating row colors *!*/
         }
 
         .result-table tfoot td {
             font-weight: bold;
-            background-color: #f0f0f0;
+            /*background-color: #f0f0f0;*/
         }
 
         .pass {

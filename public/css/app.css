@@ -672,78 +672,6 @@ select {
 .top-16 {
   top: 4rem;
 }
-.top-\[20\.5\%\] {
-  top: 20.5%;
-}
-.left-\[41\%\] {
-  left: 41%;
-}
-.top-\[24\%\] {
-  top: 24%;
-}
-.left-\[44\%\] {
-  left: 44%;
-}
-.top-\[26\%\] {
-  top: 26%;
-}
-.top-\[27\%\] {
-  top: 27%;
-}
-.top-\[28\%\] {
-  top: 28%;
-}
-.top-\[29\%\] {
-  top: 29%;
-}
-.top-\[30\%\] {
-  top: 30%;
-}
-.top-\[31\%\] {
-  top: 31%;
-}
-.top-\[32\%\] {
-  top: 32%;
-}
-.top-\[33\%\] {
-  top: 33%;
-}
-.top-\[34\%\] {
-  top: 34%;
-}
-.top-\[36\%\] {
-  top: 36%;
-}
-.top-\[47\%\] {
-  top: 47%;
-}
-.left-\[20\%\] {
-  left: 20%;
-}
-.left-\[40\%\] {
-  left: 40%;
-}
-.left-\[50\%\] {
-  left: 50%;
-}
-.top-\[85\%\] {
-  top: 85%;
-}
-.top-\[90\%\] {
-  top: 90%;
-}
-.top-\[95\%\] {
-  top: 95%;
-}
-.left-\[30\%\] {
-  left: 30%;
-}
-.top-\[100\%\] {
-  top: 100%;
-}
-.top-\[105\%\] {
-  top: 105%;
-}
 .z-0 {
   z-index: 0;
 }
@@ -918,11 +846,11 @@ select {
 .h-4 {
   height: 1rem;
 }
-.h-screen {
-  height: 100vh;
-}
 .h-16 {
   height: 4rem;
+}
+.h-screen {
+  height: 100vh;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -992,9 +920,6 @@ select {
 }
 .w-3\/4 {
   width: 75%;
-}
-.w-1\/6 {
-  width: 16.666667%;
 }
 .w-3\/12 {
   width: 25%;
@@ -1656,12 +1581,12 @@ select {
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
-.text-\[8px\] {
-  font-size: 8px;
-}
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+.text-\[8px\] {
+  font-size: 8px;
 }
 .font-medium {
   font-weight: 500;
