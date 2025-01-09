@@ -181,7 +181,7 @@
 <script type="text/javascript">
     // Adjusted for high-quality QR code generation
     var qrcode = new QRCode(document.getElementById("qrcode_1"), {
-        text: "{{   route('successStudentDetails',$student->id)     }}",
+        text: "{{   route('result',['roll'=>$student->roll])     }}",
         width: 500,  // Increased width for high resolution
         height: 500, // Increased height for high resolution
         colorDark: "#000000",
