@@ -64,6 +64,7 @@ class CenterController extends Controller
 
     public function destroy(Center $center)
     {
+        return response()->error('access Permission');
         return response()->report($center->delete(), 'Center deleted successfully');
     }
 }

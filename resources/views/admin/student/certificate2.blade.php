@@ -70,6 +70,7 @@
         .student-gpa,
         .student-result-published {
             font-weight: normal !important;
+
         }
 
 
@@ -91,7 +92,7 @@
         .exam-date { top: 68.2%; left: 48%; }
         .student-gpa { top: 68.5%; left: 75%; }
         .student-result-published { top: 85%; left: 24%; }
-        .qr { top: 55%; left: 13.3%; }
+        .qr { top: 57%; left: 13.3%; }
 
         @media screen and (min-width: 740px) {
         .student-id { top: 39%; left: 33%; }
@@ -99,7 +100,7 @@
         .student-session { top: 41.2%; left: 80.5%; font-size: 18px}
         .student-name { top: 45.2%; left: 44.5%; }
         .fathers-name { top: 50%; left: 43.5%; text-transform: capitalize !important; }
-        .mothers-name { top: 54.5%; left: 41.5%; text-transform: capitalize  ; }
+        .mothers-name { top: 54%; left: 41.5%; text-transform: capitalize  ; }
         .center-name { top: 58.3%; left: 40%; }
         .student-roll { top: 63%; left: 38.5%; }
         .student-subject { top: 62.7%; left: 57.5%; }
@@ -112,6 +113,11 @@
         .no-background {
             background-image: none !important;
         }
+        /* If you need custom capitalization */
+        .text {
+            text-transform: capitalize !important;
+        }
+
     </style>
 </head>
 <body>
@@ -128,18 +134,18 @@
              class="back-img"
              style="background-image:url({{ asset('images/student/certificate01.jpg') }}); position: relative; font-weight: bold;">
             <div>
-                <div class="absolute student-id" style="font-family: 'Segoe UI'; font-size:18px">
+                <div class="absolute student-id" style="  font-size:18px">
                     {{ \App\Lib\Helper::certificateSerialNumber($student->id) ?? '' }}
                 </div>
                 <div class="absolute student-registration">{{ $student->registration ?? '' }}</div>
-                <div class="absolute student-session">{{ $student->session->name ?? '' }}</div>
-                <div class="absolute student-name">{{ $student->name ?? '' }}</div>
+                <div class="absolute student-session text"  >{{ $student->session->name ?? '' }}</div>
+                <div class="absolute student-name">{{ ucwords(strtolower($student->name)) ?? '' }}</div>
                 <div class="absolute fathers-name">{{ ucwords(strtolower($student->fathers_name ?? '')) }}</div>
                 <div class="absolute mothers-name">{{ ucwords(strtolower($student->mothers_name ?? '')) }}</div>
-                <div class="absolute center-name">{{ $student->center->name ?? '' }}</div>
-                <div class="absolute student-roll">{{ $student->roll ?? '' }}</div>
-                <div class="absolute student-subject">{{ $student->subject->name ?? '' }}</div>
-                    <div style="width: 70px; height: 70px"  class="absolute qr" id="qrcode_1"></div>
+                <div class="absolute center-name">{{ ucwords(strtolower($student->center->name ?? '')) }}</div>
+                <div class="absolute student-roll">{{ ucwords(strtolower($student->roll ?? '')) }}</div>
+                <div class="absolute student-subject">{{ ucwords(strtolower($student->subject->name ?? '')) }}</div>
+                    <div style="width: 75px; height: 75px"  class="absolute qr" id="qrcode_1"></div>
 
                 <div class="absolute exam-date capitalize">
                     {{ \Carbon\Carbon::parse($student->exam_date)->format('j-F-Y') }}
