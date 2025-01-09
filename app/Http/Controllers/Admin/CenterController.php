@@ -7,9 +7,13 @@ use App\Http\Requests\CenterStoreRequest;
 use App\Http\Requests\CenterUpdateRequest;
 use App\Lib\Image;
 use App\Models\Center;
+use App\Models\Result;
+use App\Models\Student;
+use App\Models\User;
 use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class CenterController extends Controller
 {
@@ -64,7 +68,21 @@ class CenterController extends Controller
 
     public function destroy(Center $center)
     {
-        return response()->error('access Permission');
-        return response()->report($center->delete(), 'Center deleted successfully');
+        try {
+            DB::beginTransaction();
+            User::where('center_id',$center->id)->delete();
+            $student= Student::where('center_id',$center->id)->pluck('id');
+            Result::whereIn('student_id',$student)->delete();
+            Student::where('center_id',$center->id)->whereNotIn('id',$student)->delete();
+            $center->delete();
+            DB::commit();
+            return response()->report($center, 'Center deleted successfully');
+
+        }catch (\Exception $exception){
+            DB::rollBack();
+            return response()->error('Some thing went wrong!');
+        }
+
+
     }
 }
