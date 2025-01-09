@@ -16,7 +16,7 @@ class DashboardController extends Controller
         $cards = [
             'Total Student'=>Student::where('center_id',$auth->center_id)->count(),
             'Total Approved'=>Student::whereStatus(StudentStatus::Approved())->where('center_id',$auth->center_id)->count(),
-            'Total Pending'=>Student::whereStatus(StudentStatus::Approved())->where('center_id',$auth->center_id)->count()
+            'Total Pending'=>Student::whereStatus(StudentStatus::Pending())->where('center_id',$auth->center_id)->count()
         ];
         return view('dashboard', compact('cards'));
     }

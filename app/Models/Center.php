@@ -64,6 +64,12 @@ class Center extends Model
 
     }
 
+    public function getCodeAttribute()
+    {
+        return str_pad($this->attributes['id'], 6, '178', STR_PAD_LEFT); // Pads with '0' to make the code 6 characters long.
+    }
+
+
 
     public function users()
     {
