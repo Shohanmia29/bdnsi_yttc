@@ -2,9 +2,9 @@
 <html class="no-js" lang="ZXX">
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Young Tecnical Training</title>
-    <link rel="icon" href="https://bangla-eschool.getupdemo.xyz/storage/files/1/school-favicon.png" />
+    <link rel="icon" href="{{asset('logo.png')}}" />
 
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/bootstrap.min.css')}}?v=2" />
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/animate.min.css')}}?v=2" />
