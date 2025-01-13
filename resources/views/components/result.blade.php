@@ -52,8 +52,10 @@
                 <div class="w-8/12 md:w-4/12 border-green-600 font-semibold text-sm flex items-center py-4 px-4">{{ $student->passport ?? '' }}</div>
             </div>
         </div>
-        @if($student->result_publised !=null)
+
+        @if($student->result_publised !=null &&  $student->result)
             @php($result=optional($student->result))
+
             <div class="w-full border-2 border-green-600 flex flex-col rounded-md mt-4">
                 <div class="bg-green-200 py-1 rounded-tl-md rounded-tr-md text-center">
                     <span class="font-bold">Marks</span>
@@ -73,9 +75,9 @@
                             <td class="border border-gray-300 text-center px-4 py-2">{{$result->practical ??''}}</td>
                             <td class="border border-gray-300 text-center px-4 py-2">{{$result->viva ??''}}</td>
                             <td class="border border-gray-300 text-center px-4 py-2">{{$result->written+ $result->practical +$result->viva }}</td>
-                            <td class="border border-gray-300 text-center px-4 py-2">{{config('site.course_type.'.$result->student->course_type??'')}}</td>
-                            <td class="border border-gray-300 text-center px-4 py-2">{{$result->student->written($result->written)}}</td>
-                            <td class="border border-gray-300 text-center px-4 py-2">{{$result->student->gpa($result->written)}}</td>
+                            <td class="border border-gray-300 text-center px-4 py-2">{{config('site.course_type.'.$student->course_type??'')}}</td>
+                            <td class="border border-gray-300 text-center px-4 py-2">{{$student->written($result->written)}}</td>
+                            <td class="border border-gray-300 text-center px-4 py-2">{{$student->gpa($result->written)}}</td>
                         </tr>
                         </tbody>
                     </table>
