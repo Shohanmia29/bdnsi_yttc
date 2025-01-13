@@ -351,20 +351,20 @@
                          <div class="col-12 col-md-6">
                                <div>
                                    <div class="footer-contact-widget">
-                                       <div class="footer-contact-icon">
+                                       <div class="footer-contact-icon {{request()->routeIs('result') ? 'p-3' : ''}} ">
                                            <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/map.svg" alt="#" />
                                        </div>
-                                       <div class="footer-contact-info">
+                                       <div class="footer-contact-info {{request()->routeIs('result') ? 'p-3' : ''}}">
                                            <p class="footer-contact-text">
                                                {{config('site.setting.address')}}
                                            </p>
                                        </div>
                                    </div>
                                    <div class="footer-contact-widget">
-                                       <div class="footer-contact-icon">
+                                       <div class="footer-contact-icon {{request()->routeIs('result') ? 'p-3' : ''}}">
                                            <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/phone.svg" alt="#" />
                                        </div>
-                                       <div class="footer-contact-info">
+                                       <div class="footer-contact-info {{request()->routeIs('result') ? 'p-3' : ''}}">
                                            <a href="tel:{config('site.setting.phone')}}">   {{config('site.setting.phone')}}</a>
 
                                        </div>
@@ -374,15 +374,15 @@
                         <div class="col-12 col-md-6">
                               <div>
                                   <div class="footer-contact-widget">
-                                      <div class="footer-contact-icon">
+                                      <div class="footer-contact-icon {{request()->routeIs('result') ? 'p-3' : ''}}">
                                           <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/envelope.svg" alt="#" />
                                       </div>
-                                      <div class="footer-contact-info">
+                                      <div class="footer-contact-info {{request()->routeIs('result') ? 'p-3' : ''}}">
                                           <a href="mailto:{{config('site.setting.email')}}">{{config('site.setting.email')}}</a>
                                       </div>
                                   </div>
                                   <div class="footer-contact-widget">
-                                      <div class="footer-contact-icon">
+                                      <div class="footer-contact-icon {{request()->routeIs('result') ? 'p-3' : ''}}">
                                           <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/info.svg" alt="#" />
                                       </div>
                                       <div class="footer-contact-info">

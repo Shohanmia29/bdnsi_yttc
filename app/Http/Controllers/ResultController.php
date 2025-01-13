@@ -10,21 +10,23 @@ class ResultController extends Controller
 {
     public function __invoke(Request $request)
     {
-        $result = null;
+        $student = null;
         if ($request->has(['roll']) && strlen($request->get('roll')) ) {
             $student = Student::where([
-                'roll' => $request->get('roll'),
-                'status' => StudentStatus::Approved
-            ])->orWhere('passport',$request->get('roll'))->select('id')->first();
+                'roll' => $request->get('roll')
+            ])->orWhere('passport',$request->get('roll'))->first();
 
             if ($student === null) {
                 return response()->error('Result not found');
             }
 
-            $result = $student->result;
+
         }
+
+
+
         return view('result', [
-            'result' => $result
+            'student' => $student
         ]);
     }
 }
