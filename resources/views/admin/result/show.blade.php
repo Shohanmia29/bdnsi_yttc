@@ -12,7 +12,7 @@
     </x-slot>
 
     <div class="flex flex-wrap justify-center w-full bg-white p-4">
-        <x-result :result="$result" />
+        <x-result :student="$student" />
     </div>
 
     <x-slot name="beforeScript">

@@ -93,11 +93,11 @@ class ResultController extends Controller
         return response()->error('Something went wrong');
     }
 
-    public function show(Result $result)
+    public function show(  $id)
     {
-
+        $student=Student::findOrFail($id);
         return view('admin.result.show', [
-            'result' => $result
+            'student' => $student
         ]);
     }
 
