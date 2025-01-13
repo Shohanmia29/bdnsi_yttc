@@ -161,7 +161,7 @@
 
         .grading-table th,
         .grading-table td {
-            padding: 4px;
+            padding: 2px;
 
             text-align: center;
         }
@@ -184,7 +184,7 @@
 
         .result-table th,
         .result-table td {
-            padding: 5px;
+            padding: 2px;
             border: 1px solid black; /* Changed border color to black */
             text-align: center;
         }
@@ -235,7 +235,7 @@
         </div>
     </div>
     <div style="position: relative;">
-        <div style="position: absolute;   left:70%;margin-top:13%;">
+        <div style="position: absolute;   left:70%;margin-top:2%;">
             <div class=" text-center pe-2 " >
                 <div class="grading-system-container">
                     <strong class="grading-title">Grading System</strong>
@@ -356,7 +356,7 @@
                 <div class="data-item-wrap">
                     <div class="data-label">Course Name </div>
                     <div>:</div>
-                    <div class="data-value   line-clamp-1" style="font-size: 16px"> {{$student->subject->name??''}}</div>
+                    <div class="data-value   line-clamp-1"  > {{$student->subject->name??''}}</div>
                 </div>
 
                 <div class="data-item-wrap">
