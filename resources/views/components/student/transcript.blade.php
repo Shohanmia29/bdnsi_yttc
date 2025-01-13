@@ -356,7 +356,7 @@
                 <div class="data-item-wrap">
                     <div class="data-label">Course Name </div>
                     <div>:</div>
-                    <div class="data-value"> {{$student->subject->name??''}}</div>
+                    <div class="data-value   line-clamp-1" style="font-size: 16px"> {{$student->subject->name??''}}</div>
                 </div>
 
                 <div class="data-item-wrap">
