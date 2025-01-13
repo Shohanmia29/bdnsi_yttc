@@ -53,7 +53,7 @@
             </div>
         </div>
         @if($student->result_publised !=null)
-            @php($result=$student->result)
+            @php($result=optional($student->result))
             <div class="w-full border-2 border-green-600 flex flex-col rounded-md mt-4">
                 <div class="bg-green-200 py-1 rounded-tl-md rounded-tr-md text-center">
                     <span class="font-bold">Marks</span>
