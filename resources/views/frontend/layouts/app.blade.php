@@ -386,7 +386,7 @@
                                           <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/info.svg" alt="#" />
                                       </div>
                                       <div class="footer-contact-info">
-
+                                          <a href="">   RJSC NO: C-178431 </a>
                                       </div>
                                   </div>
                               </div>
