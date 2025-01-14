@@ -379,7 +379,7 @@
                                           <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/envelope.svg" alt="#" />
                                       </div>
                                       <div class="footer-contact-info {{request()->routeIs('result') ? 'p-3' : ''}}">
-                                          <a href="mailto:{{config('site.setting.email')}}">{{config('site.setting.email')}}</a>
+                                          <a href="mailto:{{config('site.setting.email')}}"  style="margin: {{request()->routeIs('result') ? '-19px' : ''}} ">{{config('site.setting.email')}}</a>
                                       </div>
                                   </div>
                                   <div class="footer-contact-widget">

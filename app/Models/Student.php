@@ -418,6 +418,7 @@ class Student extends Authenticatable
         }
 
         elseif  ($this->course_type->is(CourseType::Diploma())) {
+
             switch (true) {
                 case $marks >= 3040:
                     return 'A+';
@@ -449,6 +450,7 @@ class Student extends Authenticatable
     public function vivaResult( $marks=0)
     {
         $marks=$this->result->viva;
+
         if ($this->course_type->is(CourseType::Regular())) {
             switch (true) {
                 case $marks >= 80:
@@ -493,6 +495,7 @@ class Student extends Authenticatable
             }
         }
         elseif ($this->course_type->is(CourseType::Diploma())) {
+
             switch (true) {
                 case $marks >= 400 && $marks <= 500:
                     return 'A+';
@@ -682,6 +685,7 @@ class Student extends Authenticatable
     public function gpaViva( $marks=0)
     {
         $marks=$this->result->viva;
+
         if ($this->course_type->is(CourseType::Regular())) {
             switch (true) {
                 case $marks >= 80:
@@ -758,7 +762,329 @@ class Student extends Authenticatable
             return 'N/A';
         }
     }
-    public function gpaPractical( $marks=0)
+    public function gpaPractical($marks = 0)
+    {
+        $marks = $this->result->practical;
+
+        if ($this->course_type->is(CourseType::Regular())) {
+            if ($marks >= 80) {
+                return '5.00';
+            } elseif ($marks >= 70) {
+                return '4.70';
+            } elseif ($marks >= 60) {
+                return '4.50';
+            } elseif ($marks >= 50) {
+                return '3.50';
+            } elseif ($marks >= 40) {
+                return '3.00';
+            } elseif ($marks >= 0) {
+                return '0.00';
+            } else {
+                return '';
+            }
+        }
+
+        elseif ($this->course_type->is(CourseType::Short_Course())) {
+            if ($marks >= 800) {
+                return '4.00';
+            } elseif ($marks >= 750) {
+                return '3.75';
+            } elseif ($marks >= 700) {
+                return '3.50';
+            } elseif ($marks >= 650) {
+                return '3.25';
+            } elseif ($marks >= 600) {
+                return '3.00';
+            } elseif ($marks >= 550) {
+                return '2.75';
+            } elseif ($marks >= 500) {
+                return '2.50';
+            } elseif ($marks >= 450) {
+                return '2.25';
+            } elseif ($marks >= 400) {
+                return '2.00';
+            } elseif ($marks >= 0) {
+                return '0.00';
+            } else {
+                return 'N/A';
+            }
+        }
+
+        elseif ($this->course_type->is(CourseType::Diploma())) {
+            if ($marks >= 3040) {
+                return '4.00';
+            } elseif ($marks >= 2850) {
+                return '3.75';
+            } elseif ($marks >= 2660) {
+                return '3.50';
+            } elseif ($marks >= 2470) {
+                return '3.25';
+            } elseif ($marks >= 2280) {
+                return '3.00';
+            } elseif ($marks >= 2090) {
+                return '2.75';
+            } elseif ($marks >= 1900) {
+                return '2.50';
+            } elseif ($marks >= 1710) {
+                return '2.25';
+            } elseif ($marks >= 1520) {
+                return '2.00';
+            } elseif ($marks >= 0) {
+                return '0.00';
+            } else {
+                return 'N/A';
+            }
+        }
+
+        else {
+            return 'N/A';
+        }
+    }
+
+
+    public function t_written()
+    {
+
+        $marks=$this->result->written;
+        if ($this->course_type->is(CourseType::Regular())) {
+            switch (true) {
+                case $marks >= 80:
+                    return 'A+';
+                case $marks >= 70:
+                    return 'A';
+                case $marks >= 60:
+                    return 'A-';
+                case $marks >= 50:
+                    return 'B';
+                case $marks >= 40:
+                    return 'C';
+                case $marks >= 0:
+                    return 'F';
+                default:
+                    return 'N/A';
+            }
+        }
+
+        elseif  ($this->course_type->is(CourseType::Short_Course())) {
+            switch (true) {
+                case $marks >= 800:
+                    return 'A+';
+                case $marks >= 750:
+                    return 'A';
+                case $marks >= 700:
+                    return 'A-';
+                case $marks >= 650:
+                    return 'B';
+                case $marks >= 600:
+                    return 'B+';
+                case $marks >= 550:
+                    return 'B-';
+                case $marks >= 500:
+                    return 'C+';
+                case $marks >= 450:
+                    return 'C';
+                case $marks >= 400:
+                    return 'D';
+                case $marks >= 0:
+                    return 'F';
+                default:
+                    return 'N/A';
+            }
+        }
+
+        elseif  ($this->course_type->is(CourseType::Diploma())) {
+
+            switch (true) {
+                case $marks >= 3040:
+                    return 'A+';
+                case $marks >= 2850:
+                    return 'A';
+                case $marks >= 2660:
+                    return 'A-';
+                case $marks >= 2470:
+                    return 'B+';
+                case $marks >= 2280:
+                    return 'B';
+                case $marks >= 2090:
+                    return 'B-';
+                case $marks >= 1900:
+                    return 'C+';
+                case $marks >= 1710:
+                    return 'C';
+                case $marks >= 0:
+                    return 'F';
+                default:
+                    return 'N/A';
+            }
+        }
+        else{
+            return 'N/A';
+        }
+
+
+    }
+
+    public function t_written_gpa()
+    {
+        $marks=$this->result->written;
+        if ($this->course_type->is(CourseType::Regular())) {
+            switch (true) {
+                case $marks >= 80:
+                    return 5 +'.00';
+                case $marks >= 70:
+                    return 4 +'.70';
+                case $marks >= 60:
+                    return 4+'.50';
+                case $marks >= 50:
+                    return 3+'.50';
+                case $marks >= 40:
+                    return 3+'.00';
+                case $marks >= 0:
+                    return '0.00';
+                default:
+                    return '';
+            }
+        }
+
+        elseif  ($this->course_type->is(CourseType::Short_Course())) {
+            switch (true) {
+                case $marks >= 800:
+                    return '4.00';
+                case $marks >= 750:
+                    return '3.75';
+                case $marks >= 700:
+                    return '3.50';
+                case $marks >= 650:
+                    return '3.25';
+                case $marks >= 600:
+                    return '3.00';
+                case $marks >= 550:
+                    return '2.75';
+                case $marks >= 500:
+                    return '2.50';
+                case $marks >= 450:
+                    return '2.25';
+                case $marks >= 400:
+                    return '2.00';
+                case $marks >= 0:
+                    return '0.00';
+                default:
+                    return 'N/A';
+            }
+        }
+
+        elseif  ($this->course_type->is(CourseType::Diploma())) {
+            switch (true) {
+                case $marks >= 3040:
+                    return '4.00';
+                case $marks >= 2850:
+                    return '3.75';
+                case $marks >= 2660:
+                    return '3.50';
+                case $marks >= 2470:
+                    return '3.25';
+                case $marks >= 2280:
+                    return '3.00';
+                case $marks >= 2090:
+                    return '2.75';
+                case $marks >= 1900:
+                    return '2.50';
+                case $marks >= 1710:
+                    return '2.25';
+                case $marks >= 1520:
+                    return '2.00';
+                case $marks >= 0:
+                    return '0.00';
+                default:
+                    return 'N/A';
+            }
+        }
+        else{
+            return 'N/A';
+        }
+
+    }
+
+
+    public function t_practical()
+    {
+        $marks=$this->result->practical;
+        if ($this->course_type->is(CourseType::Regular())) {
+            switch (true) {
+                case $marks >= 80:
+                    return 'A+';
+                case $marks >= 70:
+                    return 'A';
+                case $marks >= 60:
+                    return 'A-';
+                case $marks >= 50:
+                    return 'B';
+                case $marks >= 40:
+                    return 'C';
+                case $marks >= 0:
+                    return 'F';
+                default:
+                    return '';
+            }
+        } elseif ($this->course_type->is(CourseType::Short_Course())) {
+            switch (true) {
+                case $marks >= 80 && $marks <= 100:
+                    return 'A+';
+                case $marks >= 75 && $marks < 80:
+                    return 'A';
+                case $marks >= 70 && $marks < 75:
+                    return 'A-';
+                case $marks >= 65 && $marks < 70:
+                    return 'B';
+                case $marks >= 60 && $marks < 65:
+                    return 'B+';
+                case $marks >= 55 && $marks < 60:
+                    return 'B-';
+                case $marks >= 50 && $marks < 55:
+                    return 'C+';
+                case $marks >= 45 && $marks < 50:
+                    return 'C';
+                case $marks >= 40 && $marks < 45:
+                    return 'D';
+                case $marks >= 0 && $marks < 40:
+                    return 'F';
+                default:
+                    return 'N/A';
+            }
+        } elseif ($this->course_type->is(CourseType::Diploma())) {
+            switch (true) {
+                case $marks >= 400 && $marks <= 500:
+                    return 'A+';
+                case $marks >= 375 && $marks < 400:
+                    return 'A';
+                case $marks >= 350 && $marks < 375:
+                    return 'A-';
+                case $marks >= 325 && $marks < 350:
+                    return 'B';
+                case $marks >= 300 && $marks < 325:
+                    return 'B+';
+                case $marks >= 275 && $marks < 300:
+                    return 'B-';
+                case $marks >= 250 && $marks < 275:
+                    return 'C+';
+                case $marks >= 225 && $marks < 250:
+                    return 'C';
+                case $marks >= 200 && $marks < 225:
+                    return 'D';
+                case $marks >= 0 && $marks < 200:
+                    return 'F';
+                default:
+                    return 'N/A';
+            }
+        } else {
+            return 'N/A';
+
+
+        }
+
+    }
+
+    public function t_practical_gpa()
     {
         $marks=$this->result->practical;
         if ($this->course_type->is(CourseType::Regular())) {
@@ -782,24 +1108,20 @@ class Student extends Authenticatable
 
         elseif  ($this->course_type->is(CourseType::Short_Course())) {
             switch (true) {
-                case $marks >= 800:
+                case $marks >= 100:
                     return '4.00';
-                case $marks >= 750:
+                case $marks >= 80:
                     return '3.75';
-                case $marks >= 700:
+                case $marks >= 70:
                     return '3.50';
-                case $marks >= 650:
+                case $marks >= 60:
                     return '3.25';
-                case $marks >= 600:
+                case $marks >= 50:
                     return '3.00';
-                case $marks >= 550:
+                case $marks >= 40:
                     return '2.75';
-                case $marks >= 500:
+                case $marks >= 30:
                     return '2.50';
-                case $marks >= 450:
-                    return '2.25';
-                case $marks >= 400:
-                    return '2.00';
                 case $marks >= 0:
                     return '0.00';
                 default:
@@ -809,23 +1131,23 @@ class Student extends Authenticatable
 
         elseif  ($this->course_type->is(CourseType::Diploma())) {
             switch (true) {
-                case $marks >= 3040:
+                case $marks >= 400:
                     return '4.00';
-                case $marks >= 2850:
+                case $marks >= 375:
                     return '3.75';
-                case $marks >= 2660:
+                case $marks >= 350:
                     return '3.50';
-                case $marks >= 2470:
+                case $marks >= 325:
                     return '3.25';
-                case $marks >= 2280:
+                case $marks >= 300:
                     return '3.00';
-                case $marks >= 2090:
+                case $marks >= 275:
                     return '2.75';
-                case $marks >= 1900:
+                case $marks >= 250:
                     return '2.50';
-                case $marks >= 1710:
+                case $marks >= 225:
                     return '2.25';
-                case $marks >= 1520:
+                case $marks >= 200:
                     return '2.00';
                 case $marks >= 0:
                     return '0.00';
@@ -836,9 +1158,164 @@ class Student extends Authenticatable
         else{
             return 'N/A';
         }
+
     }
 
+    public function t_viva()
+    {
+        $marks=$this->result->viva;
+        if ($this->course_type->is(CourseType::Regular())) {
+            switch (true) {
+                case $marks >= 80:
+                    return 'A+';
+                case $marks >= 70:
+                    return 'A';
+                case $marks >= 60:
+                    return 'A-';
+                case $marks >= 50:
+                    return 'B';
+                case $marks >= 40:
+                    return 'C';
+                case $marks >= 0:
+                    return 'F';
+                default:
+                    return '';
+            }
+        }
+        elseif ($this->course_type->is(CourseType::Short_Course())) {
+            switch (true) {
+                case $marks >= 80 && $marks <= 100:
+                    return 'A+';
+                case $marks >= 75 && $marks < 80:
+                    return 'A';
+                case $marks >= 70 && $marks < 75:
+                    return 'A-';
+                case $marks >= 65 && $marks < 70:
+                    return 'B';
+                case $marks >= 60 && $marks < 65:
+                    return 'B+';
+                case $marks >= 55 && $marks < 60:
+                    return 'B-';
+                case $marks >= 50 && $marks < 55:
+                    return 'C+';
+                case $marks >= 45 && $marks < 50:
+                    return 'C';
+                case $marks >= 40 && $marks < 45:
+                    return 'D';
+                case $marks >= 0 && $marks < 40:
+                    return 'F';
+                default:
+                    return 'N/A';
+            }
+        }
+        elseif ($this->course_type->is(CourseType::Diploma())) {
+            switch (true) {
+                case $marks >= 400 && $marks <= 500:
+                    return 'A+';
+                case $marks >= 375 && $marks < 400:
+                    return 'A';
+                case $marks >= 350 && $marks < 375:
+                    return 'A-';
+                case $marks >= 325 && $marks < 350:
+                    return 'B';
+                case $marks >= 300 && $marks < 325:
+                    return 'B+';
+                case $marks >= 275 && $marks < 300:
+                    return 'B-';
+                case $marks >= 250 && $marks < 275:
+                    return 'C+';
+                case $marks >= 225 && $marks < 250:
+                    return 'C';
+                case $marks >= 200 && $marks < 225:
+                    return 'D';
+                case $marks >= 0 && $marks < 200:
+                    return 'F';
+                default:
+                    return 'N/A';
+            }
+        } else {
+            return 'N/A';
 
+
+        }
+
+    }
+    public function t_viva_gpa()
+    {
+        $marks=$this->result->viva;
+        if ($this->course_type->is(CourseType::Regular())) {
+            switch (true) {
+                case $marks >= 80:
+                    return 5 +'.00';
+                case $marks >= 70:
+                    return 4 +'.70';
+                case $marks >= 60:
+                    return 4+'.50';
+                case $marks >= 50:
+                    return 3+'.50';
+                case $marks >= 40:
+                    return 3+'.00';
+                case $marks >= 0:
+                    return '0.00';
+                default:
+                    return '';
+            }
+        }
+
+        elseif  ($this->course_type->is(CourseType::Short_Course())) {
+            switch (true) {
+                case $marks >= 100:
+                    return '4.00';
+                case $marks >= 80:
+                    return '3.75';
+                case $marks >= 70:
+                    return '3.50';
+                case $marks >= 60:
+                    return '3.25';
+                case $marks >= 50:
+                    return '3.00';
+                case $marks >= 40:
+                    return '2.75';
+                case $marks >= 30:
+                    return '2.50';
+                case $marks >= 0:
+                    return '0.00';
+                default:
+                    return 'N/A';
+            }
+        }
+
+        elseif  ($this->course_type->is(CourseType::Diploma())) {
+            switch (true) {
+                case $marks >= 400:
+                    return '4.00';
+                case $marks >= 375:
+                    return '3.75';
+                case $marks >= 350:
+                    return '3.50';
+                case $marks >= 325:
+                    return '3.25';
+                case $marks >= 300:
+                    return '3.00';
+                case $marks >= 275:
+                    return '2.75';
+                case $marks >= 250:
+                    return '2.50';
+                case $marks >= 225:
+                    return '2.25';
+                case $marks >= 200:
+                    return '2.00';
+                case $marks >= 0:
+                    return '0.00';
+                default:
+                    return 'N/A';
+            }
+        }
+        else{
+            return 'N/A';
+        }
+
+    }
 
 
 

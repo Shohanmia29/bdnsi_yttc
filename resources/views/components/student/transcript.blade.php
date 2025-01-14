@@ -383,8 +383,8 @@
                 <div class="data-item-wrap">
                     <div class="data-label">Letter Grade </div>
                     <div>:</div>
-                    <div class="data-value" x-html="calculateGPA(parseInt(w)+parseInt(p)+parseInt(v))">
-                         A+
+                    <div class="data-value"  >
+                        {{$student->written()}}
                     </div>
                 </div>
                 <div class="data-item-wrap">
@@ -429,20 +429,20 @@
                 <tr>
                     <td>Written</td>
                     <td>4</td>
-                    <td>{{$student->writtenResult()}}</td>
-                    <td>{{$student->gpa()}}</td>
+                    <td>{{$student->t_written()}}</td>
+                    <td>{{$student->t_written_gpa()}}</td>
                 </tr>
                 <tr>
                     <td>Practical</td>
                     <td>4</td>
-                    <td>{{$student->practicalResult()}}</td>
-                    <td>{{$student->gpaPractical()}}</td>
+                    <td>{{$student->t_practical()}}</td>
+                    <td>{{$student->t_practical_gpa()}}</td>
                 </tr>
                 <tr>
                     <td>Viva</td>
                     <td>4</td>
-                    <td>{{$student->vivaResult()}}</td>
-                    <td>{{$student->gpaViva()}}</td>
+                    <td>{{$student->t_viva()}}</td>
+                    <td>{{$student->t_viva_gpa()}}</td>
                 </tr>
                 </tbody>
                 <tfoot>
@@ -456,7 +456,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">Result:</td>
-                    <td colspan="2" class="pass">PASS</td>
+                    <td colspan="2" class="pass"> {{$student->gpa()  > 0 ? 'PASS' : 'Fail'}}</td>
                 </tr>
                 </tfoot>
             </table>
