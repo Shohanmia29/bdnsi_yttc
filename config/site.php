@@ -11,8 +11,8 @@ return [
 
     'course_type' => [
         \App\Enums\CourseType::Regular=>100,
-        \App\Enums\CourseType::Short_Course=>500,
-        \App\Enums\CourseType::Diploma=>3800,
+        \App\Enums\CourseType::Short_Course=>1200,
+        \App\Enums\CourseType::Diploma=>4800,
     ],
 
 
