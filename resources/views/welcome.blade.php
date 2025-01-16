@@ -174,8 +174,8 @@
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="corner-message-bottom">
-                                            <p>{!! $team->description !!}
+                                        <div  >
+                                            <p   >{!! $team->description !!}</p>
                                             <div class="corner-message-btn">
                                                 <a href="" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
                                             </div>
@@ -289,8 +289,8 @@
                                                           </p>
                                                       </div>
                                                   </div>
-                                                  <div class="corner-message-bottom">
-                                                      <p>{!! $team->description !!}
+                                                  <div class=" ">
+                                                      <p  >{!! $team->description !!}</p>
                                                       <div class="corner-message-btn">
                                                           <a href="" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
                                                       </div>
