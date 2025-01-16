@@ -188,7 +188,7 @@
                                         <div class="corner-message-top">
                                             <div class="corner-message-img">
                                                 <img
-                                                    src="{{asset('frontend/svg/img/team.png')}}"
+                                                    src="{{asset('frontend/svg/img/team2.jpg')}}"
                                                     alt="#"/>
 
                                             </div>
@@ -225,7 +225,7 @@
                                         <div class="corner-message-top">
                                             <div class="corner-message-img">
                                                 <img
-                                                    src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Personnel/img-1.png"
+                                                    src="{{asset('frontend/svg/img/team2.jpg')}}"
                                                     alt="#"/>
 
                                             </div>
@@ -301,7 +301,7 @@
                                                   <div class="corner-message-top">
                                                       <div class="corner-message-img">
                                                           <img
-                                                              src="https://bangla-eschool.getupdemo.xyz/storage/files/1/alexander-hipp-iEEBWgY_6lA-unsplash.jpg"
+                                                              src="{{asset('frontend/svg/img/team2.jpg')}}"
                                                               alt="#"/>
 
                                                       </div>
@@ -336,7 +336,7 @@
                                                   <div class="corner-message-top">
                                                       <div class="corner-message-img">
                                                           <img
-                                                              src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Personnel/img-1.png"
+                                                              src="{{asset('frontend/svg/img/team2.jpg')}}"
                                                               alt="#"/>
 
                                                       </div>
@@ -371,7 +371,7 @@
                                                   <div class="corner-message-top">
                                                       <div class="corner-message-img">
                                                           <img
-                                                              src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Personnel/img-2.png"
+                                                              src="{{asset('frontend/svg/img/team2.jpg')}}"
                                                               alt="#"/>
 
                                                       </div>
