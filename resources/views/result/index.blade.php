@@ -1,4 +1,9 @@
 <x-app-layout>
+    <style>
+        .textDeg{
+            text-transform: capitalize!important;
+        }
+    </style>
     <x-slot name="header">
         <div class="w-full flex justify-between">
             <div class="text-xl">{{ __('Submit Student') }}</div>
@@ -28,7 +33,7 @@
     </div>
     <form class="w-full" action="{{ route('student-submission.store') }}" method="POST">
         @csrf
-        <div class="flex flex-wrap justify-center w-full bg-white mt-8" x-data>
+        <div class="w-full flex flex-wrap justify-center w-full textDeg bg-white mt-8" x-data>
             <table class="w-full">
                 <thead>
                 <tr>

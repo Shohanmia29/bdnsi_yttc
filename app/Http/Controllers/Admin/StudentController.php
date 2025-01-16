@@ -10,6 +10,7 @@ use App\Enums\StudentStatus;
 use App\Lib\Image;
 use App\Enums\Gender;
 use App\Models\Center;
+use App\Models\Result;
 use App\Models\Session;
 use App\Models\Student;
 use App\Enums\BloodGroup;
@@ -202,6 +203,10 @@ class StudentController extends Controller
 
     public function destroy(Student $student)
     {
-        return response()->report($student->delete(), 'Student Deleted successfully');
+        DB::transaction(function () use ($student) {
+            Result::where('student_id',$student->id)->delete();
+            $student->delete();
+        });
+        return response()->report($student, 'Student Deleted successfully');
     }
 }
