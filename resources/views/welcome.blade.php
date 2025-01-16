@@ -84,7 +84,7 @@
                         <div class="about-us-area section-padding">
                             <div class="about-us-img">
                                 <img
-                                    src="https://bangla-eschool.getupdemo.xyz/storage/files/1/AboutUs/about-img-2(1).png"
+                                    src="{{asset('frontend/svg/img/about.jpg')}}"
                                     alt="#"/>
                             </div>
                             <div class="about-content">
