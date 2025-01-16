@@ -353,7 +353,7 @@
                                <div>
                                    <div class="footer-contact-widget">
                                        <div class="footer-contact-icon {{request()->routeIs('result') ? 'p-3' : ''}} ">
-                                           <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/map.svg" alt="#" />
+                                           <img src="{{asset('frontend/svg/location.png')}}" alt="#" />
                                        </div>
                                        <div class="footer-contact-info {{request()->routeIs('result') ? 'p-3' : ''}}">
                                            <p class="footer-contact-text">
@@ -363,7 +363,7 @@
                                    </div>
                                    <div class="footer-contact-widget">
                                        <div class="footer-contact-icon {{request()->routeIs('result') ? 'p-3' : ''}}">
-                                           <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/phone.svg" alt="#" />
+                                           <img src="{{asset('frontend/svg/img/phone.png')}}" alt="#" />
                                        </div>
                                        <div class="footer-contact-info {{request()->routeIs('result') ? 'p-3' : ''}}">
                                            <a href="tel:{config('site.setting.phone')}}">   {{config('site.setting.phone')}}</a>
@@ -376,7 +376,7 @@
                               <div>
                                   <div class="footer-contact-widget">
                                       <div class="footer-contact-icon {{request()->routeIs('result') ? 'p-3' : ''}}">
-                                          <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/envelope.svg" alt="#" />
+                                          <img src="{{asset('frontend/svg/img/mail.png')}}" alt="#" />
                                       </div>
                                       <div class="footer-contact-info {{request()->routeIs('result') ? 'p-3' : ''}}">
                                           <a href="mailto:{{config('site.setting.email')}}"  style="margin: {{request()->routeIs('result') ? '-19px' : ''}} ">{{config('site.setting.email')}}</a>
@@ -384,7 +384,7 @@
                                   </div>
                                   <div class="footer-contact-widget">
                                       <div class="footer-contact-icon {{request()->routeIs('result') ? 'p-3' : ''}}">
-                                          <img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/info.svg" alt="#" />
+                                          <img src="{{asset('frontend/svg/img/what.png')}}" alt="#" />
                                       </div>
                                       <div class="footer-contact-info">
                                           <a href="">   RJSC NO: C-178431 </a>
@@ -415,28 +415,28 @@
 
                         <ul class="footer-social-list">
                             <li>
-                                <a href="" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/facebook.svg" alt="#" /></a>
+                                <a href="" target="_blank"><img src="{{asset('frontend/svg/img/facebook.png')}}" alt="#" /></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/messenger.png" alt="#" /></a>
+                                <a href="#" target="_blank"><img src="{{asset('frontend/svg/img/messenger.png')}}" alt="#" /></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/twitter.png" alt="#" /></a>
+                                <a href="#" target="_blank"><img src="{{asset('frontend/svg/img/twitter.png')}}" alt="#" /></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/instagram.png" alt="#" /></a>
+                                <a href="#" target="_blank"><img src="{{asset('frontend/svg/img/instragram.png')}}" alt="#" /></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/linkedin.svg" alt="#" /></a>
+                                <a href="#" target="_blank"><img src="{{asset('frontend/svg/img/linkedin.png')}}" alt="#" /></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/whatsapp.svg" alt="#" /></a>
+                                <a href="#" target="_blank"><img src="{{asset('frontend/svg/img/whatapp.png')}}" alt="#" /></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/telegram.svg" alt="#" /></a>
+                                <a href="#" target="_blank"><img src="{{asset('frontend/svg/img/telegram.png')}}" alt="#" /></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank"><img src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/youtube.svg" alt="#" /></a>
+                                <a href="#" target="_blank"><img src="{{asset('frontend/svg/img/youtube.png')}}" alt="#" /></a>
                             </li>
                         </ul>
                     </div>

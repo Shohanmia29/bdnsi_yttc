@@ -163,7 +163,7 @@
                                             </div>
                                             <div class="corner-message-info">
                                                 <img
-                                                    src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/quote.svg"
+                                                    src="{{asset('frontend/svg/img/team.png')}}"
                                                     alt="#"/>
                                                 <h4 class="corner-message-info-title">
                                                     {{$team->desingation??''}}
@@ -188,13 +188,13 @@
                                         <div class="corner-message-top">
                                             <div class="corner-message-img">
                                                 <img
-                                                    src="https://bangla-eschool.getupdemo.xyz/storage/files/1/alexander-hipp-iEEBWgY_6lA-unsplash.jpg"
+                                                    src="{{asset('frontend/svg/img/team.png')}}"
                                                     alt="#"/>
 
                                             </div>
                                             <div class="corner-message-info">
                                                 <img
-                                                    src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/quote.svg"
+                                                    src="{{asset('frontend/svg/img/team.png')}}"
                                                     alt="#"/>
                                                 <h4 class="corner-message-info-title">
                                                     সভাপতির বাণী
@@ -231,7 +231,7 @@
                                             </div>
                                             <div class="corner-message-info">
                                                 <img
-                                                    src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/quote.svg"
+                                                    src="{{asset('frontend/svg/img/team.png')}}"
                                                     alt="#"/>
                                                 <h4 class="corner-message-info-title">
                                                     অধ্যক্ষের বাণী
@@ -278,7 +278,7 @@
                                                       </div>
                                                       <div class="corner-message-info">
                                                           <img
-                                                              src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/quote.svg"
+                                                              src="{{asset('frontend/svg/img/team.png')}}"
                                                               alt="#"/>
                                                           <h4 class="corner-message-info-title">
                                                               {{$team->desingation??''}}
@@ -307,7 +307,7 @@
                                                       </div>
                                                       <div class="corner-message-info">
                                                           <img
-                                                              src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/quote.svg"
+                                                              src="{{asset('frontend/svg/img/team.png')}}"
                                                               alt="#"/>
                                                           <h4 class="corner-message-info-title">
                                                               সভাপতির বাণী
@@ -342,7 +342,7 @@
                                                       </div>
                                                       <div class="corner-message-info">
                                                           <img
-                                                              src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/quote.svg"
+                                                              src="{{asset('frontend/svg/img/team.png')}}"
                                                               alt="#"/>
                                                           <h4 class="corner-message-info-title">
                                                               অধ্যক্ষের বাণী
@@ -377,7 +377,7 @@
                                                       </div>
                                                       <div class="corner-message-info">
                                                           <img
-                                                              src="https://bangla-eschool.getupdemo.xyz/frontend_assets/images/icons/quote.svg"
+                                                              src="{{asset('frontend/svg/img/team.png')}}"
                                                               alt="#"/>
                                                           <h4 class="corner-message-info-title">
                                                               উপাধ্যক্ষের বাণী
@@ -436,7 +436,7 @@
                             <div class="gallery-img">
 
                                 <img
-                                    src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/successful-child-with-graduation-cap-backpack-full-books(1).jpg"
+                                    src="{{asset('frontend/svg/img/gallery.png')}}"
                                     alt="Gallery Image"/>
 
                                 <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
@@ -451,7 +451,7 @@
                             <div class="gallery-img">
 
                                 <img
-                                    src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/successful-child-with-graduation-cap-backpack-full-books(1).jpg"
+                                    src="{{asset('frontend/svg/img/gallery.png')}}"
                                     alt="Gallery Image"/>
 
                                 <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
@@ -466,7 +466,7 @@
                             <div class="gallery-img">
 
                                 <img
-                                    src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/successful-child-with-graduation-cap-backpack-full-books(1).jpg"
+                                    src="{{asset('frontend/svg/img/gallery.png')}}"
                                     alt="Gallery Image"/>
 
                                 <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
@@ -481,7 +481,7 @@
                             <div class="gallery-img">
 
                                 <img
-                                    src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/successful-child-with-graduation-cap-backpack-full-books(1).jpg"
+                                    src="{{asset('frontend/svg/img/gallery.png')}}"
                                     alt="Gallery Image"/>
 
                                 <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
@@ -496,7 +496,7 @@
                             <div class="gallery-img">
 
                                 <img
-                                    src="https://bangla-eschool.getupdemo.xyz/storage/files/1/Gallery/successful-child-with-graduation-cap-backpack-full-books(1).jpg"
+                                    src="{{asset('frontend/svg/img/gallery.png')}}"
                                     alt="Gallery Image"/>
 
                                 <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
