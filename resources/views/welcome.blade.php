@@ -24,7 +24,7 @@
                         @empty
                             <!-- Hero Single Slider -->
                             <div class="hero-single-slider background-image"
-                                 style="background-image: url('https://bangla-eschool.getupdemo.xyz/storage/files/1/Sliders/slider-img-1(1).png');">
+                                 style="background-image: url({{asset('frontend/svg/img/slider.png')}});">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-6 col-md-8 col-12 align-self-end">
                                         <div class="hero-content">
@@ -37,7 +37,7 @@
                             </div>
 
                             <div class="hero-single-slider background-image"
-                                 style="background-image: url('https://bangla-eschool.getupdemo.xyz/storage/files/1/Sliders/slider-img-3(1).png');">
+                                 style="background-image: url({{asset('frontend/svg/img/slider2.png')}});">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-6 col-md-8 col-12 align-self-end">
                                         <div class="hero-content">
@@ -49,7 +49,7 @@
                                 </div>
                             </div>
                             <div class="hero-single-slider background-image"
-                                 style="background-image: url('https://bangla-eschool.getupdemo.xyz/storage/files/1/Sliders/slider-img-2(1).png');">
+                                 style="background-image: url({{asset('frontend/svg/img/slider1.png')}});">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-6 col-md-8 col-12 align-self-end">
                                         <div class="hero-content">
