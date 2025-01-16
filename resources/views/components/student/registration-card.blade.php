@@ -17,6 +17,9 @@
         img {
             width: 100%;
         }
+        .textDeg{
+            text-transform: capitalize!important;
+        }
 
         .admit-card-wrap {
             width: 1170px;
@@ -178,7 +181,7 @@
             <p>Serial No. : {{\App\Lib\Helper::serialNumber($student->id)}}</p>
         </div>
     </div>
-    <div class="admit-card-body">
+    <div class="admit-card-body textDeg">
         <h3 class="me-5 text-center fw-bold mb-4">{{$student->subject->name??'N/A'}}</h3>
         <div class="cert-info fw-bold text-dark w-100 d-flex flex-row justify-content-center mt-2 ps-3 gap-2">
             <div class="w-75">

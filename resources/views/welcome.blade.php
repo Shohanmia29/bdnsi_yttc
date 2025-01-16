@@ -576,27 +576,27 @@
 
                         <!-- Single Total Student -->
                         <div class="total-students-card">
-                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">145</h3>
+                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">216</h3>
                             <p class="total-students-text">Total Institute</p>
 
                         </div>
                         <div class="total-students-card">
-                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">100</h3>
+                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">532</h3>
                             <p class="total-students-text">Total Course</p>
 
                         </div>
                         <div class="total-students-card">
-                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">0</h3>
+                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">176</h3>
                             <p class="total-students-text">Total Exam</p>
 
                         </div>
                         <div class="total-students-card">
-                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">200</h3>
+                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">54,512</h3>
                             <p class="total-students-text">Total Students</p>
 
                         </div>
                         <div class="total-students-card">
-                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">5</h3>
+                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">177</h3>
                             <p class="total-students-text">Total Session</p>
 
                         </div>

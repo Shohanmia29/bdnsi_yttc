@@ -13,12 +13,15 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
+
         }
 
         img {
             width: 100%;
         }
-
+        .textDeg{
+            text-transform: capitalize!important;
+        }
 
         .admit-card-wrap {
             width: 1185px;
@@ -177,7 +180,7 @@
             <p class="mb-0">Serial No. : {{\App\Lib\Helper::serialNumber($student->id)}}</p>
         </div>
     </div>
-    <div class="admit-card-body">
+    <div class="admit-card-body textDeg">
         <div class="cert-info fw-bold text-dark w-100 d-flex flex-row justify-content-center mt-0 ps-3 gap-2">
             <div class="w-75">
 

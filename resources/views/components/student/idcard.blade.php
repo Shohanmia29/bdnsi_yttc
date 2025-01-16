@@ -1,5 +1,11 @@
 @props(['student'])
 <script src="{{asset('js/pdf.js')}}"></script>
+<style>
+    .textDeg{
+        text-transform: capitalize!important;
+    }
+
+</style>
 <div class="flex items-center justify-center space-x-4 print:hidden mt-4">
     <button
         type="button"
@@ -21,7 +27,7 @@
 </div>
 
 <div class="md:p-10">
-    <div class="flex w-full flex-wrap" id="html2pdf">
+    <div class="flex w-full flex-wrap textDeg" id="html2pdf">
         <div class=" p-2 w-1/2">
             <div
                 class="relative h-[600px] w-full rounded-md p-2"
@@ -32,7 +38,7 @@
                     background-repeat: no-repeat;
                 "
             >
-                <div class="absolute inset-0 flex items-center justify-center">
+                <div class="absolute inset-0 flex items-center justify-center ">
                     <div class="text-center">
                         <img class="mx-auto h-28 w-28 rounded-full border-[4px] border-[#6aa84f]" src="{{$student->picture ?? ''}}" alt="" />
 

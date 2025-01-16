@@ -209,6 +209,9 @@
             font-weight: bold;
         }
 
+        .textDeg{
+            text-transform: capitalize!important;
+        }
 
 
 
@@ -321,7 +324,7 @@
     </div>
 
 
-    <div class="admit-card-body"    >
+    <div class="admit-card-body textDeg"    >
 {{--        <h3 class="me-5 text-center fw-bold mb-4">{{$student->subject->name??'N/A'}}</h3>--}}
         <div class="cert-info fw-bold text-dark w-100 d-flex flex-row justify-content-center mt-2 ps-3 gap-2">
             <div class="w-100" >
@@ -376,8 +379,8 @@
                 <div class="data-item-wrap">
                     <div class="data-label">Grade Point </div>
                     <div>:</div>
-                    <div class="data-value  " x-html="calculateCGPA(parseInt(w)+parseInt(p)+parseInt(v)) +'   (In the Scale Of 5.00)'">
-
+                    <div class="data-value  "    >
+                        (In the Scale Of 4.00)
                     </div>
                 </div>
                 <div class="data-item-wrap">
