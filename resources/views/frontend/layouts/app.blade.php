@@ -20,7 +20,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/logo.png') }}?v=4">
     <link rel="apple-touch-icon" href="{{ asset('frontend/logo.png') }}?v=4" />
     <meta name="msapplication-TileImage" content="{{ asset('frontend/logo.png') }}?v=4" />
-
+    <meta name="google-site-verification" content="Z0nEijotHP7ZORKAfkTDJrSIefDv4G3NB5gaq9wngsE" />
     <style>
         .about-content p {
             margin: 0;
