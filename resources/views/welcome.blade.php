@@ -166,7 +166,7 @@
                                                     src="{{asset('frontend/svg/img/team.png')}}"
                                                     alt="#"/>
                                                 <h4 class="corner-message-info-title">
-                                                    {{$team->desingation??''}}
+                                                    {{$team->designation??''}}
                                                 </h4>
                                                 <span class="c-message-title-seperetor"></span>
                                                 <p class="corner-message-info-name">
@@ -281,7 +281,7 @@
                                                               src="{{asset('frontend/svg/img/team.png')}}"
                                                               alt="#"/>
                                                           <h4 class="corner-message-info-title">
-                                                              {{$team->desingation??''}}
+                                                              {{$team->designation??''}}
                                                           </h4>
                                                           <span class="c-message-title-seperetor"></span>
                                                           <p class="corner-message-info-name">
