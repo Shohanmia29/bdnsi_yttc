@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Young Tecnical Training</title>
+    <title>Young Technical Training</title>
     <link rel="icon" href="{{asset('logo.png')}}" />
 
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/bootstrap.min.css')}}?v=2" />
@@ -21,6 +21,15 @@
     <link rel="apple-touch-icon" href="{{ asset('frontend/logo.png') }}?v=4" />
     <meta name="msapplication-TileImage" content="{{ asset('frontend/logo.png') }}?v=4" />
     <meta name="google-site-verification" content="Z0nEijotHP7ZORKAfkTDJrSIefDv4G3NB5gaq9wngsE" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J104V2KMHD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-J104V2KMHD');
+    </script>
     <style>
         .about-content p {
             margin: 0;
