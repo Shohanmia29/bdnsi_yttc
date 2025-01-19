@@ -1,6 +1,6 @@
 <x-frontend-layouts>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <script src="{{mix('js/app.js')}}"></script>
     <!-- Hero Area -->
     <section class="hero-area">
         <div class="container">
@@ -174,10 +174,16 @@
                                                 </p>
                                             </div>
                                         </div>
-                                        <div  >
-                                            <p   >{!! $team->description !!}</p>
+                                        <div   x-data="{description:false}" >
+
+                                            <div x-show="description==false">
+                                                <p   >{!! \Illuminate\Support\Str::limit($team->description, 200 , '...') !!}</p>
+                                            </div>
+                                            <div x-show="description==true">
+                                                <p   >{!! $team->description !!}</p>
+                                            </div>
                                             <div class="corner-message-btn">
-                                                <a href="" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
+                                                <button x-on:click="description =! description" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -289,10 +295,15 @@
                                                           </p>
                                                       </div>
                                                   </div>
-                                                  <div class=" ">
-                                                      <p  >{!! $team->description !!}</p>
+                                                  <div   x-data="{description:false}" >
+                                                      <div x-show="description==false">
+                                                          <p   >{!! \Illuminate\Support\Str::limit($team->description, 200 , '...') !!}</p>
+                                                      </div>
+                                                      <div x-show="description==true">
+                                                          <p   >{!! $team->description !!}</p>
+                                                      </div>
                                                       <div class="corner-message-btn">
-                                                          <a href="" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
+                                                          <button x-on:click="description =! description" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></button>
                                                       </div>
                                                   </div>
                                               </div>
