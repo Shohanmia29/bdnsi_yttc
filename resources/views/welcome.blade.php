@@ -177,7 +177,7 @@
                                         <div   x-data="{description:false}" >
 
                                             <div x-show="description==false">
-                                                <p   >{!! \Illuminate\Support\Str::limit($team->description, 200 , '...') !!}</p>
+                                                <p   >{!! \Illuminate\Support\Str::limit($team->description, 500 , '...') !!}</p>
                                             </div>
                                             <div x-show="description==true">
                                                 <p   >{!! $team->description !!}</p>
@@ -297,7 +297,7 @@
                                                   </div>
                                                   <div   x-data="{description:false}" >
                                                       <div x-show="description==false">
-                                                          <p   >{!! \Illuminate\Support\Str::limit($team->description, 200 , '...') !!}</p>
+                                                          <p   >{!! \Illuminate\Support\Str::limit($team->description, 500 , '...') !!}</p>
                                                       </div>
                                                       <div x-show="description==true">
                                                           <p   >{!! $team->description !!}</p>
