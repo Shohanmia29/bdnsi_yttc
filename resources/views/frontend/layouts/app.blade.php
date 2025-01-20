@@ -204,32 +204,9 @@
                     <div class="topbar-update-notice">
                         <span class="topbar-update-notice-title">Notice</span>
 
-                        <!-- Update Notice Slider -->
-                        <div class="topbar-update-notice-slider">
-                 {{--           @forelse($noticeChunks as $chunk)
-                                <div class="topbar-update-notice-main">
-                                    <p class="topbar-update-notice-single">
-                                        <a href="" target="_blank">{{$chunk}}</a>
-                                    </p>
-                                </div>
-                            @empty
-                                <div class="topbar-update-notice-main">
-                                    <p class="topbar-update-notice-single">
-                                        <a href="" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
-                                    </p>
-                                </div>
-                                <div class="topbar-update-notice-main">
-                                    <p class="topbar-update-notice-single">
-                                        <a href="" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
-                                    </p>
-                                </div>
-                                <div class="topbar-update-notice-main">
-                                    <p class="topbar-update-notice-single">
-                                        <a href="" target="_blank">স্কুল শুরু হওয়ার নির্ধারিত সময় প্রসঙ্গে নোটিশ</a>
-                                    </p>
-                                </div>
-                            @endforelse--}}
-                        </div>
+
+                            <marquee behavior="" direction="left">{{\App\Models\ConfigDictionary::get('notice','hello owrld')}}</marquee>
+
                     </div>
                 </div>
             </div>
