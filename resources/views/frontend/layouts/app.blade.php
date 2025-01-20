@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Young Technical Training</title>
-    <link rel="icon" href="{{asset('logo.png')}}" />
+    <link rel="icon" href="{{asset('frontend/logo2.png')}}?v=2" />
 
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/bootstrap.min.css')}}?v=2" />
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/animate.min.css')}}?v=2" />

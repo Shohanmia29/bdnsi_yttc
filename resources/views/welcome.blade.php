@@ -87,19 +87,19 @@
                                     src="{{asset('frontend/svg/img/about.jpg')}}"
                                     alt="#"/>
                             </div>
-                            <div class="about-content">
+                            <div class="about-content" x-data="{about:false}">
                                 <h3 class="about-cont-title">About Us</h3>
                                 <span class="title-seperetor"></span>
                                 <p>
-                                {!! \App\Models\ConfigDictionary::get('main_about_us','
-    এক্সওয়াইজেধ স্কুল এবং কলেজ এর অতীত গৌরবোজ্জ্বল বর্তমান প্রশংসনীয়। ২০২৩ ইংরেজীর ২০ শে জানুয়ারী এক্সওয়াইজেধ স্কুল এবং কলেজ এর স্থানীয় ম্যাজিষ্ট্রেট অফিসের তৎকালীন প্রধান কারণিক মি: এক্সওয়াইজেধ কর্তৃক প্রতিষ্ঠিত। তখন এটা এক্সওয়াইজেধ
-                                গভর্ণমেন্ট স্কুল নামে পরিচিত ছিল। ৯ জন বাংলাদেশী, ১ জন হিন্দু ও ৮ জন মুসলমান বিদ্যোৎসাহী ব্যক্তির একটি কমিটির উপর এর পরিচালনার দায়িত্ব ন্যাস্ত ছিল। এদেশের অধিবাসীদের বাংলায় শিক্ষায় শিক্ষিত করার জন্য এ বিদ্যালয় চালু
-                                করা হয়। ২০২৩ ইংরেজির ১ ই মে মি: এক্সওয়াইজেধ বিদ্যালয়ের প্রধান শিক্ষক নিযুক্ত হন...
-                               ') !!}
-
-                                {{--  <div class="about-cont-btn">
-                                      <a href="" class="theme-btn secondary">বিস্তারিত পড়ুন</a>
-                                  </div>--}}
+                                <div x-show="about==false">
+                                    <p   >{!! \Illuminate\Support\Str::limit(\App\Models\ConfigDictionary::get('main_about_us','Coming Soon'), 500 , '...') !!}</p>
+                                </div>
+                                <div x-show="about==true">
+                                    <p>  {!! \App\Models\ConfigDictionary::get('main_about_us','Coming Soon') !!}</p>
+                                </div>
+                                <div class="corner-message-btn">
+                                    <button x-on:click="about =! about" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></button>
+                                </div>
                             </div>
                         </div>
 
