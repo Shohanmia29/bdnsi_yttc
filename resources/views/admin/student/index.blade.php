@@ -19,6 +19,7 @@
                 <th>{{ __('Name') }}</th>
                 <th>{{ __('Center') }}</th>
                 <th>{{ __('Subject') }}</th>
+                <th>{{ __('Type') }}</th>
                 <th>{{ __('Phone') }}</th>
                 <th>{{ __('Result') }}</th>
                 <th>{{ __('Roll') }}</th>
@@ -40,6 +41,7 @@
                     dataSrc(response) {
                         response.data.map(function (item) {
                             item.status = @js(\App\Enums\StudentStatus::asSelectArray())[item.status]
+                            item.course_type = @js(\App\Enums\CourseType::asSelectArray())[item.course_type]
                             item.action = actionIcons({
                                 'show': '{{ route('admin.student.show', '@') }}'.replace('@', item.id),
                                 @can('student-update')
@@ -59,6 +61,7 @@
                     {data: 'name'},
                     {data: 'center.code'},
                     {data: 'subject.name'},
+                    {data: 'course_type'},
                     {data: 'phone'},
                     {data: 'student_result'},
                     {data: 'roll',searchable:true},
