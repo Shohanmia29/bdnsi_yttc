@@ -167,7 +167,7 @@
         const element = document.getElementById('fullpage2');
         const options = {
             margin: 0,
-            filename: 'certificate.pdf',
+            filename: "{{ $student->name . '_' . $student->roll }}.pdf",
             image: { type: 'jpeg', quality: 0.99 },
             html2canvas: { scale: 2 },
             jsPDF: { unit: 'in', format: 'A3', orientation: 'landscape' }

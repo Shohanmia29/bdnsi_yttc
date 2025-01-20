@@ -305,7 +305,7 @@
     function generate_pdf() {
         var opt = {
             margin: 0,
-            filename: 'myfile.pdf',
+            filename: "{{ $student->name . '_' . $student->roll }}.pdf",
             image: {
                 type: 'jpeg',
                 quality: 0.99
