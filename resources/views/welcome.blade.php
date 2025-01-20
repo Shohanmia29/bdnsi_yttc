@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="hero-slider">
-                        @forelse(\App\Models\Slider::get() as $slider)
+                        @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Slider)->get() as $slider)
                             <div class="hero-single-slider background-image"
                                  style="background-image: url({{$slider->photo}});">
                                 <div class="row justify-content-center">
@@ -129,7 +129,7 @@
 
 
                             <div class="home-sidebar-widget-btn">
-                                <a href="" class="theme-btn">সকল নোটিশ<i class="fi-rr-arrow-right"></i></a>
+                                <a href="{{route('frontendNoticeList')}}" class="theme-btn">সকল নোটিশ<i class="fi-rr-arrow-right"></i></a>
                             </div>
                         </div>
 
@@ -442,82 +442,100 @@
                 <div class="col-12">
                     <div class="gallery-slider">
 
-                        <!-- Single Gallery -->
-                        <div class="single-gallery">
-                            <div class="gallery-img">
+                         @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Gallery)->get() as $gallery )
+                            <div class="single-gallery">
+                                <div class="gallery-img">
 
-                                <img
-                                    src="{{asset('frontend/svg/img/gallery.png')}}"
-                                    alt="Gallery Image"/>
+                                    <img
+                                        src="{{$slider->photo}}"
+                                        alt="Gallery Image"/>
 
-                                <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                    <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                </div>
+                                <div class="gallery-content">
+                                    <h4 class="gallery-content-title">
+                                         {{$slider->title??''}}
+                                    </h4>
+                                </div>
                             </div>
-                            <div class="gallery-content">
-                                <h4 class="gallery-content-title">
-                                    বিদ্যালয়ের সেরা ছাত্র
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="single-gallery">
-                            <div class="gallery-img">
+                        @empty
+                             <div class="single-gallery">
+                                 <div class="gallery-img">
 
-                                <img
-                                    src="{{asset('frontend/svg/img/gallery.png')}}"
-                                    alt="Gallery Image"/>
+                                     <img
+                                         src="{{asset('frontend/svg/img/gallery.png')}}"
+                                         alt="Gallery Image"/>
 
-                                <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
-                            </div>
-                            <div class="gallery-content">
-                                <h4 class="gallery-content-title">
-                                    বিদ্যালয়ের সেরা ছাত্র
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="single-gallery">
-                            <div class="gallery-img">
+                                     <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                 </div>
+                                 <div class="gallery-content">
+                                     <h4 class="gallery-content-title">
+                                         বিদ্যালয়ের সেরা ছাত্র
+                                     </h4>
+                                 </div>
+                             </div>
+                             <div class="single-gallery">
+                                 <div class="gallery-img">
 
-                                <img
-                                    src="{{asset('frontend/svg/img/gallery.png')}}"
-                                    alt="Gallery Image"/>
+                                     <img
+                                         src="{{asset('frontend/svg/img/gallery.png')}}"
+                                         alt="Gallery Image"/>
 
-                                <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
-                            </div>
-                            <div class="gallery-content">
-                                <h4 class="gallery-content-title">
-                                    বিদ্যালয়ের সেরা ছাত্র
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="single-gallery">
-                            <div class="gallery-img">
+                                     <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                 </div>
+                                 <div class="gallery-content">
+                                     <h4 class="gallery-content-title">
+                                         বিদ্যালয়ের সেরা ছাত্র
+                                     </h4>
+                                 </div>
+                             </div>
+                             <div class="single-gallery">
+                                 <div class="gallery-img">
 
-                                <img
-                                    src="{{asset('frontend/svg/img/gallery.png')}}"
-                                    alt="Gallery Image"/>
+                                     <img
+                                         src="{{asset('frontend/svg/img/gallery.png')}}"
+                                         alt="Gallery Image"/>
 
-                                <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
-                            </div>
-                            <div class="gallery-content">
-                                <h4 class="gallery-content-title">
-                                    বিদ্যালয়ের সেরা ছাত্র
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="single-gallery">
-                            <div class="gallery-img">
+                                     <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                 </div>
+                                 <div class="gallery-content">
+                                     <h4 class="gallery-content-title">
+                                         বিদ্যালয়ের সেরা ছাত্র
+                                     </h4>
+                                 </div>
+                             </div>
+                             <div class="single-gallery">
+                                 <div class="gallery-img">
 
-                                <img
-                                    src="{{asset('frontend/svg/img/gallery.png')}}"
-                                    alt="Gallery Image"/>
+                                     <img
+                                         src="{{asset('frontend/svg/img/gallery.png')}}"
+                                         alt="Gallery Image"/>
 
-                                <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
-                            </div>
-                            <div class="gallery-content">
-                                <h4 class="gallery-content-title">
-                                    বিদ্যালয়ের সেরা ছাত্র
-                                </h4>
-                            </div>
-                        </div>
+                                     <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                 </div>
+                                 <div class="gallery-content">
+                                     <h4 class="gallery-content-title">
+                                         বিদ্যালয়ের সেরা ছাত্র
+                                     </h4>
+                                 </div>
+                             </div>
+                             <div class="single-gallery">
+                                 <div class="gallery-img">
+
+                                     <img
+                                         src="{{asset('frontend/svg/img/gallery.png')}}"
+                                         alt="Gallery Image"/>
+
+                                     <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                 </div>
+                                 <div class="gallery-content">
+                                     <h4 class="gallery-content-title">
+                                         বিদ্যালয়ের সেরা ছাত্র
+                                     </h4>
+                                 </div>
+                             </div>
+                         @endforelse
+
 
 
                     </div>
