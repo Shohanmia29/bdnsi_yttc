@@ -35,7 +35,7 @@
             margin: 0;
             padding-top: 16px;
             display: -webkit-box;
-            overflow: hidden;
+            overflow-y: scroll;
             -webkit-line-clamp: 9;
             -webkit-box-orient: vertical;
         }

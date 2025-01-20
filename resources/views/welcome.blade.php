@@ -95,7 +95,7 @@
                                     <p   >{!! \Illuminate\Support\Str::limit(\App\Models\ConfigDictionary::get('main_about_us','Coming Soon'), 500 , '...') !!}</p>
                                 </div>
                                 <div x-show="about==true">
-                                    <p>  {!! \App\Models\ConfigDictionary::get('main_about_us','Coming Soon') !!}</p>
+                                   {!! \App\Models\ConfigDictionary::get('main_about_us','Coming Soon') !!}
                                 </div>
                                 <div class="corner-message-btn">
                                     <button x-on:click="about =! about" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></button>
