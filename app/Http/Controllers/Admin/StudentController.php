@@ -26,7 +26,7 @@ class StudentController extends Controller
 {
     use ChecksPermission;
 
-    protected $skipActions = ['admit', 'certificate'];
+    protected $skipActions = ['admit', 'certificate','certificateWithoutBackground'];
 
     public function admit($id)
     {
@@ -38,6 +38,12 @@ class StudentController extends Controller
     {
         $student = Student::where('id', $id)->firstOrFail();
         return view('admin.student.certificate2', compact('student'));
+    }
+
+    public function certificateWithoutBackground($id)
+    {
+        $student = Student::where('id', $id)->firstOrFail();
+        return view('admin.student.certificate', compact('student'));
     }
 
     public function index(Request $request)
