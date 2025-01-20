@@ -156,7 +156,6 @@
                 <div class="absolute student-result-published capitalize" style="font-size: 18px">
 
                     @if($student->result_publised)
-                        {{ \App\Lib\Helper::numberToText((int)\Carbon\Carbon::make($student->result_publised)->format('d')) }}
                         {{ \Carbon\Carbon::make($student->result_publised)->format('j-F-Y') }}
                     @endif
                 </div>

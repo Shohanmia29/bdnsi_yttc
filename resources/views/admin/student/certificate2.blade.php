@@ -154,9 +154,8 @@
                     {{ $student->gpa($student->result->written??0)?? '' }}
                 </div>
                 <div class="absolute student-result-published capitalize" style="font-size: 18px">
-                @if($student->result_published)
-                        {{ \App\Lib\Helper::numberToText((int)\Carbon\Carbon::make($student->result_published)->format('d')) }}
-                        {{ \Carbon\Carbon::make($student->result_published)->format('j-F-Y') }}
+                    @if($student->result_publised)
+                        {{ \Carbon\Carbon::make($student->result_publised)->format('j-F-Y') }}
                     @endif
                 </div>
             </div>
