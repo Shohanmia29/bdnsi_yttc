@@ -87,7 +87,7 @@
         .mothers-name { top: 54%; left: 41.5%; text-transform: capitalize  ; }
         .center-name { top: 58%; left: 40%; }
         .student-roll { top: 63.2%; left: 39.5%; }
-        .student-subject { top: 64%; left: 57.5%; }
+        .student-subject { top: 63.2%; left: 57.5%; }
         .center-code { top: 66%; left: 87%; }
         .exam-date { top: 68%; left: 50%; font-size: 16px}
         .student-gpa { top: 67.5%; left: 74.5%; }
@@ -103,7 +103,7 @@
             .mothers-name { top: 54%; left: 41.5%; text-transform: capitalize  ; }
             .center-name { top: 58%; left: 40%; }
             .student-roll { top: 63.2%; left: 39.5%; }
-            .student-subject { top: 64%; left: 57.5%; }
+            .student-subject { top: 63.2%; left: 57.5%; }
             .center-code { top: 66%; left: 87%; }
             .exam-date { top: 68%; left: 50%; font-size: 16px}
             .student-gpa { top: 67.5%; left: 74.5%; }
