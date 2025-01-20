@@ -121,7 +121,7 @@
     </style>
 </head>
 <body>
-<div x-data="{ hasBackground: true }">
+<div x-data="{ hasBackground: false }">
     <div class="w-full flex justify-end gap-1 print:hidden py-5 print:py-0">
 {{--        <button onclick="generate_pdf()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100">Download</button>--}}
         <button onclick="window.print()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100">Print</button>
