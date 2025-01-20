@@ -158,7 +158,7 @@
                             <a href="{{route('contactUs')}}">Contact Us</a>
                         </li>
 
-                        <li><a href="">Photo Gallery</a></li>
+                        <li><a href="#gallary">Photo Gallery</a></li>
 
                     </ul>
                 </nav>
@@ -170,7 +170,7 @@
                 <!-- offcanvas-menu end -->
                 <div class="mobile-menu-modal-bottom header-menu-btn">
                      <div class="text-center font-bold py-2">RJSC NO: C-178431</div>
-                    <a href="" target="_blank" class="theme-btn"><span><i class="fi fi-rs-sign-in-alt"></i>Login</span></a>
+                    <a href="{{route('login')}}" target="_blank" class="theme-btn"><span><i class="fi fi-rs-sign-in-alt"></i>Login</span></a>
                 </div>
             </div>
         </div>

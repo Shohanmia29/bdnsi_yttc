@@ -427,7 +427,7 @@
     <!-- End Page Main Area -->
 
     <!-- Gallery Area -->
-    <section class="gallery-area section-padding">
+    <section class="gallery-area section-padding" id="gallary">
         <div class="container">
             <div class="row">
                 <div class="col-12">
