@@ -29,7 +29,7 @@ class SliderController extends Controller
         $validated = $request->validate([
             'title' => 'nullable|string',
             'photo' => 'required|image',
-            'status' => 'required',
+            'type' => 'required',
         ]);
 
           $validated['photo'] =Image::store('photo','upload/slider');
