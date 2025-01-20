@@ -41,11 +41,7 @@
                                 <div class="text-center w-10 pr-2">:  </div>
                                 <div class="w-50">{{$data->gender->key ?? 'N/A'}}</div>
                             </li>
-                            <li class="list-group-item bg-c text-white rounded-2 mb-2 d-flex align-items-center">
-                                <div class="fw-bold w-50">Present Address</div>
-                                <div class="text-center w-10 pr-2">:  </div>
-                                <div class="w-50">{{$data->present_address ?? 'N/A'}}</div>
-                            </li>
+
                             <li class="list-group-item bg-c text-white rounded-2 mb-2 d-flex align-items-center">
                                 <div class="fw-bold w-50">Student Thana</div>
                                 <div class="text-center w-10 pr-2">:  </div>
@@ -54,7 +50,7 @@
                             <li class="list-group-item bg-c text-white rounded-2 mb-2 d-flex align-items-center">
                                 <div class="fw-bold w-50">Student District</div>
                                 <div class="text-center w-10 pr-2">:  </div>
-                                <div class="w-50">{{$data->permanent_address ?? 'N/A'}}</div>
+                                <div class="w-50">{{$data->present_address ?? 'N/A'}}</div>
                             </li>
                             <li class="list-group-item bg-c text-white rounded-2 mb-2 d-flex align-items-center">
                                 <div class="fw-bold w-50">Institute Name</div>
