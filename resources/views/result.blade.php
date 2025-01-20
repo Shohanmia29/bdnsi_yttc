@@ -29,7 +29,7 @@
                  </form>
              @endif
              @if($student)
-                 <div class="w-full my-4">
+                 <div class="w-full my-4 p-2">
                      <x-result :student="$student" />
                  </div>
              @endif

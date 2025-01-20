@@ -27,6 +27,7 @@ Route::get('/course-details/{id}', [HomeController::class,'courseDetails'])->nam
 Route::get('/institute-details/{id}', [HomeController::class,'instituteDetails'])->name('institute.details');
 Route::get('/page', [HomeController::class,'dymamicPage'])->name('dynamicPage');
 Route::get('/all-notice-list', [HomeController::class,'frontendNoticeList'])->name('frontendNoticeList');
+Route::get('/all-notice-list/{id}', [HomeController::class,'noticeDetails'])->name('noticeDetails');
 
 
 

@@ -121,7 +121,7 @@
                                         <p>{{\Illuminate\Support\Str::limit($notice->details,30,$end='...')}}</p>
                                     </div>
                                     <div class="sidebar-widget-list-btn">
-                                        <a href="" target="_blank" class="theme-btn secondary">বিস্তারিত</a>
+                                        <a href="{{route('noticeDetails',$notice->id)}}" target="_blank" class="theme-btn secondary">বিস্তারিত</a>
                                     </div>
                                 </div>
                             @empty
