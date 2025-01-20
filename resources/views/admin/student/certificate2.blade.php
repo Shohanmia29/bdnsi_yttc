@@ -125,9 +125,9 @@
     <div class="w-full flex justify-end gap-1 print:hidden py-5 print:py-0">
         <button onclick="generate_pdf()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100">Download</button>
         <button onclick="window.print()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100">Print</button>
-        <button @click="hasBackground = !hasBackground" class="px-3 py-1 rounded-md bg-green-700 text-slate-100">
-           with Out Background
-        </button>
+        <a   href="{{route('admin.certificateWithoutBackground',$student->id)}}" class="px-3 py-1 rounded-md bg-green-700 text-slate-100">
+            with Out Background
+        </a>
     </div>
     <div class="card-body min-h-screen" id="fullpage2">
         <div :class="{ 'no-background': !hasBackground }"

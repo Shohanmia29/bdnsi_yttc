@@ -79,20 +79,20 @@
             position: absolute;
         }
 
-        .student-id { top: 39%; left: 33%; }
+        .student-id { top: 39%; left: 33.5%; }
         .student-registration { top: 37%; left: 81.2%; }
-        .student-session { top: 41.2%; left: 81%;font-size: 18px }
-        .student-name { top: 46.2%; left: 44.5%; }
-        .fathers-name { top: 50.7%; left: 43.5%; text-transform: capitalize  ; }
-        .mothers-name { top: 55%; left: 41.5%; text-transform: capitalize  ; }
-        .center-name { top: 59.3%; left: 40%; }
-        .student-roll { top: 64%; left: 36%; }
+        .student-session { top: 41.6%; left: 81%;font-size: 18px }
+        .student-name { top: 46%; left: 44.5%; }
+        .fathers-name { top: 50%; left: 43.5%; text-transform: capitalize  ; }
+        .mothers-name { top: 54.7%; left: 41.5%; text-transform: capitalize  ; }
+        .center-name { top: 59%; left: 40%; }
+        .student-roll { top: 64%; left: 38.5%; }
         .student-subject { top: 63.7%; left: 57.5%; }
         .center-code { top: 66%; left: 87%; }
-        .exam-date { top: 68.2%; left: 47.2%;  }
-        .student-gpa { top: 68.5%; left: 75%; }
+        .exam-date { top: 68.5%; left: 48.7%; font-size: 16px}
+        .student-gpa { top: 68%; left: 74.5%; }
         .student-result-published { top: 85%; left: 24%; }
-        .qr { top: 57%; left: 11.5%; }
+        .qr { top: 57%; left: 14%; }
 
         @media screen and (min-width: 740px) {
             .student-id { top: 39%; left: 33%; }
@@ -121,10 +121,12 @@
     </style>
 </head>
 <body>
-<div x-data="{ hasBackground: false }">
-    <div class="w-full flex justify-end gap-1 print:hidden py-5 px-2 print:py-0">
-        <button  onclick="window.print()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100">
-            Print
+<div x-data="{ hasBackground: true }">
+    <div class="w-full flex justify-end gap-1 print:hidden py-5 print:py-0">
+{{--        <button onclick="generate_pdf()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100">Download</button>--}}
+        <button onclick="window.print()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100">Print</button>
+        <button @click="hasBackground = !hasBackground" class="px-3 py-1 rounded-md bg-green-700 text-slate-100">
+            with Out Background
         </button>
     </div>
     <div class="card-body min-h-screen" id="fullpage2">
