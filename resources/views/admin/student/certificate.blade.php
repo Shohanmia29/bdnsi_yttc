@@ -91,7 +91,7 @@
         .center-code { top: 66%; left: 87%; }
         .exam-date { top: 68%; left: 50%; font-size: 16px}
         .student-gpa { top: 67.2%; left: 74.5%; }
-        .student-result-published { top: 85%; left: 24%; }
+        .student-result-published { top: 85%; left: 24%; font-size: 12px }
         .qr { top: 57%; left: 15.5%; }
 
         @media screen and (min-width: 740px) {
@@ -107,7 +107,7 @@
             .center-code { top: 66%; left: 87%; }
             .exam-date { top: 68%; left: 50%; font-size: 16px}
             .student-gpa { top: 67.2%; left: 74.5%; }
-            .student-result-published { top: 85%; left: 24%; }
+            .student-result-published { top: 85%; left: 24%; font-size: 12px }
             .qr { top: 57%; left: 15.5%; }
         }
         .no-background {
@@ -154,9 +154,10 @@
                     {{ $student->gpa($student->result->written??0)?? '' }}
                 </div>
                 <div class="absolute student-result-published capitalize" style="font-size: 18px">
-                    @if($student->result_published)
-                        {{ \App\Lib\Helper::numberToText((int)\Carbon\Carbon::make($student->result_published)->format('d')) }}
-                        {{ \Carbon\Carbon::make($student->result_published)->format('j-F-Y') }}
+
+                    @if($student->result_publised)
+                        {{ \App\Lib\Helper::numberToText((int)\Carbon\Carbon::make($student->result_publised)->format('d')) }}
+                        {{ \Carbon\Carbon::make($student->result_publised)->format('j-F-Y') }}
                     @endif
                 </div>
             </div>
