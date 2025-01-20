@@ -91,7 +91,7 @@
         .center-code { top: 66%; left: 87%; }
         .exam-date { top: 68%; left: 50%; font-size: 16px}
         .student-gpa { top: 67.2%; left: 74.5%; }
-        .student-result-published { top: 85%; left: 24%; font-size: 12px }
+        .student-result-published { top: 84%; left: 26%; font-size: 10px }
         .qr { top: 57%; left: 15.5%; }
 
         @media screen and (min-width: 740px) {
@@ -107,7 +107,7 @@
             .center-code { top: 66%; left: 87%; }
             .exam-date { top: 68%; left: 50%; font-size: 16px}
             .student-gpa { top: 67.2%; left: 74.5%; }
-            .student-result-published { top: 85%; left: 24%; font-size: 12px }
+            .student-result-published { top: 84%; left: 26%; font-size: 10px }
             .qr { top: 57%; left: 15.5%; }
         }
         .no-background {
