@@ -205,7 +205,7 @@
                         <span class="topbar-update-notice-title">Notice</span>
 
 
-                            <marquee behavior="" direction="left">{{\App\Models\ConfigDictionary::get('notice','hello owrld')}}</marquee>
+                            <marquee behavior="" direction="left">{{\App\Models\ConfigDictionary::get('notice','coming soon')}}</marquee>
 
                     </div>
                 </div>
