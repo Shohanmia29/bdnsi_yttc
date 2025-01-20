@@ -401,28 +401,24 @@
 
                         <ul class="footer-social-list">
                             <li>
-                                <a href="" target="_blank"><img src="{{asset('frontend/svg/img/facebook.png')}}" alt="#" /></a>
+                                <a href="{{\App\Models\ConfigDictionary::get('facebook_link')}}" target="_blank"><img src="{{asset('frontend/svg/img/facebook.png')}}" alt="#" /></a>
                             </li>
                             <li>
                                 <a href="#" target="_blank"><img src="{{asset('frontend/svg/img/messenger.png')}}" alt="#" /></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank"><img src="{{asset('frontend/svg/img/twitter.png')}}" alt="#" /></a>
+                                <a href="{{\App\Models\ConfigDictionary::get('twitter_link')}}" target="_blank"><img src="{{asset('frontend/svg/img/twitter.png')}}" alt="#" /></a>
+                            </li>
+
+                            <li>
+                                <a href="{{\App\Models\ConfigDictionary::get('linkedin_link')}}" target="_blank"><img src="{{asset('frontend/svg/img/linkedin.png')}}" alt="#" /></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank"><img src="{{asset('frontend/svg/img/instragram.png')}}" alt="#" /></a>
+                                <a href="https://wa.link/mhalyu" target="_blank"><img src="{{asset('frontend/svg/img/whatapp.png')}}" alt="#" /></a>
                             </li>
+
                             <li>
-                                <a href="#" target="_blank"><img src="{{asset('frontend/svg/img/linkedin.png')}}" alt="#" /></a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank"><img src="{{asset('frontend/svg/img/whatapp.png')}}" alt="#" /></a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank"><img src="{{asset('frontend/svg/img/telegram.png')}}" alt="#" /></a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank"><img src="{{asset('frontend/svg/img/youtube.png')}}" alt="#" /></a>
+                                <a href="{{\App\Models\ConfigDictionary::get('youtube_link')}}" target="_blank"><img src="{{asset('frontend/svg/img/youtube.png')}}" alt="#" /></a>
                             </li>
                         </ul>
                     </div>
