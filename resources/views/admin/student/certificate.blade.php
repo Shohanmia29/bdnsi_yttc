@@ -79,7 +79,7 @@
             position: absolute;
         }
 
-        .student-id { top: 38%; left: 30%; }
+        .student-id { top: 38%; left: 30.5%; }
         .student-registration { top: 36.7%; left: 82%; }
         .student-session { top: 41.2%; left: 82%;font-size: 18px }
         .student-name { top: 45.7%; left: 44.5%; }
@@ -95,7 +95,7 @@
         .qr { top: 57%; left: 11%; }
 
         @media screen and (min-width: 740px) {
-            .student-id { top: 38%; left: 30%; }
+            .student-id { top: 38%; left: 30.5%; }
             .student-registration { top: 36.7%; left: 82%; }
             .student-session { top: 41.2%; left: 82%;font-size: 18px }
             .student-name { top: 45.7%; left: 44.5%; }
