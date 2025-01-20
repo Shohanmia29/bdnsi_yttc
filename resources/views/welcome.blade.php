@@ -148,127 +148,9 @@
                         </div>
                     </div>
                 </div>
-                    <div class="d-md-none">
-                        <div class="row">
 
-                            @forelse($teams as $team)
-                                <div class="col-12">
-                                    <div class="single-corner-message">
-                                        <div class="corner-message-top">
-                                            <div class="corner-message-img">
-                                                <img
-                                                    src="{{$team->image??''}}"
-                                                    alt="#"/>
 
-                                            </div>
-                                            <div class="corner-message-info">
-                                                <img
-                                                    src="{{asset('frontend/svg/img/team.png')}}"
-                                                    alt="#"/>
-                                                <h4 class="corner-message-info-title">
-                                                    {{$team->designation??''}}
-                                                </h4>
-                                                <span class="c-message-title-seperetor"></span>
-                                                <p class="corner-message-info-name">
-                                                    {{$team->name??''}}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div   x-data="{description:false}" >
-
-                                            <div x-show="description==false">
-                                                <p   >{!! \Illuminate\Support\Str::limit($team->description, 500 , '...') !!}</p>
-                                            </div>
-                                            <div x-show="description==true">
-                                                <p   >{!! $team->description !!}</p>
-                                            </div>
-                                            <div class="corner-message-btn">
-                                                <button x-on:click="description =! description" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @empty
-                                <div class="col-12">
-                                    <div class="single-corner-message">
-                                        <div class="corner-message-top">
-                                            <div class="corner-message-img">
-                                                <img
-                                                    src="{{asset('frontend/svg/img/team2.jpg')}}"
-                                                    alt="#"/>
-
-                                            </div>
-                                            <div class="corner-message-info">
-                                                <img
-                                                    src="{{asset('frontend/svg/img/team.png')}}"
-                                                    alt="#"/>
-                                                <h4 class="corner-message-info-title">
-                                                    সভাপতির বাণী
-                                                </h4>
-                                                <span class="c-message-title-seperetor"></span>
-                                                <p class="corner-message-info-name">
-                                                    মোঃ জাফর উল্লাহ্
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="corner-message-bottom">
-                                            <p>আস্সালামু আলাইকুম সম্মানিত অভিভাবক, শিক্ষক-শিক্ষিকা এবং শিক্ষার্থীবৃন্দ, আজকের এই
-                                                দিনে আপনাদের সকলকে আমার আন্তরিক শুভেচ্ছা ও অভিনন্দন। শিক্ষা একটি জাতির মেরুদণ্ড।
-                                                একটি শিক্ষিত জাতিই পারে একটি উন্নত ও সমৃদ্ধ
-                                                সমাজ গড়ে তুলতে। এই বিশ্বাসের আলোকে আমরা আমাদের স্কুলটিকে একটি আদর্শ শিক্ষা
-                                                প্রতিষ্ঠান হিসেবে গড়ে তুলতে কাজ করে যাচ্ছি। আমাদের স্কুলটিতে শিক্ষার্থীদের জন্য
-                                                মানসম্মত শিক্ষা নিশ্চিত করার লক্ষ্যে আমরা
-                                                বিভিন্ন পদক্ষেপ গ্রহণ করেছি। আমাদের শিক্ষক-শিক্ষিকাবৃন্দ অত্যন্ত দক্ষ ও অভিজ্ঞ।
-                                                তারা শিক্ষার্থীদের প্রতিটি প্রশ্নের উত্তর দ...
-                                            <div class="corner-message-btn">
-                                                <a href="" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="single-corner-message">
-                                        <div class="corner-message-top">
-                                            <div class="corner-message-img">
-                                                <img
-                                                    src="{{asset('frontend/svg/img/team2.jpg')}}"
-                                                    alt="#"/>
-
-                                            </div>
-                                            <div class="corner-message-info">
-                                                <img
-                                                    src="{{asset('frontend/svg/img/team.png')}}"
-                                                    alt="#"/>
-                                                <h4 class="corner-message-info-title">
-                                                    অধ্যক্ষের বাণী
-                                                </h4>
-                                                <span class="c-message-title-seperetor"></span>
-                                                <p class="corner-message-info-name">
-                                                    মোঃ মোস্তফা কামাল ভূঁইয়া
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="corner-message-bottom">
-                                            <p>প্রিয় শিক্ষার্থীবৃন্দ, আজ আমি আপনাদের সামনে দাঁড়িয়েছি একজন শিক্ষক হিসেবে, একজন
-                                                অভিভাবক হিসেবে, এবং একজন বন্ধু হিসেবে। আমি আপনাদেরকে বলতে চাই যে, আপনারা সকলেই
-                                                সক্ষম। আপনারা সকলেই আপনার সম্পূর্ণ সম্ভাবনায়
-                                                পৌঁছাতে পারেন। আপনাদেরকে শুধুমাত্র কঠোর পরিশ্রম করতে হবে, সৎ হতে হবে, এবং
-                                                অন্যদের প্রতি শ্রদ্ধাশীল হতে হবে। আপনাদেরকে নিজের উপর বিশ্বাস রাখতে হবে এবং কখনই
-                                                থেমে থাকতে হবে না।<br/>
-                                                <br/> আমি আপনাদের জন্য শুভকামনা জানাই। আমি আশা করি আপনারা সকলেই একজন ভালো মানুষ
-                                                হিসেবে গড়ে উঠবেন এবং আপনারা আপনার লক্ষ্য অর্জনে সফল হবেন। ...
-                                            <div class="corner-message-btn">
-                                                <a href="" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforelse
-                        </div>
-                    </div>
-                    </div>
-                 <div>
-                     <div class="d-none d-md-block">
+                     <div class=" ">
                           <div>
                               <div class="row   ">
                                   <div class="col-12">
@@ -419,7 +301,7 @@
                               </div>
                           </div>
                      </div>
-                 </div>
+
             </div>
             <!-- Teachers Area -->
         </div>
