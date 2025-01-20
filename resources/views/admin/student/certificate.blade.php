@@ -82,15 +82,15 @@
         .student-id { top: 39%; left: 35%; }
         .student-registration { top: 37%; left: 81.7%; }
         .student-session { top: 41.6%; left: 81.5%;font-size: 18px }
-        .student-name { top: 46.3%; left: 44.5%; }
+        .student-name { top: 46.1%; left: 44.5%; }
         .fathers-name { top: 50%; left: 43.5%; text-transform: capitalize  ; }
         .mothers-name { top: 54%; left: 41.5%; text-transform: capitalize  ; }
         .center-name { top: 58%; left: 40%; }
-        .student-roll { top: 63.2%; left: 39.5%; }
-        .student-subject { top: 63.2%; left: 57.5%; }
+        .student-roll { top: 63%; left: 39.5%; }
+        .student-subject { top: 63%; left: 57.5%; }
         .center-code { top: 66%; left: 87%; }
         .exam-date { top: 68%; left: 50%; font-size: 16px}
-        .student-gpa { top: 67.5%; left: 74.5%; }
+        .student-gpa { top: 67.2%; left: 74.5%; }
         .student-result-published { top: 85%; left: 24%; }
         .qr { top: 57%; left: 15.5%; }
 
@@ -98,15 +98,15 @@
             .student-id { top: 39%; left: 35%; }
             .student-registration { top: 37%; left: 81.7%; }
             .student-session { top: 41.6%; left: 81.5%;font-size: 18px }
-            .student-name { top: 46.3%; left: 44.5%; }
+            .student-name { top: 46.1%; left: 44.5%; }
             .fathers-name { top: 50%; left: 43.5%; text-transform: capitalize  ; }
             .mothers-name { top: 54%; left: 41.5%; text-transform: capitalize  ; }
             .center-name { top: 58%; left: 40%; }
-            .student-roll { top: 63.2%; left: 39.5%; }
-            .student-subject { top: 63.2%; left: 57.5%; }
+            .student-roll { top: 63%; left: 39.5%; }
+            .student-subject { top: 63%; left: 57.5%; }
             .center-code { top: 66%; left: 87%; }
             .exam-date { top: 68%; left: 50%; font-size: 16px}
-            .student-gpa { top: 67.5%; left: 74.5%; }
+            .student-gpa { top: 67.2%; left: 74.5%; }
             .student-result-published { top: 85%; left: 24%; }
             .qr { top: 57%; left: 15.5%; }
         }
