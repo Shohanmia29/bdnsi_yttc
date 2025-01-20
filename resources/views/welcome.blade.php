@@ -329,14 +329,14 @@
                                 <div class="gallery-img">
 
                                     <img
-                                        src="{{$slider->photo}}"
+                                        src="{{$gallery->photo}}"
                                         alt="Gallery Image"/>
 
                                     <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
                                 </div>
                                 <div class="gallery-content">
                                     <h4 class="gallery-content-title">
-                                         {{$slider->title??''}}
+                                         {{$gallery->title??''}}
                                     </h4>
                                 </div>
                             </div>
