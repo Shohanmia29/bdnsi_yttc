@@ -380,7 +380,7 @@
                     <div class="data-label">Grade Point </div>
                     <div>:</div>
                     <div class="data-value  "    >
-                        ({{$student->t_written_gpa()}} In the Scale Of 4.00)
+                        {{$student->t_written_gpa()}} (In the Scale Of 4.00)
                     </div>
                 </div>
                 <div class="data-item-wrap">

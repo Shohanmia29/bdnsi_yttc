@@ -76,8 +76,8 @@
                             <td class="border border-gray-300 text-center px-4 py-2">{{$result->viva ??''}}</td>
                             <td class="border border-gray-300 text-center px-4 py-2">{{$result->written+ $result->practical +$result->viva }}</td>
                             <td class="border border-gray-300 text-center px-4 py-2">{{config('site.course_type.'.$student->course_type??'')}}</td>
-                            <td class="border border-gray-300 text-center px-4 py-2">{{$student->written($result->written)}}</td>
-                            <td class="border border-gray-300 text-center px-4 py-2">{{$student->gpa($result->written)}}</td>
+                            <td class="border border-gray-300 text-center px-4 py-2">{{$student->t_written($result->written)}}</td>
+                            <td class="border border-gray-300 text-center px-4 py-2">{{$student->t_written_gpa($result->written)}}</td>
                         </tr>
                         </tbody>
                     </table>
