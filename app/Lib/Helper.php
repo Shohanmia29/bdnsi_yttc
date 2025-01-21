@@ -124,9 +124,10 @@ class Helper
 
     public static function sendSms($phone, $message)
     {
+
         $api_key = config('site.bluck_api_key');
         $secret_key = config('site.bluck_secret_key');
-        $sender_id = '';
+        $sender_id = 'YTTC';
 
         $url = "https://smpp.revesms.com:7790/sendtext?apikey=" . urlencode($api_key) .
             "&secretkey=" . urlencode($secret_key) .
@@ -136,9 +137,9 @@ class Helper
 
         if (!empty($api_key)) {
             $curl = curl_init($url);
+
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
             $result = curl_exec($curl);
-
             if (curl_errno($curl)) {
                 $error_msg = curl_error($curl);
 

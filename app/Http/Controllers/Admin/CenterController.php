@@ -62,8 +62,11 @@ class CenterController extends Controller
 
     public function update(CenterUpdateRequest $request, Center $center)
     {
+         DB::transaction(function () use ($request, $center){
+             $request->update($center);
 
-        return response()->report($request->update($center), 'Center updated successfully');
+         });
+        return response()->report($center, 'Center updated successfully');
     }
 
     public function destroy(Center $center)
