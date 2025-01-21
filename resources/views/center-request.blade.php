@@ -115,7 +115,7 @@
 
                     <!-- Mobile -->
                     <div class="col-12 col-md-6 mb-3">
-                        <x-frontend.input class="form-control" name="mobile" pattern="\d{11}" x-on:input="$event.target.setCustomValidity($event.target.validity.patternMismatch ? 'Phone number should be 11 digits' : '')" />
+                        <x-frontend.input class="form-control" required name="mobile" pattern="\d{11}" x-on:input="$event.target.setCustomValidity($event.target.validity.patternMismatch ? 'Phone number should be 11 digits' : '')" />
                     </div>
 
                     <!-- Email -->
