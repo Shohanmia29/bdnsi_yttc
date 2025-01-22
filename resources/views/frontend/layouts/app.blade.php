@@ -21,7 +21,8 @@
     <link rel="apple-touch-icon" href="{{ asset('frontend/logo.png') }}?v=4" />
     <meta name="msapplication-TileImage" content="{{ asset('frontend/logo.png') }}?v=4" />
     <meta name="google-site-verification" content="Z0nEijotHP7ZORKAfkTDJrSIefDv4G3NB5gaq9wngsE" />
-    <!-- Google tag (gtag.js) -->
+    <meta name="description"  content="Young Technical Training Center offers quality education in Bangladesh with modern methods, expert teachers,& diverse programs. join now to shape your future!">
+    <link rel ="canonical" href="https://www.ytte.com.bd"/>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J104V2KMHD"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
