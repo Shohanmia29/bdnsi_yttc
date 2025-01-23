@@ -56,26 +56,6 @@ class CenterUpdateRequest extends FormRequest
 
         $validated['code'] = $validated['code'] ?? random_int(111111, 999999);
 
-        if($this->hasFile('photo')){
-            Image::delete($center, 'photo');
-            $validated['photo'] = Image::store('photo','upload/center/photo');
-        }
-
-        if($this->hasFile('authority_signature')){
-            Image::delete($center, 'authority_signature');
-            $validated['authority_signature'] = Image::store('authority_signature','upload/center/authority_signature');
-        }
-
-        if($this->hasFile('nid_photo')){
-            Image::delete($center, 'nid_photo');
-            $validated['nid_photo'] = Image::store('nid_photo','upload/center/nid_photo');
-        }
-
-        if($this->hasFile('trade_license')){
-            Image::delete($center, 'trade_license');
-            $validated['trade_license'] = Image::store('trade_license','upload/center/trade_license');
-        }
-
         if (User::where('center_id',$center->id)->count() > 0){
             User::where('center_id',$center->id)->first()->update(['password'=> Hash::make($this->password)]);
         }

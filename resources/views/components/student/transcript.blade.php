@@ -220,7 +220,7 @@
 
 <body>
 <div class="print_btn">
-{{--    <button type="button" class="btn btn-primary px-5 mx-4" onclick="window.print()">Print</button>--}}
+    <button type="button" class="btn btn-primary px-5 mx-4" onclick="window.print()">Print</button>
     <button onclick="generate_pdf()" class="btn btn-secondary">Download</button>
     <a type="button" class="btn btn-warning px-5 mx-4" href="">Back</a>
 </div>

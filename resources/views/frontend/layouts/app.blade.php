@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Young Technical Training</title>
-    <link rel="icon" href="{{asset('frontend/logo2.png')}}?v=2" />
+    <link rel="icon" href="{{asset('frontend/logo2.png')}}?v=23" />
 
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/bootstrap.min.css')}}?v=2" />
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/animate.min.css')}}?v=2" />
@@ -16,10 +16,10 @@
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/uicons.css')}}?v=2" />
     <link rel="stylesheet" href="{{asset('frontend/ss/toastr.min.css')}}?v=2" />
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}?v=2" />
-    <link rel="icon" type="image/png" href="{{ asset('frontend/logo.png') }}?v=2">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/logo.png') }}?v=4">
-    <link rel="apple-touch-icon" href="{{ asset('frontend/logo.png') }}?v=4" />
-    <meta name="msapplication-TileImage" content="{{ asset('frontend/logo.png') }}?v=4" />
+    <link rel="icon" type="image/png" href="{{ asset('frontend/logo2.png') }}?v=22">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/logo2.png') }}?v=43">
+    <link rel="apple-touch-icon" href="{{ asset('frontend/logo2.png') }}?v=42" />
+    <meta name="msapplication-TileImage" content="{{ asset('frontend/logo2.png') }}?v=43" />
     <meta name="google-site-verification" content="Z0nEijotHP7ZORKAfkTDJrSIefDv4G3NB5gaq9wngsE" />
     <meta name="description"  content="Young Technical Training Center offers quality education in Bangladesh with modern methods, expert teachers,& diverse programs. join now to shape your future!">
     <link rel ="canonical" href="https://www.ytte.com.bd"/>
