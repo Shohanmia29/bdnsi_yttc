@@ -79,8 +79,11 @@ class StudentController extends Controller
             'course_type' => ['required',Rule::in(CourseType::asArray())],
         ]);
 
+        $validated['roll'] = $validated['roll'] ?? Student::getLastFreeRoll();
+        $validated['registration'] = $validated['registration'] ?? Student::getLastFreeRegistration();
         $validated['center_id'] = Auth::user()->center_id;
         $validated['status'] = StudentStatus::Pending;
+
 
         return response()->report(Student::create($validated), 'Student Created successfully');
     }
