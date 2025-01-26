@@ -98,14 +98,14 @@
 <body>
 
 <!-- Preloader  -->
-<div id="preloader">
+{{--<div id="preloader">
     <div class="preloader-main">
         <div></div>
         <div></div>
         <div></div>
         <div></div>
     </div>
-</div>
+</div>--}}
 <!-- End Preloader  -->
 
 <!-- Back to top start -->
