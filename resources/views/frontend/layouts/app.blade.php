@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Young Technical Training</title>
-    <link rel="icon" href="{{asset('frontend/logo2.png')}}?v=23" />
+    <title>Young Technical Training Center | Technical Education In Bd</title>
+    <link rel="icon" href="{{asset('frontend/logo.jpg')}}?v=223" />
 
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/bootstrap.min.css')}}?v=2" />
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/animate.min.css')}}?v=2" />
@@ -16,13 +16,12 @@
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/uicons.css')}}?v=2" />
     <link rel="stylesheet" href="{{asset('frontend/ss/toastr.min.css')}}?v=2" />
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}?v=2" />
-    <link rel="icon" type="image/png" href="{{ asset('frontend/logo2.png') }}?v=22">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/logo2.png') }}?v=43">
-    <link rel="apple-touch-icon" href="{{ asset('frontend/logo2.png') }}?v=42" />
-    <meta name="msapplication-TileImage" content="{{ asset('frontend/logo2.png') }}?v=43" />
+    <link rel="icon" type="image/png" href="{{ asset('frontend/logo.jpg')}}?v=223">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/logo.jpg')}}?v=223">
+    <link rel="apple-touch-icon" href="{{ asset('frontend/logo.jpg')}}?v=223" />
+    <meta name="msapplication-TileImage" content="{{ asset('frontend/logo.jpg')}}?v=223" />
     <meta name="google-site-verification" content="Z0nEijotHP7ZORKAfkTDJrSIefDv4G3NB5gaq9wngsE" />
     <meta name="description"  content="Young Technical Training Center offers quality education in Bangladesh with modern methods, expert teachers,& diverse programs. join now to shape your future!">
-    <link rel ="canonical" href="https://www.ytte.com.bd"/>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J104V2KMHD"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -197,6 +196,9 @@
 
 
 <!-- Topbar Area -->
+
+
+
 <div class="topbar-area">
     <div class="container">
         <div class="row align-items-center">
@@ -302,7 +304,7 @@
 <!-- End Header Area -->
 
 {{$slot}}
-
+<h1  style="opacity: 0">Young Technical Training Center | Technical Education In Bd</h1>
 
 <!-- Footer Area -->
 <footer class="footer-area">
