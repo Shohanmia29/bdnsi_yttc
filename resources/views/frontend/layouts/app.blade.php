@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="ZXX">
+<html lang="en" dir="ltr" data-bs-theme="auto">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -21,7 +21,8 @@
     <link rel="apple-touch-icon" href="{{ asset('frontend/logo.jpg')}}?v=223" />
     <meta name="msapplication-TileImage" content="{{ asset('frontend/logo.jpg')}}?v=223" />
     <meta name="google-site-verification" content="Z0nEijotHP7ZORKAfkTDJrSIefDv4G3NB5gaq9wngsE" />
-    <meta name="description"  content="Young Technical Training Center offers quality education in Bangladesh with modern methods, expert teachers,& diverse programs. join now to shape your future!">
+    <meta name="description" content="Young Technical Training Center offers quality education in Bangladesh with modern methods, expert teachers, & diverse programs. Join now to shape your future!">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J104V2KMHD"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
