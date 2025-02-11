@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/nice-select.min.css')}}?v=2" />
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/icofont.css')}}?v=2" />
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/uicons.css')}}?v=2" />
-    <link rel="stylesheet" href="{{asset('frontend/ss/toastr.min.css')}}?v=2" />
+{{--    <link rel="stylesheet" href="{{asset('frontend/css/toastr.min.css')}}?v=2" />--}}
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}?v=2" />
     <link rel="icon" type="image/png" href="{{ asset('frontend/logo.jpg')}}?v=223">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/logo.jpg')}}?v=223">
