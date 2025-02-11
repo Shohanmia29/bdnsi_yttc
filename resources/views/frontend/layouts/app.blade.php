@@ -419,7 +419,7 @@
                             </li>
 
                             <li>
-                                <a href="https://wa.link/mhalyu" target="_blank"><img src="{{asset('frontend/svg/img/whatapp.png')}}" alt="#" /></a>
+                                <a href="https://wa.link/focee3" target="_blank"><img src="{{asset('frontend/svg/img/whatapp.png')}}" alt="#" /></a>
                             </li>
 
                             <li>
