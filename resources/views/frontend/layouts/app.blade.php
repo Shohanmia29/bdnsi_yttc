@@ -214,7 +214,7 @@
                             <div class="topbar-school-info d-flex gap-1">
                                 <div class="dropdown">
                                     <button class="btn btn-light dropdown-toggle" type="button"   data-bs-toggle="dropdown" aria-expanded="false">
-                                        {{ strtoupper(session('locale')) == 'EN' ? 'English' : (strtoupper(session('locale')) == 'BN' ? 'বাংলা' : (strtoupper(session('locale')) == 'AR' ? 'اللغة' : ''))}}
+                                        {{ strtoupper(session('locale','en')) == 'EN' ? 'English' : (strtoupper(session('locale')) == 'BN' ? 'বাংলা' : (strtoupper(session('locale')) == 'AR' ? 'اللغة' : ''))}}
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                                         <li class="w-100"><a class="dropdown-item {{ session('locale') == 'en' ? 'active' : '' }}" href="#" onclick="changeLanguage('en')">English</a></li>
@@ -292,7 +292,7 @@
                              <!-- Mobile Menu Button -->
                              <div class="dropdown d-md-none">
                                  <button class="btn btn-light dropdown-toggle" type="button"   data-bs-toggle="dropdown" aria-expanded="false">
-                                     {{ strtoupper(session('locale')) == 'EN' ? 'English' : (strtoupper(session('locale')) == 'BN' ? 'বাংলা' : (strtoupper(session('locale')) == 'AR' ? 'اللغة' : ''))}}
+                                     {{ strtoupper(session('locale','en')) == 'EN' ? 'English' : (strtoupper(session('locale')) == 'BN' ? 'বাংলা' : (strtoupper(session('locale')) == 'AR' ? 'اللغة' : ''))}}
                                  </button>
                                  <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                                      <li class="w-100"><a class="dropdown-item {{ session('locale') == 'en' ? 'active' : '' }}" href="#" onclick="changeLanguage('en')">English</a></li>
