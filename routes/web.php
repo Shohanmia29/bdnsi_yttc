@@ -1,9 +1,12 @@
 <?php
 
 use App\Models\Student;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,6 +86,20 @@ Route::get('student-phone-update-link',function (){
 });
 
 
+Route::get('/lang-change', function (Request $request) {
+    $locale = $request->input('locale');
+    if (in_array($locale, ['en', 'bn', 'ar'])) {
+        Session::put('locale', $locale);
+        App::setLocale($locale);
+    }
+
+    return redirect()->back();
+});
+
+
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
 //require __DIR__.'/student.php'; student panel
+
+
+

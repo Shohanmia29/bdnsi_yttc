@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/nice-select.min.css')}}?v=2" />
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/icofont.css')}}?v=2" />
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/uicons.css')}}?v=2" />
+
 {{--    <link rel="stylesheet" href="{{asset('frontend/css/toastr.min.css')}}?v=2" />--}}
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}?v=2" />
     <link rel="icon" type="image/png" href="{{ asset('frontend/logo.jpg')}}?v=223">
@@ -138,28 +139,28 @@
                 <nav id="offcanvas-menu" class="navigation offcanvas-menu">
                     <ul id="nav mobile-nav" class="list-none offcanvas-men-list">
                         <li class="">
-                            <a href="{{route('all_course')}}">Courses</a>
+                            <a href="{{route('all_course')}}">{{__t('Courses')}}</a>
                         </li>
                         <li class="">
-                            <a href="{{route('verifiedInstitute')}}">Verified Institute </a>
+                            <a href="{{route('verifiedInstitute')}}">{{__t('Verified Institute')}} </a>
                         </li>
                         <li class="">
-                            <a href="{{route('successStudent')}}">Success Students </a>
+                            <a href="{{route('successStudent')}}">{{__t('Success Students')}} </a>
                         </li>
                         <li class="">
-                            <a href="{{route('result')}}">Student Result</a>
+                            <a href="{{route('result')}}">{{__t('Student Result')}}</a>
                         </li>
                         <li class="">
-                            <a href="{{route('center-request.create')}}">Institute Apply</a>
+                            <a href="{{route('center-request.create')}}">{{__t('Institute Apply')}}</a>
                         </li>
                         <li class="">
-                            <a href="{{route('login')}}">Institute Login</a>
+                            <a href="{{route('login')}}">{{__t('Institute Login')}}</a>
                         </li>
                         <li class="">
-                            <a href="{{route('contactUs')}}">Contact Us</a>
+                            <a href="{{route('contactUs')}}">{{__t('Contact Us')}}</a>
                         </li>
 
-                        <li><a href="#gallary">Photo Gallery</a></li>
+                        <li><a href="#gallary">{{__t('Photo Gallery')}}</a></li>
 
                     </ul>
                 </nav>
@@ -171,7 +172,7 @@
                 <!-- offcanvas-menu end -->
                 <div class="mobile-menu-modal-bottom header-menu-btn">
                      <div class="text-center font-bold py-2">RJSC NO: C-178431</div>
-                    <a href="{{route('login')}}" target="_blank" class="theme-btn"><span><i class="fi fi-rs-sign-in-alt"></i>Login</span></a>
+                    <a href="{{route('login')}}" target="_blank" class="theme-btn"><span><i class="fi fi-rs-sign-in-alt"></i>{{__t('Login')}}</span></a>
                 </div>
             </div>
         </div>
@@ -193,12 +194,7 @@
 @endphp--}}
 
 
-
-
-
 <!-- Topbar Area -->
-
-
 
 <div class="topbar-area">
     <div class="container">
@@ -207,10 +203,7 @@
                 <div class="topbar-left">
                     <div class="topbar-update-notice">
                         <span class="topbar-update-notice-title">Notice</span>
-
-
                             <marquee behavior="" direction="left">{{\App\Models\ConfigDictionary::get('notice','coming soon')}}</marquee>
-
                     </div>
                 </div>
             </div>
@@ -218,7 +211,18 @@
                 <div class="topbar-right">
                     <div class="topbar-school-info">
                         <div class="topbar-right">
-                            <div class="topbar-school-info">
+                            <div class="topbar-school-info d-flex gap-1">
+                                <div class="dropdown">
+                                    <button class="btn btn-light dropdown-toggle" type="button"   data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{ strtoupper(session('locale')) == 'EN' ? 'English' : (strtoupper(session('locale')) == 'BN' ? 'বাংলা' : (strtoupper(session('locale')) == 'AR' ? 'اللغة' : ''))}}
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                        <li class="w-100"><a class="dropdown-item {{ session('locale') == 'en' ? 'active' : '' }}" href="#" onclick="changeLanguage('en')">English</a></li>
+                                        <li class="w-100"><a class="dropdown-item {{ session('locale') == 'bn' ? 'active' : '' }}" href="#" onclick="changeLanguage('bn')">বাংলা</a></li>
+                                        <li class="w-100"><a class="dropdown-item {{ session('locale') == 'ar' ? 'active' : '' }}" href="#" onclick="changeLanguage('ar')">اللغة</a></li>
+                                    </ul>
+                                </div>
+
                                 <ul class="topbar-school-info-list">
                                     <li>RJSC NO: <span>C-178431</span></li>
                                 </ul>
@@ -250,36 +254,32 @@
                                     <nav class="navigation">
                                         <ul class="header-menu-list">
                                             <li class="active">
-                                                <a href="{{route('all_course')}}">Courses</a>
+                                                <a href="{{route('all_course')}}">{{__t('Courses')}}</a>
                                             </li>
                                             <li class="">
-                                                <a href="{{route('verifiedInstitute')}}">Verified Institute </a>
+                                                <a href="{{route('verifiedInstitute')}}">{{__t('Verified Institute')}} </a>
                                             </li>
 
                                             <li class="">
-                                                <a href="{{route('result')}}">Student Result</a>
+                                                <a href="{{route('result')}}">{{__t('Student Result')}}</a>
                                             </li>
                                             <li class="">
-                                                <a href="{{route('center-request.create')}}">Institute Apply</a>
+                                                <a href="{{route('center-request.create')}}">{{__t('Institute Apply')}}</a>
                                             </li>
                                             <li>
-                                                <a href="#" contenteditable="false" style="cursor: pointer;">Contact Us<i class="fi-rr-angle-small-down"></i></a>
+                                                <a href="#" contenteditable="false" style="cursor: pointer;">{{__t('Contact Us')}}<i class="fi-rr-angle-small-down"></i></a>
                                                 <ul class="sub-menu">
                                                     <li class="">
-                                                        <a href="{{route('successStudent')}}">Success Students </a>
+                                                        <a href="{{route('successStudent')}}">{{__t('Success Students')}} </a>
                                                     </li>
                                                     <li class="">
-                                                        <a href="{{route('contactUs')}}">Contact Us</a>
+                                                        <a href="{{route('contactUs')}}">{{__t('Contact Us')}}</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li class="">
-                                                <a href="{{route('login')}}">Institute Login</a>
+                                                <a href="{{route('login')}}">{{__t('Institute Login')}}</a>
                                             </li>
-
-
-
-
 
                                         </ul>
                                     </nav>
@@ -288,13 +288,25 @@
                                     <a href="https:///login" target="_blank" class="theme-btn"><i class="fi fi-rs-sign-in-alt"></i>Login</a>
                                 </div>--}}
                             </div>
-                            <!-- Mobile Menu Button -->
-                            <button type="button" class="mobile-menu-offcanvas-toggler" data-bs-toggle="modal" data-bs-target="#offcanvas-modal">
-                                <span class="line"></span>
-                                <span class="line"></span>
-                                <span class="line"></span>
-                            </button>
-                            <!-- End Mobile Menu Button -->
+                         <div class="d-flex align-items-center">
+                             <!-- Mobile Menu Button -->
+                             <div class="dropdown d-md-none">
+                                 <button class="btn btn-light dropdown-toggle" type="button"   data-bs-toggle="dropdown" aria-expanded="false">
+                                     {{ strtoupper(session('locale')) == 'EN' ? 'English' : (strtoupper(session('locale')) == 'BN' ? 'বাংলা' : (strtoupper(session('locale')) == 'AR' ? 'اللغة' : ''))}}
+                                 </button>
+                                 <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                     <li class="w-100"><a class="dropdown-item {{ session('locale') == 'en' ? 'active' : '' }}" href="#" onclick="changeLanguage('en')">English</a></li>
+                                     <li class="w-100"><a class="dropdown-item {{ session('locale') == 'bn' ? 'active' : '' }}" href="#" onclick="changeLanguage('bn')">বাংলা</a></li>
+                                     <li class="w-100"><a class="dropdown-item {{ session('locale') == 'ar' ? 'active' : '' }}" href="#" onclick="changeLanguage('ar')">اللغة</a></li>
+                                 </ul>
+                             </div>
+                             <button type="button" class="mobile-menu-offcanvas-toggler" data-bs-toggle="modal" data-bs-target="#offcanvas-modal">
+                                 <span class="line"></span>
+                                 <span class="line"></span>
+                                 <span class="line"></span>
+                             </button>
+                             <!-- End Mobile Menu Button -->
+                         </div>
                         </div>
                     </div>
                 </div>
@@ -305,7 +317,7 @@
 <!-- End Header Area -->
 
 {{$slot}}
-<h1  style="opacity: 0">Young Technical Training Center | Technical Education In Bd</h1>
+
 
 <!-- Footer Area -->
 <footer class="footer-area">
@@ -377,6 +389,7 @@
                                           <img src="{{asset('frontend/svg/img/what.png')}}" alt="#" />
                                       </div>
                                       <div class="footer-contact-info">
+
                                           <a href="">   RJSC NO: C-178431 </a>
                                       </div>
                                   </div>
@@ -435,6 +448,7 @@
             </div>
         </div>
     </div>
+    <h1  style="opacity: 0; font-size: 1px!important;">Young Technical Training Center | Technical Education In Bd</h1>
 </footer>
 <!-- End Footer Area -->
 
@@ -455,6 +469,10 @@
 
 
 <script>
+    function changeLanguage(lang) {
+        fetch('/lang-change?locale=' + lang, { method: 'GET' })
+            .then(response => location.reload());
+    }
 </script>
 </body>
 

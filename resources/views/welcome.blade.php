@@ -70,8 +70,8 @@
     <!-- End Hero Area -->
         <section class="container d-md-none py-2" >
             <div class="d-flex justify-content-between">
-                <a href="{{route('all_course')}}" class="theme-btn">Course</a>
-                <a href="{{route('result')}}" class="theme-btn">Result</a>
+                <a href="{{route('all_course')}}" class="theme-btn">{{__t('Courses')}}</a>
+                <a href="{{route('result')}}" class="theme-btn">{{__t('Result')}}</a>
             </div>
         </section>
     <!-- Page Main Area -->
@@ -88,7 +88,7 @@
                                     alt="#"/>
                             </div>
                             <div class="about-content" x-data="{about:false}">
-                                <h3 class="about-cont-title">About Us</h3>
+                                <h3 class="about-cont-title">{{__t('About Us')}}</h3>
                                 <span class="title-seperetor"></span>
                                 <p>
                                 <div x-show="about==false">
@@ -98,7 +98,7 @@
                                    {!! \App\Models\ConfigDictionary::get('main_about_us','Coming Soon') !!}
                                 </div>
                                 <div class="corner-message-btn">
-                                    <button x-on:click="about =! about" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></button>
+                                    <button x-on:click="about =! about" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +112,7 @@
                         <!-- Single Sidebar Widget -->
                         <div class="home-sidebar-widget notice-board">
                             <h4 class="home-sidebar-widget-title">
-                                <img src="{{asset('frontend/svg/notice1.svg')}}" alt="#"/>Notice Board
+                                <img src="{{asset('frontend/svg/notice1.svg')}}" alt="#"/>{{__t('Notice Board')}}
                             </h4>
                             @forelse(\App\Models\Notice::take(8)->get()  as $notice)
                                 <div class="sidebar-widget-list">
@@ -121,7 +121,7 @@
                                         <p>{{\Illuminate\Support\Str::limit($notice->details,30,$end='...')}}</p>
                                     </div>
                                     <div class="sidebar-widget-list-btn">
-                                        <a href="{{route('noticeDetails',$notice->id)}}" target="_blank" class="theme-btn secondary">বিস্তারিত</a>
+                                        <a href="{{route('noticeDetails',$notice->id)}}" target="_blank" class="theme-btn secondary">{{__t('details')}}</a>
                                     </div>
                                 </div>
                             @empty
@@ -129,7 +129,7 @@
 
 
                             <div class="home-sidebar-widget-btn">
-                                <a href="{{route('frontendNoticeList')}}" class="theme-btn">সকল নোটিশ<i class="fi-rr-arrow-right"></i></a>
+                                <a href="{{route('frontendNoticeList')}}" class="theme-btn">{{__t('All Notice')}}<i class="fi-rr-arrow-right"></i></a>
                             </div>
                         </div>
 
@@ -143,7 +143,7 @@
                     <div class="col-12">
                         <div class="section-head">
                             <h3 class="section-head-title">
-                                Our Team<span class="title-line style-4"></span>
+                                {{__t('Our Team')}}<span class="title-line style-4"></span>
                             </h3>
                         </div>
                     </div>
@@ -185,7 +185,7 @@
                                                           <p   >{!! $team->description !!}</p>
                                                       </div>
                                                       <div class="corner-message-btn">
-                                                          <button x-on:click="description =! description" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></button>
+                                                          <button x-on:click="description =! description" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></button>
                                                       </div>
                                                   </div>
                                               </div>
@@ -256,7 +256,7 @@
                                                           <br/> আমি আপনাদের জন্য শুভকামনা জানাই। আমি আশা করি আপনারা সকলেই একজন ভালো মানুষ
                                                           হিসেবে গড়ে উঠবেন এবং আপনারা আপনার লক্ষ্য অর্জনে সফল হবেন। ...
                                                       <div class="corner-message-btn">
-                                                          <a href="" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
+                                                          <a href="" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></a>
                                                       </div>
                                                   </div>
                                               </div>
@@ -291,7 +291,7 @@
                                                           <br/> আমি আপনাদের জন্য শুভকামনা জানাই। আমি আশা করি আপনারা সকলেই একজন ভালো মানুষ
                                                           হিসেবে গড়ে উঠবেন এবং আপনারা আপনার লক্ষ্য অর্জনে সফল হবেন। ...
                                                       <div class="corner-message-btn">
-                                                          <a href="" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
+                                                          <a href="" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></a>
                                                       </div>
                                                   </div>
                                               </div>
@@ -315,7 +315,7 @@
                 <div class="col-12">
                     <div class="section-head">
                         <h3 class="section-head-title">
-                           Photo and video  gallery <span class="title-line style-3"></span>
+                           {{__t('Photo and video  gallery')}} <span class="title-line style-3"></span>
                         </h3>
                     </div>
                 </div>
@@ -426,7 +426,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-bottom-btn">
-                        <a href="" class="theme-btn secondary">see more<i class="fi-rr-arrow-right"></i></a>
+                        <a href="" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -441,7 +441,7 @@
                 <div class="col-12">
                     <div class="section-head">
                         <h3 class="section-head-title">
-                            Institute<span class="title-line"></span>
+                            {{__t('Institute')}}<span class="title-line"></span>
                         </h3>
                     </div>
                 </div>
@@ -452,7 +452,7 @@
                         <x-institute :institute="$institute"/>
                     </div>
                 @empty
-                    <div>Not Found</div>
+                    <div>{{__t('Not Found')}}</div>
                 @endforelse
 
 
@@ -460,7 +460,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-bottom-btn">
-                        <a href="{{route('verifiedInstitute')}}" class="theme-btn secondary">see more<i
+                        <a href="{{route('verifiedInstitute')}}" class="theme-btn secondary">{{__t('see more')}}<i
                                 class="fi-rr-arrow-right"></i></a>
                     </div>
                 </div>
@@ -476,7 +476,7 @@
                 <div class="col-12">
                     <div class="section-head">
                         <h3 class="section-head-title">
-                            Counter<span class="title-line"></span>
+                            {{__t('Counter')}}<span class="title-line"></span>
                         </h3>
                     </div>
                 </div>
@@ -488,27 +488,27 @@
                         <!-- Single Total Student -->
                         <div class="total-students-card">
                             <h3 style="color: #6aa84f!important;" class="total-students-number counter">216</h3>
-                            <p class="total-students-text">Total Institute</p>
+                            <p class="total-students-text">{{__t('Total Institute')}}</p>
 
                         </div>
                         <div class="total-students-card">
                             <h3 style="color: #6aa84f!important;" class="total-students-number counter">532</h3>
-                            <p class="total-students-text">Total Course</p>
+                            <p class="total-students-text">{{__t('Total Course')}}</p>
 
                         </div>
                         <div class="total-students-card">
                             <h3 style="color: #6aa84f!important;" class="total-students-number counter">176</h3>
-                            <p class="total-students-text">Total Exam</p>
+                            <p class="total-students-text">{{__t('Total Exam')}}</p>
 
                         </div>
                         <div class="total-students-card">
                             <h3 style="color: #6aa84f!important;" class="total-students-number counter">54,512</h3>
-                            <p class="total-students-text">Total Students</p>
+                            <p class="total-students-text">{{__t('Total Students')}}</p>
 
                         </div>
                         <div class="total-students-card">
                             <h3 style="color: #6aa84f!important;" class="total-students-number counter">177</h3>
-                            <p class="total-students-text">Total Session</p>
+                            <p class="total-students-text">{{__t('Total Session')}}</p>
 
                         </div>
 
@@ -527,7 +527,7 @@
                 <div class="col-12">
                     <div class="section-head">
                         <h3 class="section-head-title">
-                           Success Students <span class="title-line style-2"></span>
+                           {{__t('Success Students')}} <span class="title-line style-2"></span>
                         </h3>
                     </div>
                 </div>

@@ -117,6 +117,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('team', \App\Http\Controllers\Admin\TeamController::class);
 
         Route::get('contactUs',[DashboardController::class,'contactUs'])->name('contactUs');
+        Route::resource('translation', \App\Http\Controllers\Admin\TranslationController::class);
 
     });
 });
