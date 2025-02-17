@@ -387,7 +387,7 @@
                     <div class="data-label">Letter Grade </div>
                     <div>:</div>
                     <div class="data-value"  >
-                        {{$student->written()}}
+                        {{$student->t_written()}}
                     </div>
                 </div>
                 <div class="data-item-wrap">
