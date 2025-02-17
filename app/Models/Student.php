@@ -858,13 +858,7 @@ class Student extends Authenticatable
         $marks=$this->result->written;
         if ($this->course_type->is(CourseType::Regular())) {
             switch (true) {
-                case ($marks >= 80 && $marks <= 100):
-                    return $grade = "A+";
-                case ($marks >= 75 && $marks < 80):
-                    return $grade = "A";
-                case ($marks >= 70 && $marks < 75):
-                    return $grade = "A-";
-                case ($marks >= 65 && $marks < 70):
+                case ($marks >= 65 && $marks <= 70):
                     return $grade = "B";
                 case ($marks >= 60 && $marks < 65):
                     return $grade = "B+";
@@ -881,6 +875,7 @@ class Student extends Authenticatable
                 default:
                     return $grade = "Invalid"; // Handle invalid marks input
             }
+
         }
 
         elseif  ($this->course_type->is(CourseType::Short_Course())) {
@@ -949,28 +944,28 @@ class Student extends Authenticatable
         $marks=$this->result->written;
         if ($this->course_type->is(CourseType::Regular())) {
             switch (true) {
-                case ($marks >= 80 && $marks <= 100):
+                case ($marks >= 65 && $marks <= 70):
                     return 4.00;
-                case ($marks >= 75 && $marks < 80):
-                    return 3.75;
-                case ($marks >= 70 && $marks < 75):
-                    return 3.50;
-                case ($marks >= 65 && $marks < 70):
-                    return 3.25;
                 case ($marks >= 60 && $marks < 65):
-                    return 3.00;
+                    return 3.75;
                 case ($marks >= 55 && $marks < 60):
-                    return 2.75;
+                    return 3.50;
                 case ($marks >= 50 && $marks < 55):
-                    return 2.50;
+                    return 3.25;
                 case ($marks >= 45 && $marks < 50):
-                    return 2.25;
+                    return 3.00;
                 case ($marks >= 40 && $marks < 45):
+                    return 2.75;
+                case ($marks >= 35 && $marks < 40):
+                    return 2.50;
+                case ($marks >= 30 && $marks < 35):
+                    return 2.25;
+                case ($marks >= 25 && $marks < 30):
                     return 2.00;
-                case ($marks >= 0 && $marks < 40):
+                case ($marks >= 0 && $marks < 25):
                     return 0.00;
                 default:
-                    return "Invalid"; // If marks are out of range
+                    return "Invalid"; // Handle invalid marks input
             }
         }
 

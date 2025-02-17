@@ -455,11 +455,11 @@
                 </tr>
                 <tr>
                     <td colspan="2">CGPA:</td>
-                    <td colspan="2">{{$student->gpa()}}</td>
+                    <td colspan="2">{{$student->t_written_gpa()}}</td>
                 </tr>
                 <tr>
                     <td colspan="2">Result:</td>
-                    <td colspan="2" class="pass"> {{$student->gpa()  > 0 ? 'PASS' : 'Fail'}}</td>
+                    <td colspan="2" class="pass"> {{$student->t_written_gpa()  > 0 ? 'PASS' : 'Fail'}}</td>
                 </tr>
                 </tfoot>
             </table>
