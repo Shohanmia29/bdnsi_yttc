@@ -859,21 +859,27 @@ class Student extends Authenticatable
         if ($this->course_type->is(CourseType::Regular())) {
             switch (true) {
                 case ($marks >= 65 && $marks <= 70):
-                    return $grade = "B";
+                    return "A+";
                 case ($marks >= 60 && $marks < 65):
-                    return $grade = "B+";
+                    return "A";
                 case ($marks >= 55 && $marks < 60):
-                    return $grade = "B-";
+                    return "A-";
                 case ($marks >= 50 && $marks < 55):
-                    return $grade = "C+";
+                    return "B";
                 case ($marks >= 45 && $marks < 50):
-                    return $grade = "C";
+                    return "B+";
                 case ($marks >= 40 && $marks < 45):
-                    return $grade = "D";
-                case ($marks >= 0 && $marks < 40):
-                    return $grade = "F";
+                    return "B-";
+                case ($marks >= 35 && $marks < 40):
+                    return "C+";
+                case ($marks >= 30 && $marks < 35):
+                    return "C";
+                case ($marks >= 25 && $marks < 30):
+                    return "D";
+                case ($marks >= 0 && $marks < 25):
+                    return "F";
                 default:
-                    return $grade = "Invalid"; // Handle invalid marks input
+                    return "Invalid"; // Handle invalid marks input
             }
 
         }
