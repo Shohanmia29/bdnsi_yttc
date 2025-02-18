@@ -108,7 +108,7 @@
             .center-code { top: 66.5%; left: 87%; }
             .exam-date { top: 68.3%; left: 48%; font-size: 24px!important; }
             .student-gpa { top: 68.3%; left: 75%; }
-            .student-result-published { top: 85%; left: 24%; }
+            .student-result-published { top: 85.3%; left: 24%; }
             .qr { top: 55.5%; left: 13.3%; }
 
 
