@@ -109,7 +109,7 @@
             .exam-date { top: 68.3%; left: 48%; font-size: 24px!important; }
             .student-gpa { top: 68.3%; left: 75%; }
             .student-result-published { top: 85.3%; left: 24%; }
-            .qr { top: 55.5%; left: 13.3%; }
+            .qr { top: 57%; left: 13.3%; }
 
 
         }
@@ -142,7 +142,7 @@
                 <div class="absolute center-name">{{ ucwords(strtolower($student->center->name ?? '')) }}</div>
                 <div class="absolute student-roll">{{ ucwords(strtolower($student->roll ?? '')) }}</div>
                 <div class="absolute student-subject">{{ ucwords(strtolower($student->subject->name ?? '')) }}</div>
-                <div style="width: 90px; height: 90px"  class="absolute qr" id="qrcode_1"></div>
+                <div style="width: 100px; height: 100px"  class="absolute qr" id="qrcode_1"></div>
 
                 <div class="absolute exam-date capitalize">
                     {{ \Carbon\Carbon::parse($student->exam_date)->format('j-F-Y') }}
