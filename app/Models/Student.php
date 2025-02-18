@@ -116,8 +116,12 @@ class Student extends Authenticatable
 
     public static function getLastFreeRoll()
     {
-        return (static::max('roll') ?? 608920) + 1;
+        $lastId = static::max('id') ?? 0;
+        $randomNumber = rand(0, 999);
+        return str_pad(substr($lastId, -3) . $randomNumber, 6, '0', STR_PAD_LEFT);
     }
+
+
 
     public static function getLastFreeRegistration()
     {

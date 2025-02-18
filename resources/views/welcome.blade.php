@@ -561,7 +561,7 @@
                 <div class="col-12">
                     <div class="section-head">
                         <h3 class="section-head-title">
-                           {{__t('Company')}} <span class="title-line style-2"></span>
+                           {{__t('Approved')}} <span class="title-line style-2"></span>
                         </h3>
                     </div>
                 </div>

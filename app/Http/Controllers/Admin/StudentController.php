@@ -111,6 +111,7 @@ class StudentController extends Controller
 
         try {
             DB::beginTransaction();
+
             $validated['roll'] = $validated['roll'] ?? Student::getLastFreeRoll();
             $validated['registration'] = $validated['registration'] ?? Student::getLastFreeRegistration();
             DB::commit();
