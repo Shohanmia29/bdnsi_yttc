@@ -42,7 +42,7 @@
 
         .card-body {
             /*width: 1100px;*/
-            height: 180vh;
+            height: 170vh;
             display: flex;
             justify-content: center;
         }
