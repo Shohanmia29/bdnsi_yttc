@@ -111,9 +111,18 @@
 
 <!-- Back to top start -->
 <div class="progress-wrap">
-    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    <div class="d-flex progress-circle svg-content justify-content-center">
+        <i class="fa fa-arrow-up mx-auto mt-3"></i>
+    </div>
+
+    <svg class="progress-circle svg-content d-none" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <!-- Circular Path -->
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" stroke="black" stroke-width="2" fill="none"/>
+
+        <!-- Top Arrow -->
+        <polygon points="50,-5 45,5 55,5" fill="black"/>
     </svg>
+
 </div>
 <!-- Back to top end -->
 <!-- Mobile Menu Modal -->
