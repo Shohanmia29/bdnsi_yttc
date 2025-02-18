@@ -34,7 +34,7 @@ class UserController extends Controller
     public function create()
     {
         return view('admin.user.create', [
-            'centers' => Center::select(['id','name'])->whereStatus(CenterStatus::Approved)->get()
+            'centers' => Center::select(['id', 'name'])->whereStatus(CenterStatus::Approved)->get()
         ]);
     }
 
@@ -49,6 +49,7 @@ class UserController extends Controller
             'password' => 'required|confirmed',
             'center_id' => 'required|exists:centers,id',
         ]);
+
 
         $validated['password'] = Hash::make($validated['password']);
 
@@ -65,7 +66,7 @@ class UserController extends Controller
     {
         return view('admin.user.edit', [
             'user' => $user,
-            'centers' => Center::select(['id','name'])->whereStatus(CenterStatus::Approved)->get()
+            'centers' => Center::select(['id', 'name'])->whereStatus(CenterStatus::Approved)->get()
         ]);
     }
 
@@ -74,7 +75,7 @@ class UserController extends Controller
         $validated = $request->validate([
             'username' => ['required', Rule::unique('users')->ignore($user->id)],
             'name' => 'required',
-            'email' => ['required','email', Rule::unique('users')->ignore($user->id)],
+            'email' => ['required', 'email', Rule::unique('users')->ignore($user->id)],
             'phone' => ['required', Rule::unique('users')->ignore($user->id)],
             'password' => 'nullable|confirmed',
             'center_id' => 'required|exists:centers,id',
