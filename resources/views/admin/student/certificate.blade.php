@@ -95,7 +95,7 @@
         .qr { top: 57%; left: 13.3%; }
 
         @media screen and (min-width: 740px) {
-            .student-id { top: 41%; left: 33%; }
+            .student-id { top: 40%; left: 33%; }
             .student-registration { top: 39%; left: 81%; }
             .student-session { top: 43.2%; left: 80.5%; font-size: 18px; }
             .student-name { top: 47.2%; left: 44.5%; }
@@ -107,7 +107,7 @@
             .center-code { top: 68%; left: 87%; }
             .exam-date { top: 69.5%; left: 48%; font-size: 16px; }
             .student-gpa { top: 69%; left: 75%; }
-            .student-result-published { top: 87%; left: 24%; }
+            .student-result-published { top: 85.5%; left: 24%; }
             .qr { top: 57%; left: 13.3%; }
 
         }
@@ -148,7 +148,7 @@
                 <div class="absolute student-gpa">
                     {{ $student->t_written_gpa()?? '' }}
                 </div>
-                <div class="absolute student-result-published capitalize" style="font-size: 18px">
+                <div class="absolute student-result-published capitalize" >
                     @if($student->result_publised)
                         {{ \Carbon\Carbon::make($student->result_publised)->format('j-F-Y') }}
                     @endif
