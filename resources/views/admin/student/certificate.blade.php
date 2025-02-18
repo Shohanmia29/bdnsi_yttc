@@ -129,7 +129,7 @@
         <button onclick="generate_pdf()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100">Download</button>
     </div>
     <div class="card-body min-h-screen"   id="fullpage2" >
-        <div    class="back-img" style="background-image:url({{ asset('images/student/cpdf2.jpg') }}); position: relative; font-weight: bold;">
+        <div    class="back-img" style="background-image:url({{ asset('images/student/cpdf.jpg') }}); position: relative; font-weight: bold;">
             <div >
                 <div class="absolute student-id" style="  font-size:18px">
                     {{ \App\Lib\Helper::certificateSerialNumber($student->id) ?? '' }}
