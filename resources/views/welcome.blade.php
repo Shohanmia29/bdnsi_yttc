@@ -536,7 +536,7 @@
                 <div class="col-12">
                     <div class="students-slider">
 
-                        @forelse(\App\Models\Student::where('status',\App\Enums\StudentStatus::Approved)->take(8)->get() as $student)
+                        @forelse(\App\Models\Student::where('status',\App\Enums\StudentStatus::Approved)->take(30)->get() as $student)
                             <x-student :student="$student"/>
                         @empty
                             <div>Not Found</div>
