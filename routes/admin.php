@@ -118,6 +118,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         Route::get('contactUs',[DashboardController::class,'contactUs'])->name('contactUs');
         Route::resource('translation', \App\Http\Controllers\Admin\TranslationController::class);
+        Route::resource('sponsor', \App\Http\Controllers\Admin\SponsorController::class);
 
     });
 });

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Enums\SliderType;
 use App\Http\Controllers\Controller;
 use App\Lib\Image;
 use App\Models\Slider;
@@ -12,7 +13,7 @@ class SliderController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            return datatables(Slider::select(['id','title','photo','type']))->addIndexColumn()->toJson();
+            return datatables(Slider::whereIn('type',[SliderType::Slider,SliderType::Gallery])->select(['id','title','photo','type']))->addIndexColumn()->toJson();
         }
 
         return view('admin.slider.index');
@@ -26,6 +27,7 @@ class SliderController extends Controller
 
     public function store(Request $request)
     {
+
         $validated = $request->validate([
             'title' => 'nullable|string',
             'photo' => 'required|image',

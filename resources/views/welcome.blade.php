@@ -554,6 +554,41 @@
             </div>
         </div>
     </section>
+
+    <section class="students-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-head">
+                        <h3 class="section-head-title">
+                           {{__t('Company')}} <span class="title-line style-2"></span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="students-slider">
+                        @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Sponsor)->take(20)->get() as $sponsor)
+                              <div class=" ">
+                                  <img class="w-50 h-25" src="{{$sponsor->photo??''}}" alt="">
+                              </div>
+                        @empty
+                            <div>Not Found</div>
+                        @endforelse
+                    </div>
+                </div>
+            </div>
+       {{--     <div class="row">
+                <div class="col-12">
+                    <div class="section-bottom-btn">
+                        <a href="{{route('successStudent')}}" class="theme-btn secondary">see more<i
+                                class="fi-rr-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>--}}
+        </div>
+    </section>
     <!-- End Students Area -->
 
     <script>
