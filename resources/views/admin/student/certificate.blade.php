@@ -96,20 +96,20 @@
         .qr { top: 57%; left: 13.3%; }
 
         @media screen and (min-width: 740px) {
-            .student-id { top: 39.2%; left: 33%; }
-            .student-registration { top: 38.5%; left: 81.5%; }
-            .student-session { top: 42%; left: 80.5%; font-size: 18px; }
-            .student-name { top: 46.7%; left: 44.5%; }
-            .fathers-name { top: 51.5%; left: 43.5%; text-transform: capitalize !important; }
-            .mothers-name { top: 55.5%; left: 41.5%; text-transform: capitalize; }
-            .center-name { top: 59.8%; left: 40%; }
-            .student-roll { top: 64.5%; left: 38.5%; }
-            .student-subject { top: 64.2%; left: 57.5%; }
-            .center-code { top: 67.5%; left: 87%; }
-            .exam-date { top: 69%; left: 48%; font-size: 22px!important; }
-            .student-gpa { top: 68.5%; left: 75%; }
-            .student-result-published { top: 85.2%; left: 24%; }
-            .qr { top: 56.5%; left: 13.3%; }
+            .student-id { top: 38.2%; left: 33%; }
+            .student-registration { top: 37.5%; left: 81.5%; }
+            .student-session { top: 41%; left: 80.5%; font-size: 18px; }
+            .student-name { top: 45.7%; left: 44.5%; }
+            .fathers-name { top: 50.5%; left: 43.5%; text-transform: capitalize !important; }
+            .mothers-name { top: 54.5%; left: 41.5%; text-transform: capitalize; }
+            .center-name { top: 58.8%; left: 40%; }
+            .student-roll { top: 63.5%; left: 38.5%; }
+            .student-subject { top: 63.2%; left: 57.5%; }
+            .center-code { top: 66.5%; left: 87%; }
+            .exam-date { top: 68%; left: 48%; font-size: 22px!important; }
+            .student-gpa { top: 67.5%; left: 75%; }
+            .student-result-published { top: 84.2%; left: 24%; }
+            .qr { top: 55.5%; left: 13.3%; }
 
 
         }
@@ -129,7 +129,7 @@
         <button onclick="generate_pdf()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100">Download</button>
     </div>
     <div class="card-body min-h-screen"   id="fullpage2" >
-        <div    class="back-img" style="background-image:url({{ asset('images/student/certificate01.jpg') }}); position: relative; font-weight: bold;">
+        <div    class="back-img" style="background-image:url({{ asset('images/student/cpdf2.jpg') }}); position: relative; font-weight: bold;">
             <div >
                 <div class="absolute student-id" style="  font-size:18px">
                     {{ \App\Lib\Helper::certificateSerialNumber($student->id) ?? '' }}
