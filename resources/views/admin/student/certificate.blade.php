@@ -96,9 +96,9 @@
         .qr { top: 57%; left: 13.3%; }
 
         @media screen and (min-width: 740px) {
-            .student-id { top: 38.2%; left: 33%; }
-            .student-registration { top: 37.5%; left: 81.5%; }
-            .student-session { top: 41%; left: 80.5%; font-size: 18px; }
+            .student-id { top: 37.5%; left: 33%; }
+            .student-registration { top: 37.2%; left: 81.5%; }
+            .student-session { top: 40.5%; left: 80.5%; font-size: 18px; }
             .student-name { top: 45.7%; left: 44.5%; }
             .fathers-name { top: 50.5%; left: 43.5%; text-transform: capitalize !important; }
             .mothers-name { top: 54.5%; left: 41.5%; text-transform: capitalize; }
@@ -106,9 +106,9 @@
             .student-roll { top: 63.5%; left: 38.5%; }
             .student-subject { top: 63.2%; left: 57.5%; }
             .center-code { top: 66.5%; left: 87%; }
-            .exam-date { top: 68%; left: 48%; font-size: 22px!important; }
-            .student-gpa { top: 67.5%; left: 75%; }
-            .student-result-published { top: 84.2%; left: 24%; }
+            .exam-date { top: 68.3%; left: 48%; font-size: 22px!important; }
+            .student-gpa { top: 68.3%; left: 75%; }
+            .student-result-published { top: 85%; left: 24%; }
             .qr { top: 55.5%; left: 13.3%; }
 
 
