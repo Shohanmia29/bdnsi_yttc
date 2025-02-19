@@ -299,11 +299,11 @@
                             </div>
                          <div class="d-flex align-items-center">
                              <!-- Mobile Menu Button -->
-                             <div class="dropdown d-md-none">
-                                 <button class="btn btn-light dropdown-toggle" type="button"   data-bs-toggle="dropdown" aria-expanded="false">
+                             <div class="dropdown d-lg-none">
+                                 <button class="btn btn-light dropdown-toggle" type="button" style="font-size: 10px"   data-bs-toggle="dropdown" aria-expanded="false">
                                      {{ strtoupper(session('locale','en')) == 'EN' ? 'English' : (strtoupper(session('locale')) == 'BN' ? 'বাংলা' : (strtoupper(session('locale')) == 'AR' ? 'اللغة' : ''))}}
                                  </button>
-                                 <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                 <ul class="dropdown-menu" aria-labelledby="languageDropdown" style="font-size: 10px">
                                      <li class="w-100"><a class="dropdown-item {{ session('locale') == 'en' ? 'active' : '' }}" href="#" onclick="changeLanguage('en')">English</a></li>
                                      <li class="w-100"><a class="dropdown-item {{ session('locale') == 'bn' ? 'active' : '' }}" href="#" onclick="changeLanguage('bn')">বাংলা</a></li>
                                      <li class="w-100"><a class="dropdown-item {{ session('locale') == 'ar' ? 'active' : '' }}" href="#" onclick="changeLanguage('ar')">اللغة</a></li>
