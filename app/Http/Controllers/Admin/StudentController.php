@@ -139,7 +139,7 @@ class StudentController extends Controller
             return view('admin.student.idcard', compact('student'));
         } elseif ($request->cpdf == 'cpdf') {
             $student = Student::where('id', $student->id)->firstOrFail();
-            return view('admin.student.certificate', compact('student'));
+            return view('admin.student.cpdf', compact('student'));
         }
         else {
             return view('admin.student.show', [

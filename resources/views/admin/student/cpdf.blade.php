@@ -42,7 +42,7 @@
 
         .card-body {
             /*width: 1100px;*/
-            height: 194vh;
+            height: 151vh;
             display: flex;
             justify-content: center;
         }
@@ -70,6 +70,7 @@
         .student-gpa,
         .student-result-published {
             font-weight: normal !important;
+            font-size: 27px!important;
 
         }
 
@@ -89,26 +90,27 @@
         .student-roll { top: 64%; left: 38.5%; }
         .student-subject { top: 63.7%; left: 57.5%; }
         .center-code { top: 66%; left: 87%; }
-        .exam-date { top: 68.2%; left: 48%; font-size: 16px}
+        .exam-date { top: 68.2%; left: 48%; font-size: 24px!important;}
         .student-gpa { top: 68.5%; left: 75%; }
         .student-result-published { top: 85%; left: 24%; }
         .qr { top: 57%; left: 13.3%; }
 
         @media screen and (min-width: 740px) {
-            .student-id { top: 40%; left: 33%; }
-            .student-registration { top: 39%; left: 81%; }
-            .student-session { top: 43.2%; left: 80.5%; font-size: 18px; }
-            .student-name { top: 47.2%; left: 44.5%; }
-            .fathers-name { top: 52%; left: 43.5%; text-transform: capitalize !important; }
-            .mothers-name { top: 56%; left: 41.5%; text-transform: capitalize; }
-            .center-name { top: 60.3%; left: 40%; }
-            .student-roll { top: 65%; left: 38.5%; }
-            .student-subject { top: 64.7%; left: 57.5%; }
-            .center-code { top: 68%; left: 87%; }
-            .exam-date { top: 69.5%; left: 48%; font-size: 16px; }
-            .student-gpa { top: 69%; left: 75%; }
-            .student-result-published { top: 85.5%; left: 24%; }
+            .student-id { top: 37.8%; left: 33%; }
+            .student-registration { top: 37.2%; left: 81.5%; }
+            .student-session { top: 40.5%; left: 80.5%; font-size: 18px; }
+            .student-name { top: 45.7%; left: 44.5%; }
+            .fathers-name { top: 50.5%; left: 43.5%; text-transform: capitalize !important; }
+            .mothers-name { top: 54.5%; left: 41.5%; text-transform: capitalize; }
+            .center-name { top: 58.8%; left: 40%; }
+            .student-roll { top: 63.5%; left: 38.5%; }
+            .student-subject { top: 63.2%; left: 57.5%; }
+            .center-code { top: 66.5%; left: 87%; }
+            .exam-date { top: 68.3%; left: 48%; font-size: 24px!important; }
+            .student-gpa { top: 68.3%; left: 75%; }
+            .student-result-published { top: 85.3%; left: 24%; }
             .qr { top: 57%; left: 13.3%; }
+
 
         }
         .no-background {
@@ -127,7 +129,7 @@
         <button onclick="generate_pdf()" class="px-3 py-1 rounded-md bg-green-700 text-slate-100">Download</button>
     </div>
     <div class="card-body min-h-screen"   id="fullpage2" >
-        <div    class="back-img" style="background-image:url({{ asset('images/student/certificate01.jpg') }}); position: relative; font-weight: bold;">
+        <div    class="back-img" style="background-image:url({{ asset('images/student/cpdf.jpg') }}); position: relative; font-weight: bold;">
             <div >
                 <div class="absolute student-id" style="  font-size:18px">
                     {{ \App\Lib\Helper::certificateSerialNumber($student->id) ?? '' }}
@@ -140,7 +142,7 @@
                 <div class="absolute center-name">{{ ucwords(strtolower($student->center->name ?? '')) }}</div>
                 <div class="absolute student-roll">{{ ucwords(strtolower($student->roll ?? '')) }}</div>
                 <div class="absolute student-subject">{{ ucwords(strtolower($student->subject->name ?? '')) }}</div>
-                <div style="width: 75px; height: 75px"  class="absolute qr" id="qrcode_1"></div>
+                <div style="width: 100px; height: 100px"  class="absolute qr" id="qrcode_1"></div>
 
                 <div class="absolute exam-date capitalize">
                     {{ \Carbon\Carbon::parse($student->exam_date)->format('j-F-Y') }}
