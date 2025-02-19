@@ -297,9 +297,9 @@
                                     <a href="https:///login" target="_blank" class="theme-btn"><i class="fi fi-rs-sign-in-alt"></i>Login</a>
                                 </div>--}}
                             </div>
-                         <div class="d-flex align-items-center">
+                         <div class="d-flex align-items-center justify-content-center">
                              <!-- Mobile Menu Button -->
-                             <div class="dropdown d-lg-none justify-content-center">
+                             <div class="dropdown d-lg-none ">
                                  <button class="btn btn-light dropdown-toggle" type="button" style="font-size: 10px"   data-bs-toggle="dropdown" aria-expanded="false">
                                      {{ strtoupper(session('locale','en')) == 'EN' ? 'English' : (strtoupper(session('locale')) == 'BN' ? 'বাংলা' : (strtoupper(session('locale')) == 'AR' ? 'اللغة' : ''))}}
                                  </button>
