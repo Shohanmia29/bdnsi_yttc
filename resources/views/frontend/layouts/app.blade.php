@@ -299,7 +299,7 @@
                             </div>
                          <div class="d-flex align-items-center">
                              <!-- Mobile Menu Button -->
-                             <div class="dropdown d-lg-none">
+                             <div class="dropdown d-lg-none justify-content-center">
                                  <button class="btn btn-light dropdown-toggle" type="button" style="font-size: 10px"   data-bs-toggle="dropdown" aria-expanded="false">
                                      {{ strtoupper(session('locale','en')) == 'EN' ? 'English' : (strtoupper(session('locale')) == 'BN' ? 'বাংলা' : (strtoupper(session('locale')) == 'AR' ? 'اللغة' : ''))}}
                                  </button>
