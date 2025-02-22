@@ -445,9 +445,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row school-committe-group">
+
+            <div class="row justify-content-center school-committe-group">
                 @forelse(\App\Models\Center::where('status',\App\Enums\CenterStatus::Approved)->take(10)->get() as $institute)
-                    <div class="col-lg-3 col-xl-3 col-md-6 col-12">
+                    <div class="col-lg-3 col-xl-4 col-md-6 col-12">
                         <x-institute :institute="$institute"/>
                     </div>
                 @empty
@@ -456,6 +457,7 @@
 
 
             </div>
+
             <div class="row">
                 <div class="col-12">
                     <div class="section-bottom-btn">
