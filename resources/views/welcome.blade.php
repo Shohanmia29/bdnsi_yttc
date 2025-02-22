@@ -566,9 +566,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="students-slider">
-                        @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Sponsor)->take(20)->get() as $sponsor)
-                              <div class=" w-100 h-25 students-card">
-                                  <img class="w-100 h-25" src="{{$sponsor->photo??''}}" alt="">
+                        @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Sponsor)->take(30)->get() as $sponsor)
+                              <div class=" w-100 h-25  ">
+                                  <img style="height: 170px" class="w-full " src="{{$sponsor->photo??''}}" alt="">
                               </div>
                         @empty
                             <div>Not Found</div>
