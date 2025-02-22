@@ -422,13 +422,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-bottom-btn">
-                        <a href="" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="row">--}}
+{{--                <div class="col-12">--}}
+{{--                    <div class="section-bottom-btn">--}}
+{{--                        <a href="" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </section>
     <!-- End Gallery Area -->
@@ -453,7 +453,6 @@
                 @empty
                     <div>{{__t('Not Found')}}</div>
                 @endforelse
-
 
             </div>
             <div class="row">
@@ -534,7 +533,6 @@
             <div class="row">
                 <div class="col-12">
                     <div class="students-slider">
-
                         @forelse(\App\Models\Student::where('status',\App\Enums\StudentStatus::Approved)->take(30)->get() as $student)
                             <x-student :student="$student"/>
                         @empty
@@ -569,8 +567,8 @@
                 <div class="col-12">
                     <div class="students-slider">
                         @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Sponsor)->take(20)->get() as $sponsor)
-                              <div class=" w-100">
-                                  <img class="w-100 h-50" src="{{$sponsor->photo??''}}" alt="">
+                              <div class=" w-100 h-25 students-card">
+                                  <img class="w-100 h-25" src="{{$sponsor->photo??''}}" alt="">
                               </div>
                         @empty
                             <div>Not Found</div>

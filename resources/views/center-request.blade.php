@@ -35,7 +35,7 @@
 
                     <!-- Director Photo -->
                     <div class="col-12 col-md-6 mb-3">
-                        <x-frontend.input type="file" class="form-control" name="director_image" label="Director Photo" required />
+                        <x-frontend.input type="file" class="form-control" name="director_image" label="Institute Logo" required />
                     </div>
 
                     <!-- Father's Name -->
@@ -125,7 +125,7 @@
 
                     <!-- Institute Photo -->
                     <div class="col-12 col-md-6 mb-3">
-                        <x-frontend.input class="form-control" label="Institute Photo" name="photo" required type="file" accept="image/*" />
+                        <x-frontend.input class="form-control" label="Director Photo" name="photo" required type="file" accept="image/*" />
                     </div>
 
                     <!-- Director Signature -->
