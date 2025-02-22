@@ -5,8 +5,8 @@
            <table class="w-full text-center border">
                <thead class="w-full border">
                <th class="border-2 w-[10%]  border-gray-400">S/L</th>
-               <th class="border-2 w-[60%] border-gray-400">Details</th>
-               <th class="border-2 w-[30%] border-gray-400">Download</th>
+               <th class="border-2 w-[60%] border-gray-400">{{__t('Details')}}</th>
+               <th class="border-2 w-[30%] border-gray-400">{{__t('Download')}}</th>
                </thead>
 
                <tbody>

@@ -3,7 +3,7 @@
 
         <div class="row shadow-lg p-4">
             <div class="col-12 text-center  font-weight-bold h4 border-bottom mb-3" style="color:#6aa84f">
-                Institute Apply Form
+               {{__t(' Institute Apply Form')}}
             </div>
 
             <form action="{{ route('center-request.store') }}" method="POST" enctype="multipart/form-data">
@@ -71,7 +71,7 @@
                             <div class="border rounded p-2">
                                 <label for="division" class="font-weight-bold label-name" style="color: #6aa84f">Division</label>
                                 <select   class="form-control input-name" name="division" x-model="division" required aria-label="Division select" @change="filterDistricts()">
-                                    <option value="" disabled>Select Division</option>
+                                    <option value="" disabled>{{__t('Select Division')}}</option>
                                     @foreach(\App\Lib\Geo::divisions() as $divisionId => $division)
                                         <option value="{{ $divisionId }}" @selected(old('division') == $divisionId)>{{ $division['name'] }}</option>
                                     @endforeach
@@ -81,9 +81,9 @@
 
                     <div class="col-12 col-md-6 p-2 mb-3 ">
                              <div class="border rounded p-2">
-                                 <label for="district" class="font-weight-bold label-name " style="color: #6aa84f">District</label>
+                                 <label for="district" class="font-weight-bold label-name " style="color: #6aa84f">{{__t('District')}}</label>
                                  <select class="form-control input-name" name="district" x-model="district" required aria-label="District select" @change="filterUpazillas()">
-                                     <option value="" disabled>Select District</option>
+                                     <option value="" disabled>{{__t('Select District')}}</option>
                                      <template x-for="district in districts" :key="district.id">
                                          <option :value="district.id" x-text="district.name"></option>
                                      </template>
@@ -93,9 +93,9 @@
 
                     <div class="col-12 col-md-6 mb-3 p-2 ">
                            <div class="border rounded p-2">
-                               <label for="upazilla" class="font-weight-bold label-name" style="color: #6aa84f">Upazilla</label>
+                               <label for="upazilla" class="font-weight-bold label-name" style="color: #6aa84f">{{__t('Upazilla')}}</label>
                                <select class="form-control input-name" name="upazilla" x-model="upazilla" required aria-label="Upazilla select">
-                                   <option value="" disabled>Select Upazilla</option>
+                                   <option value="" disabled>{{__t('Select Upazilla')}}</option>
                                    <template x-for="upazilla in upazillas" :key="upazilla.id">
                                        <option :value="upazilla.id" x-text="upazilla.name"></option>
                                    </template>
@@ -145,7 +145,7 @@
 
                     <!-- Submit Button -->
                     <div class="col-12 text-center py-4">
-                        <button type="submit" class="btn text-white btn-lg" style="background: #6aa84f">{{ __('Apply Now') }}</button>
+                        <button type="submit" class="btn text-white btn-lg" style="background: #6aa84f">{{ __t('Apply Now') }}</button>
                     </div>
                 </div>
             </form>

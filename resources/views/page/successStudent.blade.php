@@ -6,7 +6,7 @@
         <div class="d-flex align-items-center py-2  mt-3  px-4">
             <a href="#" class="text-secondary text-decoration-none">Home</a>
             <span class="mx-2 text-muted">/</span>
-            <a href="#" class="text-secondary text-decoration-none">Our Success Students</a>
+            <a href="#" class="text-secondary text-decoration-none">{{__t('Our Success Students')}}</a>
         </div>
 
         <!-- Main Content -->

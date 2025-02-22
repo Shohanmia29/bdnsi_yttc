@@ -4,7 +4,7 @@
     <div class="container py-4">
         <!-- Header -->
         <div class="text-center mb-4">
-            <h1>Notice Details</h1>
+            <h1>{{__t('Notice Details')}}</h1>
         </div>
 
         <div class="card shadow-lg mb-4">
@@ -15,7 +15,7 @@
             <div class="card-body">
 
                 <p class="text-muted mb-2">
-                    Published on <strong>{{$data->created_at->diffForHumans()}}</strong>
+                    {{__t('Published on')}} <strong>{{$data->created_at->diffForHumans()}}</strong>
                 </p>
                 <hr>
                 <p class="">

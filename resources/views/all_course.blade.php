@@ -40,7 +40,7 @@
                           </svg>
                           <input type="text" style="background: transparent" name="course_name" placeholder="Search" class="form-control">
                       </div>
-                      <button class="btn">Search</button>
+                      <button class="btn">{{__t('Search')}}</button>
                   </div>
 
                     </div>
@@ -56,7 +56,7 @@
                     </div>
                 @empty
                     <div class="font-bold text-red-500">
-                        Not Found
+                        {{__t('Not Found')}}
                     </div>
                 @endforelse
 

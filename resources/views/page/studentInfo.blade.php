@@ -19,10 +19,10 @@
                             }
                         </style>
                         <div class="col-md-8 p-4">
-                            <h3 class="text-center text-orange-500 fw-bold mb-4">Student Information</h3>
+                            <h3 class="text-center text-orange-500 fw-bold mb-4">{{__t('Student Information')}}</h3>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item bg-c text-white rounded-2 mb-2 d-flex align-items-center">
-                                    <div class="fw-bold w-50">Student Name</div>
+                                    <div class="fw-bold w-50">{{__t('Student Name')}}</div>
                                     <div class="text-center w-10 pr-2">:  </div>
                                     <div class="w-50 pr-2">{{$data->name ?? 'N/A'}}</div>
                                 </li>

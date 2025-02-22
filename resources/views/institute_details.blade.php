@@ -12,7 +12,6 @@
                                  alt="Director Image"
                                  style="border: 6px solid #6aa84f; width: 200px; height: 200px;">
 
-
                         </div>
                         <!-- Details Section -->
                         <div class="col-md-8 p-1">
@@ -21,27 +20,27 @@
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item bg-c text-white rounded-2 mb-2 d-flex align-items-center">
-                                    <span class="fw-bold w-50">Email</span>
+                                    <span class="fw-bold w-50">{{__t('Email')}}</span>
                                     <span class="px-2">:</span>
                                     <span class="w-50">{{$data->email ?? 'N/A'}}</span>
                                 </li>
                                 <li class="list-group-item bg-c text-white rounded-2 mb-2 d-flex align-items-center">
-                                    <span class="fw-bold w-50">Director Name</span>
+                                    <span class="fw-bold w-50">{{__t('Director Name')}}</span>
                                     <span class="px-2">:</span>
                                     <span class="w-50">{{$data->owner_name ?? 'N/A'}}</span>
                                 </li>
                                 <li class="list-group-item bg-c text-white rounded-2 mb-2 d-flex align-items-center">
-                                    <span class="fw-bold w-50">Address</span>
+                                    <span class="fw-bold w-50">{{__t('Address')}}</span>
                                     <span class="px-2">:</span>
                                     <span class="w-50">{{$data->address ?? 'N/A'}}</span>
                                 </li>
                                 <li class="list-group-item bg-c text-white rounded-2 mb-2 d-flex align-items-center">
-                                    <span class="fw-bold w-50">District</span>
+                                    <span class="fw-bold w-50">{{__t('District')}}</span>
                                     <span class="px-2">:</span>
                                     <span class="w-50">{{ \App\Lib\Geo::districts()[$data->district]['name'] ?? 'N/A' }}</span>
                                 </li>
                                 <li class="list-group-item bg-c text-white rounded-2 mb-2 d-flex align-items-center">
-                                    <span class="fw-bold w-50">Upazilla</span>
+                                    <span class="fw-bold w-50">{{__t('Upazilla')}}</span>
                                     <span class="px-2">:</span>
                                     <span class="w-50">{{ \App\Lib\Geo::upazillas()[$data->upazilla]['name'] ?? 'N/A' }}</span>
                                 </li>
