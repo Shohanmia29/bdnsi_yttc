@@ -257,65 +257,68 @@
                                 <a href="/"><img src="{{asset('frontend/logo2.png')}}" alt="#" /></a>
                             </div>
                         </div>
-                        <div class="col-md-10 col-4">
-                            <div class="header-right">
-                                <div class="header-menu">
-                                    <nav class="navigation">
-                                        <ul class="header-menu-list">
-                                            <li class="active">
-                                                <a href="{{route('all_course')}}">{{__t('Courses')}}</a>
-                                            </li>
-                                            <li class="">
-                                                <a href="{{route('verifiedInstitute')}}">{{__t('Verified Institute')}} </a>
-                                            </li>
+                        <div class="col-md-10 col-4 ">
+                            <div class="w-100">
+                                <div class="header-right">
+                                    <div class="header-menu">
+                                        <nav class="navigation">
+                                            <ul class="header-menu-list">
+                                                <li class="active">
+                                                    <a href="{{route('all_course')}}">{{__t('Courses')}}</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="{{route('verifiedInstitute')}}">{{__t('Verified Institute')}} </a>
+                                                </li>
 
-                                            <li class="">
-                                                <a href="{{route('result')}}">{{__t('Student Result')}}</a>
-                                            </li>
-                                            <li class="">
-                                                <a href="{{route('center-request.create')}}">{{__t('Institute Apply')}}</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" contenteditable="false" style="cursor: pointer;">{{__t('Contact Us')}}<i class="fi-rr-angle-small-down"></i></a>
-                                                <ul class="sub-menu">
-                                                    <li class="">
-                                                        <a href="{{route('successStudent')}}">{{__t('Success Students')}} </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a href="{{route('contactUs')}}">{{__t('Contact Us')}}</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="">
-                                                <a href="{{route('login')}}">{{__t('Institute Login')}}</a>
-                                            </li>
+                                                <li class="">
+                                                    <a href="{{route('result')}}">{{__t('Student Result')}}</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="{{route('center-request.create')}}">{{__t('Institute Apply')}}</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" contenteditable="false" style="cursor: pointer;">{{__t('Contact Us')}}<i class="fi-rr-angle-small-down"></i></a>
+                                                    <ul class="sub-menu">
+                                                        <li class="">
+                                                            <a href="{{route('successStudent')}}">{{__t('Success Students')}} </a>
+                                                        </li>
+                                                        <li class="">
+                                                            <a href="{{route('contactUs')}}">{{__t('Contact Us')}}</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="">
+                                                    <a href="{{route('login')}}">{{__t('Institute Login')}}</a>
+                                                </li>
 
-                                        </ul>
-                                    </nav>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    {{--                <div class="header-menu-btn">
+                                                        <a href="https:///login" target="_blank" class="theme-btn"><i class="fi fi-rs-sign-in-alt"></i>Login</a>
+                                                    </div>--}}
                                 </div>
-                {{--                <div class="header-menu-btn">
-                                    <a href="https:///login" target="_blank" class="theme-btn"><i class="fi fi-rs-sign-in-alt"></i>Login</a>
-                                </div>--}}
+                                <div class="d-flex align-items-center float-end  justify-content-center">
+                                    <!-- Mobile Menu Button -->
+                                    <div class="dropdown d-xl-none ">
+                                        <button class="btn btn-light dropdown-toggle" type="button" style="font-size: 10px"   data-bs-toggle="dropdown" aria-expanded="false">
+                                            {{ strtoupper(session('locale','en')) == 'EN' ? 'English' : (strtoupper(session('locale')) == 'BN' ? 'বাংলা' : (strtoupper(session('locale')) == 'AR' ? 'اللغة' : ''))}}
+                                        </button>
+                                        <ul class="dropdown-menu w-25 " aria-labelledby="languageDropdown" style="font-size: 10px">
+                                            <li class="w-100"><a class="dropdown-item {{ session('locale') == 'en' ? 'active' : '' }}" href="#" onclick="changeLanguage('en')">English</a></li>
+                                            <li class="w-100"><a class="dropdown-item {{ session('locale') == 'bn' ? 'active' : '' }}" href="#" onclick="changeLanguage('bn')">বাংলা</a></li>
+                                            <li class="w-100"><a class="dropdown-item {{ session('locale') == 'ar' ? 'active' : '' }}" href="#" onclick="changeLanguage('ar')">اللغة</a></li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="mobile-menu-offcanvas-toggler" data-bs-toggle="modal" data-bs-target="#offcanvas-modal">
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                    </button>
+                                    <!-- End Mobile Menu Button -->
+                                </div>
                             </div>
-                         <div class="d-flex align-items-center justify-content-center">
-                             <!-- Mobile Menu Button -->
-                             <div class="dropdown d-lg-none ">
-                                 <button class="btn btn-light dropdown-toggle" type="button" style="font-size: 10px"   data-bs-toggle="dropdown" aria-expanded="false">
-                                     {{ strtoupper(session('locale','en')) == 'EN' ? 'English' : (strtoupper(session('locale')) == 'BN' ? 'বাংলা' : (strtoupper(session('locale')) == 'AR' ? 'اللغة' : ''))}}
-                                 </button>
-                                 <ul class="dropdown-menu" aria-labelledby="languageDropdown" style="font-size: 10px">
-                                     <li class="w-100"><a class="dropdown-item {{ session('locale') == 'en' ? 'active' : '' }}" href="#" onclick="changeLanguage('en')">English</a></li>
-                                     <li class="w-100"><a class="dropdown-item {{ session('locale') == 'bn' ? 'active' : '' }}" href="#" onclick="changeLanguage('bn')">বাংলা</a></li>
-                                     <li class="w-100"><a class="dropdown-item {{ session('locale') == 'ar' ? 'active' : '' }}" href="#" onclick="changeLanguage('ar')">اللغة</a></li>
-                                 </ul>
-                             </div>
-                             <button type="button" class="mobile-menu-offcanvas-toggler" data-bs-toggle="modal" data-bs-target="#offcanvas-modal">
-                                 <span class="line"></span>
-                                 <span class="line"></span>
-                                 <span class="line"></span>
-                             </button>
-                             <!-- End Mobile Menu Button -->
-                         </div>
+
                         </div>
                     </div>
                 </div>

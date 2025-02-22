@@ -331,8 +331,7 @@
                                     <img
                                         src="{{$gallery->photo}}"
                                         alt="Gallery Image"/>
-
-                                    <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                    <a href="{{$gallery->photo}}" data-fancybox="photo" class="image-view-btn"><i class="fa fa-eye"></i></a>
                                 </div>
                                 <div class="gallery-content">
                                     <h4 class="gallery-content-title">
@@ -447,7 +446,7 @@
                 </div>
             </div>
             <div class="row school-committe-group">
-                @forelse(\App\Models\Center::where('status',\App\Enums\CenterStatus::Approved)->take(8)->get() as $institute)
+                @forelse(\App\Models\Center::where('status',\App\Enums\CenterStatus::Approved)->take(10)->get() as $institute)
                     <div class="col-lg-4 col-xl-3 col-md-6 col-12">
                         <x-institute :institute="$institute"/>
                     </div>
@@ -570,8 +569,8 @@
                 <div class="col-12">
                     <div class="students-slider">
                         @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Sponsor)->take(20)->get() as $sponsor)
-                              <div class=" ">
-                                  <img class="w-50 h-25" src="{{$sponsor->photo??''}}" alt="">
+                              <div class=" w-100">
+                                  <img class="w-100 h-50" src="{{$sponsor->photo??''}}" alt="">
                               </div>
                         @empty
                             <div>Not Found</div>

@@ -43,7 +43,7 @@
                             item.photo = `<img class="w-8 h-8 object-cover m-auto" src="${item.photo}" alt="" />`;
                             item.type=@js(\App\Enums\SliderType::asSelectArray())[item.type]
                             item.action = actionIcons({
-                                'edit': '{{ route('admin.slider.edit', '@') }}'.replace('@', item.id),
+                                {{--'edit': '{{ route('admin.slider.edit', '@') }}'.replace('@', item.id),--}}
                                 'delete': '{{ route('admin.slider.destroy', '@') }}'.replace('@', item.id),
                             });
 
