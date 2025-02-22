@@ -15,7 +15,7 @@
 
                         </div>
                         <!-- Details Section -->
-                        <div class="col-md-8 p-5">
+                        <div class="col-md-8 p-1">
                             <div class="text-center mb-4">
                                 <h2 class="fw-bold">{{$data->name ?? ''}}</h2>
                             </div>
