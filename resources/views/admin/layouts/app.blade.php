@@ -152,6 +152,12 @@
                 >
                     <span>{{ __('Sponsor') }}</span>
                 </a>
+                <a
+                    href="{{ route('admin.translation.index') }}"
+                    class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+                >
+                    <span>{{ __('Translation') }}</span>
+                </a>
 
                 @endrole
             </div>
