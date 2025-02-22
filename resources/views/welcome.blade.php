@@ -447,7 +447,7 @@
             </div>
             <div class="row school-committe-group">
                 @forelse(\App\Models\Center::where('status',\App\Enums\CenterStatus::Approved)->take(10)->get() as $institute)
-                    <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+                    <div class="col-lg-3 col-xl-3 col-md-6 col-12">
                         <x-institute :institute="$institute"/>
                     </div>
                 @empty
