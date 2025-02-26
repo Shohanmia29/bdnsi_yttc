@@ -27,13 +27,13 @@ class TranslationController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'key' => 'required|unique:translations',
+            'key' => 'required|unique:translations,key',
             'en' => 'nullable|string',
             'bn' => 'nullable|string',
             'ar' => 'nullable|string',
         ]);
-        Translation::create($request->all());
 
+        Translation::create($request->all());
         return response()->success('Translation added successfully.');
     }
 

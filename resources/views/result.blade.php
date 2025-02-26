@@ -17,7 +17,7 @@
                              <div class="shadow-lg w-full  bg-gray-50 md:w-1/2 mx-auto rounded-md">
                                  <div class="font-bold text-sm md:text-lg text-red-800 text-center">  {{ __('Student Result') }}</div>
                                  <div class="p-2">
-                                     <label for="" class="font-bold">{{__t('Roll Number')}} / {{__t('Passport Number')}}</label>
+                                     <label for="" class="font-bold">{{__t('Roll Number / Passport Number')}} </label>
                                      <input class="w-full  outline-none px-3 mx-auto p-1 border-[#6aa84f] border-2 rounded-full " name="roll" required/>
                                  </div>
                                  <div class="w-full flex justify-center py-4 items-center">

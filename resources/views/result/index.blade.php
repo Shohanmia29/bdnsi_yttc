@@ -6,7 +6,7 @@
     </style>
     <x-slot name="header">
         <div class="w-full flex justify-between">
-            <div class="text-xl">{{ __('Submit Student') }}</div>
+            <div class="text-xl">{{ __t('Submit Student') }}</div>
         </div>
     </x-slot>
 
@@ -26,7 +26,7 @@
                     @endforeach
                 </x-select2>
                 <div class="w-full pt-4 flex justify-end lg:w-1/3">
-                    <x-button>{{ __('Search') }}</x-button>
+                    <x-button>{{ __t('Search') }}</x-button>
                 </div>
             </div>
         </form>
@@ -67,7 +67,7 @@
                 </tbody>
             </table>
             <div class="w-full p-4 flex justify-end">
-                <x-button>{{ __('Submit') }}</x-button>
+                <x-button>{{ __t('Submit') }}</x-button>
             </div>
     </div>
     </form>

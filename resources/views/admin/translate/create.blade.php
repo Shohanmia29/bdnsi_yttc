@@ -14,10 +14,10 @@
              <form action="{{route('admin.translation.store')}}" method="post" enctype="multipart/form-data">
                  @csrf
                  <div class="w-full flex flex-wrap">
-                     <x-labeled-input required  type="text" name="key" class="w-full"/>
-                     <x-labeled-input required  type="text" name="en" class="w-full"/>
-                     <x-labeled-input required  type="text" name="bn" class="w-full"/>
-                     <x-labeled-input required  type="text" name="ar" class="w-full"/>
+                     <x-input-t required  type="text" name="key" class="w-full"/>
+                     <x-input-t required  type="text" name="en" class="w-full"/>
+                     <x-input-t required  type="text" name="bn" class="w-full"/>
+                     <x-input-t required  type="text" name="ar" class="w-full"/>
                      <div class="w-full py-2 flex justify-center">
                          <button class="px-3 py-1 border bg-blue-700 text-white rounded " type="submit">Submit</button>
                      </div>

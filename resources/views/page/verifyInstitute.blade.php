@@ -3,7 +3,7 @@
     <div class="container" x-data="centerData">
         <div class="branch-filter-wrap mt-4 py-4">
             <div class="text-center mb-3">
-                <h5>Filter Verified Branch</h5>
+                <h5>{{__t('Filter Verified Branch')}}</h5>
             </div>
             <form action="{{ route('verifiedInstitute') }}" method="get">
                 <div class="row gap-2 justify-content-center shadow-lg p-4">
@@ -32,8 +32,8 @@
                         </select>
                     </div>
                     <div class="col-md-2">
-                        <button type="submit" class="btn btn-success" >Search</button>
-                        <button type="reset" class="btn btn-danger" x-on:click="resetFilters">Reset</button>
+                        <button type="submit" class="btn btn-success" >{{__t('Search')}}</button>
+                        <button type="reset" class="btn btn-danger" x-on:click="resetFilters">{{__t('Reset')}}</button>
                     </div>
                 </div>
             </form>
@@ -47,7 +47,7 @@
             @empty
                 <div class="p-5 mb-4 bg-body-tertiary rounded-3">
                     <div class="container-fluid py-5 text-center">
-                        <h1 class="display-5 fw-bold">No Institute Found</h1>
+                        <h1 class="display-5 fw-bold">{{__t('No Institute Found')}}</h1>
                     </div>
                 </div>
             @endforelse

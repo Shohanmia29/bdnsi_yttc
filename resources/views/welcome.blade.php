@@ -315,7 +315,7 @@
                 <div class="col-12">
                     <div class="section-head">
                         <h3 class="section-head-title">
-                           {{__t('Photo and video  gallery')}} <span class="title-line style-3"></span>
+                           {{__t('Photo And Video Gallery')}} <span class="title-line style-3"></span>
                         </h3>
                     </div>
                 </div>
@@ -458,7 +458,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-bottom-btn">
-                        <a href="{{route('verifiedInstitute')}}" class="theme-btn secondary">{{__t('see more')}}<i
+                        <a href="{{route('verifiedInstitute')}}" class="theme-btn secondary">{{__t('See More')}}<i
                                 class="fi-rr-arrow-right"></i></a>
                     </div>
                 </div>
@@ -544,7 +544,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-bottom-btn">
-                        <a href="{{route('successStudent')}}" class="theme-btn secondary">see more<i
+                        <a href="{{route('successStudent')}}" class="theme-btn secondary">{{__t('See More')}}<i
                                 class="fi-rr-arrow-right"></i></a>
                     </div>
                 </div>
@@ -571,7 +571,7 @@
                                   <img style="height: 170px" class="w-full " src="{{$sponsor->photo??''}}" alt="">
                               </div>
                         @empty
-                            <div>Not Found</div>
+                            <div>{{__t('Not Found')}}</div>
                         @endforelse
                     </div>
                 </div>
