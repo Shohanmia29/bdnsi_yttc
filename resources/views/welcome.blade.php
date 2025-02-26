@@ -91,12 +91,32 @@
                                 <h3 class="about-cont-title">{{__t('About Us')}}</h3>
                                 <span class="title-seperetor"></span>
                                 <p>
-                                <div x-show="about==false">
-                                    <p   >{!! \Illuminate\Support\Str::limit(\App\Models\ConfigDictionary::get('main_about_us','Coming Soon'), 500 , '...') !!}</p>
-                                </div>
-                                <div x-show="about==true">
-                                   {!! \App\Models\ConfigDictionary::get('main_about_us','Coming Soon') !!}
-                                </div>
+                                 @if(App::getLocale()==='bn')
+                                    <div x-show="about==false">
+                                        <p   >{!! \Illuminate\Support\Str::limit(\App\Models\ConfigDictionary::get('bn_main_about_us','Coming Soon'), 500 , '...') !!}</p>
+                                    </div>
+
+                                    <div x-show="about==true">
+                                        {!!    \App\Models\ConfigDictionary::get('bn_main_about_us','Coming Soon') !!}
+                                    </div>
+                                @elseif(App::getLocale()==='ar')
+                                    <div x-show="about==false">
+                                        <p   >{!! \Illuminate\Support\Str::limit(\App\Models\ConfigDictionary::get('ar_main_about_us','Coming Soon'), 500 , '...') !!}</p>
+                                    </div>
+
+                                    <div x-show="about==true">
+                                        {!!    \App\Models\ConfigDictionary::get('ar_main_about_us','Coming Soon') !!}
+                                    </div>
+                                @else
+                                    <div x-show="about==false">
+                                        <p   >{!! \Illuminate\Support\Str::limit(\App\Models\ConfigDictionary::get('main_about_us','Coming Soon'), 500 , '...') !!}</p>
+                                    </div>
+
+                                    <div x-show="about==true">
+                                        {!!    \App\Models\ConfigDictionary::get('main_about_us','Coming Soon') !!}
+                                    </div>
+                                 @endif
+
                                 <div class="corner-message-btn">
                                     <button x-on:click="about =! about" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></button>
                                 </div>
@@ -118,7 +138,8 @@
                                 <div class="sidebar-widget-list">
                                     <div class="sidebar-widget-list-content">
                                         <img src="{{asset('frontend/svg/notice.svg')}}" alt="#"/>
-                                        <p>{{\Illuminate\Support\Str::limit($notice->details,30,$end='...')}}</p>
+                                        <p>
+                                            {{\Illuminate\Support\Str::limit(translateField($notice,'details'),30,$end='...')}}</p>
                                     </div>
                                     <div class="sidebar-widget-list-btn">
                                         <a href="{{route('noticeDetails',$notice->id)}}" target="_blank" class="theme-btn secondary">{{__t('details')}}</a>
@@ -169,20 +190,26 @@
                                                               src="{{asset('frontend/svg/img/team.png')}}"
                                                               alt="#"/>
                                                           <h4 class="corner-message-info-title">
-                                                              {{$team->designation??''}}
+                                                              {{ translateField($team,'designation')}}
                                                           </h4>
                                                           <span class="c-message-title-seperetor"></span>
                                                           <p class="corner-message-info-name">
-                                                              {{$team->name??''}}
+                                                              {{ translateField($team,'name')}}
                                                           </p>
                                                       </div>
                                                   </div>
                                                   <div   x-data="{description:false}" >
                                                       <div x-show="description==false">
-                                                          <p   >{!! \Illuminate\Support\Str::limit($team->description, 500 , '...') !!}</p>
+                                                          <p   >
+                                                              {!! \Illuminate\Support\Str::limit(translateField($team,'description'), 500 , '...') !!}
+
+                                                          </p>
                                                       </div>
                                                       <div x-show="description==true">
-                                                          <p   >{!! $team->description !!}</p>
+                                                          <p   >
+                                                              {!! translateField($team,'description') !!}
+
+                                                          </p>
                                                       </div>
                                                       <div class="corner-message-btn">
                                                           <button x-on:click="description =! description" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></button>

@@ -37,6 +37,8 @@ class NoticeController extends Controller
     {
           $validated=$request->validate([
                    'details'=>'required',
+                   'bn_details'=>'required',
+                   'ar_details'=>'required',
                    'image'=>'required',
           ]);
           Notice::create($validated);

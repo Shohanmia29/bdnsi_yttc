@@ -17,6 +17,13 @@ class Team extends Model
         'image',
         'description',
         'status',
+
+        'bn_name',
+        'ar_name',
+        'bn_designation',
+        'ar_designation',
+        'bn_description',
+        'ar_description',
     ];
 
     protected $casts = [

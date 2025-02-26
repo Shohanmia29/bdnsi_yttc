@@ -14,6 +14,8 @@ class Notice extends Model
     protected $fillable=[
             'details',
             'image',
+            'bn_details',
+            'ar_details',
     ];
 
      protected $casts=[

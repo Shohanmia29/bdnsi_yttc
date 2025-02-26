@@ -15,28 +15,68 @@
          <div class="bg-white p-3 rounded-md">
              <form action="{{route('admin.team.store')}}" method="post" enctype="multipart/form-data">
                  @csrf
-                 <div class="w-full flex flex-wrap">
-                     <x-labeled-input required name="name" class="w-full md:w-1/3 p-2"/>
-                     <x-labeled-input required name="designation" class="w-full md:w-1/3 p-2"/>
-                     <x-labeled-input  required type="file" name="image" class="w-full md:w-1/3 p-2"/>
-                     <div class="w-full">
+                 <div class="border  mt-2">
+                     <div class="border-b px-2">English </div>
+                     <div class="w-full flex flex-wrap p-2">
+                         <x-labeled-input required name="name" class="w-full md:w-1/2 p-2"/>
+                         <x-labeled-input required name="designation" class="w-full md:w-1/2 p-2"/>
+
                          <div class="w-full">
-                             <div class="font-bold">Description</div>
-                             <div>
-                                 <textarea   name="description" id="description"  class="w-full"></textarea>
+                             <div class="w-full">
+                                 <div class="font-bold">Description</div>
+                                 <div>
+                                     <textarea   name="description" id="description"  class="w-full"></textarea>
+                                 </div>
                              </div>
                          </div>
                      </div>
+                 </div>
+                 <div class="border  mt-2">
+                     <div class="border-b px-2">Bangla </div>
+                     <div class="w-full flex flex-wrap p-2">
+                         <x-labeled-input required name="bn_name" class="w-full md:w-1/2 p-2"/>
+                         <x-labeled-input required name="bn_designation" class="w-full md:w-1/2 p-2"/>
+
+                         <div class="w-full">
+                             <div class="w-full">
+                                 <div class="font-bold">Description</div>
+                                 <div>
+                                     <textarea   name="bn_description" id="bn_description"  class="w-full"></textarea>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="border  mt-2">
+                     <div class="border-b px-2 ">Arbic </div>
+                     <div class="w-full flex flex-wrap p-2">
+                         <x-labeled-input required name="ar_name" class="w-full md:w-1/2 p-2"/>
+                         <x-labeled-input required name="ar_designation" class="w-full md:w-1/2 p-2"/>
+
+                         <div class="w-full">
+                             <div class="w-full">
+                                 <div class="font-bold">Description</div>
+                                 <div>
+                                     <textarea   name="ar_description" id="ar_description"  class="w-full"></textarea>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+                     <x-labeled-input  required type="file" name="image" class="w-full   p-2"/>
                      <div class="w-full flex justify-center py-3">
                          <button class="px-3 py-1 rounded-md bg-green-600 text-white ">Submit</button>
                      </div>
-                 </div>
+
              </form>
          </div>
     </div>
 
     <script>
         CKEDITOR.replace( 'description' );
+        CKEDITOR.replace( 'bn_description' );
+        CKEDITOR.replace( 'ar_description' );
 
     </script>
 </x-admin-app-layout>

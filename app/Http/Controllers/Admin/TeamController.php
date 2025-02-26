@@ -46,6 +46,12 @@ class TeamController extends Controller
             'designation' => 'required',
             'image' => 'required',
             'description' => 'required',
+            'bn_name' => 'required',
+            'ar_name' => 'required',
+            'bn_designation' => 'required',
+            'ar_designation' => 'required',
+            'bn_description' => 'required',
+            'ar_description' => 'required',
         ]);
 
         Team::create($validated);
@@ -91,6 +97,12 @@ class TeamController extends Controller
             'designation' => 'required',
             'image' => 'nullable',
             'description' => 'required',
+            'bn_name' => 'required',
+            'ar_name' => 'required',
+            'bn_designation' => 'required',
+            'ar_designation' => 'required',
+            'bn_description' => 'required',
+            'ar_description' => 'required',
         ]);
 
         $data->update($validated);

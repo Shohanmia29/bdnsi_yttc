@@ -11,4 +11,25 @@ if (!function_exists('__t')) {
 
         return $translation ? $translation->$locale : $key;
     }
+
+
+
+
 }
+
+
+if (!function_exists('translateField')) {
+    function translateField($model, $field)
+    {
+
+        $locale = App::getLocale();
+        $localizedField = $locale === 'bn'
+            ? "bn_{$field}"
+            : ($locale === 'ar' ? "ar_{$field}" : $field);
+
+
+
+        return $model->{$localizedField} ?? $model->{$field};
+    }
+}
+

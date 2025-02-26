@@ -13,13 +13,13 @@
                @forelse($notices as $notice)
                <tr class="w-full bg-gray-200">
                    <td class="border border-black px-2 py-2">{{$loop->iteration}}</td>
-                   <td class="border border-black px-2 py-2">{{\Illuminate\Support\Str::limit($notice->details, '50', $end='...')}}</td>
+                   <td class="border border-black px-2 py-2">{{\Illuminate\Support\Str::limit(translateField($notice,'details'),30,$end='...')}}</td>
                    <td class="border border-black px-2 py-2"><a href="{{$notice->image}}" target="_blank" class="bg-blue-700 text-white rounded-md px-3 py-1">Download</a></td>
                </tr>
                @empty
                    <tr class="w-full bg-gray-200">
                        <td class="border border-black px-2 py-2"></td>
-                       <td class="border border-black px-2 py-2 text-red-500 font-bold" >Not Found Notice</td>
+                       <td class="border border-black px-2 py-2 text-red-500 font-bold" >{{__t('Not Found Notice')}}</td>
 
                    </tr>
                @endforelse

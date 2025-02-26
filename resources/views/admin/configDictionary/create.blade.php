@@ -13,6 +13,11 @@
 
     <form action="{{route('admin.configDictionary.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
+        <div>
+            @foreach($errors->all() as $err)
+                <div class="text-red-500 font-bold"> {{$err}}</div>
+            @endforeach
+        </div>
         <div class="flex flex-wrap justify-center w-full bg-white p-4">
             <x-labeled-textarea value="{{\App\Models\ConfigDictionary::get('center_notice')}}" name="center_notice"  label="Center Notice" class="w-full p-1 "> </x-labeled-textarea>
             <x-labeled-textarea value="{{\App\Models\ConfigDictionary::get('notice')}}" name="notice"  class="w-full p-1 "> </x-labeled-textarea>
@@ -37,10 +42,23 @@
                 <textarea   name="description" id="editor1"  class="w-full">{{\App\Models\ConfigDictionary::get('description')}}</textarea>
             </div>
         </div>
+
         <div class="w-full">
-              <div class="font-bold">About Us</div>
+              <div class="font-bold">English About Us</div>
             <div>
                 <textarea   name="main_about_us" id="main_about_us"  class="w-full">{{\App\Models\ConfigDictionary::get('main_about_us')}}</textarea>
+            </div>
+        </div>
+        <div class="w-full">
+              <div class="font-bold">Bangla About Us</div>
+            <div>
+                <textarea   name="bn_main_about_us" id="bn_main_about_us"  class="w-full">{{\App\Models\ConfigDictionary::get('bn_main_about_us')}}</textarea>
+            </div>
+        </div>
+        <div class="w-full">
+              <div class="font-bold">Arbic About Us</div>
+            <div>
+                <textarea   name="ar_main_about_us" id="ar_main_about_us"  class="w-full">{{\App\Models\ConfigDictionary::get('ar_main_about_us')}}</textarea>
             </div>
         </div>
         <div class="w-full py-8 flex justify-center">
@@ -51,5 +69,7 @@
     <script>
         CKEDITOR.replace( 'editor1' );
         CKEDITOR.replace( 'main_about_us' );
+        CKEDITOR.replace( 'bn_main_about_us' );
+        CKEDITOR.replace( 'ar_main_about_us' );
     </script>
 </x-admin-app-layout>

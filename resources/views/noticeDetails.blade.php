@@ -20,7 +20,7 @@
                 <hr>
                 <p class="">
 
-                    {{$data->details??""}}
+                {{translateField($data,'details')}}
                 </p>
 
             </div>
