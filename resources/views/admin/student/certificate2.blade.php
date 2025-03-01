@@ -151,7 +151,7 @@
                     {{ \Carbon\Carbon::parse($student->exam_date)->format('j-F-Y') }}
                 </div>
                 <div class="absolute student-gpa">
-                    {{ $student->t_written_gpa()?? '' }}
+                    {{ number_format($student->t_written_gpa(),2)?? '' }}
                 </div>
                 <div class="absolute student-result-published capitalize" style="font-size: 18px">
                     @if($student->result_publised)
