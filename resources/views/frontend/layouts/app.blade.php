@@ -421,7 +421,7 @@
                         <p class="footer-copyright-text">
                             © {{date('Y')}} . All right reserved.
                         </p>
-                        <span>Design & Developed by:<a href="#" target="_blank">MMITSFOT Ltd.</a></span>
+{{--                        <span>Design & Developed by:<a href="#" target="_blank">MMITSFOT Ltd.</a></span>--}}
                     </div>
                 </div>
                 <div class="col-lg-6 col-12">
