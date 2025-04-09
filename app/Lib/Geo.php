@@ -26,7 +26,7 @@ class Geo
             });
         }
         return [
-            1  => ['division_id' => 1, 'name' => 'Comilla'],
+            1  => ['division_id' => 1, 'name' => 'Cumilla'],
             2  => ['division_id' => 1, 'name' => 'Feni'],
             3  => ['division_id' => 1, 'name' => 'Brahmanbaria'],
             4  => ['division_id' => 1, 'name' => 'Rangamati'],
@@ -123,10 +123,10 @@ class Geo
             8 => ['district_id' => 1, 'name' => 'Laksam'],
             9 => ['district_id' => 1, 'name' => 'Muradnagar'],
             10 => ['district_id' => 1, 'name' => 'Nangalkot'],
-            11 => ['district_id' => 1, 'name' => 'Comilla Sadar'],
+            11 => ['district_id' => 1, 'name' => 'Cumilla Sadar'],
             12 => ['district_id' => 1, 'name' => 'Meghna'],
             13 => ['district_id' => 1, 'name' => 'Monohargonj'],
-            14 => ['district_id' => 1, 'name' => 'Comilla Sadar Dakshin'],
+            14 => ['district_id' => 1, 'name' => 'Cumilla Sadar Dakshin'],
             15 => ['district_id' => 1, 'name' => 'Titas'],
             16 => ['district_id' => 1, 'name' => 'Burichang'],
             17 => ['district_id' => 1, 'name' => 'Lalmai'],
