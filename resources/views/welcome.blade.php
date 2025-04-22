@@ -596,6 +596,9 @@
                         @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Sponsor)->take(30)->get() as $sponsor)
                               <div class=" w-100 h-25 card ">
                                   <img style="height: 170px" class="w-full " src="{{$sponsor->photo??''}}" alt="">
+                                  <div class="p-1 h6 text-center">
+                                      {{$sponsor->title??''}}
+                                  </div>
                               </div>
                         @empty
                             <div>{{__t('Not Found')}}</div>

@@ -7,7 +7,7 @@
             <h1 class="font-semibold text-3xl text-green-600">Young Technical Training Institute</h1>
             <p class="text-lg font-medium text-orange-400">Govt. License No: C-178431</p>
         </div>
-        <img class="h-52 w-52 object-center border-2 rounded-3xl border-green-500" src="{{ $student->picture }}" alt="{{ $student->name }}" />
+        <img style="border: 2px solid #22c55e!important;" class="h-52 w-52 object-center border-2 rounded-3xl " src="{{ $student->picture }}" alt="{{ $student->name }}" />
         <div class="w-full border-2 border-green-600 rounded-md">
             <!-- Header Row -->
             <div class="w-full flex flex-wrap rounded-tl-md rounded-tr-md bg-green-100">
