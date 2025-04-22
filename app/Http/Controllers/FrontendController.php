@@ -19,16 +19,16 @@ class FrontendController extends Controller
               return view('page.verifyInstitute',compact('centers'));
       }
       public function successStudent(Request $request){
-             $students=Student::whereHas('result')->select('id','name','picture')->where('status',StudentStatus::Approved)->paginate(40);
+             $students=Student::hide()->whereHas('result')->select('id','name','picture')->where('status',StudentStatus::Approved)->paginate(40);
               return view('page.successStudent',compact('students'));
       }
       public function successStudentDetails($id){
-             $data=Student::whereHas('result')->where('status',StudentStatus::Approved)->findOrFail($id);
+             $data=Student::hide()->whereHas('result')->where('status',StudentStatus::Approved)->findOrFail($id);
               return view('page.successStudentDetails',compact('data'));
       }
 
       public function studentInfo($id){
-             $data=Student::where('status',StudentStatus::Approved)->findOrFail($id);
+             $data=Student::hide()->where('status',StudentStatus::Approved)->findOrFail($id);
               return view('page.studentInfo',compact('data'));
       }
 

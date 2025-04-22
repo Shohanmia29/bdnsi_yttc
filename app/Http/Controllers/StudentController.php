@@ -23,7 +23,7 @@ class StudentController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            return datatables(Student::select(['id', 'center_id', 'session_id', 'subject_id', 'name', 'status', 'roll'])
+            return datatables(Student::hide()->select(['id', 'center_id', 'session_id', 'subject_id', 'name', 'status', 'roll'])
                 ->own()
                 ->with(['session', 'subject']))
                 ->addColumn('admit', function ($admit) {

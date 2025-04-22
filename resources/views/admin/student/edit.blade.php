@@ -114,8 +114,8 @@
                 <x-labeled-input  name="exam_date" :value="$student->exam_date" type="date" class="w-full p-1 md:w-1/2 lg:w-1/3" required/>
                 <x-labeled-input  name="result_publised" :value="optional(\Carbon\Carbon::make($student->result_publised))->format('Y-m-d')" type="date" class="w-full p-1 md:w-1/2 lg:w-1/3"  />
                 <x-labeled-select name="status" required class="w-full p-1 ">
-                    @foreach(\App\Enums\StudentStatus::getInstances() as $status)
-                        <option value="{{ $status->value }}" @selected(old('status', $student->status->value) == $status->value)>{{ $status->key }}</option>
+                    @foreach(\App\Enums\StudentStatus::getStatus() as $key=>$value)
+                        <option value="{{ $value }}" @selected(old('status', $value) == $student->status->value)>{{ $key }}</option>
                     @endforeach
                 </x-labeled-select>
                 <x-labeled-input type="number" name="paid_amount" :value="$student->paid_amount" required class="w-full p-1 md:w-1/2"/>
@@ -123,8 +123,8 @@
 
             @else
                 <x-labeled-select name="status" required class="w-full p-1 ">
-                    @foreach(\App\Enums\StudentStatus::getInstances() as $status)
-                        <option value="{{ $status->value }}" @selected(old('status', $student->status->value) == $status->value)>{{ $status->key }}</option>
+                    @foreach(\App\Enums\StudentStatus::getStatus() as $key=>$value)
+                        <option value="{{ $value }}" @selected(old('status', $value) == $student->status->value)>{{ $key }}</option>
                     @endforeach
                 </x-labeled-select>
             @endif

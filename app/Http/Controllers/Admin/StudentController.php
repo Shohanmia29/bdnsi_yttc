@@ -184,7 +184,7 @@ class StudentController extends Controller
                 'subject_id' => 'required|exists:subjects,id',
                 'course_duration' => 'required',
                 'qualification' => 'required',
-                'status' => 'required|numeric|enum_value:' . StudentStatus::class . ',false',
+                'status' => 'required|numeric',
                 'picture' => 'nullable|image',
                 'exam_date' => 'required',
                 'result_publised' => 'nullable',

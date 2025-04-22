@@ -1392,7 +1392,10 @@ class Student extends Authenticatable
 
     }
 
-
+public function scopeHide($query)
+{
+    return $query->whereNotIn('status',[StudentStatus::Hide]);
+}
 
 
 }
