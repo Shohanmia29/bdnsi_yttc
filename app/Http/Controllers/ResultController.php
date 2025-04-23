@@ -12,15 +12,12 @@ class ResultController extends Controller
     {
         $student = null;
         if ($request->has(['roll']) && strlen($request->get('roll')) ) {
-
-
             $student = Student::where([
                 'roll' => $request->get('roll')
             ])->orWhere('passport',$request->get('roll'))->first();
-           if ($student->status == StudentStatus::Hide){
-               return response()->error('Not Found Student');
-           }
-            if ($student === null) {
+
+
+            if ($student === null || $student->status == StudentStatus::Hide) {
                 return response()->error('Result not found');
             }
 
