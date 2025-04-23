@@ -17,7 +17,7 @@ class ResultController extends Controller
             ])->orWhere('passport',$request->get('roll'))->first();
 
 
-            if ($student === null || $student->status == StudentStatus::Hide) {
+            if ($student === null || $student->status->is(StudentStatus::Hide())) {
                 return response()->error('Result not found');
             }
 
