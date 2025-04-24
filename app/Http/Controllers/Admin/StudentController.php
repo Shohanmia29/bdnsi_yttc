@@ -7,6 +7,7 @@ use App\Enums\CourseType;
 use App\Enums\Religion;
 use App\Enums\SessionStatus;
 use App\Enums\StudentStatus;
+use App\Lib\Helper;
 use App\Lib\Image;
 use App\Enums\Gender;
 use App\Models\Center;
@@ -114,8 +115,14 @@ class StudentController extends Controller
 
             $validated['roll'] = $validated['roll'] ?? Student::getLastFreeRoll();
             $validated['registration'] = $validated['registration'] ?? Student::getLastFreeRegistration();
+            $student=Student::create($validated);
+            $message = 'Congratulations!! ' . $student->name . ', You have successfully filled the application form for Fastly '
+                . (Auth::user()->center->name ?? '') . ' Technician '
+                . ($student->subject->name ?? '') . ' under Young Technical Training Center. Your Roll No: '
+                . $student->roll . ' and Registration No: ' . $student->registration . '. Thanks for staying with Young Technical Training Center.';
+            Helper::sendSms($student->phone,$message);
             DB::commit();
-            return response()->report(Student::create($validated), 'Student Created successfully');
+            return response()->report($student, 'Student Created successfully');
         }catch (\Exception $exception){
             DB::rollBack();
 
