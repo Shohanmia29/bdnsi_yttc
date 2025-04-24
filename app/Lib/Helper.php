@@ -129,7 +129,7 @@ class Helper
         $secret_key = config('site.bluck_secret_key');
         $sender_id = 'YTTC';
 
-        $url = "https://smpp.revesms.com:7790/sendtext?apikey=" . urlencode($api_key) .
+        $url = "http://apismpp.revesms.com/sendtext?apikey=" . urlencode($api_key) .
             "&secretkey=" . urlencode($secret_key) .
             "&callerID=" . urlencode($sender_id) .
             "&toUser=" . urlencode($phone) .
