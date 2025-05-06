@@ -115,6 +115,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('adminList', \App\Http\Controllers\Admin\AdminListController::class)->only(['edit','update']);
         Route::resource('configDictionary', \App\Http\Controllers\Admin\ConfigDictionaryController::class)->only(['create','store']);
         Route::resource('team', \App\Http\Controllers\Admin\TeamController::class);
+        Route::resource('sub-admin', \App\Http\Controllers\Admin\SubadminController::class);
 
         Route::get('contactUs',[DashboardController::class,'contactUs'])->name('contactUs');
         Route::resource('translation', \App\Http\Controllers\Admin\TranslationController::class);

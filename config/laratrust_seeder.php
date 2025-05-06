@@ -20,7 +20,13 @@ return [
             'student' => 'c,r,u,d',
             'result' => 'c,r,u,d',
             'team' => 'c,r,u,d',
-        ]
+            'sub-admin' => 'c,r,u,d',
+        ],
+
+        'sub_admin' => [
+            'student' => 'c,r,u',
+            'result' => 'c,r,u',
+        ],
     ],
 
     'permissions_map' => [

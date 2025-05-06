@@ -14,12 +14,14 @@ use App\Models\Session;
 use App\Models\Student;
 use App\Enums\BloodGroup;
 use App\Models\Subject;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
 
 class StudentController extends Controller
 {
+    use ChecksPermission;
     public function index(Request $request)
     {
         if ($request->ajax()) {

@@ -78,6 +78,15 @@
                     <span>{{ __('User') }}</span>
                 </a>
                 @endcan
+                @can('sub-admin-read')
+                <a
+                    href="{{ route('admin.sub-admin.index') }}"
+                    class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+                >
+                    <span>{{ __('Sub Admin') }}</span>
+                </a>
+                @endcan
+
                 @can('subject-read')
                 <a
                     href="{{ route('admin.subject.index') }}"
