@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Lib\Image;
 use App\Models\ConfigDictionary;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,7 @@ class ConfigDictionaryController extends Controller
 
     public function store(Request $request)
     {
+
         $validated = $request->validate([
             'center_notice' => 'required',
             'notice' => 'required',
@@ -40,8 +42,22 @@ class ConfigDictionaryController extends Controller
             'main_about_us'=>'required',
             'bn_main_about_us'=>'required',
             'ar_main_about_us'=>'required',
+            'logo'=>'nullable',
+            'fav_icon'=>'nullable',
+            'header_logo'=>'nullable',
         ]);
         $validated['created_at'] = now()->toDateTimeString();
+        if (!empty($validated['logo'])) {
+            $validated['logo'] = Image::store('logo', 'config');
+        }
+        if (!empty($validated['fav_icon'])) {
+            $validated['fav_icon'] = Image::store('fav_icon', 'config');
+        }
+        if (!empty($validated['header_logo'])) {
+            $validated['header_logo'] = Image::store('header_logo', 'config');
+        }
+
+
         $config=ConfigDictionary::setMany($validated);
         $newHistory = array_merge(
             [$validated],

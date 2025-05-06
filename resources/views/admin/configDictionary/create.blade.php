@@ -61,6 +61,25 @@
                 <textarea   name="ar_main_about_us" id="ar_main_about_us"  class="w-full">{{\App\Models\ConfigDictionary::get('ar_main_about_us')}}</textarea>
             </div>
         </div>
+
+         <div class="w-full">
+                <div>
+                    <x-labeled-input type="file"   name="header_logo" label="Frontend Header Logo" class="w-full p-2" />
+                    <img src="{{ \App\Lib\Image::url(\App\Models\ConfigDictionary::get('header_logo'))}}" class="w-14 h-14" alt="">
+                </div>
+
+                   <div>
+                    <x-labeled-input type="file"   name="logo" class="w-full p-2" />
+                    <img src="{{ \App\Lib\Image::url(\App\Models\ConfigDictionary::get('logo'))}}" class="w-14 h-14" alt="">
+                </div>
+
+             <div>
+                 <x-labeled-input type="file"    name="fav_icon" class="w-full p-2" />
+                 <img src="{{\App\Lib\Image::url(\App\Models\ConfigDictionary::get('fav_icon'))}}" class="w-14 h-14" alt="">
+             </div>
+
+         </div>
+
         <div class="w-full py-8 flex justify-center">
             <x-button>{{ __('Update') }}</x-button>
         </div>

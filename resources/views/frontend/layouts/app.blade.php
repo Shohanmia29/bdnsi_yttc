@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Young Technical Training Center | Technical Education In Bd</title>
-    <link rel="icon" href="{{asset('frontend/logo.jpg')}}?v=223" />
+    <link rel="icon" href="{{\App\Lib\Image::url(\App\Models\ConfigDictionary::get('fav_icon'))??asset('frontend/logo.jpg')}}?v=223" />
 
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/bootstrap.min.css')}}?v=2" />
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/animate.min.css')}}?v=2" />
@@ -17,7 +17,6 @@
 
 {{--    <link rel="stylesheet" href="{{asset('frontend/css/toastr.min.css')}}?v=2" />--}}
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}?v=2" />
-    <link rel="icon" type="image/png" href="{{ asset('frontend/logo.jpg')}}?v=223">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/logo.jpg')}}?v=223">
     <link rel="apple-touch-icon" href="{{ asset('frontend/logo.jpg')}}?v=223" />
     <meta name="msapplication-TileImage" content="{{ asset('frontend/logo.jpg')}}?v=223" />
@@ -132,7 +131,7 @@
             <div class="modal-header offcanvas-header">
                 <!-- offcanvas-logo-start -->
                 <div class="offcanvas-logo">
-                    <a href="/"><img src="{{asset('frontend/logo2.png')}}" alt="#" /></a>
+                    <a href="/"><img src="{{\App\Lib\Image::url(\App\Models\ConfigDictionary::get('header_logo'))??asset('frontend/logo2.png')}}" alt="#" /></a>
                 </div>
                 <!-- offcanvas-logo-end -->
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
@@ -254,7 +253,7 @@
                     <div class="row align-items-center">
                         <div class=" col-md-2 col-8">
                             <div class="header-logo">
-                                <a href="/"><img src="{{asset('frontend/logo2.png')}}" alt="#" /></a>
+                                <a href="/"><img src="{{\App\Lib\Image::url(\App\Models\ConfigDictionary::get('header_logo'))??asset('frontend/logo2.png')}}" alt="#" /></a>
                             </div>
                         </div>
                         <div class="col-md-10 col-4 ">

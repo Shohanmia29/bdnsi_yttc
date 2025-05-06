@@ -1,1 +1,1 @@
-<img {{ $attributes }} src="{{ asset('frontend/logo.png') }}" alt="Logo"/>
+<img {{ $attributes }} src="{{ \App\Lib\Image::url(\App\Models\ConfigDictionary::get('logo')) ?? asset('frontend/logo.png') }}" alt="Logo"/>

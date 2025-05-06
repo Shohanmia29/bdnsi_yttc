@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-12">
                     <center>
-                        <img class="p-2" src="{{asset('images/student/logo.png')}}"
+                        <img class="p-2" src="{{\App\Lib\Image::url(\App\Models\ConfigDictionary::get('logo'))??asset('images/student/logo.png')}}"
                              alt=""
                              style="width: 80%; margin-top: 5px; border-radius: 50%;  ">
 
