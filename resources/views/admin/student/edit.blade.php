@@ -142,7 +142,6 @@
                 present_address: @json($student->present_address ?? ''),
                 permanent_address: @json($student->permanent_address ?? ''),
                 upazillas: [],
-
                 init() {
                     if (this.district) {
                         this.filterUpazillas(this.district);
