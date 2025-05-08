@@ -10,8 +10,8 @@
                     <div class="col-md-3">
                         <select class="form-control" name="division" x-model="division" required aria-label="Division select">
                             <option value="" disabled selected>Select Division</option>
-                            @foreach(\App\Lib\Geo::divisions() as $divisionId => $division)
-                                <option value="{{ $divisionId }}" @selected(old('division') == $divisionId)>{{ $division['name'] }}</option>
+                            @foreach($divisions as  $division)
+                                <option value="{{ $division->id }}" @selected(old('division') == $division->id)>{{ $division->name??'' }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -103,7 +103,7 @@
                     });
                 },
                 filterDistricts() {
-                    const allDistricts = @json(\App\Lib\Geo::districts());
+                    const allDistricts = @json($districts);
                     this.districts = Object.entries(allDistricts)
                         .map(([id, district]) => ({
                             id: id,
@@ -113,7 +113,7 @@
                         .filter(district => district.division_id == this.division);
                 },
                 filterUpazillas() {
-                    const allUpazillas = @json(\App\Lib\Geo::upazillas());
+                    const allUpazillas = @json($upazilas);
                     this.upazillas = Object.entries(allUpazillas)
                         .map(([id, upazilla]) => ({
                             id: id,

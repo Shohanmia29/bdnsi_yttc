@@ -31,8 +31,8 @@
                 @endforeach
             </x-labeled-select>
             <x-labeled-select class="w-full lg:w-1/2 p-1" name="division" x-model="division" x-ref="division" required>
-                @foreach(\App\Lib\Geo::divisions() as $divisionId => $division)
-                    <option value="{{ $divisionId }}" @selected(old('division', $center->division) == $divisionId)>{{ $division['name'] }}</option>
+                @foreach($divisions as   $division)
+                    <option value="{{ $division->id }}" @selected(old('division', $center->division) == $division->id)>{{ $division->name }}</option>
                 @endforeach
             </x-labeled-select>
             <x-labeled-select class="w-full lg:w-1/2 p-1" x-model="district"   x-ref="district" name="district" required>
@@ -86,7 +86,7 @@
                     },
 
                     filterDistricts(division){
-                        const districts = Object.entries(@js(\App\Lib\Geo::districts())).map(item => ({
+                        const districts = Object.entries(@js($districts)).map(item => ({
                             id: item[0],
                             name: item[1].name,
                             division_id: item[1].division_id,
@@ -99,7 +99,7 @@
                         }, 10)
                     },
                     filterUpazillas(district){
-                        const upazillas = Object.entries(@js(\App\Lib\Geo::upazillas())).map(item => ({
+                        const upazillas = Object.entries(@js($upazilas)).map(item => ({
                             id: item[0],
                             name: item[1].name,
                             district_id: item[1].district_id,
