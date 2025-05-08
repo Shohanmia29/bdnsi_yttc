@@ -11,11 +11,13 @@ use App\Lib\Helper;
 use App\Lib\Image;
 use App\Enums\Gender;
 use App\Models\Center;
+use App\Models\District;
 use App\Models\Result;
 use App\Models\Session;
 use App\Models\Student;
 use App\Enums\BloodGroup;
 use App\Models\Subject;
+use App\Models\Upazila;
 use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -81,6 +83,30 @@ class StudentController extends Controller
             'centers' => Center::select(['id', 'code', 'name'])->whereStatus(CenterStatus::Approved)->get(),
             'sessions' => Session::select(['id', 'name'])->where('status', SessionStatus::Active)->get(),
             'subjects' => Subject::select(['id', 'name'])->get(),
+
+            'divisions' => \App\Models\Division::get(),
+            'districts_keys' => District::get()->mapWithKeys(function ($district) {
+                return [
+                    $district->id => [
+                        'id' => $district->id,
+                        'division_id' => $district->division_id,
+                        'name' => $district->name,
+                    ]
+                ];
+            }),
+
+            'districts' => District::get(),
+
+            'upazilas' => Upazila::get()->mapWithKeys(function ($upazila) {
+                return [
+                    $upazila->id => [
+                        'id' => $upazila->id,
+                        'district_id' => $upazila->district_id,
+                        'name' => $upazila->name,
+                    ]
+                ];
+            })->toArray()
+
         ]);
     }
 

@@ -136,32 +136,27 @@
     </form>
 
     <script>
-
         document.addEventListener('alpine:init', () => {
             Alpine.data('centerRequestData', () => ({
-                district: @json(\App\Lib\Geo::getDistrictIdByName($student->present_address) ?? ''), // Pre-fill district based on name
-                present_address: @json($student->present_address ?? ''), // Pre-fill present address
-                permanent_address: @json($student->permanent_address ?? ''), // Pre-fill upazila (permanent address)
+                district: @json(\App\Lib\Geo::getDistrictIdByName($student->present_address) ?? ''),
+                present_address: @json($student->present_address ?? ''),
+                permanent_address: @json($student->permanent_address ?? ''),
                 upazillas: [],
 
                 init() {
-                    // Load upazillas if the district is pre-filled
                     if (this.district) {
                         this.filterUpazillas(this.district);
                     }
-
-                    // Watch for district changes to filter and load upazillas
                     this.$watch('district', (value) => {
                         if (value) {
                             this.filterUpazillas(value);
-                            this.updatePresentAddress(value); // Update present_address with district name
+                            this.updatePresentAddress(value);
                         } else {
                             this.upazillas = [];
                             this.present_address = '';
                         }
                     });
                 },
-
                 filterUpazillas(districtId) {
                     const upazillas = Object.entries(@js(\App\Lib\Geo::upazillas())).map(([id, upazila]) => ({
                         id: id,

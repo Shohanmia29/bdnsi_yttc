@@ -39,10 +39,11 @@
                 @endforeach
             </x-labeled-select>
             <input type="hidden" name="present_address" x-bind:value="present_address">
+
             <x-labeled-select class="w-full p-1 md:w-1/2 lg:w-1/3" x-model="district"   name="district" required>
                 <option value="">Select District</option>
-                @foreach(\App\Lib\Geo::districts() as $districtId => $district)
-                    <option value="{{ $districtId }}">{{ $district['name'] }}</option>
+                @foreach( $districts as  $district)
+                    <option value="{{ $district->id }}">{{ $district->name??''}}</option>
                 @endforeach
             </x-labeled-select>
 
@@ -125,7 +126,7 @@
                     this.$watch('district', (value) => {
                         if (value) {
                             this.filterUpazillas(value);
-                            this.updatePresentAddress(value); // Update the present_address with district name
+                            this.updatePresentAddress(value);
                         } else {
                             this.upazillas = [];
                             this.present_address = '';
@@ -133,7 +134,7 @@
                     });
                 },
                 filterUpazillas(districtId) {
-                    const upazillas = Object.entries(@js(\App\Lib\Geo::upazillas())).map(([id, upazilla]) => ({
+                    const upazillas = Object.entries(@js($upazilas)).map(([id, upazilla]) => ({
                         id: id,
                         name: upazilla.name,
                         district_id: upazilla.district_id
@@ -142,10 +143,10 @@
                     this.upazillas = upazillas.filter(upazilla => upazilla.district_id == districtId);
                 },
                 updatePresentAddress(districtId) {
-                    const districts = @js(\App\Lib\Geo::districts());
-                    const selectedDistrict = districts[districtId]; // Find the district by its id
+                    const districts = @js($districts_keys);
+                    const selectedDistrict = districts[districtId];
                     if (selectedDistrict) {
-                        this.present_address = selectedDistrict.name; // Set the district name in the hidden field
+                        this.present_address = selectedDistrict.name;
                     }
                 }
             }));
