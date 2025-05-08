@@ -127,12 +127,20 @@
                     <span>{{ __('Update password') }}</span>
                 </a>
                 @role('admin')
+
                 <a
                     href="{{ route('admin.slider.index') }}"
                     class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
                 >
                     <span>{{ __('Slider') }}</span>
                 </a>
+                <a
+                    href="{{ route('admin.upazila-store.create') }}"
+                    class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+                >
+                    <span>{{ __('Upazila') }}</span>
+                </a>
+
                 <a
                     href="{{ route('admin.notice.index') }}"
                     class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"

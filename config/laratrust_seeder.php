@@ -21,6 +21,7 @@ return [
             'result' => 'c,r,u,d',
             'team' => 'c,r,u,d',
             'sub-admin' => 'c,r,u,d',
+            'upazila-store' => 'c,r,u,d',
         ],
 
         'sub_admin' => [
