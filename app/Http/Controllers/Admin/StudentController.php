@@ -37,9 +37,12 @@ class StudentController extends Controller
         return view('admin.student.admitCard', compact('student'));
     }
 
-    public function certificate($id)
+    public function certificate(Request  $request, $id)
     {
         $student = Student::where('id', $id)->firstOrFail();
+         if ($request->original=='original'){
+             return view('admin.student.orginalCertificate', compact('student'));
+         }
         return view('admin.student.certificate2', compact('student'));
     }
 
@@ -58,6 +61,7 @@ class StudentController extends Controller
                         '<a style="background-color:green; padding:3px; border-radius:4px; color:white" target="_blank" href="' . route("admin.student.show", [$registration->id, 'registration' => 'registration']) . '">' . $registration->registration . '</a>'
                         . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.student.show", [$registration->id, 'transcript' => 'transcript']) . '">Transcript</a>'
                         . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.certificateStudent", [$registration->id, 'certificate' => 'certificate']) . '">Certificate</a>'
+                        . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.certificateStudent", [$registration->id, 'original' => 'original']) . '">Original Certificate</a>'
                         . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.student.show", [$registration->id, 'cpdf' => 'cpdf']) . '">C-Pdf</a>'
                         . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.student.show", [$registration->id, 'idcard' => 'idcard']) . '">Id Card</a>'
                     );
