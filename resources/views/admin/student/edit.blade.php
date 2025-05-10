@@ -41,7 +41,7 @@
                     @endforeach
                 </x-labeled-select>
 
-        {{--        <!-- Hidden input field to store present_address -->
+                <!-- Hidden input field to store present_address -->
                 <input type="hidden" name="present_address" x-bind:value="present_address">
 
                 <!-- District Select -->
@@ -59,7 +59,7 @@
                         <option :value="upazila.name" :selected="upazila.name === permanent_address" x-text="upazila.name"></option>
                     </template>
                 </x-labeled-select>
---}}
+
 
                 <x-labeled-input name="phone" :value="$student->phone"    class="w-full p-1 md:w-1/2 lg:w-1/3"/>
                 <x-select2 name="session_id" label="Session" required class="w-full p-1 md:w-1/2 lg:w-1/3">
@@ -135,11 +135,10 @@
         </div>
     </form>
 
-{{--    <script>
+    <script>
         document.addEventListener('alpine:init', () => {
             Alpine.data('centerRequestData', () => ({
-                --}}{{--district: @json( \App\Lib\Geo::getDistrictIdByName($student->present_address) ?? ''),--}}{{--
-                district: @json( \App\Lib\Geo::getDistrictIdByName($student->present_address) ?? ''),
+                district: @json( \App\Models\District::getDistrictIdByName($student->present_address) ?? ''),
                 present_address: @json($student->present_address ?? ''),
                 permanent_address: @json($student->permanent_address ?? ''),
                 upazillas: [],
@@ -158,7 +157,7 @@
                     });
                 },
                 filterUpazillas(districtId) {
-                    const upazillas = Object.entries(@js(\App\Lib\Geo::upazillas())).map(([id, upazila]) => ({
+                    const upazillas = Object.entries(@js($upazilas)).map(([id, upazila]) => ({
                         id: id,
                         name: upazila.name,
                         district_id: upazila.district_id
@@ -179,7 +178,7 @@
                 },
 
                 updatePresentAddress(districtId) {
-                    const districts = @js(\App\Lib\Geo::districts());
+                    const districts = @js($districts_keys);
                     const selectedDistrict = districts[districtId];
                     if (selectedDistrict) {
                         this.present_address = selectedDistrict.name; // Set the district name in the hidden field
@@ -188,7 +187,7 @@
             }));
         });
 
-    </script>--}}
+    </script>
 
 
 </x-admin-app-layout>
