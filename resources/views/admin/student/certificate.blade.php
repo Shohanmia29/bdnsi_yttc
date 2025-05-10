@@ -89,9 +89,9 @@
         .student-roll { top: 63%; left: 37%; }
         .student-subject { top: 63%; left: 55.5%; }
         .center-code { top: 66%; left: 87%; }
-        .exam-date { top: 68.6%; left: 46%; font-size: 17px}
+        .exam-date { top: 69%; left: 46.5%; font-size: 17px}
         .student-gpa { top: 68%; left: 74%; }
-        .student-result-published { top: 86%; left: 22%; font-size: 10px }
+        .student-result-published { top: 86.2%; left: 22%; font-size: 10px }
         .qr { top: 57%; left: 10%; }
 
         @media screen and (min-width: 740px) {
@@ -105,9 +105,9 @@
             .student-roll { top: 63%; left: 37%; }
             .student-subject { top: 63%; left: 55.5%; }
             .center-code { top: 66%; left: 87%; }
-            .exam-date { top: 68.6%; left: 46%; font-size: 17px}
+            .exam-date { top: 69%; left: 46.5%; font-size: 17px}
             .student-gpa { top: 68%; left: 74%; }
-            .student-result-published { top: 86%; left: 22%; font-size: 10px }
+            .student-result-published { top: 86.2%; left: 22%; font-size: 10px }
             .qr { top: 57%; left: 10%; }
         }
         .no-background {
