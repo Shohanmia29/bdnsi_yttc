@@ -190,6 +190,28 @@ class StudentController extends Controller
             'centers' => Center::select(['id', 'code', 'name'])->whereStatus(CenterStatus::Approved)->get(),
             'sessions' => Session::select(['id', 'name'])->where('status', SessionStatus::Active)->get(),
             'subjects' => Subject::select(['id', 'name'])->get(),
+            'divisions' => \App\Models\Division::get(),
+            'districts_keys' => District::get()->mapWithKeys(function ($district) {
+                return [
+                    $district->id => [
+                        'id' => $district->id,
+                        'division_id' => $district->division_id,
+                        'name' => $district->name,
+                    ]
+                ];
+            }),
+
+            'districts' => District::get(),
+
+            'upazilas' => Upazila::get()->mapWithKeys(function ($upazila) {
+                return [
+                    $upazila->id => [
+                        'id' => $upazila->id,
+                        'district_id' => $upazila->district_id,
+                        'name' => $upazila->name,
+                    ]
+                ];
+            })->toArray()
         ]);
     }
 
@@ -210,8 +232,8 @@ class StudentController extends Controller
                 'date_of_birth' => 'required',
                 'gender' => 'required|numeric|enum_value:' . Gender::class . ',false',
                 'religion' => 'required|numeric|enum_value:' . Religion::class . ',false',
-                'present_address' => 'required|string',
-                'permanent_address' => 'required|string',
+//                'present_address' => 'required|string',
+//                'permanent_address' => 'required|string',
                 'phone' => 'nullable|min:11|max:11',
                 'session_id' => 'required|exists:sessions,id',
                 'subject_id' => 'required|exists:subjects,id',
