@@ -79,36 +79,36 @@
             position: absolute;
         }
 
-        .student-id { top: 38.4%; left: 30.8%; }
+        .student-id { top: 38%; left: 30.8%; }
         .student-registration { top: 36.7%; left: 82%; }
         .student-session { top: 41.2%; left: 82%;font-size: 18px }
         .student-name { top: 45.7%; left: 44.5%; }
         .fathers-name { top: 50%; left: 43.5%; text-transform: capitalize  ; }
         .mothers-name { top: 54.2%; left: 41.5%; text-transform: capitalize  ; }
         .center-name { top: 58.2%; left: 40%; }
-        .student-roll { top: 62.5%; left: 37%; }
+        .student-roll { top: 63%; left: 37%; }
         .student-subject { top: 63%; left: 55.5%; }
         .center-code { top: 66%; left: 87%; }
-        .exam-date { top: 67.8%; left: 45.5%; font-size: 17px}
-        .student-gpa { top: 67.4%; left: 74%; }
-        .student-result-published { top: 84%; left: 22%; font-size: 10px }
-        .qr { top: 57%; left: 9%; }
+        .exam-date { top: 68.2%; left: 46%; font-size: 17px}
+        .student-gpa { top: 68%; left: 74%; }
+        .student-result-published { top: 85.2%; left: 22%; font-size: 10px }
+        .qr { top: 57%; left: 10%; }
 
         @media screen and (min-width: 740px) {
-            .student-id { top: 38.5%; left: 30.8%; }
+            .student-id { top: 38%; left: 30.8%; }
             .student-registration { top: 36.7%; left: 82%; }
             .student-session { top: 41.2%; left: 82%;font-size: 18px }
             .student-name { top: 45.7%; left: 44.5%; }
             .fathers-name { top: 50%; left: 43.5%; text-transform: capitalize  ; }
             .mothers-name { top: 54.2%; left: 41.5%; text-transform: capitalize  ; }
             .center-name { top: 58.2%; left: 40%; }
-            .student-roll { top: 62.5%; left: 37%; }
+            .student-roll { top: 63%; left: 37%; }
             .student-subject { top: 63%; left: 55.5%; }
             .center-code { top: 66%; left: 87%; }
-            .exam-date { top: 67.8%; left: 45.5%; font-size: 17px}
-            .student-gpa { top: 67.4%; left: 74%; }
-            .student-result-published { top: 84%; left: 22%; font-size: 10px }
-            .qr { top: 57%; left: 9%; }
+            .exam-date { top: 68.2%; left: 45.5%; font-size: 17px}
+            .student-gpa { top: 68%; left: 74%; }
+            .student-result-published { top: 85.2%; left: 22%; font-size: 10px }
+            .qr { top: 57%; left: 10%; }
         }
         .no-background {
             background-image: none !important;
