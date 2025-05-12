@@ -220,8 +220,7 @@
         width: 130px;
         border-bottom: 2px dotted black;
         margin-bottom: 10px;
-        line-height: 5px;
-        padding-bottom: 5px;
+        line-height: 16px;
     }
     .rol-reg-sec1 {
         text-align: start;
