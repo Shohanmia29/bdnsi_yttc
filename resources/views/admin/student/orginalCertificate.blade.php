@@ -2,6 +2,7 @@
 <div class="container">
     <div class="main-box">
         <img src="{{asset('images/cetificate qr code.png')}}" alt="" class="qr-code">
+        <p class="publish_data">Data of Publication of Results: 19 February 2020</p>
         <div class="box">
             <div class="text-end">Roll No. <span class="rol-reg-sec">144773</span></div>
             <div class="inline-block w-full">
@@ -60,6 +61,8 @@
     }
     p {
         line-height: 26px;
+        font-weight: 500;
+        font-size: 20px;
     }
     .whitespace-nowrap {
         white-space: nowrap;
@@ -75,10 +78,10 @@
         width: 100%;
     }
     .text {
-        width: 115px;
+        width: 140px;
     }
     .text2 {
-        width: 95px;
+        width: 110px;
     }
     .text3 {
         width: 30px;
@@ -90,13 +93,13 @@
         width: 100px;
     }
     .text6 {
-        width: 90px;
+        width: 100px;
     }
     .text7 {
-        width: 180px;
+        width: 220px;
     }
     .text8 {
-        width: 120px;
+        width: 140px;
     }
     .text9 {
         width: 120px;
@@ -110,20 +113,20 @@
     .underlined {
         border-bottom: 2px dotted black;
         margin-bottom: 10px;
-        width: 84%;
+        width: 80%;
         padding: 0px 6px;
     }
     .underlined2 {
         border-bottom: 2px dotted black;
         margin-bottom: 10px;
-        width: 83%;
+        width: 81%;
         padding: 0px 6px;
         padding-left: 30px;
     }
     .underlined3 {
         border-bottom: 2px dotted black;
         margin-bottom: 10px;
-        width: 91%;
+        width: 90%;
         padding: 0px 6px;
         padding-left: 30px;
     }
@@ -137,16 +140,16 @@
     .underlined5 {
         border-bottom: 2px dotted black;
         margin-bottom: 10px;
-        width: 22%;
+        width: 19%;
         padding: 0px 6px;
         padding-left: 30px;
     }
     .underlined6 {
         border-bottom: 2px dotted black;
         margin-bottom: 10px;
-        width: 45%;
+        width: 49%;
         padding: 0px 6px;
-        padding-left: 30px;
+        padding-left: 10px;
     }
     .underlined7 {
         border-bottom: 2px dotted black;
@@ -158,7 +161,7 @@
     .underlined8 {
         border-bottom: 2px dotted black;
         margin-bottom: 10px;
-        width: 18%;
+        width: 10%;
         padding: 0px 6px;
         padding-left: 30px;
     }
@@ -194,7 +197,7 @@
     .rol-reg-sec {
         text-align: start;
         padding-left: 20px;
-        padding-bottom: 3px;
+        /* padding-bottom: 3px; */
         display: inline-block;
         width: 130px;
         border-bottom: 1px dotted black;
@@ -205,6 +208,12 @@
     .float-left {
         float: left !important;
     }
+    .publish_data {
+        position: absolute;
+        bottom: 100px;
+        left: 190px;
+        font-size: 16px;
+    }
 </style>
 <style>
     @media print{
@@ -212,7 +221,7 @@
             /* min-height: 558px; */
         }
         p {
-            line-height: 20px;
+            line-height: 22px;
         }
         .no-print {
             display: none;
@@ -233,18 +242,18 @@
             left: 315px;
         }
         .text5 {
-            width: 80px;
+            width: 93px;
         }
         .text9 {
-            width: 90px;
+            width: 113px;
         }
         .underlined {
-            width: 81%;
+            width: 75%;
         }
         .underlined2 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 84%;
+            width: 80%;
             padding: 0px 6px;
         }
         .underlined3 {
@@ -268,20 +277,25 @@
         .underlined6 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 47%;
+            width: 40%;
             padding: 0px 6px;
+            padding-left: 10px;
         }
         .underlined7 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 25%;
+            width: 21%;
             padding: 0px 6px;
         }
         .underlined8 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 14%;
+            width: 8%;
             padding: 0px 6px;
+        }
+        .publish_data {
+            bottom: 85px;
+            left: 100px;
         }
     }    
 </style>
