@@ -4,45 +4,45 @@
         <img src="{{asset('images/cetificate qr code.png')}}" alt="" class="qr-code">
         <p class="publish_data">Data of Publication of Results: 19 February 2020</p>
         <div class="box">
-            <div class="text-end">Roll No. <span class="rol-reg-sec">144773</span></div>
+            <p class="text-end text-lg position-0">Roll No. <span class="rol-reg-sec position-0">144773</span></p>
             <div class="inline-block w-full">
-                <p class="float-left">Serial No. <span class="rol-reg-sec">144773</span></p>
-                <p class="float-right">Reg No. <span class="rol-reg-sec">144773</span></p>
+                <p class="float-left">Serial No. <span class="rol-reg-sec1">144773</span></p>
+                <p class="float-right">Reg No. <span class="rol-reg-sec position-0">144773</span></p>
             </div>
-            <div class="text-end mt-2">Session. <span class="rol-reg-sec">144773</span></div>
+            <div class="text-end mt-2 text-lg">Session. <span class="rol-reg-sec position-0">144773</span></div>
             <div class="cat_parent">
                 <p class="inline-block float-left text">This is to certify that</p>
-                <p class="underlined inline-block float-left">Student name</p>
+                <p class="underlined inline-block float-left position-0">Student name</p>
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left text2">Son/daughter of</p>
                 <div class="underlined2 inline-block float-left">
-                    <p class="float-left">Father's name</p>
-                    <p class="float-right">(father)</p>
+                    <p class="float-left position-0">Father's name</p>
+                    <p class="float-right position-0">(father)</p>
                 </div>
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left text3">and</p>
                 <div class="underlined3 inline-block float-left">
-                    <p class="float-left">Mother's name</p>
-                    <p class="float-right">(mother)</p>
+                    <p class="float-left position-0">Mother's name</p>
+                    <p class="float-right position-0">(mother)</p>
                 </div>
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left text4">of</p>
-                <p class="underlined4 inline-block float-left">Institute name</p>
+                <p class="underlined4 inline-block float-left position-0">Institute name</p>
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left text5">bearing roll no</p>
-                <p class="underlined5 inline-block float-left">244773</p>
+                <p class="underlined5 inline-block float-left position-0">244773</p>
                 <p class="inline-block float-left text6">duly passed the</p>
-                <p class="underlined6 inline-block float-left">PaikPara Model High School</p>
+                <p class="underlined6 inline-block float-left position-0">PaikPara Model High School</p>
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left text7">Examination held in the month of</p>
-                <p class="underlined7 inline-block float-left">12-December-2019</p>
+                <p class="underlined7 inline-block float-left position-0">12-December-2019</p>
                 <p class="inline-block float-left text8">He/She scored CGPA</p>
-                <p class="underlined8 inline-block float-left">3.75</p>
+                <p class="underlined8 inline-block float-left position-0">3.75</p>
                 <p class="inline-block float-left text9">on a scale of 4.00</p>
             </div>
             <p class="inline-block">at under the "Education program" A project of Young Technical Training institute</p>
@@ -70,6 +70,9 @@
     .container {
         /* min-height: 1346px; */
         
+    }
+    .position-0 {
+        line-height: 18px
     }
     .float-right {
         float: right;
@@ -110,57 +113,60 @@
     .inline-block {
         display: inline-block;
     }
+    .text-lg {
+        font-size: 20px;
+    }
     .underlined {
         border-bottom: 2px dotted black;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         width: 80%;
         padding: 0px 6px;
     }
     .underlined2 {
         border-bottom: 2px dotted black;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         width: 81%;
         padding: 0px 6px;
         padding-left: 30px;
     }
     .underlined3 {
         border-bottom: 2px dotted black;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         width: 90%;
         padding: 0px 6px;
         padding-left: 30px;
     }
     .underlined4 {
         border-bottom: 2px dotted black;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         width: 92%;
         padding: 0px 6px;
         padding-left: 30px;
     }
     .underlined5 {
         border-bottom: 2px dotted black;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         width: 19%;
         padding: 0px 6px;
         padding-left: 30px;
     }
     .underlined6 {
         border-bottom: 2px dotted black;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         width: 49%;
         padding: 0px 6px;
         padding-left: 10px;
     }
     .underlined7 {
         border-bottom: 2px dotted black;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         width: 20%;
         padding: 0px 6px;
         padding-left: 30px;
     }
     .underlined8 {
         border-bottom: 2px dotted black;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         width: 10%;
         padding: 0px 6px;
         padding-left: 30px;
@@ -169,27 +175,39 @@
         margin-top: 10px;
     }
     .main-box {
-        margin: 0px auto;
-        position: relative;
+         margin: 0 auto;
+        position: relative !important;
         min-height: 98%;
         background: url({{asset('images/certificate-background.jpg')}});
         background-size: contain;
         background-repeat: no-repeat;
-        background-position:center;
-        width:1400px;
+        background-position: center;
+        width: 100%;
+        max-width: 1400px;
+        aspect-ratio: 16/11;
     }
     .box {
         position: absolute;
-        width: 810px;
-        bottom: 190px;
-        left: 420px;
+        width: 61%;
+        bottom: 20%;
+        left: 59.5%;
+        transform: translateX(-50%);
+        /* border: 1px solid black; */
     }
     .qr-code {
         position: absolute;
-        bottom: 280px;
-        left: 250px;
+        bottom: 30%;
+        left: 16%;
         width: 100px;
     }
+
+    .publish_data {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        font-size: 14px;
+    }
+
     .text-end {
         text-align: end;
         margin-bottom: 10px;
@@ -200,19 +218,23 @@
         /* padding-bottom: 3px; */
         display: inline-block;
         width: 130px;
-        border-bottom: 1px dotted black;
+        border-bottom: 2px dotted black;
+        margin-bottom: 10px;
+        line-height: 5px;
+        padding-bottom: 5px;
+    }
+    .rol-reg-sec1 {
+        text-align: start;
+        padding-left: 20px;
+        /* padding-bottom: 3px; */
+        display: inline-block;
+        width: 130px;
     }
     .float-right {
         float: right !important;
     }
     .float-left {
         float: left !important;
-    }
-    .publish_data {
-        position: absolute;
-        bottom: 100px;
-        left: 190px;
-        font-size: 16px;
     }
 </style>
 <style>
@@ -239,7 +261,7 @@
         .box {
             width: 710px;
             bottom: 170px;
-            left: 315px;
+            left: 670px;
         }
         .text5 {
             width: 93px;
@@ -249,18 +271,21 @@
         }
         .underlined {
             width: 75%;
+            padding-left: 30px;
         }
         .underlined2 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
             width: 80%;
             padding: 0px 6px;
+            padding-left: 20px;
         }
         .underlined3 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
             width: 93%;
             padding: 0px 6px;
+            padding-left: 10px;
         }
         .underlined4 {
             border-bottom: 2px dotted black;
