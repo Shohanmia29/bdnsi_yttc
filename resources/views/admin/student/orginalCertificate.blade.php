@@ -12,7 +12,7 @@
             <div class="text-end mt-2 text-lg">Session. <span class="rol-reg-sec position-0">144773</span></div>
             <div class="cat_parent">
                 <p class="inline-block float-left text">This is to certify that</p>
-                <p class="underlined inline-block float-left position-0">Student name</p>
+                <p class="underlined inline-block float-left position-0 student-name">Student name</p>
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left text2">Son/daughter of</p>
@@ -33,10 +33,10 @@
                 <p class="underlined4 inline-block float-left position-0">Institute name</p>
             </div>
             <div class="cat_parent">
-                <p class="inline-block float-left text5">bearing roll no</p>
-                <p class="underlined5 inline-block float-left position-0">244773</p>
+                <p class="inline-block float-left text5">has successfully completed the course of</p>
+                <p class="underlined5 inline-block float-left position-0">Two Years</p>
                 <p class="inline-block float-left text6">duly passed the</p>
-                <p class="underlined6 inline-block float-left position-0">PaikPara Model High School</p>
+{{--                <p class="underlined6 inline-block float-left position-0">PaikPara Model High School</p>--}}
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left text7">Examination held in the month of</p>
@@ -59,6 +59,9 @@
         padding: 0;
         font-family: Monotype Corsiva;
     }
+    .student-name {
+        padding-left: 20px;
+    }
     p {
         line-height: 26px;
         font-weight: 500;
@@ -69,7 +72,7 @@
     }
     .container {
         /* min-height: 1346px; */
-        
+
     }
     .position-0 {
         line-height: 18px
@@ -119,29 +122,29 @@
     .underlined {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 80%;
-        padding: 0px 6px;
+        width: 60%;
+        padding: 0px 85px;
     }
     .underlined2 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 81%;
+        width: 72%;
         padding: 0px 6px;
-        padding-left: 30px;
+        padding-left: 96px;
     }
     .underlined3 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 90%;
+        width: 80%;
         padding: 0px 6px;
-        padding-left: 30px;
+        padding-left: 114px;
     }
     .underlined4 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 92%;
+        width: 80%;
         padding: 0px 6px;
-        padding-left: 30px;
+        padding-left: 112px;
     }
     .underlined5 {
         border-bottom: 2px dotted black;
@@ -321,5 +324,5 @@
             bottom: 85px;
             left: 100px;
         }
-    }    
+    }
 </style>
