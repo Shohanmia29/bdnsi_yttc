@@ -1,7 +1,7 @@
 <button onclick="window.print()" class="no-print">Print</button>
 <div class="container">
     <div class="main-box">
-        <div style="width: 75px; height: 75px"  class="qr-code"  id="qrcode_1"></div>
+        <div style="width: 50px; height: 50px"  class="qr-code"  id="qrcode_1"></div>
 {{--        <img src="{{asset('images/cetificate qr code.png')}}" alt="" >--}}
         <p class="publish_data">Data of Publication of Results:      @if($student->result_publised)
                 {{ \Carbon\Carbon::make($student->result_publised)->format('j-F-Y') }}
@@ -179,7 +179,7 @@
     }
     .qr-code {
         position: absolute;
-        bottom: 30%;
+        bottom: 37%;
         left: 16%;
         width: 100px;
     }
@@ -236,7 +236,7 @@
         }
         .qr-code {
             position: absolute;
-            bottom: 240px;
+            bottom: 295px;
             left: 160px;
             width: 100px;
         }
