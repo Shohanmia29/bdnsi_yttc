@@ -281,7 +281,7 @@
         .underlined6 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 62%;
+            width: 60%;
             padding: 0px 6px;
             padding-left: 50px;
         }
