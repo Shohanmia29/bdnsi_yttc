@@ -1,30 +1,33 @@
 <button onclick="window.print()" class="no-print">Print</button>
 <div class="container">
     <div class="main-box">
-        <img src="{{asset('images/cetificate qr code.png')}}" alt="" class="qr-code">
-        <p class="publish_data">Data of Publication of Results: 19 February 2020</p>
+        <div style="width: 75px; height: 75px"  class="qr-code"  id="qrcode_1"></div>
+{{--        <img src="{{asset('images/cetificate qr code.png')}}" alt="" >--}}
+        <p class="publish_data">Data of Publication of Results:      @if($student->result_publised)
+                {{ \Carbon\Carbon::make($student->result_publised)->format('j-F-Y') }}
+            @endif</p>
         <div class="box">
-            <p class="text-end text-lg position-0">Roll No. <span class="rol-reg-sec position-0">144773</span></p>
+            <p class="text-end text-lg position-0">Roll No. <span class="rol-reg-sec position-0">{{ $student->roll ?? '' }}</span></p>
             <div class="inline-block w-full">
-                <p class="float-left">Serial No : <span class="rol-reg-sec1">144773</span></p>
-                <p class="float-right">Reg No. <span class="rol-reg-sec position-0">144773</span></p>
+                <p class="float-left">Serial No : <span class="rol-reg-sec1">{{ \App\Lib\Helper::certificateSerialNumber($student->id) ?? '' }}</span></p>
+                <p class="float-right">Reg No. <span class="rol-reg-sec position-0">{{ $student->registration ?? '' }}</span></p>
             </div>
-            <div class="text-end mt-2 text-lg">Session. <span class="rol-reg-sec position-0">144773</span></div>
+            <div class="text-end mt-2 text-lg">Session. <span class="rol-reg-sec position-0">{{$student->session->name??''}}</span></div>
             <div class="cat_parent">
                 <p class="inline-block float-left text">This is to certify that</p>
-                <p class="underlined inline-block float-left position-0 student-name">Student name</p>
+                <p class="underlined inline-block float-left position-0 student-name">{{ $student->name ?? '' }}</p>
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left text2">Son/daughter of</p>
                 <div class="underlined2 inline-block float-left">
-                    <p class="float-left position-0">Father's name</p>
+                    <p class="float-left position-0">{{ $student->fathers_name ?? '' }}</p>
                     <p class="float-right position-0">(father)</p>
                 </div>
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left text3">and</p>
                 <div class="underlined3 inline-block float-left">
-                    <p class="float-left position-0">Mother's name</p>
+                    <p class="float-left position-0">{{ $student->mothers_name ?? '' }}</p>
                     <p class="float-right position-0">(mother)</p>
                 </div>
             </div>
@@ -34,19 +37,19 @@
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left text5">has successfully completed the course of</p>
-                <p class="underlined5 inline-block float-left position-0">"Two Years"</p>
+                <p class="underlined5 inline-block float-left position-0">{{$student->course_duration??''}}</p>
                 <p class="inline-block float-left text6">from the technical training</p>
             </div>
             <div class="cat_parent">
-                <p class="inline-block float-left text7">center</p>
-                <p class="underlined6 inline-block float-left position-0">Young Technical Training Institute</p>
+                <p class="inline-block float-left text7">Center</p>
+                <p class="underlined6 inline-block float-left position-0">{{ $student->center->name ?? '' }}</p>
                 <p class="inline-block float-left text8">examination held in the month</p>
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left text9">of</p>
-                <p class="underlined7 inline-block float-left position-0">22-December-2024</p>
-                <p class="inline-block float-left text10">Conducted by the YTTI. He/She Secured CGPA</p>
-                <p class="underlined8 inline-block float-left position-0">4.00</p>
+                <p class="underlined7 inline-block float-left position-0">{{ \Carbon\Carbon::parse($student->exam_date)->format('j-F-Y') }}</p>
+                <p class="inline-block float-left text10">Conducted by the YTTC. He/She Secured CGPA</p>
+                <p class="underlined8 inline-block float-left position-0"> {{ number_format($student->t_written_gpa(),2)?? '' }}</p>
                 <p class="inline-block float-left text11">on a scale of 4.00</p>
             </div>
         </div>
@@ -300,3 +303,19 @@
         }
     }
 </style>
+
+<script type="text/javascript" src="{{ asset('js/qrcode.js') }}"></script>
+<script type="text/javascript">
+    // Adjusted for high-quality QR code generation
+    var qrcode = new QRCode(document.getElementById("qrcode_1"), {
+        text: "{{   route('result',['roll'=>$student->roll])     }}",
+        width: 500,  // Increased width for high resolution
+        height: 500, // Increased height for high resolution
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H, // High error correction for better readability
+    });
+
+    // Optional: Scale down the QR code display size with CSS if required
+    document.querySelector('#qrcode_1 img').style.width = "100px";
+</script>
