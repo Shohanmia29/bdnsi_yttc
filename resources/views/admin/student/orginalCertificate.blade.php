@@ -6,7 +6,7 @@
         <div class="box">
             <p class="text-end text-lg position-0">Roll No. <span class="rol-reg-sec position-0">144773</span></p>
             <div class="inline-block w-full">
-                <p class="float-left">Serial No. <span class="rol-reg-sec1">144773</span></p>
+                <p class="float-left">Serial No : <span class="rol-reg-sec1">144773</span></p>
                 <p class="float-right">Reg No. <span class="rol-reg-sec position-0">144773</span></p>
             </div>
             <div class="text-end mt-2 text-lg">Session. <span class="rol-reg-sec position-0">144773</span></div>
@@ -30,22 +30,25 @@
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left text4">of</p>
-                <p class="underlined4 inline-block float-left position-0">Institute name</p>
+                <p class="underlined4 inline-block float-left position-0">Diploma In Marble Ceramics</p>
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left text5">has successfully completed the course of</p>
-                <p class="underlined5 inline-block float-left position-0">Two Years</p>
-                <p class="inline-block float-left text6">duly passed the</p>
-{{--                <p class="underlined6 inline-block float-left position-0">PaikPara Model High School</p>--}}
+                <p class="underlined5 inline-block float-left position-0">"Two Years"</p>
+                <p class="inline-block float-left text6">from the technical training</p>
             </div>
             <div class="cat_parent">
-                <p class="inline-block float-left text7">Examination held in the month of</p>
-                <p class="underlined7 inline-block float-left position-0">12-December-2019</p>
-                <p class="inline-block float-left text8">He/She scored CGPA</p>
-                <p class="underlined8 inline-block float-left position-0">3.75</p>
-                <p class="inline-block float-left text9">on a scale of 4.00</p>
+                <p class="inline-block float-left text7">center</p>
+                <p class="underlined6 inline-block float-left position-0">Young Technical Training Institute</p>
+                <p class="inline-block float-left text8">examination held in the month</p>
             </div>
-            <p class="inline-block">at under the "Education program" A project of Young Technical Training institute</p>
+            <div class="cat_parent">
+                <p class="inline-block float-left text9">of</p>
+                <p class="underlined7 inline-block float-left position-0">22-December-2024</p>
+                <p class="inline-block float-left text10">Conducted by the YTTI. He/She Secured CGPA</p>
+                <p class="underlined8 inline-block float-left position-0">4.00</p>
+                <p class="inline-block float-left text11">on a scale of 4.00</p>
+            </div>
         </div>
     </div>
 </div>
@@ -83,35 +86,9 @@
     .w-full {
         width: 100%;
     }
-    .text {
-        width: 140px;
-    }
-    .text2 {
-        width: 110px;
-    }
-    .text3 {
-        width: 30px;
-    }
-    .text4 {
-        width: 20px;
-    }
-    .text5 {
-        width: 100px;
-    }
-    .text6 {
-        width: 100px;
-    }
-    .text7 {
-        width: 220px;
-    }
-    .text8 {
-        width: 140px;
-    }
-    .text9 {
-        width: 120px;
-    }
     .cat_parent {
         width: 100%;
+        display: inline-block;
     }
     .inline-block {
         display: inline-block;
@@ -122,57 +99,57 @@
     .underlined {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 60%;
-        padding: 0px 85px;
+        width: 77%;
+        padding-left: 55px;
     }
     .underlined2 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 72%;
+        width: 78%;
         padding: 0px 6px;
-        padding-left: 96px;
+        padding-left: 65px;
     }
     .underlined3 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 80%;
+        width: 82%;
         padding: 0px 6px;
         padding-left: 114px;
     }
     .underlined4 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 80%;
+        width: 85%;
         padding: 0px 6px;
-        padding-left: 112px;
+        padding-left: 100px;
     }
     .underlined5 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 19%;
+        width: 40%;
         padding: 0px 6px;
-        padding-left: 30px;
+        padding-left: 60px;
     }
     .underlined6 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 49%;
+        width: 65%;
         padding: 0px 6px;
-        padding-left: 10px;
+        padding-left: 40px;
     }
     .underlined7 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 20%;
+        width: 23%;
         padding: 0px 6px;
         padding-left: 30px;
     }
     .underlined8 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 10%;
+        width: 18%;
         padding: 0px 6px;
-        padding-left: 30px;
+        text-align: center;
     }
     .mt-2 {
         margin-top: 10px;
@@ -192,7 +169,7 @@
     .box {
         position: absolute;
         width: 61%;
-        bottom: 20%;
+        bottom: 19%;
         left: 59.5%;
         transform: translateX(-50%);
         /* border: 1px solid black; */
@@ -227,7 +204,7 @@
     }
     .rol-reg-sec1 {
         text-align: start;
-        padding-left: 20px;
+        padding-left: 6px;
         /* padding-bottom: 3px; */
         display: inline-block;
         width: 130px;
@@ -244,8 +221,12 @@
         .container {
             /* min-height: 558px; */
         }
+        .text-lg {
+            font-size: 18px;
+        }
         p {
             line-height: 22px;
+            font-size: 18px;
         }
         .no-print {
             display: none;
@@ -265,59 +246,52 @@
             bottom: 170px;
             left: 670px;
         }
-        .text5 {
-            width: 93px;
-        }
-        .text9 {
-            width: 113px;
-        }
         .underlined {
             width: 75%;
-            padding-left: 30px;
+            padding-left: 50px;
+            margin-bottom: 11;
         }
         .underlined2 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 80%;
-            padding: 0px 6px;
-            padding-left: 20px;
+            width: 76%;
+            padding-left: 60px;
         }
         .underlined3 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 93%;
-            padding: 0px 6px;
-            padding-left: 10px;
+            width: 80%;
+            padding-left: 110px;
         }
         .underlined4 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 95%;
-            padding: 0px 6px;
+            width: 83%;
+            padding-left: 100px;
         }
         .underlined5 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 25%;
-            padding: 0px 6px;
+            width: 35%;
+            padding-left: 70px;
         }
         .underlined6 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 40%;
+            width: 62%;
             padding: 0px 6px;
-            padding-left: 10px;
+            padding-left: 50px;
         }
         .underlined7 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 21%;
-            padding: 0px 6px;
+            width: 25%;
+            padding-left: 35px;
         }
         .underlined8 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 8%;
+            width: 12%;
             padding: 0px 6px;
         }
         .publish_data {
