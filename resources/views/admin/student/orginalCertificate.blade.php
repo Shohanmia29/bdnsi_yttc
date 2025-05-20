@@ -131,7 +131,7 @@
         margin-bottom: 20px;
         width: 38%;
         padding: 0px 6px;
-        padding-left: 60px;
+        text-align: center;
     }
     .underlined6 {
         border-bottom: 2px dotted black;
@@ -276,7 +276,7 @@
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
             width: 35%;
-            padding-left: 70px;
+            text-align: center
         }
         .underlined6 {
             border-bottom: 2px dotted black;
