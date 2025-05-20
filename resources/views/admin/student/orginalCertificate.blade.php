@@ -102,7 +102,7 @@
     .underlined {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 77%;
+        width: 75%;
         padding-left: 55px;
     }
     .underlined2 {
@@ -129,21 +129,21 @@
     .underlined5 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 40%;
+        width: 38%;
         padding: 0px 6px;
         padding-left: 60px;
     }
     .underlined6 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 65%;
+        width: 62%;
         padding: 0px 6px;
         padding-left: 40px;
     }
     .underlined7 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 23%;
+        width: 21%;
         padding: 0px 6px;
         padding-left: 30px;
     }
@@ -294,7 +294,7 @@
         .underlined8 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 12%;
+            width: 5%;
             padding: 0px 6px;
         }
         .publish_data {
