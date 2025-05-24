@@ -14,7 +14,7 @@
         @csrf
         @method('PUT')
         <div class="flex flex-wrap justify-center w-full bg-white p-4">
-            <x-labeled-input name="name" required value="{{ old('name', $subject->name) }}" class="w-full p-1"/>
+            <x-label-input name="name" required value="{{ old('name', $subject->name) }}" class="w-full p-1"/>
             <x-labeled-input type="file" name="photo"    class="w-full p-1"/>
             <x-labeled-input name="duration"  value="{{ old('duration', $subject->duration) }}" class="w-full p-1"/>
             <x-labeled-input name="rate"  value="{{ old('rate', $subject->rate) }}" class="w-full p-1"/>
