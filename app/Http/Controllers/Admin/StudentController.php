@@ -206,7 +206,6 @@ class StudentController extends Controller
             }),
 
             'districts' => District::get(),
-
             'upazilas' => Upazila::get()->mapWithKeys(function ($upazila) {
                 return [
                     $upazila->id => [

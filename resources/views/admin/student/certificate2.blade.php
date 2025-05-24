@@ -144,7 +144,7 @@
                 <div class="absolute mothers-name">{{ ucwords(strtolower($student->mothers_name ?? '')) }}</div>
                 <div class="absolute center-name">{{ ucwords(strtolower($student->center->name ?? '')) }}</div>
                 <div class="absolute student-roll">{{ ucwords(strtolower($student->roll ?? '')) }}</div>
-                <div class="absolute student-subject">{{ ucwords(strtolower($student->subject->name ?? '')) }}</div>
+                <div class="absolute student-subject">{{ $student->subject->name ?? '' }}</div>
                     <div style="width: 75px; height: 75px"  class="absolute qr" id="qrcode_1"></div>
 
                 <div class="absolute exam-date capitalize">
