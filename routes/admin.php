@@ -122,5 +122,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('translation', \App\Http\Controllers\Admin\TranslationController::class);
         Route::resource('sponsor', \App\Http\Controllers\Admin\SponsorController::class);
 
+
+
     });
 });
