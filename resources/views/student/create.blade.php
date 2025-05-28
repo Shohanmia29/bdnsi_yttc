@@ -66,12 +66,14 @@
                 <label for="course_duration" class="block font-medium text-sm text-gray-700 font-semibold py-2">Course Duration</label>
                 <input list="course_duration_options" class="rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full p-2 border-2 border-gray-400" name="course_duration" id="course_duration" required placeholder="Select or enter a duration">
                 <datalist id="course_duration_options">
-                    <option value="3 Month">
-                    <option value="6 Month">
-                    <option value="1 Year">
-                    <option value="2 Year">
-                    <option value="3 Year">
-                    <option value="4 Year">
+                    <option value="Two Month">
+                    <option value="Three Month">
+                    <option value="Six Month">
+                    <option value="One Year">
+                    <option value="Two Year">
+                    <option value="Three Year">
+                    <option value="Four Year">
+                    <option value="Others">
                 </datalist>
             </div>
             <x-labeled-input name="picture" required type="file" accept="image/*" class="w-full p-1 md:w-1/2 lg:w-1/3"/>

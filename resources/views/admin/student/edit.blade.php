@@ -90,11 +90,14 @@
                            placeholder="Select or enter a duration">
 
                     <datalist id="course_duration_options">
-                        <option value="2 Month"></option>
-                        <option value="3 Month"></option>
-                        <option value="6 Month"></option>
-                        <option value="1 Year"></option>
-                        <option value="Others"></option>
+                        <option value="Two Month">
+                        <option value="Three Month">
+                        <option value="Six Month">
+                        <option value="One Year">
+                        <option value="Two Year">
+                        <option value="Three Year">
+                        <option value="Four Year">
+                        <option value="Others">
                     </datalist>
                 </div>
 

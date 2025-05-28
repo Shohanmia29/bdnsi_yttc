@@ -61,17 +61,27 @@
                     @endforeach
                 </x-select2>
 
-                <x-labeled-select name="course_duration"    type="text" label="Course Duration"  class="w-full p-1 md:w-1/2 lg:w-1/3">
-                    <option {{$student->course_duration=='3 Month' ? 'selected': ''}}  value="3 Month">3 Month</option>
-                    <option {{$student->course_duration=='6 Month' ? 'selected': ''}}  value="6 Month">6 Month</option>
-                    <option {{$student->course_duration=='1 Year' ? 'selected': ''}}  value="1 Year">1 Year</option>
-                    <option {{$student->course_duration=='2 Year' ? 'selected': ''}}  value="2 Year">2 Year</option>
-                    <option {{$student->course_duration=='3 Year' ? 'selected': ''}}  value="3 Year">3 Year</option>
-                    <option {{$student->course_duration=='4 Year' ? 'selected': ''}}  value="4 Year">4 Year</option>
+                <div class="w-full p-1 md:w-1/2 lg:w-1/3">
+                    <label for="course_duration" class="block font-medium text-sm text-gray-700 font-semibold py-2">Course Duration</label>
+                    <input list="course_duration_options"
+                           class="rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full p-2 border-2 border-gray-400"
+                           name="course_duration"
+                           id="course_duration"
+                           value="{{ old('course_duration', $student->course_duration ?? '') }}"
+                           required
+                           placeholder="Select or enter a duration">
 
-
-
-                </x-labeled-select>
+                    <datalist id="course_duration_options">
+                        <option value="Two Month">
+                        <option value="Three Month">
+                        <option value="Six Month">
+                        <option value="One Year">
+                        <option value="Two Year">
+                        <option value="Three Year">
+                        <option value="Four Year">
+                        <option value="Others">
+                    </datalist>
+                </div>
 
                 <x-labeled-select name="qualification" label="Qualification" required class="w-full p-1 md:w-1/2 lg:w-1/3">
                     <option  value=" ">--Select-- </option>
