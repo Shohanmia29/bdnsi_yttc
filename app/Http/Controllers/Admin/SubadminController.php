@@ -50,7 +50,7 @@ class SubadminController extends Controller
     public function edit(Admin $sub_admin)
     {
         return view('admin.subAdmin.edit', [
-            'subAdmin' => $sub_admin,
+            'user' => $sub_admin,
 
         ]);
     }
