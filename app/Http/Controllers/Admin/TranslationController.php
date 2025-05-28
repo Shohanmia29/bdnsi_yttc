@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Translation;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 
 class TranslationController extends Controller
 {
+    use ChecksPermission;
+    protected $permissionPrefix = 'translation';
     public function index(Request $request)
     {
 

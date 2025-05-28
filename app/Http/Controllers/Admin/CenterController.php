@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\DB;
 class CenterController extends Controller
 {
     use ChecksPermission;
+    protected $permissionPrefix = 'center';
 
     public function index(Request $request)
     {

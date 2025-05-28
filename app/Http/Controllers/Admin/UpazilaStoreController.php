@@ -5,10 +5,14 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\District;
 use App\Models\Upazila;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 
 class UpazilaStoreController extends Controller
 {
+
+    use ChecksPermission;
+    protected $permissionPrefix = 'upazila-store';
     /**
      * Display a listing of the resource.
      *

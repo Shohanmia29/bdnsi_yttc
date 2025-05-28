@@ -4,12 +4,15 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
 
 class SubadminController extends Controller
 {
+    use ChecksPermission;
+    protected $permissionPrefix = 'sub-admin';
 
     public function index(Request $request)
     {
@@ -36,8 +39,8 @@ class SubadminController extends Controller
 
 
         $validated['password'] = Hash::make($validated['password']);
-          $subadmin=Admin::create($validated);
-          $subadmin->attachRole('sub_admin');
+        $subadmin = Admin::create($validated);
+        $subadmin->attachRole('sub_admin');
         return response()->report($subadmin, 'SubAdmin created successfully');
     }
 
@@ -50,7 +53,7 @@ class SubadminController extends Controller
     public function edit(Admin $sub_admin)
     {
         return view('admin.subAdmin.edit', [
-            'subAdmin' => $sub_admin,
+            'user' => $sub_admin,
 
         ]);
     }

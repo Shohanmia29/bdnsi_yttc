@@ -5,10 +5,13 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Lib\Image;
 use App\Models\ConfigDictionary;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 
 class ConfigDictionaryController extends Controller
 {
+    use ChecksPermission;
+    protected $permissionPrefix = 'configDictionary';
     /**
      * Display a listing of the resource.
      *

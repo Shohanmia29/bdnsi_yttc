@@ -164,6 +164,27 @@ class StudentController extends Controller
             'student' => $student,
             'sessions' => Session::select(['id', 'name'])->where('status', SessionStatus::Active)->get(),
             'subjects' => Subject::select(['id', 'name'])->get(),
+            'divisions' => \App\Models\Division::get(),
+            'districts_keys' => District::get()->mapWithKeys(function ($district) {
+                return [
+                    $district->id => [
+                        'id' => $district->id,
+                        'division_id' => $district->division_id,
+                        'name' => $district->name,
+                    ]
+                ];
+            }),
+
+            'districts' => District::get(),
+            'upazilas' => Upazila::get()->mapWithKeys(function ($upazila) {
+                return [
+                    $upazila->id => [
+                        'id' => $upazila->id,
+                        'district_id' => $upazila->district_id,
+                        'name' => $upazila->name,
+                    ]
+                ];
+            })->toArray()
         ]);
     }
 

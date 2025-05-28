@@ -5,11 +5,13 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Exam;
 use App\Models\Subject;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 
 class ExamController extends Controller
 {
-
+    use ChecksPermission;
+    protected $permissionPrefix = 'exam';
     public function index(Request $request)
     {
         if ($request->ajax()) {

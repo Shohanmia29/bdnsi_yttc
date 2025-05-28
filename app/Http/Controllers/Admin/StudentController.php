@@ -28,7 +28,7 @@ use Illuminate\Validation\Rule;
 class StudentController extends Controller
 {
     use ChecksPermission;
-
+    protected $permissionPrefix = 'student';
     protected $skipActions = ['admit', 'certificate','certificateWithoutBackground'];
 
     public function admit($id)
@@ -206,7 +206,6 @@ class StudentController extends Controller
             }),
 
             'districts' => District::get(),
-
             'upazilas' => Upazila::get()->mapWithKeys(function ($upazila) {
                 return [
                     $upazila->id => [

@@ -5,10 +5,14 @@ namespace App\Http\Controllers\Admin;
 use App\Enums\SliderType;
 use App\Http\Controllers\Controller;
 use App\Models\Slider;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 
 class SponsorController extends Controller
 {
+
+    use ChecksPermission;
+    protected $permissionPrefix = 'sponsor';
     /**
      * Display a listing of the resource.
      *

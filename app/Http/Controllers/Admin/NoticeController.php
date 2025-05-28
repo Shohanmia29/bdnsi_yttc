@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Notice;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 
 class NoticeController extends Controller
 {
-
+    use ChecksPermission;
+    protected $permissionPrefix = 'notice';
     public function index(Request $request)
     {
           if ($request->ajax()){

@@ -222,7 +222,7 @@
                     </div>
                 </div>
                 <div class="data-item-wrap">
-                    <div class="data-label">Type of the Examine </div>
+                    <div class="data-label">Type of the Examinee </div>
                     <div>:</div>
                     <div class="data-value"> Regular</div>
                 </div>
@@ -255,7 +255,7 @@
             <div class="sign-cont w-25 text-center">
                 <img style="width: 200px;" src="{{asset('images/student/examController.png')}}" alt="signature" />
                 <hr />
-                <p>Controller Of Examinations <br />Young Tecnical Training Institute</p>
+                <p>Controller Of Examinations <br />Young Technical Training Institute</p>
             </div>
         </div>
     </div>

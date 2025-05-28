@@ -15,7 +15,7 @@
     <form action="{{ route('admin.subject.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="flex flex-wrap justify-center w-full bg-white p-4">
-            <x-labeled-input name="name" required class="w-full p-1"/>
+            <x-label-input name="name" required class="w-full p-1"/>
             <x-labeled-input type="file" name="photo" required class="w-full p-1"/>
             <x-labeled-input name="duration" class="w-full p-1"/>
             <x-labeled-input name="rate" class="w-full p-1"/>
