@@ -250,38 +250,38 @@
             left: 670px;
         }
         .underlined {
-            width: 75%;
+            width: 75.7%;
             padding-left: 50px;
             margin-bottom: 11;
         }
         .underlined2 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 76.5%;
+            width: 77.42%;
             padding-left: 60px;
         }
         .underlined3 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 80%;
+            width: 80.54%;
             padding-left: 110px;
         }
         .underlined4 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 83%;
+            width: 83.39%;
             padding-left: 100px;
         }
         .underlined5 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 43.5%;
+            width: 44.3%;
             text-align: center
         }
         .underlined6 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 61%;
+            width: 61.91%;
             padding: 0px 6px;
             padding-left: 50px;
         }
@@ -294,7 +294,7 @@
         .underlined8 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 12%;
+            width: 12.7%;
             padding: 0px 6px;
         }
         .publish_data {
