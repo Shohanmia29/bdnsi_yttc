@@ -74,6 +74,7 @@
                 <a href="{{route('result')}}" class="theme-btn">{{__t('Result')}}</a>
             </div>
         </section>
+
     <!-- Page Main Area -->
     <section class="home-page-main-area">
         <div class="container">
@@ -158,7 +159,48 @@
                     </div>
                 </div>
             </div>
-            <!-- Corner Message Area -->
+
+
+            <section class="students-area section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-head">
+                                <h3 class="section-head-title">
+                                    {{__t('Approved')}} <span class="title-line style-2"></span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="students-slider">
+                                @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Sponsor)->take(30)->get() as $sponsor)
+                                    <div class=" w-100 h-25 card ">
+                                        <img style="height: 170px" class="w-full " src="{{$sponsor->photo??''}}" alt="">
+                                        <div class="p-1 h6 text-center">
+                                            {{$sponsor->title??''}}
+                                        </div>
+                                    </div>
+                                @empty
+                                    <div>{{__t('Not Found')}}</div>
+                                @endforelse
+                            </div>
+                        </div>
+                    </div>
+                    {{--     <div class="row">
+                             <div class="col-12">
+                                 <div class="section-bottom-btn">
+                                     <a href="{{route('successStudent')}}" class="theme-btn secondary">see more<i
+                                             class="fi-rr-arrow-right"></i></a>
+                                 </div>
+                             </div>
+                         </div>--}}
+                </div>
+            </section>
+            <!-- End Students Area -->
+
+
             <div class="corner-message-area">
                 <div class="row">
                     <div class="col-12">
@@ -334,6 +376,7 @@
         </div>
     </section>
     <!-- End Page Main Area -->
+
 
     <!-- Gallery Area -->
     <section class="gallery-area section-padding" id="gallary">
@@ -579,44 +622,7 @@
         </div>
     </section>
 
-    <section class="students-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-head">
-                        <h3 class="section-head-title">
-                           {{__t('Approved')}} <span class="title-line style-2"></span>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="students-slider">
-                        @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Sponsor)->take(30)->get() as $sponsor)
-                              <div class=" w-100 h-25 card ">
-                                  <img style="height: 170px" class="w-full " src="{{$sponsor->photo??''}}" alt="">
-                                  <div class="p-1 h6 text-center">
-                                      {{$sponsor->title??''}}
-                                  </div>
-                              </div>
-                        @empty
-                            <div>{{__t('Not Found')}}</div>
-                        @endforelse
-                    </div>
-                </div>
-            </div>
-       {{--     <div class="row">
-                <div class="col-12">
-                    <div class="section-bottom-btn">
-                        <a href="{{route('successStudent')}}" class="theme-btn secondary">see more<i
-                                class="fi-rr-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>--}}
-        </div>
-    </section>
-    <!-- End Students Area -->
+
 
     <script>
         let section_counter = document.querySelector('#section_counter');
