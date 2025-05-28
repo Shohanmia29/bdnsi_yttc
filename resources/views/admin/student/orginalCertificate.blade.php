@@ -36,21 +36,21 @@
                 <p class="underlined4 inline-block float-left position-0">Diploma In Marble Ceramics</p>
             </div>
             <div class="cat_parent">
-                <p class="inline-block float-left text5">has successfully completed the course of</p>
+                <p class="inline-block float-left">has successfully completed the course of</p>
                 <p class="underlined5 inline-block float-left position-0">{{$student->course_duration??''}}</p>
-                <p class="inline-block float-left text6">from the technical training</p>
+                <p class="inline-block float-left">from the technical training</p>
             </div>
             <div class="cat_parent">
-                <p class="inline-block float-left text7">Center</p>
+                <p class="inline-block float-left">Center</p>
                 <p class="underlined6 inline-block float-left position-0">{{ $student->center->name ?? '' }}</p>
-                <p class="inline-block float-left text8">examination held in the month</p>
+                <p class="inline-block float-left">examination held in the month</p>
             </div>
             <div class="cat_parent">
-                <p class="inline-block float-left text9">of</p>
+                <p class="inline-block float-left">of</p>
                 <p class="underlined7 inline-block float-left position-0">{{ \Carbon\Carbon::parse($student->exam_date)->format('j-F-Y') }}</p>
-                <p class="inline-block float-left text10">Conducted by the YTTC. He/She Secured CGPA</p>
+                <p class="inline-block float-left">Conducted by the YTTC. He/She Secured CGPA</p>
                 <p class="underlined8 inline-block float-left position-0"> {{ number_format($student->t_written_gpa(),2)?? '' }}</p>
-                <p class="inline-block float-left text11">on a scale of 4.00</p>
+                <p class="inline-block float-left">on a scale of 4.00</p>
             </div>
         </div>
     </div>
@@ -129,21 +129,21 @@
     .underlined5 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 38%;
+        width: 45%;
         padding: 0px 6px;
         text-align: center;
     }
     .underlined6 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 62%;
+        width: 64%;
         padding: 0px 6px;
         padding-left: 40px;
     }
     .underlined7 {
         border-bottom: 2px dotted black;
         margin-bottom: 20px;
-        width: 21%;
+        width: 22%;
         padding: 0px 6px;
         padding-left: 30px;
     }
@@ -257,7 +257,7 @@
         .underlined2 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 76%;
+            width: 76.5%;
             padding-left: 60px;
         }
         .underlined3 {
@@ -275,13 +275,13 @@
         .underlined5 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 35%;
+            width: 43.5%;
             text-align: center
         }
         .underlined6 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 60%;
+            width: 61%;
             padding: 0px 6px;
             padding-left: 50px;
         }
@@ -294,7 +294,7 @@
         .underlined8 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 5%;
+            width: 12%;
             padding: 0px 6px;
         }
         .publish_data {
