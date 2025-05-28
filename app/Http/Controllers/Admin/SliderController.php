@@ -6,10 +6,13 @@ use App\Enums\SliderType;
 use App\Http\Controllers\Controller;
 use App\Lib\Image;
 use App\Models\Slider;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 
 class SliderController extends Controller
 {
+    use ChecksPermission;
+    protected $permissionPrefix = 'slider';
     public function index(Request $request)
     {
         if ($request->ajax()) {

@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\DB;
 class ResultController extends Controller
 {
     use ChecksPermission;
-
+    protected $permissionPrefix = 'result';
     public function index(Request $request)
     {
         $students = collect([]);

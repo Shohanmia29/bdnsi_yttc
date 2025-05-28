@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -11,6 +12,8 @@ use Illuminate\Validation\Rules;
 
 class AdminListController extends Controller
 {
+    use ChecksPermission;
+    protected $permissionPrefix = 'adminList';
     /**
      * Display a listing of the resource.
      *

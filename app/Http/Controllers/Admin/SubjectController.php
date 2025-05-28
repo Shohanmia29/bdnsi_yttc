@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 class SubjectController extends Controller
 {
     use ChecksPermission;
+    protected $permissionPrefix = 'subject';
 
     public function index(Request $request)
     {

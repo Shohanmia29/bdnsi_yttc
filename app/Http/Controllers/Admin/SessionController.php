@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class SessionController extends Controller
 {
     use ChecksPermission;
-
+    protected $permissionPrefix = 'session';
     public function index(Request $request)
     {
         if ($request->ajax()) {

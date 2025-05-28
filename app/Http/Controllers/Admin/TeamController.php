@@ -4,15 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Team;
+use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
 
 class TeamController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    use ChecksPermission;
+    protected $permissionPrefix = 'team';
     public function index(Request $request)
     {
         if ($request->ajax()) {

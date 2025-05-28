@@ -17,7 +17,7 @@ use Illuminate\Validation\Rule;
 class UserController extends Controller
 {
     use ChecksPermission;
-
+    protected $permissionPrefix = 'user';
     protected $mapExtraActionPermission = [
         'portal' => 'user-update'
     ];
