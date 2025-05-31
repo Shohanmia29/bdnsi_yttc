@@ -240,8 +240,8 @@
         }
         .qr-code {
             position: absolute;
-            bottom: 295px;
-            left: 156px;
+            bottom: 305px;
+            left: 135px;
             width: 81px;
         }
         .qr-code canvas img {
@@ -253,7 +253,7 @@
         }
         .box {
             width: 669px;
-            bottom: 180px;
+            bottom: 190px;
             left: 630px;
         }
         .underlined {
