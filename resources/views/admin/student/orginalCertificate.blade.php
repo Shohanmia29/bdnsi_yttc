@@ -181,7 +181,7 @@
         position: absolute;
         bottom: 37%;
         left: 16%;
-        width: 100px;
+        width: 91px;
     }
 
     .publish_data {
@@ -202,7 +202,7 @@
         display: inline-block;
         width: 130px;
         border-bottom: 2px dotted black;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         line-height: 16px;
     }
     .rol-reg-sec1 {
@@ -218,6 +218,9 @@
     .float-left {
         float: left !important;
     }
+    #qrcode_1 canvas img {
+            width: 50px;
+        }
 </style>
 <style>
     @media print{
@@ -237,64 +240,67 @@
         .qr-code {
             position: absolute;
             bottom: 295px;
-            left: 160px;
-            width: 100px;
+            left: 156px;
+            width: 81px;
+        }
+        .qr-code canvas img {
+            width: 80px;
         }
         .main-box {
             width:100%;
             height: 100%;
         }
         .box {
-            width: 710px;
-            bottom: 170px;
-            left: 670px;
+            width: 669px;
+            bottom: 180px;
+            left: 630px;
         }
         .underlined {
-            width: 75.7%;
+            width: 74.2%;
             padding-left: 50px;
             margin-bottom: 11;
         }
         .underlined2 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 77.42%;
+            width: 76%;
             padding-left: 60px;
         }
         .underlined3 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 80.54%;
+            width: 79.40%;
             padding-left: 110px;
         }
         .underlined4 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 83.39%;
+            width: 82.38%;
             padding-left: 100px;
         }
         .underlined5 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 44.3%;
+            width: 40.8%;
             text-align: center
         }
         .underlined6 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 61.91%;
+            width: 59.58%;
             padding: 0px 6px;
             padding-left: 50px;
         }
         .underlined7 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 25%;
+            width: 22.5%;
             padding-left: 35px;
         }
         .underlined8 {
             border-bottom: 2px dotted black;
             margin-bottom: 10px;
-            width: 12.7%;
+            width: 11.38%;
             padding: 0px 6px;
         }
         .publish_data {
@@ -317,5 +323,5 @@
     });
 
     // Optional: Scale down the QR code display size with CSS if required
-    document.querySelector('#qrcode_1 img').style.width = "100px";
+    document.querySelector('#qrcode_1 img').style.width = "87px";
 </script>
