@@ -262,44 +262,44 @@
             margin-bottom: 11;
         }
         .underlined2 {
-            border-bottom: 2px dotted black;
+            border-bottom: 2px dotted black!important;
             margin-bottom: 10px;
             width: 76%;
             padding-left: 60px;
         }
         .underlined3 {
-            border-bottom: 2px dotted black;
+            border-bottom: 2px dotted black!important;
             margin-bottom: 10px;
             width: 79.40%;
             padding-left: 110px;
         }
         .underlined4 {
-            border-bottom: 2px dotted black;
+            border-bottom: 2px dotted black!important;
             margin-bottom: 10px;
             width: 82.38%;
             padding-left: 100px;
         }
         .underlined5 {
-            border-bottom: 2px dotted black;
+            border-bottom: 2px dotted black!important;
             margin-bottom: 10px;
             width: 40.8%;
             text-align: center
         }
         .underlined6 {
-            border-bottom: 2px dotted black;
+            border-bottom: 2px dotted black!important;
             margin-bottom: 10px;
             width: 59.58%;
             padding: 0px 6px;
             padding-left: 50px;
         }
         .underlined7 {
-            border-bottom: 2px dotted black;
+            border-bottom: 2px dotted black!important;
             margin-bottom: 10px;
             width: 22.5%;
             padding-left: 35px;
         }
         .underlined8 {
-            border-bottom: 2px dotted black;
+            border-bottom: 2px dotted black!important;
             margin-bottom: 10px;
             width: 11.38%;
             padding: 0px 6px;
@@ -320,7 +320,7 @@
             margin: 0,
             filename: "{{ $student->name . '_' . $student->roll }}.pdf",
             image: { type: 'jpeg', quality: 0.99 },
-            html2canvas: { scale: 2 },
+            html2canvas: { scale: 3 ,useCORS: true,},
             jsPDF:        { unit: 'pt', format: [816, 1020], orientation: 'landscape' }
         };
         html2pdf().set(options).from(element).save();
