@@ -1,6 +1,7 @@
 <button onclick="window.print()" class="no-print">Print</button>
-<div class="container">
-    <div class="main-box">
+<button onclick="generate_pdf()" class="no-print" style="padding: 5px; background: green; color: white">Download</button>
+<div class="container" >
+    <div class="main-box" id="fullpage2">
         <div style="width: 50px; height: 50px"  class="qr-code"  id="qrcode_1"></div>
 {{--        <img src="{{asset('images/cetificate qr code.png')}}" alt="" >--}}
         <p class="publish_data">Data of Publication of Results:      @if($student->result_publised)
@@ -311,6 +312,21 @@
 </style>
 
 <script type="text/javascript" src="{{ asset('js/qrcode.js') }}"></script>
+<script src="{{ asset('js/pdf.js') }}"></script>
+<script type="text/javascript">
+    function generate_pdf() {
+        const element = document.getElementById('fullpage2');
+        const options = {
+            margin: 0,
+            filename: "{{ $student->name . '_' . $student->roll }}.pdf",
+            image: { type: 'jpeg', quality: 0.99 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'A3', orientation: 'landscape' }
+        };
+        html2pdf().set(options).from(element).save();
+    }
+</script>
+
 <script type="text/javascript">
     // Adjusted for high-quality QR code generation
     var qrcode = new QRCode(document.getElementById("qrcode_1"), {
