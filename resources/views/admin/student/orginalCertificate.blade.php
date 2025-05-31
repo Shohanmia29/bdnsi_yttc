@@ -34,7 +34,7 @@
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left text4">of</p>
-                <p class="underlined4 inline-block float-left position-0">Diploma In Marble Ceramics</p>
+                <p class="underlined4 inline-block float-left position-0">{{$student->subject->name??''}}</p>
             </div>
             <div class="cat_parent">
                 <p class="inline-block float-left">has successfully completed the course of</p>
