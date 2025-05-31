@@ -262,7 +262,11 @@
             margin-bottom: 11;
         }
         .underlined2 {
-            border-bottom: 2px dotted black;
+            border-bottom: 2px solid transparent;
+      background-image: linear-gradient(to right, black 33%, rgba(255, 255, 255, 0) 0%);
+      background-position: bottom;
+      background-size: 6px 2px;
+      background-repeat: repeat-x;
             margin-bottom: 10px;
             width: 76%;
             padding-left: 60px;
