@@ -1,9 +1,7 @@
-<button onclick="window.print()" class="no-print">Print</button>
-<button onclick="generate_pdf()" class="no-print" style="padding: 5px; background: green; color: white">Download</button>
 <div class="container" >
     <div class="main-box" id="fullpage2">
         <div style="width: 50px; height: 50px"  class="qr-code"  id="qrcode_1"></div>
-{{--        <img src="{{asset('images/cetificate qr code.png')}}" alt="" >--}}
+        {{--        <img src="{{asset('images/cetificate qr code.png')}}" alt="" >--}}
         <p class="publish_data">Data of Publication of Results:      @if($student->result_publised)
                 {{ \Carbon\Carbon::make($student->result_publised)->format('j-F-Y') }}
             @endif</p>
@@ -159,10 +157,10 @@
         margin-top: 10px;
     }
     .main-box {
-         margin: 0 auto;
+        margin: 0 auto;
         position: relative !important;
         min-height: 98%;
-        background: url({{asset('images/certificate-background.jpg')}});
+        background: url({{$base64Image}});
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -220,8 +218,8 @@
         float: left !important;
     }
     #qrcode_1 canvas img {
-            width: 50px;
-        }
+        width: 50px;
+    }
 </style>
 <style>
     @media print{
@@ -262,44 +260,44 @@
             margin-bottom: 11;
         }
         .underlined2 {
-            border-bottom: 2px dotted black!important;
+            border-bottom: 2px dotted black;
             margin-bottom: 10px;
             width: 76%;
             padding-left: 60px;
         }
         .underlined3 {
-            border-bottom: 2px dotted black!important;
+            border-bottom: 2px dotted black;
             margin-bottom: 10px;
             width: 79.40%;
             padding-left: 110px;
         }
         .underlined4 {
-            border-bottom: 2px dotted black!important;
+            border-bottom: 2px dotted black;
             margin-bottom: 10px;
             width: 82.38%;
             padding-left: 100px;
         }
         .underlined5 {
-            border-bottom: 2px dotted black!important;
+            border-bottom: 2px dotted black;
             margin-bottom: 10px;
             width: 40.8%;
             text-align: center
         }
         .underlined6 {
-            border-bottom: 2px dotted black!important;
+            border-bottom: 2px dotted black;
             margin-bottom: 10px;
             width: 59.58%;
             padding: 0px 6px;
             padding-left: 50px;
         }
         .underlined7 {
-            border-bottom: 2px dotted black!important;
+            border-bottom: 2px dotted black;
             margin-bottom: 10px;
             width: 22.5%;
             padding-left: 35px;
         }
         .underlined8 {
-            border-bottom: 2px dotted black!important;
+            border-bottom: 2px dotted black;
             margin-bottom: 10px;
             width: 11.38%;
             padding: 0px 6px;
@@ -320,8 +318,8 @@
             margin: 0,
             filename: "{{ $student->name . '_' . $student->roll }}.pdf",
             image: { type: 'jpeg', quality: 0.99 },
-            html2canvas: { scale: 3 ,useCORS: true,},
-            jsPDF:        { unit: 'pt', format: [816, 1020], orientation: 'landscape' }
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'A3', orientation: 'landscape' }
         };
         html2pdf().set(options).from(element).save();
     }
