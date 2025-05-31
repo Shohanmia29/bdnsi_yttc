@@ -1,9 +1,7 @@
-<button onclick="window.print()" class="no-print">Print</button>
-<button onclick="generate_pdf()" class="no-print" style="padding: 5px; background: green; color: white">Download</button>
 <div class="container" >
     <div class="main-box" id="fullpage2">
         <div style="width: 50px; height: 50px"  class="qr-code"  id="qrcode_1"></div>
-{{--        <img src="{{asset('images/cetificate qr code.png')}}" alt="" >--}}
+        {{--        <img src="{{asset('images/cetificate qr code.png')}}" alt="" >--}}
         <p class="publish_data">Data of Publication of Results:      @if($student->result_publised)
                 {{ \Carbon\Carbon::make($student->result_publised)->format('j-F-Y') }}
             @endif</p>
@@ -159,10 +157,10 @@
         margin-top: 10px;
     }
     .main-box {
-         margin: 0 auto;
+        margin: 0 auto;
         position: relative !important;
         min-height: 98%;
-        background: url({{asset('images/certificate-background.jpg')}});
+        background: url({{$base64Image}});
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -220,8 +218,8 @@
         float: left !important;
     }
     #qrcode_1 canvas img {
-            width: 50px;
-        }
+        width: 50px;
+    }
 </style>
 <style>
     @media print{
@@ -321,7 +319,7 @@
             filename: "{{ $student->name . '_' . $student->roll }}.pdf",
             image: { type: 'jpeg', quality: 0.99 },
             html2canvas: { scale: 2 },
-            jsPDF:        { unit: 'pt', format: [816, 1020], orientation: 'landscape' }
+            jsPDF: { unit: 'in', format: 'A3', orientation: 'landscape' }
         };
         html2pdf().set(options).from(element).save();
     }
