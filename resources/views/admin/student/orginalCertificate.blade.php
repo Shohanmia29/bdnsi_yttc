@@ -305,7 +305,7 @@
             padding: 0px 6px;
         }
         .publish_data {
-            bottom: 85px;
+            bottom: 110px;
             left: 100px;
         }
     }
