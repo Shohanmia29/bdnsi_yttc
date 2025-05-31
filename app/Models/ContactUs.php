@@ -14,7 +14,9 @@ class ContactUs extends Model
         'email',
         'phone',
         'message' ,
+        'is_seen' ,
     ];
+
 
 
 }

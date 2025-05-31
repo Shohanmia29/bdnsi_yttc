@@ -44,7 +44,7 @@
                     <input type="hidden" name="id" value="{{$student->id}}">
                     <tr x-data="{ w: {{ optional($student->result)->written ?? 0 }}, p: {{ optional($student->result)->practical ?? 0 }}, v: {{ optional($student->result)->viva ?? 0 }} }">
                         <td class="p-1 border">{{ $student->name }}</td>
-                        <td class="p-1 border">{{ $student->type }}</td>
+                        <td class="p-1 border text-center">{{ $student->course_type->description }}</td>
                         <td class="p-1 border">{{ $student->roll }}</td>
                         <td class="p-1 border">{{ $student->registration }}</td>
                         <td class="p-1 border w-28"><input class="w-full border p-1" x-bind:class="parseInt(w)+parseInt(p)+parseInt(v) > 100 ? 'border-red-500' : ''" type="number"   name="written"/></td>

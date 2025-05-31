@@ -46,10 +46,13 @@ class DashboardController extends Controller
 
 
     public function contactUs(Request $request){
+
+
+
         if ($request->ajax()){
             return datatables(ContactUs::get())->toJson();
         }
-
+        DB::table('contact_us')->where('is_seen',false)->update(['is_seen'=>true]);
         return view('admin.contactUs');
     }
 
