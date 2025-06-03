@@ -313,7 +313,33 @@
 
 <script type="text/javascript" src="{{ asset('js/qrcode.js') }}"></script>
 <script src="{{ asset('js/pdf.js') }}"></script>
-<script type="text/javascript">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+
+<script>
+    function generate_pdf() {
+        const node = document.getElementById('fullpage2');
+        domtoimage.toPng(node)
+            .then(function (dataUrl) {
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF({
+                    orientation: 'landscape',
+                    unit: 'pt',
+                    format: [816, 1020],
+                });
+                const img = new Image();
+                img.src = dataUrl;
+                img.onload = function () {
+                    pdf.addImage(img, 'PNG', 0, 0);
+                    pdf.save("{{ $student->name . '_' . $student->roll }}.pdf");
+                }
+            });
+    }
+</script>
+
+{{--<script type="text/javascript">
     function generate_pdf() {
         const element = document.getElementById('fullpage2');
         const options = {
@@ -325,7 +351,7 @@
         };
         html2pdf().set(options).from(element).save();
     }
-</script>
+</script>--}}
 
 <script type="text/javascript">
     // Adjusted for high-quality QR code generation
