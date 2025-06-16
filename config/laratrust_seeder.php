@@ -21,7 +21,16 @@ return [
             'result' => 'c,r,u,d',
             'team' => 'c,r,u,d',
             'sub-admin' => 'c,r,u,d',
-            'upazila-store' => 'c,r,u,d',
+            'exam' => 'c,r,u,d',
+            'question' => 'c,r,u,d',
+            'slider' => 'c,r,u,d',
+            'notice' => 'c,r,u,d',
+            'adminList' => 'c,r,u,d',
+            'configDictionary' => 'c,r,u,d',
+            'translation' => 'c,r,u,d',
+            'sponsor' => 'c,r,u,d',
+
+
         ],
 
         'sub_admin' => [
