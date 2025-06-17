@@ -173,7 +173,7 @@
     .box {
         position: absolute;
         width: 61%;
-        bottom: 19%;
+        bottom: 23%;
         left: 59.5%;
         transform: translateX(-50%);
         /* border: 1px solid black; */
@@ -259,7 +259,7 @@
         .underlined {
             width: 74.2%;
             padding-left: 50px;
-            margin-bottom: 11;
+            margin-bottom: 11px;
         }
         .underlined2 {
             border-bottom: 2px dotted black!important;
