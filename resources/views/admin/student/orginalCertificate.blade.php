@@ -1,61 +1,5 @@
 <button onclick="window.print()" class="no-print">Print</button>
 <button onclick="generate_pdf()" class="no-print" style="padding: 5px; background: green; color: white">Download</button>
-<div class="container" >
-    <div class="main-box" id="fullpage2">
-        <div style="width: 50px; height: 50px"  class="qr-code"  id="qrcode_1"></div>
-        {{--        <img src="{{asset('images/cetificate qr code.png')}}" alt="" >--}}
-        <p class="publish_data">Data of Publication of Results:      @if($student->result_publised)
-                {{ \Carbon\Carbon::make($student->result_publised)->format('j-F-Y') }}
-            @endif</p>
-        <div class="box">
-            <p class="text-end text-lg position-0">Roll No. <span class="rol-reg-sec position-0">{{ $student->roll ?? '' }}</span></p>
-            <div class="inline-block w-full">
-                <p class="float-left">Serial No : <span class="rol-reg-sec1">{{ \App\Lib\Helper::certificateSerialNumber($student->id) ?? '' }}</span></p>
-                <p class="float-right">Reg No. <span class="rol-reg-sec position-0">{{ $student->registration ?? '' }}</span></p>
-            </div>
-            <div class="text-end mt-2 text-lg">Session. <span class="rol-reg-sec position-0">{{$student->session->name??''}}</span></div>
-            <div class="cat_parent">
-                <p class="inline-block float-left text">This is to certify that</p>
-                <p class="underlined inline-block float-left position-0 student-name">{{ $student->name ?? '' }}</p>
-            </div>
-            <div class="cat_parent">
-                <p class="inline-block float-left text2">Son/daughter of</p>
-                <div class="underlined2 inline-block float-left">
-                    <p class="float-left position-0">{{ $student->fathers_name ?? '' }}</p>
-                    <p class="float-right position-0">(father)</p>
-                </div>
-            </div>
-            <div class="cat_parent">
-                <p class="inline-block float-left text3">and</p>
-                <div class="underlined3 inline-block float-left">
-                    <p class="float-left position-0">{{ $student->mothers_name ?? '' }}</p>
-                    <p class="float-right position-0">(mother)</p>
-                </div>
-            </div>
-            <div class="cat_parent">
-                <p class="inline-block float-left text4">of</p>
-                <p class="underlined4 inline-block float-left position-0">{{$student->subject->name??''}}</p>
-            </div>
-            <div class="cat_parent">
-                <p class="inline-block float-left">has successfully completed the course of</p>
-                <p class="underlined5 inline-block float-left position-0">{{$student->course_duration??''}}</p>
-                <p class="inline-block float-left">from the technical training</p>
-            </div>
-            <div class="cat_parent">
-                <p class="inline-block float-left">Center</p>
-                <p class="underlined6 inline-block float-left position-0">{{ $student->center->name ?? '' }}</p>
-                <p class="inline-block float-left">examination held in the month</p>
-            </div>
-            <div class="cat_parent">
-                <p class="inline-block float-left">of</p>
-                <p class="underlined7 inline-block float-left position-0">{{ \Carbon\Carbon::parse($student->exam_date)->format('j-F-Y') }}</p>
-                <p class="inline-block float-left">Conducted by the YTTC. He/She Secured CGPA</p>
-                <p class="underlined8 inline-block float-left position-0"> {{ number_format($student->t_written_gpa(),2)?? '' }}</p>
-                <p class="inline-block float-left">on a scale of 4.00</p>
-            </div>
-        </div>
-    </div>
-</div>
 <style>
     @font-face {
         font-family: 'Monotype Corsiva';
@@ -310,34 +254,90 @@
         }
     }
 </style>
+<div class="container" >
+    <div class="main-box" id="fullpage2">
+        <div style="width: 50px; height: 50px"  class="qr-code"  id="qrcode_1"></div>
+        {{--        <img src="{{asset('images/cetificate qr code.png')}}" alt="" >--}}
+        <p class="publish_data">Data of Publication of Results:      @if($student->result_publised)
+                {{ \Carbon\Carbon::make($student->result_publised)->format('j-F-Y') }}
+            @endif</p>
+        <div class="box">
+            <p class="text-end text-lg position-0">Roll No. <span class="rol-reg-sec position-0">{{ $student->roll ?? '' }}</span></p>
+            <div class="inline-block w-full">
+                <p class="float-left">Serial No : <span class="rol-reg-sec1">{{ \App\Lib\Helper::certificateSerialNumber($student->id) ?? '' }}</span></p>
+                <p class="float-right">Reg No. <span class="rol-reg-sec position-0">{{ $student->registration ?? '' }}</span></p>
+            </div>
+            <div class="text-end mt-2 text-lg">Session. <span class="rol-reg-sec position-0">{{$student->session->name??''}}</span></div>
+            <div class="cat_parent">
+                <p class="inline-block float-left text">This is to certify that</p>
+                <p class="underlined inline-block float-left position-0 student-name">{{ $student->name ?? '' }}</p>
+            </div>
+            <div class="cat_parent">
+                <p class="inline-block float-left text2">Son/daughter of</p>
+                <div class="underlined2 inline-block float-left">
+                    <p class="float-left position-0">{{ $student->fathers_name ?? '' }}</p>
+                    <p class="float-right position-0">(father)</p>
+                </div>
+            </div>
+            <div class="cat_parent">
+                <p class="inline-block float-left text3">and</p>
+                <div class="underlined3 inline-block float-left">
+                    <p class="float-left position-0">{{ $student->mothers_name ?? '' }}</p>
+                    <p class="float-right position-0">(mother)</p>
+                </div>
+            </div>
+            <div class="cat_parent">
+                <p class="inline-block float-left text4">of</p>
+                <p class="underlined4 inline-block float-left position-0">{{$student->subject->name??''}}</p>
+            </div>
+            <div class="cat_parent">
+                <p class="inline-block float-left">has successfully completed the course of</p>
+                <p class="underlined5 inline-block float-left position-0">{{$student->course_duration??''}}</p>
+                <p class="inline-block float-left">from the technical training</p>
+            </div>
+            <div class="cat_parent">
+                <p class="inline-block float-left">Center</p>
+                <p class="underlined6 inline-block float-left position-0">{{ $student->center->name ?? '' }}</p>
+                <p class="inline-block float-left">examination held in the month</p>
+            </div>
+            <div class="cat_parent">
+                <p class="inline-block float-left">of</p>
+                <p class="underlined7 inline-block float-left position-0">{{ \Carbon\Carbon::parse($student->exam_date)->format('j-F-Y') }}</p>
+                <p class="inline-block float-left">Conducted by the YTTC. He/She Secured CGPA</p>
+                <p class="underlined8 inline-block float-left position-0"> {{ number_format($student->t_written_gpa(),2)?? '' }}</p>
+                <p class="inline-block float-left">on a scale of 4.00</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="border: none;">
+    <svg width="100%" height="2" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="1" x2="100%" y2="1" stroke="black" stroke-dasharray="4,4" />
+    </svg>
+</div>
+
 
 <script type="text/javascript" src="{{ asset('js/qrcode.js') }}"></script>
-<script src="{{ asset('js/pdf.js') }}"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <script>
     function generate_pdf() {
-        const node = document.getElementById('fullpage2');
-        domtoimage.toPng(node)
-            .then(function (dataUrl) {
-                const { jsPDF } = window.jspdf;
-                const pdf = new jsPDF({
-                    orientation: 'landscape',
-                    unit: 'pt',
-                    format: [816, 1020],
-                });
-                const img = new Image();
-                img.src = dataUrl;
-                img.onload = function () {
-                    pdf.addImage(img, 'PNG', 0, 0);
-                    pdf.save("{{ $student->name . '_' . $student->roll }}.pdf");
-                }
-            });
+        const element = document.getElementById('fullpage2');
+
+        const opt = {
+            margin:       0,
+            filename:     '{{ $student->name . "_" . $student->roll }}.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 7 },
+            jsPDF:        { unit: 'pt', format: [1020, 816], orientation: 'landscape' }
+        };
+
+        html2pdf().set(opt).from(element).save();
     }
 </script>
+
 
 {{--<script type="text/javascript">
     function generate_pdf() {
