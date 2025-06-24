@@ -1,5 +1,5 @@
 <button onclick="window.print()" class="no-print">Print</button>
-<a href="{{route('admin.student.show',[$student->id,'cpdf'=>'cpdf'])}}" class="no-print" style="padding: 5px; background: green; color: white">C-pdf Download</a>
+<a href="{{route('admin.student.show',[$student->id,'orginalcpdf'=>'orginalcpdf'])}}" class="no-print" style="padding: 5px; background: green; color: white">C-pdf Download</a>
 
 <div class="container" >
     <div class="main-box" id="fullpage2">

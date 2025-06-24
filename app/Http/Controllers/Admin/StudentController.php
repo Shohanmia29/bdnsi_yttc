@@ -62,6 +62,7 @@ class StudentController extends Controller
                         . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.student.show", [$registration->id, 'transcript' => 'transcript']) . '">Transcript</a>'
                         . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.certificateStudent", [$registration->id, 'certificate' => 'certificate']) . '">Certificate</a>'
                         . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.certificateStudent", [$registration->id, 'original' => 'original']) . '">Original Certificate</a>'
+                        . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.student.show", [$registration->id, 'orginalcpdf' => 'orginalcpdf']) . '">OrginalC-Pdf</a>'
                         . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.student.show", [$registration->id, 'cpdf' => 'cpdf']) . '">C-Pdf</a>'
                         . '<a style="background-color:green; padding:3px; border-radius:4px; color:white; margin-left:5px;" target="_blank" href="' . route("admin.student.show", [$registration->id, 'idcard' => 'idcard']) . '">Id Card</a>'
                     );
@@ -176,6 +177,10 @@ class StudentController extends Controller
             return view('admin.student.idcard', compact('student'));
         }
         elseif ($request->cpdf == 'cpdf') {
+            $student = Student::where('id', $student->id)->firstOrFail();
+            return view('admin.student.cpdf', compact('student'));
+        }
+        elseif ($request->orginalcpdf == 'orginalcpdf') {
             $student = Student::where('id', $student->id)->firstOrFail();
             return view('admin.student.originalCpdf', compact('student'));
         }
