@@ -147,7 +147,7 @@ class StudentController extends Controller
             $validated['roll'] = $validated['roll'] ?? Student::getLastFreeRoll();
             $validated['registration'] = $validated['registration'] ?? Student::getLastFreeRegistration();
             $student=Student::create($validated);
-            $message = 'Congratulations!! ' . $student->name . ', You have successfully filled the application form for Fastly '
+            $message = 'Congratulations!! ' . $student->name . ', You have successfully filled the application form for  '
                 . (Auth::user()->center->name ?? '') . ' Technician '
                 . ($student->subject->name ?? '') . ' under Young Technical Training Center. Your Roll No: '
                 . $student->roll . ' and Registration No: ' . $student->registration . '. Thanks for staying with Young Technical Training Center.';
