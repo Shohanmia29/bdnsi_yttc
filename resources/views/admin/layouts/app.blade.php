@@ -54,6 +54,14 @@
                 >
                     <span>{{ __('Dashboard') }}</span>
                 </a>
+                @role('admin')
+                <a
+                    href="{{ route('admin.backup.index') }}"
+                    class="w-full py-3 px-4 flex justify-between items-center hover:bg-slate-900 border-l-4 border-transparent hover:border-teal-400"
+                >
+                    <span>{{ __('Database Backup') }}</span>
+                </a>
+                @endrole
                 @can('team-read')
                     <a
                         href="{{ route('admin.team.index') }}"
