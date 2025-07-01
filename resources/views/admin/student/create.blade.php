@@ -21,8 +21,8 @@
                 @endforeach
             </x-labeled-select>
             <x-labeled-input name="name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-            <x-labeled-input name="roll" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
-            <x-labeled-input name="registration" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <x-labeled-input value="{{$roll}}" name="roll" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
+            <x-labeled-input value="{{$registration}}" name="registration" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-passport-input name="passport" label="Passport Number" class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="fathers_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>
             <x-labeled-input name="mothers_name" required class="w-full p-1 md:w-1/2 lg:w-1/3"/>

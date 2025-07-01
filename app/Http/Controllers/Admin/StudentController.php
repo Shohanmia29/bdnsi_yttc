@@ -4,23 +4,21 @@ namespace App\Http\Controllers\Admin;
 
 use App\Enums\CenterStatus;
 use App\Enums\CourseType;
+use App\Enums\Gender;
 use App\Enums\Religion;
 use App\Enums\SessionStatus;
 use App\Enums\StudentStatus;
+use App\Http\Controllers\Controller;
 use App\Lib\Helper;
-use App\Lib\Image;
-use App\Enums\Gender;
 use App\Models\Center;
 use App\Models\District;
 use App\Models\Result;
 use App\Models\Session;
 use App\Models\Student;
-use App\Enums\BloodGroup;
 use App\Models\Subject;
 use App\Models\Upazila;
 use App\Traits\ChecksPermission;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
@@ -88,7 +86,6 @@ class StudentController extends Controller
             'centers' => Center::select(['id', 'code', 'name'])->whereStatus(CenterStatus::Approved)->get(),
             'sessions' => Session::select(['id', 'name'])->where('status', SessionStatus::Active)->get(),
             'subjects' => Subject::select(['id', 'name'])->get(),
-
             'divisions' => \App\Models\Division::get(),
             'districts_keys' => District::get()->mapWithKeys(function ($district) {
                 return [
@@ -99,9 +96,7 @@ class StudentController extends Controller
                     ]
                 ];
             }),
-
             'districts' => District::get(),
-
             'upazilas' => Upazila::get()->mapWithKeys(function ($upazila) {
                 return [
                     $upazila->id => [
@@ -110,7 +105,9 @@ class StudentController extends Controller
                         'name' => $upazila->name,
                     ]
                 ];
-            })->toArray()
+            })->toArray(),
+            'registration' => Student::getLastFreeRegistration(),
+            'roll' => Student::getLastFreeRoll()
 
         ]);
     }
@@ -220,7 +217,9 @@ class StudentController extends Controller
                         'name' => $upazila->name,
                     ]
                 ];
-            })->toArray()
+            })->toArray(),
+            'registration' => Student::getLastFreeRegistration(),
+            'roll' => Student::getLastFreeRoll()
         ]);
     }
 
