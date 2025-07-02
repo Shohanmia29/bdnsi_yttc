@@ -1,11 +1,9 @@
 <?php
 
-use App\Models\Student;
+use App\Http\Controllers\HomeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Session;
 
 /*
@@ -84,6 +82,10 @@ Route::get('student-phone-update-link',function (){
         }
     }*/
 });
+
+Route::get('whatapp-link', function () {
+    return view('frontend.page.whatapplink');
+})->name('whatapp.link');
 
 
 Route::get('/lang-change', function (Request $request) {
