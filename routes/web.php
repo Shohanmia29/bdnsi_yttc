@@ -83,8 +83,11 @@ Route::get('student-phone-update-link',function (){
     }*/
 });
 
-Route::get('whatapp-link', function () {
-    return view('frontend.page.whatapplink');
+Route::get('whatapp-link/{phone}', function ($phone) {
+    $data=\App\Models\WhatappLink::where('phone',$phone)->first();
+    return view('frontend.page.whatapplink',[
+        'data'=>$data
+    ]);
 })->name('whatapp.link');
 
 

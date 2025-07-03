@@ -122,6 +122,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('translation', \App\Http\Controllers\Admin\TranslationController::class);
         Route::resource('sponsor', \App\Http\Controllers\Admin\SponsorController::class);
         Route::resource('backup', \App\Http\Controllers\Admin\BackupController::class)->only(['index','update']);
+        Route::resource('whatapp-link', \App\Http\Controllers\Admin\WhatappLinkController::class);
 
     });
 });
