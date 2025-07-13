@@ -5,11 +5,37 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in as Admin!
+    <div class="py-2">
+
+        <div class=" ">
+
+            @php($colors=['bg-pink-800',
+    'bg-yellow-800',
+    'bg-blue-800',
+    'bg-teal-800',
+    'bg-green-800',
+    'bg-red-800'])
+            <div class="pb-12">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+
+                    @foreach($cards as $key=> $card)
+                        <div class="{{ $colors[$loop->index % count($colors)]}}   flex items-center p-4 rounded shadow">
+                            <a href="{{$card['url']}}">
+                                <div class="flex items-center">
+                                    <div class="{{ $colors[$loop->index % count($colors)]}} text-white p-3 rounded">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="font-bold    capitalize text-white">{{ $key }}</h3>
+
+                                        <p class="text-gray-600 text-sm text-white">{{$card['value']}}</p>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>

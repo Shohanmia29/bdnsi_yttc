@@ -24,7 +24,7 @@
         .admit-card-wrap {
             width: 1170px;
             height: 1660px;
-            background-image: url({{asset('images/student/RegistrationCard.jpg')}});
+            background-image: url({{asset('images/student/registration-card.jpg')}});
             margin: auto;
             background-position: center center;
             background-repeat: no-repeat;
@@ -168,7 +168,7 @@
                 <img src="{{asset('images/student/logo.png')}}" style="width: 140px;margin-top: -4px;" alt="logo" />
             </div>
             <div class="cert-headings w-82" style="margin-top: 20px">
-                <img src="{{asset('images/student/banner.jpg')}}" class="w-100" alt="">
+                <img src="{{asset('images/student/banner.png')}}" class="w-100" alt="">
                 <h5 class="normal-font" style="margin-left: 38px;"> Approved By Government of the People's Republic of Bangladesh.</h5>
             </div>
         </div>
@@ -284,7 +284,7 @@
                 <p>Signature Of The Regional <br /> Director</p>
             </div>
             <div class="sign-cont text-center">
-                <img class="text-center" style="width: 200px" src="{{asset('images/student/examController.png')}}" alt="signature" />
+                <img class="text-center" style="width: 200px" src="{{asset('images/student/Exam-Controller2.png')}}" alt="signature" />
                 <hr />
                 <p>Exam Controller <br /> nhml</p>
             </div>

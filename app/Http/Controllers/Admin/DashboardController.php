@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Enums\StudentStatus;
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
 use App\Models\ContactUs;
@@ -23,8 +24,23 @@ class DashboardController extends Controller
 
 
     public function index(){
-
-        return view('admin.dashboard');
+        $cards = collect([
+            'Total Student ' => [
+                'value' => Student::count(),
+                'url' => route('admin.student.index'),
+            ],
+            'Total Approved Student ' => [
+                'value' => Student::where('status',StudentStatus::Approved)->count(),
+                'url' => route('admin.student.index'),
+            ],
+            'Total Pending Student ' => [
+                'value' => Student::where('status',StudentStatus::Pending)->count(),
+                'url' => route('admin.student.index'),
+            ],
+        ]);
+        return view('admin.dashboard',[
+            'cards'=>$cards
+        ]);
     }
 
     public function userCreate(Request $request){

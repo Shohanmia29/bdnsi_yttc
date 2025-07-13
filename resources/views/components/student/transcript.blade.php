@@ -23,7 +23,7 @@
         .admit-card-wrap {
             width: 1170px;
             height: 1650px;
-            background-image: url({{asset('images/student/transacript22.jpg')}});
+            background-image: url({{asset('images/student/transacpt.jpg')}});
             margin: auto;
             background-position: center center;
             background-repeat: no-repeat;
@@ -478,7 +478,7 @@
 {{--                                    <p>Signature Of The Regional <br /> Director</p>--}}
                 </div>
                 <div class="sign-cont text-center"  >
-                    <img class="text-center" style="width: 200px" src="{{asset('images/student/examController.png')}}" alt="signature" />
+                    <img class="text-center" style="width: 200px" src="{{asset('images/student/Exam-Controller2.png')}}" alt="signature" />
                     <hr />
                     <p>Exam Controller <br /> Nhmi</p>
                 </div>

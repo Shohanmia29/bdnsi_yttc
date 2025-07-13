@@ -253,9 +253,9 @@
                 </ol>
             </div>
             <div class="sign-cont w-25 text-center">
-                <img style="width: 200px;" src="{{asset('images/student/examController.png')}}" alt="signature" />
+                <img style="width: 200px;" src="{{asset('images/student/Exam-Controller2.png')}}" alt="signature" />
                 <hr />
-                <p>Controller Of Examinations <br />Young Technical Training Institute</p>
+                <p>Controller Of Examinations <br />National Health & Medical Technology Institute</p>
             </div>
         </div>
     </div>

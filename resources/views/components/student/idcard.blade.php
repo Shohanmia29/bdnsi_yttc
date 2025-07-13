@@ -32,7 +32,7 @@
             <div
                 class="relative h-[600px] w-full rounded-md p-2"
                 style="
-                    background-image: url({{asset('images/student/idcard.jpg')}});
+                    background-image: url({{asset('images/student/idcard-front.jpg')}});
                     background-position: center center;
                     background-size: contain;
                     background-repeat: no-repeat;
@@ -83,7 +83,7 @@
             <div
                 class="relative h-[600px] w-full rounded-md p-2"
                 style="
-                    background-image: url({{asset('images/student/idcardback.jpg')}});
+                    background-image: url({{asset('images/student/idcard-back.jpg')}});
                     background-position: center center;
                     background-size: contain;
                     background-repeat: no-repeat;
