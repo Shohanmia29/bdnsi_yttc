@@ -311,15 +311,10 @@
         <div class="row">
             <div class="col-12">
                 <div class="header-inner">
-                    <div class="row align-items-center">
-                        <div class=" col-md-2 col-8">
-                            <div class="header-logo">
-                                <a href="/"><img src="{{\App\Lib\Image::url(\App\Models\ConfigDictionary::get('header_logo'))??asset('frontend/logo2.png')}}" alt="#" /></a>
-                            </div>
-                        </div>
-                        <div class="col-md-10 col-4 ">
-                            <div class="w-100">
-                                <div class="header-right">
+                    <div class="">
+                        <div class="">
+                            <div class="w-100 d-flex justify-content-center">
+                                <div class="header-center">
                                     <div class="header-menu">
                                         <nav class="navigation">
                                             <ul class="header-menu-list">

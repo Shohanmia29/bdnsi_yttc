@@ -183,7 +183,48 @@
         </div>
     </section>
     <!-- End Gallery Area -->
+    <section class="gallery-area section-padding" id="course">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-head">
+                        <h3 class="section-head-title">
+                            {{__t('Our Courses')}} <span class="title-line style-3"></span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @forelse(\App\Models\Subject::take(8)->get() as $course)
+                    <div class="col-12 col-md-3 p-2">
+                            <div class="card shadow">
+                                  <div class="card-image">
+                                      <img src="{{$course->photo}}" alt="">
+                                  </div>
+                                <div class="card-body">
+                                       <div class="card-title">
+                                           {{$course->name??''}}
+                                       </div>
+                                </div>
+                            </div>
+                    </div>
+                @empty
+                    <div>Not Found</div>
+                @endforelse
+                <div class="d-flex justify-content-center py-2">
+                    <a href="{{route('all_course')}}" class="theme-btn">All Course</a>
+                </div>
 
+            </div>
+            {{--            <div class="row">--}}
+            {{--                <div class="col-12">--}}
+            {{--                    <div class="section-bottom-btn">--}}
+            {{--                        <a href="" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></a>--}}
+            {{--                    </div>--}}
+            {{--                </div>--}}
+            {{--            </div>--}}
+        </div>
+    </section>
     <!-- Page Main Area -->
     <section class="home-page-main-area">
         <div class="container">
