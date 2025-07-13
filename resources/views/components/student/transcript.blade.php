@@ -480,7 +480,7 @@
                 <div class="sign-cont text-center"  >
                     <img class="text-center" style="width: 200px" src="{{asset('images/student/examController.png')}}" alt="signature" />
                     <hr />
-                    <p>Exam Controller <br /> Yttc</p>
+                    <p>Exam Controller <br /> Nhmi</p>
                 </div>
             </div>
         </div>

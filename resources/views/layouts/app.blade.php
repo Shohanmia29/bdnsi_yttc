@@ -130,7 +130,7 @@
             </div>
         </main>
         <footer class="w-full p-2 text-center print:hidden">
-             yttc.com.bd
+         nhmi.com.bd
         </footer>
     </div>
 </div>

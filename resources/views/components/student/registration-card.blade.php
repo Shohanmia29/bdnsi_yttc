@@ -168,7 +168,7 @@
                 <img src="{{asset('images/student/logo.png')}}" style="width: 140px;margin-top: -4px;" alt="logo" />
             </div>
             <div class="cert-headings w-82" style="margin-top: 20px">
-                <img src="{{asset('images/student/banner.png')}}" class="w-100" alt="">
+                <img src="{{asset('images/student/banner.jpg')}}" class="w-100" alt="">
                 <h5 class="normal-font" style="margin-left: 38px;"> Approved By Government of the People's Republic of Bangladesh.</h5>
             </div>
         </div>
@@ -286,7 +286,7 @@
             <div class="sign-cont text-center">
                 <img class="text-center" style="width: 200px" src="{{asset('images/student/examController.png')}}" alt="signature" />
                 <hr />
-                <p>Exam Controller <br /> yttc</p>
+                <p>Exam Controller <br /> nhml</p>
             </div>
         </div>
 
@@ -294,7 +294,7 @@
             <p></p>
             <ol>
                 <li>This Registration card is valid till 8 Consecutive years</li>
-                <li>For All Correspondence with the yttc, Institute code, registration number and session are to be mentioned
+                <li>For All Correspondence with the nhmi, Institute code, registration number and session are to be mentioned
                 </li>
                 <li>Scan the QR code and follow the link in the QR code to verify the Registration card from   </li>
             </ol>

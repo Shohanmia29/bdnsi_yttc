@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Young Technical Training Center | Technical Education In Bd</title>
+    <title>National Health & Medical Technology Institute</title>
     <link rel="icon" href="{{\App\Lib\Image::url(\App\Models\ConfigDictionary::get('fav_icon'))??asset('frontend/logo.jpg')}}?v=223" />
 
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/bootstrap.min.css')}}?v=2" />
@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" href="{{ asset('frontend/logo.jpg')}}?v=223" />
     <meta name="msapplication-TileImage" content="{{ asset('frontend/logo.jpg')}}?v=223" />
     <meta name="google-site-verification" content="Z0nEijotHP7ZORKAfkTDJrSIefDv4G3NB5gaq9wngsE" />
-    <meta name="description" content="Young Technical Training Center offers quality education in Bangladesh with modern methods, expert teachers, & diverse programs. Join now to shape your future!">
+    <meta name="description" content="National Health & Medical Technology Institute offers quality education in Bangladesh with modern methods, expert teachers, & diverse programs. Join now to shape your future!">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J104V2KMHD"></script>
     <script>
@@ -460,7 +460,7 @@
             </div>
         </div>
     </div>
-    <h1  style="opacity: 0; font-size: 1px!important;">Young Technical Training Center | Technical Education In Bd</h1>
+    <h1  style="opacity: 0; font-size: 1px!important;">National Health & Medical Technology Institute</h1>
 </footer>
 <!-- End Footer Area -->
 
