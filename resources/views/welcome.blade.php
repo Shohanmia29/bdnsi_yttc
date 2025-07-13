@@ -2,390 +2,71 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="{{mix('js/app.js')}}"></script>
     <!-- Hero Area -->
-    <section class="hero-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="hero-slider">
-                        @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Slider)->get() as $slider)
-                            <div class="hero-single-slider background-image"
-                                 style="background-image: url({{$slider->photo}});">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-6 col-md-8 col-12 align-self-end">
-                                        <div class="hero-content">
-                                            <h3 class="hero-content-title">
-                                                {{$slider->title??''}}
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        @empty
-                            <!-- Hero Single Slider -->
-                            <div class="hero-single-slider background-image"
-                                 style="background-image: url({{asset('frontend/svg/img/slider.png')}});">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-6 col-md-8 col-12 align-self-end">
-                                        <div class="hero-content">
-                                            <h3 class="hero-content-title">
-                                                স্বাগতম এক্সওয়াইজেধ স্কুল এবং কলেজ এর পক্ষ থেকে!
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="hero-single-slider background-image"
-                                 style="background-image: url({{asset('frontend/svg/img/slider2.png')}});">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-6 col-md-8 col-12 align-self-end">
-                                        <div class="hero-content">
-                                            <h3 class="hero-content-title">
-                                                বিশ্বমানের শিক্ষাদানের একটি উপযুক্ত স্কুল প্রতিষ্ঠান।
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hero-single-slider background-image"
-                                 style="background-image: url({{asset('frontend/svg/img/slider1.png')}});">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-6 col-md-8 col-12 align-self-end">
-                                        <div class="hero-content">
-                                            <h3 class="hero-content-title">
-                                                মনোরোম পরিবেশে আমরা দিচ্ছি সেরা মানের শিক্ষা ব্যবস্থা।
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforelse
-
-                    </div>
+    <div class="w-100">
+        <div class="container mt-1" style="background-color: var(--primary-color);">
+            <div class="topbar-left">
+                <div class="topbar-update-notice text-white">
+                    <marquee behavior="" direction="left">{{\App\Models\ConfigDictionary::get('notice','coming soon')}}</marquee>
                 </div>
             </div>
         </div>
+
+    </div>
+
+    <section class="students-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-head">
+                        <h3 class="section-head-title">
+                            {{__t('Approved')}} <span class="title-line style-2"></span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="students-slider">
+                        @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Sponsor)->take(30)->get() as $sponsor)
+                            <div class=" w-100 h-25 card ">
+                                <img style="height: 170px" class="w-full " src="{{$sponsor->photo??''}}" alt="">
+                                <div class="p-1 h6 text-center">
+                                    {{$sponsor->title??''}}
+                                </div>
+                            </div>
+                        @empty
+                            <div>{{__t('Not Found')}}</div>
+                        @endforelse
+                    </div>
+                </div>
+            </div>
+            {{--     <div class="row">
+                     <div class="col-12">
+                         <div class="section-bottom-btn">
+                             <a href="{{route('successStudent')}}" class="theme-btn secondary">see more<i
+                                     class="fi-rr-arrow-right"></i></a>
+                         </div>
+                     </div>
+                 </div>--}}
+        </div>
     </section>
-    <!-- End Hero Area -->
+    <!-- End Students Area -->
+    {{--<!-- End Hero Area -->
         <section class="container d-md-none py-2" >
             <div class="d-flex justify-content-between">
                 <a href="{{route('all_course')}}" class="theme-btn">{{__t('Courses')}}</a>
                 <a href="{{route('result')}}" class="theme-btn">{{__t('Result')}}</a>
             </div>
-        </section>
+        </section>--}}
 
-    <!-- Page Main Area -->
-    <section class="home-page-main-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-12">
-                    <div class="home-page-main-left">
-                        <!-- About Us Area -->
-                        <div class="about-us-area section-padding">
-                            <div class="about-us-img">
-                                <img
-                                    src="{{asset('frontend/svg/img/about.jpg')}}"
-                                    alt="#"/>
-                            </div>
-                            <div class="about-content" x-data="{about:false}">
-                                <h3 class="about-cont-title">{{__t('About Us')}}</h3>
-                                <span class="title-seperetor"></span>
-                                <p>
-                                 @if(App::getLocale()==='bn')
-                                    <div x-show="about==false">
-                                        <p   >{!! \Illuminate\Support\Str::limit(\App\Models\ConfigDictionary::get('bn_main_about_us','Coming Soon'), 500 , '...') !!}</p>
-                                    </div>
-
-                                    <div x-show="about==true">
-                                        {!!    \App\Models\ConfigDictionary::get('bn_main_about_us','Coming Soon') !!}
-                                    </div>
-                                @elseif(App::getLocale()==='ar')
-                                    <div x-show="about==false">
-                                        <p   >{!! \Illuminate\Support\Str::limit(\App\Models\ConfigDictionary::get('ar_main_about_us','Coming Soon'), 500 , '...') !!}</p>
-                                    </div>
-
-                                    <div x-show="about==true">
-                                        {!!    \App\Models\ConfigDictionary::get('ar_main_about_us','Coming Soon') !!}
-                                    </div>
-                                @else
-                                    <div x-show="about==false">
-                                        <p   >{!! \Illuminate\Support\Str::limit(\App\Models\ConfigDictionary::get('main_about_us','Coming Soon'), 500 , '...') !!}</p>
-                                    </div>
-
-                                    <div x-show="about==true">
-                                        {!!    \App\Models\ConfigDictionary::get('main_about_us','Coming Soon') !!}
-                                    </div>
-                                 @endif
-
-                                <div class="corner-message-btn">
-                                    <button x-on:click="about =! about" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-12">
-                    <div class="home-page-main-right">
-                        <!-- Single Sidebar Widget -->
-                        <div class="home-sidebar-widget notice-board">
-                            <h4 class="home-sidebar-widget-title">
-                                <img src="{{asset('frontend/svg/notice1.svg')}}" alt="#"/>{{__t('Notice Board')}}
-                            </h4>
-                            @forelse(\App\Models\Notice::take(8)->get()  as $notice)
-                                <div class="sidebar-widget-list">
-                                    <div class="sidebar-widget-list-content">
-                                        <img src="{{asset('frontend/svg/notice.svg')}}" alt="#"/>
-                                        <p>
-                                            {{\Illuminate\Support\Str::limit(translateField($notice,'details'),30,$end='...')}}</p>
-                                    </div>
-                                    <div class="sidebar-widget-list-btn">
-                                        <a href="{{route('noticeDetails',$notice->id)}}" target="_blank" class="theme-btn secondary">{{__t('details')}}</a>
-                                    </div>
-                                </div>
-                            @empty
-                            @endforelse
-
-
-                            <div class="home-sidebar-widget-btn">
-                                <a href="{{route('frontendNoticeList')}}" class="theme-btn">{{__t('All Notice')}}<i class="fi-rr-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-
-
-            <section class="students-area section-padding">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="section-head">
-                                <h3 class="section-head-title">
-                                    {{__t('Approved')}} <span class="title-line style-2"></span>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="students-slider">
-                                @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Sponsor)->take(30)->get() as $sponsor)
-                                    <div class=" w-100 h-25 card ">
-                                        <img style="height: 170px" class="w-full " src="{{$sponsor->photo??''}}" alt="">
-                                        <div class="p-1 h6 text-center">
-                                            {{$sponsor->title??''}}
-                                        </div>
-                                    </div>
-                                @empty
-                                    <div>{{__t('Not Found')}}</div>
-                                @endforelse
-                            </div>
-                        </div>
-                    </div>
-                    {{--     <div class="row">
-                             <div class="col-12">
-                                 <div class="section-bottom-btn">
-                                     <a href="{{route('successStudent')}}" class="theme-btn secondary">see more<i
-                                             class="fi-rr-arrow-right"></i></a>
-                                 </div>
-                             </div>
-                         </div>--}}
-                </div>
-            </section>
-            <!-- End Students Area -->
-
-
-            <div class="corner-message-area">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-head">
-                            <h3 class="section-head-title">
-                                {{__t('Our Team')}}<span class="title-line style-4"></span>
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-
-                     <div class=" ">
-                          <div>
-                              <div class="row   ">
-                                  <div class="col-12">
-                                      <div class="corner-message-slider">
-                                          @forelse($teams as $team)
-                                              <div class="single-corner-message">
-                                                  <div class="corner-message-top">
-                                                      <div class="corner-message-img">
-                                                          <img
-                                                              src="{{$team->image??''}}"
-                                                              alt="#"/>
-
-                                                      </div>
-                                                      <div class="corner-message-info">
-                                                          <img
-                                                              src="{{asset('frontend/svg/img/team.png')}}"
-                                                              alt="#"/>
-                                                          <h4 class="corner-message-info-title">
-                                                              {{ translateField($team,'designation')}}
-                                                          </h4>
-                                                          <span class="c-message-title-seperetor"></span>
-                                                          <p class="corner-message-info-name">
-                                                              {{ translateField($team,'name')}}
-                                                          </p>
-                                                      </div>
-                                                  </div>
-                                                  <div   x-data="{description:false}" >
-                                                      <div x-show="description==false">
-                                                          <p   >
-                                                              {!! \Illuminate\Support\Str::limit(translateField($team,'description'), 500 , '...') !!}
-
-                                                          </p>
-                                                      </div>
-                                                      <div x-show="description==true">
-                                                          <p   >
-                                                              {!! translateField($team,'description') !!}
-
-                                                          </p>
-                                                      </div>
-                                                      <div class="corner-message-btn">
-                                                          <button x-on:click="description =! description" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></button>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          @empty
-                                              <div class="single-corner-message">
-                                                  <div class="corner-message-top">
-                                                      <div class="corner-message-img">
-                                                          <img
-                                                              src="{{asset('frontend/svg/img/team2.jpg')}}"
-                                                              alt="#"/>
-
-                                                      </div>
-                                                      <div class="corner-message-info">
-                                                          <img
-                                                              src="{{asset('frontend/svg/img/team.png')}}"
-                                                              alt="#"/>
-                                                          <h4 class="corner-message-info-title">
-                                                              সভাপতির বাণী
-                                                          </h4>
-                                                          <span class="c-message-title-seperetor"></span>
-                                                          <p class="corner-message-info-name">
-                                                              মোঃ জাফর উল্লাহ্
-                                                          </p>
-                                                      </div>
-                                                  </div>
-                                                  <div class="corner-message-bottom">
-                                                      <p>আস্সালামু আলাইকুম সম্মানিত অভিভাবক, শিক্ষক-শিক্ষিকা এবং শিক্ষার্থীবৃন্দ, আজকের এই
-                                                          দিনে আপনাদের সকলকে আমার আন্তরিক শুভেচ্ছা ও অভিনন্দন। শিক্ষা একটি জাতির মেরুদণ্ড।
-                                                          একটি শিক্ষিত জাতিই পারে একটি উন্নত ও সমৃদ্ধ
-                                                          সমাজ গড়ে তুলতে। এই বিশ্বাসের আলোকে আমরা আমাদের স্কুলটিকে একটি আদর্শ শিক্ষা
-                                                          প্রতিষ্ঠান হিসেবে গড়ে তুলতে কাজ করে যাচ্ছি। আমাদের স্কুলটিতে শিক্ষার্থীদের জন্য
-                                                          মানসম্মত শিক্ষা নিশ্চিত করার লক্ষ্যে আমরা
-                                                          বিভিন্ন পদক্ষেপ গ্রহণ করেছি। আমাদের শিক্ষক-শিক্ষিকাবৃন্দ অত্যন্ত দক্ষ ও অভিজ্ঞ।
-                                                          তারা শিক্ষার্থীদের প্রতিটি প্রশ্নের উত্তর দ...
-                                                      <div class="corner-message-btn">
-                                                          <a href="" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              <div class="single-corner-message">
-                                                  <div class="corner-message-top">
-                                                      <div class="corner-message-img">
-                                                          <img
-                                                              src="{{asset('frontend/svg/img/team2.jpg')}}"
-                                                              alt="#"/>
-
-                                                      </div>
-                                                      <div class="corner-message-info">
-                                                          <img
-                                                              src="{{asset('frontend/svg/img/team.png')}}"
-                                                              alt="#"/>
-                                                          <h4 class="corner-message-info-title">
-                                                              অধ্যক্ষের বাণী
-                                                          </h4>
-                                                          <span class="c-message-title-seperetor"></span>
-                                                          <p class="corner-message-info-name">
-                                                              মোঃ মোস্তফা কামাল ভূঁইয়া
-                                                          </p>
-                                                      </div>
-                                                  </div>
-                                                  <div class="corner-message-bottom">
-                                                      <p>প্রিয় শিক্ষার্থীবৃন্দ, আজ আমি আপনাদের সামনে দাঁড়িয়েছি একজন শিক্ষক হিসেবে, একজন
-                                                          অভিভাবক হিসেবে, এবং একজন বন্ধু হিসেবে। আমি আপনাদেরকে বলতে চাই যে, আপনারা সকলেই
-                                                          সক্ষম। আপনারা সকলেই আপনার সম্পূর্ণ সম্ভাবনায়
-                                                          পৌঁছাতে পারেন। আপনাদেরকে শুধুমাত্র কঠোর পরিশ্রম করতে হবে, সৎ হতে হবে, এবং
-                                                          অন্যদের প্রতি শ্রদ্ধাশীল হতে হবে। আপনাদেরকে নিজের উপর বিশ্বাস রাখতে হবে এবং কখনই
-                                                          থেমে থাকতে হবে না।<br/>
-                                                          <br/> আমি আপনাদের জন্য শুভকামনা জানাই। আমি আশা করি আপনারা সকলেই একজন ভালো মানুষ
-                                                          হিসেবে গড়ে উঠবেন এবং আপনারা আপনার লক্ষ্য অর্জনে সফল হবেন। ...
-                                                      <div class="corner-message-btn">
-                                                          <a href="" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></a>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              <div class="single-corner-message">
-                                                  <div class="corner-message-top">
-                                                      <div class="corner-message-img">
-                                                          <img
-                                                              src="{{asset('frontend/svg/img/team2.jpg')}}"
-                                                              alt="#"/>
-
-                                                      </div>
-                                                      <div class="corner-message-info">
-                                                          <img
-                                                              src="{{asset('frontend/svg/img/team.png')}}"
-                                                              alt="#"/>
-                                                          <h4 class="corner-message-info-title">
-                                                              উপাধ্যক্ষের বাণী
-                                                          </h4>
-                                                          <span class="c-message-title-seperetor"></span>
-                                                          <p class="corner-message-info-name">
-                                                              মিসেস শিউলী আক্তার
-                                                          </p>
-                                                      </div>
-                                                  </div>
-                                                  <div class="corner-message-bottom">
-                                                      <p>প্রিয় শিক্ষার্থীবৃন্দ, আজ আমি আপনাদের সামনে দাঁড়িয়েছি একজন শিক্ষক হিসেবে, একজন
-                                                          অভিভাবক হিসেবে, এবং একজন বন্ধু হিসেবে। আমি আপনাদেরকে বলতে চাই যে, আপনারা সকলেই
-                                                          সক্ষম। আপনারা সকলেই আপনার সম্পূর্ণ সম্ভাবনায়
-                                                          পৌঁছাতে পারেন। আপনাদেরকে শুধুমাত্র কঠোর পরিশ্রম করতে হবে, সৎ হতে হবে, এবং
-                                                          অন্যদের প্রতি শ্রদ্ধাশীল হতে হবে। আপনাদেরকে নিজের উপর বিশ্বাস রাখতে হবে এবং কখনই
-                                                          থেমে থাকতে হবে না।<br/>
-                                                          <br/> আমি আপনাদের জন্য শুভকামনা জানাই। আমি আশা করি আপনারা সকলেই একজন ভালো মানুষ
-                                                          হিসেবে গড়ে উঠবেন এবং আপনারা আপনার লক্ষ্য অর্জনে সফল হবেন। ...
-                                                      <div class="corner-message-btn">
-                                                          <a href="" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></a>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          @endforelse
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                     </div>
-
-            </div>
-            <!-- Teachers Area -->
-        </div>
-    </section>
-    <!-- End Page Main Area -->
-
-
-    <!-- Gallery Area -->
+<!-- Gallery Area -->
     <section class="gallery-area section-padding" id="gallary">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-head">
                         <h3 class="section-head-title">
-                           {{__t('Photo And Video Gallery')}} <span class="title-line style-3"></span>
+                            {{__t('Photo And Video Gallery')}} <span class="title-line style-3"></span>
                         </h3>
                     </div>
                 </div>
@@ -394,7 +75,7 @@
                 <div class="col-12">
                     <div class="gallery-slider">
 
-                         @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Gallery)->get() as $gallery )
+                        @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Gallery)->get() as $gallery )
                             <div class="single-gallery">
                                 <div class="gallery-img">
 
@@ -405,104 +86,218 @@
                                 </div>
                                 <div class="gallery-content">
                                     <h4 class="gallery-content-title">
-                                         {{$gallery->title??''}}
+                                        {{$gallery->title??''}}
                                     </h4>
                                 </div>
                             </div>
                         @empty
-                             <div class="single-gallery">
-                                 <div class="gallery-img">
+                            <div class="single-gallery">
+                                <div class="gallery-img">
 
-                                     <img
-                                         src="{{asset('frontend/svg/img/gallery.png')}}"
-                                         alt="Gallery Image"/>
+                                    <img
+                                        src="{{asset('frontend/svg/img/gallery.png')}}"
+                                        alt="Gallery Image"/>
 
-                                     <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
-                                 </div>
-                                 <div class="gallery-content">
-                                     <h4 class="gallery-content-title">
-                                         বিদ্যালয়ের সেরা ছাত্র
-                                     </h4>
-                                 </div>
-                             </div>
-                             <div class="single-gallery">
-                                 <div class="gallery-img">
+                                    <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                </div>
+                                <div class="gallery-content">
+                                    <h4 class="gallery-content-title">
+                                        বিদ্যালয়ের সেরা ছাত্র
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="single-gallery">
+                                <div class="gallery-img">
 
-                                     <img
-                                         src="{{asset('frontend/svg/img/gallery.png')}}"
-                                         alt="Gallery Image"/>
+                                    <img
+                                        src="{{asset('frontend/svg/img/gallery.png')}}"
+                                        alt="Gallery Image"/>
 
-                                     <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
-                                 </div>
-                                 <div class="gallery-content">
-                                     <h4 class="gallery-content-title">
-                                         বিদ্যালয়ের সেরা ছাত্র
-                                     </h4>
-                                 </div>
-                             </div>
-                             <div class="single-gallery">
-                                 <div class="gallery-img">
+                                    <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                </div>
+                                <div class="gallery-content">
+                                    <h4 class="gallery-content-title">
+                                        বিদ্যালয়ের সেরা ছাত্র
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="single-gallery">
+                                <div class="gallery-img">
 
-                                     <img
-                                         src="{{asset('frontend/svg/img/gallery.png')}}"
-                                         alt="Gallery Image"/>
+                                    <img
+                                        src="{{asset('frontend/svg/img/gallery.png')}}"
+                                        alt="Gallery Image"/>
 
-                                     <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
-                                 </div>
-                                 <div class="gallery-content">
-                                     <h4 class="gallery-content-title">
-                                         বিদ্যালয়ের সেরা ছাত্র
-                                     </h4>
-                                 </div>
-                             </div>
-                             <div class="single-gallery">
-                                 <div class="gallery-img">
+                                    <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                </div>
+                                <div class="gallery-content">
+                                    <h4 class="gallery-content-title">
+                                        বিদ্যালয়ের সেরা ছাত্র
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="single-gallery">
+                                <div class="gallery-img">
 
-                                     <img
-                                         src="{{asset('frontend/svg/img/gallery.png')}}"
-                                         alt="Gallery Image"/>
+                                    <img
+                                        src="{{asset('frontend/svg/img/gallery.png')}}"
+                                        alt="Gallery Image"/>
 
-                                     <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
-                                 </div>
-                                 <div class="gallery-content">
-                                     <h4 class="gallery-content-title">
-                                         বিদ্যালয়ের সেরা ছাত্র
-                                     </h4>
-                                 </div>
-                             </div>
-                             <div class="single-gallery">
-                                 <div class="gallery-img">
+                                    <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                </div>
+                                <div class="gallery-content">
+                                    <h4 class="gallery-content-title">
+                                        বিদ্যালয়ের সেরা ছাত্র
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="single-gallery">
+                                <div class="gallery-img">
 
-                                     <img
-                                         src="{{asset('frontend/svg/img/gallery.png')}}"
-                                         alt="Gallery Image"/>
+                                    <img
+                                        src="{{asset('frontend/svg/img/gallery.png')}}"
+                                        alt="Gallery Image"/>
 
-                                     <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
-                                 </div>
-                                 <div class="gallery-content">
-                                     <h4 class="gallery-content-title">
-                                         বিদ্যালয়ের সেরা ছাত্র
-                                     </h4>
-                                 </div>
-                             </div>
-                         @endforelse
+                                    <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
+                                </div>
+                                <div class="gallery-content">
+                                    <h4 class="gallery-content-title">
+                                        বিদ্যালয়ের সেরা ছাত্র
+                                    </h4>
+                                </div>
+                            </div>
+                        @endforelse
 
 
 
                     </div>
                 </div>
             </div>
-{{--            <div class="row">--}}
-{{--                <div class="col-12">--}}
-{{--                    <div class="section-bottom-btn">--}}
-{{--                        <a href="" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            {{--            <div class="row">--}}
+            {{--                <div class="col-12">--}}
+            {{--                    <div class="section-bottom-btn">--}}
+            {{--                        <a href="" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></a>--}}
+            {{--                    </div>--}}
+            {{--                </div>--}}
+            {{--            </div>--}}
         </div>
     </section>
     <!-- End Gallery Area -->
 
+    <!-- Page Main Area -->
+    <section class="home-page-main-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-12">
+                    <div class="" x-data="{about:false}">
+                        <h3 class="about-cont-title">{{__t('About Us')}}</h3>
+                        <span class="title-seperetor"></span>
+                        <p>
+                        @if(App::getLocale()==='bn')
+                            <div x-show="about==false">
+                                <p   >{!! \Illuminate\Support\Str::limit(\App\Models\ConfigDictionary::get('bn_main_about_us','Coming Soon'), 500 , '...') !!}</p>
+                            </div>
+
+                            <div x-show="about==true">
+                                {!!    \App\Models\ConfigDictionary::get('bn_main_about_us','Coming Soon') !!}
+                            </div>
+                        @elseif(App::getLocale()==='ar')
+                            <div x-show="about==false">
+                                <p   >{!! \Illuminate\Support\Str::limit(\App\Models\ConfigDictionary::get('ar_main_about_us','Coming Soon'), 500 , '...') !!}</p>
+                            </div>
+
+                            <div x-show="about==true">
+                                {!!    \App\Models\ConfigDictionary::get('ar_main_about_us','Coming Soon') !!}
+                            </div>
+                        @else
+                            <div x-show="about==false">
+                                <p   >{!! \Illuminate\Support\Str::limit(\App\Models\ConfigDictionary::get('main_about_us','Coming Soon'), 500 , '...') !!}</p>
+                            </div>
+
+                            <div x-show="about==true">
+                                {!!    \App\Models\ConfigDictionary::get('main_about_us','Coming Soon') !!}
+                            </div>
+                        @endif
+
+                        <div class="corner-message-btn">
+                            <button x-on:click="about =! about" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <a href="{{route('center-request.create')}}" class="theme-btn secondary mt-2">Branch Registration</a>
+                </div>
+
+                <div class="col-lg-4 col-12">
+                    <div class="home-page-main-right">
+                        <!-- Single Sidebar Widget -->
+                        <div class="home-sidebar-widget notice-board">
+                            <img src="{{asset('images/student/logo.png')}}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- Teachers Area -->
+        </div>
+    </section>
+    <!-- End Page Main Area -->
+    <!-- Total School Area -->
+    <section class="total-students-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-head">
+                        <h3 class="section-head-title">
+                            {{__t('Counter')}}<span class="title-line"></span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="total-students-group" id="section_counter">
+
+                        <!-- Single Total Student -->
+                        <div class="total-students-card">
+                            <h3  class="total-students-number counter">216</h3>
+                            <p class="total-students-text">{{__t('Total Institute')}}</p>
+
+                        </div>
+                        <div class="total-students-card">
+                            <h3  class="total-students-number counter">532</h3>
+                            <p class="total-students-text">{{__t('Total Course')}}</p>
+
+                        </div>
+                        <div class="total-students-card">
+                            <h3  class="total-students-number counter">176</h3>
+                            <p class="total-students-text">{{__t('Total Exam')}}</p>
+
+                        </div>
+                        <div class="total-students-card">
+                            <h3  class="total-students-number counter">54,512</h3>
+                            <p class="total-students-text">{{__t('Total Students')}}</p>
+
+                        </div>
+                        <div class="total-students-card">
+                            <h3  class="total-students-number counter">177</h3>
+                            <p class="total-students-text">{{__t('Total Session')}}</p>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End School Committe Area -->
+
+
+
+{{--
     <!-- School Committe Area -->
     <section class="school-committe-area section-padding">
         <div class="container">
@@ -536,57 +331,9 @@
         </div>
     </section>
     <!-- End School Committe Area -->
-
-    <!-- Total School Area -->
-    <section class="total-students-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-head">
-                        <h3 class="section-head-title">
-                            {{__t('Counter')}}<span class="title-line"></span>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="total-students-group" id="section_counter">
-
-                        <!-- Single Total Student -->
-                        <div class="total-students-card">
-                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">216</h3>
-                            <p class="total-students-text">{{__t('Total Institute')}}</p>
-
-                        </div>
-                        <div class="total-students-card">
-                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">532</h3>
-                            <p class="total-students-text">{{__t('Total Course')}}</p>
-
-                        </div>
-                        <div class="total-students-card">
-                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">176</h3>
-                            <p class="total-students-text">{{__t('Total Exam')}}</p>
-
-                        </div>
-                        <div class="total-students-card">
-                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">54,512</h3>
-                            <p class="total-students-text">{{__t('Total Students')}}</p>
-
-                        </div>
-                        <div class="total-students-card">
-                            <h3 style="color: #6aa84f!important;" class="total-students-number counter">177</h3>
-                            <p class="total-students-text">{{__t('Total Session')}}</p>
-
-                        </div>
+--}}
 
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End School Committe Area -->
 
     <!-- Students Area -->
     <section class="students-area section-padding">
@@ -621,7 +368,179 @@
             </div>
         </div>
     </section>
+   <div class="container">
+       <div class="corner-message-area">
+           <div class="row">
+               <div class="col-12">
+                   <div class="section-head">
+                       <h3 class="section-head-title">
+                           {{__t('Our Team')}}<span class="title-line style-4"></span>
+                       </h3>
+                   </div>
+               </div>
+           </div>
 
+
+           <div class=" ">
+               <div>
+                   <div class="row   ">
+                       <div class="col-12">
+                           <div class="corner-message-slider">
+                               @forelse($teams as $team)
+                                   <div class="single-corner-message">
+                                       <div class="corner-message-top">
+                                           <div class="corner-message-img">
+                                               <img
+                                                   src="{{$team->image??''}}"
+                                                   alt="#"/>
+
+                                           </div>
+                                           <div class="corner-message-info">
+                                               <img
+                                                   src="{{asset('frontend/svg/img/team.png')}}"
+                                                   alt="#"/>
+                                               <h4 class="corner-message-info-title">
+                                                   {{ translateField($team,'designation')}}
+                                               </h4>
+                                               <span class="c-message-title-seperetor"></span>
+                                               <p class="corner-message-info-name">
+                                                   {{ translateField($team,'name')}}
+                                               </p>
+                                           </div>
+                                       </div>
+                                       <div   x-data="{description:false}" >
+                                           <div x-show="description==false">
+                                               <p   >
+                                                   {!! \Illuminate\Support\Str::limit(translateField($team,'description'), 500 , '...') !!}
+
+                                               </p>
+                                           </div>
+                                           <div x-show="description==true">
+                                               <p   >
+                                                   {!! translateField($team,'description') !!}
+
+                                               </p>
+                                           </div>
+                                           <div class="corner-message-btn">
+                                               <button x-on:click="description =! description" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               @empty
+                                   <div class="single-corner-message">
+                                       <div class="corner-message-top">
+                                           <div class="corner-message-img">
+                                               <img
+                                                   src="{{asset('frontend/svg/img/team2.jpg')}}"
+                                                   alt="#"/>
+
+                                           </div>
+                                           <div class="corner-message-info">
+                                               <img
+                                                   src="{{asset('frontend/svg/img/team.png')}}"
+                                                   alt="#"/>
+                                               <h4 class="corner-message-info-title">
+                                                   সভাপতির বাণী
+                                               </h4>
+                                               <span class="c-message-title-seperetor"></span>
+                                               <p class="corner-message-info-name">
+                                                   মোঃ জাফর উল্লাহ্
+                                               </p>
+                                           </div>
+                                       </div>
+                                       <div class="corner-message-bottom">
+                                           <p>আস্সালামু আলাইকুম সম্মানিত অভিভাবক, শিক্ষক-শিক্ষিকা এবং শিক্ষার্থীবৃন্দ, আজকের এই
+                                               দিনে আপনাদের সকলকে আমার আন্তরিক শুভেচ্ছা ও অভিনন্দন। শিক্ষা একটি জাতির মেরুদণ্ড।
+                                               একটি শিক্ষিত জাতিই পারে একটি উন্নত ও সমৃদ্ধ
+                                               সমাজ গড়ে তুলতে। এই বিশ্বাসের আলোকে আমরা আমাদের স্কুলটিকে একটি আদর্শ শিক্ষা
+                                               প্রতিষ্ঠান হিসেবে গড়ে তুলতে কাজ করে যাচ্ছি। আমাদের স্কুলটিতে শিক্ষার্থীদের জন্য
+                                               মানসম্মত শিক্ষা নিশ্চিত করার লক্ষ্যে আমরা
+                                               বিভিন্ন পদক্ষেপ গ্রহণ করেছি। আমাদের শিক্ষক-শিক্ষিকাবৃন্দ অত্যন্ত দক্ষ ও অভিজ্ঞ।
+                                               তারা শিক্ষার্থীদের প্রতিটি প্রশ্নের উত্তর দ...
+                                           <div class="corner-message-btn">
+                                               <a href="" class="theme-btn secondary">আরো পড়ুন<i class="fi-rr-arrow-right"></i></a>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="single-corner-message">
+                                       <div class="corner-message-top">
+                                           <div class="corner-message-img">
+                                               <img
+                                                   src="{{asset('frontend/svg/img/team2.jpg')}}"
+                                                   alt="#"/>
+
+                                           </div>
+                                           <div class="corner-message-info">
+                                               <img
+                                                   src="{{asset('frontend/svg/img/team.png')}}"
+                                                   alt="#"/>
+                                               <h4 class="corner-message-info-title">
+                                                   অধ্যক্ষের বাণী
+                                               </h4>
+                                               <span class="c-message-title-seperetor"></span>
+                                               <p class="corner-message-info-name">
+                                                   মোঃ মোস্তফা কামাল ভূঁইয়া
+                                               </p>
+                                           </div>
+                                       </div>
+                                       <div class="corner-message-bottom">
+                                           <p>প্রিয় শিক্ষার্থীবৃন্দ, আজ আমি আপনাদের সামনে দাঁড়িয়েছি একজন শিক্ষক হিসেবে, একজন
+                                               অভিভাবক হিসেবে, এবং একজন বন্ধু হিসেবে। আমি আপনাদেরকে বলতে চাই যে, আপনারা সকলেই
+                                               সক্ষম। আপনারা সকলেই আপনার সম্পূর্ণ সম্ভাবনায়
+                                               পৌঁছাতে পারেন। আপনাদেরকে শুধুমাত্র কঠোর পরিশ্রম করতে হবে, সৎ হতে হবে, এবং
+                                               অন্যদের প্রতি শ্রদ্ধাশীল হতে হবে। আপনাদেরকে নিজের উপর বিশ্বাস রাখতে হবে এবং কখনই
+                                               থেমে থাকতে হবে না।<br/>
+                                               <br/> আমি আপনাদের জন্য শুভকামনা জানাই। আমি আশা করি আপনারা সকলেই একজন ভালো মানুষ
+                                               হিসেবে গড়ে উঠবেন এবং আপনারা আপনার লক্ষ্য অর্জনে সফল হবেন। ...
+                                           <div class="corner-message-btn">
+                                               <a href="" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></a>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="single-corner-message">
+                                       <div class="corner-message-top">
+                                           <div class="corner-message-img">
+                                               <img
+                                                   src="{{asset('frontend/svg/img/team2.jpg')}}"
+                                                   alt="#"/>
+
+                                           </div>
+                                           <div class="corner-message-info">
+                                               <img
+                                                   src="{{asset('frontend/svg/img/team.png')}}"
+                                                   alt="#"/>
+                                               <h4 class="corner-message-info-title">
+                                                   উপাধ্যক্ষের বাণী
+                                               </h4>
+                                               <span class="c-message-title-seperetor"></span>
+                                               <p class="corner-message-info-name">
+                                                   মিসেস শিউলী আক্তার
+                                               </p>
+                                           </div>
+                                       </div>
+                                       <div class="corner-message-bottom">
+                                           <p>প্রিয় শিক্ষার্থীবৃন্দ, আজ আমি আপনাদের সামনে দাঁড়িয়েছি একজন শিক্ষক হিসেবে, একজন
+                                               অভিভাবক হিসেবে, এবং একজন বন্ধু হিসেবে। আমি আপনাদেরকে বলতে চাই যে, আপনারা সকলেই
+                                               সক্ষম। আপনারা সকলেই আপনার সম্পূর্ণ সম্ভাবনায়
+                                               পৌঁছাতে পারেন। আপনাদেরকে শুধুমাত্র কঠোর পরিশ্রম করতে হবে, সৎ হতে হবে, এবং
+                                               অন্যদের প্রতি শ্রদ্ধাশীল হতে হবে। আপনাদেরকে নিজের উপর বিশ্বাস রাখতে হবে এবং কখনই
+                                               থেমে থাকতে হবে না।<br/>
+                                               <br/> আমি আপনাদের জন্য শুভকামনা জানাই। আমি আশা করি আপনারা সকলেই একজন ভালো মানুষ
+                                               হিসেবে গড়ে উঠবেন এবং আপনারা আপনার লক্ষ্য অর্জনে সফল হবেন। ...
+                                           <div class="corner-message-btn">
+                                               <a href="" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></a>
+                                           </div>
+                                       </div>
+                                   </div>
+                               @endforelse
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+       </div>
+   </div>
 
 
     <script>

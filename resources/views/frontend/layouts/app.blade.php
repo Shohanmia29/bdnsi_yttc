@@ -53,8 +53,8 @@
 
     <style>
         :root {
-            --primary-color: #6aa84f;
-            --secondary-color: #3ccf4e;
+            --primary-color: #7024A8;
+            --secondary-color: #7e3baf;
             --tertiary-color: #f45050;
             --white-color: #ffffff;
             --white-color-2: #f8f8f8;
@@ -208,20 +208,17 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-12 col-xl-6 col-12">
-                <div class="topbar-left">
-                    <div class="topbar-update-notice">
-                        <span class="topbar-update-notice-title">Notice</span>
-                            <marquee behavior="" direction="left">{{\App\Models\ConfigDictionary::get('notice','coming soon')}}</marquee>
-                    </div>
+                <div class="topbar-left text-white font-weight-bold">
+                    National Health & Medical Technology Institute
                 </div>
             </div>
             <div class="col-lg-6 col-12">
                 <div class="topbar-right">
                     <div class="topbar-school-info">
-                        <div class="topbar-right">
-                            <div class="topbar-school-info d-flex align-items-center gap-1">
+                        <div class="topbar-right  ">
+                            <div class="topbar-school-info text-white d-flex align-items-center gap-1">
                                 <div class="dropdown">
-                                    <button style="border:  1px solid #6aa84f!important; border-radius: 17px 17px; gap:2px; color: #6aa84f" class="btn  d-flex align-items-center  btn-light dropdown-toggle" type="button"   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button style="border:  1px solid #6aa84f!important; border-radius: 17px 17px; gap:2px;" class="btn  d-flex align-items-center  btn-light dropdown-toggle" type="button"   data-bs-toggle="dropdown" aria-expanded="false">
                                         <img style="width: 17px ; height: 17px" src="{{asset('images/language.png')}}" alt="">  {{ strtoupper(session('locale','en')) == 'EN' ? 'English' : (strtoupper(session('locale')) == 'BN' ? 'বাংলা' : (strtoupper(session('locale')) == 'AR' ? 'اللغة' : ''))}}
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
@@ -231,8 +228,8 @@
                                     </ul>
                                 </div>
 
-                                <ul class="topbar-school-info-list">
-                                    <li>RJSC NO: <span>C-178431</span></li>
+                                <ul class="topbar-school-info-list ">
+                                    <li class="text-white">RJSC NO: <span>C-178431</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -243,7 +240,71 @@
     </div>
 </div>
 <!-- End Topbar Area -->
+<section class="hero-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="hero-slider">
+                    @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Slider)->get() as $slider)
+                        <div class="hero-single-slider background-image"
+                             style="background-image: url({{$slider->photo}});">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 col-md-8 col-12 align-self-end">
+                                    <div class="hero-content">
+                                        <h3 class="hero-content-title">
+                                            {{$slider->title??''}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                    @empty
+                    <!-- Hero Single Slider -->
+                        <div class="hero-single-slider background-image"
+                             style="background-image: url({{asset('frontend/svg/img/slider.png')}});">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 col-md-8 col-12 align-self-end">
+                                    <div class="hero-content">
+                                        <h3 class="hero-content-title">
+                                            স্বাগতম এক্সওয়াইজেধ স্কুল এবং কলেজ এর পক্ষ থেকে!
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hero-single-slider background-image"
+                             style="background-image: url({{asset('frontend/svg/img/slider2.png')}});">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 col-md-8 col-12 align-self-end">
+                                    <div class="hero-content">
+                                        <h3 class="hero-content-title">
+                                            বিশ্বমানের শিক্ষাদানের একটি উপযুক্ত স্কুল প্রতিষ্ঠান।
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-single-slider background-image"
+                             style="background-image: url({{asset('frontend/svg/img/slider1.png')}});">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 col-md-8 col-12 align-self-end">
+                                    <div class="hero-content">
+                                        <h3 class="hero-content-title">
+                                            মনোরোম পরিবেশে আমরা দিচ্ছি সেরা মানের শিক্ষা ব্যবস্থা।
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforelse
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Header Area -->
 <header id="active-sticky" class="header-area">
     <div class="container">
