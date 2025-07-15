@@ -2,9 +2,9 @@
 
     <div class="bg-light">
         <!-- Header Section -->
-        <div class="py-5 text-center   text-white" style="background: #6aa84f">
-            <h1>{{__t('Contact Us')}}</h1>
-            <p>{{__t("We're here to help you. Reach out to us anytime!")}}</p>
+        <div class="py-5 text-center   text-white" style="background: #7024A8">
+            <h1 class="text-white">{{__t('Contact Us')}}</h1>
+            <p class="text-white">{{__t("We're here to help you. Reach out to us anytime!")}}</p>
         </div>
 
         <div class="container py-5">
@@ -47,7 +47,7 @@
                                     <label for="message" class="form-label">{{__t('Message')}}</label>
                                     <textarea class="form-control" name="message" id="message" rows="4" placeholder="Type your message here"></textarea>
                                 </div>
-                                <button type="submit" class="btn  w-100 text-white" style="background: #6aa84f">{{__t('Send Message')}}</button>
+                                <button type="submit" class="btn  w-100 text-white" style="background: #7024A8">{{__t('Send Message')}}</button>
                             </form>
                         </div>
                     </div>

@@ -72,13 +72,13 @@
         }
 
         .page-item .page-link {
-            color: #6aa84f !important;
+            color: #7024A8 !important;
         }
 
         .active>.page-link,
         .page-link.active {
-            background-color: #6aa84f !important;
-            border-color: #6aa84f !important;
+            background-color: #7024A8 !important;
+            border-color: #7024A8 !important;
             color: white;
         }
 
@@ -475,7 +475,7 @@
                 <div class="col-lg-6 col-12">
                     <div class="footer-copyright">
                         <p class="footer-copyright-text">
-                            © {{date('Y')}} . All right reserved.
+                            © {{date('Y')}} . Approved By Government of the People's Republic of Bangladesh.
                         </p>
 {{--                        <span>Design & Developed by:<a href="#" target="_blank">MMITSFOT Ltd.</a></span>--}}
                     </div>

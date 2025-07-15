@@ -185,12 +185,12 @@
             <div class="w-75">
 
                 <div class="data-item-wrap">
-                    <div class="data-label">Institute Code </div>
+                    <div class="data-label">Center Code </div>
                     <div>:</div>
                     <div class="data-value"> {{$student->center->code??''}}</div>
                 </div>
                 <div class="data-item-wrap">
-                    <div class="data-label">Institute Name </div>
+                    <div class="data-label">Center Name </div>
                     <div>:</div>
                     <div class="data-value"> {{$student->center->name??''}}
                     </div>

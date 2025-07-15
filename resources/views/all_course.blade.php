@@ -1,7 +1,7 @@
 <x-frontend-layouts>
     <style>
         .search-bar {
-            border: 2px solid #6aa84f; /* Green border */
+            border: 2px solid #7024A8; /* Green border */
             border-radius: 50px; /* Rounded edges */
             padding: 5px 15px; /* Padding for better spacing */
             display: flex;
@@ -16,7 +16,7 @@
             margin-left: 10px; /* Space between icon and input */
         }
         .serc button {
-            background-color: #6aa84f; /* Green background */
+            background-color: #7024A8; /* Green background */
             color: #fff; /* White text */
             border: none; /* Remove button border */
             border-radius: 50px; /* Rounded edges */
@@ -24,7 +24,7 @@
             transition: background-color 0.3s ease;
         }
         .serc button:hover {
-            background-color: #6aa84f; /* Darker green on hover */
+            background-color: #7024A8; /* Darker green on hover */
         }
     </style>
 

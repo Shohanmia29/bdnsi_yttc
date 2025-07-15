@@ -215,7 +215,7 @@
                     <div class="data-value"> {{\App\Enums\Gender::fromValue(  $student->gender??'N/A')->key}}</div>
                 </div>
                 <div class="data-item-wrap">
-                    <div class="data-label">Institute Name </div>
+                    <div class="data-label">Center Name </div>
                     <div>:</div>
                     <div class="data-value">
                         {{$student->center->name??'N/A'}}
