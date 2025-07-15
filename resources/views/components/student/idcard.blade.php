@@ -55,12 +55,12 @@
                                     <td class="px-2 py-3">{{$student->name ?? ''}}</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-2 py-3">Father Name</td>
+                                    <td class="px-2 py-3">Father's Name</td>
                                     <td class="px-2 py-3">:</td>
                                     <td class="px-2 py-3">{{$student->fathers_name ?? ''}}</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-2 py-3">Institute</td>
+                                    <td class="px-2 py-3">Center</td>
                                     <td class="px-2 py-3">:</td>
                                     <td class="px-2 py-3">{{$student->center->name ?? ''}}</td>
                                 </tr>
