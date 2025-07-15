@@ -17,7 +17,7 @@ class HomeController extends Controller
         $sliders = Slider::all();
         $courses = Subject::orderBy('name', 'asc')->limit(5)->get();
         $teams = Team::get();
-        $youtube_videos=YoutubeVideo::where('status',1)->take(5)get();
+        $youtube_videos=YoutubeVideo::where('status',1)->take(5)->get();
         return view('welcome', compact('courses', 'sliders', 'teams','youtube_videos'));
     }
 
