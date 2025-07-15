@@ -183,48 +183,48 @@
         </div>
     </section>
     <!-- End Gallery Area -->
-    <section class="gallery-area section-padding" id="course">
+
+    <section class="students-area section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-head">
                         <h3 class="section-head-title">
-                            {{__t('Our Courses')}} <span class="title-line style-3"></span>
+                            {{__t('Our Courses')}} <span class="title-line style-2"></span>
                         </h3>
                     </div>
                 </div>
             </div>
             <div class="row">
-                @forelse(\App\Models\Subject::take(8)->get() as $course)
-                    <div class="col-12 col-md-3 p-2">
-                            <div class="card shadow">
-                                  <div class="card-image">
-                                      <img src="{{$course->photo}}" alt="">
-                                  </div>
-                                <div class="card-body">
-                                       <div class="card-title">
-                                           {{$course->name??''}}
-                                       </div>
+                <div class="col-12">
+                    <div class="students-slider">
+                        @forelse(\App\Models\Subject::take(8)->get() as $course)
+                            <div class="">
+                                <div class="card shadow">
+                                    <div class="card-image">
+                                        <img src="{{$course->photo}}" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">
+                                            {{$course->name??''}}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                    </div>
-                @empty
-                    <div>Not Found</div>
-                @endforelse
-                <div class="d-flex justify-content-center py-2">
-                    <a href="{{route('all_course')}}" class="theme-btn">All Course</a>
-                </div>
+                        @empty
+                            <div>Not Found</div>
+                        @endforelse
 
+                    </div>
+                </div>
             </div>
-            {{--            <div class="row">--}}
-            {{--                <div class="col-12">--}}
-            {{--                    <div class="section-bottom-btn">--}}
-            {{--                        <a href="" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></a>--}}
-            {{--                    </div>--}}
-            {{--                </div>--}}
-            {{--            </div>--}}
+            <div class="d-flex justify-content-center mt-2 py-2">
+                <a href="{{route('all_course')}}" class="theme-btn">All Course</a>
+            </div>
         </div>
     </section>
+
+
     <!-- Page Main Area -->
     <section class="home-page-main-area">
         <div class="container">
@@ -264,14 +264,14 @@
                             <button x-on:click="about =! about" class="theme-btn secondary">{{__t('see more')}}<i class="fi-rr-arrow-right"></i></button>
                         </div>
                     </div>
-                    <a href="{{route('center-request.create')}}" class="theme-btn secondary mt-2">Branch Registration</a>
+{{--                    <a href="{{route('center-request.create')}}" class="theme-btn secondary mt-2">Branch Registration</a>--}}
                 </div>
 
                 <div class="col-lg-4 col-12">
                     <div class="home-page-main-right">
                         <!-- Single Sidebar Widget -->
                         <div class="home-sidebar-widget notice-board">
-                            <img src="{{asset('images/student/logo.png')}}" alt="">
+                            <img src="{{asset('images/about.jpg')}}" alt="">
                         </div>
                     </div>
                 </div>
@@ -302,28 +302,28 @@
                     <div class="total-students-group" id="section_counter">
 
                         <!-- Single Total Student -->
-                        <div class="total-students-card">
+               {{--         <div class="total-students-card">
                             <h3  class="total-students-number counter">216</h3>
                             <p class="total-students-text">{{__t('Total Institute')}}</p>
 
-                        </div>
+                        </div>--}}
                         <div class="total-students-card">
-                            <h3  class="total-students-number counter">532</h3>
+                            <h3  class="total-students-number counter">232</h3>
                             <p class="total-students-text">{{__t('Total Course')}}</p>
 
                         </div>
                         <div class="total-students-card">
-                            <h3  class="total-students-number counter">176</h3>
+                            <h3  class="total-students-number counter">198</h3>
                             <p class="total-students-text">{{__t('Total Exam')}}</p>
 
                         </div>
                         <div class="total-students-card">
-                            <h3  class="total-students-number counter">54,512</h3>
+                            <h3  class="total-students-number counter">32,974</h3>
                             <p class="total-students-text">{{__t('Total Students')}}</p>
 
                         </div>
                         <div class="total-students-card">
-                            <h3  class="total-students-number counter">177</h3>
+                            <h3  class="total-students-number counter">206</h3>
                             <p class="total-students-text">{{__t('Total Session')}}</p>
 
                         </div>
