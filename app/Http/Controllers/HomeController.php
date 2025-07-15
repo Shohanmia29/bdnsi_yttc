@@ -7,6 +7,7 @@ use App\Models\ContactUs;
 use App\Models\Slider;
 use App\Models\Subject;
 use App\Models\Team;
+use App\Models\YoutubeVideo;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,7 +17,8 @@ class HomeController extends Controller
         $sliders = Slider::all();
         $courses = Subject::orderBy('name', 'asc')->limit(5)->get();
         $teams = Team::get();
-        return view('welcome', compact('courses', 'sliders', 'teams'));
+        $youtube_videos=YoutubeVideo::where('status',1)->take(5)get();
+        return view('welcome', compact('courses', 'sliders', 'teams','youtube_videos'));
     }
 
     public function all_course(Request $request)

@@ -66,7 +66,7 @@
                 <div class="col-12">
                     <div class="section-head">
                         <h3 class="section-head-title">
-                            {{__t('Photo And Video Gallery')}} <span class="title-line style-3"></span>
+                            {{__t('Video Gallery')}} <span class="title-line style-3"></span>
                         </h3>
                     </div>
                 </div>
@@ -75,97 +75,19 @@
                 <div class="col-12">
                     <div class="gallery-slider">
 
-                        @forelse(\App\Models\Slider::where('type',\App\Enums\SliderType::Gallery)->get() as $gallery )
+                        @forelse($youtube_videos as $video )
                             <div class="single-gallery">
-                                <div class="gallery-img">
-
-                                    <img
-                                        src="{{$gallery->photo}}"
-                                        alt="Gallery Image"/>
-                                    <a href="{{$gallery->photo}}" data-fancybox="photo" class="image-view-btn"><i class="fa fa-eye"></i></a>
-                                </div>
-                                <div class="gallery-content">
-                                    <h4 class="gallery-content-title">
-                                        {{$gallery->title??''}}
-                                    </h4>
-                                </div>
+                                <iframe width="100%" height="315"
+                                        src="https://www.youtube.com/embed/{{ $video->video_id }}"
+                                        frameborder="0"
+                                        allowfullscreen>
+                                </iframe>
                             </div>
                         @empty
                             <div class="single-gallery">
-                                <div class="gallery-img">
-
-                                    <img
-                                        src="{{asset('frontend/svg/img/gallery.png')}}"
-                                        alt="Gallery Image"/>
-
-                                    <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
-                                </div>
-                                <div class="gallery-content">
-                                    <h4 class="gallery-content-title">
-                                        বিদ্যালয়ের সেরা ছাত্র
-                                    </h4>
-                                </div>
+                                 <div>Not Found</div>
                             </div>
-                            <div class="single-gallery">
-                                <div class="gallery-img">
 
-                                    <img
-                                        src="{{asset('frontend/svg/img/gallery.png')}}"
-                                        alt="Gallery Image"/>
-
-                                    <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
-                                </div>
-                                <div class="gallery-content">
-                                    <h4 class="gallery-content-title">
-                                        বিদ্যালয়ের সেরা ছাত্র
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="single-gallery">
-                                <div class="gallery-img">
-
-                                    <img
-                                        src="{{asset('frontend/svg/img/gallery.png')}}"
-                                        alt="Gallery Image"/>
-
-                                    <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
-                                </div>
-                                <div class="gallery-content">
-                                    <h4 class="gallery-content-title">
-                                        বিদ্যালয়ের সেরা ছাত্র
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="single-gallery">
-                                <div class="gallery-img">
-
-                                    <img
-                                        src="{{asset('frontend/svg/img/gallery.png')}}"
-                                        alt="Gallery Image"/>
-
-                                    <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
-                                </div>
-                                <div class="gallery-content">
-                                    <h4 class="gallery-content-title">
-                                        বিদ্যালয়ের সেরা ছাত্র
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="single-gallery">
-                                <div class="gallery-img">
-
-                                    <img
-                                        src="{{asset('frontend/svg/img/gallery.png')}}"
-                                        alt="Gallery Image"/>
-
-                                    <a data-fancybox="photo" class="image-view-btn"><i class="fi fi-ss-eye"></i></a>
-                                </div>
-                                <div class="gallery-content">
-                                    <h4 class="gallery-content-title">
-                                        বিদ্যালয়ের সেরা ছাত্র
-                                    </h4>
-                                </div>
-                            </div>
                         @endforelse
 
 
