@@ -149,9 +149,9 @@
                         <li class="">
                             <a href="{{route('all_course')}}">{{__t('Courses')}}</a>
                         </li>
-                        <li class="">
+                   {{--     <li class="">
                             <a href="{{route('verifiedInstitute')}}">{{__t('Verified Institute')}} </a>
-                        </li>
+                        </li>--}}
                         <li class="">
                             <a href="{{route('successStudent')}}">{{__t('Success Students')}} </a>
                         </li>
@@ -218,7 +218,7 @@
                         <div class="topbar-right  ">
                             <div class="topbar-school-info text-white d-flex align-items-center gap-1">
                                 <div class="dropdown">
-                                    <button style="border:  1px solid #6aa84f!important; border-radius: 17px 17px; gap:2px;" class="btn  d-flex align-items-center  btn-light dropdown-toggle" type="button"   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button style="border:  1px solid #7024A8!important; border-radius: 17px 17px; gap:2px;" class="btn  d-flex align-items-center  btn-light dropdown-toggle" type="button"   data-bs-toggle="dropdown" aria-expanded="false">
                                         <img style="width: 17px ; height: 17px" src="{{asset('images/language.png')}}" alt="">  {{ strtoupper(session('locale','en')) == 'EN' ? 'English' : (strtoupper(session('locale')) == 'BN' ? 'বাংলা' : (strtoupper(session('locale')) == 'AR' ? 'اللغة' : ''))}}
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
@@ -325,9 +325,9 @@
                                                 <li class="active">
                                                     <a href="{{route('all_course')}}">{{__t('Courses')}}</a>
                                                 </li>
-                                                <li class="">
+                                            {{--    <li class="">
                                                     <a href="{{route('verifiedInstitute')}}">{{__t('Verified Institute')}} </a>
-                                                </li>
+                                                </li>--}}
 
                                                 <li class="">
                                                     <a href="{{route('result')}}">{{__t('Student Result')}}</a>
@@ -358,7 +358,7 @@
                                     <!-- Mobile Menu Button -->
                                     <div class="dropdown d-xl-none ">
 
-                                        <button style="border:  1px solid #6aa84f!important; border-radius: 17px 17px; gap:2px; color: #6aa84f;font-size: 10px" class="btn  d-flex align-items-center  btn-light dropdown-toggle" type="button"   data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button style="border:  1px solid #7024A8!important; border-radius: 17px 17px; gap:2px; color: #7024A8;font-size: 10px" class="btn  d-flex align-items-center  btn-light dropdown-toggle" type="button"   data-bs-toggle="dropdown" aria-expanded="false">
                                             <img style="width: 17px ; height: 17px" src="{{asset('images/language.png')}}" alt="">  {{ strtoupper(session('locale','en')) == 'EN' ? 'English' : (strtoupper(session('locale')) == 'BN' ? 'বাংলা' : (strtoupper(session('locale')) == 'AR' ? 'اللغة' : ''))}}
                                         </button>
                                         <ul class="dropdown-menu w-25 " aria-labelledby="languageDropdown" style="font-size: 10px">
