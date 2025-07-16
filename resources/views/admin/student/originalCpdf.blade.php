@@ -109,13 +109,13 @@
         margin: 0 auto;
         position: relative !important;
         min-height: 98%;
-        background: url({{asset('images/certificate-background.jpg')}});
+        background: url({{asset('images/student/certificate.jpg')}});
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         width: 100%;
         max-width: 1400px;
-        aspect-ratio: 16/11;
+        aspect-ratio: 15/11;
     }
     .box {
         position: absolute;

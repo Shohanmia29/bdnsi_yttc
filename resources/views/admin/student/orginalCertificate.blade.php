@@ -163,13 +163,13 @@
         margin: 0 auto;
         position: relative !important;
         min-height: 98%;
-        background: url({{asset('images/certificate-background.jpg')}});
+        background: url({{asset('images/student/certificate.jpg')}});
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         width: 100%;
         max-width: 1400px;
-        aspect-ratio: 16/11;
+        aspect-ratio: 15/11;
     }
     .box {
         position: absolute;
@@ -181,14 +181,14 @@
     }
     .qr-code {
         position: absolute;
-        bottom: 37%;
-        left: 16%;
+        bottom: 39%;
+        left: 17%;
         width: 91px;
     }
 
     .publish_data {
         position: absolute;
-        bottom: 10%;
+        bottom: 12%;
         left: 10%;
         font-size: 14px;
     }
@@ -253,9 +253,9 @@
             height: 100%;
         }
         .box {
-            width: 669px;
+            width: 700px;
             bottom: 200px;
-            left: 630px;
+            left: 698px;
         }
         .underlined {
             width: 74.2%;

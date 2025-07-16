@@ -179,7 +179,7 @@
                 </div>
                 <!-- offcanvas-menu end -->
                 <div class="mobile-menu-modal-bottom header-menu-btn">
-                     <div class="text-center font-bold py-2">RJSC NO: C-178431</div>
+                     <div class="text-center font-bold py-2">RJSC NO: {{config('site.setting.rj_no')}}</div>
                     <a href="{{route('login')}}" target="_blank" class="theme-btn"><span><i class="fi fi-rs-sign-in-alt"></i>{{__t('Login')}}</span></a>
                 </div>
             </div>
@@ -229,7 +229,7 @@
                                 </div>
 
                                 <ul class="topbar-school-info-list ">
-                                    <li class="text-white">RJSC NO: <span>C-178431</span></li>
+                                    <li class="text-white">RJSC NO: <span>{{config('site.setting.rj_no')}}</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -458,7 +458,7 @@
                                       </div>
                                       <div class="footer-contact-info">
 
-                                          <a href="">   RJSC NO: C-178431 </a>
+                                          <a href="">   RJSC NO: {{config('site.setting.rj_no')}} </a>
                                       </div>
                                   </div>
                               </div>
