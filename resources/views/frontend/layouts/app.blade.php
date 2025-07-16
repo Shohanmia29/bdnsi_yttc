@@ -239,7 +239,9 @@
         </div>
     </div>
 </div>
-<!-- End Topbar Area -->
+
+@if(request()->routeIs('welcome'))
+
 <section class="hero-area">
     <div class="container">
         <div class="row">
@@ -305,6 +307,9 @@
         </div>
     </div>
 </section>
+@endif
+
+
 <header id="active-sticky" class="header-area pb-1">
     <div class="container">
         <div class="row">
