@@ -38,9 +38,9 @@
                     background-repeat: no-repeat;
                 "
             >
-                <div class="absolute inset-0 flex items-center justify-center ">
+                <div class="absolute inset-0 left-5 top-[9%] flex items-center justify-center ">
                     <div class="text-center">
-                        <img class="mx-auto h-28 w-28 rounded-full border-[4px] border-[#6aa84f]" src="{{$student->picture ?? ''}}" alt="" />
+                        <img class="mx-auto h-32 w-32 mt-7 rounded-full border-[4px] border-[#6aa84f]" src="{{$student->picture ?? ''}}" alt="" />
 
                         <div class="mt-5 flex justify-center">
                             <table class="mx-auto w-full font-semibold text-xs text-left">
@@ -62,7 +62,7 @@
                                 <tr>
                                     <td class="px-2 py-3">Center</td>
                                     <td class="px-2 py-3">:</td>
-                                    <td class="px-2 py-3">{{$student->center->name ?? ''}}</td>
+                                    <td class="px-2 py-3 "> <div class="w-[200px] break-words whitespace-normal">{{$student->center->name ?? ''}}</div></td>
                                 </tr>
                                 <tr>
                                     <td class="px-2 py-3">Phone</td>
@@ -89,6 +89,9 @@
                     background-repeat: no-repeat;
                 "
             >
+                <div class="absolute top-[74%] left-[37%]">
+                    <x-qr-code :student="$student"/>
+                </div>
             </div>
         </div>
     </div>
