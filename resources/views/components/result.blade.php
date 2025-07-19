@@ -10,7 +10,7 @@
         <img style="border: 2px solid #7024A8!important;" class="h-52 w-52 object-center border-2 rounded-3xl " src="{{ $student->picture }}" alt="{{ $student->name }}" />
         <div class="w-full border-2 border-[#7024A8] rounded-md">
             <!-- Header Row -->
-            <div class="w-full flex flex-wrap rounded-tl-md rounded-tr-md bg-[#7024A8] text-white">
+            <div class="w-full flex flex-wrap rounded-tl-md rounded-tr-md bg-[#BC96D8] text-white">
                 <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-[#7024A8] font-semibold text-sm flex items-center py-4 px-4">Name</div>
                 <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-[#7024A8] font-semibold text-sm flex items-center py-4 px-4">{{ $student->name ?? '' }}</div>
                 <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-[#7024A8] font-semibold text-sm flex items-center py-4 px-4">Roll</div>
@@ -24,7 +24,7 @@
                 <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-[#7024A8] font-semibold text-sm flex items-center py-4 px-4">{{ $student->registration ?? '' }}</div>
             </div>
             <!-- Row 3 -->
-            <div class="w-full bg-[#7024A8] text-white flex flex-wrap">
+            <div class="w-full bg-[#BC96D8] text-white flex flex-wrap">
                 <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-[#7024A8] font-semibold text-sm flex items-center py-4 px-4">Mother's Name</div>
                 <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-[#7024A8] font-semibold text-sm flex items-center py-4 px-4">{{ $student->mothers_name ?? '' }}</div>
                 <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-[#7024A8] font-semibold text-sm flex items-center py-4 px-4">Session</div>
@@ -38,7 +38,7 @@
                 <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-[#7024A8] font-semibold text-sm flex items-center py-4 px-4">{{ $student->course_duration ?? '' }}</div>
             </div>
             <!-- Row 5 -->
-            <div class="w-full bg-[#7024A8] text-white flex flex-wrap">
+            <div class="w-full bg-[#BC96D8] text-white flex flex-wrap">
                 <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-[#7024A8] font-semibold text-sm flex items-center py-4 px-4">Institute Name</div>
                 <div class="w-8/12 md:w-4/12 md:border-r-2 border-b-2 border-[#7024A8] font-semibold text-sm flex items-center py-4 px-4">{{ $student->center->name ?? '' }}</div>
                 <div class="w-4/12 md:w-2/12 border-r-2 border-b-2 border-[#7024A8] font-semibold text-sm flex items-center py-4 px-4">Institute Code</div>
@@ -57,7 +57,7 @@
             @php($result=optional($student->result))
 
             <div class="w-full border-2 border-[#7024A8] flex flex-col rounded-md mt-4">
-                <div class="bg-[#7024A8] text-white py-1 rounded-tl-md rounded-tr-md text-center">
+                <div class="bg-[#BC96D8] text-white py-1 rounded-tl-md rounded-tr-md text-center">
                     <span class="font-bold">Marks</span>
                 </div>
                 <div class="w-full overflow-auto whitespace-nowrap">

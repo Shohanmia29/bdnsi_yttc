@@ -657,6 +657,18 @@ select {
   bottom: 0px;
   left: 0px;
 }
+.left-5 {
+  left: 1.25rem;
+}
+.top-\[9\%\] {
+  top: 9%;
+}
+.top-\[74\%\] {
+  top: 74%;
+}
+.left-\[37\%\] {
+  left: 37%;
+}
 .top-0 {
   top: 0px;
 }
@@ -677,60 +689,6 @@ select {
 }
 .top-16 {
   top: 4rem;
-}
-.left-5 {
-  left: 1.25rem;
-}
-.left-\[10\%\] {
-  left: 10%;
-}
-.left-\[8\%\] {
-  left: 8%;
-}
-.top-\[5\%\] {
-  top: 5%;
-}
-.top-\[7\%\] {
-  top: 7%;
-}
-.left-\[4\%\] {
-  left: 4%;
-}
-.top-5 {
-  top: 1.25rem;
-}
-.top-8 {
-  top: 2rem;
-}
-.top-\[6\%\] {
-  top: 6%;
-}
-.top-\[8\%\] {
-  top: 8%;
-}
-.top-\[9\%\] {
-  top: 9%;
-}
-.top-\[50\%\] {
-  top: 50%;
-}
-.left-\[50\%\] {
-  left: 50%;
-}
-.top-\[60\%\] {
-  top: 60%;
-}
-.left-\[40\%\] {
-  left: 40%;
-}
-.top-\[70\%\] {
-  top: 70%;
-}
-.left-\[37\%\] {
-  left: 37%;
-}
-.top-\[74\%\] {
-  top: 74%;
 }
 .z-0 {
   z-index: 0;
@@ -795,8 +753,8 @@ select {
 .mt-4 {
   margin-top: 1rem;
 }
-.mt-2 {
-  margin-top: 0.5rem;
+.mt-7 {
+  margin-top: 1.75rem;
 }
 .mt-5 {
   margin-top: 1.25rem;
@@ -809,6 +767,9 @@ select {
 }
 .ml-2 {
   margin-left: 0.5rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
 }
 .mt-6 {
   margin-top: 1.5rem;
@@ -858,9 +819,6 @@ select {
 .ml-10 {
   margin-left: 2.5rem;
 }
-.mt-7 {
-  margin-top: 1.75rem;
-}
 .block {
   display: block;
 }
@@ -890,6 +848,9 @@ select {
 }
 .h-\[600px\] {
   height: 600px;
+}
+.h-32 {
+  height: 8rem;
 }
 .h-20 {
   height: 5rem;
@@ -930,9 +891,6 @@ select {
 .h-4 {
   height: 1rem;
 }
-.h-32 {
-  height: 8rem;
-}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -944,6 +902,12 @@ select {
 }
 .w-1\/2 {
   width: 50%;
+}
+.w-32 {
+  width: 8rem;
+}
+.w-\[200px\] {
+  width: 200px;
 }
 .w-20 {
   width: 5rem;
@@ -1007,30 +971,6 @@ select {
 }
 .w-3\/12 {
   width: 25%;
-}
-.w-32 {
-  width: 8rem;
-}
-.w-\[300px\] {
-  width: 300px;
-}
-.w-\[200px\] {
-  width: 200px;
-}
-.w-\[150px\] {
-  width: 150px;
-}
-.w-\[100px\] {
-  width: 100px;
-}
-.w-\[50px\] {
-  width: 50px;
-}
-.w-\[20px\] {
-  width: 20px;
-}
-.w-\[120px\] {
-  width: 120px;
 }
 .min-w-full {
   min-width: 100%;
@@ -1327,6 +1267,10 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
+.border-\[\#7024A8\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(112 36 168 / var(--tw-border-opacity));
+}
 .border-green-600 {
   --tw-border-opacity: 1;
   border-color: rgb(22 163 74 / var(--tw-border-opacity));
@@ -1346,9 +1290,9 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(79 70 229 / var(--tw-border-opacity));
 }
-.border-\[\#7024A8\] {
+.border-\[\#BC96D8\] {
   --tw-border-opacity: 1;
-  border-color: rgb(112 36 168 / var(--tw-border-opacity));
+  border-color: rgb(188 150 216 / var(--tw-border-opacity));
 }
 .border-black {
   --tw-border-opacity: 1;
@@ -1390,9 +1334,9 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
-.bg-\[\#6aa84f\] {
+.bg-\[\#7024A8\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(106 168 79 / var(--tw-bg-opacity));
+  background-color: rgb(112 36 168 / var(--tw-bg-opacity));
 }
 .bg-gray-100 {
   --tw-bg-opacity: 1;
@@ -1450,9 +1394,9 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(1 96 159 / var(--tw-bg-opacity));
 }
-.bg-\[\#7024A8\] {
+.bg-\[\#BC96D8\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(112 36 168 / var(--tw-bg-opacity));
+  background-color: rgb(188 150 216 / var(--tw-bg-opacity));
 }
 .bg-pink-800 {
   --tw-bg-opacity: 1;
@@ -1481,6 +1425,10 @@ select {
 .bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+.bg-\[\#6aa84f\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(106 168 79 / var(--tw-bg-opacity));
 }
 .bg-indigo-50 {
   --tw-bg-opacity: 1;
@@ -1844,9 +1792,9 @@ select {
   --tw-text-opacity: 1;
   color: rgb(22 101 52 / var(--tw-text-opacity));
 }
-.text-\[\#7024A8\] {
+.text-\[\#BC96D8\] {
   --tw-text-opacity: 1;
-  color: rgb(112 36 168 / var(--tw-text-opacity));
+  color: rgb(188 150 216 / var(--tw-text-opacity));
 }
 .text-gray-800 {
   --tw-text-opacity: 1;
@@ -1887,6 +1835,10 @@ select {
 .text-red-700 {
   --tw-text-opacity: 1;
   color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+.text-\[\#7024A8\] {
+  --tw-text-opacity: 1;
+  color: rgb(112 36 168 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;

@@ -380,7 +380,7 @@
                     <div class="data-label">Grade Point </div>
                     <div>:</div>
                     <div class="data-value  "    >
-                        {{$student->t_written_gpa()}} (In the Scale Of 4.00)
+                        {{number_format($student->t_written_gpa(),2)}} (In the Scale Of 4.00)
                     </div>
                 </div>
                 <div class="data-item-wrap">
@@ -391,14 +391,14 @@
                     </div>
                 </div>
                 <div class="data-item-wrap">
-                    <div class="data-label">Institute Name </div>
+                    <div class="data-label">Center Name </div>
                     <div>:</div>
                     <div class="data-value">
                           {{$student->center->name??''}}
                     </div>
                 </div>
                 <div class="data-item-wrap">
-                    <div class="data-label">Institute Code </div>
+                    <div class="data-label">Center Code </div>
                     <div>:</div>
                     <div class="data-value">
                           {{$student->center->code??''}}
@@ -455,7 +455,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">CGPA:</td>
-                    <td colspan="2">{{$student->t_written_gpa()}}</td>
+                    <td colspan="2">{{number_format($student->t_written_gpa(),2)}}</td>
                 </tr>
                 <tr>
                     <td colspan="2">Result:</td>

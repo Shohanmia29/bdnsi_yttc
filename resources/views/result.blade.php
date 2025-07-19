@@ -18,10 +18,10 @@
                                  <div class="font-bold text-sm md:text-lg text-red-800 text-center">  {{ __t('Student Result') }}</div>
                                  <div class="p-2">
                                      <label for="" class="font-bold">{{__t('Roll Number / Passport Number')}} </label>
-                                     <input class="w-full  outline-none px-3 mx-auto p-1 border-[#6aa84f] border-2 rounded-full " name="roll" required/>
+                                     <input class="w-full  outline-none px-3 mx-auto p-1 border-[#7024A8] border-2 rounded-full " name="roll" required/>
                                  </div>
                                  <div class="w-full flex justify-center py-4 items-center">
-                                     <button class="px-3 py-2 border bg-[#6aa84f] rounded-md text-white">{{ __t('Get Result') }}</button>
+                                     <button class="px-3 py-2 border bg-[#7024A8] rounded-md text-white">{{ __t('Get Result') }}</button>
                                  </div>
                              </div>
                          </div>

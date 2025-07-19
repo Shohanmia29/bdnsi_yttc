@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>National Health & Medical Technology Institute</title>
-    <link rel="icon" href="{{\App\Lib\Image::url(\App\Models\ConfigDictionary::get('fav_icon'))??asset('frontend/logo.jpg')}}?v=423" />
+    <link rel="icon" href="{{\App\Lib\Image::url(\App\Models\ConfigDictionary::get('fav_icon'))??asset('images/student/logo.png')}}?v=33" />
 
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/bootstrap.min.css')}}?v=4" />
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/animate.min.css')}}?v=4" />
