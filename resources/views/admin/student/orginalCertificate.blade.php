@@ -1,20 +1,29 @@
 <button onclick="window.print()" class="no-print">Print</button>
-<a href="{{route('admin.student.show',[$student->id,'orginalcpdf'=>'orginalcpdf'])}}" class="no-print" style="padding: 5px; background: green; color: white">C-pdf Download</a>
+<a href="{{route('admin.student.show',[$student->id,'orginalcpdf'=>'orginalcpdf'])}}" class="no-print"
+   style="padding: 5px; background: green; color: white">C-pdf Download</a>
 
-<div class="container" >
+<div class="container">
     <div class="main-box" id="fullpage2">
-        <div style="width: 50px; height: 50px"  class="qr-code"  id="qrcode_1"></div>
+        <div style="width: 50px; height: 50px" class="qr-code" id="qrcode_1"></div>
         {{--        <img src="{{asset('images/cetificate qr code.png')}}" alt="" >--}}
-        <p class="publish_data">Data of Publication of Results:      @if($student->result_publised)
+        <p class="publish_data">Data of Publication of Results: @if($student->result_publised)
                 {{ \Carbon\Carbon::make($student->result_publised)->format('j-F-Y') }}
             @endif</p>
+
+        <p class="website">Website : {{asset('')}}</p>
+
         <div class="box">
-            <p class="text-end text-lg position-0">Roll No. <span class="rol-reg-sec position-0">{{ $student->roll ?? '' }}</span></p>
+            <p class="text-end text-lg position-0">Roll No. <span
+                    class="rol-reg-sec position-0">{{ $student->roll ?? '' }}</span></p>
             <div class="inline-block w-full">
-                <p class="float-left">Serial No : <span class="rol-reg-sec1">{{ \App\Lib\Helper::certificateSerialNumber($student->id) ?? '' }}</span></p>
-                <p class="float-right">Reg No. <span class="rol-reg-sec position-0">{{ $student->registration ?? '' }}</span></p>
+                <p class="float-left">Serial No : <span
+                        class="rol-reg-sec1">{{ \App\Lib\Helper::certificateSerialNumber($student->id) ?? '' }}</span>
+                </p>
+                <p class="float-right">Reg No. <span
+                        class="rol-reg-sec position-0">{{ $student->registration ?? '' }}</span></p>
             </div>
-            <div class="text-end mt-2 text-lg">Session. <span class="rol-reg-sec position-0">{{$student->session->name??''}}</span></div>
+            <div class="text-end mt-2 text-lg">Session. <span
+                    class="rol-reg-sec position-0">{{$student->session->name??''}}</span></div>
             <div class="cat_parent">
                 <p class="inline-block float-left text">This is to certify that</p>
                 <p class="underlined inline-block float-left position-0 student-name">{{ $student->name ?? '' }}</p>
@@ -160,7 +169,7 @@
         margin-top: 10px;
     }
     .main-box {
-        margin: 0 auto;
+        /*margin: 0 auto;*/
         position: relative !important;
         min-height: 100%;
         background: url({{asset('images/student/certificate.jpg')}});
@@ -168,17 +177,18 @@
         background-repeat: no-repeat;
         background-position: center;
         width: 100%;
-        max-width: 1400px;
+        max-width: 1427px;
         aspect-ratio: 14/11;
     }
     .box {
         position: absolute;
         width: 61%;
-        bottom: 23%;
+        bottom: 25%;
         left: 59.5%;
         transform: translateX(-50%);
         /* border: 1px solid black; */
     }
+
     .qr-code {
         position: absolute;
         bottom: 39%;
@@ -188,8 +198,15 @@
 
     .publish_data {
         position: absolute;
-        bottom: 12%;
+        bottom: 14%;
         left: 10%;
+        font-size: 14px;
+    }
+
+    .website {
+        position: absolute;
+        bottom: 13%;
+        left: 50%;
         font-size: 14px;
     }
 
@@ -197,6 +214,7 @@
         text-align: end;
         margin-bottom: 10px;
     }
+
     .rol-reg-sec {
         text-align: start;
         padding-left: 20px;
@@ -225,7 +243,9 @@
     }
 </style>
 <style>
+
     @media print{
+
         .container {
             /* min-height: 558px; */
         }
@@ -239,24 +259,30 @@
         .no-print {
             display: none;
         }
+
         .qr-code {
             position: absolute;
-            bottom: 320px;
-            left: 120px;
+            bottom: 330px;
+            left: 16%!important;
             width: 81px;
         }
+
         .qr-code canvas img {
             width: 80px;
         }
+
         .main-box {
-            width:100%;
+            width: 100%;
             height: 100%;
+
         }
+
         .box {
-            width: 700px;
+            width: 669px;
             bottom: 200px;
-            left: 698px;
+            left: 633px;
         }
+
         .underlined {
             width: 74.2%;
             padding-left: 50px;

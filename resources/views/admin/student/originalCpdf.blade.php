@@ -127,15 +127,21 @@
     }
     .qr-code {
         position: absolute;
-        bottom: 37%;
-        left: 16%;
+        bottom: 39%;
+        left: 17%;
         width: 91px;
     }
 
     .publish_data {
         position: absolute;
-        bottom: 10%;
+        bottom: 14%;
         left: 10%;
+        font-size: 14px;
+    }
+    .website {
+        position: absolute;
+        bottom: 13%;
+        left: 50%;
         font-size: 14px;
     }
 
@@ -264,6 +270,7 @@
         <p class="publish_data">Data of Publication of Results:      @if($student->result_publised)
                 {{ \Carbon\Carbon::make($student->result_publised)->format('j-F-Y') }}
             @endif</p>
+        <p class="website">Website : {{asset('')}}</p>
         <div class="box">
             <p class="text-end text-lg position-0">Roll No. <span class="rol-reg-sec position-0">{{ $student->roll ?? '' }}</span></p>
             <div class="inline-block w-full">
