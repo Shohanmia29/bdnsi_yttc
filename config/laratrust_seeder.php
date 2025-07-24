@@ -29,6 +29,7 @@ return [
             'configDictionary' => 'c,r,u,d',
             'translation' => 'c,r,u,d',
             'sponsor' => 'c,r,u,d',
+            'upazila-store' => 'c,r,u,d',
         ],
         'sub_admin' => [
             'student' => 'c,r,u',
