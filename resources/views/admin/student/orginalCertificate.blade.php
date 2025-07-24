@@ -6,7 +6,7 @@
     <div class="main-box" id="fullpage2">
         <div style="width: 50px; height: 50px" class="qr-code" id="qrcode_1"></div>
         {{--        <img src="{{asset('images/cetificate qr code.png')}}" alt="" >--}}
-        <p class="publish_data">Data of Publication of Results: @if($student->result_publised)
+        <p class="publish_data">Date of Publication of Results: @if($student->result_publised)
                 {{ \Carbon\Carbon::make($student->result_publised)->format('j-F-Y') }}
             @endif</p>
 
