@@ -277,60 +277,63 @@
 
         }
 
+
         .box {
-            width: 669px;
+            width: 61%;
             bottom: 197px;
-            left: 633px;
+            left: 60%;
         }
 
         .underlined {
-            width: 74.2%;
+            width: 72.2%; /* 71.2 + 1 */
             padding-left: 50px;
             margin-bottom: 11px;
         }
         .underlined2 {
-            border-bottom: 2px dotted black!important;
+            border-bottom: 2px dotted black !important;
             margin-bottom: 10px;
-            width: 76%;
+            width: 74%; /* 73 + 1 */
             padding-left: 60px;
         }
         .underlined3 {
-            border-bottom: 2px dotted black!important;
+            border-bottom: 2px dotted black !important;
             margin-bottom: 10px;
-            width: 79.40%;
+            width: 77.40%; /* 76.40 + 1 */
             padding-left: 110px;
         }
         .underlined4 {
-            border-bottom: 2px dotted black!important;
+            border-bottom: 2px dotted black !important;
             margin-bottom: 10px;
-            width: 82.38%;
+            width: 80.36%; /* 79.38 + 1 */
             padding-left: 100px;
         }
         .underlined5 {
-            border-bottom: 2px dotted black!important;
+            border-bottom: 2px dotted black !important;
             margin-bottom: 10px;
-            width: 40.8%;
-            text-align: center
+            width: 38%; /* 37.8 + 1 */
+            text-align: center;
         }
         .underlined6 {
-            border-bottom: 2px dotted black!important;
+            border-bottom: 2px dotted black !important;
             margin-bottom: 10px;
-            width: 59.58%;
+            width: 57.58%; /* 56.58 + 1 */
             padding: 0px 6px;
             padding-left: 50px;
         }
         .underlined7 {
-            border-bottom: 2px dotted black!important;
+            border-bottom: 2px dotted black !important;
             margin-bottom: 10px;
-            width: 21%;
+            width: 19%; /* 18 + 1 */
             padding-left: 35px;
         }
         .underlined8 {
-            border-bottom: 2px dotted black!important;
+            border-bottom: 2px dotted black !important;
             margin-bottom: 10px;
-            width: 10.38%;
+            width: 8.38%; /* 7.38 + 1 */
             padding: 0px 6px;
         }
+
+
         .publish_data {
             bottom: 125px;
             left: 100px;
