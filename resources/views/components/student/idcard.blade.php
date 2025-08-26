@@ -32,7 +32,7 @@
             <div
                 class="relative h-[600px] w-full rounded-md p-2"
                 style="
-                    background-image: url({{asset('images/student/idcard-front.jpg')}});
+                    background-image: url({{asset('images/student/IdCardfast.jpg')}});
                     background-position: center center;
                     background-size: contain;
                     background-repeat: no-repeat;

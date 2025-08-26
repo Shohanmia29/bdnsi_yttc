@@ -110,8 +110,8 @@ class StudentController extends Controller
         $student = Student::create($validated);
         $message = 'Congratulations!! ' . $student->name . ', You have successfully filled the application form for  '
             . (Auth::user()->center->name ?? '') . ' Technician '
-            . ($student->subject->name ?? '') . ' under National Health & Medical Technology Institute. Your Roll No: '
-            . $student->roll . ' and Registration No: ' . $student->registration . '. Thanks for staying with National Health & Medical Technology Institute.';
+            . ($student->subject->name ?? '') . ' under  '.config('site.setting.name').' Your Roll No: '
+            . $student->roll . ' and Registration No: ' . $student->registration . '. Thanks for staying with National '.config('site.setting.name');
         Helper::sendSms($student->phone,$message);
         return response()->report($student, 'Student Created successfully');
     }

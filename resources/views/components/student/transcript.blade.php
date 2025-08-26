@@ -23,7 +23,7 @@
         .admit-card-wrap {
             width: 1170px;
             height: 1650px;
-            background-image: url({{asset('images/student/transacpt.jpg')}});
+            background-image: url({{asset('images/student/transacpt.png')}});
             margin: auto;
             background-position: center center;
             background-repeat: no-repeat;

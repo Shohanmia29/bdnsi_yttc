@@ -81,7 +81,7 @@ class ResultController extends Controller
                         'practical' => $practical,
                         'viva' => $viva,
                     ]);
-                $message = 'Congratulation!! ' . $student->name . ', You have successfully filled the application form for  '.$student->center->name .' ' . $student->subject->name . ' course under Young Technical Training. Your Roll No: ' . $student->roll .' and Registration No: ' . $student->registration . '. Thanks for staying with National Health & Medical Technology Institute.';
+                $message = 'Congratulation!! ' . $student->name . ', You have successfully filled the application form for  '.$student->center->name .' ' . $student->subject->name . ' course under Young Technical Training. Your Roll No: ' . $student->roll .' and Registration No: ' . $student->registration . '. Thanks for staying with '.config('site.setting.name');
                 Helper::sendSms($student->phone,$message);
 
             DB::commit();

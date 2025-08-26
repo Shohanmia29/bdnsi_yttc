@@ -4,7 +4,7 @@
 <div class="w-full">
     <div class="w-full m-auto flex items-center flex-col justify-between h-[90%] gap-3">
         <div class="text-center py-4">
-            <h1 class="font-semibold text-3xl text-[#7024A8]">National Health & Medical Technology Institute</h1>
+            <h1 class="font-semibold text-3xl text-[#7024A8]">{{config('site.setting.name')}}</h1>
             <p class="text-lg font-medium text-orange-400">Govt. License No: {{config('site.setting.rj_no')}}</p>
         </div>
         <img style="border: 2px solid #7024A8!important;" class="h-52 w-52 object-center border-2 rounded-3xl " src="{{ $student->picture }}" alt="{{ $student->name }}" />

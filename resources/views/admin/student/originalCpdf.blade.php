@@ -270,7 +270,7 @@
         <p class="publish_data">Date of Publication of Results:      @if($student->result_publised)
                 {{ \Carbon\Carbon::make($student->result_publised)->format('j-F-Y') }}
             @endif</p>
-        <p class="website">Website link: www.nhmti.com</p>
+        <p class="website">Website link: www.bdnsi.com</p>
         <div class="box">
             <p class="text-end text-lg position-0">Roll No. <span class="rol-reg-sec position-0">{{ $student->roll ?? '' }}</span></p>
             <div class="inline-block w-full">
@@ -313,7 +313,7 @@
             <div class="cat_parent">
                 <p class="inline-block float-left">of</p>
                 <p class="underlined7 inline-block float-left position-0">{{ \Carbon\Carbon::parse($student->exam_date)->format('j-F-Y') }}</p>
-                <p class="inline-block float-left">Conducted by the NHMTI. He/She Secured CGPA</p>
+                <p class="inline-block float-left">Conducted by the BDNSI. He/She Secured CGPA</p>
                 <p class="underlined8 inline-block float-left position-0"> {{ number_format($student->t_written_gpa(),2)?? '' }}</p>
                 <p class="inline-block float-left">on a scale of 4.00</p>
             </div>

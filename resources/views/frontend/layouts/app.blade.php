@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>National Health & Medical Technology Institute</title>
+    <title>{{config('site.setting.name')}}</title>
     <link rel="icon" href="{{\App\Lib\Image::url(\App\Models\ConfigDictionary::get('fav_icon'))??asset('images/student/logo.png')}}?v=33" />
 
     <link rel="stylesheet" href="{{asset('frontend/plugins/css/bootstrap.min.css')}}?v=4" />
@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" href="{{ asset('frontend/logo.jpg')}}?v=423" />
     <meta name="msapplication-TileImage" content="{{ asset('frontend/logo.jpg')}}?v=423" />
     <meta name="google-site-verification" content="Z0nEijotHP7ZORKAfkTDJrSIefDv4G3NB5gaq9wngsE" />
-    <meta name="description" content="National Health & Medical Technology Institute offers quality education in Bangladesh with modern methods, expert teachers, & diverse programs. Join now to shape your future!">
+    <meta name="description" content="{{config('site.setting.name')}} offers quality education in Bangladesh with modern methods, expert teachers, & diverse programs. Join now to shape your future!">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J104V2KMHD"></script>
     <script>
@@ -209,7 +209,7 @@
         <div class="row align-items-center">
             <div class="col-lg-12 col-xl-6 col-12">
                 <div class="topbar-left text-white font-weight-bold">
-                    National Health & Medical Technology Institute
+                  {{config('site.setting.name')}}
                 </div>
             </div>
             <div class="col-lg-6 col-12">
@@ -521,7 +521,7 @@
             </div>
         </div>
     </div>
-    <h1  style="opacity: 0; font-size: 1px!important;">National Health & Medical Technology Institute</h1>
+    <h1  style="opacity: 0; font-size: 1px!important;">{{config('site.setting.name')}}</h1>
 </footer>
 <!-- End Footer Area -->
 
